@@ -10,7 +10,6 @@ local Scenes = require(Sss.Source.Scenes.Scenes)
 local QuestBlock = require(Sss.Source.AddRemoteObjects.QuestBlock)
 local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
 local Teleporters = require(Sss.Source.Teleporters.Teleporters)
-local InitWWI = require(Sss.Source.WordWheelIsland.InitWWI)
 local MiniGame = require(Sss.Source.MiniGame.MiniGame)
 local BlockDash = require(Sss.Source.BlockDash.BlockDash)
 
@@ -248,11 +247,6 @@ function addWorld(props)
     local skyTeleporter = addSkyBoxTeleporter(worldIndex)
     Teleporters.setLocalTPTargetToRemoteTP(skyTeleporter, hexTeleporter)
     Teleporters.setLocalTPTargetToRemoteTP(hexReturnTeleporter, skyTeleporter)
-
-    if Constants.gameConfig.showWWI then
-        local props2 = {}
-        InitWWI.initWWI(props2)
-    end
 
     -- add quests
     for questIndex, questConfig in ipairs(questConfigs) do
