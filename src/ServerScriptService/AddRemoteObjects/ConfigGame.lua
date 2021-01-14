@@ -85,12 +85,6 @@ end
 function module.configGame()
     setVisibility()
     configPlayers()
-    -- Utils.reportPlayerLocation()
-
-    if (Constants.isDev) then
-        local taggedPartsDestroy = CS:GetTagged("DestroyDev")
-        for i, item in ipairs(taggedPartsDestroy) do item:Destroy() end
-    end
 
     local spawns = Constants.gameConfig.disabledSpawns
     for _, spawn in ipairs(spawns) do

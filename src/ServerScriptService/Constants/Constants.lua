@@ -2,7 +2,8 @@ local isTest = true
 -- local isTest = false
 
 local devGameConfig = {
-    transparency = false,
+    -- transparency = false,
+    transparency = true,
     -- walkSpeed = 30,
     walkSpeed = 80,
 
@@ -11,8 +12,7 @@ local devGameConfig = {
     showScenes = false,
 
     disabledSpawns = {
-        'SpawnLocation-SkyShip', -- 
-        'SpawnLocation-WWI' -- 
+        'SpawnLocation-SkyShip' -- 
         -- 'SpawnLocation-Block-Race' --
     }
 }
@@ -21,12 +21,12 @@ local prodGameConfig = {
     transparency = true,
     walkSpeed = 30,
 
+    showMiniGame = false,
     singleScene = false,
     showWWI = true,
     showScenes = true,
     disabledSpawns = {
         -- 'SpawnLocation-SkyShip', -- 
-        'SpawnLocation-WWI', -- 
         'SpawnLocation-Block-Race' --
     }
 }
