@@ -60,6 +60,24 @@ function configGamePass()
     Players.PlayerAdded:Connect(onPlayerAdded)
 end
 
+function configBadges()
+    game:GetService('Players').PlayerAdded:Connect(
+        function(player)
+            player.CharacterAdded:Connect(
+                function(character)
+                    character:WaitForChild("Humanoid").Died:Connect(
+                        function()
+                            print(player.Name .. " has died!")
+                            print(player.Name .. " has died!")
+                            print(player.Name .. " has died!")
+                            print(player.Name .. " has died!")
+                            print(player.Name .. " has died!")
+                            print(player.Name .. " has died!")
+                        end)
+                end)
+        end)
+end
+
 function setVisibility()
     local taggedPartsDestroy = CS:GetTagged("Destroy")
     for i, item in ipairs(taggedPartsDestroy) do item:Destroy() end
@@ -125,6 +143,7 @@ function module.configGame()
     setVisibility()
     configPlayers()
     configGamePass()
+    configBadges()
 
     local spawns = Constants.gameConfig.disabledSpawns
     for _, spawn in ipairs(spawns) do
