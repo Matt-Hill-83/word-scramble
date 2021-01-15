@@ -153,6 +153,9 @@ function handleBrick(clickedLetter, miniGameState, player)
             newGem.Parent = letterFallFolder
             newGem.Handle.CFrame = letterBlockCFrame + Vector3.new(0, 30, 0)
             newGem.Handle.Anchored = false
+
+            local rand = Utils.genRandom(1, #Constants.gemColors)
+            newGem.Handle.Color = Constants.gemColors[rand]
             print('newGem' .. ' - start');
             print(newGem);
 
