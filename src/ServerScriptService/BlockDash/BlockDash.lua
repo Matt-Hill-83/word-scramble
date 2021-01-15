@@ -67,6 +67,7 @@ function addBlockDash(props)
             if miniGameState.canResetBlocks then
                 miniGameState.canResetBlocks = false
                 BlockDashUtils.clearBlockRack(miniGameState)
+                LetterFallUtils.unHideWordLetters(miniGameState)
             end
         end
     end
@@ -83,6 +84,7 @@ function addBlockDash(props)
             if not miniGameState.canResetBlocks then
                 miniGameState.canResetBlocks = true
                 InitLetterRack.initLetterRack(miniGameState)
+
             end
         end
     end
