@@ -10,11 +10,17 @@ function configPlayers()
     Players.RespawnTime = 0
 
     local function onCharacterAdded(character)
+        print('onCharacterAdded--------------------');
         character:WaitForChild("Humanoid").WalkSpeed =
             Constants.gameConfig.walkSpeed
+        print(character.Humanoid);
+        local player = Players:GetPlayerFromCharacter(character)
+        print(player);
     end
 
     local function onPlayerAdded(player)
+        print('onPlayerAdded');
+        print(player.UserId);
         player.CharacterAdded:Connect(onCharacterAdded)
     end
 
@@ -77,7 +83,7 @@ function setVisibility()
     end
 
     local skyBoxWalls = CS:GetTagged("SkyBoxWalls")
-    Utils.setWallHeightByList({items = skyBoxWalls, height = 30})
+    Utils.setWallHeightByList({items = skyBoxWalls, height = 50})
     Utils.setPropsByTag({tag = "SkyBoxWalls", props = {Transparency = 0.9}})
 
 end

@@ -1,24 +1,51 @@
-local module = {
+local isTest = true
+-- local isTest = false
 
-    isDev = false,
-    -- isDev = true,
+local devGameConfig = {
+    -- transparency = false,
+    transparency = true,
+    -- walkSpeed = 30,
+    walkSpeed = 80,
 
     singleScene = true,
-    -- singleScene = false,
+    showWWI = false,
+    showScenes = false,
 
-    gameConfig = {
-        transparency = true,
-        -- transparency = false,
+    disabledSpawns = {
+        'SpawnLocation-SkyShip' -- 
+        -- 'SpawnLocation-Block-Race' --
+    }
+}
 
-        showScenes = true
-        -- showScenes = false
-        ---
-    },
+local prodGameConfig = {
+    transparency = true,
+    walkSpeed = 30,
+
+    showMiniGame = false,
+    singleScene = false,
+    showWWI = true,
+    showScenes = true,
+    disabledSpawns = {
+        -- 'SpawnLocation-SkyShip', -- 
+        'SpawnLocation-Block-Race' --
+    }
+}
+local gameConfig = isTest and devGameConfig or prodGameConfig
+
+local module = {
+    gameConfig = gameConfig,
+    walkSpeed = gameConfig.walkSpeed,
+
+    isDev = false,
 
     entered = {value = false},
-    walkSpeed = 30,
     questWallHeight = 4,
-    sceneHeight = 50
+    sceneHeight = 50,
+    allLetters = {
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
+        'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+    }
+
 }
 
 module.dialogColors = {
@@ -51,7 +78,35 @@ module.totalIslandLength = islandLength + bridgeLength
 module.buttonLabels = {PrevPage = "Prev Page", NextPage = "Next Page"}
 
 -- 
--- 
+module.alphabet = {
+    A = {displayName = "A", decalId = '6226966774'},
+    B = {displayName = "B", decalId = '6226801585'},
+    C = {displayName = "C", decalId = '6226801741'},
+    D = {displayName = "D", decalId = '6229977443'},
+    E = {displayName = "E", decalId = '6226802136'},
+    F = {displayName = "F", decalId = '6226949993'},
+    G = {displayName = "G", decalId = '6226802335'},
+    H = {displayName = "H", decalId = '6226802457'},
+    I = {displayName = "I", decalId = '6226802572'},
+    J = {displayName = "J", decalId = '6226802726'},
+    K = {displayName = "K", decalId = '6226802892'},
+    L = {displayName = "L", decalId = '6226803027'},
+    M = {displayName = "M", decalId = '6226803174'},
+    N = {displayName = "N", decalId = '6226803285'},
+    O = {displayName = "O", decalId = '6226803407'},
+    P = {displayName = "P", decalId = '6226803541'},
+    Q = {displayName = "Q", decalId = '6226803675'},
+    R = {displayName = "R", decalId = '6226803847'},
+    S = {displayName = "S", decalId = '6226804000'},
+    T = {displayName = "T", decalId = '6226804154'},
+    U = {displayName = "U", decalId = '6226804325'},
+    V = {displayName = "V", decalId = '6226804484'},
+    W = {displayName = "W", decalId = '6226804620'},
+    X = {displayName = "X", decalId = '6226804747'},
+    Y = {displayName = "Y", decalId = '6226804875'},
+    Z = {displayName = "Z", decalId = '6226804997'}
+}
+
 local raven = {
     displayName = "Raven",
     decalId = '5897424121',
@@ -84,6 +139,7 @@ module.characters = {
     raven002 = raven,
     raven003 = raven,
     raven004 = raven,
+    raven03 = raven,
 
     raven = raven,
     britta = britta,
@@ -538,6 +594,11 @@ module.characters = {
     bee = {displayName = "Bee", decalId = '5999465084', backgroundColorIdx = 1},
     elf = {displayName = "Elf", decalId = '5991266909', backgroundColorIdx = 4},
     bun = {displayName = "Bun", decalId = '5991343501', backgroundColorIdx = 1},
+    bunny = {
+        displayName = "Bun Bun",
+        decalId = '5999464542',
+        backgroundColorIdx = 1
+    },
     dog01 = {
         displayName = "Dog",
         decalId = '5999464941',

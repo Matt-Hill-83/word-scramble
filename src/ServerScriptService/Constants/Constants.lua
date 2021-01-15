@@ -1,5 +1,5 @@
-local isTest = true
--- local isTest = false
+-- local isTest = true
+local isTest = false
 
 local devGameConfig = {
     -- transparency = false,
@@ -26,8 +26,8 @@ local prodGameConfig = {
     showWWI = true,
     showScenes = true,
     disabledSpawns = {
-        -- 'SpawnLocation-SkyShip', -- 
-        'SpawnLocation-Block-Race' --
+        'SpawnLocation-SkyShip' -- 
+        -- 'SpawnLocation-Block-Race' --
     }
 }
 local gameConfig = isTest and devGameConfig or prodGameConfig

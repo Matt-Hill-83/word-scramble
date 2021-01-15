@@ -4,7 +4,9 @@ local SceneConfig = require(Sss.Source.QuestConfigs.ScenesConfig)
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
-local Constants = require(Sss.Source.Constants.Constants)
+-- local Constants = require(Sss.Source.Constants.Constants)
+local SP = game:GetService("StarterPlayer")
+local Constants = require(SP.Source.StarterPlayerScripts.RSConstants)
 
 local Scenes = require(Sss.Source.Scenes.Scenes)
 local QuestBlock = require(Sss.Source.AddRemoteObjects.QuestBlock)
