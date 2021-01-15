@@ -18,11 +18,12 @@ local allLetters = {
 local numRow = 26
 local numCol = 26
 
-local words = {
-    "CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "VAN", "RAN", "CAN", "AN", "PAN",
-    "DAN", "FAN", "BAN", "TAN"
+local words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "BAT"}
+-- local words = {
+--     "CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "VAN", "RAN", "CAN", "AN", "PAN",
+--     "DAN", "FAN", "BAN", "TAN"
+-- }
 
-}
 local miniGameState = {
     activeWord = nil,
     activeWordIndex = 1,
