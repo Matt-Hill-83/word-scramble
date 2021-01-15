@@ -119,7 +119,7 @@ function handleBrick(clickedLetter, miniGameState, player)
         })
 
         -- hide the letter in rack where this letter is going
-        -- Utils.hideItemAndChildren({item = targetLetterBlock, hide = true})
+        Utils.hideItemAndChildren({item = targetLetterBlock, hide = true})
 
         local clickedChar =
             LetterFallUtils.getCharFromLetterBlock(clickedLetter)
