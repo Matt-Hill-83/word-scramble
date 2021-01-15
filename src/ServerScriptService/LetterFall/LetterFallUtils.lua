@@ -402,6 +402,9 @@ end
 -- 
 function styleLetterBlocksBD(props)
     local miniGameState = props.miniGameState
+    local runTimeLetterFolder = miniGameState.runTimeLetterFolder
+    local runTimeWordFolder = miniGameState.runTimeWordFolder
+
     local availWords = module.getAvailWords(miniGameState)
 
     local availLetters = module.getAvailLettersDict(
@@ -411,9 +414,7 @@ function styleLetterBlocksBD(props)
         })
 
     local allLetters = module.getAllLettersInRack(
-                           {
-            runTimeLetterFolder = miniGameState.runTimeLetterFolder
-        })
+                           {runTimeLetterFolder = runTimeLetterFolder})
 
     for i, letterBlock in ipairs(allLetters) do
         if CS:HasTag(letterBlock, module.tagNames.Found) then
@@ -440,6 +441,25 @@ function styleLetterBlocksBD(props)
             end
         end
     end
+
+    local wordLetters = module.getAllLettersInWords(
+                            {runTimeWordFolder = runTimeWordFolder})
+
+    print('wordLetters' .. ' - start');
+    print('wordLetters' .. ' - start');
+    print('wordLetters' .. ' - start');
+    print('wordLetters' .. ' - start');
+    print(wordLetters);
+    for _, letterBlock in ipairs(wordLetters) do
+        if CS:HasTag(letterBlock, "Hide") then
+
+            print('letterBlock' .. ' - start');
+            print(letterBlock);
+            print('hiding');
+            Utils.hideItemAndChildren({item = letterBlock, hide = true})
+        end
+    end
+
 end
 
 function colorLetterText(props)
@@ -614,6 +634,18 @@ function getAllLettersInRack(props)
     return letters
 end
 
+function getAllLettersInWords(props)
+    local runTimeWordFolder = props.runTimeWordFolder
+    print('runTimeWordFolder' .. ' - start');
+    print(runTimeWordFolder);
+    local letters = Utils.getByTagInParent(
+                        {
+            parent = runTimeWordFolder,
+            tag = module.tagNames.WordLetter
+        })
+    return letters
+end
+
 module.anchorLetters = anchorLetters
 module.applyLetterText = applyLetterText
 module.colorLetterBD = colorLetterBD
@@ -643,4 +675,5 @@ module.styleLetterBlocksBD = styleLetterBlocksBD
 module.getAvailWords = getAvailWords
 module.getRandomLetter = getRandomLetter
 module.getLettersNotInWords = getLettersNotInWords
+module.getAllLettersInWords = getAllLettersInWords
 return module

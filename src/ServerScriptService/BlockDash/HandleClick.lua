@@ -118,8 +118,14 @@ function handleBrick(clickedLetter, miniGameState, player)
             anchor = true
         })
 
+        local test = CS:HasTag(targetLetterBlock, "WordLetter")
+        print('test' .. ' - start');
+        print(Utils.tableToString({test}));
+        print('test' .. ' - end');
+
         -- hide the letter in rack where this letter is going
-        Utils.hideItemAndChildren({item = targetLetterBlock, hide = true})
+        -- Utils.hideItemAndChildren({item = targetLetterBlock, hide = true})
+        CS:AddTag(targetLetterBlock, "Hide")
 
         local clickedChar =
             LetterFallUtils.getCharFromLetterBlock(clickedLetter)

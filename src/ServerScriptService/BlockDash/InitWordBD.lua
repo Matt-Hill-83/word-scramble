@@ -15,6 +15,10 @@ function initWord(props)
     local wordLetters = props.wordLetters
 
     local letterFallFolder = miniGameState.letterFallFolder
+
+    local runTimeWordFolder = getRunTimeWordFolder(miniGameState)
+    miniGameState.runTimeWordFolder = runTimeWordFolder
+
     local wordBoxFolder = Utils.getFirstDescendantByName(letterFallFolder,
                                                          "WordBoxFolder")
 
@@ -29,7 +33,7 @@ function initWord(props)
     local letterPositioner = Utils.getFirstDescendantByName(newWord,
                                                             "WordLetterBlockPositioner")
 
-    newWord.Parent = wordBox.Parent
+    newWord.Parent = runTimeWordFolder
 
     local spacingFactorY = 1.1
     local spacingFactorX = 1.2
@@ -106,12 +110,12 @@ end
 function initWords(miniGameState)
     local letterFallFolder = miniGameState.letterFallFolder
     local wordLetters = miniGameState.wordLetters
-    local wordFolder = getWordFolder(miniGameState)
 
     for i, char in ipairs(wordLetters) do
         if char.instance then char.instance:Destroy() end
         wordLetters[i] = nil
     end
+
     Utils.clearTable(wordLetters)
 
     for wordIndex, word in ipairs(miniGameState.words) do
@@ -125,9 +129,10 @@ function initWords(miniGameState)
         local newWordObj = initWord(wordProps)
         table.insert(miniGameState.renderedWords, newWordObj)
     end
+
 end
 
-function getWordFolder(miniGameState)
+function getRunTimeWordFolder(miniGameState)
     local letterFallFolder = miniGameState.letterFallFolder
     local runtimeFolder = Utils.getOrCreateFolder(
                               {
@@ -136,7 +141,7 @@ function getWordFolder(miniGameState)
         })
 
     return (Utils.getOrCreateFolder({
-        name = "RunTimeWordBoxFolder",
+        name = "RunTimeWordFolder",
         parent = runtimeFolder
     }))
 end

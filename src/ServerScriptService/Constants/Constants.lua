@@ -1,5 +1,5 @@
--- local isTest = true
-local isTest = false
+local isTest = true
+-- local isTest = false
 
 local devGameConfig = {
     -- transparency = false,

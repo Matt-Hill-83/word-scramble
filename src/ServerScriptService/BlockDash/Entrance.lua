@@ -22,10 +22,10 @@ function module.initEntrance(miniGameState)
                 module.entered = true
                 module.exited = false
 
-                local player = Utils.getPlayerFromHumanoid(humanoid)
-                freezeCameraRE:FireClient(player, true)
-                humanoid.WalkSpeed = fastWalkSpeed
-                humanoid.JumpPower = 70
+                -- local player = Utils.getPlayerFromHumanoid(humanoid)
+                -- freezeCameraRE:FireClient(player, true)
+                -- humanoid.WalkSpeed = fastWalkSpeed
+                -- humanoid.JumpPower = 70
             end
         end
     end
