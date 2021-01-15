@@ -1,5 +1,7 @@
 local Sss = game:GetService("ServerScriptService")
 local CS = game:GetService("CollectionService")
+local MarketplaceService = game:GetService("MarketplaceService")
+local Players = game:GetService("Players")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Constants = require(Sss.Source.Constants.Constants)
@@ -22,6 +24,37 @@ function configPlayers()
         print('onPlayerAdded');
         print(player.UserId);
         player.CharacterAdded:Connect(onCharacterAdded)
+    end
+
+    Players.PlayerAdded:Connect(onPlayerAdded)
+end
+
+function configGamePass()
+
+    local gamePassID = 14078170
+
+    local function onPlayerAdded(player)
+
+        local hasPass = false
+
+        -- Check if the player already owns the game pass
+        local success, message = pcall(function()
+            hasPass = MarketplaceService:UserOwnsGamePassAsync(player.UserId,
+                                                               gamePassID)
+        end)
+
+        -- If there's an error, issue a warning and exit the function
+        if not success then
+            warn("Error while checking if player has pass: " ..
+                     tostring(message))
+            return
+        end
+
+        if hasPass == true then
+            print(player.Name .. " owns the game pass with ID " .. gamePassID)
+            -- Assign this player the ability or bonus related to the game pass
+            --
+        end
     end
 
     Players.PlayerAdded:Connect(onPlayerAdded)
@@ -91,6 +124,7 @@ end
 function module.configGame()
     setVisibility()
     configPlayers()
+    configGamePass()
 
     local spawns = Constants.gameConfig.disabledSpawns
     for _, spawn in ipairs(spawns) do
