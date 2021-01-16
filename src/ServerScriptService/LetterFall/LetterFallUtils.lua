@@ -372,7 +372,6 @@ function styleLetterBlocks(props)
                            {
             runTimeLetterFolder = miniGameState.runTimeLetterFolder
         })
-
     for i, letterBlock in ipairs(allLetters) do
         if CS:HasTag(letterBlock, module.tagNames.Found) then
             module.applyStyleFromTemplate(
@@ -389,6 +388,7 @@ function styleLetterBlocks(props)
                 setStyleToNotAvailable(letterBlock, miniGameState)
             end
         end
+
     end
 end
 -- 
@@ -409,6 +409,7 @@ function styleLetterBlocksBD(props)
     local allLetters = module.getAllLettersInRack(
                            {runTimeLetterFolder = runTimeLetterFolder})
 
+    local numAvailableBlocks = 0
     for i, letterBlock in ipairs(allLetters) do
         if CS:HasTag(letterBlock, module.tagNames.Found) then
             module.applyStyleFromTemplate(
@@ -420,6 +421,7 @@ function styleLetterBlocksBD(props)
         else
             local char = module.getCharFromLetterBlock(letterBlock)
             if availLetters[char] then
+                numAvailableBlocks = numAvailableBlocks + 1
                 module.applyStyleFromTemplate(
                     {
                         targetLetterBlock = letterBlock,
@@ -434,6 +436,8 @@ function styleLetterBlocksBD(props)
             end
         end
     end
+    print('numAvailableBlocks' .. ' - start');
+    print(numAvailableBlocks);
 
     local wordLetters = module.getAllLettersInWords(
                             {runTimeWordFolder = runTimeWordFolder})
@@ -446,6 +450,31 @@ function styleLetterBlocksBD(props)
         end
     end
 
+end
+function getNumAvailLetterBlocks(miniGameState)
+    -- local miniGameState = props.miniGameState/
+    local runTimeLetterFolder = miniGameState.runTimeLetterFolder
+
+    local availWords = module.getAvailWords(miniGameState)
+    local availLetters = module.getAvailLettersDict(
+                             {
+            words = availWords,
+            currentLetterIndex = miniGameState.currentLetterIndex
+        })
+
+    local allLetters = module.getAllLettersInRack(
+                           {runTimeLetterFolder = runTimeLetterFolder})
+
+    local numAvailableBlocks = 0
+    for _, letterBlock in ipairs(allLetters) do
+        if not CS:HasTag(letterBlock, module.tagNames.Found) then
+            local char = module.getCharFromLetterBlock(letterBlock)
+            if availLetters[char] then
+                numAvailableBlocks = numAvailableBlocks + 1
+            end
+        end
+    end
+    return numAvailableBlocks
 end
 
 function unHideWordLetters(miniGameState)
@@ -673,4 +702,5 @@ module.getRandomLetter = getRandomLetter
 module.getLettersNotInWords = getLettersNotInWords
 module.getAllLettersInWords = getAllLettersInWords
 module.unHideWordLetters = unHideWordLetters
+module.getNumAvailLetterBlocks = getNumAvailLetterBlocks
 return module

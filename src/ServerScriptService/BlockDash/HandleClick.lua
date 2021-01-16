@@ -7,6 +7,8 @@ local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 local Constants = require(Sss.Source.Constants.Constants)
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 local Leaderboard = require(Sss.Source.AddRemoteObjects.Leaderboard)
+local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
+-- local InitLetterRack = require(Sss.Source.BlockDash.InitLetterRackBD)
 
 local clickBlockEvent = RS:WaitForChild("ClickBlockRE")
 
@@ -74,11 +76,9 @@ function handleBrick(clickedLetter, miniGameState, player)
 
     local foundChar = LetterFallUtils.getCharFromLetterBlock(clickedLetter)
 
-    local targetLetterBlock = nill
-    local availWords = {}
+    local targetLetterBlock = nil
 
     if activeWord then
-        availWords = {activeWord.wordChars}
         local nextLetterInWord = activeWord.letters[currentLetterIndex]
 
         -- I'm not sure why I get this condition
@@ -92,13 +92,13 @@ function handleBrick(clickedLetter, miniGameState, player)
             targetLetterBlock = activeWord.letters[currentLetterIndex].instance
         end
     else
-        availWords = words
         local availLetters = LetterFallUtils.getAvailLettersDict(
                                  {
                 words = words,
                 currentLetterIndex = currentLetterIndex
             })
 
+        local numAvailLetters = Utils.tablelength(availLetters)
         if isDesiredLetter(availLetters, clickedLetter) then
             targetLetterBlock = findFirstMatchingLetterBlock(foundChar,
                                                              miniGameState)
@@ -172,6 +172,18 @@ function handleBrick(clickedLetter, miniGameState, player)
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
 
         clickedLetter.CFrame = targetLetterBlock.CFrame
+
+        local numAvailableBlocks = LetterFallUtils.getNumAvailLetterBlocks(
+                                       miniGameState)
+        print('numAvailableBlocks' .. ' - start');
+        print(numAvailableBlocks);
+
+        if numAvailableBlocks == 0 then
+
+            BlockDashUtils.clearBlockRack(miniGameState)
+            LetterFallUtils.unHideWordLetters(miniGameState)
+            --     -- InitLetterRack.initLetterRack(miniGameState)
+        end
     end
     module.processing = false
 end

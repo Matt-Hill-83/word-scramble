@@ -135,13 +135,21 @@ function setVisibility()
 end
 
 function module.configGame()
+
+    print('test1');
     setVisibility()
+    print('test1');
     configPlayers()
+    print('test1');
     configGamePass()
+    print('test1');
     configBadges()
+    print('test1');
 
     local spawns = Constants.gameConfig.disabledSpawns
     for _, spawn in ipairs(spawns) do
+        print('spawn' .. ' - start');
+        print(spawn);
         local spawnPart = Utils.getFirstDescendantByName(workspace, spawn)
         spawnPart.Enabled = false
     end

@@ -18,7 +18,8 @@ local allLetters = {
 local numRow = 26
 local numCol = 26
 
-local words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT"}
+local words = {"CAT", "HAT"}
+-- local words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT"}
 -- local words = {
 --     "CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "VAN", "RAN", "CAN", "AN", "PAN",
 --     "DAN", "FAN", "BAN", "TAN"
@@ -84,7 +85,6 @@ function addBlockDash(props)
             if not miniGameState.canResetBlocks then
                 miniGameState.canResetBlocks = true
                 InitLetterRack.initLetterRack(miniGameState)
-
             end
         end
     end

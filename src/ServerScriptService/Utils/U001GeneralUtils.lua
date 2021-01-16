@@ -6,6 +6,16 @@ local Players = game:GetService("Players")
 local Constants = require(Sss.Source.Constants.Constants)
 local module = {}
 
+-- new
+-- 
+-- 
+
+function tablelength(T)
+    local count = 0
+    for _ in pairs(T) do count = count + 1 end
+    return count
+end
+
 function applyDecalsToCharacterFromWord(props)
     local part = props.part
     local word = props.word
@@ -528,6 +538,7 @@ module.removeFirstMatchFromArray = removeFirstMatchFromArray
 module.getPlayerFromHumanoid = getPlayerFromHumanoid
 module.getKeysFromDict = getKeysFromDict
 module.setItemHeight = setItemHeight
+module.tablelength = tablelength
 module.applyDecalsToCharacterFromWord = applyDecalsToCharacterFromWord
 module.applyDecalsToCharacterFromConfigName =
     applyDecalsToCharacterFromConfigName
