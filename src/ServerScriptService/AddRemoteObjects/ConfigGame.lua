@@ -100,7 +100,6 @@ function setVisibility()
         wall.Transparency = 1
         wall.CanCollide = true
         wall.Anchored = true
-        -- wall.Color = Constants.colors.blue
 
         local newWall = wall:Clone()
 
