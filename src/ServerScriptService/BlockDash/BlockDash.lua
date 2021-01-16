@@ -9,6 +9,7 @@ local Entrance = require(Sss.Source.BlockDash.Entrance)
 local ArrowTool = require(Sss.Source.BlockDash.ArrowTool)
 local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
 local HandleClick = require(Sss.Source.BlockDash.HandleClick)
+local LetterGrabber = require(Sss.Source.LetterGrabber.LetterGrabber)
 
 local module = {}
 
@@ -51,30 +52,7 @@ local miniGameState = {
     canResetBlocks = true
 }
 
-function addBlockDash(props)
-    local myStuff = workspace:FindFirstChild("MyStuff")
-    miniGameState.onSelectRackBlock = HandleClick.onSelectRackBlock
-
-    miniGameState.letterFallFolder = Utils.getFirstDescendantByName(myStuff,
-                                                                    "BlockDash")
-
-    local function onWordLettersGone(miniGameState2)
-        BlockDashUtils.clearBlockRack(miniGameState2)
-        LetterFallUtils.unHideWordLetters(miniGameState2)
-        InitLetterRack.initLetterRack(miniGameState2)
-    end
-
-    miniGameState.onWordLettersGone = onWordLettersGone
-    -- Do some acrobatics here because InitLetterRack needs to attach
-    -- itself as an event to the blocks it creates.
-
-    Entrance.initEntrance(miniGameState)
-    ArrowTool.initArrowTool(miniGameState)
-    InitLetterRack.initLetterRack(miniGameState)
-    InitWord.initWords(miniGameState)
-
-    LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
-
+function initPowerUps()
     function onTouchClearBlocks(otherPart)
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
@@ -109,6 +87,32 @@ function addBlockDash(props)
     end
 end
 
+function addBlockDash(props)
+    local myStuff = workspace:FindFirstChild("MyStuff")
+    miniGameState.onSelectRackBlock = HandleClick.onSelectRackBlock
+
+    miniGameState.letterFallFolder = Utils.getFirstDescendantByName(myStuff,
+                                                                    "BlockDash")
+
+    local function onWordLettersGone(miniGameState2)
+        BlockDashUtils.clearBlockRack(miniGameState2)
+        LetterFallUtils.unHideWordLetters(miniGameState2)
+        InitLetterRack.initLetterRack(miniGameState2)
+    end
+
+    miniGameState.onWordLettersGone = onWordLettersGone
+    -- Do some acrobatics here because InitLetterRack needs to attach
+    -- itself as an event to the blocks it creates.
+
+    Entrance.initEntrance(miniGameState)
+    ArrowTool.initArrowTool(miniGameState)
+    InitLetterRack.initLetterRack(miniGameState)
+    InitWord.initWords(miniGameState)
+
+    LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
+    initPowerUps()
+
+end
+
 module.addBlockDash = addBlockDash
 return module
-
