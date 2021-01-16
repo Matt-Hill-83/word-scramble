@@ -17,6 +17,8 @@ function module.initLetterGrabber(miniGameState)
     print('template' .. ' - start');
     print(template);
 
+    local configs = {"cat", "dog"}
+
     for _, positioner in ipairs(positioners) do
 
         local newGrabber = template:Clone()
