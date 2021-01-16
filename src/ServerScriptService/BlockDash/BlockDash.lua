@@ -53,7 +53,6 @@ local miniGameState = {
 
 function addBlockDash(props)
     local myStuff = workspace:FindFirstChild("MyStuff")
-    --  = HandleClick.onSelectRackBlock
     miniGameState.onSelectRackBlock = HandleClick.onSelectRackBlock
 
     miniGameState.letterFallFolder = Utils.getFirstDescendantByName(myStuff,
@@ -68,8 +67,6 @@ function addBlockDash(props)
     miniGameState.onWordLettersGone = onWordLettersGone
     -- Do some acrobatics here because InitLetterRack needs to attach
     -- itself as an event to the blocks it creates.
-
-    -- local onSelectRackBlock = HandleClick.getClickHandler(onWordLettersGone)
 
     Entrance.initEntrance(miniGameState)
     ArrowTool.initArrowTool(miniGameState)

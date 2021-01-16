@@ -103,7 +103,6 @@ function initLetterRack(miniGameState)
                         local player = Utils.getPlayerFromHumanoid(humanoid)
                         miniGameState.onSelectRackBlock(newLetter,
                                                         miniGameState, player)
-                        -- HandleClick.onSelectRackBlock(newLetter, miniGameState, player)
                         db.value = false
                     end
                 end
