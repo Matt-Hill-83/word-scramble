@@ -8,6 +8,7 @@ local InitWord = require(Sss.Source.BlockDash.InitWordBD)
 local Entrance = require(Sss.Source.BlockDash.Entrance)
 local ArrowTool = require(Sss.Source.BlockDash.ArrowTool)
 local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
+local HandleClick = require(Sss.Source.BlockDash.HandleClick)
 
 local module = {}
 
@@ -52,12 +53,13 @@ local miniGameState = {
 
 function addBlockDash(props)
     local myStuff = workspace:FindFirstChild("MyStuff")
+    local onSelectRackBlock = HandleClick.onSelectRackBlock
 
     miniGameState.letterFallFolder = Utils.getFirstDescendantByName(myStuff,
                                                                     "BlockDash")
     Entrance.initEntrance(miniGameState)
     ArrowTool.initArrowTool(miniGameState)
-    InitLetterRack.initLetterRack(miniGameState)
+    InitLetterRack.initLetterRack(miniGameState, onSelectRackBlock)
     InitWord.initWords(miniGameState)
 
     LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
@@ -84,7 +86,7 @@ function addBlockDash(props)
         if humanoid then
             if not miniGameState.canResetBlocks then
                 miniGameState.canResetBlocks = true
-                InitLetterRack.initLetterRack(miniGameState)
+                InitLetterRack.initLetterRack(miniGameState, onSelectRackBlock)
             end
         end
     end

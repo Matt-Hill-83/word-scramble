@@ -40,12 +40,12 @@ function findFirstMatchingLetterBlock(foundChar, miniGameState)
     return matchingLetter
 end
 
-function handleBrick(clickedLetter, miniGameState, player)
+function onSelectRackBlock(clickedLetter, miniGameState, player)
     if module.processing == true then return end
     module.processing = true
 
     local letterFallFolder = miniGameState.letterFallFolder
-    local runTimeLetterFolder = miniGameState.runTimeLetterFolder
+    -- -- local runTimeLetterFolder = miniGameState.runTimeLetterFolder
 
     if not module.initComplete then
         module.initComplete = true
@@ -189,5 +189,5 @@ function handleBrick(clickedLetter, miniGameState, player)
 end
 
 module.initClickHandler = initClickHandler
-module.handleBrick = handleBrick
+module.onSelectRackBlock = onSelectRackBlock
 return module
