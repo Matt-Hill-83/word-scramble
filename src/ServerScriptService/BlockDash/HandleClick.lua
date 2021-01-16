@@ -179,15 +179,27 @@ function onSelectRackBlock(clickedLetter, miniGameState, player)
         print(numAvailableBlocks);
 
         if numAvailableBlocks == 0 then
-
-            BlockDashUtils.clearBlockRack(miniGameState)
-            LetterFallUtils.unHideWordLetters(miniGameState)
+            miniGameState.onWordLettersGone(miniGameState)
+            -- BlockDashUtils.clearBlockRack(miniGameState)
+            -- LetterFallUtils.unHideWordLetters(miniGameState)
             --     -- InitLetterRack.initLetterRack(miniGameState)
         end
     end
     module.processing = false
 end
 
-module.initClickHandler = initClickHandler
+local function getClickHandler(onWordLettersGone)
+
+    -- Do some currying here.
+    -- Pass in and bind onWordLettersGone to onSelectRackBlock because it can't be passed in
+    -- at run time.
+    local function clickHandlerWrapper(clickedLetter, miniGameState, player)
+        module.onSelectRackBlock(clickedLetter, miniGameState, player,
+                                 onWordLettersGone)
+    end
+    return clickHandlerWrapper
+end
+
+module.getClickHandler = getClickHandler
 module.onSelectRackBlock = onSelectRackBlock
 return module

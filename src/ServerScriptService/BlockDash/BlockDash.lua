@@ -53,13 +53,27 @@ local miniGameState = {
 
 function addBlockDash(props)
     local myStuff = workspace:FindFirstChild("MyStuff")
-    local onSelectRackBlock = HandleClick.onSelectRackBlock
+    --  = HandleClick.onSelectRackBlock
+    miniGameState.onSelectRackBlock = HandleClick.onSelectRackBlock
 
     miniGameState.letterFallFolder = Utils.getFirstDescendantByName(myStuff,
                                                                     "BlockDash")
+
+    local function onWordLettersGone(miniGameState2)
+        BlockDashUtils.clearBlockRack(miniGameState2)
+        LetterFallUtils.unHideWordLetters(miniGameState2)
+        InitLetterRack.initLetterRack(miniGameState2)
+    end
+
+    miniGameState.onWordLettersGone = onWordLettersGone
+    -- Do some acrobatics here because InitLetterRack needs to attach
+    -- itself as an event to the blocks it creates.
+
+    -- local onSelectRackBlock = HandleClick.getClickHandler(onWordLettersGone)
+
     Entrance.initEntrance(miniGameState)
     ArrowTool.initArrowTool(miniGameState)
-    InitLetterRack.initLetterRack(miniGameState, onSelectRackBlock)
+    InitLetterRack.initLetterRack(miniGameState)
     InitWord.initWords(miniGameState)
 
     LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
@@ -86,7 +100,7 @@ function addBlockDash(props)
         if humanoid then
             if not miniGameState.canResetBlocks then
                 miniGameState.canResetBlocks = true
-                InitLetterRack.initLetterRack(miniGameState, onSelectRackBlock)
+                InitLetterRack.initLetterRack(miniGameState)
             end
         end
     end

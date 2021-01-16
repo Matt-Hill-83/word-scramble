@@ -10,7 +10,7 @@ local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
 
 local module = {}
 
-function initLetterRack(miniGameState, onSelectRackBlock)
+function initLetterRack(miniGameState)
     local rackLetterBlockObjs = miniGameState.rackLetterBlockObjs
     local letterFallFolder = miniGameState.letterFallFolder
     local numRow = miniGameState.numRow
@@ -101,7 +101,8 @@ function initLetterRack(miniGameState, onSelectRackBlock)
                     if not db.value then
                         db.value = true
                         local player = Utils.getPlayerFromHumanoid(humanoid)
-                        onSelectRackBlock(newLetter, miniGameState, player)
+                        miniGameState.onSelectRackBlock(newLetter,
+                                                        miniGameState, player)
                         -- HandleClick.onSelectRackBlock(newLetter, miniGameState, player)
                         db.value = false
                     end
