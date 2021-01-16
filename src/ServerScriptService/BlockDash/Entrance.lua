@@ -24,7 +24,7 @@ function module.initEntrance(miniGameState)
 
                 local player = Utils.getPlayerFromHumanoid(humanoid)
                 freezeCameraRE:FireClient(player, true)
-                humanoid.WalkSpeed = fastWalkSpeed
+                -- humanoid.WalkSpeed = fastWalkSpeed
                 humanoid.JumpPower = 70
             end
         end
@@ -42,7 +42,7 @@ function module.initEntrance(miniGameState)
 
                 local player = Utils.getPlayerFromHumanoid(humanoid)
                 freezeCameraRE:FireClient(player, false)
-                humanoid.WalkSpeed = Constants.walkSpeed
+                -- humanoid.WalkSpeed = Constants.walkSpeed
                 humanoid.JumpPower = 50
             end
         end
@@ -56,7 +56,6 @@ function module.initEntrance(miniGameState)
         if humanoid then
             if not module.runFast then
                 module.runFast = true
-
                 humanoid.WalkSpeed = fastWalkSpeed
             end
         end
