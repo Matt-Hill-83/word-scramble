@@ -13,9 +13,15 @@ function module.initLetterGrabber(miniGameState)
     print('positioners' .. ' - start');
     print(positioners);
 
+    local template = Utils.getFromTemplates("LetterGrabberTemplate")
+    print('template' .. ' - start');
+    print(template);
+
     for _, positioner in ipairs(positioners) do
 
-        -- 
+        local newGrabber = template:Clone()
+        newGrabber.Parent = letterFallFolder
+        newGrabber.Handle.CFrame = positioner.CFrame
 
     end
 end
