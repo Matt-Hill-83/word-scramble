@@ -81,8 +81,6 @@ function handleBrick(clickedLetter, miniGameState, player)
     if isDeadLetter(clickedLetter) then return end
 
     local activeWord = miniGameState.activeWord
-    print('activeWord' .. ' - start');
-    print(activeWord);
     local currentLetterIndex = miniGameState.currentLetterIndex
     local words = miniGameState.words
 

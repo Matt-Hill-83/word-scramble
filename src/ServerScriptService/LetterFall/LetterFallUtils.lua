@@ -634,8 +634,6 @@ end
 
 function getAllLettersInWords(props)
     local runTimeWordFolder = props.runTimeWordFolder
-    print('runTimeWordFolder' .. ' - start');
-    print(runTimeWordFolder);
     local letters = Utils.getByTagInParent(
                         {
             parent = runTimeWordFolder,

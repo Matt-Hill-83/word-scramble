@@ -33,8 +33,6 @@ local function freezeCamera(cameraPath1, cameraPath2, freeze)
     local camera = workspace.CurrentCamera
     if freeze then
         local cameraOffset = Vector3.new(0, 0, 0)
-        print('cameraOffset' .. ' - start');
-        print(cameraOffset);
         if camera.CameraType ~= Enum.CameraType.Scriptable then
             camera.CameraType = Enum.CameraType.Scriptable
         end

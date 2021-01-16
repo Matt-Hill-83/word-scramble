@@ -1,6 +1,4 @@
 print("Reset Character------------------------------------------->>>>")
-print("Reset Character------------------------------------------->>>>")
-print("Reset Character------------------------------------------->>>>")
 local Players = game:GetService("Players")
 local SP = game:GetService("StarterPlayer")
 local Constants = require(SP.Source.StarterPlayerScripts.RSConstants)

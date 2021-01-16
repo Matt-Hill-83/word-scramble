@@ -4,7 +4,6 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local remoteEvent = ReplicatedStorage:WaitForChild("LetterFallFreezeCameraRE")
 
 local function onClientEvent(cameraPath1, cameraPath2, freeze)
-    print('LetterFallFreezeCamera' .. ' - start');
     local player = game:GetService("Players").LocalPlayer
 
     local camera = workspace.CurrentCamera

@@ -111,20 +111,14 @@ function handleBrick(clickedLetter, miniGameState, player)
 
         local letterBlockCFrame = clickedLetter.CFrame
 
-        local tween = Utils3.tween({
+        Utils3.tween({
             part = clickedLetter,
             endPosition = targetLetterBlock.Position,
             time = 0.4,
             anchor = true
         })
 
-        local test = CS:HasTag(targetLetterBlock, "WordLetter")
-        print('test' .. ' - start');
-        print(Utils.tableToString({test}));
-        print('test' .. ' - end');
-
         -- hide the letter in rack where this letter is going
-        -- Utils.hideItemAndChildren({item = targetLetterBlock, hide = true})
         CS:AddTag(targetLetterBlock, "Hide")
 
         local clickedChar =
