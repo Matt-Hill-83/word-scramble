@@ -52,7 +52,7 @@ local miniGameState = {
     canResetBlocks = true
 }
 
-function initPowerUps()
+function initPowerUps(miniGameState)
     function onTouchClearBlocks(otherPart)
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
@@ -110,7 +110,7 @@ function addBlockDash(props)
     InitWord.initWords(miniGameState)
 
     LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
-    initPowerUps()
+    initPowerUps(miniGameState)
 
 end
 
