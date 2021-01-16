@@ -96,11 +96,11 @@ function setVisibility()
     local tagBaseWallTransparent = CS:GetTagged("BaseWallTransparent")
     for i, wall in ipairs(tagBaseWallTransparent) do
         Utils.setItemHeight({item = wall, height = 20})
-        local newWallHeight = 2
+        local newWallHeight = 1
         wall.Transparency = 1
         wall.CanCollide = true
         wall.Anchored = true
-        wall.Color = Constants.colors.blue
+        -- wall.Color = Constants.colors.blue
 
         local newWall = wall:Clone()
 
@@ -111,40 +111,17 @@ function setVisibility()
                                Vector3.new(0,
                                            -(wall.Size.Y - newWall.Size.Y) / 2,
                                            0)
-        newWall.Transparency = 0.7
+        newWall.Transparency = 0
         CS:RemoveTag(newWall, "BaseWallTransparent")
     end
-
-    local hexTag = "HexWallTransparent"
-    local taggedWalls = CS:GetTagged(hexTag)
-    for i, wall in ipairs(taggedWalls) do
-        Utils.setItemHeight({item = wall, height = 2})
-        local newWallHeight = 4
-        wall.Transparency = 0
-    end
-
-    for i, wall in ipairs(CS:GetTagged("BDExitWall")) do
-        Utils.setItemHeight({item = wall, height = 8})
-        wall.Transparency = 0.9
-    end
-
-    local skyBoxWalls = CS:GetTagged("SkyBoxWalls")
-    Utils.setWallHeightByList({items = skyBoxWalls, height = 50})
-    Utils.setPropsByTag({tag = "SkyBoxWalls", props = {Transparency = 0.9}})
 
 end
 
 function module.configGame()
-
-    print('test1');
     setVisibility()
-    print('test1');
     configPlayers()
-    print('test1');
     configGamePass()
-    print('test1');
     configBadges()
-    print('test1');
 
     local spawns = Constants.gameConfig.disabledSpawns
     for _, spawn in ipairs(spawns) do

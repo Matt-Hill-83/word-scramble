@@ -156,8 +156,6 @@ function onSelectRackBlock(clickedLetter, miniGameState, player)
 
             local rand = Utils.genRandom(1, #Constants.gemColors)
             newGem.Handle.Color = Constants.gemColors[rand]
-            print('newGem' .. ' - start');
-            print(newGem);
 
             table.insert(miniGameState.foundWords, currentWord)
             miniGameState.foundLetters = {}
@@ -175,8 +173,6 @@ function onSelectRackBlock(clickedLetter, miniGameState, player)
 
         local numAvailableBlocks = LetterFallUtils.getNumAvailLetterBlocks(
                                        miniGameState)
-        print('numAvailableBlocks' .. ' - start');
-        print(numAvailableBlocks);
 
         if numAvailableBlocks == 0 then
             miniGameState.onWordLettersGone(miniGameState)
