@@ -436,8 +436,6 @@ function styleLetterBlocksBD(props)
             end
         end
     end
-    print('numAvailableBlocks' .. ' - start');
-    print(numAvailableBlocks);
 
     local wordLetters = module.getAllLettersInWords(
                             {runTimeWordFolder = runTimeWordFolder})
@@ -452,7 +450,6 @@ function styleLetterBlocksBD(props)
 
 end
 function getNumAvailLetterBlocks(miniGameState)
-    -- local miniGameState = props.miniGameState/
     local runTimeLetterFolder = miniGameState.runTimeLetterFolder
 
     local availWords = module.getAvailWords(miniGameState)

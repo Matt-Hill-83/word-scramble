@@ -111,7 +111,7 @@ function addBlockDash(props)
 
     LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
     initPowerUps(miniGameState)
-
+    LetterGrabber.initLetterGrabber(miniGameState)
 end
 
 module.addBlockDash = addBlockDash
