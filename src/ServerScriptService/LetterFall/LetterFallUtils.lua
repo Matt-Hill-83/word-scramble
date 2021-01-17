@@ -42,6 +42,23 @@ module.letterBlockStyleDefs = {
     }
 }
 
+function playWordSound(word)
+    local closure = function()
+        if Constants.wordConfigs[word] then
+            local soundId = Constants.wordConfigs[word]['soundId']
+
+            if (soundId) then
+                local sound = Instance.new("Sound", workspace)
+                sound.SoundId = "rbxassetid://" .. soundId
+                sound.EmitterSize = 5
+                sound.Looped = false
+                if not sound.IsPlaying then sound:Play() end
+            end
+        end
+    end
+    return closure
+end
+
 function getLettersNotInWords(words)
     local allLetters = Constants.allLetters
 
@@ -700,4 +717,5 @@ module.getLettersNotInWords = getLettersNotInWords
 module.getAllLettersInWords = getAllLettersInWords
 module.unHideWordLetters = unHideWordLetters
 module.getNumAvailLetterBlocks = getNumAvailLetterBlocks
+module.playWordSound = playWordSound
 return module
