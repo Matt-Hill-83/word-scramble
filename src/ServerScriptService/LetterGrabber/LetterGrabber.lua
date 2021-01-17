@@ -57,7 +57,7 @@ function module.initLetterGrabber(miniGameState)
         applyDecalsToCharacterFromWord({part = newGrabber, word = config})
         local grabberPart = newGrabber.Handle
 
-        local offsetX = configIndex * grabberPart.Size.X * 1.2
+        local offsetX = configIndex * 10
         breaker.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                              {
                 parent = positioner,
