@@ -166,7 +166,7 @@ module.characters = {
 
     rat = {displayName = "Rat", decalId = '6152126688', backgroundColorIdx = 1},
     hat = {displayName = "Hat", decalId = '1437453153', backgroundColorIdx = 1},
-    bat = {displayName = "Bat", decalId = '1507662866', backgroundColorIdx = 1},
+    bat = {displayName = "Bat", decalId = '5898503705', backgroundColorIdx = 1},
     katBody = {
         displayName = "Kat",
         decalId = '6107346290',
@@ -708,17 +708,16 @@ local function getImageId(characterName)
 end
 
 module.wordConfigs = {
+    MAT = {soundId = "6145991240", imageId = getImageId('mat')},
     BAT = {soundId = "6145991240", imageId = getImageId('bat')},
-    BOG = {soundId = "6149925692", imageId = "xxx"},
     BEE = {soundId = "6149925692", imageId = getImageId('bee')},
     CAT = {soundId = "6145990934", imageId = getImageId('mitzyMeow01')},
     DOG = {soundId = "6145990934", imageId = getImageId('angus01')},
-    -- DOG = {soundId = "6145990934", imageId = module.characters.angus01.decalId},
-    MAT = {soundId = "6145991865", imageId = "xxx"},
-    PAT = {soundId = "6145992548", imageId = "xxx"},
     RAT = {soundId = "6145992816", imageId = getImageId('rat')},
     HAT = {soundId = "6145992816", imageId = getImageId('hat')},
-    -- RAT = {soundId = "6145992816", imageId = module.characters.rat.decalId},
+    -- 
+    BOG = {soundId = "6149925692", imageId = "xxx"},
+    PAT = {soundId = "6145992548", imageId = "xxx"},
     SAT = {soundId = "6145993194", imageId = "xxx"},
     MOM = {soundId = "6199537750", imageId = "xxx"},
     YES = {soundId = "6199538408", imageId = "xxx"}

@@ -21,21 +21,19 @@ local function applyDecalsToCharacterFromWord(props)
     end
 end
 
-function onTouchBreaker(breaker)
-    local function closure(otherPart)
-        -- enclosed property
-        local isReleasedFromBreaker = false
+function onTouchGrabber(breaker)
+    -- enclosed property
+    local isReleasedFromBreaker = false
 
+    local function closure(otherPart)
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
-            local player = Utils.getPlayerFromHumanoid(humanoid)
             if not isReleasedFromBreaker then
                 isReleasedFromBreaker = true
                 breaker:Destroy()
             end
         end
     end
-
     return closure
 end
 
@@ -45,7 +43,7 @@ function module.initLetterGrabber(miniGameState)
     local positioners = Utils.getDescendantsByName(letterFallFolder,
                                                    "LetterGrabberPositioner")
     local template = Utils.getFromTemplates("LetterGrabberTemplate")
-    local configs = {"CAT", "DOG", "RAT", "BAT", "HAT"}
+    local configs = {"CAT", "DOG", "RAT", "BAT", "HAT", "MAT"}
 
     for configIndex, config in ipairs(configs) do
         local positioner = positioners[1]
@@ -70,7 +68,7 @@ function module.initLetterGrabber(miniGameState)
             })
 
         breaker.Anchored = true
-        grabberPart.Touched:Connect(onTouchBreaker(breaker))
+        grabberPart.Touched:Connect(onTouchGrabber(breaker))
 
     end
 end
