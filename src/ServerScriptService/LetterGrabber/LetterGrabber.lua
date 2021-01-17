@@ -1,6 +1,7 @@
 local Sss = game:GetService("ServerScriptService")
 local CS = game:GetService("CollectionService")
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
+local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
@@ -31,8 +32,6 @@ local function configWordLetters(props)
         local letterNameStub = wordNameStub .. "-L" .. letterIndex
 
         local letter = string.sub(word, letterIndex, letterIndex)
-        print('letter' .. ' - start');
-        print(letter);
 
         local newLetter = letterBlockTemplate:Clone()
 
@@ -61,7 +60,6 @@ local function configWordLetters(props)
 
         newLetter.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                translateCFrameProps)
-        -- newLetter.Anchored = true
 
         local weld = Instance.new("WeldConstraint")
         weld.Name = "WeldConstraint" .. letterNameStub
@@ -107,16 +105,29 @@ local function applyDecalsToCharacterFromWord(props)
     end
 end
 
-function onTouchGrabber(breaker)
+function onTouchGrabber(grabber)
     -- enclosed property
     local isReleasedFromBreaker = false
+    local breaker = Utils.getFirstDescendantByName(grabber, "Breaker")
+    print('breaker' .. ' - start');
+    print(breaker);
 
     local function closure(otherPart)
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
-            if not isReleasedFromBreaker then
-                isReleasedFromBreaker = true
-                breaker:Destroy()
+            local player = Utils.getPlayerFromHumanoid(humanoid)
+            local gameState = PlayerStatManager.getGameState(player)
+            -- don't let player get a grabber if they already have one.
+            if gameState.grabber then
+                grabber.Parent = workspace
+                grabber.Handle.Name = "xxxHandle"
+                -- 
+            else
+                if not isReleasedFromBreaker then
+                    gameState.grabber = grabber
+                    isReleasedFromBreaker = true
+                    breaker:Destroy()
+                end
             end
         end
     end
@@ -157,11 +168,10 @@ local function initWord(miniGameState, wordIndex, config)
         })
 
     breaker.Anchored = true
-    grabberPart.Touched:Connect(onTouchGrabber(breaker))
+    grabberPart.Touched:Connect(onTouchGrabber(newGrabber))
 end
 
 function module.initLetterGrabber(miniGameState)
-    -- local configs = {"DOG"}
     local configs = {"CAT", "DOG", "RAT", "BAT", "HAT", "MAT", "PAT", "VAT"}
 
     for wordIndex, config in ipairs(configs) do
