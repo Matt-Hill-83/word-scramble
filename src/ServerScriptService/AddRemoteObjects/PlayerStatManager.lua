@@ -6,7 +6,7 @@ local playerData = DataStoreService:GetDataStore("PlayerData")
 
 -- Table to hold player information for the current session
 local sessionData = {}
-local gameState = {runFast = false, orbitalView = false}
+local gameState = {}
 local nameStub = "Player_"
 local AUTOSAVE_INTERVAL = 60
 
@@ -39,7 +39,7 @@ end
 -- Function to add player to the "sessionData" table
 local function setupPlayerData(player)
     local playerUserId = nameStub .. player.UserId
-    gameState[playerUserId] = {cat = "zippy"}
+    gameState[playerUserId] = {runFast = false, orbitalView = false}
 
     local success, data = pcall(function()
         return playerData:GetAsync(playerUserId)
