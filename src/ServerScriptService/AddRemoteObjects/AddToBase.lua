@@ -9,8 +9,6 @@ local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
 local BlockDash = require(Sss.Source.BlockDash.BlockDash)
 
-function deleteTemplates() end
-
 function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
     local worlds = {1}
@@ -20,10 +18,8 @@ function addRemoteObjects()
         addWorld(worldProps)
     end
 
-    deleteTemplates()
     -- Do this last after everything has been created/deleted
     ConfigGame.configGame()
-
     PlayerStatManager.init()
 end
 
