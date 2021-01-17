@@ -37,39 +37,43 @@ function onTouchGrabber(breaker)
     return closure
 end
 
-function module.initLetterGrabber(miniGameState)
+local function initWord(miniGameState, configIndex, config)
     local letterFallFolder = miniGameState.letterFallFolder
 
-    local positioners = Utils.getDescendantsByName(letterFallFolder,
-                                                   "LetterGrabberPositioner")
+    local positioner = Utils.getFirstDescendantByName(letterFallFolder,
+                                                      "LetterGrabberPositioner")
     local template = Utils.getFromTemplates("LetterGrabberTemplate")
+
+    local newGrabber = template:Clone()
+    newGrabber.Parent = letterFallFolder
+    local grabberPart = newGrabber.Handle
+
+    applyDecalsToCharacterFromWord({part = newGrabber, word = config})
+
+    local breaker = Utils.getFirstDescendantByName(newGrabber, "Breaker")
+    local offsetX = configIndex * 10
+    breaker.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                         {
+            parent = positioner,
+            child = breaker,
+            offsetConfig = {
+                useParentNearEdge = Vector3.new(-1, 1, -1),
+                useChildNearEdge = Vector3.new(1, 1, 1),
+                offsetAdder = Vector3.new(offsetX, 0, 0)
+            }
+        })
+
+    breaker.Anchored = true
+    grabberPart.Touched:Connect(onTouchGrabber(breaker))
+    -- 
+end
+
+function module.initLetterGrabber(miniGameState)
     local configs = {"CAT", "DOG", "RAT", "BAT", "HAT", "MAT", "PAT", "VAT"}
 
     for configIndex, config in ipairs(configs) do
-        local positioner = positioners[1]
-
-        local newGrabber = template:Clone()
-        newGrabber.Parent = letterFallFolder
-        local breaker = Utils.getFirstDescendantByName(newGrabber, "Breaker")
-
-        applyDecalsToCharacterFromWord({part = newGrabber, word = config})
-        local grabberPart = newGrabber.Handle
-
-        local offsetX = configIndex * 10
-        breaker.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                             {
-                parent = positioner,
-                child = breaker,
-                offsetConfig = {
-                    useParentNearEdge = Vector3.new(-1, 1, -1),
-                    useChildNearEdge = Vector3.new(1, 1, 1),
-                    offsetAdder = Vector3.new(offsetX, 0, 0)
-                }
-            })
-
-        breaker.Anchored = true
-        grabberPart.Touched:Connect(onTouchGrabber(breaker))
-
+        initWord(miniGameState, configIndex, config)
+        -- 
     end
 end
 
