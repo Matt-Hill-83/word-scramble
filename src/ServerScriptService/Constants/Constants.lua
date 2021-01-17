@@ -708,14 +708,9 @@ local function getImageId(characterName)
 end
 
 module.wordConfigs = {
-
-    -- 
-    -- 
-    -- 
     BAT = {soundId = "6145991240", imageId = getImageId('bat')},
     BOG = {soundId = "6149925692", imageId = getImageId('bog')},
     BEE = {soundId = "6149925692", imageId = getImageId('bee')},
-    -- 
     CAT = {soundId = "6145990934", imageId = getImageId('mitzyMeow01')},
     DOG = {soundId = "6145990934", imageId = getImageId('angus01')},
     HAT = {soundId = "6145991587", imageId = getImageId('hat')},
@@ -726,9 +721,9 @@ module.wordConfigs = {
     RAT = {soundId = "6145992816", imageId = getImageId('rat')},
     SAT = {soundId = "6145993194", imageId = "6253976498"},
 
-    MOM = {soundId = "6253993250", imageId = "xxx"},
-    DAD = {soundId = "6253993637", imageId = "xxx"},
-    -- 
+    MOM = {soundId = "6253993250", imageId = "6253993250"},
+    DAD = {soundId = "6253993637", imageId = "6253993637"},
+    VAT = {soundId = "6145992548", imageId = "6253982590"},
     YES = {soundId = "6199538408", imageId = "xxx"}
 }
 
