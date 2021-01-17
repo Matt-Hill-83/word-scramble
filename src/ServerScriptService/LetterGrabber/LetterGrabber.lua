@@ -116,15 +116,25 @@ function onTouchGrabber(grabber)
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
             local player = Utils.getPlayerFromHumanoid(humanoid)
-            local gameState = PlayerStatManager.getGameState(player)
+            local playerState = PlayerStatManager.getGameState(player)
+            print('playerState' .. ' - start');
+            print('playerState' .. ' - start');
+            print('playerState' .. ' - start');
+            print('playerState' .. ' - start');
+            print(playerState);
             -- don't let player get a grabber if they already have one.
-            if gameState.grabber then
+            if playerState.grabber and playerState.grabber ~= grabber then
                 grabber.Parent = workspace
-                grabber.Handle.Name = "xxxHandle"
-                -- 
+
+                local handle = Utils.getFirstDescendantByName(grabber, "Handle")
+                if handle then handle.Name = "xxxHandle" end
             else
+
+                local dummyHandle = Utils.getFirstDescendantByName(grabber,
+                                                                   "xxxHandle")
+                if dummyHandle then dummyHandle.Name = "Handle" end
                 if not isReleasedFromBreaker then
-                    gameState.grabber = grabber
+                    playerState.grabber = grabber
                     isReleasedFromBreaker = true
                     breaker:Destroy()
                 end
@@ -172,7 +182,9 @@ local function initWord(miniGameState, wordIndex, config)
 end
 
 function module.initLetterGrabber(miniGameState)
-    local configs = {"CAT", "DOG", "RAT", "BAT", "HAT", "MAT", "PAT", "VAT"}
+    local configs = {
+        "CAT", "DOG", "RAT", "BAT", "HAT", "MAT", "PAT", "VAT", "MOM", "DAD"
+    }
 
     for wordIndex, config in ipairs(configs) do
         initWord(miniGameState, wordIndex, config)
