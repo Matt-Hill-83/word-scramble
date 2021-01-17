@@ -2,10 +2,11 @@ local Sss = game:GetService("ServerScriptService")
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local DataStoreService = game:GetService("DataStoreService")
 local WinsLeaderboard = DataStoreService:GetOrderedDataStore("WinsLeaderboard")
+local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 
 local module = {}
 
-local function updateLeaderboard()
+local function updateLeaderboard(player)
     local success, errorMessage = pcall(function()
         local globalLeaderboards = Utils.getDescendantsByName(workspace,
                                                               "GlobalLeaderboard")
@@ -35,11 +36,14 @@ local function updateLeaderboard()
                         break
                     end
                 end
-
+                local gems2 = PlayerStatManager.getSessionData(player).Gems
+                print('gems2' .. ' - start');
+                print(gems2);
                 if Wins and isOnLeaderboard == false then
                     local newLbFrame = game.ReplicatedStorage:WaitForChild(
                                            "LeaderboardFrame"):Clone()
                     newLbFrame.Player.Text = Name
+                    -- newLbFrame.Wins.Text = gems2
                     newLbFrame.Wins.Text = Wins
                     newLbFrame.Rank.Text = "#" .. Rank
                     newLbFrame.Position =
@@ -59,7 +63,7 @@ function updateLB()
     for _, player in pairs(game.Players:GetPlayers()) do
         WinsLeaderboard:SetAsync(player.UserId, player.leaderstats.Wins.Value)
     end
-    updateLeaderboard()
+    updateLeaderboard(player)
 end
 
 module.updateLB = updateLB

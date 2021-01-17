@@ -2,7 +2,7 @@
 local PlayerStatManager = {}
 
 local DataStoreService = game:GetService("DataStoreService")
-local playerData = DataStoreService:GetDataStore("PlayerData")
+local playerData = DataStoreService:GetDataStore("PlayerData2")
 
 -- Table to hold player information for the current session
 local sessionData = {}
@@ -50,7 +50,7 @@ local function setupPlayerData(player)
             sessionData[playerUserId] = data
         else
             -- Data store is working, but no current data for this player
-            sessionData[playerUserId] = {Money = 0, Experience = 0}
+            sessionData[playerUserId] = {Money = 0, Experience = 0, Gems = 0}
         end
     else
         warn("Cannot access data store for player!")
@@ -59,6 +59,10 @@ end
 
 -- Function to save player's data
 local function savePlayerData(playerUserId)
+    print('savePlayerData');
+    print('savePlayerData');
+    print('savePlayerData');
+    print('savePlayerData');
     if sessionData[playerUserId] then
         local tries = 0
         local success
