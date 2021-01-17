@@ -41,6 +41,7 @@ local function configWordLetters(props)
 
         newLetter.Name = "wordLetter-" .. letterNameStub .. "xxxx"
         newLetter.Anchored = false
+        newLetter.CanCollide = false
 
         local letterPositionX = newLetter.Size.X * (letterIndex - 1) *
                                     spacingFactorX
@@ -71,21 +72,14 @@ local function configWordLetters(props)
         -- Do this last to avoid tweening
         newLetter.Parent = newWord
 
-        -- table.insert(wordLetters,
-        --              {char = letter, found = false, instance = newLetter})
         table.insert(lettersInWord,
                      {char = letter, found = false, instance = newLetter})
     end
 
-    -- wordBench.Anchored = true
-
     local wordBenchSizeX = #word * letterBlockTemplate.Size.X * spacingFactorX
 
-    local wordBenchPosX = wordBench.Position.X
     wordBench.Size = Vector3.new(wordBenchSizeX, wordBench.Size.Y,
                                  wordBench.Size.Z)
-    -- wordBench.Position = Vector3.new(wordBenchPosX, wordBench.Position.Y,
-    --                                  wordBench.Position.Z)
 
     local newWordObj = {
         word = newWord,
@@ -93,7 +87,8 @@ local function configWordLetters(props)
         wordChars = word
     }
 
-    -- letterPositioner:Destroy()
+    letterPositioner:Destroy()
+    -- letterPositioner.Transparency = 1
     return newWordObj
 end
 
@@ -157,22 +152,20 @@ local function initWord(miniGameState, wordIndex, config)
             offsetConfig = {
                 useParentNearEdge = Vector3.new(-1, 1, -1),
                 useChildNearEdge = Vector3.new(1, 1, 1),
-                offsetAdder = Vector3.new(0, 0, offsetX)
+                offsetAdder = Vector3.new(offsetX, 0, 0)
             }
         })
 
     breaker.Anchored = true
     grabberPart.Touched:Connect(onTouchGrabber(breaker))
-    -- 
 end
 
 function module.initLetterGrabber(miniGameState)
-    local configs = {"DOG"}
-    -- local configs = {"CAT", "DOG", "RAT", "BAT", "HAT", "MAT", "PAT", "VAT"}
+    -- local configs = {"DOG"}
+    local configs = {"CAT", "DOG", "RAT", "BAT", "HAT", "MAT", "PAT", "VAT"}
 
     for wordIndex, config in ipairs(configs) do
         initWord(miniGameState, wordIndex, config)
-        -- 
     end
 end
 
