@@ -7,7 +7,8 @@ local Constants = require(Sss.Source.Constants.Constants)
 local freezeCameraRE = RS:WaitForChild("BlockDashFreezeCameraRE")
 
 local module = {entered = false, exited = false, runFast = false}
-local fastWalkSpeed = 50
+local fastWalkSpeed = 100
+-- local fastWalkSpeed = 50
 -- local fastWalkSpeed = 60
 
 function module.initEntrance(miniGameState)
@@ -52,21 +53,14 @@ function module.initEntrance(miniGameState)
 
     local function onTouchRunFast(otherPart)
         print('onTouchRunFast----------------------------');
-
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
             local player = Utils.getPlayerFromHumanoid(humanoid)
-
             local gameState = PlayerStatManager.getGameState(player)
-            print('gameState' .. ' - start');
-            print(gameState);
 
             if not gameState.runFast then
                 gameState.runFast = true
                 humanoid.WalkSpeed = fastWalkSpeed
-                -- PlayerStatManager:ChangeStat(player, "Money", 1000)
-                -- print('PlayerStatManager' .. ' - start');
-                -- print(PlayerStatManager.getSessionData(player));
             end
         end
     end
@@ -75,17 +69,24 @@ function module.initEntrance(miniGameState)
     for _, item in ipairs(runFasts) do item.Touched:Connect(onTouchRunFast) end
 
     function onTouchRunNormal(otherPart)
+        print('onTouchRunNormal');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
-            if not module.runFast then
-                -- module.runFast = true
-                humanoid.WalkSpeed = Constants.gameConfig.walkSpeed
+            local player = Utils.getPlayerFromHumanoid(humanoid)
+            local gameState = PlayerStatManager.getGameState(player)
+
+            if gameState.runFast then
+                gameState.runFast = false
+                humanoid.WalkSpeed = 10
+                -- humanoid.WalkSpeed = Constants.gameConfig.walkSpeed
             end
         end
     end
 
     local runNormals = Utils.getDescendantsByName(letterFallFolder, "RunNormal")
-    for _, item in ipairs(runFasts) do item.Touched:Connect(onTouchRunNormal) end
+    for _, item in ipairs(runNormals) do
+        item.Touched:Connect(onTouchRunNormal)
+    end
 end
 
 return module
