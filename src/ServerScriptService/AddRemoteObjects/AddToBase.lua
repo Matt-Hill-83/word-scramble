@@ -5,6 +5,7 @@ local SP = game:GetService("StarterPlayer")
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Constants = require(SP.Source.StarterPlayerScripts.RSConstants)
 
+local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
 local BlockDash = require(Sss.Source.BlockDash.BlockDash)
 
@@ -22,6 +23,8 @@ function addRemoteObjects()
     deleteTemplates()
     -- Do this last after everything has been created/deleted
     ConfigGame.configGame()
+
+    PlayerStatManager.init()
 end
 
 function addWorld(props)

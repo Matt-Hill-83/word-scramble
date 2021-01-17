@@ -43,7 +43,7 @@ function module.initLetterGrabber(miniGameState)
     local positioners = Utils.getDescendantsByName(letterFallFolder,
                                                    "LetterGrabberPositioner")
     local template = Utils.getFromTemplates("LetterGrabberTemplate")
-    local configs = {"CAT", "DOG", "RAT", "BAT", "HAT", "MAT"}
+    local configs = {"CAT", "DOG", "RAT", "BAT", "HAT", "MAT", "PAT", "VAT"}
 
     for configIndex, config in ipairs(configs) do
         local positioner = positioners[1]

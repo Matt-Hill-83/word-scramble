@@ -61,6 +61,19 @@ function module.initEntrance(miniGameState)
 
     local runFasts = Utils.getDescendantsByName(letterFallFolder, "RunFast")
     for _, item in ipairs(runFasts) do item.Touched:Connect(onTouchRunFast) end
+
+    function onTouchRunNormal(otherPart)
+        local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
+        if humanoid then
+            if not module.runFast then
+                module.runFast = true
+                humanoid.WalkSpeed = Constants.gameConfig.walkSpeed
+            end
+        end
+    end
+
+    local runNormals = Utils.getDescendantsByName(letterFallFolder, "RunNormal")
+    for _, item in ipairs(runFasts) do item.Touched:Connect(onTouchRunNormal) end
 end
 
 return module
