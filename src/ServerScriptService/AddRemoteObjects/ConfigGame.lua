@@ -137,6 +137,11 @@ function module.configGame()
     configGamePass()
     configBadges()
 
+    local spawns = Constants.gameConfig.disabledSpawns
+    for _, spawn in ipairs(spawns) do
+        local spawnPart = Utils.getFirstDescendantByName(workspace, spawn)
+        spawnPart.Enabled = false
+    end
 end
 
 return module

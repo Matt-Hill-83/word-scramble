@@ -1,19 +1,15 @@
--- local isTest = true
-local isTest = false
+local isTest = true
+-- local isTest = false
 
 local devGameConfig = {
-    -- transparency = false,
-    transparency = true,
-    -- walkSpeed = 30,
-    walkSpeed = 80,
-
-    singleScene = true,
-    showWWI = false,
-    showScenes = false,
+    transparency = false,
+    -- transparency = true,
+    walkSpeed = 30,
+    -- walkSpeed = 80,
 
     disabledSpawns = {
-        'SpawnLocation-SkyShip' -- 
-        -- 'SpawnLocation-Block-Race' --
+        -- "SpawnLocation-Block-Race-Top", --
+        "SpawnLocation-Block-Race-Bottom"
     }
 
 }
@@ -22,13 +18,10 @@ local prodGameConfig = {
     transparency = true,
     walkSpeed = 30,
 
-    showMiniGame = false,
-    singleScene = false,
-    showWWI = true,
     showScenes = true,
     disabledSpawns = {
-        'SpawnLocation-SkyShip' -- 
-        -- 'SpawnLocation-Block-Race' --
+        "SpawnLocation-Block-Race-Top" --
+        -- "SpawnLocation-Block-Race-Bottom"
     }
 }
 local gameConfig = isTest and devGameConfig or prodGameConfig
