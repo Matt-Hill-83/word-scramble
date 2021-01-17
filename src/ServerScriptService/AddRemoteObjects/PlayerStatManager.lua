@@ -6,7 +6,7 @@ local playerData = DataStoreService:GetDataStore("PlayerData")
 
 -- Table to hold player information for the current session
 local sessionData = {}
-local gameState = {}
+local gameState = {runFast = false, orbitalView = false}
 local nameStub = "Player_"
 local AUTOSAVE_INTERVAL = 60
 

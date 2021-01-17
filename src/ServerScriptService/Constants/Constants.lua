@@ -719,10 +719,10 @@ module.wordConfigs = {
     SAT = {soundId = "6145993194", imageId = "6253976498"},
     VAT = {soundId = "6145992548", imageId = "6253982590"},
 
-    -- 
     BOG = {soundId = "6145992816", imageId = getImageId('bog')},
     MOM = {soundId = "6253993250", imageId = "xxx"},
     DAD = {soundId = "6253993637", imageId = "xxx"},
+    -- 
     YES = {soundId = "6199538408", imageId = "xxx"}
 }
 

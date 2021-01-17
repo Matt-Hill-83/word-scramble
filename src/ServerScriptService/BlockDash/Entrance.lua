@@ -7,9 +7,8 @@ local Constants = require(Sss.Source.Constants.Constants)
 local freezeCameraRE = RS:WaitForChild("BlockDashFreezeCameraRE")
 
 local module = {entered = false, exited = false, runFast = false}
-local fastWalkSpeed = 100
--- local fastWalkSpeed = 50
--- local fastWalkSpeed = 60
+-- local fastWalkSpeed = 100
+local fastWalkSpeed = 50
 
 function module.initEntrance(miniGameState)
     local letterFallFolder = miniGameState.letterFallFolder
@@ -17,14 +16,13 @@ function module.initEntrance(miniGameState)
     --    TODO: conver to a closure, so it acts on a single player
     function onTouchEntrance(otherPart)
         print('onTouchEntrance' .. ' - start');
-
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
-            if not module.entered then
-                module.entered = true
-                module.exited = false
+            local player = Utils.getPlayerFromHumanoid(humanoid)
+            local gameState = PlayerStatManager.getGameState(player)
 
-                local player = Utils.getPlayerFromHumanoid(humanoid)
+            if not gameState.orbitalView then
+                gameState.orbitalView = true
                 freezeCameraRE:FireClient(player, true)
                 humanoid.JumpPower = 70
             end
@@ -37,11 +35,11 @@ function module.initEntrance(miniGameState)
     function onTouchExit(otherPart)
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
-            if not module.exited then
-                module.exited = true
-                module.entered = false
+            local player = Utils.getPlayerFromHumanoid(humanoid)
+            local gameState = PlayerStatManager.getGameState(player)
 
-                local player = Utils.getPlayerFromHumanoid(humanoid)
+            if gameState.orbitalView then
+                gameState.orbitalView = false
                 freezeCameraRE:FireClient(player, false)
                 humanoid.JumpPower = 50
             end
@@ -77,8 +75,7 @@ function module.initEntrance(miniGameState)
 
             if gameState.runFast then
                 gameState.runFast = false
-                humanoid.WalkSpeed = 10
-                -- humanoid.WalkSpeed = Constants.gameConfig.walkSpeed
+                humanoid.WalkSpeed = Constants.gameConfig.walkSpeed
             end
         end
     end
