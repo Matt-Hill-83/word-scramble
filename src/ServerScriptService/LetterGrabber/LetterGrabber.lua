@@ -148,7 +148,7 @@ local function initWord(miniGameState, wordIndex, config)
     end
 
     -- only break if it is one I can take
-    breaker.Touched:Connect(destroyBreaker(breaker))
+    -- breaker.Touched:Connect(destroyBreaker(breaker))
 
     ChestScript.init(newReplicator)
 end
