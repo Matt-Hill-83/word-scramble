@@ -10,7 +10,6 @@ local module = {entered = false, exited = false, runFast = false}
 local fastWalkSpeed = 50
 
 function module.initEntrance(miniGameState)
-    local letterFallFolder = miniGameState.letterFallFolder
     local sectorFolder = miniGameState.sectorFolder
 
     --    TODO: conver to a closure, so it acts on a single player

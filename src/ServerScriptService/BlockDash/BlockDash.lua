@@ -1,13 +1,13 @@
 local Sss = game:GetService("ServerScriptService")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
-local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
+-- local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 local InitLetterRack = require(Sss.Source.BlockDash.InitLetterRackBD)
 local InitWord = require(Sss.Source.BlockDash.InitWordBD)
 local Entrance = require(Sss.Source.BlockDash.Entrance)
-local ArrowTool = require(Sss.Source.BlockDash.ArrowTool)
+-- local ArrowTool = require(Sss.Source.BlockDash.ArrowTool)
 local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
 local HandleClick = require(Sss.Source.BlockDash.HandleClick)
 local LetterGrabber = require(Sss.Source.LetterGrabber.LetterGrabber)
@@ -60,7 +60,6 @@ local function addBlockDash(sectorConfig)
     local miniGameState = {
         activeWord = nil,
         activeWordIndex = 1,
-        -- allLetters = allLetters,
         availLetters = {},
         availWords = {},
         currentLetterIndex = 1,
@@ -102,7 +101,7 @@ local function addBlockDash(sectorConfig)
     -- itself as an event to the blocks it creates.
 
     Entrance.initEntrance(miniGameState)
-    ArrowTool.initArrowTool(miniGameState)
+    -- ArrowTool.initArrowTool(miniGameState)
     InitLetterRack.initLetterRack(miniGameState)
     InitWord.initWords(miniGameState)
 

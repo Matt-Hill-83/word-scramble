@@ -9,9 +9,10 @@ local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
 
 local module = {}
 
-function initLetterRack(miniGameState)
+local function initLetterRack(miniGameState)
     local rackLetterBlockObjs = miniGameState.rackLetterBlockObjs
-    local letterFallFolder = miniGameState.letterFallFolder
+    -- local letterFallFolder = miniGameState.letterFallFolder
+    local sectorFolder = miniGameState.sectorFolder
     local numRow = miniGameState.numRow
     local numCol = miniGameState.numCol
     local words = miniGameState.words
@@ -25,7 +26,7 @@ function initLetterRack(miniGameState)
     local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
     local letterBlockTemplate = Utils.getFirstDescendantByName(
                                     letterBlockFolder, "BD_normal")
-    local letterPositioner = Utils.getFirstDescendantByName(letterFallFolder,
+    local letterPositioner = Utils.getFirstDescendantByName(sectorFolder,
                                                             "LetterPositioner")
 
     local spacingFactorX = 1.05
@@ -33,9 +34,9 @@ function initLetterRack(miniGameState)
 
     local lettersNotInWords = LetterFallUtils.getLettersNotInWords(words)
     local letterMatrix = {}
-    for rowIndex = 1, numRow do
+    for _ = 1, numRow do
         local row = {}
-        for colIndex = 1, numCol do
+        for _ = 1, numCol do
             table.insert(row, LetterFallUtils.getRandomLetter(lettersNotInWords))
         end
         table.insert(letterMatrix, row)
