@@ -2,8 +2,8 @@ local isTest = true
 -- local isTest = false
 
 local devGameConfig = {
-    transparency = false,
-    -- transparency = true,
+    -- transparency = false,
+    transparency = true,
     walkSpeed = 30,
     -- walkSpeed = 80,
 

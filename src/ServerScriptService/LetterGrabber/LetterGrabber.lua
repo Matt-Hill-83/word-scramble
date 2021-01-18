@@ -135,8 +135,8 @@ local function initWord(miniGameState, wordIndex, config)
             parent = positioner,
             child = newReplicatorPart,
             offsetConfig = {
-                useParentNearEdge = Vector3.new(-1, 1, -1),
-                useChildNearEdge = Vector3.new(1, 1, 1),
+                useParentNearEdge = Vector3.new(-1, -1, -1),
+                useChildNearEdge = Vector3.new(-1, -1, -1),
                 offsetAdder = Vector3.new(offsetX, 0, 0)
             }
         })

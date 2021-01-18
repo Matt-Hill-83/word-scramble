@@ -115,28 +115,28 @@ function addBlockDash(props)
     initPowerUps(miniGameState)
     LetterGrabber.initLetterGrabbers(miniGameState)
 
-    local grabberReplicatorTemplate = Utils.getFirstDescendantByName(workspace,
-                                                                     "GrabberReplicatorTemplate")
-    local newReplicator = grabberReplicatorTemplate:Clone()
-    newReplicator.Parent = grabberReplicatorTemplate.Parent
-    newReplicator.Name = grabberReplicatorTemplate.Name .. "-clone"
+    -- local grabberReplicatorTemplate = Utils.getFirstDescendantByName(workspace,
+    --                                                                  "GrabberReplicatorTemplate")
+    -- local newReplicator = grabberReplicatorTemplate:Clone()
+    -- newReplicator.Parent = grabberReplicatorTemplate.Parent
+    -- newReplicator.Name = grabberReplicatorTemplate.Name .. "-clone"
 
-    local replicatorPart = newReplicator.PrimaryPart
+    -- local replicatorPart = newReplicator.PrimaryPart
 
-    replicatorPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                                {
-            parent = grabberReplicatorTemplate.PrimaryPart,
-            child = replicatorPart,
-            offsetConfig = {
-                useParentNearEdge = Vector3.new(-1, -1, -1),
-                useChildNearEdge = Vector3.new(-1, -1, -1),
-                offsetAdder = Vector3.new(10, 0, 0)
-            }
-        })
+    -- replicatorPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+    --                             {
+    --         parent = grabberReplicatorTemplate.PrimaryPart,
+    --         child = replicatorPart,
+    --         offsetConfig = {
+    --             useParentNearEdge = Vector3.new(-1, -1, -1),
+    --             useChildNearEdge = Vector3.new(-1, -1, -1),
+    --             offsetAdder = Vector3.new(10, 0, 0)
+    --         }
+    --     })
 
-    replicatorPart.Anchored = true
+    -- replicatorPart.Anchored = true
 
-    ChestScript.init(newReplicator)
+    -- ChestScript.init(newReplicator)
 end
 
 module.addBlockDash = addBlockDash
