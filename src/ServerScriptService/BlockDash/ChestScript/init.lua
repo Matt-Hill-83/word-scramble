@@ -27,7 +27,7 @@ local function init(chest)
         end
     end
 
-    function onItemTouched(obj)
+    local function onItemTouched(obj)
         local player = game.Players:GetPlayerFromCharacter(obj.Parent)
         if not player then return end
 
