@@ -6,7 +6,6 @@ local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
--- local HandleClick = require(Sss.Source.BlockDash.HandleClick)
 
 local module = {}
 

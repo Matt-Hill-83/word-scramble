@@ -47,7 +47,7 @@ local function init(chest)
             -- Then put the correct one in the backpack and equip it, so the other is not grabbed.
             player.Character.Humanoid:UnequipTools()
             toGive.Parent = player.Backpack
-            player.Character.Humanoid:EquipTool(toGive)
+            -- player.Character.Humanoid:EquipTool(toGive)
         end
 
     end

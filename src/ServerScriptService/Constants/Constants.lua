@@ -8,8 +8,8 @@ local devGameConfig = {
     -- walkSpeed = 80,
 
     disabledSpawns = {
-        -- "SpawnLocation-Block-Race-Top", --
-        "SpawnLocation-Block-Race-Bottom"
+        "SpawnLocation-Block-Race-Top" --
+        -- "SpawnLocation-Block-Race-Bottom"
     }
 
 }
