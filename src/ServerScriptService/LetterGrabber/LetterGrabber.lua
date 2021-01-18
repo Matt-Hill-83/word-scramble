@@ -177,8 +177,9 @@ local function initWord(miniGameState, wordIndex, config)
             }
         })
 
-    breaker.Anchored = true
-    grabberPart.Touched:Connect(onTouchGrabber(newGrabber))
+    breaker.Anchored = false
+    -- breaker.Anchored = true
+    -- grabberPart.Touched:Connect(onTouchGrabber(newGrabber))
 end
 
 function module.initLetterGrabber(miniGameState)

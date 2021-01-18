@@ -55,39 +55,39 @@ local function init(chest)
 
     chestHitBox.Touched:connect(onChestTouched)
 
-    game.Players.PlayerAdded:connect(function(player) -- when a player si added
-        player.CharacterAdded:connect(
-            function() -- and whenever their character is loaded then
-                if true then -- if this is not supposed to be a static object then
-                    -- if script.Parent.Configurations.StaticObject.Value == false then -- if this is not supposed to be a static object then
-                    local newScript = script.ChestLocalScript:Clone() -- clone the local script
-                    newScript.Parent = player.PlayerGui -- and put it in the player's playerGui
-                end
-            end)
-    end)
+    -- game.Players.PlayerAdded:connect(function(player) -- when a player si added
+    --     player.CharacterAdded:connect(
+    --         function() -- and whenever their character is loaded then
+    --             if true then -- if this is not supposed to be a static object then
+    --                 -- if script.Parent.Configurations.StaticObject.Value == false then -- if this is not supposed to be a static object then
+    --                 local newScript = script.ChestLocalScript:Clone() -- clone the local script
+    --                 newScript.Parent = player.PlayerGui -- and put it in the player's playerGui
+    --             end
+    --         end)
+    -- end)
 
-    local hinge = script.Parent.Lid.HingePart -- making it easier to access this part
-    local lidOpen = false -- so we know if the chest is open or closed
+    -- local hinge = script.Parent.Lid.HingePart -- making it easier to access this part
+    -- local lidOpen = false -- so we know if the chest is open or closed
 
     if true then -- checking if this chest is supposed to open
         -- if script.Parent.Configurations.StaticObject.Value == false then -- checking if this chest is supposed to open
-        hinge.BodyPosition.position = Vector3.new(hinge.Position.X,
-                                                  hinge.Position.Y,
-                                                  hinge.Position.Z)
-        hinge.BodyGyro.cframe = hinge.CFrame
-        for i, v in pairs(script.Parent.Lid:GetChildren()) do
-            v.Anchored = false
-        end
+        -- hinge.BodyPosition.position = Vector3.new(hinge.Position.X,
+        --                                           hinge.Position.Y,
+        --                                           hinge.Position.Z)
+        -- hinge.BodyGyro.cframe = hinge.CFrame
+        -- for i, v in pairs(script.Parent.Lid:GetChildren()) do
+        --     v.Anchored = false
+        -- end
     else
-        script.Parent.Lid.Lock.ClickDetector.MaxActivationDistance = 20
+        -- script.Parent.Lid.Lock.ClickDetector.MaxActivationDistance = 20
     end
 
     function OnLidToggle(player)
-        if lidOpen == false then
-            hinge.BodyGyro.cframe = hinge.BodyGyro.cframe *
-                                        CFrame.Angles(0, 0, math.rad(-90))
-            lidOpen = true
-        end
+        -- if lidOpen == false then
+        --     hinge.BodyGyro.cframe = hinge.BodyGyro.cframe *
+        --                                 CFrame.Angles(0, 0, math.rad(-90))
+        --     lidOpen = true
+        -- end
 
         if not player.Backpack:FindFirstChild(reward.Name) and player.Character and
             not player.Character:FindFirstChild(reward.Name) then
@@ -111,7 +111,7 @@ local function init(chest)
 
     end
 
-    script.Parent.LidToggle.OnServerEvent:connect(OnLidToggle)
+    -- script.Parent.LidToggle.OnServerEvent:connect(OnLidToggle)
 end
 
 module.init = init
