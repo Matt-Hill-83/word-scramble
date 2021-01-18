@@ -123,23 +123,24 @@ function onTouchGrabber(grabber)
             print('playerState' .. ' - start');
             print(playerState);
             -- don't let player get a grabber if they already have one.
-            if playerState.grabber and playerState.grabber ~= grabber then
-                grabber.Parent = workspace
+            -- if playerState.grabber and playerState.grabber ~= grabber then
+            --     grabber.Parent = workspace
 
-                local handle = Utils.getFirstDescendantByName(grabber, "Handle")
-                if handle then handle.Name = "xxxHandle" end
-            else
+            --     local handle = Utils.getFirstDescendantByName(grabber, "Handle")
+            --     if handle then handle.Name = "xxxHandle" end
+            -- else
 
-                local dummyHandle = Utils.getFirstDescendantByName(grabber,
-                                                                   "xxxHandle")
-                if dummyHandle then dummyHandle.Name = "Handle" end
-                if not isReleasedFromBreaker then
-                    playerState.grabber = grabber
-                    isReleasedFromBreaker = true
-                    breaker:Destroy()
-                end
-            end
+            -- local dummyHandle = Utils.getFirstDescendantByName(grabber,
+            --                                                    "xxxHandle")
+            -- if dummyHandle then dummyHandle.Name = "Handle" end
+            -- if not isReleasedFromBreaker then
+            --     playerState.grabber = grabber
+            --     isReleasedFromBreaker = true
+            --     breaker:Destroy()
+            -- end
+            -- end
         end
+
     end
     return closure
 end
@@ -179,9 +180,9 @@ local function initWord(miniGameState, wordIndex, config)
             }
         })
 
-    breaker.Anchored = false
+    -- breaker.Anchored = false
     breaker.Anchored = true
-    grabberPart.Touched:Connect(onTouchGrabber(newGrabber))
+    -- grabberPart.Touched:Connect(onTouchGrabber(newGrabber))
 end
 
 function module.initLetterGrabber(miniGameState)
