@@ -7,6 +7,19 @@ local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 
 local module = {}
+local function getRunTimeWordFolder(miniGameState)
+    local letterFallFolder = miniGameState.letterFallFolder
+    local runtimeFolder = Utils.getOrCreateFolder(
+                              {
+            name = "RunTimeFolder",
+            parent = letterFallFolder
+        })
+
+    return (Utils.getOrCreateFolder({
+        name = "RunTimeWordFolder",
+        parent = runtimeFolder
+    }))
+end
 
 function initWord(props)
     local miniGameState = props.miniGameState
@@ -17,13 +30,11 @@ function initWord(props)
     local letterFallFolder = miniGameState.letterFallFolder
 
     local runTimeWordFolder = getRunTimeWordFolder(miniGameState)
+    print('runTimeWordFolder' .. ' - start');
+    print(runTimeWordFolder);
     miniGameState.runTimeWordFolder = runTimeWordFolder
 
-    local wordBoxFolder = Utils.getFirstDescendantByName(letterFallFolder,
-                                                         "WordBoxFolder")
-
-    -- local wordBox = Utils.getFirstDescendantByName(wordBoxFolder, "WordBox")
-    local wordBox = Utils.getFromTemplates("WordBox")
+    local wordBox = Utils.getFromTemplates("WordBoxTemplate")
     local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
 
     local letterBlockTemplate = Utils.getFirstDescendantByName(
@@ -131,20 +142,6 @@ function initWords(miniGameState)
         table.insert(miniGameState.renderedWords, newWordObj)
     end
 
-end
-
-function getRunTimeWordFolder(miniGameState)
-    local letterFallFolder = miniGameState.letterFallFolder
-    local runtimeFolder = Utils.getOrCreateFolder(
-                              {
-            name = "RunTimeFolder",
-            parent = letterFallFolder
-        })
-
-    return (Utils.getOrCreateFolder({
-        name = "RunTimeWordFolder",
-        parent = runtimeFolder
-    }))
 end
 
 module.initWords = initWords
