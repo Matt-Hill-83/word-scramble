@@ -8,8 +8,9 @@ local devGameConfig = {
     -- walkSpeed = 80,
 
     disabledSpawns = {
-        "SpawnLocation-Block-Race-Top" --
-        -- "SpawnLocation-Block-Race-Bottom"
+        -- 'Spawn-S2-Bottom', --
+        -- "SpawnLocation-Block-Race-Top" --
+        "SpawnLocation-Block-Race-Bottom"
     }
 
 }
@@ -20,6 +21,7 @@ local prodGameConfig = {
 
     showScenes = true,
     disabledSpawns = {
+        -- 'Spawn-S2-Bottom', --
         "SpawnLocation-Block-Race-Top" --
         -- "SpawnLocation-Block-Race-Bottom"
     }

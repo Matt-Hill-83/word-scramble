@@ -18,40 +18,6 @@ local allLetters = {
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
     'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 }
-local numRow = 26
-local numCol = 26
-
--- local words = {"CAT", "HAT"}
-local words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT"}
--- local words = {
---     "CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "VAN", "RAN", "CAN", "AN", "PAN",
---     "DAN", "FAN", "BAN", "TAN"
--- }
-
-local miniGameState = {
-    activeWord = nil,
-    activeWordIndex = 1,
-    allLetters = allLetters,
-    availLetters = {},
-    availWords = {},
-    currentLetterIndex = 1,
-    foundLetters = {},
-    foundWords = {},
-    initCompleted = false,
-    renderedWords = {},
-    wordLetters = {},
-    activeLetterPosition = {
-        row = math.floor(numRow / 2),
-        col = math.floor(numCol / 2)
-    },
-    -- words = words,
-    rackLetterBlockObjs = {},
-    numRow = numRow,
-    numCol = numCol,
-    activeStyle = "BD_normal",
-    inActiveStyle = "BD_selected",
-    canResetBlocks = true
-}
 
 local function initPowerUps(miniGameState)
     local function onTouchClearBlocks(otherPart)
@@ -90,15 +56,45 @@ end
 
 local function addBlockDash(sectorConfig)
     local words = sectorConfig.words
+    local gridSize = sectorConfig.gridSize
     local sectorFolder = sectorConfig.sectorFolder
 
+    local numRow = gridSize.numRow
+    local numCol = gridSize.numCol
+
+    local miniGameState = {
+        activeWord = nil,
+        activeWordIndex = 1,
+        -- allLetters = allLetters,
+        availLetters = {},
+        availWords = {},
+        currentLetterIndex = 1,
+        foundLetters = {},
+        foundWords = {},
+        initCompleted = false,
+        renderedWords = {},
+        wordLetters = {},
+        activeLetterPosition = {
+            row = math.floor(numRow / 2),
+            col = math.floor(numCol / 2)
+        },
+        rackLetterBlockObjs = {},
+        numRow = numRow,
+        numCol = numCol,
+        activeStyle = "BD_normal",
+        inActiveStyle = "BD_selected",
+        canResetBlocks = true
+    }
     miniGameState.words = words
 
     local myStuff = workspace:FindFirstChild("MyStuff")
     miniGameState.onSelectRackBlock = HandleClick.onSelectRackBlock
+    local letterFallFolder =
+        Utils.getFirstDescendantByName(myStuff, "BlockDash")
+    miniGameState.letterFallFolder = letterFallFolder
 
-    miniGameState.letterFallFolder = Utils.getFirstDescendantByName(myStuff,
-                                                                    "BlockDash")
+    miniGameState.sectorFolder = Utils.getFirstDescendantByName(
+                                     letterFallFolder, sectorFolder)
 
     local function onWordLettersGone(miniGameState2)
         BlockDashUtils.clearBlockRack(miniGameState2)

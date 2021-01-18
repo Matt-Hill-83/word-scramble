@@ -14,8 +14,9 @@ function addRemoteObjects()
 
     local sector1Config = {
         words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT"},
-        sectorFolder = "Sector1"
-    } --
+        sectorFolder = "Sector1",
+        gridSize = {numRow = 26, numCol = 26}
+    }
     local sectors = {sector1Config}
 
     for sectorIndex, sectorConfig in ipairs(sectors) do
