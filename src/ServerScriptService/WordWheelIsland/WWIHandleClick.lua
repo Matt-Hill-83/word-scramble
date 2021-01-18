@@ -7,7 +7,7 @@ local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 local Constants = require(Sss.Source.Constants.Constants)
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 
-local clickBlockEvent = RS:WaitForChild("ClickBlockRE")
+-- local clickBlockEvent = RS:WaitForChild("ClickBlockRE")
 
 local module = {}
 
@@ -28,7 +28,7 @@ function initClickHandler(miniGameState)
     function brickClickHandler(player, clickedLetter)
         handleBrick(clickedLetter, miniGameState)
     end
-    clickBlockEvent.OnServerEvent:Connect(brickClickHandler)
+    -- clickBlockEvent.OnServerEvent:Connect(brickClickHandler)
 end
 
 function findFirstMatchingLetterBlock(foundChar, miniGameState)

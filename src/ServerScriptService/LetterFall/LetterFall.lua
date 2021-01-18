@@ -8,7 +8,6 @@ local InitLetterRack = require(Sss.Source.LetterFall.InitLetterRack)
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 local DropBox = require(Sss.Source.DropBox.DropBox)
 
-local remoteEvent = RS:WaitForChild("ClickBlockRE")
 local letterFallFreezeCameraRE = RS:WaitForChild("LetterFallFreezeCameraRE")
 
 local module = {}

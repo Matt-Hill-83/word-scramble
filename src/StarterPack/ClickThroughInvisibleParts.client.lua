@@ -3,7 +3,7 @@ print("ClickThroughInvisibleParts.client")
 local UserInputService = game:GetService("UserInputService")
 local CS = game:GetService("CollectionService")
 local RS = game:GetService("ReplicatedStorage")
-local remoteEvent = RS:WaitForChild("ClickBlockRE")
+-- local remoteEvent = RS:WaitForChild("ClickBlockRE")
 
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
@@ -24,7 +24,7 @@ local function onInputBegan(input)
         if raycastResult then
             local hitObject = raycastResult.Instance
             if CS:HasTag(hitObject, "RackLetter") then
-                remoteEvent:FireServer(hitObject)
+                -- remoteEvent:FireServer(hitObject)
             end
         else
             print("Nothing was hit!")

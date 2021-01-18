@@ -8,10 +8,6 @@ local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 local Constants = require(Sss.Source.Constants.Constants)
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 local Leaderboard = require(Sss.Source.AddRemoteObjects.Leaderboard)
--- local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
--- local InitLetterRack = require(Sss.Source.BlockDash.InitLetterRackBD)
-
--- local clickBlockEvent = RS:WaitForChild("ClickBlockRE")
 
 local module = {processing = false, initComplete = false}
 
@@ -46,7 +42,6 @@ function onSelectRackBlock(clickedLetter, miniGameState, player)
     module.processing = true
 
     local letterFallFolder = miniGameState.letterFallFolder
-    -- -- local runTimeLetterFolder = miniGameState.runTimeLetterFolder
 
     if not module.initComplete then
         module.initComplete = true
