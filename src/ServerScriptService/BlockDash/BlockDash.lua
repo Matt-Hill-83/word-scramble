@@ -14,11 +14,6 @@ local LetterGrabber = require(Sss.Source.LetterGrabber.LetterGrabber)
 
 local module = {}
 
-local allLetters = {
-    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
-    'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-}
-
 local function initPowerUps(miniGameState)
     local function onTouchClearBlocks(otherPart)
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")

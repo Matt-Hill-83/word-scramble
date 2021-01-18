@@ -7,11 +7,11 @@ local Constants = require(Sss.Source.Constants.Constants)
 local freezeCameraRE = RS:WaitForChild("BlockDashFreezeCameraRE")
 
 local module = {entered = false, exited = false, runFast = false}
--- local fastWalkSpeed = 100
 local fastWalkSpeed = 50
 
 function module.initEntrance(miniGameState)
     local letterFallFolder = miniGameState.letterFallFolder
+    local sectorFolder = miniGameState.sectorFolder
 
     --    TODO: conver to a closure, so it acts on a single player
     function onTouchEntrance(otherPart)
@@ -29,7 +29,7 @@ function module.initEntrance(miniGameState)
         end
     end
 
-    local entrances = Utils.getDescendantsByName(letterFallFolder, "Entrance")
+    local entrances = Utils.getDescendantsByName(sectorFolder, "Entrance")
     for _, item in ipairs(entrances) do item.Touched:Connect(onTouchEntrance) end
 
     function onTouchExit(otherPart)
@@ -46,7 +46,7 @@ function module.initEntrance(miniGameState)
         end
     end
 
-    local exits = Utils.getDescendantsByName(letterFallFolder, "Exit")
+    local exits = Utils.getDescendantsByName(sectorFolder, "Exit")
     for _, item in ipairs(exits) do item.Touched:Connect(onTouchExit) end
 
     local function onTouchRunFast(otherPart)
@@ -63,7 +63,7 @@ function module.initEntrance(miniGameState)
         end
     end
 
-    local runFasts = Utils.getDescendantsByName(letterFallFolder, "RunFast")
+    local runFasts = Utils.getDescendantsByName(sectorFolder, "RunFast")
     for _, item in ipairs(runFasts) do item.Touched:Connect(onTouchRunFast) end
 
     function onTouchRunNormal(otherPart)
@@ -80,7 +80,7 @@ function module.initEntrance(miniGameState)
         end
     end
 
-    local runNormals = Utils.getDescendantsByName(letterFallFolder, "RunNormal")
+    local runNormals = Utils.getDescendantsByName(sectorFolder, "RunNormal")
     for _, item in ipairs(runNormals) do
         item.Touched:Connect(onTouchRunNormal)
     end
