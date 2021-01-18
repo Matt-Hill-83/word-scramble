@@ -53,8 +53,8 @@ local miniGameState = {
     canResetBlocks = true
 }
 
-function initPowerUps(miniGameState)
-    function onTouchClearBlocks(otherPart)
+local function initPowerUps(miniGameState)
+    local function onTouchClearBlocks(otherPart)
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
             if miniGameState.canResetBlocks then
@@ -114,10 +114,9 @@ function addBlockDash(props)
     initPowerUps(miniGameState)
     LetterGrabber.initLetterGrabber(miniGameState)
 
-    local chest = Utils.getFirstDescendantByName(workspace, "Chest_Lantern")
+    local chest = Utils.getFirstDescendantByName(workspace,
+                                                 "GrabberReplicatorTemplate")
 
-    print('ChestScript.init' .. ' - start');
-    print(ChestScript.init);
     ChestScript.init(chest)
 end
 
