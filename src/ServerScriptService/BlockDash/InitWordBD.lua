@@ -22,7 +22,8 @@ function initWord(props)
     local wordBoxFolder = Utils.getFirstDescendantByName(letterFallFolder,
                                                          "WordBoxFolder")
 
-    local wordBox = Utils.getFirstDescendantByName(wordBoxFolder, "WordBox")
+    -- local wordBox = Utils.getFirstDescendantByName(wordBoxFolder, "WordBox")
+    local wordBox = Utils.getFromTemplates("WordBox")
     local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
 
     local letterBlockTemplate = Utils.getFirstDescendantByName(
