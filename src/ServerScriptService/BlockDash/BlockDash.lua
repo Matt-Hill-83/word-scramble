@@ -10,7 +10,6 @@ local Entrance = require(Sss.Source.BlockDash.Entrance)
 local ArrowTool = require(Sss.Source.BlockDash.ArrowTool)
 local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
 local HandleClick = require(Sss.Source.BlockDash.HandleClick)
-local ChestScript = require(Sss.Source.BlockDash.ChestScript)
 local LetterGrabber = require(Sss.Source.LetterGrabber.LetterGrabber)
 
 local module = {}
