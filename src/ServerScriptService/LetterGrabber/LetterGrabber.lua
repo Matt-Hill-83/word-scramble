@@ -145,6 +145,8 @@ function onTouchGrabber(grabber)
 end
 
 local function initWord(miniGameState, wordIndex, config)
+    print('initWord' .. ' - start');
+    print(initWord);
     local letterFallFolder = miniGameState.letterFallFolder
 
     local positioner = Utils.getFirstDescendantByName(letterFallFolder,
@@ -178,8 +180,8 @@ local function initWord(miniGameState, wordIndex, config)
         })
 
     breaker.Anchored = false
-    -- breaker.Anchored = true
-    -- grabberPart.Touched:Connect(onTouchGrabber(newGrabber))
+    breaker.Anchored = true
+    grabberPart.Touched:Connect(onTouchGrabber(newGrabber))
 end
 
 function module.initLetterGrabber(miniGameState)

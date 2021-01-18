@@ -118,7 +118,7 @@ function addBlockDash(props)
 
     print('ChestScript.init' .. ' - start');
     print(ChestScript.init);
-    ChestScript.init(chest)
+    -- ChestScript.init(chest)
 end
 
 module.addBlockDash = addBlockDash
