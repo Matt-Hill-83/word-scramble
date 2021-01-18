@@ -86,7 +86,7 @@ local function configWordLetters(props)
     }
 
     letterPositioner:Destroy()
-    -- letterPositioner.Transparency = 1
+    letterPositioner.Transparency = 1
     return newWordObj
 end
 
