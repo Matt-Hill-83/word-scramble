@@ -105,29 +105,6 @@ local function applyDecalsToCharacterFromWord(props)
     end
 end
 
--- function onTouchGrabber(grabber)
---     -- enclosed property
---     local isReleasedFromBreaker = false
---     local breaker = Utils.getFirstDescendantByName(grabber, "Breaker")
---     print('breaker' .. ' - start');
---     print(breaker);
-
---     local function closure(otherPart)
---         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
---         if humanoid then
---             local player = Utils.getPlayerFromHumanoid(humanoid)
---             local playerState = PlayerStatManager.getGameState(player)
---             print('playerState' .. ' - start');
---             print('playerState' .. ' - start');
---             print('playerState' .. ' - start');
---             print('playerState' .. ' - start');
---             print(playerState);
---         end
-
---     end
---     return closure
--- end
-
 local function initWord(miniGameState, wordIndex, config)
     print('initWord' .. ' - start');
     print(initWord);
@@ -139,7 +116,7 @@ local function initWord(miniGameState, wordIndex, config)
 
     local newGrabber = template:Clone()
     newGrabber.Parent = letterFallFolder
-    local grabberPart = newGrabber.Handle
+    -- local grabberPart = newGrabber.Handle
 
     local wordNameStub = "-W" .. wordIndex
 
@@ -163,9 +140,7 @@ local function initWord(miniGameState, wordIndex, config)
             }
         })
 
-    -- breaker.Anchored = false
     breaker.Anchored = true
-    -- grabberPart.Touched:Connect(onTouchGrabber(newGrabber))
 end
 
 function module.initLetterGrabber(miniGameState)
