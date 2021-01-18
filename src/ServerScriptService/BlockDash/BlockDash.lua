@@ -44,7 +44,7 @@ local miniGameState = {
         row = math.floor(numRow / 2),
         col = math.floor(numCol / 2)
     },
-    words = words,
+    -- words = words,
     rackLetterBlockObjs = {},
     numRow = numRow,
     numCol = numCol,
@@ -88,7 +88,12 @@ local function initPowerUps(miniGameState)
     end
 end
 
-local function addBlockDash(props)
+local function addBlockDash(sectorConfig)
+    local words = sectorConfig.words
+    local sectorFolder = sectorConfig.sectorFolder
+
+    miniGameState.words = words
+
     local myStuff = workspace:FindFirstChild("MyStuff")
     miniGameState.onSelectRackBlock = HandleClick.onSelectRackBlock
 

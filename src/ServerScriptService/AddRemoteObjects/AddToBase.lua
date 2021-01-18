@@ -11,11 +11,16 @@ local BlockDash = require(Sss.Source.BlockDash.BlockDash)
 
 function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
-    local worlds = {1}
 
-    for worldIndex, questConfig in ipairs(worlds) do
+    local sector1Config = {
+        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT"},
+        sectorFolder = "Sector1"
+    } --
+    local sectors = {sector1Config}
+
+    for sectorIndex, sectorConfig in ipairs(sectors) do
         -- 
-        addWorld(worldProps)
+        addWorld(sectorConfig)
     end
 
     -- Do this last after everything has been created/deleted
@@ -23,9 +28,9 @@ function addRemoteObjects()
     PlayerStatManager.init()
 end
 
-function addWorld(props)
-    local blockDashProps = {}
-    BlockDash.addBlockDash(blockDashProps)
+function addWorld(sectorConfig)
+    BlockDash.addBlockDash(sectorConfig)
+    -- 
 end
 
 module.addRemoteObjects = addRemoteObjects

@@ -143,8 +143,6 @@ function onSelectRackBlock(clickedLetter, miniGameState, player)
                 end
             end
 
-            -- local gem = Utils.getFirstDescendantByName(letterFallFolder,
-            --                                            "GemTemplate")
             local gemTemplate = Utils.getFromTemplates("GemTemplate")
             local newGem = gemTemplate:Clone()
             newGem.Parent = letterFallFolder
