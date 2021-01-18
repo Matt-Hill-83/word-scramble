@@ -105,45 +105,28 @@ local function applyDecalsToCharacterFromWord(props)
     end
 end
 
-function onTouchGrabber(grabber)
-    -- enclosed property
-    local isReleasedFromBreaker = false
-    local breaker = Utils.getFirstDescendantByName(grabber, "Breaker")
-    print('breaker' .. ' - start');
-    print(breaker);
+-- function onTouchGrabber(grabber)
+--     -- enclosed property
+--     local isReleasedFromBreaker = false
+--     local breaker = Utils.getFirstDescendantByName(grabber, "Breaker")
+--     print('breaker' .. ' - start');
+--     print(breaker);
 
-    local function closure(otherPart)
-        local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
-        if humanoid then
-            local player = Utils.getPlayerFromHumanoid(humanoid)
-            local playerState = PlayerStatManager.getGameState(player)
-            print('playerState' .. ' - start');
-            print('playerState' .. ' - start');
-            print('playerState' .. ' - start');
-            print('playerState' .. ' - start');
-            print(playerState);
-            -- don't let player get a grabber if they already have one.
-            -- if playerState.grabber and playerState.grabber ~= grabber then
-            --     grabber.Parent = workspace
+--     local function closure(otherPart)
+--         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
+--         if humanoid then
+--             local player = Utils.getPlayerFromHumanoid(humanoid)
+--             local playerState = PlayerStatManager.getGameState(player)
+--             print('playerState' .. ' - start');
+--             print('playerState' .. ' - start');
+--             print('playerState' .. ' - start');
+--             print('playerState' .. ' - start');
+--             print(playerState);
+--         end
 
-            --     local handle = Utils.getFirstDescendantByName(grabber, "Handle")
-            --     if handle then handle.Name = "xxxHandle" end
-            -- else
-
-            -- local dummyHandle = Utils.getFirstDescendantByName(grabber,
-            --                                                    "xxxHandle")
-            -- if dummyHandle then dummyHandle.Name = "Handle" end
-            -- if not isReleasedFromBreaker then
-            --     playerState.grabber = grabber
-            --     isReleasedFromBreaker = true
-            --     breaker:Destroy()
-            -- end
-            -- end
-        end
-
-    end
-    return closure
-end
+--     end
+--     return closure
+-- end
 
 local function initWord(miniGameState, wordIndex, config)
     print('initWord' .. ' - start');

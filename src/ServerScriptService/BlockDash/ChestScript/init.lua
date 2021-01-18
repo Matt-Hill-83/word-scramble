@@ -35,8 +35,7 @@ local function init(chest)
         if not player.Backpack:FindFirstChild(reward.Name) and player.Character and
             not player.Character:FindFirstChild(reward.Name) then
 
-            -- Clone the tool, unanchor it.
-            -- How do you 
+            -- Clone the tool, unanchor it, so it can be taken
             local toGive = reward:Clone()
             for _, child in pairs(toGive:GetChildren()) do
                 if child:IsA("BasePart") then
