@@ -140,7 +140,7 @@ function module.configGame()
     local spawns = Constants.gameConfig.disabledSpawns
     for _, spawn in ipairs(spawns) do
         local spawnPart = Utils.getFirstDescendantByName(workspace, spawn)
-        spawnPart.Enabled = false
+        if spawnPart then spawnPart.Enabled = false end
     end
 end
 

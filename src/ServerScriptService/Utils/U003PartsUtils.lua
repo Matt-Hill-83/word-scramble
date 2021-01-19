@@ -45,7 +45,8 @@ function setCFrameFromDesiredEdgeOffset(props)
         offsetAdder = defaultOffsetAdder
     }
 
-    offsetConfig = offsetConfig or defaultOffsetConfig
+    offsetConfig = offsetConfig
+    -- offsetConfig = offsetConfig or defaultOffsetConfig
 
     local offset = (offsetConfig.useParentNearEdge * parent.Size -
                        offsetConfig.useChildNearEdge * child.Size) / 2 +
