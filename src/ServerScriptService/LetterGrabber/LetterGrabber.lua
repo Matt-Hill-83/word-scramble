@@ -105,9 +105,10 @@ local function applyDecalsToCharacterFromWord(props)
 end
 
 local function initWord(miniGameState, wordIndex, config)
-    local letterFallFolder = miniGameState.letterFallFolder
+    -- local letterFallFolder = miniGameState.letterFallFolder
+    local sectorFolder = miniGameState.sectorFolder
 
-    local positioner = Utils.getFirstDescendantByName(letterFallFolder,
+    local positioner = Utils.getFirstDescendantByName(sectorFolder,
                                                       "LetterGrabberPositioner")
     local template = Utils.getFromTemplates("GrabberReplicatorTemplate")
 
@@ -115,7 +116,7 @@ local function initWord(miniGameState, wordIndex, config)
     local lettterGrabber = Utils.getFirstDescendantByName(newReplicator,
                                                           "LetterGrabber")
 
-    newReplicator.Parent = letterFallFolder
+    newReplicator.Parent = sectorFolder
     local newReplicatorPart = newReplicator.PrimaryPart
     local wordNameStub = "-W" .. wordIndex
 
@@ -126,7 +127,7 @@ local function initWord(miniGameState, wordIndex, config)
         wordNameStub = wordNameStub
     })
 
-    local breaker = Utils.getFirstDescendantByName(lettterGrabber, "Breaker")
+    -- local breaker = Utils.getFirstDescendantByName(lettterGrabber, "Breaker")
     local offsetX = wordIndex * 10
     newReplicatorPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                    {

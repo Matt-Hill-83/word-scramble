@@ -87,8 +87,9 @@ local function addBlockDash(sectorConfig)
         Utils.getFirstDescendantByName(myStuff, "BlockDash")
     miniGameState.letterFallFolder = letterFallFolder
 
-    miniGameState.sectorFolder = Utils.getFirstDescendantByName(
-                                     letterFallFolder, sectorFolder)
+    -- miniGameState.sectorFolder = Utils.getFirstDescendantByName(
+    --                                  letterFallFolder, sectorFolder)
+    miniGameState.sectorFolder = sectorFolder
 
     local function onWordLettersGone(miniGameState2)
         BlockDashUtils.clearBlockRack(miniGameState2)
@@ -100,14 +101,13 @@ local function addBlockDash(sectorConfig)
     -- Do some acrobatics here because InitLetterRack needs to attach
     -- itself as an event to the blocks it creates.
 
-    Entrance.initEntrance(miniGameState)
-    -- ArrowTool.initArrowTool(miniGameState)
-    InitLetterRack.initLetterRack(miniGameState)
-    InitWord.initWords(miniGameState)
+    -- Entrance.initEntrance(miniGameState)
+    -- InitLetterRack.initLetterRack(miniGameState)
+    -- InitWord.initWords(miniGameState)
 
-    LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
-    initPowerUps(miniGameState)
-    LetterGrabber.initLetterGrabbers(miniGameState)
+    -- LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
+    -- initPowerUps(miniGameState)
+    -- LetterGrabber.initLetterGrabbers(miniGameState)
 end
 
 module.addBlockDash = addBlockDash
