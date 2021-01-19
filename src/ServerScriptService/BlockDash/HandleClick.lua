@@ -41,14 +41,14 @@ function onSelectRackBlock(clickedLetter, miniGameState, player)
     if module.processing == true then return end
     module.processing = true
 
-    local letterFallFolder = miniGameState.letterFallFolder
+    local sectorFolder = miniGameState.sectorFolder
 
     if not module.initComplete then
         module.initComplete = true
         -- 
     end
 
-    local isChild = clickedLetter:IsDescendantOf(letterFallFolder)
+    local isChild = clickedLetter:IsDescendantOf(sectorFolder)
 
     if not isChild then
         module.processing = false
@@ -145,7 +145,7 @@ function onSelectRackBlock(clickedLetter, miniGameState, player)
 
             local gemTemplate = Utils.getFromTemplates("GemTemplate")
             local newGem = gemTemplate:Clone()
-            newGem.Parent = letterFallFolder
+            newGem.Parent = sectorFolder
             newGem.Handle.CFrame = letterBlockCFrame + Vector3.new(0, 30, 0)
             newGem.Handle.Anchored = false
 

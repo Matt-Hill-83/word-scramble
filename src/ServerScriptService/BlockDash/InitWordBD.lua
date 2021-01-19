@@ -8,12 +8,9 @@ local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 
 local module = {}
 local function getRunTimeWordFolder(miniGameState)
-    local letterFallFolder = miniGameState.letterFallFolder
+    local sectorFolder = miniGameState.sectorFolder
     local runtimeFolder = Utils.getOrCreateFolder(
-                              {
-            name = "RunTimeFolder",
-            parent = letterFallFolder
-        })
+                              {name = "RunTimeFolder", parent = sectorFolder})
 
     return (Utils.getOrCreateFolder({
         name = "RunTimeWordFolder",
@@ -27,11 +24,7 @@ function initWord(props)
     local word = props.word
     local wordLetters = props.wordLetters
 
-    local letterFallFolder = miniGameState.letterFallFolder
-
     local runTimeWordFolder = getRunTimeWordFolder(miniGameState)
-    print('runTimeWordFolder' .. ' - start');
-    print(runTimeWordFolder);
     miniGameState.runTimeWordFolder = runTimeWordFolder
 
     local wordBox = Utils.getFromTemplates("WordBoxTemplate")
@@ -101,7 +94,7 @@ function initWord(props)
         table.insert(lettersInWord,
                      {char = char, found = false, instance = newLetter})
     end
-    local wordBenchSizeX = #word * letterBlockTemplate.Size.X * spacingFactorX
+    -- local wordBenchSizeX = #word * letterBlockTemplate.Size.X * spacingFactorX
 
     local wordBenchPosX = wordBench.Position.X
 
@@ -120,7 +113,6 @@ function initWord(props)
 end
 
 function initWords(miniGameState)
-    local letterFallFolder = miniGameState.letterFallFolder
     local wordLetters = miniGameState.wordLetters
 
     for i, char in ipairs(wordLetters) do

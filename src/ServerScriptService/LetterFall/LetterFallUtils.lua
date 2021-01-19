@@ -305,13 +305,10 @@ function anchorColumn(props)
     end
 end
 
-function getRunTimeLetterFolder(miniGameState)
-    local letterFallFolder = miniGameState.letterFallFolder
+local function getRunTimeLetterFolder(miniGameState)
+    local sectorFolder = miniGameState.sectorFolder
     local runtimeFolder = Utils.getOrCreateFolder(
-                              {
-            name = "RunTimeFolder",
-            parent = letterFallFolder
-        })
+                              {name = "RunTimeFolder", parent = sectorFolder})
 
     return Utils.getOrCreateFolder({
         name = "RunTimeLetterRackFolder",
@@ -326,11 +323,11 @@ function styleLetterBlock(letterBlock, labelProps)
     end
 end
 
-function createStyledLetterBlock(props)
+local function createStyledLetterBlock(props)
     local miniGameState = props.miniGameState
     local templateName = props.templateName
     local allLetters = miniGameState.allLetters
-    local letterFallFolder = miniGameState.letterFallFolder
+    local sectorFolder = miniGameState.sectorFolder
 
     local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
     local letterBlockTemplate = Utils.getFirstDescendantByName(
@@ -341,7 +338,7 @@ function createStyledLetterBlock(props)
 
     local char = allLetters[rand]
     module.applyLetterText({letterBlock = newLetter, char = char})
-    newLetter.Parent = letterFallFolder.Parent
+    newLetter.Parent = sectorFolder.Parent
     newLetter.Anchored = false
 
     local letterId = "none"
@@ -377,7 +374,6 @@ end
 function styleLetterBlocks(props)
     local miniGameState = props.miniGameState
     local availWords = props.availWords
-    local letterFallFolder = miniGameState.letterFallFolder
 
     local availLetters = module.getAvailLettersDict(
                              {
