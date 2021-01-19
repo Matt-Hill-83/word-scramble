@@ -107,7 +107,7 @@ local function addBlockDash(sectorConfig)
 
     LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
     initPowerUps(miniGameState)
-    -- LetterGrabber.initLetterGrabbers(miniGameState)
+    LetterGrabber.initLetterGrabbers(miniGameState)
 end
 
 module.addBlockDash = addBlockDash

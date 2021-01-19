@@ -105,7 +105,6 @@ local function applyDecalsToCharacterFromWord(props)
 end
 
 local function initWord(miniGameState, wordIndex, config)
-    -- local letterFallFolder = miniGameState.letterFallFolder
     local sectorFolder = miniGameState.sectorFolder
 
     local positioner = Utils.getFirstDescendantByName(sectorFolder,

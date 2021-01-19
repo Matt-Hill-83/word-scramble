@@ -88,10 +88,10 @@ function addRemoteObjects()
         end
 
     end
-    -- islandTemplate:Destroy()
     -- Do this last after everything has been created/deleted
     ConfigGame.configGame()
     PlayerStatManager.init()
+    -- islandTemplate:Destroy()
 end
 
 module.addRemoteObjects = addRemoteObjects
