@@ -105,8 +105,6 @@ local function applyDecalsToCharacterFromWord(props)
 end
 
 local function initWord(miniGameState, wordIndex, config)
-    print('initWord' .. ' - start');
-    print(initWord);
     local letterFallFolder = miniGameState.letterFallFolder
 
     local positioner = Utils.getFirstDescendantByName(letterFallFolder,

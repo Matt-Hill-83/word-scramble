@@ -6,7 +6,7 @@ local Constants = require(Sss.Source.Constants.Constants)
 
 local module = {}
 
-renderQuestBlock = function(props)
+local renderQuestBlock = function(props)
     local parent = props.parent
     local questBlockTemplate = props.questBlockTemplate
     local gridSize = props.gridSize

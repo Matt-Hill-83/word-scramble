@@ -32,7 +32,7 @@ local function initPowerUps(miniGameState)
         reset.Touched:Connect(onTouchClearBlocks)
     end
 
-    function onTouchAddBlocks(otherPart)
+    local function onTouchAddBlocks(otherPart)
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
             if not miniGameState.canResetBlocks then

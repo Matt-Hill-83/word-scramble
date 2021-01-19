@@ -60,9 +60,6 @@ end
 -- Function to save player's data
 local function savePlayerData(playerUserId)
     print('savePlayerData');
-    print('savePlayerData');
-    print('savePlayerData');
-    print('savePlayerData');
     if sessionData[playerUserId] then
         local tries = 0
         local success

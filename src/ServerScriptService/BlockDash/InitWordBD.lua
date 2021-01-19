@@ -24,6 +24,8 @@ function initWord(props)
     local word = props.word
     local wordLetters = props.wordLetters
 
+    local sectorFolder = miniGameState.sectorFolder
+
     local runTimeWordFolder = getRunTimeWordFolder(miniGameState)
     miniGameState.runTimeWordFolder = runTimeWordFolder
 
@@ -37,14 +39,15 @@ function initWord(props)
     local wordBench = Utils.getFirstDescendantByName(newWord, "WordBench")
     local letterPositioner = Utils.getFirstDescendantByName(newWord,
                                                             "WordLetterBlockPositioner")
-
+    local wordPositioner = Utils.getFirstDescendantByName(sectorFolder,
+                                                          "WordPositioner")
     newWord.Parent = runTimeWordFolder
 
     local spacingFactorY = 1.1
     local spacingFactorX = 1.2
     local wordSpacingY = letterBlockTemplate.Size.Y * spacingFactorY
 
-    wordBench.CFrame = wordBench.CFrame +
+    wordBench.CFrame = wordPositioner.CFrame +
                            Vector3.new(0, wordSpacingY * (wordIndex - 1), 0)
 
     local wordNameStub = "-W" .. wordIndex

@@ -13,11 +13,19 @@ function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local sector1Config = {
-        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT"},
+        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
         sectorFolder = "Sector1",
         gridSize = {numRow = 26, numCol = 26}
     }
-    local sectors = {sector1Config}
+
+    local sector2Config = {
+        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "ZIP"},
+        sectorFolder = "Sector2",
+        gridSize = {numRow = 26, numCol = 26}
+    }
+
+    -- local sectors = {sector1Config}
+    local sectors = {sector1Config, sector2Config}
 
     for sectorIndex, sectorConfig in ipairs(sectors) do
         -- 

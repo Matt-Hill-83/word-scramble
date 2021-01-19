@@ -3,7 +3,6 @@ local Sss = game:GetService("ServerScriptService")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Constants = require(Sss.Source.Constants.Constants)
-local GemHolder = require(Sss.Source.GemHolder.GemHolder)
 
 local module = {
     tagNames = {
@@ -42,7 +41,7 @@ module.letterBlockStyleDefs = {
     }
 }
 
-function playWordSound(word)
+local function playWordSound(word)
     local closure = function()
         if Constants.wordConfigs[word] then
             local soundId = Constants.wordConfigs[word]['soundId']
@@ -545,22 +544,6 @@ function createBalls(miniGameState)
     local gemColor = Constants.gemColors[questIndex]
 
     local targetGemName = "Gem-Q-zzzz" .. questIndex
-
-    GemHolder.initGem({
-        gemHolderName = "GemHolder",
-        letterFallFolder = letterFallFolder,
-        questIndex = questIndex,
-        targetGemName = targetGemName,
-        isReceiver = true
-    })
-
-    GemHolder.initGem({
-        gemHolderName = "MiniGemHolder",
-        letterFallFolder = letterFallFolder,
-        questIndex = questIndex,
-        targetGemName = targetGemName,
-        isReceiver = true
-    })
 
     local balls = {}
     for count = 1, 8 do
