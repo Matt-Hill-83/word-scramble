@@ -64,17 +64,17 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1154.63293</X>
-					<Y>277.169312</Y>
-					<Z>-38.3277245</Z>
+					<X>-1155.31042</X>
+					<Y>293.390564</Y>
+					<Z>-63.554924</Z>
 					<R00>-0.99963963</R00>
-					<R01>0.0145157008</R01>
-					<R02>-0.0225828476</R02>
+					<R01>0.0145157138</R01>
+					<R02>-0.02258287</R02>
 					<R10>-0</R10>
 					<R11>0.841209769</R11>
-					<R12>0.540708959</R12>
-					<R20>0.0268456824</R20>
-					<R21>0.540514112</R21>
+					<R12>0.540708899</R12>
+					<R20>0.0268457085</R20>
+					<R21>0.540514052</R21>
 					<R22>-0.84090656</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
@@ -29097,9 +29097,9 @@ remoteCode.addRemoteObjects()
 							<token name="BottomSurface">4</token>
 							<token name="BottomSurfaceInput">0</token>
 							<CoordinateFrame name="CFrame">
-								<X>-1198.22546</X>
-								<Y>179.243942</Y>
-								<Z>21.131567</Z>
+								<X>-1198.22534</X>
+								<Y>187.243942</Y>
+								<Z>21.1316204</Z>
 								<R00>1</R00>
 								<R01>1.86210673e-05</R01>
 								<R02>-3.70009693e-05</R02>
@@ -29263,45 +29263,6 @@ remoteCode.addRemoteObjects()
 									<int name="ZIndex">1</int>
 								</Properties>
 							</Item>
-						</Item>
-						<Item class="Weld" referent="RBXa2606e16bae74682921bdf6426cce73a">
-							<Properties>
-								<BinaryString name="AttributesSerialize"></BinaryString>
-								<CoordinateFrame name="C0">
-									<X>0</X>
-									<Y>-4</Y>
-									<Z>0</Z>
-									<R00>1</R00>
-									<R01>0</R01>
-									<R02>1.22124533e-15</R02>
-									<R10>-1.22124533e-15</R10>
-									<R11>0</R11>
-									<R12>-1</R12>
-									<R20>0</R20>
-									<R21>1</R21>
-									<R22>0</R22>
-								</CoordinateFrame>
-								<CoordinateFrame name="C1">
-									<X>-48.8206139</X>
-									<Y>38.7539978</Y>
-									<Z>-7.48930931</Z>
-									<R00>-1</R00>
-									<R01>-1.16979209e-08</R01>
-									<R02>-6.87783164e-14</R02>
-									<R10>-1.22124533e-15</R10>
-									<R11>0</R11>
-									<R12>-1</R12>
-									<R20>1.16997398e-08</R20>
-									<R21>-1</R21>
-									<R22>9.09494702e-13</R22>
-								</CoordinateFrame>
-								<bool name="Enabled">true</bool>
-								<string name="Name">Weld</string>
-								<Ref name="Part0">RBX919dbd2e6cd5488ead703e569ca24066</Ref>
-								<Ref name="Part1">RBX17dd66e91b7f43969078f4c9b745509b</Ref>
-								<int64 name="SourceAssetId">-1</int64>
-								<BinaryString name="Tags"></BinaryString>
-							</Properties>
 						</Item>
 					</Item>
 					<Item class="Folder" referent="RBXcb5ebcb847094893ac1bd33d2f6427d9">
@@ -37894,7 +37855,7 @@ local function addBlockDash(sectorConfig)
 
     Entrance.initEntrance(miniGameState)
     InitLetterRack.initLetterRack(miniGameState)
-    -- InitWord.initWords(miniGameState)
+    InitWord.initWords(miniGameState)
 
     LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
     initPowerUps(miniGameState)

@@ -103,7 +103,7 @@ local function addBlockDash(sectorConfig)
 
     Entrance.initEntrance(miniGameState)
     InitLetterRack.initLetterRack(miniGameState)
-    -- InitWord.initWords(miniGameState)
+    InitWord.initWords(miniGameState)
 
     LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
     initPowerUps(miniGameState)
