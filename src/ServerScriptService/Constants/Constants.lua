@@ -4,7 +4,7 @@ local isTest = true
 local devGameConfig = {
     transparency = false,
     -- transparency = true,
-    -- walkSpeed = 30,
+    walkSpeed = 30,
     -- walkSpeed = 80,
 
     disabledSpawns = {

@@ -27304,10 +27304,6 @@ function addRemoteObjects()
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
     local islandPositioners = Utils.getDescendantsByName(blockDash,
                                                          "IslandPositioner")
-    print('islandPositioners' .. ' --------------------------------- start');
-    print('islandPositioners' .. ' --------------------------------- start');
-    print('islandPositioners' .. ' --------------------------------- start');
-    print(islandPositioners);
     local islandTemplate = Utils.getFromTemplates("IslandTemplate")
     local sectorConfigs = {
         sector1Config, --
@@ -27319,6 +27315,11 @@ function addRemoteObjects()
     }
 
     for islandIndex, islandPositioner in ipairs(islandPositioners) do
+        print('islandIndex' .. ' - start');
+        print('islandIndex' .. ' - start');
+        print('islandIndex' .. ' - start');
+        print('islandIndex' .. ' - start');
+        print(islandIndex);
         local newIsland = islandTemplate:Clone()
 
         local anchoredParts = {}
@@ -27358,7 +27359,7 @@ function addRemoteObjects()
         end
 
     end
-    islandTemplate:Destroy()
+    -- islandTemplate:Destroy()
     -- Do this last after everything has been created/deleted
     ConfigGame.configGame()
     PlayerStatManager.init()
@@ -27936,8 +27937,8 @@ local function addBlockDash(sectorConfig)
     -- Do some acrobatics here because InitLetterRack needs to attach
     -- itself as an event to the blocks it creates.
 
-    -- Entrance.initEntrance(miniGameState)
-    -- InitLetterRack.initLetterRack(miniGameState)
+    Entrance.initEntrance(miniGameState)
+    InitLetterRack.initLetterRack(miniGameState)
     -- InitWord.initWords(miniGameState)
 
     -- LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
@@ -28905,7 +28906,7 @@ return module
 local devGameConfig = {
     transparency = false,
     -- transparency = true,
-    -- walkSpeed = 30,
+    walkSpeed = 30,
     -- walkSpeed = 80,
 
     disabledSpawns = {
@@ -31415,8 +31416,7 @@ function setCFrameFromDesiredEdgeOffset(props)
         offsetAdder = defaultOffsetAdder
     }
 
-    offsetConfig = offsetConfig
-    -- offsetConfig = offsetConfig or defaultOffsetConfig
+    offsetConfig = offsetConfig or defaultOffsetConfig
 
     local offset = (offsetConfig.useParentNearEdge * parent.Size -
                        offsetConfig.useChildNearEdge * child.Size) / 2 +

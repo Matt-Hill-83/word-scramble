@@ -33,10 +33,6 @@ function addRemoteObjects()
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
     local islandPositioners = Utils.getDescendantsByName(blockDash,
                                                          "IslandPositioner")
-    print('islandPositioners' .. ' --------------------------------- start');
-    print('islandPositioners' .. ' --------------------------------- start');
-    print('islandPositioners' .. ' --------------------------------- start');
-    print(islandPositioners);
     local islandTemplate = Utils.getFromTemplates("IslandTemplate")
     local sectorConfigs = {
         sector1Config, --
@@ -48,6 +44,11 @@ function addRemoteObjects()
     }
 
     for islandIndex, islandPositioner in ipairs(islandPositioners) do
+        print('islandIndex' .. ' - start');
+        print('islandIndex' .. ' - start');
+        print('islandIndex' .. ' - start');
+        print('islandIndex' .. ' - start');
+        print(islandIndex);
         local newIsland = islandTemplate:Clone()
 
         local anchoredParts = {}
@@ -87,7 +88,7 @@ function addRemoteObjects()
         end
 
     end
-    islandTemplate:Destroy()
+    -- islandTemplate:Destroy()
     -- Do this last after everything has been created/deleted
     ConfigGame.configGame()
     PlayerStatManager.init()
