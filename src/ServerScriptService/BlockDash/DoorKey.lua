@@ -54,7 +54,8 @@ local function initKey(miniGameState)
 
             if not gameState.touchingDoor then
                 gameState.touchingDoor = true
-                local key2 = Utils.getDescendantsByName(player, keyName)
+                local key2 = Utils.getFirstDescendantByName(player.Character,
+                                                            keyName)
                 if key2 then
                     door.Transparency = 0.8
                     door.CanCollide = false
