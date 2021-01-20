@@ -19,13 +19,15 @@ function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local sector1Config = {
-        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
+        words = {"VAT"},
+        -- words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
         sectorFolder = "Sector1",
         gridSize = {numRow = 26, numCol = 26}
     }
 
     local sector2Config = {
-        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "ZIP"},
+        words = {"CAT"},
+        -- words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "ZIP"},
         sectorFolder = "Sector2",
         gridSize = {numRow = 26, numCol = 26}
     }
@@ -61,6 +63,7 @@ function addRemoteObjects()
             end
         end
 
+        local offsetX = 100 * islandIndex
         newIsland.Parent = myStuff
         newIsland.Name = "xxx"
         local newIslandPart = newIsland.PrimaryPart
@@ -72,7 +75,7 @@ function addRemoteObjects()
                 offsetConfig = {
                     useParentNearEdge = Vector3.new(1, -1, 0),
                     useChildNearEdge = Vector3.new(-1, 1, 0),
-                    offsetAdder = Vector3.new(-30, 0, 0)
+                    offsetAdder = Vector3.new(offsetX, 0, 0)
                 }
             })
 

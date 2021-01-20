@@ -15,7 +15,13 @@ local LetterGrabber = require(Sss.Source.LetterGrabber.LetterGrabber)
 local module = {}
 
 local function initPowerUps(miniGameState)
+    local sectorFolder = miniGameState.sectorFolder
+
     local function onTouchClearBlocks(otherPart)
+        print('onTouchClearBlocks');
+        print('onTouchClearBlocks');
+        print('onTouchClearBlocks');
+        print('onTouchClearBlocks');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
             if miniGameState.canResetBlocks then
@@ -26,9 +32,11 @@ local function initPowerUps(miniGameState)
         end
     end
 
-    local resets = Utils.getDescendantsByName(miniGameState.letterFallFolder,
-                                              "ClearBlocks")
+    local resets = Utils.getDescendantsByName(sectorFolder, "ClearBlocks")
     for _, reset in ipairs(resets) do
+        print('reset');
+        print('reset');
+        print('reset');
         reset.Touched:Connect(onTouchClearBlocks)
     end
 
@@ -42,8 +50,7 @@ local function initPowerUps(miniGameState)
         end
     end
 
-    local addBlocks = Utils.getDescendantsByName(miniGameState.letterFallFolder,
-                                                 "AddBlocks")
+    local addBlocks = Utils.getDescendantsByName(sectorFolder, "AddBlocks")
     for _, reset in ipairs(addBlocks) do
         reset.Touched:Connect(onTouchAddBlocks)
     end
