@@ -4,7 +4,7 @@ local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local module = {}
 
 local function init(chest)
-    local chestHitBox = Utils.getFirstDescendantByName(chest, "HitBox")
+    local hitBox = Utils.getFirstDescendantByName(chest, "HitBox")
 
     local reward
     if #chest.Reward:GetChildren() > 0 then
@@ -50,7 +50,7 @@ local function init(chest)
 
     end
 
-    chestHitBox.Touched:connect(onItemTouched)
+    hitBox.Touched:connect(onItemTouched)
 
 end
 

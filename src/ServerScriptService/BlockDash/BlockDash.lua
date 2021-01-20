@@ -11,6 +11,7 @@ local Entrance = require(Sss.Source.BlockDash.Entrance)
 local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
 local HandleClick = require(Sss.Source.BlockDash.HandleClick)
 local LetterGrabber = require(Sss.Source.LetterGrabber.LetterGrabber)
+local DoorKey = require(Sss.Source.BlockDash.DoorKey)
 
 local module = {}
 
@@ -111,6 +112,7 @@ local function addBlockDash(sectorConfig)
 
     LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
     initPowerUps(miniGameState)
+    DoorKey.init(miniGameState)
     LetterGrabber.initLetterGrabbers(miniGameState)
 end
 

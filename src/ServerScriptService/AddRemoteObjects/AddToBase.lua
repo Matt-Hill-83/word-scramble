@@ -9,8 +9,9 @@ local Constants = require(SP.Source.StarterPlayerScripts.RSConstants)
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
 local BlockDash = require(Sss.Source.BlockDash.BlockDash)
+-- local DoorKey = require(Sss.Source.BlockDash.DoorKey)
 
-local function addWorld(sectorConfig)
+local function addSector(sectorConfig)
     BlockDash.addBlockDash(sectorConfig)
     -- 
 end
@@ -19,11 +20,11 @@ function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local sector1Config = {
-        words = {"VAT", "CAT"},
-        -- words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
+        -- words = {"VAT", "CAT"},
+        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
         -- sectorFolder = "Sector1",
-        gridSize = {numRow = 6, numCol = 6}
-        -- gridSize = {numRow = 26, numCol = 26}
+        -- gridSize = {numRow = 6, numCol = 6}
+        gridSize = {numRow = 26, numCol = 26}
     }
 
     local sector2Config = {
@@ -36,8 +37,6 @@ function addRemoteObjects()
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
     local islandPositionerFolder = Utils.getFirstDescendantByName(blockDash,
                                                                   "IslandPositioners")
-    -- local islandPositioners = Utils.getDescendantsByName(blockDash,
-    --                                                      "IslandPositioner")
 
     local islandPositioners = islandPositionerFolder:GetChildren()
 
@@ -51,24 +50,6 @@ function addRemoteObjects()
         sector2Config, sector2Config
     }
 
-    local lines = {luaH_set = 10, luaH_get = 24, luaH_present = 48}
-
-    function pairsByKeys(t, f)
-        local a = {}
-        for n in pairs(t) do table.insert(a, n) end
-        table.sort(a, f)
-        local i = 0 -- iterator variable
-        local iter = function() -- iterator function
-            i = i + 1
-            if a[i] == nil then
-                return nil
-            else
-                return a[i], t[a[i]]
-            end
-        end
-        return iter
-    end
-
     Utils.sortListByObjectKey(islandPositioners, "Name")
 
     for islandIndex, islandPositioner in ipairs({islandPositioners[1]}) do
@@ -79,6 +60,8 @@ function addRemoteObjects()
         for _, child in pairs(newIsland:GetDescendants()) do
             if child:IsA("BasePart") then
                 if child.Anchored then
+                    print(child);
+                    print(child.Anchored);
                     child.Anchored = false
                     table.insert(anchoredParts, child)
                 end
@@ -107,9 +90,10 @@ function addRemoteObjects()
         sectorConfig.sectorFolder = newIsland
         sectorConfig.islandPositioner = islandPositioner
 
-        addWorld(sectorConfig)
+        addSector(sectorConfig)
 
         for _, child in pairs(anchoredParts) do
+            -- print(child);
             child.Anchored = true
             -- 
         end
@@ -118,6 +102,7 @@ function addRemoteObjects()
     -- Do this last after everything has been created/deleted
     ConfigGame.configGame()
     PlayerStatManager.init()
+
     -- islandTemplate:Destroy()
 end
 
