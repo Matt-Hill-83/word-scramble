@@ -12,7 +12,6 @@ local fastWalkSpeed = 50
 function module.initEntrance(miniGameState)
     local sectorFolder = miniGameState.sectorFolder
 
-    --    TODO: conver to a closure, so it acts on a single player
     function onTouchEntrance(otherPart)
         print('onTouchEntrance' .. ' - start');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
@@ -65,7 +64,7 @@ function module.initEntrance(miniGameState)
     local runFasts = Utils.getDescendantsByName(sectorFolder, "RunFast")
     for _, item in ipairs(runFasts) do item.Touched:Connect(onTouchRunFast) end
 
-    function onTouchRunNormal(otherPart)
+    local function onTouchRunNormal(otherPart)
         print('onTouchRunNormal');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
