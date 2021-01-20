@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1196.78589</X>
-					<Y>306.447144</Y>
-					<Z>-32.6751404</Z>
-					<R00>-0.970417857</R00>
-					<R01>-0.19265686</R01>
-					<R02>0.145508245</R02>
+					<X>-1175.34656</X>
+					<Y>299.722931</Y>
+					<Z>-32.7778511</Z>
+					<R00>-0.992902815</R00>
+					<R01>0.104040727</R01>
+					<R02>-0.0576168448</R02>
 					<R10>-0</R10>
-					<R11>0.602688849</R11>
-					<R12>0.797976315</R12>
-					<R20>-0.241431803</R20>
-					<R21>0.774370492</R21>
-					<R22>-0.584859967</R22>
+					<R11>0.484463155</R11>
+					<R12>0.874811709</R12>
+					<R20>0.118929282</R20>
+					<R21>0.868602991</R21>
+					<R22>-0.481024742</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1211.04578</X>
-					<Y>228.245026</Y>
-					<Z>24.6414547</Z>
+					<X>-1175.23132</X>
+					<Y>297.973297</Y>
+					<Z>-31.8157959</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -35387,18 +35387,18 @@ end)]]></ProtectedString>
 								<token name="BottomSurface">0</token>
 								<token name="BottomSurfaceInput">0</token>
 								<CoordinateFrame name="CFrame">
-									<X>-1128.06152</X>
-									<Y>225.083466</Y>
-									<Z>109.779366</Z>
-									<R00>0.707096815</R00>
-									<R01>-6.94287291e-06</R01>
-									<R02>0.707116783</R02>
-									<R10>-9.99078566e-06</R10>
+									<X>-1128.06458</X>
+									<Y>225.078903</Y>
+									<Z>-106.850952</Z>
+									<R00>-0.707117021</R00>
+									<R01>-6.9428761e-06</R01>
+									<R02>0.707096517</R02>
+									<R10>-1.98090638e-05</R10>
 									<R11>1</R11>
-									<R12>1.98090693e-05</R12>
-									<R20>-0.707116783</R20>
+									<R12>-9.99079839e-06</R12>
+									<R20>-0.707096517</R20>
 									<R21>-2.10715825e-05</R21>
-									<R22>0.707096815</R22>
+									<R22>-0.707117021</R22>
 								</CoordinateFrame>
 								<bool name="CanCollide">true</bool>
 								<bool name="CanTouch">true</bool>
@@ -35829,18 +35829,18 @@ end)]]></ProtectedString>
 									<token name="BottomSurface">0</token>
 									<token name="BottomSurfaceInput">0</token>
 									<CoordinateFrame name="CFrame">
-										<X>-1128.03882</X>
-										<Y>208.816391</Y>
-										<Z>114.01091</Z>
-										<R00>-4.37103154e-08</R00>
-										<R01>0.49999997</R01>
-										<R02>-0.866025448</R02>
+										<X>-1123.83325</X>
+										<Y>208.811768</Y>
+										<Z>-106.873245</Z>
+										<R00>-1.41287001e-05</R00>
+										<R01>0.866025209</R01>
+										<R02>0.500000298</R02>
 										<R10>-1</R10>
-										<R11>-2.18569767e-08</R11>
-										<R12>3.78518052e-08</R12>
-										<R20>2.72848411e-12</R20>
-										<R21>0.866025448</R21>
-										<R22>0.49999997</R22>
+										<R11>-2.62649173e-05</R11>
+										<R12>1.72347245e-05</R12>
+										<R20>2.80581735e-05</R20>
+										<R21>-0.500000298</R21>
+										<R22>0.866025209</R22>
 									</CoordinateFrame>
 									<bool name="CanCollide">true</bool>
 									<bool name="CanTouch">true</bool>
@@ -36688,9 +36688,9 @@ end)]]></ProtectedString>
 									<token name="BottomSurface">4</token>
 									<token name="BottomSurfaceInput">0</token>
 									<CoordinateFrame name="CFrame">
-										<X>-1142.54895</X>
-										<Y>195.291412</Y>
-										<Z>-110.276932</Z>
+										<X>-1293.54895</X>
+										<Y>195.294601</Y>
+										<Z>-110.278252</Z>
 										<R00>1</R00>
 										<R01>2.107201e-05</R01>
 										<R02>-8.75961814e-06</R02>
@@ -36765,9 +36765,9 @@ end)]]></ProtectedString>
 										<token name="BottomSurface">10</token>
 										<token name="BottomSurfaceInput">0</token>
 										<CoordinateFrame name="CFrame">
-											<X>-1142.54883</X>
-											<Y>204.541428</Y>
-											<Z>-106.009979</Z>
+											<X>-1293.54883</X>
+											<Y>204.544617</Y>
+											<Z>-106.011307</Z>
 											<R00>-1</R00>
 											<R01>2.107199e-05</R01>
 											<R02>8.7596145e-06</R02>
@@ -37149,13 +37149,13 @@ end)]]></ProtectedString>
 										<BinaryString name="Tags"></BinaryString>
 									</Properties>
 								</Item>
-								<Item class="Weld" referent="RBX524dc3032b724840a7ea1f38cc59b4e8">
+								<Item class="Weld" referent="RBX072548028bcb40648dbab874112dabec">
 									<Properties>
 										<BinaryString name="AttributesSerialize"></BinaryString>
 										<CoordinateFrame name="C0">
 											<X>0</X>
 											<Y>-12</Y>
-											<Z>7.62939453e-06</Z>
+											<Z>0</Z>
 											<R00>1</R00>
 											<R01>0</R01>
 											<R02>7.69433128e-13</R02>
@@ -37167,9 +37167,9 @@ end)]]></ProtectedString>
 											<R22>-2.27373675e-12</R22>
 										</CoordinateFrame>
 										<CoordinateFrame name="C1">
-											<X>-15.3778076</X>
-											<Y>4.03637695</Y>
-											<Z>-4.29158783</Z>
+											<X>-7.37780762</X>
+											<Y>4.03956604</Y>
+											<Z>-4.29291534</Z>
 											<R00>1</R00>
 											<R01>-8.75961723e-06</R01>
 											<R02>-2.10720118e-05</R02>
@@ -37183,18 +37183,18 @@ end)]]></ProtectedString>
 										<bool name="Enabled">true</bool>
 										<string name="Name">Weld</string>
 										<Ref name="Part0">RBX28ebe7bb1687481a98d9956a811479f4</Ref>
-										<Ref name="Part1">RBX63ebfcec95bf4f6cb9624b3078ac52ca</Ref>
+										<Ref name="Part1">RBX8506890a3b5a40b6adfcaf3e332b0049</Ref>
 										<int64 name="SourceAssetId">-1</int64>
 										<BinaryString name="Tags"></BinaryString>
 									</Properties>
 								</Item>
-								<Item class="Weld" referent="RBXd1bd220dadca422e9dab17b5ccd76cd0">
+								<Item class="Weld" referent="RBXb8ddfd124e994376816e9bc9633b2470">
 									<Properties>
 										<BinaryString name="AttributesSerialize"></BinaryString>
 										<CoordinateFrame name="C0">
 											<X>0</X>
 											<Y>-12</Y>
-											<Z>7.62939453e-06</Z>
+											<Z>0</Z>
 											<R00>1</R00>
 											<R01>0</R01>
 											<R02>7.69433128e-13</R02>
@@ -37206,48 +37206,9 @@ end)]]></ProtectedString>
 											<R22>-2.27373675e-12</R22>
 										</CoordinateFrame>
 										<CoordinateFrame name="C1">
-											<X>-4.54160309</X>
-											<Y>4.03637695</Y>
-											<Z>15.6278076</Z>
-											<R00>8.75976366e-06</R00>
-											<R01>1</R01>
-											<R02>6.94037954e-06</R02>
-											<R10>-2.10719518e-05</R10>
-											<R11>6.94056416e-06</R11>
-											<R12>-1</R12>
-											<R20>-1</R20>
-											<R21>8.75961723e-06</R21>
-											<R22>2.10720118e-05</R22>
-										</CoordinateFrame>
-										<bool name="Enabled">true</bool>
-										<string name="Name">Weld</string>
-										<Ref name="Part0">RBX28ebe7bb1687481a98d9956a811479f4</Ref>
-										<Ref name="Part1">RBX4c9a1b316c9144228d6449d325a76d42</Ref>
-										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags"></BinaryString>
-									</Properties>
-								</Item>
-								<Item class="Weld" referent="RBX43efb6c4e7824c92848877377e13b905">
-									<Properties>
-										<BinaryString name="AttributesSerialize"></BinaryString>
-										<CoordinateFrame name="C0">
-											<X>0</X>
-											<Y>-12</Y>
-											<Z>7.62939453e-06</Z>
-											<R00>1</R00>
-											<R01>0</R01>
-											<R02>7.69433128e-13</R02>
-											<R10>-2.58842253e-12</R10>
-											<R11>0</R11>
-											<R12>-1</R12>
-											<R20>-1.8189894e-12</R20>
-											<R21>0.99999994</R21>
-											<R22>-2.27373675e-12</R22>
-										</CoordinateFrame>
-										<CoordinateFrame name="C1">
-											<X>0.622192383</X>
-											<Y>4.03637695</Y>
-											<Z>-4.29158783</Z>
+											<X>8.62219238</X>
+											<Y>4.03956604</Y>
+											<Z>-4.29291534</Z>
 											<R00>1</R00>
 											<R01>-8.75961723e-06</R01>
 											<R02>-2.10720118e-05</R02>
@@ -37261,46 +37222,7 @@ end)]]></ProtectedString>
 										<bool name="Enabled">true</bool>
 										<string name="Name">Weld</string>
 										<Ref name="Part0">RBX28ebe7bb1687481a98d9956a811479f4</Ref>
-										<Ref name="Part1">RBX959379f28b2f4397a758dedd1b115c17</Ref>
-										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags"></BinaryString>
-									</Properties>
-								</Item>
-								<Item class="Weld" referent="RBX251a8402ba294b689a3d42d24ab7a176">
-									<Properties>
-										<BinaryString name="AttributesSerialize"></BinaryString>
-										<CoordinateFrame name="C0">
-											<X>0</X>
-											<Y>-12</Y>
-											<Z>7.62939453e-06</Z>
-											<R00>1</R00>
-											<R01>0</R01>
-											<R02>7.69433128e-13</R02>
-											<R10>-2.58842253e-12</R10>
-											<R11>0</R11>
-											<R12>-1</R12>
-											<R20>-1.8189894e-12</R20>
-											<R21>0.99999994</R21>
-											<R22>-2.27373675e-12</R22>
-										</CoordinateFrame>
-										<CoordinateFrame name="C1">
-											<X>16.6221924</X>
-											<Y>4.03637695</Y>
-											<Z>-4.29158783</Z>
-											<R00>1</R00>
-											<R01>-8.75961723e-06</R01>
-											<R02>-2.10720118e-05</R02>
-											<R10>-2.10719518e-05</R10>
-											<R11>6.94056416e-06</R11>
-											<R12>-1</R12>
-											<R20>8.75976366e-06</R20>
-											<R21>1</R21>
-											<R22>6.94037954e-06</R22>
-										</CoordinateFrame>
-										<bool name="Enabled">true</bool>
-										<string name="Name">Weld</string>
-										<Ref name="Part0">RBX28ebe7bb1687481a98d9956a811479f4</Ref>
-										<Ref name="Part1">RBX2367d12201e3459daf08ed41c05e9b54</Ref>
+										<Ref name="Part1">RBX83c4b69dc36d437fab0515b8117d890c</Ref>
 										<int64 name="SourceAssetId">-1</int64>
 										<BinaryString name="Tags"></BinaryString>
 									</Properties>
@@ -38978,9 +38900,9 @@ end)]]></ProtectedString>
 									<token name="BottomSurface">4</token>
 									<token name="BottomSurfaceInput">0</token>
 									<CoordinateFrame name="CFrame">
-										<X>-1198.54895</X>
-										<Y>195.292603</Y>
-										<Z>-110.277397</Z>
+										<X>-1231.04895</X>
+										<Y>195.293289</Y>
+										<Z>-110.277679</Z>
 										<R00>1</R00>
 										<R01>2.107201e-05</R01>
 										<R02>-8.75961814e-06</R02>
@@ -39055,9 +38977,9 @@ end)]]></ProtectedString>
 										<token name="BottomSurface">10</token>
 										<token name="BottomSurfaceInput">0</token>
 										<CoordinateFrame name="CFrame">
-											<X>-1198.54883</X>
-											<Y>204.542618</Y>
-											<Z>-106.010452</Z>
+											<X>-1231.04883</X>
+											<Y>204.543304</Y>
+											<Z>-106.010727</Z>
 											<R00>-1</R00>
 											<R01>2.107199e-05</R01>
 											<R02>8.7596145e-06</R02>
@@ -39439,12 +39361,12 @@ end)]]></ProtectedString>
 										<BinaryString name="Tags"></BinaryString>
 									</Properties>
 								</Item>
-								<Item class="Weld" referent="RBX3959ff630a34483db5b75f61fef0d73b">
+								<Item class="Weld" referent="RBXbe008a6245ff473dad3004fcab8652c6">
 									<Properties>
 										<BinaryString name="AttributesSerialize"></BinaryString>
 										<CoordinateFrame name="C0">
 											<X>0</X>
-											<Y>-12</Y>
+											<Y>-11.9999847</Y>
 											<Z>0</Z>
 											<R00>1</R00>
 											<R01>0</R01>
@@ -39457,9 +39379,9 @@ end)]]></ProtectedString>
 											<R22>-2.27373675e-12</R22>
 										</CoordinateFrame>
 										<CoordinateFrame name="C1">
-											<X>-7.37780762</X>
-											<Y>4.03756714</Y>
-											<Z>-4.29206085</Z>
+											<X>-7.87780762</X>
+											<Y>4.03826904</Y>
+											<Z>-4.29234314</Z>
 											<R00>1</R00>
 											<R01>-8.75961723e-06</R01>
 											<R02>-2.10720118e-05</R02>
@@ -39473,17 +39395,17 @@ end)]]></ProtectedString>
 										<bool name="Enabled">true</bool>
 										<string name="Name">Weld</string>
 										<Ref name="Part0">RBX34ac769effe6487784f81b304539d31a</Ref>
-										<Ref name="Part1">RBXca68dc4748474bc59668718bdc5b9347</Ref>
+										<Ref name="Part1">RBX04aee0a649c44a21831290a3395159b1</Ref>
 										<int64 name="SourceAssetId">-1</int64>
 										<BinaryString name="Tags"></BinaryString>
 									</Properties>
 								</Item>
-								<Item class="Weld" referent="RBX14abc53b10964994bc59a43cc9795656">
+								<Item class="Weld" referent="RBXff9b929c973d4dceb14b95bd17ef6178">
 									<Properties>
 										<BinaryString name="AttributesSerialize"></BinaryString>
 										<CoordinateFrame name="C0">
 											<X>0</X>
-											<Y>-12</Y>
+											<Y>-11.9999847</Y>
 											<Z>0</Z>
 											<R00>1</R00>
 											<R01>0</R01>
@@ -39496,9 +39418,9 @@ end)]]></ProtectedString>
 											<R22>-2.27373675e-12</R22>
 										</CoordinateFrame>
 										<CoordinateFrame name="C1">
-											<X>8.62219238</X>
-											<Y>4.03756714</Y>
-											<Z>-4.29206085</Z>
+											<X>8.12219238</X>
+											<Y>4.03826904</Y>
+											<Z>-4.29234314</Z>
 											<R00>1</R00>
 											<R01>-8.75961723e-06</R01>
 											<R02>-2.10720118e-05</R02>
@@ -39512,7 +39434,7 @@ end)]]></ProtectedString>
 										<bool name="Enabled">true</bool>
 										<string name="Name">Weld</string>
 										<Ref name="Part0">RBX34ac769effe6487784f81b304539d31a</Ref>
-										<Ref name="Part1">RBXa2fac2c96ac5448ba9ec1908a071e6e6</Ref>
+										<Ref name="Part1">RBX1848456980ed4e2a84e9e60eb0faed3e</Ref>
 										<int64 name="SourceAssetId">-1</int64>
 										<BinaryString name="Tags"></BinaryString>
 									</Properties>
@@ -53297,9 +53219,9 @@ end)]]></ProtectedString>
 									<Properties>
 										<BinaryString name="AttributesSerialize"></BinaryString>
 										<CoordinateFrame name="CFrame0">
-											<X>58.9993134</X>
-											<Y>7.69999695</Y>
-											<Z>-0.000122070312</Z>
+											<X>-109.999176</X>
+											<Y>10.1999969</Y>
+											<Z>-0.000244140625</Z>
 											<R00>0.999991119</R00>
 											<R01>3.40552031e-11</R01>
 											<R02>-5.21540642e-07</R02>
@@ -53675,18 +53597,18 @@ end)]]></ProtectedString>
 							<Properties>
 								<BinaryString name="AttributesSerialize"></BinaryString>
 								<CoordinateFrame name="CFrame0">
-									<X>-118.986816</X>
-									<Y>88.596283</Y>
-									<Z>-96.1346207</Z>
-									<R00>-0.707070649</R00>
-									<R01>2.55649702e-05</R01>
-									<R02>-0.707142949</R02>
-									<R10>-1.57739487e-06</R10>
+									<X>-118.97583</X>
+									<Y>88.590271</Y>
+									<Z>120.495697</Z>
+									<R00>0.707143188</R00>
+									<R01>2.55649738e-05</R01>
+									<R02>-0.707070351</R02>
+									<R10>-3.77297038e-05</R10>
 									<R11>1</R11>
-									<R12>3.7729711e-05</R12>
-									<R20>0.707142949</R20>
+									<R12>-1.57741442e-06</R12>
+									<R20>0.707070351</R20>
 									<R21>2.77930139e-05</R21>
-									<R22>-0.707070649</R22>
+									<R22>0.707143188</R22>
 								</CoordinateFrame>
 								<bool name="Enabled">true</bool>
 								<string name="Name">WeldConstraint</string>
@@ -53858,9 +53780,9 @@ end)]]></ProtectedString>
 								<token name="BottomSurface">2</token>
 								<token name="BottomSurfaceInput">0</token>
 								<CoordinateFrame name="CFrame">
-									<X>-1093.27625</X>
-									<Y>190.455002</Y>
-									<Z>305.492523</Z>
+									<X>-1126.36914</X>
+									<Y>192.955002</Y>
+									<Z>139.764252</Z>
 									<R00>0.195815995</R00>
 									<R01>-7.93766095e-11</R01>
 									<R02>-0.980640709</R02>
@@ -53875,7 +53797,7 @@ end)]]></ProtectedString>
 								<bool name="CanTouch">true</bool>
 								<bool name="CastShadow">true</bool>
 								<int name="CollisionGroupId">0</int>
-								<Color3uint8 name="Color3uint8">4289331370</Color3uint8>
+								<Color3uint8 name="Color3uint8">4294901951</Color3uint8>
 								<PhysicalProperties name="CustomPhysicalProperties">
 									<CustomPhysics>false</CustomPhysics>
 								</PhysicalProperties>
@@ -53889,7 +53811,7 @@ end)]]></ProtectedString>
 								<token name="LeftSurfaceInput">0</token>
 								<bool name="Locked">false</bool>
 								<bool name="Massless">false</bool>
-								<token name="Material">880</token>
+								<token name="Material">512</token>
 								<string name="Name">Door</string>
 								<float name="Reflectance">0</float>
 								<float name="RightParamA">-0.5</float>
@@ -53917,9 +53839,9 @@ end)]]></ProtectedString>
 								<token name="formFactorRaw">1</token>
 								<token name="shape">1</token>
 								<Vector3 name="size">
-									<X>1</X>
-									<Y>16.4000015</Y>
-									<Z>12</Z>
+									<X>1.33333325</X>
+									<Y>21.8666668</Y>
+									<Z>15.999999</Z>
 								</Vector3>
 							</Properties>
 							<Item class="Script" referent="RBX2">
@@ -53955,8 +53877,8 @@ end)]]></ProtectedString>
 								<Properties>
 									<BinaryString name="AttributesSerialize"></BinaryString>
 									<CoordinateFrame name="C0">
-										<X>0.500015259</X>
-										<Y>1.52587891e-05</Y>
+										<X>0.666686952</X>
+										<Y>2.03450509e-05</Y>
 										<Z>0</Z>
 										<R00>0</R00>
 										<R01>-2.77555756e-17</R01>
@@ -53969,8 +53891,8 @@ end)]]></ProtectedString>
 										<R22>0</R22>
 									</CoordinateFrame>
 									<CoordinateFrame name="C1">
-										<X>0.5</X>
-										<Y>2.00001526</Y>
+										<X>0.666666627</X>
+										<Y>2.66668677</Y>
 										<Z>0</Z>
 										<R00>0</R00>
 										<R01>2.77555756e-17</R01>
@@ -53994,7 +53916,7 @@ end)]]></ProtectedString>
 								<Properties>
 									<BinaryString name="AttributesSerialize"></BinaryString>
 									<CoordinateFrame name="C0">
-										<X>-0.5</X>
+										<X>-0.666666627</X>
 										<Y>0</Y>
 										<Z>0</Z>
 										<R00>0</R00>
@@ -54008,9 +53930,9 @@ end)]]></ProtectedString>
 										<R22>0</R22>
 									</CoordinateFrame>
 									<CoordinateFrame name="C1">
-										<X>0.5</X>
-										<Y>2</Y>
-										<Z>-0.000122070312</Z>
+										<X>0.666666627</X>
+										<Y>2.66666651</Y>
+										<Z>-0.000162760407</Z>
 										<R00>0</R00>
 										<R01>2.77555756e-17</R01>
 										<R02>-1.00000012</R02>
@@ -54123,9 +54045,9 @@ end)]]></ProtectedString>
 								<token name="BottomSurface">0</token>
 								<token name="BottomSurfaceInput">0</token>
 								<CoordinateFrame name="CFrame">
-									<X>-1093.47217</X>
-									<Y>188.455002</Y>
-									<Z>304.511902</Z>
+									<X>-1126.63037</X>
+									<Y>190.28833</Y>
+									<Z>138.456757</Z>
 									<R00>0.195815995</R00>
 									<R01>-7.93766095e-11</R01>
 									<R02>-0.980640709</R02>
@@ -54182,9 +54104,9 @@ end)]]></ProtectedString>
 								<token name="formFactorRaw">1</token>
 								<token name="shape">1</token>
 								<Vector3 name="size">
-									<X>1</X>
-									<Y>2.4000001</Y>
-									<Z>2</Z>
+									<X>1.33333325</X>
+									<Y>3.20000005</Y>
+									<Z>2.66666651</Z>
 								</Vector3>
 							</Properties>
 							<Item class="Decal" referent="RBX6">
@@ -54217,9 +54139,9 @@ end)]]></ProtectedString>
 								<token name="BottomSurface">0</token>
 								<token name="BottomSurfaceInput">0</token>
 								<CoordinateFrame name="CFrame">
-									<X>-1093.08044</X>
-									<Y>188.455002</Y>
-									<Z>306.473175</Z>
+									<X>-1126.10803</X>
+									<Y>190.28833</Y>
+									<Z>141.071777</Z>
 									<R00>-0.195815995</R00>
 									<R01>-7.93766095e-11</R01>
 									<R02>0.980640709</R02>
@@ -54276,9 +54198,9 @@ end)]]></ProtectedString>
 								<token name="formFactorRaw">1</token>
 								<token name="shape">1</token>
 								<Vector3 name="size">
-									<X>1</X>
-									<Y>2.4000001</Y>
-									<Z>2</Z>
+									<X>1.33333325</X>
+									<Y>3.20000005</Y>
+									<Z>2.66666651</Z>
 								</Vector3>
 							</Properties>
 							<Item class="Decal" referent="RBX8">
@@ -60535,16 +60457,13 @@ return module
 						<string name="ScriptGuid">{b088ea58-c7cc-4fee-bbd2-a6eabd4062f0}</string>
 						<ProtectedString name="Source"><![CDATA[local module = {}
 local Sss = game:GetService("ServerScriptService")
-local SP = game:GetService("StarterPlayer")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
-local Constants = require(SP.Source.StarterPlayerScripts.RSConstants)
 
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
 local BlockDash = require(Sss.Source.BlockDash.BlockDash)
--- local DoorKey = require(Sss.Source.BlockDash.DoorKey)
 
 local function addSector(sectorConfig)
     BlockDash.addBlockDash(sectorConfig)
@@ -60556,9 +60475,8 @@ function addRemoteObjects()
 
     local sector1Config = {
         -- words = {"VAT", "CAT"},
-        words = {"CAT"},
-        -- words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
-        -- sectorFolder = "Sector1",
+        -- words = {"CAT"},
+        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
         -- gridSize = {numRow = 6, numCol = 6}
         gridSize = {numRow = 26, numCol = 26}
     }
@@ -60566,7 +60484,6 @@ function addRemoteObjects()
     local sector2Config = {
         -- words = {"CAT"},
         words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "ZIP"},
-        -- sectorFolder = "Sector2",
         gridSize = {numRow = 26, numCol = 26}
     }
 
@@ -61102,13 +61019,11 @@ return PlayerStatManager
 						<ProtectedString name="Source"><![CDATA[local Sss = game:GetService("ServerScriptService")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
--- local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 local InitLetterRack = require(Sss.Source.BlockDash.InitLetterRackBD)
 local InitWord = require(Sss.Source.BlockDash.InitWordBD)
 local Entrance = require(Sss.Source.BlockDash.Entrance)
--- local ArrowTool = require(Sss.Source.BlockDash.ArrowTool)
 local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
 local HandleClick = require(Sss.Source.BlockDash.HandleClick)
 local LetterGrabber = require(Sss.Source.LetterGrabber.LetterGrabber)
@@ -61120,10 +61035,6 @@ local function initPowerUps(miniGameState)
     local sectorFolder = miniGameState.sectorFolder
 
     local function onTouchClearBlocks(otherPart)
-        print('onTouchClearBlocks');
-        print('onTouchClearBlocks');
-        print('onTouchClearBlocks');
-        print('onTouchClearBlocks');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
             if miniGameState.canResetBlocks then
@@ -61443,34 +61354,25 @@ return module
 						<Content name="LinkedSource"><null></null></Content>
 						<string name="Name">InitBlockDash</string>
 						<string name="ScriptGuid">{119adb5d-f170-48c2-b48a-c620a8d8ce9b}</string>
-						<ProtectedString name="Source"><![CDATA[local CS = game:GetService("CollectionService")
-local RS = game:GetService("ReplicatedStorage")
-local Sss = game:GetService("ServerScriptService")
-
-local Utils = require(Sss.Source.Utils.U001GeneralUtils)
-local LetterFall = require(Sss.Source.LetterFall.LetterFall)
-local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
-local HandleClick = require(Sss.Source.LetterFall.HandleClick)
-local InitLetterRack = require(Sss.Source.LetterFall.InitLetterRack)
-local InitWord = require(Sss.Source.LetterFall.InitWord)
-
-local module = {}
-
-function initLetterFall(miniGameState)
-    LetterFall.initGameToggle(miniGameState)
-    InitLetterRack.initLetterRack(miniGameState)
-    InitWord.initWords(miniGameState)
-
-    LetterFallUtils.styleLetterBlocks({
-        miniGameState = miniGameState,
-        availWords = miniGameState.words
-    })
-end
-
-module.initLetterFall = initLetterFall
-
-return module
-
+						<ProtectedString name="Source"><![CDATA[-- local CS = game:GetService("CollectionService")
+-- local RS = game:GetService("ReplicatedStorage")
+-- local Sss = game:GetService("ServerScriptService")
+-- local LetterFall = require(Sss.Source.LetterFall.LetterFall)
+-- local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
+-- local InitLetterRack = require(Sss.Source.LetterFall.InitLetterRack)
+-- local InitWord = require(Sss.Source.LetterFall.InitWord)
+-- local module = {}
+-- function initLetterFall(miniGameState)
+--     LetterFall.initGameToggle(miniGameState)
+--     InitLetterRack.initLetterRack(miniGameState)
+--     InitWord.initWords(miniGameState)
+--     LetterFallUtils.styleLetterBlocks({
+--         miniGameState = miniGameState,
+--         availWords = miniGameState.words
+--     })
+-- end
+-- module.initLetterFall = initLetterFall
+-- return module
 ]]></ProtectedString>
 						<int64 name="SourceAssetId">-1</int64>
 						<BinaryString name="Tags"></BinaryString>
@@ -61905,7 +61807,6 @@ local fastWalkSpeed = 50
 function module.initEntrance(miniGameState)
     local sectorFolder = miniGameState.sectorFolder
 
-    --    TODO: conver to a closure, so it acts on a single player
     function onTouchEntrance(otherPart)
         print('onTouchEntrance' .. ' - start');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
@@ -61958,7 +61859,7 @@ function module.initEntrance(miniGameState)
     local runFasts = Utils.getDescendantsByName(sectorFolder, "RunFast")
     for _, item in ipairs(runFasts) do item.Touched:Connect(onTouchRunFast) end
 
-    function onTouchRunNormal(otherPart)
+    local function onTouchRunNormal(otherPart)
         print('onTouchRunNormal');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
@@ -62178,22 +62079,16 @@ return module
 						<string name="Name">DoorKey</string>
 						<string name="ScriptGuid">{dd0da4e8-19d9-477d-83e9-ae4fd07166fc}</string>
 						<ProtectedString name="Source"><![CDATA[local Sss = game:GetService("ServerScriptService")
--- local CS = game:GetService("CollectionService")
--- local Players = game:GetService("Players")
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
--- local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
--- local Constants = require(Sss.Source.Constants.Constants)
 
 local Replicator = require(Sss.Source.BlockDash.Replicator)
 
 local module = {}
 
 local function initKey(miniGameState)
-    print('miniGameState' .. ' - start');
-    print(miniGameState);
     local sectorFolder = miniGameState.sectorFolder
 
     local positioner = Utils.getFirstDescendantByName(sectorFolder,
@@ -62205,10 +62100,6 @@ local function initKey(miniGameState)
     local keyName = "key--" .. sectorFolder.Name
     key.Name = keyName
     local handle = key.Handle
-    print('sectorFolder' .. ' - start');
-    print(sectorFolder);
-    print('key.Name' .. ' - start');
-    print(key.Name);
 
     local propChar = Instance.new("StringValue", handle)
     propChar.Name = "DoorMatch"
@@ -62235,30 +62126,7 @@ local function initKey(miniGameState)
     local door = Utils.getFirstDescendantByName(sectorFolder, "LockedDoor")
                      .PrimaryPart
 
-    print('door' .. ' - start');
-    print(door);
-    -- local function onTouched(obj)
-    --     local player = game.Players:GetPlayerFromCharacter(obj.Parent)
-    --     if obj.Parent:findFirstChild("Humanoid") ~= nil then
-    --         if Players:findFirstChild(obj.Parent.Name) ~= nil then
-    --             if obj.Parent:findFirstChild(script.Parent.Parent.Key.Value) ~=
-    --                 nil then
-    --                 if script.Parent.Parent.KeyRemove.Value == true then
-    --                     obj.Parent:findFirstChild(script.Parent.Parent.Key.Value)
-    --                         :remove()
-    --                 end
-    --                 script.Parent.Transparency = 0.8
-    --                 script.Parent.CanCollide = false
-    --                 wait(3)
-    --                 script.Parent.Transparency = 0
-    --                 script.Parent.CanCollide = true
-    --             end
-    --         end
-    --     end
-    -- end
-
     local function onTouchDoor(otherPart)
-        print('onTouchEntrance' .. ' - start');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
             local player = Utils.getPlayerFromHumanoid(humanoid)
@@ -62267,8 +62135,6 @@ local function initKey(miniGameState)
             if not gameState.touchingDoor then
                 gameState.touchingDoor = true
                 local key2 = Utils.getDescendantsByName(player, keyName)
-                print('door' .. ' - start');
-                print(door);
                 if key2 then
                     door.Transparency = 0.8
                     door.CanCollide = false
@@ -62276,14 +62142,11 @@ local function initKey(miniGameState)
                     door.Transparency = 0
                     door.CanCollide = true
                 end
-
-                -- 
                 gameState.touchingDoor = false
             end
         end
     end
 
-    -- door.Touched:Connect(onTouched)
     door.Touched:Connect(onTouchDoor)
 end
 
@@ -62313,8 +62176,8 @@ return module
 						<Content name="LinkedSource"><null></null></Content>
 						<string name="Name">Constants</string>
 						<string name="ScriptGuid">{96953b13-b3bc-4e4e-8b6d-ba829b95ce48}</string>
-						<ProtectedString name="Source"><![CDATA[local isTest = true
--- local isTest = false
+						<ProtectedString name="Source"><![CDATA[-- local isTest = true
+local isTest = false
 
 local devGameConfig = {
     transparency = false,

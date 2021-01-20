@@ -1,15 +1,12 @@
 local module = {}
 local Sss = game:GetService("ServerScriptService")
-local SP = game:GetService("StarterPlayer")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
-local Constants = require(SP.Source.StarterPlayerScripts.RSConstants)
 
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
 local BlockDash = require(Sss.Source.BlockDash.BlockDash)
--- local DoorKey = require(Sss.Source.BlockDash.DoorKey)
 
 local function addSector(sectorConfig)
     BlockDash.addBlockDash(sectorConfig)
@@ -21,9 +18,8 @@ function addRemoteObjects()
 
     local sector1Config = {
         -- words = {"VAT", "CAT"},
-        words = {"CAT"},
-        -- words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
-        -- sectorFolder = "Sector1",
+        -- words = {"CAT"},
+        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
         -- gridSize = {numRow = 6, numCol = 6}
         gridSize = {numRow = 26, numCol = 26}
     }
@@ -31,7 +27,6 @@ function addRemoteObjects()
     local sector2Config = {
         -- words = {"CAT"},
         words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "ZIP"},
-        -- sectorFolder = "Sector2",
         gridSize = {numRow = 26, numCol = 26}
     }
 
