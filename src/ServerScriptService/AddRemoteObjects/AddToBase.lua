@@ -19,10 +19,11 @@ function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local sector1Config = {
-        -- words = {"VAT"},
-        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
+        words = {"VAT", "CAT"},
+        -- words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
         -- sectorFolder = "Sector1",
-        gridSize = {numRow = 26, numCol = 26}
+        gridSize = {numRow = 6, numCol = 6}
+        -- gridSize = {numRow = 26, numCol = 26}
     }
 
     local sector2Config = {
@@ -70,7 +71,8 @@ function addRemoteObjects()
 
     Utils.sortListByObjectKey(islandPositioners, "Name")
 
-    for islandIndex, islandPositioner in ipairs(islandPositioners) do
+    for islandIndex, islandPositioner in ipairs({islandPositioners[1]}) do
+        -- for islandIndex, islandPositioner in ipairs(islandPositioners) do
         local newIsland = islandTemplate:Clone()
 
         local anchoredParts = {}

@@ -110,12 +110,13 @@ function onSelectRackBlock(clickedLetter, miniGameState, player)
         Utils3.tween({
             part = clickedLetter,
             endPosition = targetLetterBlock.Position,
-            time = 0.4,
+            time = 0.6,
             anchor = true
         })
 
+        clickedLetter.CFrame = targetLetterBlock.CFrame
         -- hide the letter in rack where this letter is going
-        CS:AddTag(targetLetterBlock, "Hide")
+        -- CS:AddTag(targetLetterBlock, "Hide")
 
         local clickedChar =
             LetterFallUtils.getCharFromLetterBlock(clickedLetter)
@@ -124,12 +125,14 @@ function onSelectRackBlock(clickedLetter, miniGameState, player)
             table.insert(miniGameState.foundLetters,
                          LetterFallUtils.getCharFromLetterBlock(clickedLetter))
         end
+        clickedLetter:Destroy()
 
         local currentWord = table.concat(miniGameState.foundLetters, "")
         local wordComplete = table.find(words, currentWord)
 
         miniGameState.currentLetterIndex = miniGameState.currentLetterIndex + 1
-
+        print('wordComplete' .. ' - start');
+        print(wordComplete);
         if (wordComplete) then
             local currentWord2 = Constants.wordConfigs[currentWord]
             if currentWord2 then
@@ -153,9 +156,25 @@ function onSelectRackBlock(clickedLetter, miniGameState, player)
             newGem.Handle.Color = Constants.gemColors[rand]
 
             table.insert(miniGameState.foundWords, currentWord)
+
+            local activeWord2 = miniGameState.activeWord
+            activeWord2.Name = "wwww"
+            activeWord2.word:Destroy()
+
+            print('miniGameState.activeWord' .. ' - start');
+            print(miniGameState.activeWord);
+
+            for _, letter in ipairs(activeWord2.letters) do
+                local myLetter = letter.instance
+                print('myLetter' .. ' - start');
+                print(myLetter);
+                myLetter:Destroy()
+            end
+            -- local wordObj = 
+            miniGameState.activeWord = nil
+
             miniGameState.foundLetters = {}
             miniGameState.currentLetterIndex = 1
-            miniGameState.activeWord = nil
 
             local wins = player.leaderstats.Wins
             wins.Value = wins.Value + 1
@@ -166,13 +185,13 @@ function onSelectRackBlock(clickedLetter, miniGameState, player)
 
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
 
-        clickedLetter.CFrame = targetLetterBlock.CFrame
+        -- clickedLetter.CFrame = targetLetterBlock.CFrame
 
         local numAvailableBlocks = LetterFallUtils.getNumAvailLetterBlocks(
                                        miniGameState)
 
         if numAvailableBlocks == 0 then
-            miniGameState.onWordLettersGone(miniGameState)
+            -- miniGameState.onWordLettersGone(miniGameState)
         end
     end
     module.processing = false
