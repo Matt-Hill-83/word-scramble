@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1290.91675</X>
-					<Y>263.246521</Y>
-					<Z>62.4133301</Z>
-					<R00>0.487422913</R00>
-					<R01>-0.491140991</R01>
-					<R02>0.721941411</R02>
+					<X>-1317.55701</X>
+					<Y>270.383209</Y>
+					<Z>100.024414</Z>
+					<R00>0.85517019</R00>
+					<R01>-0.293841332</R01>
+					<R02>0.42701453</R02>
 					<R10>-0</R10>
-					<R11>0.82680887</R11>
-					<R12>0.562482893</R12>
-					<R20>-0.873166084</R20>
-					<R21>-0.274167061</R21>
-					<R22>0.40300557</R22>
+					<R11>0.823799849</R11>
+					<R12>0.566880941</R12>
+					<R20>-0.518347502</R20>
+					<R21>-0.484779686</R21>
+					<R22>0.704488933</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1366</X>
-					<Y>204.747253</Y>
-					<Z>20.5000019</Z>
+					<X>-1361.96765</X>
+					<Y>211.426086</Y>
+					<Z>26.7556953</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -53322,6 +53322,32 @@ end)]]></ProtectedString>
 								<BinaryString name="Tags"></BinaryString>
 							</Properties>
 						</Item>
+						<Item class="WeldConstraint" referent="RBX53adb84d1be5401ab06e5466004d57fc">
+							<Properties>
+								<BinaryString name="AttributesSerialize"></BinaryString>
+								<CoordinateFrame name="CFrame0">
+									<X>119.156982</X>
+									<Y>64.2550354</Y>
+									<Z>-6.73996639</Z>
+									<R00>-3.69092086e-05</R00>
+									<R01>-1.95957327e-05</R01>
+									<R02>1</R02>
+									<R10>-6.72857504e-06</R10>
+									<R11>1</R11>
+									<R12>1.9456329e-05</R12>
+									<R20>-1</R20>
+									<R21>-6.71476118e-06</R21>
+									<R22>-3.71160022e-05</R22>
+								</CoordinateFrame>
+								<bool name="Enabled">true</bool>
+								<string name="Name">WeldConstraint</string>
+								<Ref name="Part0Internal">RBX17dd66e91b7f43969078f4c9b745509b</Ref>
+								<Ref name="Part1Internal">RBX3cd7a6543d764b469316376dbd6df89b</Ref>
+								<int64 name="SourceAssetId">-1</int64>
+								<int name="State">1</int>
+								<BinaryString name="Tags"></BinaryString>
+							</Properties>
+						</Item>
 					</Item>
 					<Item class="Model" referent="RBX0">
 						<Properties>
@@ -56504,17 +56530,17 @@ end)]]></ProtectedString>
 									<token name="BottomSurfaceInput">0</token>
 									<CoordinateFrame name="CFrame">
 										<X>-1366.20239</X>
-										<Y>200.747238</Y>
+										<Y>200.747253</Y>
 										<Z>20.3757286</Z>
-										<R00>-1.03587894e-07</R00>
+										<R00>-1.03584171e-07</R00>
 										<R01>3.82165526e-05</R01>
 										<R02>-1</R02>
-										<R10>-1.34509519e-05</R10>
+										<R10>-1.34509501e-05</R10>
 										<R11>1</R11>
 										<R12>3.80773963e-05</R12>
 										<R20>1</R20>
-										<R21>1.34378643e-05</R21>
-										<R22>1.03586714e-07</R22>
+										<R21>1.34378652e-05</R21>
+										<R22>1.03587809e-07</R22>
 									</CoordinateFrame>
 									<bool name="CanCollide">false</bool>
 									<bool name="CanTouch">true</bool>
@@ -59633,7 +59659,7 @@ local devGameConfig = {
     transparency = false,
     -- transparency = true,
     walkSpeed = 30,
-    fastWalkSpeed = 40,
+    fastWalkSpeed = 50,
     -- walkSpeed = 80,
 
     disabledSpawns = {
@@ -59647,7 +59673,7 @@ local devGameConfig = {
 local prodGameConfig = {
     transparency = true,
     walkSpeed = 30,
-    fastWalkSpeed = 40,
+    fastWalkSpeed = 50,
 
     showScenes = true,
     disabledSpawns = {
@@ -63209,6 +63235,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
     if targetLetterBlock then
         CS:AddTag(clickedLetter, LetterFallUtils.tagNames.Found)
+        CS:AddTag(targetLetterBlock, "FoundInWord")
         CS:RemoveTag(clickedLetter, LetterFallUtils.tagNames.RackLetter)
 
         local letterBlockCFrame = clickedLetter.CFrame
@@ -63222,7 +63249,13 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
         clickedLetter.CFrame = targetLetterBlock.CFrame
         -- hide the letter in rack where this letter is going
-        CS:AddTag(clickedLetter, "Hide")
+        -- CS:AddTag(targetLetterBlock, "Hide")
+
+        LetterFallUtils.applyStyleFromTemplateBD(
+            {
+                targetLetterBlock = targetLetterBlock,
+                templateName = "LBPurpleLight"
+            })
 
         local clickedChar =
             LetterFallUtils.getCharFromLetterBlock(clickedLetter)
@@ -63231,14 +63264,12 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             table.insert(miniGameState.foundLetters,
                          LetterFallUtils.getCharFromLetterBlock(clickedLetter))
         end
-        -- clickedLetter:Destroy()
+        clickedLetter:Destroy()
 
         local currentWord = table.concat(miniGameState.foundLetters, "")
         local wordComplete = table.find(words, currentWord)
 
         miniGameState.currentLetterIndex = miniGameState.currentLetterIndex + 1
-        print('wordComplete' .. ' - start');
-        print(wordComplete);
         if (wordComplete) then
             local currentWord2 = Constants.wordConfigs[currentWord]
             if currentWord2 then
@@ -63267,16 +63298,10 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             activeWord2.Name = "wwww"
             activeWord2.word:Destroy()
 
-            print('miniGameState.activeWord' .. ' - start');
-            print(miniGameState.activeWord);
-
             for _, letter in ipairs(activeWord2.letters) do
                 local myLetter = letter.instance
-                print('myLetter' .. ' - start');
-                print(myLetter);
                 myLetter:Destroy()
             end
-            -- local wordObj = 
             miniGameState.activeWord = nil
 
             miniGameState.foundLetters = {}
@@ -63290,8 +63315,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         end
 
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
-
-        -- clickedLetter.CFrame = targetLetterBlock.CFrame
 
         local numAvailableBlocks = LetterFallUtils.getNumAvailLetterBlocks(
                                        miniGameState)
@@ -64145,7 +64168,7 @@ local devGameConfig = {
     transparency = false,
     -- transparency = true,
     walkSpeed = 30,
-    fastWalkSpeed = 40,
+    fastWalkSpeed = 50,
     -- walkSpeed = 80,
 
     disabledSpawns = {
@@ -64159,7 +64182,7 @@ local devGameConfig = {
 local prodGameConfig = {
     transparency = true,
     walkSpeed = 30,
-    fastWalkSpeed = 40,
+    fastWalkSpeed = 50,
 
     showScenes = true,
     disabledSpawns = {
