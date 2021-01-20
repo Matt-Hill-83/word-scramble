@@ -68,27 +68,7 @@ function addRemoteObjects()
         return iter
     end
 
-    print('-----');
-    print('-----');
-    print('-----');
-    print('-----');
-    print('-----');
-    print('-----');
-    print('-----');
-
-    -- local function sortListByObjectKey(list, keyName)
-
-    --     table.sort(list, function(left, right)
-    --         return left[keyName] < right[keyName]
-    --         -- 
-    --     end)
-
-    -- end
-
     Utils.sortListByObjectKey(islandPositioners, "Name")
-
-    print('islandPositioners' .. ' - start');
-    print(islandPositioners);
 
     for islandIndex, islandPositioner in ipairs(islandPositioners) do
         local newIsland = islandTemplate:Clone()

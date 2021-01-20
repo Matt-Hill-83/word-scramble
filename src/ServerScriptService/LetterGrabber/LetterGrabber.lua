@@ -6,7 +6,7 @@ local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 local Constants = require(Sss.Source.Constants.Constants)
 
-local ChestScript = require(Sss.Source.BlockDash.ChestScript)
+local Replicator = require(Sss.Source.BlockDash.Replicator)
 
 local module = {}
 
@@ -148,7 +148,7 @@ local function initWord(miniGameState, wordIndex, config)
     -- only break if it is one I can take
     -- breaker.Touched:Connect(destroyBreaker(breaker))
 
-    ChestScript.init(newReplicator)
+    Replicator.init(newReplicator)
 end
 
 function module.initLetterGrabbers(miniGameState)

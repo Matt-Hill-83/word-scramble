@@ -4,8 +4,6 @@ local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local module = {}
 
 local function init(chest)
-    print('init');
-
     local chestHitBox = Utils.getFirstDescendantByName(chest, "HitBox")
 
     local reward

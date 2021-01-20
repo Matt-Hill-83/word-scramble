@@ -3,17 +3,12 @@ local CS = game:GetService("CollectionService")
 local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
 
--- local dataStoreService = game:GetService 'DataStoreService';
--- local exampleStore = dataStoreService:GetDataStore 'Example Store';
-
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Constants = require(Sss.Source.Constants.Constants)
 
 local module = {}
--- local sessionData = {};
 
-function configPlayers()
-    -- local Players = game:GetService("Players")
+local function configPlayers()
     Players.RespawnTime = 0
 
     local function onCharacterAdded(character)
@@ -28,8 +23,6 @@ function configPlayers()
     local function onPlayerAdded(player)
         print('onPlayerAdded');
         print(player.UserId);
-        -- sessionData[player.UserId] = exampleStore:GetAsync(player.UserId) or {};
-        -- sessionData[player.UserId].Coins = 1000;
         player.CharacterAdded:Connect(onCharacterAdded)
 
     end
@@ -37,9 +30,7 @@ function configPlayers()
     Players.PlayerAdded:Connect(onPlayerAdded)
 
     Players.PlayerRemoving:Connect(function(player)
-        -- // Player left, remove the player's session.
-        -- exampleStore:SetAsync(sessionData[Player.UserId]);
-        -- sessionData[Player.UserId] = nil;
+        -- 
     end);
 
 end
