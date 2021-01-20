@@ -44,7 +44,7 @@ function initWord(props)
     newWord.Parent = runTimeWordFolder
 
     local spacingFactorY = 1.1
-    local spacingFactorX = 1.2
+    local spacingFactorX = 1.1
     local wordSpacingY = letterBlockTemplate.Size.Y * spacingFactorY
 
     wordBench.CFrame = wordPositioner.CFrame +
