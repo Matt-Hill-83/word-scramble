@@ -19,22 +19,27 @@ function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local sector1Config = {
-        words = {"VAT"},
-        -- words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
-        sectorFolder = "Sector1",
+        -- words = {"VAT"},
+        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
+        -- sectorFolder = "Sector1",
         gridSize = {numRow = 26, numCol = 26}
     }
 
     local sector2Config = {
-        words = {"CAT"},
-        -- words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "ZIP"},
-        sectorFolder = "Sector2",
+        -- words = {"CAT"},
+        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "ZIP"},
+        -- sectorFolder = "Sector2",
         gridSize = {numRow = 26, numCol = 26}
     }
 
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
-    local islandPositioners = Utils.getDescendantsByName(blockDash,
-                                                         "IslandPositioner")
+    local islandPositionerFolder = Utils.getFirstDescendantByName(blockDash,
+                                                                  "IslandPositioners")
+    -- local islandPositioners = Utils.getDescendantsByName(blockDash,
+    --                                                      "IslandPositioner")
+
+    local islandPositioners = islandPositionerFolder:GetChildren()
+
     local islandTemplate = Utils.getFromTemplates("IslandTemplate")
     local sectorConfigs = {
         sector1Config, --
@@ -45,12 +50,47 @@ function addRemoteObjects()
         sector2Config, sector2Config
     }
 
+    local lines = {luaH_set = 10, luaH_get = 24, luaH_present = 48}
+
+    function pairsByKeys(t, f)
+        local a = {}
+        for n in pairs(t) do table.insert(a, n) end
+        table.sort(a, f)
+        local i = 0 -- iterator variable
+        local iter = function() -- iterator function
+            i = i + 1
+            if a[i] == nil then
+                return nil
+            else
+                return a[i], t[a[i]]
+            end
+        end
+        return iter
+    end
+
+    print('-----');
+    print('-----');
+    print('-----');
+    print('-----');
+    print('-----');
+    print('-----');
+    print('-----');
+
+    -- local function sortListByObjectKey(list, keyName)
+
+    --     table.sort(list, function(left, right)
+    --         return left[keyName] < right[keyName]
+    --         -- 
+    --     end)
+
+    -- end
+
+    Utils.sortListByObjectKey(islandPositioners, "Name")
+
+    print('islandPositioners' .. ' - start');
+    print(islandPositioners);
+
     for islandIndex, islandPositioner in ipairs(islandPositioners) do
-        print('islandIndex' .. ' - start');
-        print('islandIndex' .. ' - start');
-        print('islandIndex' .. ' - start');
-        print('islandIndex' .. ' - start');
-        print(islandIndex);
         local newIsland = islandTemplate:Clone()
 
         local anchoredParts = {}
@@ -63,7 +103,9 @@ function addRemoteObjects()
             end
         end
 
-        local offsetX = 100 * islandIndex
+        local offsetX = 120
+        local offsetY = (islandIndex - 1) * 120
+        -- local offsetX = 100 * islandIndex
         newIsland.Parent = myStuff
         newIsland.Name = "xxx"
         local newIslandPart = newIsland.PrimaryPart
@@ -75,7 +117,7 @@ function addRemoteObjects()
                 offsetConfig = {
                     useParentNearEdge = Vector3.new(1, -1, 0),
                     useChildNearEdge = Vector3.new(-1, 1, 0),
-                    offsetAdder = Vector3.new(offsetX, 0, 0)
+                    offsetAdder = Vector3.new(offsetX, offsetY, 0)
                 }
             })
 

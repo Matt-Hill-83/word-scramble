@@ -34,9 +34,6 @@ local function initPowerUps(miniGameState)
 
     local resets = Utils.getDescendantsByName(sectorFolder, "ClearBlocks")
     for _, reset in ipairs(resets) do
-        print('reset');
-        print('reset');
-        print('reset');
         reset.Touched:Connect(onTouchClearBlocks)
     end
 

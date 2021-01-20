@@ -16,6 +16,13 @@ function tablelength(T)
     return count
 end
 
+local function sortListByObjectKey(list, keyName)
+    table.sort(list, function(left, right)
+        return left[keyName] < right[keyName]
+        -- 
+    end)
+end
+
 function applyDecalsToCharacterFromWord(props)
     local part = props.part
     local word = props.word
@@ -539,6 +546,7 @@ module.getPlayerFromHumanoid = getPlayerFromHumanoid
 module.getKeysFromDict = getKeysFromDict
 module.setItemHeight = setItemHeight
 module.tablelength = tablelength
+module.sortListByObjectKey = sortListByObjectKey
 module.applyDecalsToCharacterFromWord = applyDecalsToCharacterFromWord
 module.applyDecalsToCharacterFromConfigName =
     applyDecalsToCharacterFromConfigName
