@@ -64,18 +64,18 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1338.97156</X>
-					<Y>270.648804</Y>
-					<Z>96.2809067</Z>
-					<R00>0.941884279</R00>
-					<R01>-0.21287033</R01>
-					<R02>0.259885311</R02>
-					<R10>1.4901163e-08</R10>
-					<R11>0.773611665</R11>
-					<R12>0.633660078</R12>
-					<R20>-0.335937709</R20>
-					<R21>-0.596834481</R21>
-					<R22>0.728652596</R22>
+					<X>-1290.91675</X>
+					<Y>263.246521</Y>
+					<Z>62.4133301</Z>
+					<R00>0.487422913</R00>
+					<R01>-0.491140991</R01>
+					<R02>0.721941411</R02>
+					<R10>-0</R10>
+					<R11>0.82680887</R11>
+					<R12>0.562482893</R12>
+					<R20>-0.873166084</R20>
+					<R21>-0.274167061</R21>
+					<R22>0.40300557</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
@@ -53222,8 +53222,8 @@ end)]]></ProtectedString>
 							<Properties>
 								<BinaryString name="AttributesSerialize"></BinaryString>
 								<CoordinateFrame name="CFrame0">
-									<X>120.679565</X>
-									<Y>50.7548523</Y>
+									<X>122.679565</X>
+									<Y>50.754837</Y>
 									<Z>-27.8606682</Z>
 									<R00>1</R00>
 									<R01>3.89216437e-13</R01>
@@ -53858,9 +53858,9 @@ end)]]></ProtectedString>
 								<token name="BottomSurface">4</token>
 								<token name="BottomSurfaceInput">0</token>
 								<CoordinateFrame name="CFrame">
-									<X>-1367.72607</X>
-									<Y>187.246948</Y>
-									<Z>41.4962807</Z>
+									<X>-1369.72607</X>
+									<Y>187.246979</Y>
+									<Z>41.4962082</Z>
 									<R00>-1</R00>
 									<R01>1.86210673e-05</R01>
 									<R02>3.70009657e-05</R02>
@@ -54025,7 +54025,7 @@ end)]]></ProtectedString>
 									</Properties>
 								</Item>
 							</Item>
-							<Item class="Weld" referent="RBXb9d717365c214c52a93829b404479b3e">
+							<Item class="Weld" referent="RBXbd4e575118914f4991f78e8a3843fcce">
 								<Properties>
 									<BinaryString name="AttributesSerialize"></BinaryString>
 									<CoordinateFrame name="C0">
@@ -54043,9 +54043,9 @@ end)]]></ProtectedString>
 										<R22>0</R22>
 									</CoordinateFrame>
 									<CoordinateFrame name="C1">
-										<X>-11.7685089</X>
-										<Y>3.99191284</Y>
-										<Z>0.80480957</Z>
+										<X>-11.7685814</X>
+										<Y>3.99194336</Y>
+										<Z>2.80480957</Z>
 										<R00>-3.70008493e-05</R00>
 										<R01>-1</R01>
 										<R02>-6.7223782e-06</R02>
@@ -54064,7 +54064,7 @@ end)]]></ProtectedString>
 									<BinaryString name="Tags"></BinaryString>
 								</Properties>
 							</Item>
-							<Item class="Weld" referent="RBXe39b143cb7a343e6b2d400c7df3fc73a">
+							<Item class="Weld" referent="RBXe56394e6a71740ff812dba555e069f42">
 								<Properties>
 									<BinaryString name="AttributesSerialize"></BinaryString>
 									<CoordinateFrame name="C0">
@@ -54082,9 +54082,9 @@ end)]]></ProtectedString>
 										<R22>0</R22>
 									</CoordinateFrame>
 									<CoordinateFrame name="C1">
-										<X>4.23149109</X>
-										<Y>3.99191284</Y>
-										<Z>0.80480957</Z>
+										<X>4.23141861</X>
+										<Y>3.99194336</Y>
+										<Z>2.80480957</Z>
 										<R00>-3.70008493e-05</R00>
 										<R01>-1</R01>
 										<R02>-6.7223782e-06</R02>
@@ -58695,17 +58695,17 @@ end)]]></ProtectedString>
 								<token name="BottomSurface">0</token>
 								<token name="BottomSurfaceInput">0</token>
 								<CoordinateFrame name="CFrame">
-									<X>-1338.54419</X>
-									<Y>247.74707</Y>
-									<Z>43.1260376</Z>
+									<X>-1338.54395</X>
+									<Y>247.747055</Y>
+									<Z>43.1260834</Z>
 									<R00>1</R00>
-									<R01>-9.48836987e-06</R01>
-									<R02>5.10721293e-06</R02>
-									<R10>1.33847852e-05</R10>
+									<R01>-8.37511925e-06</R01>
+									<R02>3.45396302e-06</R02>
+									<R10>1.44980377e-05</R10>
 									<R11>1</R11>
-									<R12>-4.08101505e-06</R12>
-									<R20>-1.08934591e-05</R20>
-									<R21>3.71518036e-06</R21>
+									<R12>-4.18563468e-06</R12>
+									<R20>-1.25467068e-05</R20>
+									<R21>3.61057027e-06</R21>
 									<R22>1</R22>
 								</CoordinateFrame>
 								<bool name="CanCollide">true</bool>
@@ -58929,17 +58929,17 @@ end)]]></ProtectedString>
 								<token name="BottomSurface">0</token>
 								<token name="BottomSurfaceInput">0</token>
 								<CoordinateFrame name="CFrame">
-									<X>-1338.54431</X>
-									<Y>247.747192</Y>
-									<Z>5.12607002</Z>
+									<X>-1338.54419</X>
+									<Y>247.747208</Y>
+									<Z>5.12609291</Z>
 									<R00>1</R00>
-									<R01>-7.81850031e-06</R01>
-									<R02>2.62735375e-06</R02>
-									<R10>1.50546657e-05</R10>
+									<R01>-8.37511743e-06</R01>
+									<R02>3.45395938e-06</R02>
+									<R10>1.44980377e-05</R10>
 									<R11>1</R11>
-									<R12>-4.23793881e-06</R12>
-									<R20>-1.33733211e-05</R20>
-									<R21>3.55827069e-06</R21>
+									<R12>-4.18563968e-06</R12>
+									<R20>-1.25467141e-05</R20>
+									<R21>3.61056482e-06</R21>
 									<R22>1</R22>
 								</CoordinateFrame>
 								<bool name="CanCollide">true</bool>
@@ -59007,17 +59007,17 @@ end)]]></ProtectedString>
 								<token name="BottomSurface">0</token>
 								<token name="BottomSurfaceInput">0</token>
 								<CoordinateFrame name="CFrame">
-									<X>-1350.04407</X>
-									<Y>247.746964</Y>
-									<Z>24.1261921</Z>
+									<X>-1350.04382</X>
+									<Y>247.746948</Y>
+									<Z>24.1262398</Z>
 									<R00>1</R00>
 									<R01>-8.93174365e-06</R01>
-									<R02>4.28058456e-06</R02>
-									<R10>1.39414133e-05</R10>
+									<R02>4.28058411e-06</R02>
+									<R10>1.39414078e-05</R10>
 									<R11>1</R11>
-									<R12>-4.13332555e-06</R12>
-									<R20>-1.17200789e-05</R20>
-									<R21>3.66287418e-06</R21>
+									<R12>-4.13332327e-06</R12>
+									<R20>-1.17200798e-05</R20>
+									<R21>3.66287645e-06</R21>
 									<R22>1</R22>
 								</CoordinateFrame>
 								<bool name="CanCollide">true</bool>
@@ -59626,36 +59626,34 @@ camera.CameraType = Enum.CameraType.Orbital
 						<Content name="LinkedSource"><null></null></Content>
 						<string name="Name">RSConstants</string>
 						<string name="ScriptGuid">{6bf420ff-23aa-411b-8954-c0392fc1c4bb}</string>
-						<ProtectedString name="Source"><![CDATA[local isTest = true
--- local isTest = false
+						<ProtectedString name="Source"><![CDATA[-- local isTest = true
+local isTest = false
 
 local devGameConfig = {
-    -- transparency = false,
-    transparency = true,
-    -- walkSpeed = 30,
-    walkSpeed = 80,
-
-    singleScene = true,
-    showWWI = false,
-    showScenes = false,
+    transparency = false,
+    -- transparency = true,
+    walkSpeed = 30,
+    fastWalkSpeed = 40,
+    -- walkSpeed = 80,
 
     disabledSpawns = {
-        'SpawnLocation-SkyShip' -- 
-        -- 'SpawnLocation-Block-Race' --
+        -- 'Spawn-S2-Bottom', --
+        -- "SpawnLocation-Block-Race-Top" --
+        "SpawnLocation-Block-Race-Bottom"
     }
+
 }
 
 local prodGameConfig = {
     transparency = true,
     walkSpeed = 30,
+    fastWalkSpeed = 40,
 
-    showMiniGame = false,
-    singleScene = false,
-    showWWI = true,
     showScenes = true,
     disabledSpawns = {
-        -- 'SpawnLocation-SkyShip', -- 
-        'SpawnLocation-Block-Race' --
+        -- 'Spawn-S2-Bottom', --
+        "SpawnLocation-Block-Race-Top" --
+        -- "SpawnLocation-Block-Race-Bottom"
     }
 }
 local gameConfig = isTest and devGameConfig or prodGameConfig
@@ -59681,7 +59679,25 @@ module.dialogColors = {
     Color3.fromRGB(253, 228, 158), Color3.fromRGB(158, 253, 179),
     Color3.fromRGB(158, 215, 253)
 }
+
 module.gemColors = {
+    Color3.fromRGB(255, 0, 0), ---------
+    Color3.fromRGB(255, 174, 0), ---------
+    Color3.fromRGB(255, 255, 0), ---------
+    Color3.fromRGB(63, 255, 0), ---------
+    Color3.fromRGB(21, 0, 255), ---------
+    Color3.fromRGB(157, 0, 255) ---------
+}
+
+-- red
+-- orange
+-- yellow
+-- green
+-- blue
+-- indigo
+-- violet
+
+module.gemColors2 = {
     Color3.fromRGB(255, 0, 0), ---------
     Color3.fromRGB(255, 174, 0), ---------
     Color3.fromRGB(255, 255, 0), ---------
@@ -59760,7 +59776,6 @@ local vulcan = {
 }
 
 module.characters = {
-
     raven05 = raven,
     raven04 = raven,
     raven001 = raven,
@@ -59775,6 +59790,8 @@ module.characters = {
     britta04 = britta,
 
     rat = {displayName = "Rat", decalId = '6152126688', backgroundColorIdx = 1},
+    hat = {displayName = "Hat", decalId = '1437453153', backgroundColorIdx = 1},
+    bat = {displayName = "Bat", decalId = '5898503705', backgroundColorIdx = 1},
     katBody = {
         displayName = "Kat",
         decalId = '6107346290',
@@ -60311,21 +60328,27 @@ module.characters = {
     liz2 = {displayName = "Liz", decalId = '5981806423', backgroundColorIdx = 2}
 }
 
+local function getImageId(characterName)
+    return module.characters[characterName]["decalId"]
+end
+
 module.wordConfigs = {
-    BAT = {soundId = "6145991240", imageId = "xxx"},
-    BOG = {soundId = "6149925692", imageId = "xxx"},
-    BEE = {soundId = "6149925692", imageId = module.characters.bee.decalId},
-    CAT = {
-        soundId = "6145990934",
-        imageId = module.characters.mitzyMeow01.decalId
-    },
-    DOG = {soundId = "6145990934", imageId = module.characters.angus01.decalId},
-    HAT = {soundId = "6145991587", imageId = "xxx"},
-    MAT = {soundId = "6145991865", imageId = "xxx"},
-    PAT = {soundId = "6145992548", imageId = "xxx"},
-    RAT = {soundId = "6145992816", imageId = "xxx"},
-    SAT = {soundId = "6145993194", imageId = "xxx"},
-    MOM = {soundId = "6199537750", imageId = "xxx"},
+    BAT = {soundId = "6145991240", imageId = getImageId('bat')},
+    BOG = {soundId = "6149925692", imageId = getImageId('bog')},
+    BEE = {soundId = "6149925692", imageId = getImageId('bee')},
+    CAT = {soundId = "6145990934", imageId = getImageId('mitzyMeow01')},
+    DOG = {soundId = "6145990934", imageId = getImageId('angus01')},
+    HAT = {soundId = "6145991587", imageId = getImageId('hat')},
+
+    MAT = {soundId = "6145991865", imageId = getImageId('mat')},
+    PAT = {soundId = "6145992548", imageId = "6253959302"},
+
+    RAT = {soundId = "6145992816", imageId = getImageId('rat')},
+    SAT = {soundId = "6145993194", imageId = "6253976498"},
+
+    MOM = {soundId = "6253993250", imageId = "6253993250"},
+    DAD = {soundId = "6253993637", imageId = "6253993637"},
+    VAT = {soundId = "6145992548", imageId = "6253982590"},
     YES = {soundId = "6199538408", imageId = "xxx"}
 }
 
@@ -62614,7 +62637,7 @@ function setVisibility()
     for i, wall in ipairs(tagBaseWallTransparent) do
         Utils.setItemHeight({item = wall, height = 40})
         local newWallHeight = 1
-        -- wall.Transparency = 1
+        wall.Transparency = 1
         wall.CanCollide = true
         wall.Anchored = true
 
@@ -64122,7 +64145,7 @@ local devGameConfig = {
     transparency = false,
     -- transparency = true,
     walkSpeed = 30,
-    fastWalkSpeed = 60,
+    fastWalkSpeed = 40,
     -- walkSpeed = 80,
 
     disabledSpawns = {
@@ -64135,8 +64158,8 @@ local devGameConfig = {
 
 local prodGameConfig = {
     transparency = true,
-    walkSpeed = 20,
-    fastWalkSpeed = 60,
+    walkSpeed = 30,
+    fastWalkSpeed = 40,
 
     showScenes = true,
     disabledSpawns = {
