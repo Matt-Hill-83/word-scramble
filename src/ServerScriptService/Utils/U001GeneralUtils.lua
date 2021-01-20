@@ -234,7 +234,6 @@ function sizeWalls(props)
     end
     for i, item in ipairs(children) do
         if item:isA("Part") then
-
             item.CanCollide = true
             item.Anchored = true
         end

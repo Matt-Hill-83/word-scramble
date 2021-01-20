@@ -445,7 +445,7 @@ local function styleLetterBlocksBD(props)
             if availLetters[char] then
                 numAvailableBlocks = numAvailableBlocks + 1
 
-                letterBlock.CanCollide = false
+                -- letterBlock.CanCollide = false
                 module.applyStyleFromTemplate(
                     {
                         targetLetterBlock = letterBlock,
