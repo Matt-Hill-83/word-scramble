@@ -47,16 +47,6 @@ local function configWordLetters(props)
         CS:AddTag(newLetter, LetterFallUtils.tagNames.WordLetter)
         LetterFallUtils.applyLetterText({letterBlock = newLetter, char = letter})
 
-        -- local translateCFrameProps = {
-        --     parent = letterPositioner,
-        --     child = newLetter,
-        --     offsetConfig = {
-        --         useParentNearEdge = Vector3.new(-1, -1, -1),
-        --         useChildNearEdge = Vector3.new(-1, -1, -1),
-        --         offsetAdder = Vector3.new(0, 0, letterPositionX)
-        --     }
-        -- }
-
         newLetter.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                {
                 parent = letterPositioner,

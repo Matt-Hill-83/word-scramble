@@ -67,7 +67,7 @@ local function addBlockDash(sectorConfig)
         foundWords = {},
         initCompleted = false,
         renderedWords = {},
-        wordLetters = {},
+        -- wordLetters = {},
         activeLetterPosition = {
             row = math.floor(numRow / 2),
             col = math.floor(numCol / 2)

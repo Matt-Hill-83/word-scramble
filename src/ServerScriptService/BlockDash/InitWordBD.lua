@@ -19,15 +19,12 @@ local function getRunTimeWordFolder(miniGameState)
     }))
 end
 
-function initWord(props)
+local function initWord(props)
     local miniGameState = props.miniGameState
     local wordIndex = props.wordIndex
     local word = props.word
-    local wordLetters = props.wordLetters
 
     local sectorFolder = miniGameState.sectorFolder
-
-    BlockDashUtils.clearWordRack(miniGameState)
 
     local runTimeWordFolder = getRunTimeWordFolder(miniGameState)
     miniGameState.runTimeWordFolder = runTimeWordFolder
@@ -95,12 +92,9 @@ function initWord(props)
         -- Do this last to avoid tweening
         newLetter.Parent = newWord
 
-        table.insert(wordLetters,
-                     {char = char, found = false, instance = newLetter})
         table.insert(lettersInWord,
                      {char = char, found = false, instance = newLetter})
     end
-    -- local wordBenchSizeX = #word * letterBlockTemplate.Size.X * spacingFactorX
 
     local wordBenchPosX = wordBench.Position.X
 
@@ -114,25 +108,15 @@ function initWord(props)
         wordChars = word
     }
 
-    -- letterPositioner:Destroy()
     return newWordObj
 end
 
-function initWords(miniGameState)
-    local wordLetters = miniGameState.wordLetters
-
-    for i, char in ipairs(wordLetters) do
-        if char.instance then char.instance:Destroy() end
-        wordLetters[i] = nil
-    end
-
-    Utils.clearTable(wordLetters)
+local function renderColumn(miniGameState)
 
     for wordIndex, word in ipairs(miniGameState.words) do
         local wordProps = {
             miniGameState = miniGameState,
             wordIndex = wordIndex,
-            wordLetters = wordLetters,
             word = word
         }
 
@@ -140,6 +124,11 @@ function initWords(miniGameState)
         table.insert(miniGameState.renderedWords, newWordObj)
     end
 
+end
+
+local function initWords(miniGameState)
+    BlockDashUtils.clearWordRack(miniGameState)
+    renderColumn(miniGameState)
 end
 
 module.initWords = initWords
