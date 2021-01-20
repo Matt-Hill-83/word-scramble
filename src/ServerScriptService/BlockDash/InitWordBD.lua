@@ -112,7 +112,6 @@ local function initWord(props)
 end
 
 local function renderColumn(miniGameState)
-
     for wordIndex, word in ipairs(miniGameState.words) do
         local wordProps = {
             miniGameState = miniGameState,
@@ -123,7 +122,6 @@ local function renderColumn(miniGameState)
         local newWordObj = initWord(wordProps)
         table.insert(miniGameState.renderedWords, newWordObj)
     end
-
 end
 
 local function initWords(miniGameState)
