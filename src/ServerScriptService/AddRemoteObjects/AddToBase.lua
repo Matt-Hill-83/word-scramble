@@ -18,15 +18,15 @@ function addRemoteObjects()
 
     local sector1Config = {
         -- words = {"VAT", "CAT"},
-        words = {"CAT"},
-        -- words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
+        -- words = {"CAT"},
+        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
         -- gridSize = {numRow = 6, numCol = 6}
         gridSize = {numRow = 26, numCol = 26}
     }
 
     local sector2Config = {
-        words = {"CAT"},
-        -- words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "ZIP"},
+        -- words = {"CAT"},
+        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "ZIP"},
         gridSize = {numRow = 26, numCol = 26}
     }
 
