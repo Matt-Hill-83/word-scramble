@@ -5,6 +5,7 @@ local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
+local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
 
 local module = {}
 local function getRunTimeWordFolder(miniGameState)
@@ -25,6 +26,8 @@ function initWord(props)
     local wordLetters = props.wordLetters
 
     local sectorFolder = miniGameState.sectorFolder
+
+    BlockDashUtils.clearWordRack(miniGameState)
 
     local runTimeWordFolder = getRunTimeWordFolder(miniGameState)
     miniGameState.runTimeWordFolder = runTimeWordFolder
@@ -111,7 +114,7 @@ function initWord(props)
         wordChars = word
     }
 
-    letterPositioner:Destroy()
+    -- letterPositioner:Destroy()
     return newWordObj
 end
 

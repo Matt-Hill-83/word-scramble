@@ -22,7 +22,7 @@ local function initPowerUps(miniGameState)
             if miniGameState.canResetBlocks then
                 miniGameState.canResetBlocks = false
                 BlockDashUtils.clearBlockRack(miniGameState)
-                LetterFallUtils.unHideWordLetters(miniGameState)
+                -- LetterFallUtils.unHideWordLetters(miniGameState)
             end
         end
     end
@@ -87,13 +87,10 @@ local function addBlockDash(sectorConfig)
         Utils.getFirstDescendantByName(myStuff, "BlockDash")
     miniGameState.letterFallFolder = letterFallFolder
 
-    -- miniGameState.sectorFolder = Utils.getFirstDescendantByName(
-    --                                  letterFallFolder, sectorFolder)
-    -- miniGameState.sectorFolder = sectorFolder
-
     local function onWordLettersGone(miniGameState2)
         BlockDashUtils.clearBlockRack(miniGameState2)
-        LetterFallUtils.unHideWordLetters(miniGameState2)
+        -- LetterFallUtils.unHideWordLetters(miniGameState2)
+        InitWord.initWords(miniGameState)
         InitLetterRack.initLetterRack(miniGameState2)
     end
 

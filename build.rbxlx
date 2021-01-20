@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1127.03711</X>
-					<Y>272.961121</Y>
-					<Z>-2.01391363</Z>
-					<R00>-0.870461702</R00>
-					<R01>-0.344531417</R01>
-					<R02>0.351560116</R02>
+					<X>-1202.90186</X>
+					<Y>199.996704</Y>
+					<Z>-110.426468</Z>
+					<R00>0.60754317</R00>
+					<R01>-0.205619037</R01>
+					<R02>0.767210662</R02>
 					<R10>-0</R10>
-					<R11>0.714210272</R11>
-					<R12>0.699931145</R12>
-					<R20>-0.492236137</R20>
-					<R21>0.609263241</R21>
-					<R22>-0.621692717</R22>
+					<R11>0.965911567</R11>
+					<R12>0.258872569</R12>
+					<R20>-0.794286668</R20>
+					<R21>-0.157276258</R21>
+					<R22>0.586833</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1127.74023</X>
-					<Y>271.561249</Y>
-					<Z>-0.770519733</Z>
+					<X>-1204.43628</X>
+					<Y>199.478958</Y>
+					<Z>-111.600136</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -34539,7 +34539,7 @@ end)]]></ProtectedString>
 								<Z>0</Z>
 							</Vector3>
 							<int64 name="SourceAssetId">-1</int64>
-							<BinaryString name="Tags">RGVzdHJveQ==</BinaryString>
+							<BinaryString name="Tags"></BinaryString>
 							<float name="TopParamA">-0.5</float>
 							<float name="TopParamB">0.5</float>
 							<token name="TopSurface">0</token>
@@ -38166,18 +38166,18 @@ end)]]></ProtectedString>
 									<token name="BottomSurface">4</token>
 									<token name="BottomSurfaceInput">0</token>
 									<CoordinateFrame name="CFrame">
-										<X>-1262.54895</X>
-										<Y>195.293961</Y>
+										<X>-1267.5481</X>
+										<Y>195.294022</Y>
 										<Z>-110.277962</Z>
 										<R00>1</R00>
-										<R01>2.107201e-05</R01>
-										<R02>-8.75961814e-06</R02>
-										<R10>-2.10719518e-05</R10>
+										<R01>2.10719954e-05</R01>
+										<R02>-8.75960541e-06</R02>
+										<R10>-2.10719445e-05</R10>
 										<R11>1</R11>
-										<R12>6.94056598e-06</R12>
-										<R20>8.75976366e-06</R20>
-										<R21>-6.94037954e-06</R21>
-										<R22>0.99999994</R22>
+										<R12>6.9405296e-06</R12>
+										<R20>8.7597582e-06</R20>
+										<R21>-6.94032724e-06</R21>
+										<R22>1</R22>
 									</CoordinateFrame>
 									<bool name="CanCollide">false</bool>
 									<bool name="CanTouch">true</bool>
@@ -38243,18 +38243,18 @@ end)]]></ProtectedString>
 										<token name="BottomSurface">10</token>
 										<token name="BottomSurfaceInput">0</token>
 										<CoordinateFrame name="CFrame">
-											<X>-1262.54883</X>
-											<Y>204.543976</Y>
-											<Z>-106.011017</Z>
+											<X>-1267.54797</X>
+											<Y>204.544037</Y>
+											<Z>-106.011009</Z>
 											<R00>-1</R00>
-											<R01>2.107199e-05</R01>
-											<R02>8.7596145e-06</R02>
-											<R10>2.10719518e-05</R10>
+											<R01>2.10719754e-05</R01>
+											<R02>8.75960177e-06</R02>
+											<R10>2.10719445e-05</R10>
 											<R11>0.999999046</R11>
-											<R12>-6.94056325e-06</R12>
-											<R20>-8.75976366e-06</R20>
-											<R21>-6.94037271e-06</R21>
-											<R22>-0.999999523</R22>
+											<R12>-6.94052687e-06</R12>
+											<R20>-8.7597582e-06</R20>
+											<R21>-6.94032042e-06</R21>
+											<R22>-0.999999583</R22>
 										</CoordinateFrame>
 										<bool name="CanCollide">false</bool>
 										<bool name="CanTouch">true</bool>
@@ -38627,36 +38627,36 @@ end)]]></ProtectedString>
 										<BinaryString name="Tags"></BinaryString>
 									</Properties>
 								</Item>
-								<Item class="Weld" referent="RBX222c0cfa6ede4640847cfba527a8375b">
+								<Item class="Weld" referent="RBXa55b3cf595534a09bc45294671a1616b">
 									<Properties>
 										<BinaryString name="AttributesSerialize"></BinaryString>
 										<CoordinateFrame name="C0">
 											<X>0</X>
-											<Y>-12.0000153</Y>
+											<Y>-11.9999847</Y>
 											<Z>0</Z>
 											<R00>1</R00>
 											<R01>0</R01>
-											<R02>7.69433128e-13</R02>
-											<R10>-2.58842253e-12</R10>
+											<R02>7.68940467e-13</R02>
+											<R10>-9.86388748e-12</R10>
 											<R11>0</R11>
 											<R12>-1</R12>
-											<R20>-1.8189894e-12</R20>
-											<R21>0.99999994</R21>
-											<R22>-2.27373675e-12</R22>
+											<R20>6.36646291e-12</R20>
+											<R21>1</R21>
+											<R22>-1.77351467e-11</R22>
 										</CoordinateFrame>
 										<CoordinateFrame name="C1">
-											<X>-8.37780762</X>
-											<Y>4.03890991</Y>
+											<X>-13.3769531</X>
+											<Y>4.03900146</Y>
 											<Z>-4.29262543</Z>
 											<R00>1</R00>
-											<R01>-8.75961723e-06</R01>
-											<R02>-2.10720118e-05</R02>
-											<R10>-2.10719518e-05</R10>
-											<R11>6.94056416e-06</R11>
+											<R01>-8.75961177e-06</R01>
+											<R02>-2.10720045e-05</R02>
+											<R10>-2.10719445e-05</R10>
+											<R11>6.94051187e-06</R11>
 											<R12>-1</R12>
-											<R20>8.75976366e-06</R20>
+											<R20>8.7597582e-06</R20>
 											<R21>1</R21>
-											<R22>6.94037954e-06</R22>
+											<R22>6.94032724e-06</R22>
 										</CoordinateFrame>
 										<bool name="Enabled">true</bool>
 										<string name="Name">Weld</string>
@@ -38666,41 +38666,80 @@ end)]]></ProtectedString>
 										<BinaryString name="Tags"></BinaryString>
 									</Properties>
 								</Item>
-								<Item class="Weld" referent="RBXb48f244e075446fe98b9f9898db74014">
+								<Item class="Weld" referent="RBXfc68bf7883e940a3a9a4239f350819f2">
 									<Properties>
 										<BinaryString name="AttributesSerialize"></BinaryString>
 										<CoordinateFrame name="C0">
 											<X>0</X>
-											<Y>-12.0000153</Y>
+											<Y>-11.9999847</Y>
 											<Z>0</Z>
 											<R00>1</R00>
 											<R01>0</R01>
-											<R02>7.69433128e-13</R02>
-											<R10>-2.58842253e-12</R10>
+											<R02>7.68940467e-13</R02>
+											<R10>-9.86388748e-12</R10>
 											<R11>0</R11>
 											<R12>-1</R12>
-											<R20>-1.8189894e-12</R20>
-											<R21>0.99999994</R21>
-											<R22>-2.27373675e-12</R22>
+											<R20>6.36646291e-12</R20>
+											<R21>1</R21>
+											<R22>-1.77351467e-11</R22>
 										</CoordinateFrame>
 										<CoordinateFrame name="C1">
-											<X>7.62219238</X>
-											<Y>4.03890991</Y>
+											<X>2.62304688</X>
+											<Y>4.03900146</Y>
 											<Z>-4.29262543</Z>
 											<R00>1</R00>
-											<R01>-8.75961723e-06</R01>
-											<R02>-2.10720118e-05</R02>
-											<R10>-2.10719518e-05</R10>
-											<R11>6.94056416e-06</R11>
+											<R01>-8.75961177e-06</R01>
+											<R02>-2.10720045e-05</R02>
+											<R10>-2.10719445e-05</R10>
+											<R11>6.94051187e-06</R11>
 											<R12>-1</R12>
-											<R20>8.75976366e-06</R20>
+											<R20>8.7597582e-06</R20>
 											<R21>1</R21>
-											<R22>6.94037954e-06</R22>
+											<R22>6.94032724e-06</R22>
 										</CoordinateFrame>
 										<bool name="Enabled">true</bool>
 										<string name="Name">Weld</string>
 										<Ref name="Part0">RBX3c350efee0a74a0f98c96e004d78efab</Ref>
 										<Ref name="Part1">RBXe03f9748edb34624b653d6a14c5fc384</Ref>
+										<int64 name="SourceAssetId">-1</int64>
+										<BinaryString name="Tags"></BinaryString>
+									</Properties>
+								</Item>
+								<Item class="Weld" referent="RBXc0b0c166c35a41e6bd038a9aceeb84c4">
+									<Properties>
+										<BinaryString name="AttributesSerialize"></BinaryString>
+										<CoordinateFrame name="C0">
+											<X>0</X>
+											<Y>-11.9999847</Y>
+											<Z>0</Z>
+											<R00>1</R00>
+											<R01>0</R01>
+											<R02>7.68940467e-13</R02>
+											<R10>-9.86388748e-12</R10>
+											<R11>0</R11>
+											<R12>-1</R12>
+											<R20>6.36646291e-12</R20>
+											<R21>1</R21>
+											<R22>-1.77351467e-11</R22>
+										</CoordinateFrame>
+										<CoordinateFrame name="C1">
+											<X>18.6230469</X>
+											<Y>4.03900146</Y>
+											<Z>-4.29262543</Z>
+											<R00>1</R00>
+											<R01>-8.75961177e-06</R01>
+											<R02>-2.10720045e-05</R02>
+											<R10>-2.10719445e-05</R10>
+											<R11>6.94051187e-06</R11>
+											<R12>-1</R12>
+											<R20>8.7597582e-06</R20>
+											<R21>1</R21>
+											<R22>6.94032724e-06</R22>
+										</CoordinateFrame>
+										<bool name="Enabled">true</bool>
+										<string name="Name">Weld</string>
+										<Ref name="Part0">RBX3c350efee0a74a0f98c96e004d78efab</Ref>
+										<Ref name="Part1">RBX8506890a3b5a40b6adfcaf3e332b0049</Ref>
 										<int64 name="SourceAssetId">-1</int64>
 										<BinaryString name="Tags"></BinaryString>
 									</Properties>
@@ -39254,6 +39293,481 @@ end)]]></ProtectedString>
 										<string name="Name">Weld</string>
 										<Ref name="Part0">RBX34ac769effe6487784f81b304539d31a</Ref>
 										<Ref name="Part1">RBX1848456980ed4e2a84e9e60eb0faed3e</Ref>
+										<int64 name="SourceAssetId">-1</int64>
+										<BinaryString name="Tags"></BinaryString>
+									</Properties>
+								</Item>
+							</Item>
+							<Item class="Part" referent="RBX7070d5e36dfb432d8d81fe84028abd1a">
+								<Properties>
+									<bool name="Anchored">false</bool>
+									<BinaryString name="AttributesSerialize"></BinaryString>
+									<float name="BackParamA">-0.5</float>
+									<float name="BackParamB">0.5</float>
+									<token name="BackSurface">0</token>
+									<token name="BackSurfaceInput">0</token>
+									<float name="BottomParamA">-0.5</float>
+									<float name="BottomParamB">0.5</float>
+									<token name="BottomSurface">4</token>
+									<token name="BottomSurfaceInput">0</token>
+									<CoordinateFrame name="CFrame">
+										<X>-1192.35425</X>
+										<Y>260.293152</Y>
+										<Z>-10.0193253</Z>
+										<R00>-8.75961268e-06</R00>
+										<R01>2.10719954e-05</R01>
+										<R02>-1</R02>
+										<R10>6.94057962e-06</R10>
+										<R11>1</R11>
+										<R12>2.10719336e-05</R12>
+										<R20>1</R20>
+										<R21>-6.94038908e-06</R21>
+										<R22>-8.75976366e-06</R22>
+									</CoordinateFrame>
+									<bool name="CanCollide">false</bool>
+									<bool name="CanTouch">true</bool>
+									<bool name="CastShadow">true</bool>
+									<int name="CollisionGroupId">0</int>
+									<Color3uint8 name="Color3uint8">4284193356</Color3uint8>
+									<PhysicalProperties name="CustomPhysicalProperties">
+										<CustomPhysics>false</CustomPhysics>
+									</PhysicalProperties>
+									<float name="FrontParamA">-0.5</float>
+									<float name="FrontParamB">0.5</float>
+									<token name="FrontSurface">0</token>
+									<token name="FrontSurfaceInput">0</token>
+									<float name="LeftParamA">-0.5</float>
+									<float name="LeftParamB">0.5</float>
+									<token name="LeftSurface">0</token>
+									<token name="LeftSurfaceInput">0</token>
+									<bool name="Locked">false</bool>
+									<bool name="Massless">false</bool>
+									<token name="Material">256</token>
+									<string name="Name">RunFast</string>
+									<float name="Reflectance">0</float>
+									<float name="RightParamA">-0.5</float>
+									<float name="RightParamB">0.5</float>
+									<token name="RightSurface">0</token>
+									<token name="RightSurfaceInput">0</token>
+									<int name="RootPriority">0</int>
+									<Vector3 name="RotVelocity">
+										<X>0</X>
+										<Y>0</Y>
+										<Z>0</Z>
+									</Vector3>
+									<int64 name="SourceAssetId">-1</int64>
+									<BinaryString name="Tags"></BinaryString>
+									<float name="TopParamA">-0.5</float>
+									<float name="TopParamB">0.5</float>
+									<token name="TopSurface">3</token>
+									<token name="TopSurfaceInput">0</token>
+									<float name="Transparency">0.400000006</float>
+									<Vector3 name="Velocity">
+										<X>0</X>
+										<Y>0</Y>
+										<Z>0</Z>
+									</Vector3>
+									<token name="formFactorRaw">0</token>
+									<token name="shape">1</token>
+									<Vector3 name="size">
+										<X>18</X>
+										<Y>18</Y>
+										<Z>6</Z>
+									</Vector3>
+								</Properties>
+								<Item class="Part" referent="RBX107233fe5ee941978c2712a8fb088011">
+									<Properties>
+										<bool name="Anchored">false</bool>
+										<BinaryString name="AttributesSerialize"></BinaryString>
+										<float name="BackParamA">-0.5</float>
+										<float name="BackParamB">0.5</float>
+										<token name="BackSurface">10</token>
+										<token name="BackSurfaceInput">0</token>
+										<float name="BottomParamA">-0.5</float>
+										<float name="BottomParamB">0.5</float>
+										<token name="BottomSurface">10</token>
+										<token name="BottomSurfaceInput">0</token>
+										<CoordinateFrame name="CFrame">
+											<X>-1195.55432</X>
+											<Y>267.230713</Y>
+											<Z>-10.0194016</Z>
+											<R00>8.75961268e-06</R00>
+											<R01>2.10719754e-05</R01>
+											<R02>0.999999583</R02>
+											<R10>-6.94057917e-06</R10>
+											<R11>0.999999046</R11>
+											<R12>-2.10719245e-05</R12>
+											<R20>-1</R20>
+											<R21>-6.94038272e-06</R21>
+											<R22>8.75976002e-06</R22>
+										</CoordinateFrame>
+										<bool name="CanCollide">false</bool>
+										<bool name="CanTouch">true</bool>
+										<bool name="CastShadow">true</bool>
+										<int name="CollisionGroupId">0</int>
+										<Color3uint8 name="Color3uint8">4294940892</Color3uint8>
+										<PhysicalProperties name="CustomPhysicalProperties">
+											<CustomPhysics>false</CustomPhysics>
+										</PhysicalProperties>
+										<float name="FrontParamA">-0.5</float>
+										<float name="FrontParamB">0.5</float>
+										<token name="FrontSurface">10</token>
+										<token name="FrontSurfaceInput">0</token>
+										<float name="LeftParamA">-0.5</float>
+										<float name="LeftParamB">0.5</float>
+										<token name="LeftSurface">10</token>
+										<token name="LeftSurfaceInput">0</token>
+										<bool name="Locked">false</bool>
+										<bool name="Massless">false</bool>
+										<token name="Material">880</token>
+										<string name="Name">Clear Blocks</string>
+										<float name="Reflectance">0</float>
+										<float name="RightParamA">-0.5</float>
+										<float name="RightParamB">0.5</float>
+										<token name="RightSurface">10</token>
+										<token name="RightSurfaceInput">0</token>
+										<int name="RootPriority">0</int>
+										<Vector3 name="RotVelocity">
+											<X>0</X>
+											<Y>0</Y>
+											<Z>0</Z>
+										</Vector3>
+										<int64 name="SourceAssetId">-1</int64>
+										<BinaryString name="Tags"></BinaryString>
+										<float name="TopParamA">-0.5</float>
+										<float name="TopParamB">0.5</float>
+										<token name="TopSurface">10</token>
+										<token name="TopSurfaceInput">0</token>
+										<float name="Transparency">0</float>
+										<Vector3 name="Velocity">
+											<X>0</X>
+											<Y>0</Y>
+											<Z>0</Z>
+										</Vector3>
+										<token name="formFactorRaw">3</token>
+										<token name="shape">1</token>
+										<Vector3 name="size">
+											<X>12.4762611</X>
+											<Y>2.625</Y>
+											<Z>0.374942333</Z>
+										</Vector3>
+									</Properties>
+									<Item class="WeldConstraint" referent="RBXcb18b70fd95445fd8400f06612e79716">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="CFrame0">
+												<X>-27.1195679</X>
+												<Y>-18.982193</Y>
+												<Z>-18.2012939</Z>
+												<R00>-2.21003993e-05</R00>
+												<R01>-1</R01>
+												<R02>-0.000375912583</R02>
+												<R10>-0.173642114</R10>
+												<R11>-0.000366364489</R11>
+												<R12>0.984808743</R12>
+												<R20>-0.984808803</R20>
+												<R21>8.70389267e-05</R21>
+												<R22>-0.173642084</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">WeldConstraint</string>
+											<Ref name="Part0Internal">RBX107233fe5ee941978c2712a8fb088011</Ref>
+											<Ref name="Part1Internal">null</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<int name="State">1</int>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="SurfaceGui" referent="RBX9976d4d788d24add95cbac5e86a76108">
+										<Properties>
+											<bool name="Active">true</bool>
+											<Ref name="Adornee">null</Ref>
+											<bool name="AlwaysOnTop">false</bool>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<bool name="AutoLocalize">true</bool>
+											<Vector2 name="CanvasSize">
+												<X>800</X>
+												<Y>600</Y>
+											</Vector2>
+											<bool name="ClipsDescendants">true</bool>
+											<bool name="Enabled">true</bool>
+											<token name="Face">5</token>
+											<float name="LightInfluence">1</float>
+											<string name="Name">SurfaceGui</string>
+											<float name="PixelsPerStud">50</float>
+											<bool name="ResetOnSpawn">true</bool>
+											<Ref name="RootLocalizationTable">null</Ref>
+											<token name="SizingMode">1</token>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+											<float name="ToolPunchThroughDistance">0</float>
+											<token name="ZIndexBehavior">1</token>
+											<float name="ZOffset">0</float>
+										</Properties>
+										<Item class="TextLabel" referent="RBX8eff250e11c8446081b2346f10d7a6fc">
+											<Properties>
+												<bool name="Active">false</bool>
+												<Vector2 name="AnchorPoint">
+													<X>0</X>
+													<Y>0</Y>
+												</Vector2>
+												<BinaryString name="AttributesSerialize"></BinaryString>
+												<bool name="AutoLocalize">true</bool>
+												<token name="AutomaticSize">0</token>
+												<Color3 name="BackgroundColor3">
+													<R>1</R>
+													<G>1</G>
+													<B>1</B>
+												</Color3>
+												<float name="BackgroundTransparency">0</float>
+												<Color3 name="BorderColor3">
+													<R>0.105882362</R>
+													<G>0.164705887</G>
+													<B>0.207843155</B>
+												</Color3>
+												<token name="BorderMode">0</token>
+												<int name="BorderSizePixel">1</int>
+												<bool name="ClipsDescendants">false</bool>
+												<bool name="Draggable">false</bool>
+												<token name="Font">3</token>
+												<int name="LayoutOrder">0</int>
+												<float name="LineHeight">1</float>
+												<string name="Name">TextLabel</string>
+												<Ref name="NextSelectionDown">null</Ref>
+												<Ref name="NextSelectionLeft">null</Ref>
+												<Ref name="NextSelectionRight">null</Ref>
+												<Ref name="NextSelectionUp">null</Ref>
+												<UDim2 name="Position">
+													<XS>0</XS>
+													<XO>0</XO>
+													<YS>0</YS>
+													<YO>0</YO>
+												</UDim2>
+												<bool name="RichText">false</bool>
+												<Ref name="RootLocalizationTable">null</Ref>
+												<float name="Rotation">0</float>
+												<bool name="Selectable">false</bool>
+												<Ref name="SelectionImageObject">null</Ref>
+												<UDim2 name="Size">
+													<XS>1</XS>
+													<XO>0</XO>
+													<YS>1</YS>
+													<YO>0</YO>
+												</UDim2>
+												<token name="SizeConstraint">0</token>
+												<int64 name="SourceAssetId">-1</int64>
+												<BinaryString name="Tags"></BinaryString>
+												<string name="Text">Run Faster</string>
+												<Color3 name="TextColor3">
+													<R>0</R>
+													<G>0</G>
+													<B>0</B>
+												</Color3>
+												<bool name="TextScaled">true</bool>
+												<float name="TextSize">14</float>
+												<Color3 name="TextStrokeColor3">
+													<R>0</R>
+													<G>0</G>
+													<B>0</B>
+												</Color3>
+												<float name="TextStrokeTransparency">1</float>
+												<float name="TextTransparency">0</float>
+												<token name="TextTruncate">0</token>
+												<bool name="TextWrapped">true</bool>
+												<token name="TextXAlignment">2</token>
+												<token name="TextYAlignment">1</token>
+												<bool name="Visible">true</bool>
+												<int name="ZIndex">1</int>
+											</Properties>
+											<Item class="UIPadding" referent="RBXa1b6e460006f4a64b4e0f82ef9e55a19">
+												<Properties>
+													<BinaryString name="AttributesSerialize"></BinaryString>
+													<string name="Name">UIPadding</string>
+													<UDim name="PaddingBottom">
+														<S>0</S>
+														<O>0</O>
+													</UDim>
+													<UDim name="PaddingLeft">
+														<S>0.0399999991</S>
+														<O>0</O>
+													</UDim>
+													<UDim name="PaddingRight">
+														<S>0.0399999991</S>
+														<O>0</O>
+													</UDim>
+													<UDim name="PaddingTop">
+														<S>0</S>
+														<O>0</O>
+													</UDim>
+													<int64 name="SourceAssetId">-1</int64>
+													<BinaryString name="Tags"></BinaryString>
+												</Properties>
+											</Item>
+										</Item>
+									</Item>
+									<Item class="SurfaceGui" referent="RBX439c20fc3e744774b4b7d99765e59571">
+										<Properties>
+											<bool name="Active">true</bool>
+											<Ref name="Adornee">null</Ref>
+											<bool name="AlwaysOnTop">false</bool>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<bool name="AutoLocalize">true</bool>
+											<Vector2 name="CanvasSize">
+												<X>800</X>
+												<Y>600</Y>
+											</Vector2>
+											<bool name="ClipsDescendants">true</bool>
+											<bool name="Enabled">true</bool>
+											<token name="Face">2</token>
+											<float name="LightInfluence">1</float>
+											<string name="Name">SurfaceGui</string>
+											<float name="PixelsPerStud">50</float>
+											<bool name="ResetOnSpawn">true</bool>
+											<Ref name="RootLocalizationTable">null</Ref>
+											<token name="SizingMode">1</token>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+											<float name="ToolPunchThroughDistance">0</float>
+											<token name="ZIndexBehavior">1</token>
+											<float name="ZOffset">0</float>
+										</Properties>
+										<Item class="TextLabel" referent="RBXc48c64bb34d841ea89cfa179d1e7ccf5">
+											<Properties>
+												<bool name="Active">false</bool>
+												<Vector2 name="AnchorPoint">
+													<X>0</X>
+													<Y>0</Y>
+												</Vector2>
+												<BinaryString name="AttributesSerialize"></BinaryString>
+												<bool name="AutoLocalize">true</bool>
+												<token name="AutomaticSize">0</token>
+												<Color3 name="BackgroundColor3">
+													<R>1</R>
+													<G>1</G>
+													<B>1</B>
+												</Color3>
+												<float name="BackgroundTransparency">0</float>
+												<Color3 name="BorderColor3">
+													<R>0.105882362</R>
+													<G>0.164705887</G>
+													<B>0.207843155</B>
+												</Color3>
+												<token name="BorderMode">0</token>
+												<int name="BorderSizePixel">1</int>
+												<bool name="ClipsDescendants">false</bool>
+												<bool name="Draggable">false</bool>
+												<token name="Font">3</token>
+												<int name="LayoutOrder">0</int>
+												<float name="LineHeight">1</float>
+												<string name="Name">TextLabel</string>
+												<Ref name="NextSelectionDown">null</Ref>
+												<Ref name="NextSelectionLeft">null</Ref>
+												<Ref name="NextSelectionRight">null</Ref>
+												<Ref name="NextSelectionUp">null</Ref>
+												<UDim2 name="Position">
+													<XS>0</XS>
+													<XO>0</XO>
+													<YS>0</YS>
+													<YO>0</YO>
+												</UDim2>
+												<bool name="RichText">false</bool>
+												<Ref name="RootLocalizationTable">null</Ref>
+												<float name="Rotation">0</float>
+												<bool name="Selectable">false</bool>
+												<Ref name="SelectionImageObject">null</Ref>
+												<UDim2 name="Size">
+													<XS>1</XS>
+													<XO>0</XO>
+													<YS>1</YS>
+													<YO>0</YO>
+												</UDim2>
+												<token name="SizeConstraint">0</token>
+												<int64 name="SourceAssetId">-1</int64>
+												<BinaryString name="Tags"></BinaryString>
+												<string name="Text">Run Faster</string>
+												<Color3 name="TextColor3">
+													<R>0</R>
+													<G>0</G>
+													<B>0</B>
+												</Color3>
+												<bool name="TextScaled">true</bool>
+												<float name="TextSize">14</float>
+												<Color3 name="TextStrokeColor3">
+													<R>0</R>
+													<G>0</G>
+													<B>0</B>
+												</Color3>
+												<float name="TextStrokeTransparency">1</float>
+												<float name="TextTransparency">0</float>
+												<token name="TextTruncate">0</token>
+												<bool name="TextWrapped">true</bool>
+												<token name="TextXAlignment">2</token>
+												<token name="TextYAlignment">1</token>
+												<bool name="Visible">true</bool>
+												<int name="ZIndex">1</int>
+											</Properties>
+											<Item class="UIPadding" referent="RBX43912444670243f09d6c6b40ddaa7861">
+												<Properties>
+													<BinaryString name="AttributesSerialize"></BinaryString>
+													<string name="Name">UIPadding</string>
+													<UDim name="PaddingBottom">
+														<S>0</S>
+														<O>0</O>
+													</UDim>
+													<UDim name="PaddingLeft">
+														<S>0.0399999991</S>
+														<O>0</O>
+													</UDim>
+													<UDim name="PaddingRight">
+														<S>0.0399999991</S>
+														<O>0</O>
+													</UDim>
+													<UDim name="PaddingTop">
+														<S>0</S>
+														<O>0</O>
+													</UDim>
+													<int64 name="SourceAssetId">-1</int64>
+													<BinaryString name="Tags"></BinaryString>
+												</Properties>
+											</Item>
+										</Item>
+									</Item>
+								</Item>
+								<Item class="Weld" referent="RBX477a5f93baf14770845f5e9268f619aa">
+									<Properties>
+										<BinaryString name="AttributesSerialize"></BinaryString>
+										<CoordinateFrame name="C0">
+											<X>0</X>
+											<Y>0</Y>
+											<Z>3</Z>
+											<R00>1</R00>
+											<R01>0</R01>
+											<R02>0</R02>
+											<R10>0</R10>
+											<R11>0.99999994</R11>
+											<R12>0</R12>
+											<R20>0</R20>
+											<R21>0</R21>
+											<R22>0.99999994</R22>
+										</CoordinateFrame>
+										<CoordinateFrame name="C1">
+											<X>0</X>
+											<Y>-6.9375</Y>
+											<Z>0.200260162</Z>
+											<R00>-1</R00>
+											<R01>5.99742315e-13</R01>
+											<R02>-4.54747188e-13</R02>
+											<R10>-5.99742912e-13</R10>
+											<R11>0.999999106</R11>
+											<R12>2.46519009e-31</R12>
+											<R20>-4.54747351e-13</R20>
+											<R21>0</R21>
+											<R22>-0.999999642</R22>
+										</CoordinateFrame>
+										<bool name="Enabled">true</bool>
+										<string name="Name">Weld</string>
+										<Ref name="Part0">RBX7070d5e36dfb432d8d81fe84028abd1a</Ref>
+										<Ref name="Part1">RBX107233fe5ee941978c2712a8fb088011</Ref>
 										<int64 name="SourceAssetId">-1</int64>
 										<BinaryString name="Tags"></BinaryString>
 									</Properties>
@@ -52698,6 +53212,32 @@ end)]]></ProtectedString>
 								<BinaryString name="Tags"></BinaryString>
 							</Properties>
 						</Item>
+						<Item class="WeldConstraint" referent="RBX56acbc400eb94439ba07d064b8adc567">
+							<Properties>
+								<BinaryString name="AttributesSerialize"></BinaryString>
+								<CoordinateFrame name="CFrame0">
+									<X>-130.022339</X>
+									<Y>62.9014282</Y>
+									<Z>-84.2203445</Z>
+									<R00>-3.6968835e-05</R00>
+									<R01>1.86213165e-05</R01>
+									<R02>1</R02>
+									<R10>6.72237775e-06</R10>
+									<R11>1</R11>
+									<R12>-1.86210673e-05</R12>
+									<R20>-1</R20>
+									<R21>6.72168835e-06</R21>
+									<R22>-3.69689587e-05</R22>
+								</CoordinateFrame>
+								<bool name="Enabled">true</bool>
+								<string name="Name">WeldConstraint</string>
+								<Ref name="Part0Internal">RBX17dd66e91b7f43969078f4c9b745509b</Ref>
+								<Ref name="Part1Internal">RBX962e03c612e247848d8be262d7721e16</Ref>
+								<int64 name="SourceAssetId">-1</int64>
+								<int name="State">1</int>
+								<BinaryString name="Tags"></BinaryString>
+							</Properties>
+						</Item>
 					</Item>
 					<Item class="Model" referent="RBX0">
 						<Properties>
@@ -53279,7 +53819,7 @@ end)]]></ProtectedString>
 									<Z>0</Z>
 								</Vector3>
 								<int64 name="SourceAssetId">-1</int64>
-								<BinaryString name="Tags">VHJhbnNwYXJlbnQARGVzdHJveQ==</BinaryString>
+								<BinaryString name="Tags">VHJhbnNwYXJlbnQ=</BinaryString>
 								<float name="TopParamA">-0.5</float>
 								<float name="TopParamB">0.5</float>
 								<token name="TopSurface">3</token>
@@ -56595,18 +57135,18 @@ end)]]></ProtectedString>
 									<token name="BottomSurface">10</token>
 									<token name="BottomSurfaceInput">0</token>
 									<CoordinateFrame name="CFrame">
-										<X>-1127.12073</X>
-										<Y>216.388351</Y>
-										<Z>139.829407</Z>
-										<R00>-0.980640709</R00>
-										<R01>1.49835432e-06</R01>
-										<R02>-0.195818305</R02>
-										<R10>-1.15730234e-06</R10>
+										<X>-1117.026</X>
+										<Y>199.388474</Y>
+										<Z>97.8653183</Z>
+										<R00>-4.37103154e-08</R00>
+										<R01>-4.13918899e-13</R01>
+										<R02>-1</R02>
+										<R10>9.09494702e-13</R10>
 										<R11>1</R11>
-										<R12>-1.85693216e-06</R12>
-										<R20>0.195815369</R20>
-										<R21>1.59367517e-06</R21>
-										<R22>-0.980640352</R22>
+										<R12>7.07739423e-13</R12>
+										<R20>1</R20>
+										<R21>9.09494702e-13</R21>
+										<R22>-4.37103154e-08</R22>
 									</CoordinateFrame>
 									<bool name="CanCollide">false</bool>
 									<bool name="CanTouch">true</bool>
@@ -56912,45 +57452,6 @@ end)]]></ProtectedString>
 											<int name="ZIndex">1</int>
 										</Properties>
 									</Item>
-								</Item>
-								<Item class="Weld" referent="RBX2641d3e4b74c4c978cf07f09da428004">
-									<Properties>
-										<BinaryString name="AttributesSerialize"></BinaryString>
-										<CoordinateFrame name="C0">
-											<X>0</X>
-											<Y>-12.5000153</Y>
-											<Z>3.05175781e-05</Z>
-											<R00>0.999999881</R00>
-											<R01>0</R01>
-											<R02>8.52651283e-14</R02>
-											<R10>-2.31458353e-06</R10>
-											<R11>0</R11>
-											<R12>-1</R12>
-											<R20>2.93552876e-06</R20>
-											<R21>1.00000012</R21>
-											<R22>3.71315241e-06</R22>
-										</CoordinateFrame>
-										<CoordinateFrame name="C1">
-											<X>-0.0833282471</X>
-											<Y>10.9333344</Y>
-											<Z>0.749755859</Z>
-											<R00>-6.10947609e-07</R00>
-											<R01>-1</R01>
-											<R02>-1.85657586e-06</R02>
-											<R10>-1.15729188e-06</R10>
-											<R11>1.85657643e-06</R11>
-											<R12>-1</R12>
-											<R20>1</R20>
-											<R21>-6.10947609e-07</R21>
-											<R22>-1.15729313e-06</R22>
-										</CoordinateFrame>
-										<bool name="Enabled">true</bool>
-										<string name="Name">Weld</string>
-										<Ref name="Part0">RBX962e03c612e247848d8be262d7721e16</Ref>
-										<Ref name="Part1">RBX1</Ref>
-										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags"></BinaryString>
-									</Properties>
 								</Item>
 							</Item>
 						</Item>
@@ -61622,611 +62123,6 @@ Tool.Unequipped:connect(Unequipped)]]></ProtectedString>
 					<BinaryString name="Tags"></BinaryString>
 				</Properties>
 			</Item>
-			<Item class="ModuleScript" referent="RBXf8fbde28bb5c4cf497c2a62df13dd68d">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Content name="LinkedSource"><null></null></Content>
-					<string name="Name">WordWheelIsland</string>
-					<string name="ScriptGuid">{1d583708-8e97-46ea-8552-6570f13178fd}</string>
-					<ProtectedString name="Source"><![CDATA[
-]]></ProtectedString>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-				</Properties>
-				<Item class="ModuleScript" referent="RBX74c9026933534ebb8f32ce1563bac763">
-					<Properties>
-						<BinaryString name="AttributesSerialize"></BinaryString>
-						<Content name="LinkedSource"><null></null></Content>
-						<string name="Name">InitWWI</string>
-						<string name="ScriptGuid">{fc5fe31e-f585-432c-8533-88a6c96cbaf8}</string>
-						<ProtectedString name="Source"><![CDATA[local CS = game:GetService("CollectionService")
-local RS = game:GetService("ReplicatedStorage")
-local Sss = game:GetService("ServerScriptService")
-
-local Utils = require(Sss.Source.Utils.U001GeneralUtils)
-local InitWord = require(Sss.Source.WordWheelIsland.InitWord)
-
-local module = {}
-
-function initWWIStatue()
-    -- 
-end
-
-function configStatue(props)
-    -- 
-
-end
-
-function initWWI()
-    local myStuff = workspace:FindFirstChild("MyStuff")
-    local runtimeWWIFolder = Utils.getOrCreateFolder(
-                                 {name = "WWIRuntime", parent = myStuff})
-
-    local wordWheelIsland = Utils.getFirstDescendantByName(myStuff,
-                                                           "WordWheelIsland")
-
-    local statuePositioners = Utils.getDescendantsByName(myStuff,
-                                                         "StatuePositioner")
-    local statueTemplate = Utils.getFirstDescendantByName(wordWheelIsland,
-                                                          "StatueTemplate")
-
-    local statusDefs = {
-        {sentence = {"YES", "MOM", "OK", "MOM"}, character = "raven"},
-        {sentence = {"NOT", "A", "CAT"}, character = "katScared"},
-        {sentence = {"TROLL", "NEED", "GOLD"}, character = "troll02"},
-        {sentence = {"I", "SEE", "A", "BEE"}, character = "lizHappy"}
-    }
-
-    for statueIndex, statusDef in ipairs(statusDefs) do
-        local sentence = statusDef.sentence
-        local character = statusDef.character
-
-        local statuePositioner = statuePositioners[statueIndex]
-        local newStatueScene = statueTemplate:Clone()
-        newStatueScene.Parent = statuePositioner.Parent
-        newStatueScene.PrimaryPart.CFrame = statuePositioner.CFrame
-        newStatueScene.PrimaryPart.Anchored = true
-
-        local sentencePositioner = Utils.getFirstDescendantByName(
-                                       newStatueScene, "SentencePositioner")
-
-        local wordGirl = Utils.getFirstDescendantByName(newStatueScene,
-                                                        "WordGirl")
-        local characterImage = Utils.getFirstDescendantByName(wordGirl,
-                                                              "CharacterImage")
-
-        Utils.applyDecalsToCharacterFromConfigName(
-            {part = characterImage, configName = character})
-
-        local wordLetters = {}
-
-        configStatue()
-        for wordIndex, word in ipairs(sentence) do
-            local wordProps = {
-                wordIndex = wordIndex,
-                wordLetters = wordLetters,
-                word = word
-            }
-
-            local newWordObj = InitWord.initWord(wordProps)
-        end
-
-        sentencePositioner:Destroy()
-    end
-    statueTemplate:Destroy()
-    -- LetterFall.initGameToggle(miniGameState)
-
-    -- LetterFallUtils.styleLetterBlocks({
-    --     miniGameState = miniGameState,
-    --     availWords = miniGameState.words
-    -- })
-end
-
-module.initWWI = initWWI
-
-return module
-
-]]></ProtectedString>
-						<int64 name="SourceAssetId">-1</int64>
-						<BinaryString name="Tags"></BinaryString>
-					</Properties>
-				</Item>
-				<Item class="ModuleScript" referent="RBX66843870949f474e821b25899d112e0a">
-					<Properties>
-						<BinaryString name="AttributesSerialize"></BinaryString>
-						<Content name="LinkedSource"><null></null></Content>
-						<string name="Name">InitWord</string>
-						<string name="ScriptGuid">{ef8ec293-fff1-4797-a6ba-aeaaca1a5304}</string>
-						<ProtectedString name="Source"><![CDATA[local CS = game:GetService("CollectionService")
-local Sss = game:GetService("ServerScriptService")
-local Utils = require(Sss.Source.Utils.U001GeneralUtils)
-local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
-local Constants = require(Sss.Source.Constants.Constants)
-
-local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
-
-local module = {}
-
-function playWordSound(word)
-    local closure = function()
-        if Constants.wordConfigs[word] then
-            local soundId = Constants.wordConfigs[word]['soundId']
-
-            if (soundId) then
-                local sound = Instance.new("Sound", workspace)
-                sound.SoundId = "rbxassetid://" .. soundId
-                sound.EmitterSize = 5
-                sound.Looped = false
-                if not sound.IsPlaying then sound:Play() end
-            end
-        end
-    end
-    return closure
-end
-
-function configWord(props)
-    local letterBlockTemplate = props.letterBlockTemplate
-    local word = props.word
-    local wordIndex = props.wordIndex
-    local wordTemplate = props.wordTemplate
-    local wordNameStub = props.wordNameStub
-
-    local newWord = wordTemplate:Clone()
-
-    local charImageBlock = Utils.getFirstDescendantByName(newWord,
-                                                          "CharacterImage")
-
-    local myStuff = workspace:FindFirstChild("MyStuff")
-    local wordWheelIsland = Utils.getFirstDescendantByName(myStuff,
-                                                           "WordWheelIsland")
-    local sentencePositioner = Utils.getFirstDescendantByName(wordWheelIsland,
-                                                              "SentencePositioner")
-
-    Utils.applyDecalsToCharacterFromWord({part = newWord, word = word})
-
-    newWord.Parent = wordTemplate.Parent
-
-    local spacingFactorY = 1.25
-    local wordSpacingX = -letterBlockTemplate.Size.X * 4
-
-    local translateWordProps = {
-        parent = sentencePositioner,
-        child = newWord.PrimaryPart,
-        offsetConfig = {
-            useParentNearEdge = Vector3.new(1, -1, 1),
-            useChildNearEdge = Vector3.new(1, -1, 1),
-            offsetAdder = Vector3.new(wordSpacingX * wordIndex, 0, 0)
-        }
-    }
-
-    newWord.PrimaryPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                                     translateWordProps)
-    newWord.PrimaryPart.Anchored = true
-
-    newWord.Name = newWord.Name .. "zzz" .. wordNameStub
-
-    return newWord
-end
-
-function initWord(props)
-    local wordIndex = props.wordIndex
-    local word = props.word
-    local wordLetters = props.wordLetters
-
-    local spacingFactorX = 1.0
-    local myStuff = workspace:FindFirstChild("MyStuff")
-    local wordWheelIsland = Utils.getFirstDescendantByName(myStuff,
-                                                           "WordWheelIsland")
-    local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
-    local letterBlockTemplate = Utils.getFirstDescendantByName(
-                                    letterBlockFolder, "LBPurpleLight")
-    local wordTemplate = Utils.getFirstDescendantByName(wordWheelIsland,
-                                                        "WordTemplate")
-    local wordNameStub = "-W" .. wordIndex
-
-    local newWordProps = {
-        wordTemplate = wordTemplate,
-        word = word,
-        letterBlockTemplate = letterBlockTemplate,
-        wordIndex = wordIndex,
-        wordNameStub = wordNameStub
-    }
-
-    local newWord = configWord(newWordProps)
-
-    -- 
-    local letterPositioner = Utils.getFirstDescendantByName(newWord,
-                                                            "LetterPositioner")
-
-    local lettersInWord = {}
-    for letterIndex = 1, #word do
-        local letterNameStub = wordNameStub .. "-L" .. letterIndex
-        local letter = string.sub(word, letterIndex, letterIndex)
-
-        local newLetter = letterBlockTemplate:Clone()
-
-        local cd = Instance.new("ClickDetector", newLetter)
-        cd.MouseClick:Connect(playWordSound(word))
-
-        newLetter.Name = "wordLetter-" .. letterNameStub .. "xxxx"
-
-        local letterPositionX = -newLetter.Size.X * (letterIndex - 1) *
-                                    spacingFactorX
-
-        CS:AddTag(newLetter, LetterFallUtils.tagNames.WordLetter)
-        LetterFallUtils.applyLetterText({letterBlock = newLetter, char = letter})
-
-        local translateCFrameProps = {
-            parent = letterPositioner,
-            child = newLetter,
-            offsetConfig = {
-                useParentNearEdge = Vector3.new(-1, -1, -1),
-                useChildNearEdge = Vector3.new(-1, -1, -1),
-                offsetAdder = Vector3.new(letterPositionX, 0, 0)
-            }
-        }
-
-        newLetter.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                               translateCFrameProps)
-        newLetter.Anchored = true
-
-        -- Do this last to avoid tweening
-        newLetter.Parent = newWord
-
-        table.insert(wordLetters,
-                     {char = letter, found = false, instance = newLetter})
-        table.insert(lettersInWord,
-                     {char = letter, found = false, instance = newLetter})
-    end
-
-    local wordBench = Utils.getFirstDescendantByName(newWord, "WordBench")
-    wordBench.Anchored = true
-
-    local wordBenchSizeX = #word * letterBlockTemplate.Size.X * spacingFactorX
-
-    local wordBenchPosX = wordBench.Position.X
-    wordBench.Size = Vector3.new(wordBenchSizeX, wordBench.Size.Y,
-                                 wordBench.Size.Z)
-    wordBench.Position = Vector3.new(wordBenchPosX, wordBench.Position.Y,
-                                     wordBench.Position.Z)
-
-    local newWordObj = {
-        word = newWord,
-        letters = lettersInWord,
-        wordChars = word
-    }
-
-    letterPositioner:Destroy()
-    return newWordObj
-end
-
-module.initWords = initWords
-module.initWord = initWord
-
-return module
-]]></ProtectedString>
-						<int64 name="SourceAssetId">-1</int64>
-						<BinaryString name="Tags"></BinaryString>
-					</Properties>
-				</Item>
-				<Item class="ModuleScript" referent="RBXaf479801c684494fb7d39b269ab9c305">
-					<Properties>
-						<BinaryString name="AttributesSerialize"></BinaryString>
-						<Content name="LinkedSource"><null></null></Content>
-						<string name="Name">LetterWheelIsland</string>
-						<string name="ScriptGuid">{b50fae5d-ac01-411a-96c8-81af9b47cb4f}</string>
-						<ProtectedString name="Source"><![CDATA[-- local CS = game:GetService("CollectionService")
-local Sss = game:GetService("ServerScriptService")
-local RS = game:GetService("ReplicatedStorage")
-
-local Utils = require(Sss.Source.Utils.U001GeneralUtils)
-local HandleClick = require(Sss.Source.LetterFall.HandleClick)
--- -- local InitLetterRack = require(Sss.Source.LetterFall.InitLetterRack)
-local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
-local DropBox = require(Sss.Source.DropBox.DropBox)
-
-local letterFallFreezeCameraRE = RS:WaitForChild("LetterFallFreezeCameraRE")
-
-local module = {}
-
-function configCouchTrigger(miniGameState)
-    -- print('configCouchTrigger' .. ' - start');
-    local letterFallFolder = miniGameState.letterFallFolder
-
-    local seats = Utils.getDescendantsByName(letterFallFolder, "LFCouchSeat")
-
-    for i, seat in ipairs(seats) do
-        local seatTriggerEnabled = false
-        local currentPlayer = nil
-        function initGame()
-            local cameraPath1 = Utils.getFirstDescendantByName(letterFallFolder,
-                                                               "ScreenCameraPath1")
-            local cameraPath2 = Utils.getFirstDescendantByName(letterFallFolder,
-                                                               "ScreenCameraPath2")
-
-            local humanoid = seat.Occupant
-            if humanoid then
-                local player = Utils.getPlayerFromHumanoid(humanoid)
-                if player then
-                    if not seatTriggerEnabled then
-                        seatTriggerEnabled = true
-                    end
-                    currentPlayer = player
-                    letterFallFreezeCameraRE:FireClient(player, cameraPath1,
-                                                        cameraPath2, true)
-                    return
-                end
-            end
-
-            -- player leaves seat
-            if currentPlayer then
-                letterFallFreezeCameraRE:FireClient(currentPlayer, cameraPath1,
-                                                    cameraPath2, false)
-                currentPlayer = nil
-            end
-        end
-
-        function initGameWrapper(miniGameState)
-            -- This is a good example of a closure.  Let the :Connect definition
-            -- run the wrapper to
-            -- capture the current state of the miniGameState.  But don't run
-            -- initGame until the :Connect actually fires
-            return initGame
-        end
-
-        seat:GetPropertyChangedSignal("Occupant"):Connect(
-            initGameWrapper(miniGameState))
-    end
-end
-
-function initGameToggle(miniGameState)
-    local letterFallFolder = miniGameState.letterFallFolder
-    local startGameTrigger = Utils.getFirstDescendantByName(letterFallFolder,
-                                                            "StartGameTrigger")
-
-    function onCorrectItemDropped()
-        local manHoleCover = Utils.getFirstDescendantByName(letterFallFolder,
-                                                            "ManHoleCover")
-        if manHoleCover then manHoleCover:Destroy() end
-    end
-
-    local dropBox = Utils.getFirstDescendantByName(letterFallFolder,
-                                                   "DropBoxModel")
-    local dropBoxItem = {name = "GemTemplate"}
-    DropBox.configDropBox({
-        scene = letterFallFolder,
-        sceneIndex = 0,
-        dropBox = dropBox,
-        onCorrectItemDropped = onCorrectItemDropped,
-        item = dropBoxItem
-
-    })
-
-    function onPartTouched(otherPart)
-        local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
-        if humanoid then
-            if not miniGameState.initCompleted then
-                miniGameState.initCompleted = true
-                HandleClick.initClickHandler(miniGameState)
-                LetterFallUtils.createBalls(miniGameState)
-                configCouchTrigger(miniGameState)
-            end
-        end
-    end
-
-    -- Do this so that all letterFall in all scenes are not jiggling and looking
-    -- for clicks until they are needed
-    startGameTrigger.Touched:Connect(onPartTouched)
-end
-
-module.initGameToggle = initGameToggle
-return module
-]]></ProtectedString>
-						<int64 name="SourceAssetId">-1</int64>
-						<BinaryString name="Tags"></BinaryString>
-					</Properties>
-				</Item>
-				<Item class="ModuleScript" referent="RBXb11ac649ce814d9bb5f54b2064bfb4d0">
-					<Properties>
-						<BinaryString name="AttributesSerialize"></BinaryString>
-						<Content name="LinkedSource"><null></null></Content>
-						<string name="Name">WWIHandleClick</string>
-						<string name="ScriptGuid">{8623f4b4-ff25-48e4-9f9e-7edcad3d5aaa}</string>
-						<ProtectedString name="Source"><![CDATA[local CS = game:GetService("CollectionService")
-local Sss = game:GetService("ServerScriptService")
-local RS = game:GetService("ReplicatedStorage")
-
-local Utils = require(Sss.Source.Utils.U001GeneralUtils)
-local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
-local Constants = require(Sss.Source.Constants.Constants)
-local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
-
--- local clickBlockEvent = RS:WaitForChild("ClickBlockRE")
-
-local module = {}
-
-function isDesiredLetter(availLetters, clickedLetter)
-    local textLabel = Utils.getFirstDescendantByName(clickedLetter, "BlockChar")
-                          .Text
-    local char = LetterFallUtils.getCharFromLetterBlock(clickedLetter)
-    return availLetters[char]
-end
-
-function isDeadLetter(clickedLetter)
-    local tag = LetterFallUtils.tagNames.DeadLetter
-    return CS:HasTag(clickedLetter, tag)
-end
-
-function initClickHandler(miniGameState)
-    -- Gets arguments from EventHandler in StarterPack
-    function brickClickHandler(player, clickedLetter)
-        handleBrick(clickedLetter, miniGameState)
-    end
-    -- clickBlockEvent.OnServerEvent:Connect(brickClickHandler)
-end
-
-function findFirstMatchingLetterBlock(foundChar, miniGameState)
-    local matchingLetter = nil
-
-    for wordIndex, word in ipairs(miniGameState.renderedWords) do
-        if matchingLetter then break end
-        for letterIndex, letter in ipairs(word.letters) do
-            if matchingLetter then break end
-            if foundChar == letter.char then
-                miniGameState.activeWord = word
-                matchingLetter = letter.instance
-            end
-        end
-    end
-    return matchingLetter
-end
-
-function getAvailWords(miniGameState)
-    local availWords = {}
-    local activeWord = miniGameState.activeWord
-
-    if activeWord then
-        availWords = {activeWord.wordChars}
-    else
-        availWords = miniGameState.words
-    end
-    return availWords
-end
-
-function handleBrick(clickedLetter, miniGameState)
-    local letterFallFolder = miniGameState.letterFallFolder
-    local runTimeLetterFolder = miniGameState.runTimeLetterFolder
-
-    local isChild = clickedLetter:IsDescendantOf(letterFallFolder)
-
-    if not isChild then
-        -- Anchor letters if letter is clicked is a different game instance
-        LetterFallUtils.anchorLetters({
-            parentFolder = runTimeLetterFolder,
-            anchor = true
-        })
-        return {}
-    end
-    if isDeadLetter(clickedLetter) then return end
-
-    -- 
-    -- 
-    local activeWord = miniGameState.activeWord
-    local currentLetterIndex = miniGameState.currentLetterIndex
-    local words = miniGameState.words
-
-    local rackLetters = Utils.getByTagInParent(
-                            {
-            parent = runTimeLetterFolder,
-            tag = LetterFallUtils.tagNames.RackLetter
-        })
-
-    local notDeadLetters = LetterFallUtils.filterItemsByTag(
-                               {
-            items = rackLetters,
-            tag = LetterFallUtils.tagNames.DeadLetter,
-            include = false
-        })
-
-    LetterFallUtils.anchorLetters({
-        parentFolder = runTimeLetterFolder,
-        anchor = true
-    })
-
-    local activeCol =
-        LetterFallUtils.getCoordsFromLetterName(clickedLetter.Name).col
-    LetterFallUtils.anchorColumn({
-        col = activeCol,
-        letters = notDeadLetters,
-        anchor = false
-    })
-    clickedLetter.Anchored = true
-
-    if not miniGameState.gemsStarted then
-        --   
-        miniGameState.gemsStarted = true
-    end
-
-    local foundChar = LetterFallUtils.getCharFromLetterBlock(clickedLetter)
-    local targetLetterBlock = nill
-    local availWords = {}
-
-    if activeWord then
-        availWords = {activeWord.wordChars}
-        local nextLetterInWord = activeWord.letters[currentLetterIndex].char
-        local found = foundChar == nextLetterInWord
-        if found then
-            targetLetterBlock = activeWord.letters[currentLetterIndex].instance
-        end
-    else
-        availWords = words
-        local availLetters = LetterFallUtils.getAvailLettersDict(
-                                 {
-                words = words,
-                currentLetterIndex = currentLetterIndex
-            })
-
-        if isDesiredLetter(availLetters, clickedLetter) then
-            targetLetterBlock = findFirstMatchingLetterBlock(foundChar,
-                                                             miniGameState)
-        end
-    end
-
-    if targetLetterBlock then
-        miniGameState.currentLetterIndex = miniGameState.currentLetterIndex + 1
-        CS:AddTag(clickedLetter, LetterFallUtils.tagNames.Found)
-        CS:RemoveTag(clickedLetter, LetterFallUtils.tagNames.RackLetter)
-
-        local tween = Utils3.tween({
-            part = clickedLetter,
-            endPosition = targetLetterBlock.Position,
-            time = 0.4,
-            anchor = true
-        })
-
-        Utils.hideItemAndChildren({item = targetLetterBlock, hide = true})
-
-        table.insert(miniGameState.foundLetters,
-                     LetterFallUtils.getCharFromLetterBlock(clickedLetter))
-
-        local currentWord = table.concat(miniGameState.foundLetters, "")
-        local wordComplete = table.find(words, currentWord)
-
-        if (wordComplete) then
-            local soundId = Constants.wordConfigs[currentWord][soundId]
-            if (soundId) then
-                -- if (false and soundId) then
-                local sound = Instance.new("Sound", workspace)
-                sound.SoundId = "rbxassetid://" .. soundId
-                sound.EmitterSize = 5
-                sound.Looped = false
-                if not sound.IsPlaying then sound:Play() end
-            end
-
-            table.insert(miniGameState.foundWords, currentWord)
-            miniGameState.foundLetters = {}
-            miniGameState.currentLetterIndex = 1
-            miniGameState.activeWord = nil
-        end
-
-        LetterFallUtils.styleLetterBlocks(
-            {
-                miniGameState = miniGameState,
-                availWords = getAvailWords(miniGameState)
-            })
-
-        clickedLetter.CFrame = targetLetterBlock.CFrame
-    end
-end
-
-module.initClickHandler = initClickHandler
-return module
-]]></ProtectedString>
-						<int64 name="SourceAssetId">-1</int64>
-						<BinaryString name="Tags"></BinaryString>
-					</Properties>
-				</Item>
-			</Item>
 			<Item class="ModuleScript" referent="RBX7f784be778dc4706b1307cdd4a557566">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
@@ -62897,14 +62793,11 @@ local function addBlockDash(sectorConfig)
         Utils.getFirstDescendantByName(myStuff, "BlockDash")
     miniGameState.letterFallFolder = letterFallFolder
 
-    -- miniGameState.sectorFolder = Utils.getFirstDescendantByName(
-    --                                  letterFallFolder, sectorFolder)
-    -- miniGameState.sectorFolder = sectorFolder
-
     local function onWordLettersGone(miniGameState2)
         BlockDashUtils.clearBlockRack(miniGameState2)
-        LetterFallUtils.unHideWordLetters(miniGameState2)
-        InitLetterRack.initLetterRack(miniGameState2)
+        -- LetterFallUtils.unHideWordLetters(miniGameState2)
+        InitWord.initWords(miniGameState)
+        -- InitLetterRack.initLetterRack(miniGameState2)
     end
 
     miniGameState.onWordLettersGone = onWordLettersGone
@@ -63116,6 +63009,9 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
             PlayerStatManager:ChangeStat(player, "Gems", 1)
             Leaderboard.updateLB()
+
+            print('miniGameState.renderedWords' .. ' - start');
+            print(miniGameState.renderedWords);
         end
 
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
@@ -63272,7 +63168,20 @@ function clearBlockRack(miniGameState)
     Utils.clearTable(miniGameState.rackLetterBlockObjs)
 end
 
+function clearWordRack(miniGameState)
+    local renderedWords = miniGameState.renderedWords
+
+    -- delete objects
+    for i, letter in ipairs(renderedWords) do
+        if letter.part then letter.part:Destroy() end
+        renderedWords[i] = nil
+    end
+    -- clear table entries
+    Utils.clearTable(miniGameState.renderedWords)
+end
+
 module.clearBlockRack = clearBlockRack
+module.clearWordRack = clearWordRack
 return module
 ]]></ProtectedString>
 						<int64 name="SourceAssetId">-1</int64>
@@ -63431,6 +63340,7 @@ local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
+local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
 
 local module = {}
 local function getRunTimeWordFolder(miniGameState)
@@ -63451,6 +63361,8 @@ function initWord(props)
     local wordLetters = props.wordLetters
 
     local sectorFolder = miniGameState.sectorFolder
+
+    BlockDashUtils.clearWordRack(miniGameState)
 
     local runTimeWordFolder = getRunTimeWordFolder(miniGameState)
     miniGameState.runTimeWordFolder = runTimeWordFolder
@@ -63537,7 +63449,7 @@ function initWord(props)
         wordChars = word
     }
 
-    letterPositioner:Destroy()
+    -- letterPositioner:Destroy()
     return newWordObj
 end
 
@@ -63801,16 +63713,16 @@ local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 
 local module = {}
 
-local function init(chest)
-    local hitBox = Utils.getFirstDescendantByName(chest, "HitBox")
+local function init(replicator, callBack)
+    local hitBox = Utils.getFirstDescendantByName(replicator, "HitBox")
 
     local reward
-    if #chest.Reward:GetChildren() > 0 then
-        local originalReward = chest.Reward:GetChildren()[1]
+    if #replicator.Reward:GetChildren() > 0 then
+        local originalReward = replicator.Reward:GetChildren()[1]
         reward = originalReward:Clone()
         -- Take everything out of the Tool and put it in a model that looks like the tool, for display
-        -- But it can't be picked up.  Keep this is the chest for display, and Anchor it.
-        local newModel = Instance.new("Model", chest.Reward)
+        -- But it can't be picked up.  Keep this is the replicator for display, and Anchor it.
+        local newModel = Instance.new("Model", replicator.Reward)
         for _, child in pairs(originalReward:GetChildren()) do
             if not (child:IsA("Script") or child:IsA("LocalScript")) then
                 if child:IsA("BasePart") then
@@ -63844,6 +63756,9 @@ local function init(chest)
             player.Character.Humanoid:UnequipTools()
             toGive.Parent = player.Backpack
             player.Character.Humanoid:EquipTool(toGive)
+            print('callBack' .. ' - start');
+            print(callBack);
+            callBack()
         end
 
     end
@@ -63908,7 +63823,17 @@ local function initKey(miniGameState)
 
     newReplicatorPart.Anchored = true
 
-    Replicator.init(newReplicator)
+    local function callBack(miniGameState2)
+
+        local function closure()
+            print('callBack' .. ' - start');
+            print(callBack);
+            miniGameState.onWordLettersGone(miniGameState2)
+        end
+        return closure
+    end
+
+    Replicator.init(newReplicator, callBack(miniGameState))
 
     local door = Utils.getFirstDescendantByName(sectorFolder, "LockedDoor")
                      .PrimaryPart
@@ -66484,10 +66409,7 @@ function setCFrameFromDesiredEdgeOffset(props)
 
     local defaultOffsetAdder = Vector3.new(0, 0, 0)
 
-    local defaultOffsetConfig = {
-        useParentNearEdge = Vector3.new(0, 1, -1),
-        useChildNearEdge = Vector3.new(0, -1, 1),
-        offsetAdder = defaultOffsetAdder
+    local defaultOffsetConfig = {w
     }
 
     offsetConfig = offsetConfig or defaultOffsetConfig

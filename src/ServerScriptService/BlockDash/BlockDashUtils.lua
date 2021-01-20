@@ -16,5 +16,18 @@ function clearBlockRack(miniGameState)
     Utils.clearTable(miniGameState.rackLetterBlockObjs)
 end
 
+function clearWordRack(miniGameState)
+    local renderedWords = miniGameState.renderedWords
+
+    -- delete objects
+    for i, letter in ipairs(renderedWords) do
+        if letter.part then letter.part:Destroy() end
+        renderedWords[i] = nil
+    end
+    -- clear table entries
+    Utils.clearTable(miniGameState.renderedWords)
+end
+
 module.clearBlockRack = clearBlockRack
+module.clearWordRack = clearWordRack
 return module

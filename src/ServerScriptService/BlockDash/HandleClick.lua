@@ -180,6 +180,9 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
             PlayerStatManager:ChangeStat(player, "Gems", 1)
             Leaderboard.updateLB()
+
+            print('miniGameState.renderedWords' .. ' - start');
+            print(miniGameState.renderedWords);
         end
 
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})

@@ -41,7 +41,17 @@ local function initKey(miniGameState)
 
     newReplicatorPart.Anchored = true
 
-    Replicator.init(newReplicator)
+    local function callBack(miniGameState2)
+
+        local function closure()
+            print('callBack' .. ' - start');
+            print(callBack);
+            miniGameState.onWordLettersGone(miniGameState2)
+        end
+        return closure
+    end
+
+    Replicator.init(newReplicator, callBack(miniGameState))
 
     local door = Utils.getFirstDescendantByName(sectorFolder, "LockedDoor")
                      .PrimaryPart

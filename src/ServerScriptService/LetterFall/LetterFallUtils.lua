@@ -498,17 +498,17 @@ function getNumAvailLetterBlocks(miniGameState)
     return numAvailableBlocks
 end
 
-function unHideWordLetters(miniGameState)
-    local runTimeWordFolder = miniGameState.runTimeWordFolder
-    local wordLetters = module.getAllLettersInWords(
-                            {runTimeWordFolder = runTimeWordFolder})
-    for _, letterBlock in ipairs(wordLetters) do
-        if CS:HasTag(letterBlock, "Hide") then
-            Utils.hideItemAndChildren({item = letterBlock, hide = false})
-            CS:RemoveTag(letterBlock, "Hide")
-        end
-    end
-end
+-- function unHideWordLetters(miniGameState)
+--     local runTimeWordFolder = miniGameState.runTimeWordFolder
+--     local wordLetters = module.getAllLettersInWords(
+--                             {runTimeWordFolder = runTimeWordFolder})
+--     for _, letterBlock in ipairs(wordLetters) do
+--         if CS:HasTag(letterBlock, "Hide") then
+--             Utils.hideItemAndChildren({item = letterBlock, hide = false})
+--             CS:RemoveTag(letterBlock, "Hide")
+--         end
+--     end
+-- end
 
 function colorLetterText(props)
     local color = props.color
@@ -706,7 +706,7 @@ module.getAvailWords = getAvailWords
 module.getRandomLetter = getRandomLetter
 module.getLettersNotInWords = getLettersNotInWords
 module.getAllLettersInWords = getAllLettersInWords
-module.unHideWordLetters = unHideWordLetters
+-- module.unHideWordLetters = unHideWordLetters
 module.getNumAvailLetterBlocks = getNumAvailLetterBlocks
 module.playWordSound = playWordSound
 return module

@@ -3,16 +3,16 @@ local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 
 local module = {}
 
-local function init(chest)
-    local hitBox = Utils.getFirstDescendantByName(chest, "HitBox")
+local function init(replicator, callBack)
+    local hitBox = Utils.getFirstDescendantByName(replicator, "HitBox")
 
     local reward
-    if #chest.Reward:GetChildren() > 0 then
-        local originalReward = chest.Reward:GetChildren()[1]
+    if #replicator.Reward:GetChildren() > 0 then
+        local originalReward = replicator.Reward:GetChildren()[1]
         reward = originalReward:Clone()
         -- Take everything out of the Tool and put it in a model that looks like the tool, for display
-        -- But it can't be picked up.  Keep this is the chest for display, and Anchor it.
-        local newModel = Instance.new("Model", chest.Reward)
+        -- But it can't be picked up.  Keep this is the replicator for display, and Anchor it.
+        local newModel = Instance.new("Model", replicator.Reward)
         for _, child in pairs(originalReward:GetChildren()) do
             if not (child:IsA("Script") or child:IsA("LocalScript")) then
                 if child:IsA("BasePart") then
@@ -46,6 +46,9 @@ local function init(chest)
             player.Character.Humanoid:UnequipTools()
             toGive.Parent = player.Backpack
             player.Character.Humanoid:EquipTool(toGive)
+            print('callBack' .. ' - start');
+            print(callBack);
+            callBack()
         end
 
     end
