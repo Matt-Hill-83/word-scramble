@@ -37,7 +37,7 @@ function findFirstMatchingLetterBlock(foundChar, miniGameState)
     return matchingLetter
 end
 
-function onSelectRackBlock(clickedLetter, miniGameState, player)
+local function onSelectRackBlock(clickedLetter, miniGameState, player)
     if module.processing == true then return end
     module.processing = true
 
@@ -191,7 +191,7 @@ function onSelectRackBlock(clickedLetter, miniGameState, player)
                                        miniGameState)
 
         if numAvailableBlocks == 0 then
-            -- miniGameState.onWordLettersGone(miniGameState)
+            miniGameState.onWordLettersGone(miniGameState)
         end
     end
     module.processing = false
