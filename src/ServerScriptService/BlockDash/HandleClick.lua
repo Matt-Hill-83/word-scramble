@@ -103,7 +103,9 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
     if targetLetterBlock then
         CS:AddTag(clickedLetter, LetterFallUtils.tagNames.Found)
+        CS:AddTag(targetLetterBlock, "FoundInWord")
         CS:RemoveTag(clickedLetter, LetterFallUtils.tagNames.RackLetter)
+        print('targetLetterBlock' .. ' - start');
 
         local letterBlockCFrame = clickedLetter.CFrame
 
@@ -116,7 +118,13 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
         clickedLetter.CFrame = targetLetterBlock.CFrame
         -- hide the letter in rack where this letter is going
-        CS:AddTag(clickedLetter, "Hide")
+        -- CS:AddTag(targetLetterBlock, "Hide")
+
+        LetterFallUtils.applyStyleFromTemplateBD(
+            {
+                targetLetterBlock = targetLetterBlock,
+                templateName = "LBPurpleLight"
+            })
 
         local clickedChar =
             LetterFallUtils.getCharFromLetterBlock(clickedLetter)
@@ -125,7 +133,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             table.insert(miniGameState.foundLetters,
                          LetterFallUtils.getCharFromLetterBlock(clickedLetter))
         end
-        -- clickedLetter:Destroy()
+        clickedLetter:Destroy()
 
         local currentWord = table.concat(miniGameState.foundLetters, "")
         local wordComplete = table.find(words, currentWord)

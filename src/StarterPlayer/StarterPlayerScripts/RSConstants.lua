@@ -5,7 +5,7 @@ local devGameConfig = {
     transparency = false,
     -- transparency = true,
     walkSpeed = 30,
-    fastWalkSpeed = 40,
+    fastWalkSpeed = 50,
     -- walkSpeed = 80,
 
     disabledSpawns = {
@@ -19,7 +19,7 @@ local devGameConfig = {
 local prodGameConfig = {
     transparency = true,
     walkSpeed = 30,
-    fastWalkSpeed = 40,
+    fastWalkSpeed = 50,
 
     showScenes = true,
     disabledSpawns = {
