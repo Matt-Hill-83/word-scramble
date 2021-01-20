@@ -500,14 +500,14 @@ function tableToString(tab, a, b, c, d)
     return table.concat(res, "\n")
 end
 
-local test = {
-    str = "Result:\n\t- Unknown",
-    number = 12345,
-    child = {a = "b"},
-    cyclic = {}
-}
-test.child.cyclic = test.cyclic
-test.another = test.child
+-- local test = {
+--     str = "Result:\n\t- Unknown",
+--     number = 12345,
+--     child = {a = "b"},
+--     cyclic = {}
+-- }
+-- test.child.cyclic = test.cyclic
+-- test.another = test.child
 
 function mergeTables(t1, t2) for k, v in pairs(t2) do t1[k] = v end end
 
