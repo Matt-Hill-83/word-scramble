@@ -48,8 +48,8 @@ function addRemoteObjects()
 
     Utils.sortListByObjectKey(islandPositioners, "Name")
 
-    for islandIndex, islandPositioner in ipairs({islandPositioners[1]}) do
-        -- for islandIndex, islandPositioner in ipairs(islandPositioners) do
+    -- for islandIndex, islandPositioner in ipairs({islandPositioners[1]}) do
+    for islandIndex, islandPositioner in ipairs(islandPositioners) do
         local newIsland = islandTemplate:Clone()
 
         local anchoredParts = {}
@@ -96,7 +96,7 @@ function addRemoteObjects()
     ConfigGame.configGame()
     PlayerStatManager.init()
 
-    -- islandTemplate:Destroy()
+    islandTemplate:Destroy()
 end
 
 module.addRemoteObjects = addRemoteObjects

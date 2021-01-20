@@ -10,8 +10,6 @@ local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
 local module = {}
 
 local function initLetterRack(miniGameState)
-    print('initLetterRack' .. ' - start');
-    print(initLetterRack);
     local rackLetterBlockObjs = miniGameState.rackLetterBlockObjs
     local sectorFolder = miniGameState.sectorFolder
     local numRow = miniGameState.numRow
