@@ -64,6 +64,7 @@ local function addBlockDash(sectorConfig)
 
     local miniGameState = {
         activeWord = nil,
+        sectorFolder = sectorFolder,
         activeWordIndex = 1,
         availLetters = {},
         availWords = {},
@@ -94,7 +95,7 @@ local function addBlockDash(sectorConfig)
 
     -- miniGameState.sectorFolder = Utils.getFirstDescendantByName(
     --                                  letterFallFolder, sectorFolder)
-    miniGameState.sectorFolder = sectorFolder
+    -- miniGameState.sectorFolder = sectorFolder
 
     local function onWordLettersGone(miniGameState2)
         BlockDashUtils.clearBlockRack(miniGameState2)

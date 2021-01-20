@@ -55,15 +55,10 @@ local function initLetterRack(miniGameState)
     for colIndex = 1, numCol do
         for rowIndex = 1, numRow do
             local newLetter = letterBlockTemplate:Clone()
-            -- local vString = Instance.new("StringValue", newLetter)
-            -- vString.Changed:Connect(print)
-            -- vString.Name = "Character"
-
             newLetter.Size = letterPositioner.Size
 
             local letterId = "ID--R" .. rowIndex .. "C" .. colIndex
             local char = letterMatrix[rowIndex][colIndex]
-            -- vString.Value = char
 
             local name = "rackLetter-" .. char .. "-" .. letterId .. "sss"
             newLetter.Name = name

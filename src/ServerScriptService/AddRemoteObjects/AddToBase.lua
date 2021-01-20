@@ -21,7 +21,8 @@ function addRemoteObjects()
 
     local sector1Config = {
         -- words = {"VAT", "CAT"},
-        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
+        words = {"CAT"},
+        -- words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
         -- sectorFolder = "Sector1",
         -- gridSize = {numRow = 6, numCol = 6}
         gridSize = {numRow = 26, numCol = 26}
@@ -60,8 +61,6 @@ function addRemoteObjects()
         for _, child in pairs(newIsland:GetDescendants()) do
             if child:IsA("BasePart") then
                 if child.Anchored then
-                    print(child);
-                    print(child.Anchored);
                     child.Anchored = false
                     table.insert(anchoredParts, child)
                 end
@@ -70,11 +69,11 @@ function addRemoteObjects()
 
         local offsetX = 300
         local offsetY = (islandIndex - 1) * 50
-        -- local offsetX = 100 * islandIndex
+
         newIsland.Parent = myStuff
-        newIsland.Name = "xxx"
+        newIsland.Name = "Sector-" .. islandPositioner.Name
         local newIslandPart = newIsland.PrimaryPart
-        newIslandPart.Name = "newIsland-ddd"
+        newIslandPart.Name = "newIsland"
         newIslandPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                    {
                 parent = islandPositioner,
@@ -90,13 +89,12 @@ function addRemoteObjects()
         sectorConfig.sectorFolder = newIsland
         sectorConfig.islandPositioner = islandPositioner
 
-        addSector(sectorConfig)
-
         for _, child in pairs(anchoredParts) do
-            -- print(child);
             child.Anchored = true
             -- 
         end
+
+        addSector(sectorConfig)
 
     end
     -- Do this last after everything has been created/deleted
