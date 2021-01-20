@@ -64,18 +64,18 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1200.00073</X>
-					<Y>205.802109</Y>
-					<Z>164.640366</Z>
-					<R00>-0.553208411</R00>
-					<R01>0.62314415</R01>
-					<R02>-0.552857935</R02>
-					<R10>1.4901163e-08</R10>
-					<R11>0.663660884</R11>
-					<R12>0.748033643</R12>
-					<R20>0.833042979</R20>
-					<R21>0.413818508</R21>
-					<R22>-0.367142737</R22>
+					<X>-1199.00171</X>
+					<Y>204.868027</Y>
+					<Z>167.290863</Z>
+					<R00>0.998453677</R00>
+					<R01>0.0156223755</R01>
+					<R02>-0.0533508584</R02>
+					<R10>-0</R10>
+					<R11>0.95970118</R11>
+					<R12>0.281022877</R12>
+					<R20>0.0555911176</R20>
+					<R21>-0.280588329</R21>
+					<R22>0.958217084</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
@@ -35206,9 +35206,9 @@ end)]]></ProtectedString>
 								<token name="BottomSurface">0</token>
 								<token name="BottomSurfaceInput">0</token>
 								<CoordinateFrame name="CFrame">
-									<X>-1128.06458</X>
-									<Y>225.078903</Y>
-									<Z>-106.850952</Z>
+									<X>-1128.06445</X>
+									<Y>205.078903</Y>
+									<Z>-106.850533</Z>
 									<R00>-0.707117021</R00>
 									<R01>-6.9428761e-06</R01>
 									<R02>0.707096517</R02>
@@ -35648,9 +35648,9 @@ end)]]></ProtectedString>
 									<token name="BottomSurface">0</token>
 									<token name="BottomSurfaceInput">0</token>
 									<CoordinateFrame name="CFrame">
-										<X>-1123.83325</X>
-										<Y>208.811768</Y>
-										<Z>-106.873245</Z>
+										<X>-1123.83313</X>
+										<Y>188.811768</Y>
+										<Z>-106.872826</Z>
 										<R00>-1.41287001e-05</R00>
 										<R01>0.866025209</R01>
 										<R02>0.500000298</R02>
@@ -53196,9 +53196,9 @@ end)]]></ProtectedString>
 							<Properties>
 								<BinaryString name="AttributesSerialize"></BinaryString>
 								<CoordinateFrame name="CFrame0">
-									<X>-118.97583</X>
-									<Y>88.590271</Y>
-									<Z>120.495697</Z>
+									<X>-118.976318</X>
+									<Y>68.590271</Y>
+									<Z>120.49514</Z>
 									<R00>0.707143188</R00>
 									<R01>2.55649738e-05</R01>
 									<R02>-0.707070351</R02>
@@ -57593,8 +57593,8 @@ end)]]></ProtectedString>
 			<bool name="EnableScriptCollabOnLoad">false</bool>
 			<string name="Name">StudioData</string>
 			<int64 name="SourceAssetId">-1</int64>
-			<int64 name="SrcPlaceId">6247613349</int64>
-			<int64 name="SrcUniverseId">2296181067</int64>
+			<int64 name="SrcPlaceId">6241554880</int64>
+			<int64 name="SrcUniverseId">2293136719</int64>
 			<BinaryString name="Tags"></BinaryString>
 		</Properties>
 	</Item>
@@ -61886,7 +61886,7 @@ local Constants = require(Sss.Source.Constants.Constants)
 local freezeCameraRE = RS:WaitForChild("BlockDashFreezeCameraRE")
 
 local module = {entered = false, exited = false, runFast = false}
-local fastWalkSpeed = 50
+local fastWalkSpeed = Constants.gameConfig.fastWalkSpeed
 
 function module.initEntrance(miniGameState)
     local sectorFolder = miniGameState.sectorFolder
@@ -62269,6 +62269,7 @@ local devGameConfig = {
     transparency = false,
     -- transparency = true,
     walkSpeed = 30,
+    fastWalkSpeed = 60,
     -- walkSpeed = 80,
 
     disabledSpawns = {
@@ -62281,7 +62282,8 @@ local devGameConfig = {
 
 local prodGameConfig = {
     transparency = true,
-    walkSpeed = 30,
+    walkSpeed = 20,
+    fastWalkSpeed = 60,
 
     showScenes = true,
     disabledSpawns = {
