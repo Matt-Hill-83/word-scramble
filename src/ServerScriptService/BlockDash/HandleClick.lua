@@ -105,7 +105,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         CS:AddTag(clickedLetter, LetterFallUtils.tagNames.Found)
         CS:AddTag(targetLetterBlock, "FoundInWord")
         CS:RemoveTag(clickedLetter, LetterFallUtils.tagNames.RackLetter)
-        print('targetLetterBlock' .. ' - start');
 
         local letterBlockCFrame = clickedLetter.CFrame
 
@@ -139,8 +138,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         local wordComplete = table.find(words, currentWord)
 
         miniGameState.currentLetterIndex = miniGameState.currentLetterIndex + 1
-        print('wordComplete' .. ' - start');
-        print(wordComplete);
         if (wordComplete) then
             local currentWord2 = Constants.wordConfigs[currentWord]
             if currentWord2 then
@@ -169,16 +166,10 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             activeWord2.Name = "wwww"
             activeWord2.word:Destroy()
 
-            print('miniGameState.activeWord' .. ' - start');
-            print(miniGameState.activeWord);
-
             for _, letter in ipairs(activeWord2.letters) do
                 local myLetter = letter.instance
-                print('myLetter' .. ' - start');
-                print(myLetter);
                 myLetter:Destroy()
             end
-            -- local wordObj = 
             miniGameState.activeWord = nil
 
             miniGameState.foundLetters = {}
@@ -192,8 +183,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         end
 
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
-
-        -- clickedLetter.CFrame = targetLetterBlock.CFrame
 
         local numAvailableBlocks = LetterFallUtils.getNumAvailLetterBlocks(
                                        miniGameState)
