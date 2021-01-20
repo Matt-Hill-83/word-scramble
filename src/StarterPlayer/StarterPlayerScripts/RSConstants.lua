@@ -1,33 +1,31 @@
-local isTest = true
--- local isTest = false
+-- local isTest = true
+local isTest = false
 
 local devGameConfig = {
-    -- transparency = false,
-    transparency = true,
-    -- walkSpeed = 30,
-    walkSpeed = 80,
-
-    singleScene = true,
-    showWWI = false,
-    showScenes = false,
+    transparency = false,
+    -- transparency = true,
+    walkSpeed = 30,
+    fastWalkSpeed = 40,
+    -- walkSpeed = 80,
 
     disabledSpawns = {
-        'SpawnLocation-SkyShip' -- 
-        -- 'SpawnLocation-Block-Race' --
+        -- 'Spawn-S2-Bottom', --
+        -- "SpawnLocation-Block-Race-Top" --
+        "SpawnLocation-Block-Race-Bottom"
     }
+
 }
 
 local prodGameConfig = {
     transparency = true,
     walkSpeed = 30,
+    fastWalkSpeed = 40,
 
-    showMiniGame = false,
-    singleScene = false,
-    showWWI = true,
     showScenes = true,
     disabledSpawns = {
-        -- 'SpawnLocation-SkyShip', -- 
-        'SpawnLocation-Block-Race' --
+        -- 'Spawn-S2-Bottom', --
+        "SpawnLocation-Block-Race-Top" --
+        -- "SpawnLocation-Block-Race-Bottom"
     }
 }
 local gameConfig = isTest and devGameConfig or prodGameConfig
@@ -53,7 +51,25 @@ module.dialogColors = {
     Color3.fromRGB(253, 228, 158), Color3.fromRGB(158, 253, 179),
     Color3.fromRGB(158, 215, 253)
 }
+
 module.gemColors = {
+    Color3.fromRGB(255, 0, 0), ---------
+    Color3.fromRGB(255, 174, 0), ---------
+    Color3.fromRGB(255, 255, 0), ---------
+    Color3.fromRGB(63, 255, 0), ---------
+    Color3.fromRGB(21, 0, 255), ---------
+    Color3.fromRGB(157, 0, 255) ---------
+}
+
+-- red
+-- orange
+-- yellow
+-- green
+-- blue
+-- indigo
+-- violet
+
+module.gemColors2 = {
     Color3.fromRGB(255, 0, 0), ---------
     Color3.fromRGB(255, 174, 0), ---------
     Color3.fromRGB(255, 255, 0), ---------
@@ -132,7 +148,6 @@ local vulcan = {
 }
 
 module.characters = {
-
     raven05 = raven,
     raven04 = raven,
     raven001 = raven,
@@ -147,6 +162,8 @@ module.characters = {
     britta04 = britta,
 
     rat = {displayName = "Rat", decalId = '6152126688', backgroundColorIdx = 1},
+    hat = {displayName = "Hat", decalId = '1437453153', backgroundColorIdx = 1},
+    bat = {displayName = "Bat", decalId = '5898503705', backgroundColorIdx = 1},
     katBody = {
         displayName = "Kat",
         decalId = '6107346290',
@@ -683,21 +700,27 @@ module.characters = {
     liz2 = {displayName = "Liz", decalId = '5981806423', backgroundColorIdx = 2}
 }
 
+local function getImageId(characterName)
+    return module.characters[characterName]["decalId"]
+end
+
 module.wordConfigs = {
-    BAT = {soundId = "6145991240", imageId = "xxx"},
-    BOG = {soundId = "6149925692", imageId = "xxx"},
-    BEE = {soundId = "6149925692", imageId = module.characters.bee.decalId},
-    CAT = {
-        soundId = "6145990934",
-        imageId = module.characters.mitzyMeow01.decalId
-    },
-    DOG = {soundId = "6145990934", imageId = module.characters.angus01.decalId},
-    HAT = {soundId = "6145991587", imageId = "xxx"},
-    MAT = {soundId = "6145991865", imageId = "xxx"},
-    PAT = {soundId = "6145992548", imageId = "xxx"},
-    RAT = {soundId = "6145992816", imageId = "xxx"},
-    SAT = {soundId = "6145993194", imageId = "xxx"},
-    MOM = {soundId = "6199537750", imageId = "xxx"},
+    BAT = {soundId = "6145991240", imageId = getImageId('bat')},
+    BOG = {soundId = "6149925692", imageId = getImageId('bog')},
+    BEE = {soundId = "6149925692", imageId = getImageId('bee')},
+    CAT = {soundId = "6145990934", imageId = getImageId('mitzyMeow01')},
+    DOG = {soundId = "6145990934", imageId = getImageId('angus01')},
+    HAT = {soundId = "6145991587", imageId = getImageId('hat')},
+
+    MAT = {soundId = "6145991865", imageId = getImageId('mat')},
+    PAT = {soundId = "6145992548", imageId = "6253959302"},
+
+    RAT = {soundId = "6145992816", imageId = getImageId('rat')},
+    SAT = {soundId = "6145993194", imageId = "6253976498"},
+
+    MOM = {soundId = "6253993250", imageId = "6253993250"},
+    DAD = {soundId = "6253993637", imageId = "6253993637"},
+    VAT = {soundId = "6145992548", imageId = "6253982590"},
     YES = {soundId = "6199538408", imageId = "xxx"}
 }
 

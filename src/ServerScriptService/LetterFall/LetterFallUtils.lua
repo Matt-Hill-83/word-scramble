@@ -415,7 +415,7 @@ function styleLetterBlocks(props)
 end
 -- 
 -- 
-function styleLetterBlocksBD(props)
+local function styleLetterBlocksBD(props)
     local miniGameState = props.miniGameState
     local runTimeLetterFolder = miniGameState.runTimeLetterFolder
     local runTimeWordFolder = miniGameState.runTimeWordFolder
@@ -444,6 +444,8 @@ function styleLetterBlocksBD(props)
             local char = module.getCharFromLetterBlock(letterBlock)
             if availLetters[char] then
                 numAvailableBlocks = numAvailableBlocks + 1
+
+                letterBlock.CanCollide = false
                 module.applyStyleFromTemplate(
                     {
                         targetLetterBlock = letterBlock,

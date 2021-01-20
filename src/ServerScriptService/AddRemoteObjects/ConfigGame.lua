@@ -15,6 +15,9 @@ local function configPlayers()
         print('onCharacterAdded--------------------');
         character:WaitForChild("Humanoid").WalkSpeed =
             Constants.gameConfig.walkSpeed
+
+        print('Constants.gameConfig.walkSpeed' .. ' - start');
+        print(Constants.gameConfig.walkSpeed);
         print(character.Humanoid);
         local player = Players:GetPlayerFromCharacter(character)
         print(player);
@@ -101,7 +104,7 @@ function setVisibility()
 
     local tagBaseWallTransparent = CS:GetTagged("BaseWallTransparent")
     for i, wall in ipairs(tagBaseWallTransparent) do
-        Utils.setItemHeight({item = wall, height = 20})
+        Utils.setItemHeight({item = wall, height = 40})
         local newWallHeight = 1
         wall.Transparency = 1
         wall.CanCollide = true

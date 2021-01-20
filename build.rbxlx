@@ -64,18 +64,18 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1286.71826</X>
-					<Y>271.911407</Y>
-					<Z>16.0733299</Z>
-					<R00>-0.0557478741</R00>
-					<R01>-0.644798458</R01>
-					<R02>0.762316883</R02>
-					<R10>-0</R10>
-					<R11>0.763504207</R11>
-					<R12>0.645802796</R12>
-					<R20>-0.998444855</R20>
-					<R21>0.036002133</R21>
-					<R22>-0.0425637364</R22>
+					<X>-1338.97156</X>
+					<Y>270.648804</Y>
+					<Z>96.2809067</Z>
+					<R00>0.941884279</R00>
+					<R01>-0.21287033</R01>
+					<R02>0.259885311</R02>
+					<R10>1.4901163e-08</R10>
+					<R11>0.773611665</R11>
+					<R12>0.633660078</R12>
+					<R20>-0.335937709</R20>
+					<R21>-0.596834481</R21>
+					<R22>0.728652596</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
@@ -59460,7 +59460,7 @@ end)]]></ProtectedString>
 			<float name="CharacterJumpPower">50</float>
 			<float name="CharacterMaxSlopeAngle">89</float>
 			<bool name="CharacterUseJumpPower">true</bool>
-			<float name="CharacterWalkSpeed">50</float>
+			<float name="CharacterWalkSpeed">20</float>
 			<token name="DevCameraOcclusionMode">0</token>
 			<token name="DevComputerCameraMovementMode">0</token>
 			<token name="DevComputerMovementMode">0</token>
@@ -62523,6 +62523,9 @@ local function configPlayers()
         print('onCharacterAdded--------------------');
         character:WaitForChild("Humanoid").WalkSpeed =
             Constants.gameConfig.walkSpeed
+
+        print('Constants.gameConfig.walkSpeed' .. ' - start');
+        print(Constants.gameConfig.walkSpeed);
         print(character.Humanoid);
         local player = Players:GetPlayerFromCharacter(character)
         print(player);
@@ -62609,9 +62612,9 @@ function setVisibility()
 
     local tagBaseWallTransparent = CS:GetTagged("BaseWallTransparent")
     for i, wall in ipairs(tagBaseWallTransparent) do
-        Utils.setItemHeight({item = wall, height = 20})
+        Utils.setItemHeight({item = wall, height = 40})
         local newWallHeight = 1
-        wall.Transparency = 1
+        -- wall.Transparency = 1
         wall.CanCollide = true
         wall.Anchored = true
 
@@ -63196,7 +63199,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
         clickedLetter.CFrame = targetLetterBlock.CFrame
         -- hide the letter in rack where this letter is going
-        -- CS:AddTag(targetLetterBlock, "Hide")
+        CS:AddTag(clickedLetter, "Hide")
 
         local clickedChar =
             LetterFallUtils.getCharFromLetterBlock(clickedLetter)
@@ -63205,7 +63208,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             table.insert(miniGameState.foundLetters,
                          LetterFallUtils.getCharFromLetterBlock(clickedLetter))
         end
-        clickedLetter:Destroy()
+        -- clickedLetter:Destroy()
 
         local currentWord = table.concat(miniGameState.foundLetters, "")
         local wordComplete = table.find(words, currentWord)
@@ -67111,7 +67114,7 @@ function styleLetterBlocks(props)
 end
 -- 
 -- 
-function styleLetterBlocksBD(props)
+local function styleLetterBlocksBD(props)
     local miniGameState = props.miniGameState
     local runTimeLetterFolder = miniGameState.runTimeLetterFolder
     local runTimeWordFolder = miniGameState.runTimeWordFolder
@@ -67140,6 +67143,8 @@ function styleLetterBlocksBD(props)
             local char = module.getCharFromLetterBlock(letterBlock)
             if availLetters[char] then
                 numAvailableBlocks = numAvailableBlocks + 1
+
+                letterBlock.CanCollide = false
                 module.applyStyleFromTemplate(
                     {
                         targetLetterBlock = letterBlock,
