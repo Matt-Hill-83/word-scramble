@@ -17,7 +17,7 @@ local devGameConfig = {
 
 local prodGameConfig = {
     transparency = true,
-    walkSpeed = 30,
+    walkSpeed = 20,
 
     showScenes = true,
     disabledSpawns = {
