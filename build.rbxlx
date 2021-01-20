@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-951.007568</X>
-					<Y>280.564819</Y>
-					<Z>373.507996</Z>
-					<R00>0.834447443</R00>
-					<R01>-0.0983515978</R01>
-					<R02>0.542240322</R02>
-					<R10>-0</R10>
-					<R11>0.983945847</R11>
-					<R12>0.178468153</R12>
-					<R20>-0.551087677</R20>
-					<R21>-0.148922294</R21>
-					<R22>0.821050942</R22>
+					<X>612.217712</X>
+					<Y>118.297089</Y>
+					<Z>-698.157959</Z>
+					<R00>-0.993463337</R00>
+					<R01>-0.0409119204</R01>
+					<R02>0.106568053</R02>
+					<R10>3.72528985e-09</R10>
+					<R11>0.933567941</R11>
+					<R12>0.358400702</R12>
+					<R20>-0.114151351</R20>
+					<R21>0.356057972</R21>
+					<R22>-0.927465558</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1119.57605</X>
-					<Y>225.083694</Y>
-					<Z>118.264526</Z>
+					<X>612.004578</X>
+					<Y>117.580292</Y>
+					<Z>-696.30304</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -16983,7 +16983,7 @@ local function onActivated()
 		
 		wait(DURATION)
 		
-		local fadeOutSteps = FADE_OUT_TIME * 30
+		local fadeOutSteps = FADE_OUT_TIME * 300
 		for t = fadeOutSteps, 0, -1 do
 			callOnChildren(character, function(object)
 				makeInvisible(object, t / fadeOutSteps, originalTransparencies)
@@ -42341,45 +42341,6 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="Weld" referent="RBXbe9f90c3b66a495ba70229603f89c7f8">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>4</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>1</R12>
-												<R20>0</R20>
-												<R21>-1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>-7.75001526</X>
-												<Y>-0.5</Y>
-												<Z>-118.75</Z>
-												<R00>0</R00>
-												<R01>-1</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>1</R12>
-												<R20>-1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBXdef1b8919ea043b19d7c94b52b62af1c</Ref>
-											<Ref name="Part1">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
 									<Item class="Weld" referent="RBX63491765e28445b0b6ddab5ea8d103b1">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
@@ -51267,7 +51228,7 @@ end)]]></ProtectedString>
 										<token name="BottomSurface">4</token>
 										<token name="BottomSurfaceInput">0</token>
 										<CoordinateFrame name="CFrame">
-											<X>-1246.92139</X>
+											<X>-1253.42139</X>
 											<Y>183.755035</Y>
 											<Z>140.764771</Z>
 											<R00>0</R00>
@@ -51328,10 +51289,49 @@ end)]]></ProtectedString>
 										<Vector3 name="size">
 											<X>1</X>
 											<Y>1</Y>
-											<Z>256</Z>
+											<Z>243</Z>
 										</Vector3>
 									</Properties>
-									<Item class="Weld" referent="RBX0f8f87b95580484aa4e918c56a53363a">
+									<Item class="Weld" referent="RBX2a2e5c5d99564c2785211062c01b16b8">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>1</R12>
+												<R20>0</R20>
+												<R21>-1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>-196.085083</X>
+												<Y>-0.5</Y>
+												<Z>94.045166</Z>
+												<R00>0.707106769</R00>
+												<R01>0.707106769</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>1</R12>
+												<R20>0.707106769</R20>
+												<R21>-0.707106769</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBX68f2f2805028416d968a0c87aa94cdc5</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBXb03bc7e66b144ac789ae1a90ad44e3a8">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -51349,7 +51349,46 @@ end)]]></ProtectedString>
 												<R22>0</R22>
 											</CoordinateFrame>
 											<CoordinateFrame name="C1">
-												<X>-22.75</X>
+												<X>-125.25</X>
+												<Y>4</Y>
+												<Z>7.75001526</Z>
+												<R00>0</R00>
+												<R01>-1</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBXdef1b8919ea043b19d7c94b52b62af1c</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBX7395c1541d6a4b00acd9846a834f635e">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>-29.25</X>
 												<Y>4</Y>
 												<Z>7.75001526</Z>
 												<R00>0</R00>
@@ -51370,7 +51409,7 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="Weld" referent="RBXbaa19cb688ce4899b777735c3392ed99">
+									<Item class="Weld" referent="RBXa2cd89535f5840aab8f8d8a31ef48302">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -51388,631 +51427,7 @@ end)]]></ProtectedString>
 												<R22>0</R22>
 											</CoordinateFrame>
 											<CoordinateFrame name="C1">
-												<X>-102.75</X>
-												<Y>4</Y>
-												<Z>7.75001526</Z>
-												<R00>0</R00>
-												<R01>-1</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBX7d6ee9db4dc64d7f97ea0322fa55312f</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBX18c86e853bfe451f980cb59df1e9d25b">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>-0.5</X>
-												<Y>0</Y>
-												<Z>0</Z>
-												<R00>0</R00>
-												<R01>0</R01>
-												<R02>-1</R02>
-												<R10>0</R10>
-												<R11>1</R11>
-												<R12>0</R12>
-												<R20>1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>-19.6307373</X>
-												<Y>-11.4649506</Y>
-												<Z>-4.02000427</Z>
-												<R00>1</R00>
-												<R01>2.10715461e-05</R01>
-												<R02>8.75897967e-06</R02>
-												<R10>-2.10716044e-05</R10>
-												<R11>1</R11>
-												<R12>6.94203027e-06</R12>
-												<R20>-8.75883052e-06</R20>
-												<R21>-6.94221626e-06</R21>
-												<R22>1</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBXa9ee06d3a7ba49ea8efed9d3f511fcb9</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBX61ad8104fb3d42efb8aae4ba8746e646">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>-86.75</X>
-												<Y>4</Y>
-												<Z>7.75001526</Z>
-												<R00>0</R00>
-												<R01>-1</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBXbb01f7c6957a423fb277a4bb46318579</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBX793c50d59aec40a7ba3251ac50def57e">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>24.25</X>
-												<Y>4</Y>
-												<Z>7.75001526</Z>
-												<R00>0</R00>
-												<R01>-1</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBXce2072184f14498aa94fb10c81a125ef</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBXfa634a27598d40d19a98482d26771675">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>-38.75</X>
-												<Y>4</Y>
-												<Z>7.75001526</Z>
-												<R00>0</R00>
-												<R01>-1</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBXd8bd11383bcd4a10a99d274a50d79b7b</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBXc46c8a4262964cac99b42f9eaff65bb7">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>56.25</X>
-												<Y>4</Y>
-												<Z>7.75001526</Z>
-												<R00>0</R00>
-												<R01>-1</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBXafd134f243e740448f84d4314aaaff20</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBX95c4cd9d51fa475f8b88cfd0a8cb527b">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>72.25</X>
-												<Y>4</Y>
-												<Z>7.75001526</Z>
-												<R00>0</R00>
-												<R01>-1</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBX0fe0e8c812764ddda3370537ad2f6e4c</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBX63eb565894ae484184b1306192f0e5b3">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>-54.75</X>
-												<Y>4</Y>
-												<Z>7.75001526</Z>
-												<R00>0</R00>
-												<R01>-1</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBX3b26fa6a7dbb4adcb47379d7f38b5b3f</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBX341cfaf7d033429abffe50b99b6aaac9">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>88.25</X>
-												<Y>4</Y>
-												<Z>7.75001526</Z>
-												<R00>0</R00>
-												<R01>-1</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBX7b4c7b6929a24e7b8ff29392aa50fe6b</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBXcc04d90d9cbe45a18cd3c127c294489b">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>104.25</X>
-												<Y>4</Y>
-												<Z>7.75001526</Z>
-												<R00>0</R00>
-												<R01>-1</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBXcb7857d481984d0197efc56fc48577f5</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBX0257f4ce7ff146c2ab49764143bd6460">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>-70.75</X>
-												<Y>4</Y>
-												<Z>7.75001526</Z>
-												<R00>0</R00>
-												<R01>-1</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBXd7f19382f0ae41ed85b9117feb92bfaf</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBX2c55fa866f034a399fdcd685506d18c7">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>7.50003052</X>
-												<Y>4</Y>
-												<Z>-120</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBX7a332954dcb541b0836e8d8ab02ba714</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBXdafdfad213884d12810e3096b393b877">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>40.25</X>
-												<Y>4</Y>
-												<Z>7.75001526</Z>
-												<R00>0</R00>
-												<R01>-1</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBXad37d8135a1d467ca2dfde2e5bc663ab</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBXa3727bbd52914f48877bd5255515fc3d">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>120.25</X>
-												<Y>4</Y>
-												<Z>7.75001526</Z>
-												<R00>0</R00>
-												<R01>-1</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBX5174a65f46f945dfac3c5a2f826a7195</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBX54cd32b285af4ef1a74c12238a75b393">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>-0.5</X>
-												<Y>0</Y>
-												<Z>0</Z>
-												<R00>0</R00>
-												<R01>0</R01>
-												<R02>-1</R02>
-												<R10>0</R10>
-												<R11>1</R11>
-												<R12>0</R12>
-												<R20>1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>-79.6324463</X>
-												<Y>-11.4649963</Y>
-												<Z>-4.01951599</Z>
-												<R00>1</R00>
-												<R01>2.10715461e-05</R01>
-												<R02>8.75897967e-06</R02>
-												<R10>-2.10716044e-05</R10>
-												<R11>1</R11>
-												<R12>6.94203027e-06</R12>
-												<R20>-8.75883052e-06</R20>
-												<R21>-6.94221626e-06</R21>
-												<R22>1</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBX73c598427652472a8efd176c2f7f11ce</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBX08b2ad76b4684735a8c28901f8071224">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>8.25</X>
-												<Y>4</Y>
-												<Z>7.75001526</Z>
-												<R00>0</R00>
-												<R01>-1</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>1</R20>
-												<R21>0</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
-											<Ref name="Part1">RBX89c78229d349403e851e2266e1592503</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBX3adcf5b972d441b8a3622f81986e85d2">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>-6.75</X>
+												<X>-13.25</X>
 												<Y>4</Y>
 												<Z>7.75001526</Z>
 												<R00>0</R00>
@@ -52033,6 +51448,630 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
+									<Item class="Weld" referent="RBXb87aa1911f404411920e14b487687f2f">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>-109.25</X>
+												<Y>4</Y>
+												<Z>7.75001526</Z>
+												<R00>0</R00>
+												<R01>-1</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBX7d6ee9db4dc64d7f97ea0322fa55312f</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBX1859a9d350a8412f96d0dc66ebe13605">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>-0.5</X>
+												<Y>0</Y>
+												<Z>0</Z>
+												<R00>0</R00>
+												<R01>0</R01>
+												<R02>-1</R02>
+												<R10>0</R10>
+												<R11>1</R11>
+												<R12>0</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>-13.1307373</X>
+												<Y>-11.4650879</Y>
+												<Z>-4.02006531</Z>
+												<R00>1</R00>
+												<R01>2.10715461e-05</R01>
+												<R02>8.75897967e-06</R02>
+												<R10>-2.10716044e-05</R10>
+												<R11>1</R11>
+												<R12>6.94203027e-06</R12>
+												<R20>-8.75883052e-06</R20>
+												<R21>-6.94221626e-06</R21>
+												<R22>1</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBXa9ee06d3a7ba49ea8efed9d3f511fcb9</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBX9291d51e3e814ac1864c2f30f161a907">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>-93.25</X>
+												<Y>4</Y>
+												<Z>7.75001526</Z>
+												<R00>0</R00>
+												<R01>-1</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBXbb01f7c6957a423fb277a4bb46318579</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBXc34d9a7ae2a6468488121766c182a127">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>17.75</X>
+												<Y>4</Y>
+												<Z>7.75001526</Z>
+												<R00>0</R00>
+												<R01>-1</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBXce2072184f14498aa94fb10c81a125ef</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBX4cddc9fc8c894bd0b37059ef15022f99">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>-45.25</X>
+												<Y>4</Y>
+												<Z>7.75001526</Z>
+												<R00>0</R00>
+												<R01>-1</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBXd8bd11383bcd4a10a99d274a50d79b7b</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBX5e3f0df8e3c048349b082f041ac8a93a">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>49.75</X>
+												<Y>4</Y>
+												<Z>7.75001526</Z>
+												<R00>0</R00>
+												<R01>-1</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBXafd134f243e740448f84d4314aaaff20</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBX73bb81b9bec74ecd8b830e9acc91db2b">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>65.75</X>
+												<Y>4</Y>
+												<Z>7.75001526</Z>
+												<R00>0</R00>
+												<R01>-1</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBX0fe0e8c812764ddda3370537ad2f6e4c</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBX5af0fdb333c24dada5a054a0d610aea9">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>-61.25</X>
+												<Y>4</Y>
+												<Z>7.75001526</Z>
+												<R00>0</R00>
+												<R01>-1</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBX3b26fa6a7dbb4adcb47379d7f38b5b3f</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBX10d62c808ce4416ba60da13fdd459308">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>81.75</X>
+												<Y>4</Y>
+												<Z>7.75001526</Z>
+												<R00>0</R00>
+												<R01>-1</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBX7b4c7b6929a24e7b8ff29392aa50fe6b</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBXa57af234286c4b1b905720c5a9e8a101">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>97.75</X>
+												<Y>4</Y>
+												<Z>7.75001526</Z>
+												<R00>0</R00>
+												<R01>-1</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBXcb7857d481984d0197efc56fc48577f5</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBX4ee78e348a1145ef9f107d8744661d1b">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>-77.25</X>
+												<Y>4</Y>
+												<Z>7.75001526</Z>
+												<R00>0</R00>
+												<R01>-1</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBXd7f19382f0ae41ed85b9117feb92bfaf</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBXea7979f60efe435293bce1f23327fcf2">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>33.75</X>
+												<Y>4</Y>
+												<Z>7.75001526</Z>
+												<R00>0</R00>
+												<R01>-1</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBXad37d8135a1d467ca2dfde2e5bc663ab</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBX62fbf48f21a541c3a9bad6914f326f89">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>7.50003052</X>
+												<Y>4</Y>
+												<Z>-113.5</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBX7a332954dcb541b0836e8d8ab02ba714</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBX1e0914f1f0264ffb814ce7dec6e7ec9f">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>113.75</X>
+												<Y>4</Y>
+												<Z>7.75001526</Z>
+												<R00>0</R00>
+												<R01>-1</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBX5174a65f46f945dfac3c5a2f826a7195</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBXc219dc9692d2490ba9b4ef1784565f8c">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>-0.5</X>
+												<Y>0</Y>
+												<Z>0</Z>
+												<R00>0</R00>
+												<R01>0</R01>
+												<R02>-1</R02>
+												<R10>0</R10>
+												<R11>1</R11>
+												<R12>0</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>-73.1324463</X>
+												<Y>-11.4651337</Y>
+												<Z>-4.01957703</Z>
+												<R00>1</R00>
+												<R01>2.10715461e-05</R01>
+												<R02>8.75897967e-06</R02>
+												<R10>-2.10716044e-05</R10>
+												<R11>1</R11>
+												<R12>6.94203027e-06</R12>
+												<R20>-8.75883052e-06</R20>
+												<R21>-6.94221626e-06</R21>
+												<R22>1</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBX73c598427652472a8efd176c2f7f11ce</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBX0245a5885a9a41edaa734eb0758f2644">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>1.75</X>
+												<Y>4</Y>
+												<Z>7.75001526</Z>
+												<R00>0</R00>
+												<R01>-1</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>1</R20>
+												<R21>0</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX9dcb438898674b38819242083adbcf32</Ref>
+											<Ref name="Part1">RBX89c78229d349403e851e2266e1592503</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
 								</Item>
 								<Item class="Part" referent="RBX6ca3265a7ff84807b1fe7ac14c04a5f5">
 									<Properties>
@@ -52049,7 +52088,7 @@ end)]]></ProtectedString>
 										<CoordinateFrame name="CFrame">
 											<X>-1119.42139</X>
 											<Y>183.755035</Y>
-											<Z>13.7647629</Z>
+											<Z>8.26476288</Z>
 											<R00>0</R00>
 											<R01>0</R01>
 											<R02>-1</R02>
@@ -52106,12 +52145,51 @@ end)]]></ProtectedString>
 										<token name="formFactorRaw">0</token>
 										<token name="shape">1</token>
 										<Vector3 name="size">
-											<X>255</X>
+											<X>244</X>
 											<Y>1</Y>
 											<Z>1</Z>
 										</Vector3>
 									</Properties>
-									<Item class="Weld" referent="RBX08429b8eb9d94d9eae9dcd0e80f2b946">
+									<Item class="Weld" referent="RBX76877b77771b499d92087cd0853c965f">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>5.7220459e-06</X>
+												<Y>0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>1</R12>
+												<R20>0</R20>
+												<R21>-1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>-195.024414</X>
+												<Y>-0.5</Y>
+												<Z>-94.3988037</Z>
+												<R00>0.707106769</R00>
+												<R01>0.707106769</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>1</R12>
+												<R20>0.707106769</R20>
+												<R21>-0.707106769</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX6ca3265a7ff84807b1fe7ac14c04a5f5</Ref>
+											<Ref name="Part1">RBX68f2f2805028416d968a0c87aa94cdc5</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBXea584cec35464d8cb135a6d01aff4b4a">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -52129,7 +52207,7 @@ end)]]></ProtectedString>
 												<R22>0</R22>
 											</CoordinateFrame>
 											<CoordinateFrame name="C1">
-												<X>-103.5</X>
+												<X>-109</X>
 												<Y>4</Y>
 												<Z>-7.5</Z>
 												<R00>1</R00>
@@ -52150,7 +52228,7 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="Weld" referent="RBXbdd4d4e509e64a03af3948ad9de16b6e">
+									<Item class="Weld" referent="RBXde33965e15d247cda4284a1e2089d6ef">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -52168,7 +52246,7 @@ end)]]></ProtectedString>
 												<R22>0</R22>
 											</CoordinateFrame>
 											<CoordinateFrame name="C1">
-												<X>-87.4999695</X>
+												<X>-92.9999695</X>
 												<Y>4</Y>
 												<Z>-7.5</Z>
 												<R00>1</R00>
@@ -52189,7 +52267,7 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="Weld" referent="RBXddca38daea30464f990054280d6ace0f">
+									<Item class="Weld" referent="RBXe8393113f11440f19412ccd5c516631c">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -52207,7 +52285,7 @@ end)]]></ProtectedString>
 												<R22>0</R22>
 											</CoordinateFrame>
 											<CoordinateFrame name="C1">
-												<X>-71.5000305</X>
+												<X>-77.0000305</X>
 												<Y>4</Y>
 												<Z>-7.5</Z>
 												<R00>1</R00>
@@ -52228,7 +52306,7 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="Weld" referent="RBXee58c0812ff54cf1842bbea42fa05902">
+									<Item class="Weld" referent="RBXbfe7a281f66145e3b9c166dafd384743">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -52246,7 +52324,7 @@ end)]]></ProtectedString>
 												<R22>0</R22>
 											</CoordinateFrame>
 											<CoordinateFrame name="C1">
-												<X>-23.4999962</X>
+												<X>-28.9999962</X>
 												<Y>4</Y>
 												<Z>-7.5</Z>
 												<R00>1</R00>
@@ -52267,7 +52345,7 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="Weld" referent="RBX6955b4cf7c7549b7ae330bca65867596">
+									<Item class="Weld" referent="RBX46d50a7f92354baeb183ec11046af443">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -52285,7 +52363,7 @@ end)]]></ProtectedString>
 												<R22>0</R22>
 											</CoordinateFrame>
 											<CoordinateFrame name="C1">
-												<X>-7.49999619</X>
+												<X>-12.9999962</X>
 												<Y>4</Y>
 												<Z>-7.5</Z>
 												<R00>1</R00>
@@ -52306,7 +52384,7 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="Weld" referent="RBX1e1cbf4644974677984c7dfda9ea13a9">
+									<Item class="Weld" referent="RBX661bea089b03401eac056842e3849ada">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -52324,7 +52402,7 @@ end)]]></ProtectedString>
 												<R22>0</R22>
 											</CoordinateFrame>
 											<CoordinateFrame name="C1">
-												<X>-39.4999962</X>
+												<X>-44.9999962</X>
 												<Y>4</Y>
 												<Z>-7.5</Z>
 												<R00>1</R00>
@@ -52345,7 +52423,7 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="Weld" referent="RBX777eaec7cf0c415289f35a2e21d54841">
+									<Item class="Weld" referent="RBX61c5186bdad3406ca2f3edbdc38d5887">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -52363,7 +52441,7 @@ end)]]></ProtectedString>
 												<R22>0</R22>
 											</CoordinateFrame>
 											<CoordinateFrame name="C1">
-												<X>23.5000038</X>
+												<X>18.0000038</X>
 												<Y>4</Y>
 												<Z>-7.5</Z>
 												<R00>1</R00>
@@ -52384,7 +52462,7 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="Weld" referent="RBXb3e262e48ff741a19ffe1052fcccfebb">
+									<Item class="Weld" referent="RBX27d38a32124f476aaa985bf67d598759">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -52402,7 +52480,7 @@ end)]]></ProtectedString>
 												<R22>0</R22>
 											</CoordinateFrame>
 											<CoordinateFrame name="C1">
-												<X>7.50003338</X>
+												<X>2.00003338</X>
 												<Y>4</Y>
 												<Z>-7.5</Z>
 												<R00>1</R00>
@@ -52423,7 +52501,7 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="Weld" referent="RBX74a52d60ddba45b6ae3b9b9b9c4dd516">
+									<Item class="Weld" referent="RBX848bd0c3c8014eb89f9d4ee7f6b0db42">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -52441,7 +52519,7 @@ end)]]></ProtectedString>
 												<R22>0</R22>
 											</CoordinateFrame>
 											<CoordinateFrame name="C1">
-												<X>55.4999733</X>
+												<X>49.9999733</X>
 												<Y>4</Y>
 												<Z>-7.5</Z>
 												<R00>1</R00>
@@ -52462,7 +52540,7 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="Weld" referent="RBX42d705f8fbf4426c81bf6cbb7ba90334">
+									<Item class="Weld" referent="RBX2f90545c69594545b4e8b93ec5f9b88d">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -52482,7 +52560,7 @@ end)]]></ProtectedString>
 											<CoordinateFrame name="C1">
 												<X>7.75</X>
 												<Y>4</Y>
-												<Z>119.750015</Z>
+												<Z>114.250015</Z>
 												<R00>0</R00>
 												<R01>-1</R01>
 												<R02>0</R02>
@@ -52501,7 +52579,7 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="Weld" referent="RBX97a97134b78c40c7b6ec6f1975c57149">
+									<Item class="Weld" referent="RBX0fe16b8bb8a747eba3f12643727755e0">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -52519,7 +52597,7 @@ end)]]></ProtectedString>
 												<R22>0</R22>
 											</CoordinateFrame>
 											<CoordinateFrame name="C1">
-												<X>119.5</X>
+												<X>114</X>
 												<Y>4</Y>
 												<Z>-7.5</Z>
 												<R00>1</R00>
@@ -52540,7 +52618,7 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="Weld" referent="RBX6a76a0dddcb94ef989406a628642a21a">
+									<Item class="Weld" referent="RBX8633ee743bd74e82a43499c132ec9948">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -52558,85 +52636,7 @@ end)]]></ProtectedString>
 												<R22>0</R22>
 											</CoordinateFrame>
 											<CoordinateFrame name="C1">
-												<X>71.4999695</X>
-												<Y>4</Y>
-												<Z>-7.5</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX6ca3265a7ff84807b1fe7ac14c04a5f5</Ref>
-											<Ref name="Part1">RBXb4c963f9219443428dde72399de59b0b</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBX5ed66ae989f54936956dc9ad747ab315">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>3.81469727e-06</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>87.5</X>
-												<Y>4</Y>
-												<Z>-7.5</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX6ca3265a7ff84807b1fe7ac14c04a5f5</Ref>
-											<Ref name="Part1">RBXf5b75ce1bff3470f8ae625a786d8aa9c</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-									<Item class="Weld" referent="RBX5e72edd53c474111b46d51907fd52708">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>3.81469727e-06</X>
-												<Y>-0.5</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>103.5</X>
+												<X>98</X>
 												<Y>4</Y>
 												<Z>-7.5</Z>
 												<R00>1</R00>
@@ -52657,7 +52657,7 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="Weld" referent="RBX9958cdcb7957409294750876047c4f67">
+									<Item class="Weld" referent="RBX9817fff6ec1c480196c1f22a703eedfb">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -52675,7 +52675,7 @@ end)]]></ProtectedString>
 												<R22>0</R22>
 											</CoordinateFrame>
 											<CoordinateFrame name="C1">
-												<X>39.5000305</X>
+												<X>34.0000305</X>
 												<Y>4</Y>
 												<Z>-7.5</Z>
 												<R00>1</R00>
@@ -52696,7 +52696,7 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="Weld" referent="RBXdca180948b894363b1e7499b8efab69e">
+									<Item class="Weld" referent="RBXdc8bd443001d4133acf7884179b4b3db">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="C0">
@@ -52714,7 +52714,7 @@ end)]]></ProtectedString>
 												<R22>0</R22>
 											</CoordinateFrame>
 											<CoordinateFrame name="C1">
-												<X>-55.5000267</X>
+												<X>-61.0000267</X>
 												<Y>4</Y>
 												<Z>-7.5</Z>
 												<R00>1</R00>
@@ -52731,6 +52731,84 @@ end)]]></ProtectedString>
 											<string name="Name">Weld</string>
 											<Ref name="Part0">RBX6ca3265a7ff84807b1fe7ac14c04a5f5</Ref>
 											<Ref name="Part1">RBX80d6c211688949159e0a07c64a16f513</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBXad5054e5b775494eb3dc8085a8dd2cb4">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>3.81469727e-06</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>65.9999695</X>
+												<Y>4</Y>
+												<Z>-7.5</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX6ca3265a7ff84807b1fe7ac14c04a5f5</Ref>
+											<Ref name="Part1">RBXb4c963f9219443428dde72399de59b0b</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBX2284d242be5f4aab8c7c853b8a05c1ee">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>3.81469727e-06</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>82</X>
+												<Y>4</Y>
+												<Z>-7.5</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>0</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX6ca3265a7ff84807b1fe7ac14c04a5f5</Ref>
+											<Ref name="Part1">RBXf5b75ce1bff3470f8ae625a786d8aa9c</Ref>
 											<int64 name="SourceAssetId">-1</int64>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
@@ -53092,84 +53170,6 @@ end)]]></ProtectedString>
 										<Z>16</Z>
 									</Vector3>
 								</Properties>
-								<Item class="Weld" referent="RBX6bfd24074d65425d9a7808b95a907f3a">
-									<Properties>
-										<BinaryString name="AttributesSerialize"></BinaryString>
-										<CoordinateFrame name="C0">
-											<X>0</X>
-											<Y>-0.5</Y>
-											<Z>0</Z>
-											<R00>0.99999994</R00>
-											<R01>0</R01>
-											<R02>0</R02>
-											<R10>0</R10>
-											<R11>0</R11>
-											<R12>-1</R12>
-											<R20>0</R20>
-											<R21>0.99999994</R21>
-											<R22>0</R22>
-										</CoordinateFrame>
-										<CoordinateFrame name="C1">
-											<X>199.153076</X>
-											<Y>0.5</Y>
-											<Z>-71.1530762</Z>
-											<R00>0.707106769</R00>
-											<R01>0.707106769</R01>
-											<R02>0</R02>
-											<R10>0</R10>
-											<R11>0</R11>
-											<R12>-1</R12>
-											<R20>-0.707106769</R20>
-											<R21>0.707106769</R21>
-											<R22>0</R22>
-										</CoordinateFrame>
-										<bool name="Enabled">true</bool>
-										<string name="Name">Weld</string>
-										<Ref name="Part0">RBX68f2f2805028416d968a0c87aa94cdc5</Ref>
-										<Ref name="Part1">RBX6ca3265a7ff84807b1fe7ac14c04a5f5</Ref>
-										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags"></BinaryString>
-									</Properties>
-								</Item>
-								<Item class="Weld" referent="RBX7bc029c61cfe457286d59fd173a3d113">
-									<Properties>
-										<BinaryString name="AttributesSerialize"></BinaryString>
-										<CoordinateFrame name="C0">
-											<X>0</X>
-											<Y>-0.5</Y>
-											<Z>0</Z>
-											<R00>0.99999994</R00>
-											<R01>0</R01>
-											<R02>0</R02>
-											<R10>0</R10>
-											<R11>0</R11>
-											<R12>-1</R12>
-											<R20>0</R20>
-											<R21>0.99999994</R21>
-											<R22>0</R22>
-										</CoordinateFrame>
-										<CoordinateFrame name="C1">
-											<X>72.1530762</X>
-											<Y>0.5</Y>
-											<Z>-198.653076</Z>
-											<R00>0.707106769</R00>
-											<R01>0.707106769</R01>
-											<R02>0</R02>
-											<R10>0</R10>
-											<R11>0</R11>
-											<R12>-1</R12>
-											<R20>-0.707106769</R20>
-											<R21>0.707106769</R21>
-											<R22>0</R22>
-										</CoordinateFrame>
-										<bool name="Enabled">true</bool>
-										<string name="Name">Weld</string>
-										<Ref name="Part0">RBX68f2f2805028416d968a0c87aa94cdc5</Ref>
-										<Ref name="Part1">RBX9dcb438898674b38819242083adbcf32</Ref>
-										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags"></BinaryString>
-									</Properties>
-								</Item>
 							</Item>
 						</Item>
 					</Item>
@@ -57090,8 +57090,8 @@ function addRemoteObjects()
             end
         end
 
-        local offsetX = 120
-        local offsetY = (islandIndex - 1) * 120
+        local offsetX = 250
+        local offsetY = (islandIndex - 1) * 50
         -- local offsetX = 100 * islandIndex
         newIsland.Parent = myStuff
         newIsland.Name = "xxx"
@@ -57250,26 +57250,26 @@ function setVisibility()
     local canCollideOff = CS:GetTagged("CanCollideOff")
     for i, item in ipairs(canCollideOff) do item.CanCollide = false end
 
-    -- local tagBaseWallTransparent = CS:GetTagged("BaseWallTransparent")
-    -- for i, wall in ipairs(tagBaseWallTransparent) do
-    --     Utils.setItemHeight({item = wall, height = 20})
-    --     local newWallHeight = 1
-    --     wall.Transparency = 1
-    --     wall.CanCollide = true
-    --     wall.Anchored = true
+    local tagBaseWallTransparent = CS:GetTagged("BaseWallTransparent")
+    for i, wall in ipairs(tagBaseWallTransparent) do
+        Utils.setItemHeight({item = wall, height = 20})
+        local newWallHeight = 1
+        wall.Transparency = 1
+        wall.CanCollide = true
+        wall.Anchored = true
 
-    --     local newWall = wall:Clone()
+        local newWall = wall:Clone()
 
-    --     newWall.Parent = wall.Parent
-    --     newWall.Size = newWall.Size +
-    --                        Vector3.new(0, newWallHeight - newWall.Size.Y, 0)
-    --     newWall.Position = newWall.Position +
-    --                            Vector3.new(0,
-    --                                        -(wall.Size.Y - newWall.Size.Y) / 2,
-    --                                        0)
-    --     newWall.Transparency = 0
-    --     CS:RemoveTag(newWall, "BaseWallTransparent")
-    -- end
+        newWall.Parent = wall.Parent
+        newWall.Size = newWall.Size +
+                           Vector3.new(0, newWallHeight - newWall.Size.Y, 0)
+        newWall.Position = newWall.Position +
+                               Vector3.new(0,
+                                           -(wall.Size.Y - newWall.Size.Y) / 2,
+                                           0)
+        newWall.Transparency = 0
+        CS:RemoveTag(newWall, "BaseWallTransparent")
+    end
 
 end
 
@@ -61033,14 +61033,14 @@ function tableToString(tab, a, b, c, d)
     return table.concat(res, "\n")
 end
 
-local test = {
-    str = "Result:\n\t- Unknown",
-    number = 12345,
-    child = {a = "b"},
-    cyclic = {}
-}
-test.child.cyclic = test.cyclic
-test.another = test.child
+-- local test = {
+--     str = "Result:\n\t- Unknown",
+--     number = 12345,
+--     child = {a = "b"},
+--     cyclic = {}
+-- }
+-- test.child.cyclic = test.cyclic
+-- test.another = test.child
 
 function mergeTables(t1, t2) for k, v in pairs(t2) do t1[k] = v end end
 

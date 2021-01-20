@@ -108,26 +108,26 @@ function setVisibility()
     local canCollideOff = CS:GetTagged("CanCollideOff")
     for i, item in ipairs(canCollideOff) do item.CanCollide = false end
 
-    -- local tagBaseWallTransparent = CS:GetTagged("BaseWallTransparent")
-    -- for i, wall in ipairs(tagBaseWallTransparent) do
-    --     Utils.setItemHeight({item = wall, height = 20})
-    --     local newWallHeight = 1
-    --     wall.Transparency = 1
-    --     wall.CanCollide = true
-    --     wall.Anchored = true
+    local tagBaseWallTransparent = CS:GetTagged("BaseWallTransparent")
+    for i, wall in ipairs(tagBaseWallTransparent) do
+        Utils.setItemHeight({item = wall, height = 20})
+        local newWallHeight = 1
+        wall.Transparency = 1
+        wall.CanCollide = true
+        wall.Anchored = true
 
-    --     local newWall = wall:Clone()
+        local newWall = wall:Clone()
 
-    --     newWall.Parent = wall.Parent
-    --     newWall.Size = newWall.Size +
-    --                        Vector3.new(0, newWallHeight - newWall.Size.Y, 0)
-    --     newWall.Position = newWall.Position +
-    --                            Vector3.new(0,
-    --                                        -(wall.Size.Y - newWall.Size.Y) / 2,
-    --                                        0)
-    --     newWall.Transparency = 0
-    --     CS:RemoveTag(newWall, "BaseWallTransparent")
-    -- end
+        newWall.Parent = wall.Parent
+        newWall.Size = newWall.Size +
+                           Vector3.new(0, newWallHeight - newWall.Size.Y, 0)
+        newWall.Position = newWall.Position +
+                               Vector3.new(0,
+                                           -(wall.Size.Y - newWall.Size.Y) / 2,
+                                           0)
+        newWall.Transparency = 0
+        CS:RemoveTag(newWall, "BaseWallTransparent")
+    end
 
 end
 
