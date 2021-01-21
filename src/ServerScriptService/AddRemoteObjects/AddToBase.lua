@@ -29,7 +29,6 @@ local function addRemoteObjects()
             "VAT", --
             "AT" --
         },
-        -- gridSize = {numRow = 5, numCol = 5}
         gridSize = {numRow = 26, numCol = 26}
     }
 
@@ -37,7 +36,6 @@ local function addRemoteObjects()
         -- words = {"CAT"},
         words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "ZIP"},
         gridSize = {numRow = 4, numCol = 4}
-        -- gridSize = {numRow = 26, numCol = 26}
     }
 
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
