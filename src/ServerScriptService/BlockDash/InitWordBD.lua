@@ -44,6 +44,12 @@ local function initWord(props)
                                                             "WordLetterBlockPositioner")
     print('letterPositioner' .. ' - start');
     print(letterPositioner);
+
+    if not letterPositioner then return end
+    -- 
+    -- 
+    -- 
+
     local wordPositioner = Utils.getFirstDescendantByName(sectorFolder,
                                                           "WordPositioner")
     newWord.Parent = runTimeWordFolder
@@ -66,7 +72,7 @@ local function initWord(props)
             offsetConfig = {
                 useParentNearEdge = Vector3.new(1, 1, 1),
                 useChildNearEdge = Vector3.new(1, 1, 1),
-                offsetAdder = Vector3.new(0, offsetY * (wordIndex - 2),
+                offsetAdder = Vector3.new(0, offsetY * (wordIndex - 1),
                                           colOffsetX)
             }
         })
