@@ -98,9 +98,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
     end
 
     if targetLetterBlock then
-        CS:AddTag(clickedLetter, LetterFallUtils.tagNames.Found)
-        CS:RemoveTag(clickedLetter, LetterFallUtils.tagNames.RackLetter)
-
         local letterBlockCFrame = clickedLetter.CFrame
 
         Utils3.tween({
@@ -111,9 +108,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         })
 
         clickedLetter.CFrame = targetLetterBlock.CFrame
-        -- hide the letter in rack where this letter is going
-        -- CS:AddTag(targetLetterBlock, "Hide")
-
         LetterFallUtils.applyStyleFromTemplateBD(
             {
                 targetLetterBlock = targetLetterBlock,
@@ -136,15 +130,9 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         if (wordComplete) then
             local currentWord2 = Constants.wordConfigs[currentWord]
             if currentWord2 then
-                local soundId = currentWord2['soundId']
+                local fireSound = '5207654419'
+                local soundId = currentWord2['soundId'] or fireSound
                 Utils.playSound(soundId)
-                -- if (soundId) then
-                --     local sound = Instance.new("Sound", workspace)
-                --     sound.SoundId = "rbxassetid://" .. soundId
-                --     sound.EmitterSize = 5
-                --     sound.Looped = false
-                --     if not sound.IsPlaying then sound:Play() end
-                -- end
             end
 
             local gemTemplate = Utils.getFromTemplates("GemTemplate")
@@ -157,7 +145,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             newGem.Handle.Color = Constants.gemColors[rand]
 
             miniGameState.activeWord = nil
-
             miniGameState.foundLetters = {}
             miniGameState.currentLetterIndex = 1
 
@@ -174,7 +161,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                     parent = activeWord.word
                 })
             for _, wordLetter in ipairs(wordLetters) do
-                Utils.playSound('5207654419')
                 local fire = Instance.new("Fire", wordLetter)
                 fire.Size = 20
             end
@@ -183,6 +169,8 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
 
         local numAvailableWords = #LetterFallUtils.getAvailWords(miniGameState)
+        print('numAvailableWords' .. ' - start');
+        print(numAvailableWords);
         if numAvailableWords == 0 then
             for _, wordObj in ipairs(miniGameState.renderedWords) do
                 local wordLetters = Utils.getInstancesByNameStub(

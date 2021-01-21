@@ -1,6 +1,5 @@
 local Sss = game:GetService("ServerScriptService")
 local CS = game:GetService("CollectionService")
--- local RS = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 local HttpService = game:GetService("HttpService")
 
@@ -25,6 +24,17 @@ local getInstancesByNameStub = function(props)
 end
 
 function getUuid() return HttpService:GenerateGUID(false) end
+
+local function listIncludes(tab, val)
+    for index, value in ipairs(tab) do
+        if value == val then
+            return true
+            -- 
+        end
+    end
+
+    return false
+end
 
 local function playSound(soundId)
     if (soundId) then
@@ -569,27 +579,28 @@ end
 module.addcfv3 = addcfv3
 module.addPadding = addPadding
 module.cloneModel = cloneModel
+module.enableChildWelds = enableChildWelds
+module.genRandom = genRandom
+module.getDescendantsByName = getDescendantsByName
 module.getFirstDescendantByName = getFirstDescendantByName
 module.getFromMyStuff = getFromMyStuff
-module.setMaterialPebble = setMaterialPebble
-module.tableToString = tableToString
-module.hideItemAndChildren = hideItemAndChildren
-module.mergeTables = mergeTables
-module.getDescendantsByName = getDescendantsByName
-module.hideItem = hideItem
-module.playSound = playSound
-module.genRandom = genRandom
-module.enableChildWelds = enableChildWelds
-module.removeFirstMatchFromArray = removeFirstMatchFromArray
-module.getPlayerFromHumanoid = getPlayerFromHumanoid
-module.getKeysFromDict = getKeysFromDict
-module.setItemHeight = setItemHeight
-module.tablelength = tablelength
-module.sortListByObjectKey = sortListByObjectKey
-module.getUuid = getUuid
-module.removeListItemByUuid = removeListItemByUuid
 module.getInstancesByNameStub = getInstancesByNameStub
 module.getItemByUuid = getItemByUuid
+module.getKeysFromDict = getKeysFromDict
+module.getPlayerFromHumanoid = getPlayerFromHumanoid
+module.getUuid = getUuid
+module.hideItem = hideItem
+module.hideItemAndChildren = hideItemAndChildren
+module.listIncludes = listIncludes
+module.mergeTables = mergeTables
+module.playSound = playSound
+module.removeFirstMatchFromArray = removeFirstMatchFromArray
+module.removeListItemByUuid = removeListItemByUuid
+module.setItemHeight = setItemHeight
+module.setMaterialPebble = setMaterialPebble
+module.sortListByObjectKey = sortListByObjectKey
+module.tablelength = tablelength
+module.tableToString = tableToString
 module.applyDecalsToCharacterFromWord = applyDecalsToCharacterFromWord
 module.applyDecalsToCharacterFromConfigName =
     applyDecalsToCharacterFromConfigName

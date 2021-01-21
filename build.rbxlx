@@ -64,18 +64,18 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1271.47327</X>
-					<Y>222.919937</Y>
-					<Z>14.378336</Z>
-					<R00>-0.806639254</R00>
-					<R01>-0.13226831</R01>
-					<R02>0.576053977</R02>
-					<R10>-7.45057971e-09</R10>
-					<R11>0.974637985</R11>
-					<R12>0.223787561</R12>
-					<R20>-0.591044068</R20>
-					<R21>0.180515826</R21>
-					<R22>-0.786181271</R22>
+					<X>-1290.42712</X>
+					<Y>245.102585</Y>
+					<Z>45.865242</Z>
+					<R00>0.978367329</R00>
+					<R01>0.199245781</R01>
+					<R02>-0.0556654222</R02>
+					<R10>-3.72529074e-09</R10>
+					<R11>0.269076824</R11>
+					<R12>0.963118672</R12>
+					<R20>0.206875622</R20>
+					<R21>-0.942283869</R21>
+					<R22>0.263255924</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
@@ -34390,17 +34390,17 @@ end)]]></ProtectedString>
 							<token name="BottomSurface">0</token>
 							<token name="BottomSurfaceInput">0</token>
 							<CoordinateFrame name="CFrame">
-								<X>-971.201843</X>
+								<X>-971.201904</X>
 								<Y>146.102615</Y>
 								<Z>152.078232</Z>
 								<R00>1.00000715</R00>
-								<R01>-2.10651324e-05</R01>
-								<R02>8.6961636e-06</R02>
-								<R10>2.10653398e-05</R10>
+								<R01>-2.10651378e-05</R01>
+								<R02>8.69616451e-06</R02>
+								<R10>2.10653343e-05</R10>
 								<R11>1</R11>
-								<R12>-6.94204346e-06</R12>
-								<R20>-8.69603991e-06</R20>
-								<R21>6.94219716e-06</R21>
+								<R12>-6.942043e-06</R12>
+								<R20>-8.696039e-06</R20>
+								<R21>6.94219761e-06</R21>
 								<R22>1.00000429</R22>
 							</CoordinateFrame>
 							<bool name="CanCollide">true</bool>
@@ -34458,18 +34458,18 @@ end)]]></ProtectedString>
 							<Properties>
 								<BinaryString name="AttributesSerialize"></BinaryString>
 								<CoordinateFrame name="CFrame0">
-									<X>0.000183105469</X>
+									<X>0.000244140625</X>
 									<Y>4.09907532</Y>
 									<Z>1.52587891e-05</Z>
-									<R00>-1.38936798e-07</R00>
-									<R01>-1.28038868e-09</R01>
+									<R00>-1.38938049e-07</R00>
+									<R01>-1.28454969e-09</R01>
 									<R02>1.00000715</R02>
-									<R10>2.05475081e-11</R10>
+									<R10>2.00088834e-11</R10>
 									<R11>1</R11>
-									<R12>1.28039801e-09</R12>
+									<R12>1.2756235e-09</R12>
 									<R20>-1.00000429</R20>
-									<R21>2.05452461e-11</R21>
-									<R22>-1.38935818e-07</R22>
+									<R21>2.09183781e-11</R21>
+									<R22>-1.3893532e-07</R22>
 								</CoordinateFrame>
 								<bool name="Enabled">true</bool>
 								<string name="Name">WeldConstraint</string>
@@ -34539,7 +34539,7 @@ end)]]></ProtectedString>
 								<Z>0</Z>
 							</Vector3>
 							<int64 name="SourceAssetId">-1</int64>
-							<BinaryString name="Tags">RGVzdHJveQ==</BinaryString>
+							<BinaryString name="Tags"></BinaryString>
 							<float name="TopParamA">-0.5</float>
 							<float name="TopParamB">0.5</float>
 							<token name="TopSurface">0</token>
@@ -58386,7 +58386,7 @@ end)]]></ProtectedString>
 				<string name="Name">Ambient</string>
 				<bool name="PlayOnRemove">false</bool>
 				<float name="PlaybackSpeed">1</float>
-				<bool name="Playing">false</bool>
+				<bool name="Playing">true</bool>
 				<token name="RollOffMode">0</token>
 				<Ref name="SoundGroup">null</Ref>
 				<Content name="SoundId"><url>rbxassetid://1837103530</url></Content>
@@ -60921,14 +60921,21 @@ local function addSector(sectorConfig)
     -- 
 end
 
-function addRemoteObjects()
+local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local sector1Config = {
-        -- words = {"VAT", "CAT"},
-        -- words = {"CAT"},
-        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT", "ZIP"},
-        -- gridSize = {numRow = 6, numCol = 6}
+        words = {
+            "CAT", --
+            "HAT", --
+            "MAT", --
+            "PAT", --
+            -- 
+            "SAT", --
+            "RAT", --
+            "VAT", --
+            "AT" --
+        },
         gridSize = {numRow = 26, numCol = 26}
     }
 
@@ -61539,10 +61546,8 @@ local function addBlockDash(sectorConfig)
         availWords = {},
         currentLetterIndex = 1,
         foundLetters = {},
-        foundWords = {},
         initCompleted = false,
         renderedWords = {},
-        -- wordLetters = {},
         activeLetterPosition = {
             row = math.floor(numRow / 2),
             col = math.floor(numCol / 2)
@@ -61598,7 +61603,7 @@ return module
 						<string name="ScriptGuid">{c8d512df-7f02-45f1-a6cf-35bf75490a32}</string>
 						<ProtectedString name="Source"><![CDATA[local CS = game:GetService("CollectionService")
 local Sss = game:GetService("ServerScriptService")
-local RS = game:GetService("ReplicatedStorage")
+-- local RS = game:GetService("ReplicatedStorage")
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
@@ -61609,22 +61614,24 @@ local Leaderboard = require(Sss.Source.AddRemoteObjects.Leaderboard)
 
 local module = {processing = false, initComplete = false}
 
-function isDesiredLetter(availLetters, clickedLetter)
-    local textLabel = Utils.getFirstDescendantByName(clickedLetter, "BlockChar")
-                          .Text
+local function isDesiredLetter(availLetters, clickedLetter)
+    -- local textLabel = Utils.getFirstDescendantByName(clickedLetter, "BlockChar")
+    --                       .Text
     local char = LetterFallUtils.getCharFromLetterBlock(clickedLetter)
     return availLetters[char]
 end
 
-function isDeadLetter(clickedLetter)
+local function isDeadLetter(clickedLetter)
     local tag = LetterFallUtils.tagNames.DeadLetter
     return CS:HasTag(clickedLetter, tag)
 end
 
-function findFirstMatchingLetterBlock(foundChar, miniGameState)
+local function findFirstMatchingLetterBlock(foundChar, miniGameState)
     local matchingLetter = nil
+    local availWords = LetterFallUtils.getAvailWords(miniGameState)
 
-    for wordIndex, word in ipairs(miniGameState.renderedWords) do
+    for _, word in ipairs(availWords) do
+        -- for _, word in ipairs(miniGameState.renderedWords) do
         local letter = word.letters[miniGameState.currentLetterIndex]
         if foundChar == letter.char then
             miniGameState.activeWord = word
@@ -61686,13 +61693,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             targetLetterBlock = activeWord.letters[currentLetterIndex].instance
         end
     else
-        local availLetters = LetterFallUtils.getAvailLettersDict(
-                                 {
-                words = words,
-                currentLetterIndex = currentLetterIndex
-            })
-
-        local numAvailLetters = Utils.tablelength(availLetters)
+        local availLetters = LetterFallUtils.getAvailLettersDict2(miniGameState)
         if isDesiredLetter(availLetters, clickedLetter) then
             targetLetterBlock = findFirstMatchingLetterBlock(foundChar,
                                                              miniGameState)
@@ -61700,9 +61701,8 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
     end
 
     if targetLetterBlock then
-        CS:AddTag(clickedLetter, LetterFallUtils.tagNames.Found)
-        CS:AddTag(targetLetterBlock, "FoundInWord")
-        CS:RemoveTag(clickedLetter, LetterFallUtils.tagNames.RackLetter)
+        -- CS:AddTag(clickedLetter, LetterFallUtils.tagNames.Found)
+        -- CS:RemoveTag(clickedLetter, LetterFallUtils.tagNames.RackLetter)
 
         local letterBlockCFrame = clickedLetter.CFrame
 
@@ -61740,13 +61740,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             local currentWord2 = Constants.wordConfigs[currentWord]
             if currentWord2 then
                 local soundId = currentWord2['soundId']
-                if (soundId) then
-                    local sound = Instance.new("Sound", workspace)
-                    sound.SoundId = "rbxassetid://" .. soundId
-                    sound.EmitterSize = 5
-                    sound.Looped = false
-                    if not sound.IsPlaying then sound:Play() end
-                end
+                Utils.playSound(soundId)
             end
 
             local gemTemplate = Utils.getFromTemplates("GemTemplate")
@@ -61758,18 +61752,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             local rand = Utils.genRandom(1, #Constants.gemColors)
             newGem.Handle.Color = Constants.gemColors[rand]
 
-            table.insert(miniGameState.foundWords, currentWord)
-
-            local activeWord2 = miniGameState.activeWord
-            activeWord2.Name = "wwww"
-            activeWord2.word:Destroy()
-
-            for _, letter in ipairs(activeWord2.letters) do
-                local myLetter = letter.instance
-                myLetter:Destroy()
-            end
             miniGameState.activeWord = nil
-
             miniGameState.foundLetters = {}
             miniGameState.currentLetterIndex = 1
 
@@ -61779,17 +61762,43 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             PlayerStatManager:ChangeStat(player, "Gems", 1)
             Leaderboard.updateLB()
 
-            print('miniGameState.renderedWords' .. ' - start');
-            print(miniGameState.renderedWords);
+            activeWord.completed = true
+            local wordLetters = Utils.getInstancesByNameStub(
+                                    {
+                    nameStub = "wordLetter",
+                    parent = activeWord.word
+                })
+            for _, wordLetter in ipairs(wordLetters) do
+                Utils.playSound('5207654419')
+                local fire = Instance.new("Fire", wordLetter)
+                fire.Size = 20
+            end
         end
 
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
 
-        local numAvailableBlocks = LetterFallUtils.getNumAvailLetterBlocks(
-                                       miniGameState)
+        local numAvailableWords = #LetterFallUtils.getAvailWords(miniGameState)
+        print('numAvailableWords' .. ' - start');
+        print(numAvailableWords);
+        if numAvailableWords == 0 then
+            for _, wordObj in ipairs(miniGameState.renderedWords) do
+                local wordLetters = Utils.getInstancesByNameStub(
+                                        {
+                        nameStub = "wordLetter",
+                        parent = wordObj.word
+                    })
 
-        if numAvailableBlocks == 0 then
-            miniGameState.onWordLettersGone(miniGameState)
+                local function destroyParts()
+                    Utils.playSound('262562442')
+                    for _, wordLetter in ipairs(wordLetters) do
+                        print('wordLetter' .. ' - start');
+                        print(wordLetter);
+                        wordLetter:Destroy()
+                    end
+                end
+
+                delay(5, destroyParts)
+            end
         end
     end
     module.processing = false
@@ -61968,6 +61977,8 @@ local function initLetterRack(miniGameState)
 
     local lettersNotInWords = LetterFallUtils.getLettersNotInWords(words)
     local letterMatrix = {}
+
+    -- populate matrix with random letters
     for _ = 1, numRow do
         local row = {}
         for _ = 1, numCol do
@@ -61976,11 +61987,32 @@ local function initLetterRack(miniGameState)
         table.insert(letterMatrix, row)
     end
 
+    local usedLocations = {}
     for _, word in ipairs(words) do
         for letterIndex = 1, #word do
             local letter = string.sub(word, letterIndex, letterIndex)
-            local randomRowIndex = Utils.genRandom(1, numRow)
-            local randomColIndex = Utils.genRandom(1, numCol)
+
+            local isDirtyLocation = true
+            local randomRowIndex = nil
+            local randomColIndex = nil
+            local locationCode = nil
+
+            -- make sure you do not put 2 letters in the same location
+            while isDirtyLocation == true do
+                randomRowIndex = Utils.genRandom(1, numRow)
+                randomColIndex = Utils.genRandom(1, numCol)
+                locationCode = randomRowIndex .. "-" .. randomColIndex
+                isDirtyLocation = usedLocations[locationCode]
+
+                if isDirtyLocation then
+                    print {"dirty"}
+                    print {"dirty"}
+                    print {"dirty"}
+                    print {"dirty"}
+                    print {"dirty"}
+                end
+            end
+            usedLocations[locationCode] = true
             letterMatrix[randomRowIndex][randomColIndex] = letter
         end
     end
@@ -62022,7 +62054,8 @@ local function initLetterRack(miniGameState)
                 {
                     letterBlock = newLetter,
                     char = char,
-                    templateName = miniGameState.activeStyle
+                    templateName = miniGameState.activeStyle,
+                    letterBlockType = "RackLetter"
                 })
 
             local function onTouchBlock(newLetter, miniGameState)
@@ -62111,18 +62144,11 @@ local function initWord(props)
                                     letterBlockFolder, "BD_word_normal")
 
     local newWord = wordBox:Clone()
-    print('newWord' .. ' - start');
-    print(newWord);
     local wordBench = Utils.getFirstDescendantByName(newWord, "WordBench")
     local letterPositioner = Utils.getFirstDescendantByName(newWord,
                                                             "WordLetterBlockPositioner")
-    print('letterPositioner' .. ' - start');
-    print(letterPositioner);
 
-    if not letterPositioner then return end
-    -- 
-    -- 
-    -- 
+    -- if not letterPositioner then return end
 
     local wordPositioner = Utils.getFirstDescendantByName(sectorFolder,
                                                           "WordPositioner")
@@ -62171,7 +62197,8 @@ local function initWord(props)
         LetterFallUtils.initLetterBlock({
             letterBlock = newLetter,
             char = char,
-            templateName = "BD_word_normal"
+            templateName = "BD_word_normal",
+            letterBlockType = "WordRackLetter"
         })
 
         newLetter.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
@@ -62201,9 +62228,11 @@ local function initWord(props)
     wordBench.CanCollide = false
 
     local newWordObj = {
+        uuid = Utils.getUuid(),
         word = newWord,
         letters = lettersInWord,
-        wordChars = word
+        wordChars = word,
+        completed = false
     }
 
     return newWordObj
@@ -64521,15 +64550,73 @@ end
 						<string name="ScriptGuid">{b42daba4-d77a-4962-b0fd-6966be0b6b1e}</string>
 						<ProtectedString name="Source"><![CDATA[local Sss = game:GetService("ServerScriptService")
 local CS = game:GetService("CollectionService")
-local RS = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
+local HttpService = game:GetService("HttpService")
 
 local Constants = require(Sss.Source.Constants.Constants)
 local module = {}
 
--- new
--- 
--- 
+local getInstancesByNameStub = function(props)
+    local nameStub = props.nameStub
+    local parent = props.parent
+    local children = parent:GetDescendants()
+
+    local output = {}
+    for _, item in pairs(children) do
+        local match = string.match(item.Name, nameStub)
+
+        if match then
+            table.insert(output, item)
+            --
+        end
+    end
+    return output
+end
+
+function getUuid() return HttpService:GenerateGUID(false) end
+
+local function listIncludes(tab, val)
+    for index, value in ipairs(tab) do
+        if value == val then
+            return true
+            -- 
+        end
+    end
+
+    return false
+end
+
+local function playSound(soundId)
+    if (soundId) then
+        local sound = Instance.new("Sound", workspace)
+        sound.SoundId = "rbxassetid://" .. soundId
+        sound.EmitterSize = 5
+        sound.Looped = false
+        if not sound.IsPlaying then sound:Play() end
+    end
+end
+
+local function getItemByUuid(items, uuid)
+    for _, item in ipairs(items) do
+        if item.Uuid == uuid then
+            return item
+            -- 
+        end
+    end
+    return nil
+end
+
+local function removeListItemByUuid(items, uuid)
+    for index, item in ipairs(items) do
+        if item.uuid == uuid then
+
+            print('removing');
+            table.remove(items, index)
+            -- 
+        end
+        -- if item.Uuid ~= uuid then table.insert(newList, item) end
+    end
+end
 
 function tablelength(T)
     local count = 0
@@ -65020,15 +65107,6 @@ function tableToString(tab, a, b, c, d)
     return table.concat(res, "\n")
 end
 
--- local test = {
---     str = "Result:\n\t- Unknown",
---     number = 12345,
---     child = {a = "b"},
---     cyclic = {}
--- }
--- test.child.cyclic = test.cyclic
--- test.another = test.child
-
 function mergeTables(t1, t2) for k, v in pairs(t2) do t1[k] = v end end
 
 addPadding = function(props)
@@ -65051,22 +65129,28 @@ end
 module.addcfv3 = addcfv3
 module.addPadding = addPadding
 module.cloneModel = cloneModel
+module.enableChildWelds = enableChildWelds
+module.genRandom = genRandom
+module.getDescendantsByName = getDescendantsByName
 module.getFirstDescendantByName = getFirstDescendantByName
 module.getFromMyStuff = getFromMyStuff
-module.setMaterialPebble = setMaterialPebble
-module.tableToString = tableToString
-module.hideItemAndChildren = hideItemAndChildren
-module.mergeTables = mergeTables
-module.getDescendantsByName = getDescendantsByName
-module.hideItem = hideItem
-module.genRandom = genRandom
-module.enableChildWelds = enableChildWelds
-module.removeFirstMatchFromArray = removeFirstMatchFromArray
-module.getPlayerFromHumanoid = getPlayerFromHumanoid
+module.getInstancesByNameStub = getInstancesByNameStub
+module.getItemByUuid = getItemByUuid
 module.getKeysFromDict = getKeysFromDict
+module.getPlayerFromHumanoid = getPlayerFromHumanoid
+module.getUuid = getUuid
+module.hideItem = hideItem
+module.hideItemAndChildren = hideItemAndChildren
+module.listIncludes = listIncludes
+module.mergeTables = mergeTables
+module.playSound = playSound
+module.removeFirstMatchFromArray = removeFirstMatchFromArray
+module.removeListItemByUuid = removeListItemByUuid
 module.setItemHeight = setItemHeight
-module.tablelength = tablelength
+module.setMaterialPebble = setMaterialPebble
 module.sortListByObjectKey = sortListByObjectKey
+module.tablelength = tablelength
+module.tableToString = tableToString
 module.applyDecalsToCharacterFromWord = applyDecalsToCharacterFromWord
 module.applyDecalsToCharacterFromConfigName =
     applyDecalsToCharacterFromConfigName
@@ -65315,7 +65399,7 @@ function getLettersNotInWords(words)
     return filteredLetters
 end
 
-function getRandomLetter(letters)
+local function getRandomLetter(letters)
     local defaultLetters = Constants.allLetters
 
     if not letters then letters = defaultLetters end
@@ -65323,22 +65407,27 @@ function getRandomLetter(letters)
     return letters[rand]
 end
 
-function getAvailWords(miniGameState)
+local function getAvailWords(miniGameState)
     local availWords = {}
     local activeWord = miniGameState.activeWord
 
     if activeWord then
         availWords = {activeWord.wordChars}
     else
-        availWords = miniGameState.words
+        for _, wordObj in ipairs(miniGameState.renderedWords) do
+            if wordObj.completed == false then
+                table.insert(availWords, wordObj)
+            end
+        end
     end
     return availWords
 end
 
-function initLetterBlock(props)
+local function initLetterBlock(props)
     local letterBlock = props.letterBlock
     local char = props.char
     local templateName = props.templateName
+    local letterBlockType = props.letterBlockType
 
     CS:AddTag(letterBlock, "BlockDash")
 
@@ -65361,6 +65450,14 @@ function initLetterBlock(props)
     propStyle.Name = "CurrentStyle"
     propStyle.Value = "zzz"
 
+    local propUuid = Instance.new("StringValue", letterBlock)
+    propUuid.Name = "Uuid"
+    propUuid.Value = Utils.getUuid()
+
+    local propType = Instance.new("StringValue", letterBlock)
+    propType.Name = "Type"
+    propUuid.Value = letterBlockType
+
     if templateName then
         module.applyStyleFromTemplateBD({
             targetLetterBlock = letterBlock,
@@ -65368,10 +65465,6 @@ function initLetterBlock(props)
         })
     end
 end
-
--- 
--- 
--- 
 
 function hideBlockImages(letterBlock)
     local labels = Utils.getDescendantsByName(letterBlock, "ImageLabel")
@@ -65647,14 +65740,24 @@ function styleLetterBlocks(props)
 
     end
 end
--- 
--- 
+
 local function styleLetterBlocksBD(props)
     local miniGameState = props.miniGameState
     local runTimeLetterFolder = miniGameState.runTimeLetterFolder
     local runTimeWordFolder = miniGameState.runTimeWordFolder
+    local activeWord = miniGameState.activeWord
 
-    local availWords = module.getAvailWords(miniGameState)
+    local availWords = {}
+
+    if activeWord then
+        availWords = {activeWord.wordChars}
+    else
+        for _, wordObj in ipairs(miniGameState.renderedWords) do
+            if wordObj.completed == false then
+                table.insert(availWords, wordObj.wordChars)
+            end
+        end
+    end
 
     local availLetters = module.getAvailLettersDict(
                              {
@@ -65707,7 +65810,8 @@ local function styleLetterBlocksBD(props)
     end
 
 end
-function getNumAvailLetterBlocks(miniGameState)
+
+local function getNumAvailLetterBlocks(miniGameState)
     local runTimeLetterFolder = miniGameState.runTimeLetterFolder
 
     local availWords = module.getAvailWords(miniGameState)
@@ -65829,7 +65933,7 @@ function configDeadLetters(props)
     end
 end
 
-function getAvailLetters(props)
+local function getAvailLetters(props)
     local words = props.words
     local currentLetterIndex = props.currentLetterIndex
 
@@ -65841,7 +65945,23 @@ function getAvailLetters(props)
     return Utils.getKeysFromDict(availLettersDict)
 end
 
-function getAvailLettersDict(props)
+local function getAvailLettersDict2(miniGameState)
+    local availableWords = {}
+    for _, wordObj in ipairs(miniGameState.renderedWords) do
+        if wordObj.completed == false then
+            table.insert(availableWords, wordObj)
+        end
+    end
+
+    local availLettersDict = {}
+    for i, word in ipairs(availableWords) do
+        local letter = string.sub(word.wordChars, 1, 1)
+        availLettersDict[letter] = true
+    end
+    return availLettersDict
+end
+
+local function getAvailLettersDict(props)
     local words = props.words
     local currentLetterIndex = props.currentLetterIndex
 
@@ -65851,27 +65971,6 @@ function getAvailLettersDict(props)
         availLettersDict[letter] = true
     end
     return availLettersDict
-end
-
-function configAvailLetters(props)
-    local parentFolder = props.parentFolder
-
-    local availLetters = Utils.getByTagInParent(
-                             {
-            parent = parentFolder,
-            tag = module.tagNames.AvailLetter
-        })
-
-    for i, item in ipairs(availLetters) do
-        module.colorLetterText({
-            letterBlock = item,
-            color = Color3.fromRGB(255, 0, 238)
-        })
-        module.colorLetterBD({
-            letterBlock = item,
-            color = Color3.fromRGB(0, 255, 34)
-        })
-    end
 end
 
 function anchorLetters(props)
@@ -65890,7 +65989,7 @@ function anchorLetters(props)
     end
 end
 
-function getAllLettersInRack(props)
+local function getAllLettersInRack(props)
     local runTimeLetterFolder = props.runTimeLetterFolder
     local letters = Utils.getByTagInParent(
                         {
@@ -65900,7 +65999,7 @@ function getAllLettersInRack(props)
     return letters
 end
 
-function getAllLettersInWords(props)
+local function getAllLettersInWords(props)
     local runTimeWordFolder = props.runTimeWordFolder
     local letters = Utils.getByTagInParent(
                         {
@@ -65933,6 +66032,7 @@ module.getRunTimeLetterFolder = getRunTimeLetterFolder
 module.applyStyleFromTemplateBD = applyStyleFromTemplateBD
 module.hideBlockImages = hideBlockImages
 module.applyLetterImage = applyLetterImage
+module.getAvailLettersDict2 = getAvailLettersDict2
 module.hideBlockText = hideBlockText
 module.initLetterBlock = initLetterBlock
 module.styleLetterBlocksBD = styleLetterBlocksBD

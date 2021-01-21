@@ -90,7 +90,8 @@ local function initWord(props)
         LetterFallUtils.initLetterBlock({
             letterBlock = newLetter,
             char = char,
-            templateName = "BD_word_normal"
+            templateName = "BD_word_normal",
+            letterBlockType = "WordRackLetter"
         })
 
         newLetter.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(

@@ -33,6 +33,8 @@ local function initLetterRack(miniGameState)
 
     local lettersNotInWords = LetterFallUtils.getLettersNotInWords(words)
     local letterMatrix = {}
+
+    -- populate matrix with random letters
     for _ = 1, numRow do
         local row = {}
         for _ = 1, numCol do
@@ -41,11 +43,26 @@ local function initLetterRack(miniGameState)
         table.insert(letterMatrix, row)
     end
 
+    local usedLocations = {}
     for _, word in ipairs(words) do
         for letterIndex = 1, #word do
             local letter = string.sub(word, letterIndex, letterIndex)
-            local randomRowIndex = Utils.genRandom(1, numRow)
-            local randomColIndex = Utils.genRandom(1, numCol)
+
+            local isDirtyLocation = true
+            local randomRowIndex = nil
+            local randomColIndex = nil
+            local locationCode = nil
+
+            -- make sure you do not put 2 letters in the same location
+            while isDirtyLocation == true do
+                randomRowIndex = Utils.genRandom(1, numRow)
+                randomColIndex = Utils.genRandom(1, numCol)
+                locationCode = randomRowIndex .. "-" .. randomColIndex
+                isDirtyLocation = usedLocations[locationCode]
+
+                if isDirtyLocation then print("dirty") end
+            end
+            usedLocations[locationCode] = true
             letterMatrix[randomRowIndex][randomColIndex] = letter
         end
     end
@@ -87,7 +104,8 @@ local function initLetterRack(miniGameState)
                 {
                     letterBlock = newLetter,
                     char = char,
-                    templateName = miniGameState.activeStyle
+                    templateName = miniGameState.activeStyle,
+                    letterBlockType = "RackLetter"
                 })
 
             local function onTouchBlock(newLetter, miniGameState)

@@ -109,6 +109,7 @@ local function initLetterBlock(props)
     local letterBlock = props.letterBlock
     local char = props.char
     local templateName = props.templateName
+    local letterBlockType = props.letterBlockType
 
     CS:AddTag(letterBlock, "BlockDash")
 
@@ -134,6 +135,10 @@ local function initLetterBlock(props)
     local propUuid = Instance.new("StringValue", letterBlock)
     propUuid.Name = "Uuid"
     propUuid.Value = Utils.getUuid()
+
+    local propType = Instance.new("StringValue", letterBlock)
+    propType.Name = "Type"
+    propUuid.Value = letterBlockType
 
     if templateName then
         module.applyStyleFromTemplateBD({
@@ -666,7 +671,7 @@ function anchorLetters(props)
     end
 end
 
-function getAllLettersInRack(props)
+local function getAllLettersInRack(props)
     local runTimeLetterFolder = props.runTimeLetterFolder
     local letters = Utils.getByTagInParent(
                         {
@@ -676,7 +681,7 @@ function getAllLettersInRack(props)
     return letters
 end
 
-function getAllLettersInWords(props)
+local function getAllLettersInWords(props)
     local runTimeWordFolder = props.runTimeWordFolder
     local letters = Utils.getByTagInParent(
                         {
