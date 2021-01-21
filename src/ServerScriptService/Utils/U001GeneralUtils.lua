@@ -26,7 +26,17 @@ end
 
 function getUuid() return HttpService:GenerateGUID(false) end
 
-function getItemByUuid(items, uuid)
+local function playSound(soundId)
+    if (soundId) then
+        local sound = Instance.new("Sound", workspace)
+        sound.SoundId = "rbxassetid://" .. soundId
+        sound.EmitterSize = 5
+        sound.Looped = false
+        if not sound.IsPlaying then sound:Play() end
+    end
+end
+
+local function getItemByUuid(items, uuid)
     for _, item in ipairs(items) do
         if item.Uuid == uuid then
             return item
@@ -567,6 +577,7 @@ module.hideItemAndChildren = hideItemAndChildren
 module.mergeTables = mergeTables
 module.getDescendantsByName = getDescendantsByName
 module.hideItem = hideItem
+module.playSound = playSound
 module.genRandom = genRandom
 module.enableChildWelds = enableChildWelds
 module.removeFirstMatchFromArray = removeFirstMatchFromArray

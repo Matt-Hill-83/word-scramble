@@ -137,13 +137,14 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             local currentWord2 = Constants.wordConfigs[currentWord]
             if currentWord2 then
                 local soundId = currentWord2['soundId']
-                if (soundId) then
-                    local sound = Instance.new("Sound", workspace)
-                    sound.SoundId = "rbxassetid://" .. soundId
-                    sound.EmitterSize = 5
-                    sound.Looped = false
-                    if not sound.IsPlaying then sound:Play() end
-                end
+                Utils.playSound(soundId)
+                -- if (soundId) then
+                --     local sound = Instance.new("Sound", workspace)
+                --     sound.SoundId = "rbxassetid://" .. soundId
+                --     sound.EmitterSize = 5
+                --     sound.Looped = false
+                --     if not sound.IsPlaying then sound:Play() end
+                -- end
             end
 
             local gemTemplate = Utils.getFromTemplates("GemTemplate")
@@ -154,9 +155,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
             local rand = Utils.genRandom(1, #Constants.gemColors)
             newGem.Handle.Color = Constants.gemColors[rand]
-
-            local activeWord2 = miniGameState.activeWord
-            activeWord2.Name = "wwww"
 
             miniGameState.activeWord = nil
 
@@ -170,6 +168,17 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             Leaderboard.updateLB()
 
             activeWord.completed = true
+            local wordLetters = Utils.getInstancesByNameStub(
+                                    {
+                    nameStub = "wordLetter",
+                    parent = activeWord.word
+                })
+            for _, wordLetter in ipairs(wordLetters) do
+                local fire = Instance.new("Fire", wordLetter)
+                fire.Size = 20
+                Utils.playSound('5207654419')
+            end
+
         end
 
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
@@ -182,10 +191,17 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                         nameStub = "wordLetter",
                         parent = wordObj.word
                     })
-                for _, wordLetter in ipairs(wordLetters) do
-                    local fire = Instance.new("Fire", wordLetter)
-                    fire.Size = 30
+
+                local function destroyParts()
+                    Utils.playSound('262562442')
+                    for _, wordLetter in ipairs(wordLetters) do
+                        print('wordLetter' .. ' - start');
+                        print(wordLetter);
+                        -- wordLetter:Destroy()
+                    end
                 end
+
+                delay(5, destroyParts)
             end
         end
     end
