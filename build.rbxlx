@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1351.27844</X>
-					<Y>180.572189</Y>
-					<Z>6.39797544</Z>
-					<R00>-0.149320409</R00>
-					<R01>-0.170023739</R01>
-					<R02>0.97406131</R02>
-					<R10>-0</R10>
-					<R11>0.985105455</R11>
-					<R12>0.171951517</R12>
-					<R20>-0.988788843</R20>
-					<R21>0.0256758705</R21>
-					<R22>-0.147096351</R22>
+					<X>-1341.9209</X>
+					<Y>198.450806</Y>
+					<Z>40.2443428</Z>
+					<R00>-0.0449771844</R00>
+					<R01>-0.373037249</R01>
+					<R02>0.926725626</R02>
+					<R10>-9.31322686e-10</R10>
+					<R11>0.927664399</R11>
+					<R12>0.373415142</R12>
+					<R20>-0.998988032</R20>
+					<R21>0.0167951621</R21>
+					<R22>-0.0417237319</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1353.22656</X>
-					<Y>180.228287</Y>
-					<Z>6.69216776</Z>
+					<X>-1369.72607</X>
+					<Y>187.246979</Y>
+					<Z>41.4962082</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -35062,7 +35062,7 @@ end)]]></ProtectedString>
 									<Z>0</Z>
 								</Vector3>
 								<int64 name="SourceAssetId">-1</int64>
-								<BinaryString name="Tags">VHJhbnNwYXJlbnQ=</BinaryString>
+								<BinaryString name="Tags"></BinaryString>
 								<float name="TopParamA">-0.5</float>
 								<float name="TopParamB">0.5</float>
 								<token name="TopSurface">3</token>
@@ -53736,8 +53736,8 @@ end)]]></ProtectedString>
 							<Properties>
 								<BinaryString name="AttributesSerialize"></BinaryString>
 								<CoordinateFrame name="CFrame0">
-									<X>122.679565</X>
-									<Y>50.754837</Y>
+									<X>121.679565</X>
+									<Y>50.7548523</Y>
 									<Z>-27.8606682</Z>
 									<R00>1</R00>
 									<R01>3.89216437e-13</R01>
@@ -54528,9 +54528,9 @@ end)]]></ProtectedString>
 								<token name="BottomSurface">4</token>
 								<token name="BottomSurfaceInput">0</token>
 								<CoordinateFrame name="CFrame">
-									<X>-1369.72607</X>
-									<Y>187.246979</Y>
-									<Z>41.4962082</Z>
+									<X>-1368.72607</X>
+									<Y>187.246964</Y>
+									<Z>41.4962463</Z>
 									<R00>-1</R00>
 									<R01>1.86210673e-05</R01>
 									<R02>3.70009657e-05</R02>
@@ -54573,7 +54573,7 @@ end)]]></ProtectedString>
 									<Z>0</Z>
 								</Vector3>
 								<int64 name="SourceAssetId">-1</int64>
-								<BinaryString name="Tags">VHJhbnNwYXJlbnQ=</BinaryString>
+								<BinaryString name="Tags"></BinaryString>
 								<float name="TopParamA">-0.5</float>
 								<float name="TopParamB">0.5</float>
 								<token name="TopSurface">3</token>
@@ -54695,13 +54695,13 @@ end)]]></ProtectedString>
 									</Properties>
 								</Item>
 							</Item>
-							<Item class="Weld" referent="RBXbd4e575118914f4991f78e8a3843fcce">
+							<Item class="Weld" referent="RBX6194a15a05cf4168bee83b26c2bc9823">
 								<Properties>
 									<BinaryString name="AttributesSerialize"></BinaryString>
 									<CoordinateFrame name="C0">
 										<X>0</X>
 										<Y>-4</Y>
-										<Z>0</Z>
+										<Z>3.81469727e-06</Z>
 										<R00>1</R00>
 										<R01>0</R01>
 										<R02>-4.67847983e-13</R02>
@@ -54713,9 +54713,9 @@ end)]]></ProtectedString>
 										<R22>0</R22>
 									</CoordinateFrame>
 									<CoordinateFrame name="C1">
-										<X>-11.7685814</X>
-										<Y>3.99194336</Y>
-										<Z>2.80480957</Z>
+										<X>-11.7685471</X>
+										<Y>3.9919281</Y>
+										<Z>1.80480957</Z>
 										<R00>-3.70008493e-05</R00>
 										<R01>-1</R01>
 										<R02>-6.7223782e-06</R02>
@@ -54734,13 +54734,13 @@ end)]]></ProtectedString>
 									<BinaryString name="Tags"></BinaryString>
 								</Properties>
 							</Item>
-							<Item class="Weld" referent="RBXe56394e6a71740ff812dba555e069f42">
+							<Item class="Weld" referent="RBX0fde7e22581246abbba00653862cdeda">
 								<Properties>
 									<BinaryString name="AttributesSerialize"></BinaryString>
 									<CoordinateFrame name="C0">
 										<X>0</X>
 										<Y>-4</Y>
-										<Z>0</Z>
+										<Z>3.81469727e-06</Z>
 										<R00>1</R00>
 										<R01>0</R01>
 										<R02>-4.67847983e-13</R02>
@@ -54752,9 +54752,9 @@ end)]]></ProtectedString>
 										<R22>0</R22>
 									</CoordinateFrame>
 									<CoordinateFrame name="C1">
-										<X>4.23141861</X>
-										<Y>3.99194336</Y>
-										<Z>2.80480957</Z>
+										<X>4.23145294</X>
+										<Y>3.9919281</Y>
+										<Z>1.80480957</Z>
 										<R00>-3.70008493e-05</R00>
 										<R01>-1</R01>
 										<R02>-6.7223782e-06</R02>
@@ -58919,6 +58919,7 @@ camera.CameraType = Enum.CameraType.Orbital
 local isTest = false
 
 local devGameConfig = {
+    singleIsland = true,
     transparency = false,
     -- transparency = true,
     walkSpeed = 30,
@@ -58934,11 +58935,12 @@ local devGameConfig = {
 }
 
 local prodGameConfig = {
+    singleIsland = false,
+    -- singleIsland = true,
     transparency = true,
     walkSpeed = 30,
     fastWalkSpeed = 50,
 
-    showScenes = true,
     disabledSpawns = {
         -- 'Spawn-S2-Bottom', --
         "SpawnLocation-Block-Race-Top" --
