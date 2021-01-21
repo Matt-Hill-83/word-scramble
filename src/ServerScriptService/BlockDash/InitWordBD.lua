@@ -24,6 +24,9 @@ local function initWord(props)
     local wordIndex = props.wordIndex
     local word = props.word
     local colIndex = props.colIndex
+    print('colIndex' ..
+              ' - start------------------------------------>>>>>>>>>>>>>>');
+    print(colIndex);
 
     local sectorFolder = miniGameState.sectorFolder
 
@@ -49,10 +52,10 @@ local function initWord(props)
     local offsetY = letterBlockTemplate.Size.Y * spacingFactorY
 
     local totalLetterWidth = letterBlockTemplate.Size.X * spacingFactorX
-    local maxWordLength = 3
+    local maxWordLength = 4
     local wordOffset = letterBlockTemplate.Size.X * 2
 
-    local colOffsetX = (colIndex - 1) * totalLetterWidth * maxWordLength +
+    local colOffsetX = ((colIndex - 1) * totalLetterWidth * maxWordLength) +
                            wordOffset
     -- wordBench.CFrame = wordPositioner.CFrame +
     --                        Vector3.new(colOffsetX, offsetY * (wordIndex - 1), 0)
@@ -65,7 +68,7 @@ local function initWord(props)
                 useParentNearEdge = Vector3.new(1, 1, 1),
                 useChildNearEdge = Vector3.new(1, 1, 1),
                 offsetAdder = Vector3.new(0, offsetY * (wordIndex - 1),
-                                          colOffsetX)
+                                          colOffsetX + 100)
                 -- offsetAdder = Vector3.new(offsetX, 0, 0)
             }
         })

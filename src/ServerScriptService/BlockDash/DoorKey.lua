@@ -42,7 +42,6 @@ local function initKey(miniGameState)
     newReplicatorPart.Anchored = true
 
     local function callBack(miniGameState2)
-
         local function closure()
             print('callBack' .. ' - start');
             print(callBack);

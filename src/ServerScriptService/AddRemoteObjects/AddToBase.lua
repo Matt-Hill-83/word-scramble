@@ -3,6 +3,7 @@ local Sss = game:GetService("ServerScriptService")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
+local Constants = require(Sss.Source.Constants.Constants)
 
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
@@ -50,8 +51,11 @@ function addRemoteObjects()
 
     Utils.sortListByObjectKey(islandPositioners, "Name")
 
-    -- for islandIndex, islandPositioner in ipairs({islandPositioners[1]}) do
-    for islandIndex, islandPositioner in ipairs(islandPositioners) do
+    local myPositioners = Constants.gameConfig.singleIsland and
+                              {islandPositioners[1]} or islandPositioners
+
+    for islandIndex, islandPositioner in ipairs(myPositioners) do
+        -- for islandIndex, islandPositioner in ipairs(islandPositioners) do
         local newIsland = islandTemplate:Clone()
 
         local anchoredParts = {}

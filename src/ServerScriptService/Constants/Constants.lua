@@ -2,6 +2,7 @@
 local isTest = false
 
 local devGameConfig = {
+    singleIsland = true,
     transparency = false,
     -- transparency = true,
     walkSpeed = 30,
@@ -17,11 +18,12 @@ local devGameConfig = {
 }
 
 local prodGameConfig = {
+    singleIsland = false,
+    -- singleIsland = true,
     transparency = true,
     walkSpeed = 30,
     fastWalkSpeed = 50,
 
-    showScenes = true,
     disabledSpawns = {
         -- 'Spawn-S2-Bottom', --
         "SpawnLocation-Block-Race-Top" --
