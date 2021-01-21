@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1292.83606</X>
-					<Y>190.889572</Y>
-					<Z>-2.42747879</Z>
-					<R00>-0.149308115</R00>
-					<R01>-0.17002438</R01>
-					<R02>0.974063098</R02>
+					<X>-1351.27844</X>
+					<Y>180.572189</Y>
+					<Z>6.39797544</Z>
+					<R00>-0.149320409</R00>
+					<R01>-0.170023739</R01>
+					<R02>0.97406131</R02>
 					<R10>-0</R10>
 					<R11>0.985105455</R11>
-					<R12>0.17195183</R12>
-					<R20>-0.988790751</R20>
-					<R21>0.0256738029</R21>
-					<R22>-0.147084221</R22>
+					<R12>0.171951517</R12>
+					<R20>-0.988788843</R20>
+					<R21>0.0256758705</R21>
+					<R22>-0.147096351</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1294.78418</X>
-					<Y>190.54567</Y>
-					<Z>-2.13331127</Z>
+					<X>-1353.22656</X>
+					<Y>180.228287</Y>
+					<Z>6.69216776</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -58732,8 +58732,8 @@ end)]]></ProtectedString>
 			<bool name="EnableScriptCollabOnLoad">false</bool>
 			<string name="Name">StudioData</string>
 			<int64 name="SourceAssetId">-1</int64>
-			<int64 name="SrcPlaceId">6247613349</int64>
-			<int64 name="SrcUniverseId">2296181067</int64>
+			<int64 name="SrcPlaceId">6241554880</int64>
+			<int64 name="SrcUniverseId">2293136719</int64>
 			<BinaryString name="Tags"></BinaryString>
 		</Properties>
 	</Item>
