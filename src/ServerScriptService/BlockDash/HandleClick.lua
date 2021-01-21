@@ -191,7 +191,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                                        miniGameState)
 
         if numAvailableBlocks == 0 then
-            miniGameState.onWordLettersGone(miniGameState)
+            -- miniGameState.onWordLettersGone(miniGameState)
         end
     end
     module.processing = false
