@@ -24,9 +24,6 @@ local function initWord(props)
     local wordIndex = props.wordIndex
     local word = props.word
     local colIndex = props.colIndex
-    print('colIndex' ..
-              ' - start------------------------------------>>>>>>>>>>>>>>');
-    print(colIndex);
 
     local sectorFolder = miniGameState.sectorFolder
 
@@ -65,9 +62,8 @@ local function initWord(props)
             offsetConfig = {
                 useParentNearEdge = Vector3.new(1, 1, 1),
                 useChildNearEdge = Vector3.new(1, 1, 1),
-                offsetAdder = Vector3.new(0, offsetY * (wordIndex - 1),
+                offsetAdder = Vector3.new(0, offsetY * (wordIndex - 2),
                                           colOffsetX)
-                -- offsetAdder = Vector3.new(offsetX, 0, 0)
             }
         })
 
@@ -118,11 +114,7 @@ local function initWord(props)
                      {char = char, found = false, instance = newLetter})
     end
 
-    -- local wordBenchPosX = wordBench.Position.X
-
     wordBench.CanCollide = false
-    -- wordBench.Position = Vector3.new(wordBenchPosX, wordBench.Position.Y,
-    --                                  wordBench.Position.Z)
 
     local newWordObj = {
         word = newWord,
@@ -151,16 +143,10 @@ local function initWords(miniGameState)
     BlockDashUtils.clearWordRack(miniGameState)
     local wordsPerCol = 4
     local numCol = math.ceil(#miniGameState.words / wordsPerCol)
-    print('numCol' .. ' - start');
-    print(numCol);
 
     for colIndex = 1, numCol do
         local startIndex = ((colIndex - 1) * wordsPerCol) + 1
         local endIndex = startIndex + wordsPerCol - 1
-        print('startIndex' .. ' - start');
-        print(startIndex);
-        print('endIndex' .. ' - start');
-        print(endIndex);
         local words = {table.unpack(miniGameState.words, startIndex, endIndex)}
         renderColumn(miniGameState, colIndex, words)
         -- 
