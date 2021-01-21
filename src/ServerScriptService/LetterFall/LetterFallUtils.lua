@@ -418,11 +418,17 @@ local function styleLetterBlocksBD(props)
     local miniGameState = props.miniGameState
     local runTimeLetterFolder = miniGameState.runTimeLetterFolder
     local runTimeWordFolder = miniGameState.runTimeWordFolder
+    local activeWord = miniGameState.activeWord
 
     local availWords = {}
-    for _, wordObj in ipairs(miniGameState.renderedWords) do
-        if wordObj.completed == false then
-            table.insert(availWords, wordObj.wordChars)
+
+    if activeWord then
+        availWords = {activeWord.wordChars}
+    else
+        for _, wordObj in ipairs(miniGameState.renderedWords) do
+            if wordObj.completed == false then
+                table.insert(availWords, wordObj.wordChars)
+            end
         end
     end
 
@@ -616,6 +622,10 @@ local function getAvailLettersDict2(miniGameState)
     for _, wordObj in ipairs(miniGameState.renderedWords) do
         if wordObj.completed == false then
             table.insert(availableWords, wordObj)
+        else
+            print('completed');
+            print('wordObj' .. ' - start');
+            print(wordObj);
         end
     end
 

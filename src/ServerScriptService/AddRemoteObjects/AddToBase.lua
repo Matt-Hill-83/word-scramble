@@ -33,12 +33,12 @@ function addRemoteObjects()
             "SAT", --
             "RAT", --
             "VAT", --
-            "AT" --
+            "AT", --
             -- 
-            -- "FLAT", --
-            -- "CHAT", --
-            -- "SPLAT", --
-            -- "THAT" --
+            "FLAT", --
+            "CHAT", --
+            "SPLAT", --
+            "THAT" --
         },
         -- gridSize = {numRow = 6, numCol = 6}
         gridSize = {numRow = 26, numCol = 26}
