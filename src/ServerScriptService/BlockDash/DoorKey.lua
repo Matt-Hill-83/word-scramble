@@ -43,11 +43,14 @@ local function initKey(miniGameState)
 
     local function callBack(miniGameState2)
         local function closure()
-            print('callBack' .. ' - start');
-            print(callBack);
             miniGameState.onWordLettersGone(miniGameState2)
         end
-        return closure
+
+        local function wrapperForDelay()
+            delay(10, closure)
+            -- 
+        end
+        return wrapperForDelay
     end
 
     Replicator.init(newReplicator, callBack(miniGameState))

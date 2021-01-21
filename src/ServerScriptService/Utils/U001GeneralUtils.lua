@@ -36,11 +36,11 @@ local function listIncludes(tab, val)
     return false
 end
 
-local function playSound(soundId)
+local function playSound(soundId, emitterSize)
     if (soundId) then
         local sound = Instance.new("Sound", workspace)
         sound.SoundId = "rbxassetid://" .. soundId
-        sound.EmitterSize = 5
+        sound.EmitterSize = emitterSize or 5
         sound.Looped = false
         if not sound.IsPlaying then sound:Play() end
     end
@@ -571,11 +571,6 @@ addPadding = function(props)
     UIPadding.PaddingRight = UDim.new(paddingPct, 0)
 end
 
-setMaterialPebble = function(part)
-    part.Material = Enum.Material.Pebble
-    part.BrickColor = BrickColor.new("Institutional white")
-end
-
 module.addcfv3 = addcfv3
 module.addPadding = addPadding
 module.cloneModel = cloneModel
@@ -597,7 +592,6 @@ module.playSound = playSound
 module.removeFirstMatchFromArray = removeFirstMatchFromArray
 module.removeListItemByUuid = removeListItemByUuid
 module.setItemHeight = setItemHeight
-module.setMaterialPebble = setMaterialPebble
 module.sortListByObjectKey = sortListByObjectKey
 module.tablelength = tablelength
 module.tableToString = tableToString

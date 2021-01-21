@@ -18,6 +18,9 @@ local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local sector1Config = {
+        -- words = {
+        --     "CAT" --
+        -- },
         words = {
             "CAT", --
             "HAT", --

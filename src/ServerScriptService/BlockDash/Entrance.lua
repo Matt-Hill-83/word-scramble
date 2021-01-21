@@ -54,12 +54,9 @@ function module.initEntrance(miniGameState)
         print('onTouchRun30');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
-            local player = Utils.getPlayerFromHumanoid(humanoid)
-            local gameState = PlayerStatManager.getGameState(player)
-
-            if gameState.runFast ~= 30 then
-                gameState.runFast = 30
-                humanoid.WalkSpeed = Constants.gameConfig.walkSpeed
+            if humanoid then
+                if humanoid.WalkSpeed == 30 then return end
+                humanoid.WalkSpeed = 30
             end
         end
     end
@@ -71,13 +68,8 @@ function module.initEntrance(miniGameState)
         print('onTouchRun50----------------------------');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
-            local player = Utils.getPlayerFromHumanoid(humanoid)
-            local gameState = PlayerStatManager.getGameState(player)
-
-            if gameState.runFast ~= 50 then
-                gameState.runFast = 50
-                humanoid.WalkSpeed = fastWalkSpeed
-            end
+            if humanoid.WalkSpeed == 50 then return end
+            humanoid.WalkSpeed = 50
         end
     end
 
@@ -89,19 +81,12 @@ function module.initEntrance(miniGameState)
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
             if humanoid.WalkSpeed == 70 then return end
-            -- local player = Utils.getPlayerFromHumanoid(humanoid)
-            -- local gameState = PlayerStatManager.getGameState(player)
-
-            -- if gameState.runFast ~= 70 then
-            -- gameState.runFast = 70
             humanoid.WalkSpeed = 70
-            -- end
         end
     end
 
     local run70s = Utils.getDescendantsByName(sectorFolder, "Run70")
     for _, item in ipairs(run70s) do item.Touched:Connect(onTouchRun70) end
-
 end
 
 return module

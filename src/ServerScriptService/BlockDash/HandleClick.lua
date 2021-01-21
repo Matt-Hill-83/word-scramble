@@ -125,14 +125,16 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
         local currentWord = table.concat(miniGameState.foundLetters, "")
         local wordComplete = table.find(words, currentWord)
+        local fireSound = '5207654419'
 
         miniGameState.currentLetterIndex = miniGameState.currentLetterIndex + 1
         if (wordComplete) then
             local currentWord2 = Constants.wordConfigs[currentWord]
             if currentWord2 then
-                local fireSound = '5207654419'
                 local soundId = currentWord2['soundId'] or fireSound
                 Utils.playSound(soundId)
+            else
+                Utils.playSound(fireSound)
             end
 
             local gemTemplate = Utils.getFromTemplates("GemTemplate")
@@ -180,7 +182,8 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                     })
 
                 local function destroyParts()
-                    Utils.playSound('262562442')
+                    local explosionSound = '262562442'
+                    Utils.playSound(explosionSound, 2)
                     for _, wordLetter in ipairs(wordLetters) do
                         print('wordLetter' .. ' - start');
                         print(wordLetter);
