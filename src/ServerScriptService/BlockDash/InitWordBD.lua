@@ -123,7 +123,8 @@ local function initWord(props)
         uuid = Utils.getUuid(),
         word = newWord,
         letters = lettersInWord,
-        wordChars = word
+        wordChars = word,
+        completed = false
     }
 
     return newWordObj

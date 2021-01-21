@@ -420,7 +420,17 @@ local function styleLetterBlocksBD(props)
     local runTimeLetterFolder = miniGameState.runTimeLetterFolder
     local runTimeWordFolder = miniGameState.runTimeWordFolder
 
-    local availWords = module.getAvailWords(miniGameState)
+    -- local availWords = module.getAvailWords(miniGameState)
+
+    local availWords = {}
+    for _, wordObj in ipairs(miniGameState.renderedWords) do
+        if wordObj.completed == false then
+            table.insert(availWords, wordObj.wordChars)
+        end
+    end
+
+    print('availWords' .. ' - start');
+    print(availWords);
 
     local availLetters = module.getAvailLettersDict(
                              {
@@ -595,7 +605,7 @@ function configDeadLetters(props)
     end
 end
 
-function getAvailLetters(props)
+local function getAvailLetters(props)
     local words = props.words
     local currentLetterIndex = props.currentLetterIndex
 
@@ -607,7 +617,23 @@ function getAvailLetters(props)
     return Utils.getKeysFromDict(availLettersDict)
 end
 
-function getAvailLettersDict(props)
+local function getAvailLettersDict2(miniGameState)
+    local availableWords = {}
+    for _, wordObj in ipairs(miniGameState.renderedWords) do
+        if wordObj.completed == false then
+            table.insert(availableWords, wordObj)
+        end
+    end
+
+    local availLettersDict = {}
+    for i, word in ipairs(availableWords) do
+        local letter = string.sub(word.wordChars, 1, 1)
+        availLettersDict[letter] = true
+    end
+    return availLettersDict
+end
+
+local function getAvailLettersDict(props)
     local words = props.words
     local currentLetterIndex = props.currentLetterIndex
 
@@ -617,27 +643,6 @@ function getAvailLettersDict(props)
         availLettersDict[letter] = true
     end
     return availLettersDict
-end
-
-function configAvailLetters(props)
-    local parentFolder = props.parentFolder
-
-    local availLetters = Utils.getByTagInParent(
-                             {
-            parent = parentFolder,
-            tag = module.tagNames.AvailLetter
-        })
-
-    for i, item in ipairs(availLetters) do
-        module.colorLetterText({
-            letterBlock = item,
-            color = Color3.fromRGB(255, 0, 238)
-        })
-        module.colorLetterBD({
-            letterBlock = item,
-            color = Color3.fromRGB(0, 255, 34)
-        })
-    end
 end
 
 function anchorLetters(props)
@@ -699,6 +704,7 @@ module.getRunTimeLetterFolder = getRunTimeLetterFolder
 module.applyStyleFromTemplateBD = applyStyleFromTemplateBD
 module.hideBlockImages = hideBlockImages
 module.applyLetterImage = applyLetterImage
+module.getAvailLettersDict2 = getAvailLettersDict2
 module.hideBlockText = hideBlockText
 module.initLetterBlock = initLetterBlock
 module.styleLetterBlocksBD = styleLetterBlocksBD

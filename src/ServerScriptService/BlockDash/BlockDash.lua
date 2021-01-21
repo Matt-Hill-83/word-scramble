@@ -64,7 +64,7 @@ local function addBlockDash(sectorConfig)
         availWords = {},
         currentLetterIndex = 1,
         foundLetters = {},
-        foundWords = {},
+        -- foundWords = {},
         initCompleted = false,
         renderedWords = {},
         -- wordLetters = {},
