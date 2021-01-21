@@ -29,8 +29,8 @@ local function addRemoteObjects()
             "VAT", --
             "AT" --
         },
-        gridSize = {numRow = 5, numCol = 5}
-        -- gridSize = {numRow = 26, numCol = 26}
+        -- gridSize = {numRow = 5, numCol = 5}
+        gridSize = {numRow = 26, numCol = 26}
     }
 
     local sector2Config = {
