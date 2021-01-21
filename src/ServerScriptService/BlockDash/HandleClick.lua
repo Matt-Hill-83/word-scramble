@@ -174,11 +174,10 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                     parent = activeWord.word
                 })
             for _, wordLetter in ipairs(wordLetters) do
+                Utils.playSound('5207654419')
                 local fire = Instance.new("Fire", wordLetter)
                 fire.Size = 20
-                Utils.playSound('5207654419')
             end
-
         end
 
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
@@ -197,7 +196,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                     for _, wordLetter in ipairs(wordLetters) do
                         print('wordLetter' .. ' - start');
                         print(wordLetter);
-                        -- wordLetter:Destroy()
+                        wordLetter:Destroy()
                     end
                 end
 
