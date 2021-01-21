@@ -19,7 +19,9 @@ function addRemoteObjects()
     local sector1Config = {
         -- words = {"VAT", "CAT"},
         -- words = {"CAT"},
-        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT"},
+        words = {
+            "CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT", "BOG", "ZIP"
+        },
         -- gridSize = {numRow = 6, numCol = 6}
         gridSize = {numRow = 26, numCol = 26}
     }
@@ -39,11 +41,11 @@ function addRemoteObjects()
     local islandTemplate = Utils.getFromTemplates("IslandTemplate")
     local sectorConfigs = {
         sector1Config, --
-        sector2Config, --
-        sector2Config, --
-        sector2Config, --
-        sector2Config, --
-        sector2Config, sector2Config
+        sector1Config, --
+        sector1Config, --
+        sector1Config, --
+        sector1Config, --
+        sector1Config --
     }
 
     Utils.sortListByObjectKey(islandPositioners, "Name")

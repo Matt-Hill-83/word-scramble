@@ -23,6 +23,7 @@ local function initWord(props)
     local miniGameState = props.miniGameState
     local wordIndex = props.wordIndex
     local word = props.word
+    local colIndex = props.colIndex
 
     local sectorFolder = miniGameState.sectorFolder
 
@@ -45,10 +46,29 @@ local function initWord(props)
 
     local spacingFactorY = 1.1
     local spacingFactorX = 1.1
-    local wordSpacingY = letterBlockTemplate.Size.Y * spacingFactorY
+    local offsetY = letterBlockTemplate.Size.Y * spacingFactorY
 
-    wordBench.CFrame = wordPositioner.CFrame +
-                           Vector3.new(0, wordSpacingY * (wordIndex - 1), 0)
+    local totalLetterWidth = letterBlockTemplate.Size.X * spacingFactorX
+    local maxWordLength = 3
+    local wordOffset = letterBlockTemplate.Size.X * 2
+
+    local colOffsetX = (colIndex - 1) * totalLetterWidth * maxWordLength +
+                           wordOffset
+    -- wordBench.CFrame = wordPositioner.CFrame +
+    --                        Vector3.new(colOffsetX, offsetY * (wordIndex - 1), 0)
+
+    wordBench.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                           {
+            parent = wordPositioner,
+            child = wordBench,
+            offsetConfig = {
+                useParentNearEdge = Vector3.new(1, 1, 1),
+                useChildNearEdge = Vector3.new(1, 1, 1),
+                offsetAdder = Vector3.new(0, offsetY * (wordIndex - 1),
+                                          colOffsetX)
+                -- offsetAdder = Vector3.new(offsetX, 0, 0)
+            }
+        })
 
     local wordNameStub = "-W" .. wordIndex
     newWord.Name = newWord.Name .. wordNameStub
@@ -62,7 +82,8 @@ local function initWord(props)
         local newLetter = letterBlockTemplate:Clone()
         newLetter.Name = "wordLetter-" .. letterNameStub
 
-        local offsetX = -newLetter.Size.X * (letterIndex - 1) * spacingFactorX
+        local offsetX =
+            -(newLetter.Size.X * (letterIndex - 1) * spacingFactorX) - 0
 
         CS:AddTag(newLetter, LetterFallUtils.tagNames.WordLetter)
 
@@ -96,11 +117,11 @@ local function initWord(props)
                      {char = char, found = false, instance = newLetter})
     end
 
-    local wordBenchPosX = wordBench.Position.X
+    -- local wordBenchPosX = wordBench.Position.X
 
     wordBench.CanCollide = false
-    wordBench.Position = Vector3.new(wordBenchPosX, wordBench.Position.Y,
-                                     wordBench.Position.Z)
+    -- wordBench.Position = Vector3.new(wordBenchPosX, wordBench.Position.Y,
+    --                                  wordBench.Position.Z)
 
     local newWordObj = {
         word = newWord,
@@ -111,12 +132,13 @@ local function initWord(props)
     return newWordObj
 end
 
-local function renderColumn(miniGameState)
-    for wordIndex, word in ipairs(miniGameState.words) do
+local function renderColumn(miniGameState, colIndex, words)
+    for wordIndex, word in ipairs(words) do
         local wordProps = {
             miniGameState = miniGameState,
             wordIndex = wordIndex,
-            word = word
+            word = word,
+            colIndex = colIndex
         }
 
         local newWordObj = initWord(wordProps)
@@ -126,7 +148,22 @@ end
 
 local function initWords(miniGameState)
     BlockDashUtils.clearWordRack(miniGameState)
-    renderColumn(miniGameState)
+    local wordsPerCol = 4
+    local numCol = math.ceil(#miniGameState.words / wordsPerCol)
+    print('numCol' .. ' - start');
+    print(numCol);
+
+    for colIndex = 1, numCol do
+        local startIndex = ((colIndex - 1) * wordsPerCol) + 1
+        local endIndex = startIndex + wordsPerCol - 1
+        print('startIndex' .. ' - start');
+        print(startIndex);
+        print('endIndex' .. ' - start');
+        print(endIndex);
+        local words = {table.unpack(miniGameState.words, startIndex, endIndex)}
+        renderColumn(miniGameState, colIndex, words)
+        -- 
+    end
 end
 
 module.initWords = initWords
