@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1297.71814</X>
-					<Y>256.19989</Y>
-					<Z>64.0331192</Z>
-					<R00>0.181025714</R00>
-					<R01>-0.270916373</R01>
-					<R02>0.945427895</R02>
-					<R10>-0</R10>
-					<R11>0.961310327</R11>
-					<R12>0.275467545</R12>
-					<R20>-0.983478367</R20>
-					<R21>-0.0498667099</R21>
-					<R22>0.17402187</R22>
+					<X>-996.134399</X>
+					<Y>158.576233</Y>
+					<Z>141.989731</Z>
+					<R00>-0.375089228</R00>
+					<R01>0.278562605</R01>
+					<R02>-0.884144187</R02>
+					<R10>-7.45058149e-09</R10>
+					<R11>0.953781068</R11>
+					<R12>0.300502658</R12>
+					<R20>0.92698884</R20>
+					<R21>0.112715319</R21>
+					<R22>-0.357752919</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1299.60925</X>
-					<Y>255.64888</Y>
-					<Z>63.6850281</Z>
+					<X>-971.201782</X>
+					<Y>150.102142</Y>
+					<Z>152.078262</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -34570,7 +34570,7 @@ end)]]></ProtectedString>
 									<Y>600</Y>
 								</Vector2>
 								<bool name="ClipsDescendants">true</bool>
-								<bool name="Enabled">true</bool>
+								<bool name="Enabled">false</bool>
 								<token name="Face">5</token>
 								<float name="LightInfluence">1</float>
 								<string name="Name">SurfaceGui</string>
@@ -62422,6 +62422,9 @@ local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local sector1Config = {
+        -- words = {
+        --     "CAT" --
+        -- },
         words = {
             "CAT", --
             "HAT", --
@@ -63225,14 +63228,16 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
         local currentWord = table.concat(miniGameState.foundLetters, "")
         local wordComplete = table.find(words, currentWord)
+        local fireSound = '5207654419'
 
         miniGameState.currentLetterIndex = miniGameState.currentLetterIndex + 1
         if (wordComplete) then
             local currentWord2 = Constants.wordConfigs[currentWord]
             if currentWord2 then
-                local fireSound = '5207654419'
                 local soundId = currentWord2['soundId'] or fireSound
                 Utils.playSound(soundId)
+            else
+                Utils.playSound(fireSound)
             end
 
             local gemTemplate = Utils.getFromTemplates("GemTemplate")
@@ -63280,7 +63285,8 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                     })
 
                 local function destroyParts()
-                    Utils.playSound('262562442')
+                    local explosionSound = '262562442'
+                    Utils.playSound(explosionSound, 2)
                     for _, wordLetter in ipairs(wordLetters) do
                         print('wordLetter' .. ' - start');
                         print(wordLetter);
@@ -63822,12 +63828,9 @@ function module.initEntrance(miniGameState)
         print('onTouchRun30');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
-            local player = Utils.getPlayerFromHumanoid(humanoid)
-            local gameState = PlayerStatManager.getGameState(player)
-
-            if gameState.runFast ~= 30 then
-                gameState.runFast = 30
-                humanoid.WalkSpeed = Constants.gameConfig.walkSpeed
+            if humanoid then
+                if humanoid.WalkSpeed == 30 then return end
+                humanoid.WalkSpeed = 30
             end
         end
     end
@@ -63839,13 +63842,8 @@ function module.initEntrance(miniGameState)
         print('onTouchRun50----------------------------');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
-            local player = Utils.getPlayerFromHumanoid(humanoid)
-            local gameState = PlayerStatManager.getGameState(player)
-
-            if gameState.runFast ~= 50 then
-                gameState.runFast = 50
-                humanoid.WalkSpeed = fastWalkSpeed
-            end
+            if humanoid.WalkSpeed == 50 then return end
+            humanoid.WalkSpeed = 50
         end
     end
 
@@ -63857,19 +63855,12 @@ function module.initEntrance(miniGameState)
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
             if humanoid.WalkSpeed == 70 then return end
-            -- local player = Utils.getPlayerFromHumanoid(humanoid)
-            -- local gameState = PlayerStatManager.getGameState(player)
-
-            -- if gameState.runFast ~= 70 then
-            -- gameState.runFast = 70
             humanoid.WalkSpeed = 70
-            -- end
         end
     end
 
     local run70s = Utils.getDescendantsByName(sectorFolder, "Run70")
     for _, item in ipairs(run70s) do item.Touched:Connect(onTouchRun70) end
-
 end
 
 return module
@@ -64119,11 +64110,14 @@ local function initKey(miniGameState)
 
     local function callBack(miniGameState2)
         local function closure()
-            print('callBack' .. ' - start');
-            print(callBack);
             miniGameState.onWordLettersGone(miniGameState2)
         end
-        return closure
+
+        local function wrapperForDelay()
+            delay(10, closure)
+            -- 
+        end
+        return wrapperForDelay
     end
 
     Replicator.init(newReplicator, callBack(miniGameState))
@@ -66091,11 +66085,11 @@ local function listIncludes(tab, val)
     return false
 end
 
-local function playSound(soundId)
+local function playSound(soundId, emitterSize)
     if (soundId) then
         local sound = Instance.new("Sound", workspace)
         sound.SoundId = "rbxassetid://" .. soundId
-        sound.EmitterSize = 5
+        sound.EmitterSize = emitterSize or 5
         sound.Looped = false
         if not sound.IsPlaying then sound:Play() end
     end
@@ -66626,11 +66620,6 @@ addPadding = function(props)
     UIPadding.PaddingRight = UDim.new(paddingPct, 0)
 end
 
-setMaterialPebble = function(part)
-    part.Material = Enum.Material.Pebble
-    part.BrickColor = BrickColor.new("Institutional white")
-end
-
 module.addcfv3 = addcfv3
 module.addPadding = addPadding
 module.cloneModel = cloneModel
@@ -66652,7 +66641,6 @@ module.playSound = playSound
 module.removeFirstMatchFromArray = removeFirstMatchFromArray
 module.removeListItemByUuid = removeListItemByUuid
 module.setItemHeight = setItemHeight
-module.setMaterialPebble = setMaterialPebble
 module.sortListByObjectKey = sortListByObjectKey
 module.tablelength = tablelength
 module.tableToString = tableToString

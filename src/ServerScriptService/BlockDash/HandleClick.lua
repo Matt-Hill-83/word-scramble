@@ -171,8 +171,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
 
         local numAvailableWords = #LetterFallUtils.getAvailWords(miniGameState)
-        print('numAvailableWords' .. ' - start');
-        print(numAvailableWords);
         if numAvailableWords == 0 then
             for _, wordObj in ipairs(miniGameState.renderedWords) do
                 local wordLetters = Utils.getInstancesByNameStub(
@@ -185,8 +183,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                     local explosionSound = '262562442'
                     Utils.playSound(explosionSound, 2)
                     for _, wordLetter in ipairs(wordLetters) do
-                        print('wordLetter' .. ' - start');
-                        print(wordLetter);
                         wordLetter:Destroy()
                     end
                 end
