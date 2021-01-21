@@ -21,8 +21,8 @@ function addRemoteObjects()
         -- words = {"CAT"},
         words = {
             "CAT", --
-            "CAT", --
-            "CAT" --
+            "CAN", --
+            "CAP" --
         },
         -- words = {
         --     "CAT", --

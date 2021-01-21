@@ -1,6 +1,6 @@
 local CS = game:GetService("CollectionService")
 local Sss = game:GetService("ServerScriptService")
-local RS = game:GetService("ReplicatedStorage")
+-- local RS = game:GetService("ReplicatedStorage")
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
@@ -12,8 +12,8 @@ local Leaderboard = require(Sss.Source.AddRemoteObjects.Leaderboard)
 local module = {processing = false, initComplete = false}
 
 local function isDesiredLetter(availLetters, clickedLetter)
-    local textLabel = Utils.getFirstDescendantByName(clickedLetter, "BlockChar")
-                          .Text
+    -- local textLabel = Utils.getFirstDescendantByName(clickedLetter, "BlockChar")
+    --                       .Text
     local char = LetterFallUtils.getCharFromLetterBlock(clickedLetter)
     return availLetters[char]
 end
@@ -98,7 +98,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                 currentLetterIndex = currentLetterIndex
             })
 
-        local numAvailLetters = Utils.tablelength(availLetters)
+        -- local numAvailLetters = Utils.tablelength(availLetters)
         if isDesiredLetter(availLetters, clickedLetter) then
             targetLetterBlock = findFirstMatchingLetterBlock(foundChar,
                                                              miniGameState)
@@ -187,6 +187,12 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
             print('miniGameState.renderedWords' .. ' - start');
             print(miniGameState.renderedWords);
+            print(#miniGameState.renderedWords);
+
+            Utils.removeListItemByUuid(miniGameState.renderedWords,
+                                       activeWord.uuid)
+            print(miniGameState.renderedWords);
+            print(#miniGameState.renderedWords);
         end
 
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})

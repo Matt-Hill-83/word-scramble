@@ -1,13 +1,13 @@
--- local isTest = true
-local isTest = false
+local isTest = true
+-- local isTest = false
 
 local devGameConfig = {
     singleIsland = true,
     transparency = false,
     -- transparency = true,
-    walkSpeed = 30,
+    -- walkSpeed = 30,
     fastWalkSpeed = 50,
-    -- walkSpeed = 80,
+    walkSpeed = 80,
 
     disabledSpawns = {
         -- 'Spawn-S2-Bottom', --

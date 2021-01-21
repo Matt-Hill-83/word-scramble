@@ -9,7 +9,7 @@ local module = {}
 
 function getUuid() return HttpService:GenerateGUID(false) end
 
-function getItemByUuid(items)
+function getItemByUuid(items, uuid)
     for _, item in ipairs(items) do
         if item.Uuid == uuid then
             return item
@@ -17,6 +17,18 @@ function getItemByUuid(items)
         end
     end
     return nil
+end
+
+local function removeListItemByUuid(items, uuid)
+    for index, item in ipairs(items) do
+        if item.uuid == uuid then
+
+            print('removing');
+            table.remove(items, index)
+            -- 
+        end
+        -- if item.Uuid ~= uuid then table.insert(newList, item) end
+    end
 end
 
 function tablelength(T)
@@ -547,6 +559,7 @@ module.setItemHeight = setItemHeight
 module.tablelength = tablelength
 module.sortListByObjectKey = sortListByObjectKey
 module.getUuid = getUuid
+module.removeListItemByUuid = removeListItemByUuid
 module.getItemByUuid = getItemByUuid
 module.applyDecalsToCharacterFromWord = applyDecalsToCharacterFromWord
 module.applyDecalsToCharacterFromConfigName =
