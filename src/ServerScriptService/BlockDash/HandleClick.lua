@@ -26,7 +26,10 @@ end
 local function findFirstMatchingLetterBlock(foundChar, miniGameState)
     local matchingLetter = nil
 
-    for _, word in ipairs(miniGameState.renderedWords) do
+    local test = LetterFallUtils.getAvailWords(miniGameState)
+
+    for _, word in ipairs(test) do
+        -- for _, word in ipairs(miniGameState.renderedWords) do
         local letter = word.letters[miniGameState.currentLetterIndex]
         if foundChar == letter.char then
             miniGameState.activeWord = word
@@ -192,12 +195,12 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
 
-        local numAvailableBlocks = LetterFallUtils.getNumAvailLetterBlocks(
-                                       miniGameState)
+        -- local numAvailableBlocks = LetterFallUtils.getNumAvailLetterBlocks(
+        --                                miniGameState)
 
-        if numAvailableBlocks == 0 then
-            -- miniGameState.onWordLettersGone(miniGameState)
-        end
+        -- if numAvailableBlocks == 0 then
+        --     -- miniGameState.onWordLettersGone(miniGameState)
+        -- end
     end
     module.processing = false
 end

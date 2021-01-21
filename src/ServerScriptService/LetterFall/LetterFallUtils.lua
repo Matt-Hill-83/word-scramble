@@ -81,7 +81,7 @@ function getLettersNotInWords(words)
     return filteredLetters
 end
 
-function getRandomLetter(letters)
+local function getRandomLetter(letters)
     local defaultLetters = Constants.allLetters
 
     if not letters then letters = defaultLetters end
@@ -96,7 +96,11 @@ local function getAvailWords(miniGameState)
     if activeWord then
         availWords = {activeWord.wordChars}
     else
-        availWords = miniGameState.words
+        for _, wordObj in ipairs(miniGameState.renderedWords) do
+            if wordObj.completed == false then
+                table.insert(availWords, wordObj)
+            end
+        end
     end
     return availWords
 end

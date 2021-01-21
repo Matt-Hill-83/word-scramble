@@ -14,32 +14,32 @@ local function addSector(sectorConfig)
     -- 
 end
 
-function addRemoteObjects()
+local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local sector1Config = {
         -- words = {"CAT"},
-        -- words = {
-        --     "CAT", --
-        --     "CAN", --
-        --     "CAP" --
-        -- },
         words = {
             "CAT", --
-            "HAT", --
-            "MAT", --
-            "PAT", --
-            -- 
-            "SAT", --
-            "RAT", --
-            "VAT", --
-            "AT", --
-            -- 
-            "FLAT", --
-            "CHAT", --
-            "SPLAT", --
-            "THAT" --
+            "CAN", --
+            "CAP" --
         },
+        -- words = {
+        --     "CAT", --
+        --     "HAT", --
+        --     "MAT", --
+        --     "PAT", --
+        --     -- 
+        --     "SAT", --
+        --     "RAT", --
+        --     "VAT", --
+        --     "AT", --
+        --     -- 
+        --     "FLAT", --
+        --     "CHAT", --
+        --     "SPLAT", --
+        --     "THAT" --
+        -- },
         -- gridSize = {numRow = 6, numCol = 6}
         gridSize = {numRow = 26, numCol = 26}
     }
