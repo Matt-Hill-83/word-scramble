@@ -413,14 +413,11 @@ function styleLetterBlocks(props)
 
     end
 end
--- 
--- 
+
 local function styleLetterBlocksBD(props)
     local miniGameState = props.miniGameState
     local runTimeLetterFolder = miniGameState.runTimeLetterFolder
     local runTimeWordFolder = miniGameState.runTimeWordFolder
-
-    -- local availWords = module.getAvailWords(miniGameState)
 
     local availWords = {}
     for _, wordObj in ipairs(miniGameState.renderedWords) do
@@ -428,9 +425,6 @@ local function styleLetterBlocksBD(props)
             table.insert(availWords, wordObj.wordChars)
         end
     end
-
-    print('availWords' .. ' - start');
-    print(availWords);
 
     local availLetters = module.getAvailLettersDict(
                              {
