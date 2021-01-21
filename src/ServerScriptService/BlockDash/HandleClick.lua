@@ -25,18 +25,13 @@ end
 
 local function findFirstMatchingLetterBlock(foundChar, miniGameState)
     local matchingLetter = nil
+    local availWords = LetterFallUtils.getAvailWords(miniGameState)
 
-    local test = LetterFallUtils.getAvailWords(miniGameState)
-
-    for _, word in ipairs(test) do
+    for _, word in ipairs(availWords) do
         -- for _, word in ipairs(miniGameState.renderedWords) do
         local letter = word.letters[miniGameState.currentLetterIndex]
         if foundChar == letter.char then
             miniGameState.activeWord = word
-            print('word' .. ' - start');
-            print(word);
-            print('word.uuid' .. ' - start');
-            print(word.uuid);
             matchingLetter = letter.instance
             break
         end
@@ -96,13 +91,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         end
     else
         local availLetters = LetterFallUtils.getAvailLettersDict2(miniGameState)
-
-        print('availLetters' .. ' - start');
-        print('availLetters' .. ' - start');
-        print('availLetters' .. ' - start');
-        print('availLetters' .. ' - start');
-        print(availLetters);
-
         if isDesiredLetter(availLetters, clickedLetter) then
             targetLetterBlock = findFirstMatchingLetterBlock(foundChar,
                                                              miniGameState)
@@ -167,16 +155,9 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             local rand = Utils.genRandom(1, #Constants.gemColors)
             newGem.Handle.Color = Constants.gemColors[rand]
 
-            -- table.insert(miniGameState.foundWords, currentWord)
-
             local activeWord2 = miniGameState.activeWord
             activeWord2.Name = "wwww"
-            -- activeWord2.word:Destroy()
 
-            -- for _, letter in ipairs(activeWord2.letters) do
-            --     local myLetter = letter.instance
-            --     myLetter:Destroy()
-            -- end
             miniGameState.activeWord = nil
 
             miniGameState.foundLetters = {}
@@ -189,18 +170,24 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             Leaderboard.updateLB()
 
             activeWord.completed = true
-            -- Utils.removeListItemByUuid(miniGameState.renderedWords,
-            --                            activeWord.uuid)
         end
 
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
 
-        -- local numAvailableBlocks = LetterFallUtils.getNumAvailLetterBlocks(
-        --                                miniGameState)
-
-        -- if numAvailableBlocks == 0 then
-        --     -- miniGameState.onWordLettersGone(miniGameState)
-        -- end
+        local numAvailableWords = #LetterFallUtils.getAvailWords(miniGameState)
+        if numAvailableWords == 0 then
+            for _, wordObj in ipairs(miniGameState.renderedWords) do
+                local wordLetters = Utils.getInstancesByNameStub(
+                                        {
+                        nameStub = "wordLetter",
+                        parent = wordObj.word
+                    })
+                for _, wordLetter in ipairs(wordLetters) do
+                    local fire = Instance.new("Fire", wordLetter)
+                    fire.Size = 30
+                end
+            end
+        end
     end
     module.processing = false
 end

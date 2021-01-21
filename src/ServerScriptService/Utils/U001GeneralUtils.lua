@@ -7,6 +7,23 @@ local HttpService = game:GetService("HttpService")
 local Constants = require(Sss.Source.Constants.Constants)
 local module = {}
 
+local getInstancesByNameStub = function(props)
+    local nameStub = props.nameStub
+    local parent = props.parent
+    local children = parent:GetDescendants()
+
+    local output = {}
+    for _, item in pairs(children) do
+        local match = string.match(item.Name, nameStub)
+
+        if match then
+            table.insert(output, item)
+            --
+        end
+    end
+    return output
+end
+
 function getUuid() return HttpService:GenerateGUID(false) end
 
 function getItemByUuid(items, uuid)
@@ -560,6 +577,7 @@ module.tablelength = tablelength
 module.sortListByObjectKey = sortListByObjectKey
 module.getUuid = getUuid
 module.removeListItemByUuid = removeListItemByUuid
+module.getInstancesByNameStub = getInstancesByNameStub
 module.getItemByUuid = getItemByUuid
 module.applyDecalsToCharacterFromWord = applyDecalsToCharacterFromWord
 module.applyDecalsToCharacterFromConfigName =

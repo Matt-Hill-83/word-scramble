@@ -487,7 +487,8 @@ local function styleLetterBlocksBD(props)
     end
 
 end
-function getNumAvailLetterBlocks(miniGameState)
+
+local function getNumAvailLetterBlocks(miniGameState)
     local runTimeLetterFolder = miniGameState.runTimeLetterFolder
 
     local availWords = module.getAvailWords(miniGameState)
@@ -626,10 +627,6 @@ local function getAvailLettersDict2(miniGameState)
     for _, wordObj in ipairs(miniGameState.renderedWords) do
         if wordObj.completed == false then
             table.insert(availableWords, wordObj)
-        else
-            print('completed');
-            print('wordObj' .. ' - start');
-            print(wordObj);
         end
     end
 
