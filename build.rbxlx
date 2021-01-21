@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1268.64233</X>
-					<Y>221.092285</Y>
-					<Z>31.3749237</Z>
-					<R00>-0.12342751</R00>
-					<R01>-0.0898980051</R01>
-					<R02>0.988273263</R02>
-					<R10>-9.31322686e-10</R10>
-					<R11>0.995888293</R11>
-					<R12>0.0905906931</R12>
-					<R20>-0.992353678</R20>
-					<R21>0.0111813825</R21>
-					<R22>-0.122919992</R22>
+					<X>-1245.64502</X>
+					<Y>260.998688</Y>
+					<Z>44.5534439</Z>
+					<R00>-0.164653718</R00>
+					<R01>-0.40727821</R01>
+					<R02>0.898339391</R02>
+					<R10>-3.72529074e-09</R10>
+					<R11>0.910770237</R11>
+					<R12>0.412913859</R12>
+					<R20>-0.98635155</R20>
+					<R21>0.0679877996</R21>
+					<R22>-0.149961665</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1270.6189</X>
-					<Y>220.911102</Y>
-					<Z>31.6207657</Z>
+					<X>-1247.44165</X>
+					<Y>260.172882</Y>
+					<Z>44.8533592</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -59231,7 +59231,7 @@ end)]]></ProtectedString>
 								<bool name="CanTouch">true</bool>
 								<bool name="CastShadow">true</bool>
 								<int name="CollisionGroupId">0</int>
-								<Color3uint8 name="Color3uint8">4286263163</Color3uint8>
+								<Color3uint8 name="Color3uint8">4288914085</Color3uint8>
 								<PhysicalProperties name="CustomPhysicalProperties">
 									<CustomPhysics>false</CustomPhysics>
 								</PhysicalProperties>
@@ -59245,7 +59245,7 @@ end)]]></ProtectedString>
 								<token name="LeftSurfaceInput">0</token>
 								<bool name="Locked">false</bool>
 								<bool name="Massless">false</bool>
-								<token name="Material">880</token>
+								<token name="Material">256</token>
 								<string name="Name">Floor</string>
 								<float name="Reflectance">0</float>
 								<float name="RightParamA">-0.5</float>
@@ -59264,7 +59264,7 @@ end)]]></ProtectedString>
 								<float name="TopParamB">0.5</float>
 								<token name="TopSurface">0</token>
 								<token name="TopSurfaceInput">0</token>
-								<float name="Transparency">0.400000006</float>
+								<float name="Transparency">0.699999988</float>
 								<Vector3 name="Velocity">
 									<X>0</X>
 									<Y>0</Y>
@@ -63295,7 +63295,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                 local soundId = currentWord2['soundId'] or fireSound
                 Utils.playSound(soundId)
             else
-                Utils.playSound(fireSound)
+                -- Utils.playSound(fireSound)
             end
 
             local gemTemplate = Utils.getFromTemplates("GemTemplate")
