@@ -1,14 +1,23 @@
 local Sss = game:GetService("ServerScriptService")
 local CS = game:GetService("CollectionService")
-local RS = game:GetService("ReplicatedStorage")
+-- local RS = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
+local HttpService = game:GetService("HttpService")
 
 local Constants = require(Sss.Source.Constants.Constants)
 local module = {}
 
--- new
--- 
--- 
+function getUuid() return HttpService:GenerateGUID(false) end
+
+function getItemByUuid(items)
+    for _, item in ipairs(items) do
+        if item.Uuid == uuid then
+            return item
+            -- 
+        end
+    end
+    return nil
+end
 
 function tablelength(T)
     local count = 0
@@ -499,15 +508,6 @@ function tableToString(tab, a, b, c, d)
     return table.concat(res, "\n")
 end
 
--- local test = {
---     str = "Result:\n\t- Unknown",
---     number = 12345,
---     child = {a = "b"},
---     cyclic = {}
--- }
--- test.child.cyclic = test.cyclic
--- test.another = test.child
-
 function mergeTables(t1, t2) for k, v in pairs(t2) do t1[k] = v end end
 
 addPadding = function(props)
@@ -546,6 +546,8 @@ module.getKeysFromDict = getKeysFromDict
 module.setItemHeight = setItemHeight
 module.tablelength = tablelength
 module.sortListByObjectKey = sortListByObjectKey
+module.getUuid = getUuid
+module.getItemByUuid = getItemByUuid
 module.applyDecalsToCharacterFromWord = applyDecalsToCharacterFromWord
 module.applyDecalsToCharacterFromConfigName =
     applyDecalsToCharacterFromConfigName

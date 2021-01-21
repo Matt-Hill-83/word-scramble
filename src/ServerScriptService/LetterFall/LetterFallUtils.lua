@@ -89,7 +89,7 @@ function getRandomLetter(letters)
     return letters[rand]
 end
 
-function getAvailWords(miniGameState)
+local function getAvailWords(miniGameState)
     local availWords = {}
     local activeWord = miniGameState.activeWord
 
@@ -101,7 +101,7 @@ function getAvailWords(miniGameState)
     return availWords
 end
 
-function initLetterBlock(props)
+local function initLetterBlock(props)
     local letterBlock = props.letterBlock
     local char = props.char
     local templateName = props.templateName
@@ -127,6 +127,10 @@ function initLetterBlock(props)
     propStyle.Name = "CurrentStyle"
     propStyle.Value = "zzz"
 
+    local propUuid = Instance.new("StringValue", letterBlock)
+    propUuid.Name = "Uuid"
+    propUuid.Value = Utils.getUuid()
+
     if templateName then
         module.applyStyleFromTemplateBD({
             targetLetterBlock = letterBlock,
@@ -134,10 +138,6 @@ function initLetterBlock(props)
         })
     end
 end
-
--- 
--- 
--- 
 
 function hideBlockImages(letterBlock)
     local labels = Utils.getDescendantsByName(letterBlock, "ImageLabel")

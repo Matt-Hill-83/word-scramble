@@ -18,9 +18,23 @@ function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local sector1Config = {
-        -- words = {"VAT", "CAT"},
         -- words = {"CAT"},
-        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "RAT", "VAT", "ZIP"},
+        words = {
+            "CAT", --
+            "CAT", --
+            "CAT" --
+        },
+        -- words = {
+        --     "CAT", --
+        --     "HAT", --
+        --     "MAT", --
+        --     "PAT", --
+        --     "SAT", --
+        --     "BOG", --
+        --     "RAT", --
+        --     "VAT", --
+        --     "FLAT" --
+        -- },
         -- gridSize = {numRow = 6, numCol = 6}
         gridSize = {numRow = 26, numCol = 26}
     }

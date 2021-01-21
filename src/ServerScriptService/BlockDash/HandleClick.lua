@@ -11,25 +11,29 @@ local Leaderboard = require(Sss.Source.AddRemoteObjects.Leaderboard)
 
 local module = {processing = false, initComplete = false}
 
-function isDesiredLetter(availLetters, clickedLetter)
+local function isDesiredLetter(availLetters, clickedLetter)
     local textLabel = Utils.getFirstDescendantByName(clickedLetter, "BlockChar")
                           .Text
     local char = LetterFallUtils.getCharFromLetterBlock(clickedLetter)
     return availLetters[char]
 end
 
-function isDeadLetter(clickedLetter)
+local function isDeadLetter(clickedLetter)
     local tag = LetterFallUtils.tagNames.DeadLetter
     return CS:HasTag(clickedLetter, tag)
 end
 
-function findFirstMatchingLetterBlock(foundChar, miniGameState)
+local function findFirstMatchingLetterBlock(foundChar, miniGameState)
     local matchingLetter = nil
 
-    for wordIndex, word in ipairs(miniGameState.renderedWords) do
+    for _, word in ipairs(miniGameState.renderedWords) do
         local letter = word.letters[miniGameState.currentLetterIndex]
         if foundChar == letter.char then
             miniGameState.activeWord = word
+            print('word' .. ' - start');
+            print(word);
+            print('word.uuid' .. ' - start');
+            print(word.uuid);
             matchingLetter = letter.instance
             break
         end

@@ -37,18 +37,11 @@ local function initWord(props)
                                     letterBlockFolder, "BD_word_normal")
 
     local newWord = wordBox:Clone()
-    print('newWord' .. ' - start');
-    print(newWord);
     local wordBench = Utils.getFirstDescendantByName(newWord, "WordBench")
     local letterPositioner = Utils.getFirstDescendantByName(newWord,
                                                             "WordLetterBlockPositioner")
-    print('letterPositioner' .. ' - start');
-    print(letterPositioner);
 
-    if not letterPositioner then return end
-    -- 
-    -- 
-    -- 
+    -- if not letterPositioner then return end
 
     local wordPositioner = Utils.getFirstDescendantByName(sectorFolder,
                                                           "WordPositioner")
@@ -127,6 +120,7 @@ local function initWord(props)
     wordBench.CanCollide = false
 
     local newWordObj = {
+        uuid = Utils.getUuid(),
         word = newWord,
         letters = lettersInWord,
         wordChars = word
