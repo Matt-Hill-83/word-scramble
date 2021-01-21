@@ -134,7 +134,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                 local soundId = currentWord2['soundId'] or fireSound
                 Utils.playSound(soundId)
             else
-                Utils.playSound(fireSound)
+                -- Utils.playSound(fireSound)
             end
 
             local gemTemplate = Utils.getFromTemplates("GemTemplate")
