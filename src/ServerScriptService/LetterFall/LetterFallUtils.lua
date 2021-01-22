@@ -117,11 +117,7 @@ local function initLetterBlock(props)
     dummyTextLabel.Name = "CurrentStyle"
     dummyTextLabel.Text = "zzz"
 
-    -- apply the letterText, so the letter block retains the char as a property
-    -- TODO: This is obsolete, use StringValue to store the character instead.
-    -- module.applyLetterText({letterBlock = letterBlock, char = char})
     module.applyLetterImage(letterBlock, char)
-    -- module.hideBlockText(letterBlock)
 
     -- Use StringValue to store the character instead.
     local propChar = Instance.new("StringValue", letterBlock)
@@ -179,7 +175,6 @@ local function applyStyleFromTemplateBD(props)
 
     local template = Utils.getFirstDescendantByName(letterBlockTemplateFolder,
                                                     templateName)
-
     targetLetterBlock.Color = template.Color
 end
 

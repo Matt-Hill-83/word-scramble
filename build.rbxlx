@@ -64,18 +64,18 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1110.18982</X>
-					<Y>190.313766</Y>
-					<Z>146.390732</Z>
-					<R00>0.830582559</R00>
-					<R01>-0.00369642582</R01>
-					<R02>0.556883276</R02>
-					<R10>-0</R10>
-					<R11>0.999977946</R11>
-					<R12>0.00663755601</R12>
-					<R20>-0.556895614</R20>
-					<R21>-0.00551303849</R21>
-					<R22>0.830564201</R22>
+					<X>-1110.12305</X>
+					<Y>190.760193</Y>
+					<Z>143.182297</Z>
+					<R00>-0.795024097</R00>
+					<R01>-0.139437228</R01>
+					<R02>0.59033376</R02>
+					<R10>-1.49011612e-08</R10>
+					<R11>0.97322011</R11>
+					<R12>0.229875207</R12>
+					<R20>-0.606577873</R20>
+					<R21>0.18275632</R21>
+					<R22>-0.773733377</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
@@ -63688,12 +63688,6 @@ local function initWord(props)
                 }
             })
 
-        -- local weld = Instance.new("WeldConstraint")
-        -- weld.Name = "WeldConstraint" .. letterNameStub
-        -- weld.Parent = wordBench.Parent
-        -- weld.Part0 = wordBench
-        -- weld.Part1 = newLetter
-
         -- Do this last to avoid tweening
         newLetter.Parent = newWord
 
@@ -64181,8 +64175,8 @@ local devGameConfig = {
 }
 
 local prodGameConfig = {
-    singleIsland = false,
-    -- singleIsland = true,
+    -- singleIsland = false,
+    singleIsland = true,
     transparency = true,
     walkSpeed = 30,
     fastWalkSpeed = 50,
@@ -66853,7 +66847,7 @@ local function playWordSound(word)
     return closure
 end
 
-function getLettersNotInWords(words)
+local function getLettersNotInWords(words)
     local allLetters = Constants.allLetters
 
     local uniqueLettersFromWords = {}
@@ -66912,11 +66906,7 @@ local function initLetterBlock(props)
     dummyTextLabel.Name = "CurrentStyle"
     dummyTextLabel.Text = "zzz"
 
-    -- apply the letterText, so the letter block retains the char as a property
-    -- TODO: This is obsolete, use StringValue to store the character instead.
-    module.applyLetterText({letterBlock = letterBlock, char = char})
     module.applyLetterImage(letterBlock, char)
-    module.hideBlockText(letterBlock)
 
     -- Use StringValue to store the character instead.
     local propChar = Instance.new("StringValue", letterBlock)
@@ -66943,17 +66933,17 @@ local function initLetterBlock(props)
     end
 end
 
-function hideBlockImages(letterBlock)
+local function hideBlockImages(letterBlock)
     local labels = Utils.getDescendantsByName(letterBlock, "ImageLabel")
     for i, label in ipairs(labels) do label.Visible = false end
 end
 
-function hideBlockText(letterBlock)
+local function hideBlockText(letterBlock)
     local labels = Utils.getDescendantsByName(letterBlock, "BlockChar")
     for i, label in ipairs(labels) do label.Visible = false end
 end
 
-function applyLetterImage(letterBlock, char)
+local function applyLetterImage(letterBlock, char)
     local imageId = Constants.alphabet[char]['decalId']
     local imageUri = 'rbxassetid://' .. imageId
 
@@ -66965,7 +66955,7 @@ function applyLetterImage(letterBlock, char)
     end
 end
 
-function applyStyleFromTemplateBD(props)
+local function applyStyleFromTemplateBD(props)
     local targetLetterBlock = props.targetLetterBlock
     local templateName = props.templateName
 
@@ -66974,20 +66964,10 @@ function applyStyleFromTemplateBD(props)
 
     local template = Utils.getFirstDescendantByName(letterBlockTemplateFolder,
                                                     templateName)
-
     targetLetterBlock.Color = template.Color
-
-    local label = Utils.getFirstDescendantByName(template, "BlockChar")
-
-    local labelProps = {
-        TextColor3 = label.TextColor3,
-        BorderColor3 = label.BorderColor3,
-        BackgroundColor3 = label.BackgroundColor3
-    }
-    styleLetterBlock(targetLetterBlock, labelProps)
 end
 
-function applyStyleFromTemplate(props)
+local function applyStyleFromTemplate(props)
     local targetLetterBlock = props.targetLetterBlock
     local templateName = props.templateName
 
@@ -67255,7 +67235,7 @@ local function styleLetterBlocksBD(props)
                     miniGameState = miniGameState
                 })
         else
-            local char = module.getCharFromLetterBlock(letterBlock)
+            local char = module.getCharFromLetterBlock2(letterBlock)
             if availLetters[char] then
                 numAvailableBlocks = numAvailableBlocks + 1
 
@@ -67304,7 +67284,7 @@ local function getNumAvailLetterBlocks(miniGameState)
     local numAvailableBlocks = 0
     for _, letterBlock in ipairs(allLetters) do
         if not CS:HasTag(letterBlock, module.tagNames.Found) then
-            local char = module.getCharFromLetterBlock(letterBlock)
+            local char = module.getCharFromLetterBlock2(letterBlock)
             if availLetters[char] then
                 numAvailableBlocks = numAvailableBlocks + 1
             end
@@ -67312,18 +67292,6 @@ local function getNumAvailLetterBlocks(miniGameState)
     end
     return numAvailableBlocks
 end
-
--- function unHideWordLetters(miniGameState)
---     local runTimeWordFolder = miniGameState.runTimeWordFolder
---     local wordLetters = module.getAllLettersInWords(
---                             {runTimeWordFolder = runTimeWordFolder})
---     for _, letterBlock in ipairs(wordLetters) do
---         if CS:HasTag(letterBlock, "Hide") then
---             Utils.hideItemAndChildren({item = letterBlock, hide = false})
---             CS:RemoveTag(letterBlock, "Hide")
---         end
---     end
--- end
 
 function colorLetterText(props)
     local color = props.color
@@ -67345,6 +67313,9 @@ end
 
 function getCharFromLetterBlock(letterBlock)
     print('getCharFromLetterBlock-------------------------------------1');
+    print('getCharFromLetterBlock-------------------------------------1');
+    print('getCharFromLetterBlock-------------------------------------1');
+    print('getCharFromLetterBlock-------------------------------------1');
     if not letterBlock then return end
     local label = Utils.getFirstDescendantByName(letterBlock, "BlockChar")
     if not label then return end
@@ -67352,18 +67323,9 @@ function getCharFromLetterBlock(letterBlock)
 end
 
 local function getCharFromLetterBlock2(letterBlock)
-    print('getCharFromLetterBlock2');
-    print('getCharFromLetterBlock2');
-    print('getCharFromLetterBlock2');
-    print('getCharFromLetterBlock2');
     if not letterBlock then return end
-    local char = letterBlock.Character
-
-    print('char' .. ' - start');
-    print(char);
-    local label = Utils.getFirstDescendantByName(letterBlock, "BlockChar")
-    if not label then return end
-    return label.Text
+    local char = letterBlock.Character.Value
+    return char
 end
 
 function isDesiredLetter(letter, clickedLetter)
@@ -67377,31 +67339,6 @@ function isWordComplete(wordLetters)
         if not word.found then return false end
     end
     return true
-end
-
-function createBalls(miniGameState)
-    local letterFallFolder = miniGameState.letterFallFolder
-    local questIndex = miniGameState.questIndex
-
-    local ball = Utils.getFirstDescendantByName(letterFallFolder, "GemTemplate")
-    local gemColor = Constants.gemColors[questIndex]
-
-    local targetGemName = "Gem-Q-zzzz" .. questIndex
-
-    local balls = {}
-    for count = 1, 8 do
-        local newBall = ball:Clone()
-        local ballPart = newBall.Handle
-
-        newBall.Name = targetGemName
-        newBall.Parent = ball.Parent
-        ballPart.CFrame = ballPart.CFrame + Vector3.new(0, 0, 0)
-        ballPart.Color = gemColor
-        Utils.enableChildWelds({part = newBall, enabled = false})
-        table.insert(balls, newBall)
-    end
-
-    ball:Destroy()
 end
 
 function configDeadLetters(props)
@@ -67507,7 +67444,6 @@ module.applyLetterText = applyLetterText
 module.colorLetterBD = colorLetterBD
 module.colorLetterText = colorLetterText
 module.configDeadLetters = configDeadLetters
-module.createBalls = createBalls
 module.getAllLettersInRack = getAllLettersInRack
 module.getAvailLetters = getAvailLetters
 module.getCharFromLetterBlock = getCharFromLetterBlock
