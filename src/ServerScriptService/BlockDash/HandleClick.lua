@@ -169,7 +169,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
                 local function destroyParts()
                     local explosionSound = '262562442'
-                    Utils.playSound(explosionSound, 2)
+                    Utils.playSound(explosionSound, 0.5)
                     for _, wordLetter in ipairs(wordLetters) do
                         wordLetter:Destroy()
                     end

@@ -22,10 +22,10 @@ local function addRemoteObjects()
         --     "CAT" --
         -- },
         words = {
-            "CAT", --
-            "HAT", --
-            "MAT", --
-            "PAT" --
+            "CAT" --
+            -- "HAT", --
+            -- "MAT", --
+            -- "PAT" --
         }
     }
 
