@@ -76,7 +76,7 @@ local function addBlockDash(sectorConfig)
         numRow = numRow,
         numCol = numCol,
         activeStyle = "BD_normal",
-        inActiveStyle = "BD_selected",
+        inActiveStyle = "BD_normal",
         canResetBlocks = true
     }
     miniGameState.words = words

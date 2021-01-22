@@ -30,10 +30,7 @@ module.letterBlockStyleDefs = {
         Available = module.letterBlockStyleNames.LBPurpleLight2,
         NotAvailable = module.letterBlockStyleNames.LBPurpleLight,
         Found = module.letterBlockStyleNames.LBPurpleOrange,
-        DeadLetter = module.letterBlockStyleNames.LBDeadLetter,
-        -- 
-        FoundBD = module.letterBlockStyleNames.LBPurpleOrange,
-        AvailableBD = "BD_available"
+        DeadLetter = module.letterBlockStyleNames.LBDeadLetter
     },
     word = {
         Placeholder = module.letterBlockStyleNames.LBPurpleLight,
@@ -182,6 +179,10 @@ local function applyStyleFromTemplate(props)
     local targetLetterBlock = props.targetLetterBlock
     local templateName = props.templateName
 
+    -- TODO: fix this
+    -- TODO: fix this
+    -- TODO: fix this
+
     -- retrieve existing templateName from dummy TextLabel
     local currentStyle = Utils.getFirstDescendantByName(targetLetterBlock,
                                                         "CurrentStyle")
@@ -211,6 +212,9 @@ local function applyStyleFromTemplate(props)
     if isBlockDash then
         targetLetterBlock.Color = template.Color
 
+        -- TODO: this is hacky, fix
+        -- TODO: this is hacky, fix
+        -- TODO: this is hacky, fix
         if templateName == "BD_available" then
             targetLetterBlock.CFrame = targetLetterBlock.CFrame *
                                            CFrame.new(0,
@@ -412,7 +416,8 @@ end
 local function styleLetterBlocksBD(props)
     local miniGameState = props.miniGameState
     local runTimeLetterFolder = miniGameState.runTimeLetterFolder
-    local runTimeWordFolder = miniGameState.runTimeWordFolder
+    local currentLetterIndex = miniGameState.currentLetterIndex
+    -- local runTimeWordFolder = miniGameState.runTimeWordFolder
     local activeWord = miniGameState.activeWord
 
     local availWords = {}
@@ -430,25 +435,21 @@ local function styleLetterBlocksBD(props)
     local availLetters = module.getAvailLettersDict(
                              {
             words = availWords,
-            currentLetterIndex = miniGameState.currentLetterIndex
+            currentLetterIndex = currentLetterIndex
         })
 
     local allLetters = module.getAllLettersInRack(
                            {runTimeLetterFolder = runTimeLetterFolder})
 
-    local numAvailableBlocks = 0
-    for i, letterBlock in ipairs(allLetters) do
+    -- local numAvailableBlocks = 0
+    for _, letterBlock in ipairs(allLetters) do
         if CS:HasTag(letterBlock, module.tagNames.Found) then
             module.applyStyleFromTemplate(
-                {
-                    targetLetterBlock = letterBlock,
-                    templateName = "BD_found",
-                    miniGameState = miniGameState
-                })
+                {targetLetterBlock = letterBlock, templateName = "BD_found"})
         else
             local char = module.getCharFromLetterBlock2(letterBlock)
             if availLetters[char] then
-                numAvailableBlocks = numAvailableBlocks + 1
+                -- numAvailableBlocks = numAvailableBlocks + 1
 
                 -- letterBlock.CanCollide = false
                 module.applyStyleFromTemplate(
@@ -466,16 +467,16 @@ local function styleLetterBlocksBD(props)
         end
     end
 
-    local wordLetters = module.getAllLettersInWords(
-                            {runTimeWordFolder = runTimeWordFolder})
-    for _, letterBlock in ipairs(wordLetters) do
-        if CS:HasTag(letterBlock, "Hide") then
-            Utils.hideItemAndChildren({item = letterBlock, hide = true})
-        end
-        if CS:HasTag(letterBlock, "UnHide") then
-            Utils.hideItemAndChildren({item = letterBlock, hide = false})
-        end
-    end
+    -- local wordLetters = module.getAllLettersInWords(
+    --                         {runTimeWordFolder = runTimeWordFolder})
+    -- for _, letterBlock in ipairs(wordLetters) do
+    --     if CS:HasTag(letterBlock, "Hide") then
+    --         Utils.hideItemAndChildren({item = letterBlock, hide = true})
+    --     end
+    --     if CS:HasTag(letterBlock, "UnHide") then
+    --         Utils.hideItemAndChildren({item = letterBlock, hide = false})
+    --     end
+    -- end
 
 end
 
