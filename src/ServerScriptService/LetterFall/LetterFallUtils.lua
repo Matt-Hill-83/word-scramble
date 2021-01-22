@@ -416,7 +416,7 @@ local function getAllLettersInRack(props)
     local letters = Utils.getByTagInParent(
                         {
             parent = runTimeLetterFolder,
-            tag = module.tagNames.NotDeadLetter
+            tag = module.tagNames.RackLetter
         })
     return letters
 end
@@ -452,7 +452,6 @@ module.getRandomLetter = getRandomLetter
 module.getCharFromLetterBlock2 = getCharFromLetterBlock2
 module.getLettersNotInWords = getLettersNotInWords
 module.getAllLettersInWords = getAllLettersInWords
--- module.unHideWordLetters = unHideWordLetters
 module.getNumAvailLetterBlocks = getNumAvailLetterBlocks
 module.playWordSound = playWordSound
 return module

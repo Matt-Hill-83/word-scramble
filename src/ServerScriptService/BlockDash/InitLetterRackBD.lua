@@ -79,7 +79,7 @@ local function initLetterRack(miniGameState)
             newLetter.Name = name
 
             CS:AddTag(newLetter, LetterFallUtils.tagNames.RackLetter)
-            CS:AddTag(newLetter, LetterFallUtils.tagNames.NotDeadLetter)
+            -- CS:AddTag(newLetter, LetterFallUtils.tagNames.NotDeadLetter)
 
             local letterPosX = -newLetter.Size.X * (colIndex - 1) *
                                    spacingFactorX
