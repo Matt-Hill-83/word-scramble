@@ -179,11 +179,6 @@ local function applyStyleFromTemplate(props)
     local targetLetterBlock = props.targetLetterBlock
     local templateName = props.templateName
 
-    -- TODO: fix this
-    -- TODO: fix this
-    -- TODO: fix this
-
-    -- retrieve existing templateName from dummy TextLabel
     local currentStyle = targetLetterBlock.CurrentStyle.Value
 
     if currentStyle then
