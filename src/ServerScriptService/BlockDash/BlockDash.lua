@@ -101,7 +101,7 @@ local function addBlockDash(sectorConfig)
     -- Do some acrobatics here because InitLetterRack needs to attach
     -- itself as an event to the blocks it creates.
 
-    Entrance.initEntrance(miniGameState)
+    Entrance.initEntrance(sectorFolder)
     InitLetterRack.initLetterRack(miniGameState)
     InitWord.initWords(miniGameState)
 

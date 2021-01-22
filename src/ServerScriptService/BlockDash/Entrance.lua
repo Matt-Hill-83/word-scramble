@@ -8,8 +8,7 @@ local freezeCameraRE = RS:WaitForChild("BlockDashFreezeCameraRE")
 
 local module = {}
 
-function module.initEntrance(miniGameState)
-    local sectorFolder = miniGameState.sectorFolder
+function module.initEntrance(parent)
 
     local function onTouchEntrance(otherPart)
         print('onTouchEntrance' .. ' - start');
@@ -26,7 +25,7 @@ function module.initEntrance(miniGameState)
         end
     end
 
-    local entrances = Utils.getDescendantsByName(sectorFolder, "Entrance")
+    local entrances = Utils.getDescendantsByName(parent, "Entrance")
     for _, item in ipairs(entrances) do item.Touched:Connect(onTouchEntrance) end
 
     local function onTouchExit(otherPart)
@@ -43,7 +42,7 @@ function module.initEntrance(miniGameState)
         end
     end
 
-    local exits = Utils.getDescendantsByName(sectorFolder, "Exit")
+    local exits = Utils.getDescendantsByName(parent, "Exit")
     for _, item in ipairs(exits) do item.Touched:Connect(onTouchExit) end
 
     -- 
@@ -60,7 +59,7 @@ function module.initEntrance(miniGameState)
         end
     end
 
-    local run30s = Utils.getDescendantsByName(sectorFolder, "Run30")
+    local run30s = Utils.getDescendantsByName(parent, "Run30")
     for _, item in ipairs(run30s) do item.Touched:Connect(onTouchRun30) end
 
     local function onTouchRun50(otherPart)
@@ -72,7 +71,7 @@ function module.initEntrance(miniGameState)
         end
     end
 
-    local run50s = Utils.getDescendantsByName(sectorFolder, "Run50")
+    local run50s = Utils.getDescendantsByName(parent, "Run50")
     for _, item in ipairs(run50s) do item.Touched:Connect(onTouchRun50) end
 
     local function onTouchRun70(otherPart)
@@ -84,7 +83,7 @@ function module.initEntrance(miniGameState)
         end
     end
 
-    local run70s = Utils.getDescendantsByName(sectorFolder, "Run70")
+    local run70s = Utils.getDescendantsByName(parent, "Run70")
     for _, item in ipairs(run70s) do item.Touched:Connect(onTouchRun70) end
 
     local function onTouchRun90(otherPart)
@@ -96,7 +95,7 @@ function module.initEntrance(miniGameState)
         end
     end
 
-    local run90s = Utils.getDescendantsByName(sectorFolder, "Run90")
+    local run90s = Utils.getDescendantsByName(parent, "Run90")
     for _, item in ipairs(run90s) do item.Touched:Connect(onTouchRun90) end
 end
 

@@ -8,6 +8,7 @@ local Constants = require(Sss.Source.Constants.Constants)
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
 local BlockDash = require(Sss.Source.BlockDash.BlockDash)
+local Entrance = require(Sss.Source.BlockDash.Entrance)
 
 local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
@@ -71,6 +72,10 @@ local function addRemoteObjects()
     }
 
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
+
+    local mainSpawn = Utils.getFirstDescendantByName(myStuff, "MainSpawn")
+    Entrance.initEntrance(mainSpawn)
+
     local islandPositionerFolder = Utils.getFirstDescendantByName(blockDash,
                                                                   "IslandPositioners")
 
