@@ -7,7 +7,6 @@ local Constants = require(Sss.Source.Constants.Constants)
 local freezeCameraRE = RS:WaitForChild("BlockDashFreezeCameraRE")
 
 local module = {}
-local fastWalkSpeed = Constants.gameConfig.fastWalkSpeed
 
 function module.initEntrance(miniGameState)
     local sectorFolder = miniGameState.sectorFolder

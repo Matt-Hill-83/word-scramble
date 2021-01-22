@@ -22,7 +22,6 @@ local function initPowerUps(miniGameState)
             if miniGameState.canResetBlocks then
                 miniGameState.canResetBlocks = false
                 BlockDashUtils.clearBlockRack(miniGameState)
-                -- LetterFallUtils.unHideWordLetters(miniGameState)
             end
         end
     end

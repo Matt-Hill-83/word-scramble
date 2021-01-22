@@ -16,11 +16,6 @@ local function isDesiredLetter(availLetters, clickedLetter)
     return availLetters[char]
 end
 
-local function isDeadLetter(clickedLetter)
-    local tag = LetterFallUtils.tagNames.DeadLetter
-    return CS:HasTag(clickedLetter, tag)
-end
-
 local function findFirstMatchingLetterBlock(foundChar, miniGameState)
     local matchingLetter = nil
     local availWords = LetterFallUtils.getAvailWords(miniGameState)
@@ -51,11 +46,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
     local isChild = clickedLetter:IsDescendantOf(sectorFolder)
 
     if not isChild then
-        module.processing = false
-        return
-    end
-
-    if isDeadLetter(clickedLetter) then
         module.processing = false
         return
     end
