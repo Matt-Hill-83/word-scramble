@@ -121,7 +121,7 @@ local function initLetterBlock(props)
     -- TODO: This is obsolete, use StringValue to store the character instead.
     module.applyLetterText({letterBlock = letterBlock, char = char})
     module.applyLetterImage(letterBlock, char)
-    module.hideBlockText(letterBlock)
+    -- module.hideBlockText(letterBlock)
 
     -- Use StringValue to store the character instead.
     local propChar = Instance.new("StringValue", letterBlock)
@@ -460,7 +460,7 @@ local function styleLetterBlocksBD(props)
                     miniGameState = miniGameState
                 })
         else
-            local char = module.getCharFromLetterBlock(letterBlock)
+            local char = module.getCharFromLetterBlock2(letterBlock)
             if availLetters[char] then
                 numAvailableBlocks = numAvailableBlocks + 1
 
@@ -509,7 +509,7 @@ local function getNumAvailLetterBlocks(miniGameState)
     local numAvailableBlocks = 0
     for _, letterBlock in ipairs(allLetters) do
         if not CS:HasTag(letterBlock, module.tagNames.Found) then
-            local char = module.getCharFromLetterBlock(letterBlock)
+            local char = module.getCharFromLetterBlock2(letterBlock)
             if availLetters[char] then
                 numAvailableBlocks = numAvailableBlocks + 1
             end
@@ -517,18 +517,6 @@ local function getNumAvailLetterBlocks(miniGameState)
     end
     return numAvailableBlocks
 end
-
--- function unHideWordLetters(miniGameState)
---     local runTimeWordFolder = miniGameState.runTimeWordFolder
---     local wordLetters = module.getAllLettersInWords(
---                             {runTimeWordFolder = runTimeWordFolder})
---     for _, letterBlock in ipairs(wordLetters) do
---         if CS:HasTag(letterBlock, "Hide") then
---             Utils.hideItemAndChildren({item = letterBlock, hide = false})
---             CS:RemoveTag(letterBlock, "Hide")
---         end
---     end
--- end
 
 function colorLetterText(props)
     local color = props.color
@@ -549,10 +537,20 @@ function colorLetterBorder(props)
 end
 
 function getCharFromLetterBlock(letterBlock)
+    print('getCharFromLetterBlock-------------------------------------1');
+    print('getCharFromLetterBlock-------------------------------------1');
+    print('getCharFromLetterBlock-------------------------------------1');
+    print('getCharFromLetterBlock-------------------------------------1');
     if not letterBlock then return end
     local label = Utils.getFirstDescendantByName(letterBlock, "BlockChar")
     if not label then return end
     return label.Text
+end
+
+local function getCharFromLetterBlock2(letterBlock)
+    if not letterBlock then return end
+    local char = letterBlock.Character.Value
+    return char
 end
 
 function isDesiredLetter(letter, clickedLetter)
@@ -566,31 +564,6 @@ function isWordComplete(wordLetters)
         if not word.found then return false end
     end
     return true
-end
-
-function createBalls(miniGameState)
-    local letterFallFolder = miniGameState.letterFallFolder
-    local questIndex = miniGameState.questIndex
-
-    local ball = Utils.getFirstDescendantByName(letterFallFolder, "GemTemplate")
-    local gemColor = Constants.gemColors[questIndex]
-
-    local targetGemName = "Gem-Q-zzzz" .. questIndex
-
-    local balls = {}
-    for count = 1, 8 do
-        local newBall = ball:Clone()
-        local ballPart = newBall.Handle
-
-        newBall.Name = targetGemName
-        newBall.Parent = ball.Parent
-        ballPart.CFrame = ballPart.CFrame + Vector3.new(0, 0, 0)
-        ballPart.Color = gemColor
-        Utils.enableChildWelds({part = newBall, enabled = false})
-        table.insert(balls, newBall)
-    end
-
-    ball:Destroy()
 end
 
 function configDeadLetters(props)
@@ -696,7 +669,6 @@ module.applyLetterText = applyLetterText
 module.colorLetterBD = colorLetterBD
 module.colorLetterText = colorLetterText
 module.configDeadLetters = configDeadLetters
-module.createBalls = createBalls
 module.getAllLettersInRack = getAllLettersInRack
 module.getAvailLetters = getAvailLetters
 module.getCharFromLetterBlock = getCharFromLetterBlock
@@ -720,6 +692,7 @@ module.initLetterBlock = initLetterBlock
 module.styleLetterBlocksBD = styleLetterBlocksBD
 module.getAvailWords = getAvailWords
 module.getRandomLetter = getRandomLetter
+module.getCharFromLetterBlock2 = getCharFromLetterBlock2
 module.getLettersNotInWords = getLettersNotInWords
 module.getAllLettersInWords = getAllLettersInWords
 -- module.unHideWordLetters = unHideWordLetters

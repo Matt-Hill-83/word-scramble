@@ -25,20 +25,54 @@ local function addRemoteObjects()
             "CAT", --
             "HAT", --
             "MAT", --
-            "PAT", --
-            -- 
+            "PAT" --
+        }
+    }
+
+    local sector2Config = {
+        words = {
             "SAT", --
             "RAT", --
             "VAT", --
             "AT" --
-        },
-        gridSize = {numRow = 26, numCol = 26}
+        }
     }
 
-    local sector2Config = {
-        -- words = {"CAT"},
-        words = {"CAT", "HAT", "MAT", "PAT", "SAT", "BOG", "ZIP"},
-        gridSize = {numRow = 4, numCol = 4}
+    local sector3Config = {
+        words = {
+            "VAN", --
+            "RAN", --
+            "CAN", --
+            "AN" --
+        }
+    }
+
+    local sector4Config = {
+        words = {
+            "PAN", --
+            "DAN", --
+            "FAN", --
+            "TAN", --
+            "JAN" --
+        }
+    }
+    local sector5Config = {
+        words = {
+            "CAP", --
+            "GAP", --
+            "LAP", --
+            "MAP" --
+
+        }
+    }
+    local sector6Config = {
+        words = {
+            "NAP", --
+            "SAP", --
+            "TAP", --
+            "RAP", --
+            "ZAP" --
+        }
     }
 
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
@@ -50,20 +84,21 @@ local function addRemoteObjects()
     local islandTemplate = Utils.getFromTemplates("IslandTemplate")
     local sectorConfigs = {
         sector1Config, --
-        sector1Config, --
-        sector1Config, --
-        sector1Config, --
-        sector1Config, --
-        sector1Config --
+        sector2Config, --
+        sector3Config, --
+        sector4Config, --
+        sector5Config, --
+        sector6Config --
     }
 
     Utils.sortListByObjectKey(islandPositioners, "Name")
+    print('Constants.gameConfig.singleIsland' .. ' - start');
+    print(Constants.gameConfig.singleIsland);
 
     local myPositioners = Constants.gameConfig.singleIsland and
                               {islandPositioners[1]} or islandPositioners
 
     for islandIndex, islandPositioner in ipairs(myPositioners) do
-        -- for islandIndex, islandPositioner in ipairs(islandPositioners) do
         local newIsland = islandTemplate:Clone()
 
         local anchoredParts = {}

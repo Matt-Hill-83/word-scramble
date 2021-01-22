@@ -1,6 +1,6 @@
 local CS = game:GetService("CollectionService")
 local Sss = game:GetService("ServerScriptService")
--- local RS = game:GetService("ReplicatedStorage")
+
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
@@ -12,9 +12,7 @@ local Leaderboard = require(Sss.Source.AddRemoteObjects.Leaderboard)
 local module = {processing = false, initComplete = false}
 
 local function isDesiredLetter(availLetters, clickedLetter)
-    -- local textLabel = Utils.getFirstDescendantByName(clickedLetter, "BlockChar")
-    --                       .Text
-    local char = LetterFallUtils.getCharFromLetterBlock(clickedLetter)
+    local char = LetterFallUtils.getCharFromLetterBlock2(clickedLetter)
     return availLetters[char]
 end
 
@@ -72,7 +70,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
     local currentLetterIndex = miniGameState.currentLetterIndex
     local words = miniGameState.words
 
-    local foundChar = LetterFallUtils.getCharFromLetterBlock(clickedLetter)
+    local foundChar = LetterFallUtils.getCharFromLetterBlock2(clickedLetter)
 
     local targetLetterBlock = nil
 
@@ -114,12 +112,12 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                 templateName = "LBPurpleLight"
             })
 
-        local clickedChar =
-            LetterFallUtils.getCharFromLetterBlock(clickedLetter)
+        local clickedChar = LetterFallUtils.getCharFromLetterBlock2(
+                                clickedLetter)
 
         if clickedChar then
             table.insert(miniGameState.foundLetters,
-                         LetterFallUtils.getCharFromLetterBlock(clickedLetter))
+                         LetterFallUtils.getCharFromLetterBlock2(clickedLetter))
         end
         clickedLetter:Destroy()
 

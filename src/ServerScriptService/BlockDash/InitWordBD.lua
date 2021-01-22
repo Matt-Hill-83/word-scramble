@@ -105,11 +105,11 @@ local function initWord(props)
                 }
             })
 
-        local weld = Instance.new("WeldConstraint")
-        weld.Name = "WeldConstraint" .. letterNameStub
-        weld.Parent = wordBench.Parent
-        weld.Part0 = wordBench
-        weld.Part1 = newLetter
+        -- local weld = Instance.new("WeldConstraint")
+        -- weld.Name = "WeldConstraint" .. letterNameStub
+        -- weld.Parent = wordBench.Parent
+        -- weld.Part0 = wordBench
+        -- weld.Part1 = newLetter
 
         -- Do this last to avoid tweening
         newLetter.Parent = newWord
@@ -155,7 +155,6 @@ local function initWords(miniGameState)
         local endIndex = startIndex + wordsPerCol - 1
         local words = {table.unpack(miniGameState.words, startIndex, endIndex)}
         renderColumn(miniGameState, colIndex, words)
-        -- 
     end
 end
 

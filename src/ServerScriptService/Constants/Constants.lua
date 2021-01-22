@@ -5,9 +5,9 @@ local devGameConfig = {
     singleIsland = true,
     transparency = false,
     -- transparency = true,
-    walkSpeed = 30,
     fastWalkSpeed = 50,
-    -- walkSpeed = 80,
+    -- walkSpeed = 30,
+    walkSpeed = 80,
 
     disabledSpawns = {
         -- 'Spawn-S2-Bottom', --
@@ -18,8 +18,8 @@ local devGameConfig = {
 }
 
 local prodGameConfig = {
-    singleIsland = false,
-    -- singleIsland = true,
+    -- singleIsland = false,
+    singleIsland = true,
     transparency = true,
     walkSpeed = 30,
     fastWalkSpeed = 50,
