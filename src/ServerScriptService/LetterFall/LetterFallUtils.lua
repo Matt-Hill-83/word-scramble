@@ -204,41 +204,15 @@ local function applyStyleFromTemplate(props)
     local template = Utils.getFirstDescendantByName(letterBlockTemplateFolder,
                                                     templateName)
 
-    local isBlockDash = CS:HasTag(targetLetterBlock, "BlockDash")
+    local label = Utils.getFirstDescendantByName(template, "BlockChar")
 
-    if isBlockDash then
-        -- targetLetterBlock.Color = template.Color
+    local labelProps = {
+        TextColor3 = label.TextColor3,
+        BorderColor3 = label.BorderColor3,
+        BackgroundColor3 = label.BackgroundColor3
+    }
 
-        -- -- TODO: this is hacky, fix
-        -- -- TODO: this is hacky, fix
-        -- -- TODO: this is hacky, fix
-        -- if templateName == "BD_available" then
-        --     targetLetterBlock.CFrame = targetLetterBlock.CFrame *
-        --                                    CFrame.new(0,
-        --                                               targetLetterBlock.Size.Y,
-        --                                               0)
-        --     CS:AddTag(targetLetterBlock, "isLifted")
-        -- end
-
-        -- if templateName == "BD_not_available" then
-        --     if CS:HasTag(targetLetterBlock, "isLifted") then
-        --         targetLetterBlock.CFrame =
-        --             targetLetterBlock.CFrame *
-        --                 CFrame.new(0, -targetLetterBlock.Size.Y, 0)
-        --         CS:RemoveTag(targetLetterBlock, "isLifted")
-        --     end
-        -- end
-    else
-        local label = Utils.getFirstDescendantByName(template, "BlockChar")
-
-        local labelProps = {
-            TextColor3 = label.TextColor3,
-            BorderColor3 = label.BorderColor3,
-            BackgroundColor3 = label.BackgroundColor3
-        }
-
-        styleLetterBlock(targetLetterBlock, labelProps)
-    end
+    styleLetterBlock(targetLetterBlock, labelProps)
 end
 
 function applyLetterText(props)
@@ -296,54 +270,6 @@ function styleLetterBlock(letterBlock, labelProps)
     for i, label in ipairs(textLabels) do
         Utils.mergeTables(label, labelProps)
     end
-end
-
-local function createStyledLetterBlock(props)
-    local miniGameState = props.miniGameState
-    local templateName = props.templateName
-    local allLetters = miniGameState.allLetters
-    local sectorFolder = miniGameState.sectorFolder
-
-    local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
-    local letterBlockTemplate = Utils.getFirstDescendantByName(
-                                    letterBlockFolder, templateName)
-
-    local newLetter = letterBlockTemplate:Clone()
-    local rand = Utils.genRandom(1, #allLetters)
-
-    local char = allLetters[rand]
-    module.applyLetterText({letterBlock = newLetter, char = char})
-    newLetter.Parent = sectorFolder.Parent
-    newLetter.Anchored = false
-
-    local letterId = "none"
-    local name = "randomLetter-" .. char .. "-" .. letterId
-    newLetter.Name = name
-    return newLetter
-end
-
-function setStyleToAvailable(letterBlock, miniGameState)
-    module.applyStyleFromTemplate({
-        targetLetterBlock = letterBlock,
-        templateName = module.letterBlockStyleDefs.rack.Available,
-        miniGameState = miniGameState
-    })
-end
-
-function setStyleToNotAvailable(letterBlock, miniGameState)
-    module.applyStyleFromTemplate({
-        targetLetterBlock = letterBlock,
-        templateName = module.letterBlockStyleDefs.rack.NotAvailable,
-        miniGameState = miniGameState
-    })
-end
-
-function setStyleToDeadLetter(letterBlock, miniGameState)
-    module.applyStyleFromTemplate({
-        targetLetterBlock = letterBlock,
-        templateName = module.letterBlockStyleDefs.rack.DeadLetter,
-        miniGameState = miniGameState
-    })
 end
 
 local function styleLetterBlocksBD(props)
@@ -473,28 +399,6 @@ function isWordComplete(wordLetters)
     return true
 end
 
-function configDeadLetters(props)
-    local parentFolder = props.parentFolder
-    local miniGameState = props.miniGameState
-
-    local deadLetters = Utils.getByTagInParent(
-                            {
-            parent = parentFolder,
-            tag = module.tagNames.DeadLetter
-        })
-
-    for i, item in ipairs(deadLetters) do
-        item.Anchored = true
-
-        module.applyStyleFromTemplate({
-            targetLetterBlock = item,
-            templateName = module.letterBlockStyleDefs.rack.DeadLetter,
-            miniGameState = miniGameState
-        })
-        module.applyLetterText({letterBlock = item, char = ""})
-    end
-end
-
 local function getAvailLetters(props)
     local words = props.words
     local currentLetterIndex = props.currentLetterIndex
@@ -535,22 +439,6 @@ local function getAvailLettersDict(props)
     return availLettersDict
 end
 
-function anchorLetters(props)
-    local parentFolder = props.parentFolder
-    local anchor = props.anchor
-
-    local letters = Utils.getByTagInParent(
-                        {
-            parent = parentFolder,
-            tag = module.tagNames.NotDeadLetter
-        })
-
-    for i, item in ipairs(letters) do
-        item.Anchored = anchor
-        -- 
-    end
-end
-
 local function getAllLettersInRack(props)
     local runTimeLetterFolder = props.runTimeLetterFolder
     local letters = Utils.getByTagInParent(
@@ -571,10 +459,8 @@ local function getAllLettersInWords(props)
     return letters
 end
 
-module.anchorLetters = anchorLetters
 module.applyLetterText = applyLetterText
 module.colorLetterText = colorLetterText
-module.configDeadLetters = configDeadLetters
 module.getAllLettersInRack = getAllLettersInRack
 module.getAvailLetters = getAvailLetters
 module.getCharFromLetterBlock = getCharFromLetterBlock
@@ -585,7 +471,6 @@ module.colorLetterBorder = colorLetterBorder
 module.applyStyleFromTemplate = applyStyleFromTemplate
 module.getCoordsFromLetterName = getCoordsFromLetterName
 module.filterItemsByTag = filterItemsByTag
-module.createStyledLetterBlock = createStyledLetterBlock
 module.getRunTimeLetterFolder = getRunTimeLetterFolder
 module.applyStyleFromTemplateBD = applyStyleFromTemplateBD
 module.applyLetterImage = applyLetterImage
