@@ -110,9 +110,9 @@ local function initLetterBlock(props)
 
     CS:AddTag(letterBlock, "BlockDash")
 
-    local dummyTextLabel = Instance.new("TextLabel", letterBlock)
-    dummyTextLabel.Name = "CurrentStyle"
-    dummyTextLabel.Text = "zzz"
+    -- local dummyTextLabel = Instance.new("TextLabel", letterBlock)
+    -- dummyTextLabel.Name = "CurrentStyle"
+    -- dummyTextLabel.Text = "zzz"
 
     module.applyLetterImage(letterBlock, char)
 
@@ -184,21 +184,15 @@ local function applyStyleFromTemplate(props)
     -- TODO: fix this
 
     -- retrieve existing templateName from dummy TextLabel
-    local currentStyle = Utils.getFirstDescendantByName(targetLetterBlock,
-                                                        "CurrentStyle")
+    local currentStyle = targetLetterBlock.CurrentStyle.Value
 
     if currentStyle then
-        if currentStyle.Text == templateName then
+        if currentStyle == templateName then
             -- Do not apply a style that already exists
             return
         else
-            currentStyle.Text = templateName
+            targetLetterBlock.CurrentStyle.Value = templateName
         end
-    else
-        -- TODO: move to Utils
-        local dummyTextLabel = Instance.new("TextLabel", targetLetterBlock)
-        dummyTextLabel.Name = "CurrentStyle"
-        dummyTextLabel.Text = "templateName"
     end
 
     local letterBlockTemplateFolder = Utils.getFromTemplates(
@@ -417,7 +411,7 @@ local function styleLetterBlocksBD(props)
     local miniGameState = props.miniGameState
     local runTimeLetterFolder = miniGameState.runTimeLetterFolder
     local currentLetterIndex = miniGameState.currentLetterIndex
-    -- local runTimeWordFolder = miniGameState.runTimeWordFolder
+
     local activeWord = miniGameState.activeWord
 
     local availWords = {}
@@ -441,7 +435,6 @@ local function styleLetterBlocksBD(props)
     local allLetters = module.getAllLettersInRack(
                            {runTimeLetterFolder = runTimeLetterFolder})
 
-    -- local numAvailableBlocks = 0
     for _, letterBlock in ipairs(allLetters) do
         if CS:HasTag(letterBlock, module.tagNames.Found) then
             module.applyStyleFromTemplate(
@@ -449,7 +442,6 @@ local function styleLetterBlocksBD(props)
         else
             local char = module.getCharFromLetterBlock2(letterBlock)
             if availLetters[char] then
-                -- numAvailableBlocks = numAvailableBlocks + 1
 
                 -- letterBlock.CanCollide = false
                 module.applyStyleFromTemplate(
@@ -466,17 +458,6 @@ local function styleLetterBlocksBD(props)
             end
         end
     end
-
-    -- local wordLetters = module.getAllLettersInWords(
-    --                         {runTimeWordFolder = runTimeWordFolder})
-    -- for _, letterBlock in ipairs(wordLetters) do
-    --     if CS:HasTag(letterBlock, "Hide") then
-    --         Utils.hideItemAndChildren({item = letterBlock, hide = true})
-    --     end
-    --     if CS:HasTag(letterBlock, "UnHide") then
-    --         Utils.hideItemAndChildren({item = letterBlock, hide = false})
-    --     end
-    -- end
 
 end
 
