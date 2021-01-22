@@ -87,15 +87,14 @@ local function addBlockDash(sectorConfig)
     miniGameState.letterFallFolder = letterFallFolder
 
     local function onWordLettersGone(miniGameState2)
-        -- BlockDashUtils.clearBlockRack(miniGameState2)
-
-        print('miniGameState.renderedWords' .. ' - start');
-        print(miniGameState.renderedWords);
-        print('miniGameState.rackLetterBlockObjs' .. ' - start');
-        print(miniGameState.rackLetterBlockObjs);
 
         InitWord.initWords(miniGameState)
         InitLetterRack.initLetterRack(miniGameState2)
+
+        local keyWall = Utils.getFirstDescendantByName(sectorFolder, "KeyWall")
+        print('keyWall' .. ' - start');
+        print(keyWall);
+        keyWall.CFrame = keyWall.CFrame + Vector3.new(0, -15, 0)
     end
 
     miniGameState.onWordLettersGone = onWordLettersGone

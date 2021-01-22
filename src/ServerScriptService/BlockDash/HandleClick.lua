@@ -177,6 +177,13 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
                 delay(5, destroyParts)
             end
+
+            local keyWall = Utils.getFirstDescendantByName(sectorFolder,
+                                                           "KeyWall")
+            print('keyWall' .. ' - start');
+            print(keyWall);
+            keyWall.CFrame = keyWall.CFrame + Vector3.new(0, 15, 0)
+
         end
     end
     module.processing = false

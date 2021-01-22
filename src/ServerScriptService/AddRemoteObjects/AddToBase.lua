@@ -15,21 +15,22 @@ local function addRemoteObjects()
     local sector1Config = {
         -- words = {
         --     "CAT" --
-        -- },
+        -- }
         words = {
-            "CAT", --
-            "HAT", --
-            "MAT", --
-            "PAT" --
+            "NAP", --
+            "SAP", --
+            "TAP", --
+            "RAP", --
+            "ZAP" --
         }
     }
 
     local sector2Config = {
         words = {
-            "SAT", --
-            "RAT", --
-            "VAT", --
-            "AT" --
+            "CAP", --
+            "GAP", --
+            "LAP", --
+            "MAP" --
         }
     }
 
@@ -53,20 +54,19 @@ local function addRemoteObjects()
     }
     local sector5Config = {
         words = {
-            "CAP", --
-            "GAP", --
-            "LAP", --
-            "MAP" --
+            "SAT", --
+            "RAT", --
+            "VAT", --
+            "AT" --
 
         }
     }
     local sector6Config = {
         words = {
-            "NAP", --
-            "SAP", --
-            "TAP", --
-            "RAP", --
-            "ZAP" --
+            "CAT", --
+            "HAT", --
+            "MAT", --
+            "PAT" --
         }
     }
 

@@ -86,6 +86,18 @@ function module.initEntrance(miniGameState)
 
     local run70s = Utils.getDescendantsByName(sectorFolder, "Run70")
     for _, item in ipairs(run70s) do item.Touched:Connect(onTouchRun70) end
+
+    local function onTouchRun90(otherPart)
+        print('onTouchRun90');
+        local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
+        if humanoid then
+            if humanoid.WalkSpeed == 90 then return end
+            humanoid.WalkSpeed = 90
+        end
+    end
+
+    local run90s = Utils.getDescendantsByName(sectorFolder, "Run90")
+    for _, item in ipairs(run90s) do item.Touched:Connect(onTouchRun90) end
 end
 
 return module
