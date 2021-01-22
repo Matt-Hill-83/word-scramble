@@ -1,13 +1,13 @@
--- local isTest = true
-local isTest = false
+-- local isDev = true
+local isDev = false
 
 local devGameConfig = {
     singleIsland = true,
-    transparency = false,
-    -- transparency = true,
-    walkSpeed = 30,
+    -- transparency = false,
+    transparency = true,
     fastWalkSpeed = 50,
-    -- walkSpeed = 80,
+    -- walkSpeed = 30,
+    walkSpeed = 80,
 
     disabledSpawns = {
         -- 'Spawn-S2-Bottom', --
@@ -18,8 +18,8 @@ local devGameConfig = {
 }
 
 local prodGameConfig = {
-    singleIsland = false,
-    -- singleIsland = true,
+    -- singleIsland = false,
+    singleIsland = true,
     transparency = true,
     walkSpeed = 30,
     fastWalkSpeed = 50,
@@ -30,13 +30,13 @@ local prodGameConfig = {
         -- "SpawnLocation-Block-Race-Bottom"
     }
 }
-local gameConfig = isTest and devGameConfig or prodGameConfig
+local gameConfig = isDev and devGameConfig or prodGameConfig
+
+gameConfig.isDev = isDev
 
 local module = {
     gameConfig = gameConfig,
     walkSpeed = gameConfig.walkSpeed,
-
-    isDev = false,
 
     entered = {value = false},
     questWallHeight = 4,

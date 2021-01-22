@@ -9,11 +9,6 @@ local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
 local BlockDash = require(Sss.Source.BlockDash.BlockDash)
 
-local function addSector(sectorConfig)
-    BlockDash.addBlockDash(sectorConfig)
-    -- 
-end
-
 local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
@@ -22,10 +17,10 @@ local function addRemoteObjects()
         --     "CAT" --
         -- },
         words = {
-            "CAT" --
-            -- "HAT", --
-            -- "MAT", --
-            -- "PAT" --
+            "CAT", --
+            "HAT", --
+            "MAT", --
+            "PAT" --
         }
     }
 
@@ -138,7 +133,8 @@ local function addRemoteObjects()
             -- 
         end
 
-        addSector(sectorConfig)
+        BlockDash.addBlockDash(sectorConfig)
+        -- addSector(sectorConfig)
 
     end
     -- Do this last after everything has been created/deleted
