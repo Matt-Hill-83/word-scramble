@@ -105,12 +105,6 @@ local function initWord(props)
                 }
             })
 
-        -- local weld = Instance.new("WeldConstraint")
-        -- weld.Name = "WeldConstraint" .. letterNameStub
-        -- weld.Parent = wordBench.Parent
-        -- weld.Part0 = wordBench
-        -- weld.Part1 = newLetter
-
         -- Do this last to avoid tweening
         newLetter.Parent = newWord
 

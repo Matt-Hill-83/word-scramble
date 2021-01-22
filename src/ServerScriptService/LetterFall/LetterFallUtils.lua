@@ -58,7 +58,7 @@ local function playWordSound(word)
     return closure
 end
 
-function getLettersNotInWords(words)
+local function getLettersNotInWords(words)
     local allLetters = Constants.allLetters
 
     local uniqueLettersFromWords = {}
@@ -119,7 +119,7 @@ local function initLetterBlock(props)
 
     -- apply the letterText, so the letter block retains the char as a property
     -- TODO: This is obsolete, use StringValue to store the character instead.
-    module.applyLetterText({letterBlock = letterBlock, char = char})
+    -- module.applyLetterText({letterBlock = letterBlock, char = char})
     module.applyLetterImage(letterBlock, char)
     -- module.hideBlockText(letterBlock)
 
@@ -148,17 +148,17 @@ local function initLetterBlock(props)
     end
 end
 
-function hideBlockImages(letterBlock)
+local function hideBlockImages(letterBlock)
     local labels = Utils.getDescendantsByName(letterBlock, "ImageLabel")
     for i, label in ipairs(labels) do label.Visible = false end
 end
 
-function hideBlockText(letterBlock)
+local function hideBlockText(letterBlock)
     local labels = Utils.getDescendantsByName(letterBlock, "BlockChar")
     for i, label in ipairs(labels) do label.Visible = false end
 end
 
-function applyLetterImage(letterBlock, char)
+local function applyLetterImage(letterBlock, char)
     local imageId = Constants.alphabet[char]['decalId']
     local imageUri = 'rbxassetid://' .. imageId
 
@@ -170,7 +170,7 @@ function applyLetterImage(letterBlock, char)
     end
 end
 
-function applyStyleFromTemplateBD(props)
+local function applyStyleFromTemplateBD(props)
     local targetLetterBlock = props.targetLetterBlock
     local templateName = props.templateName
 
@@ -181,18 +181,9 @@ function applyStyleFromTemplateBD(props)
                                                     templateName)
 
     targetLetterBlock.Color = template.Color
-
-    local label = Utils.getFirstDescendantByName(template, "BlockChar")
-
-    local labelProps = {
-        TextColor3 = label.TextColor3,
-        BorderColor3 = label.BorderColor3,
-        BackgroundColor3 = label.BackgroundColor3
-    }
-    styleLetterBlock(targetLetterBlock, labelProps)
 end
 
-function applyStyleFromTemplate(props)
+local function applyStyleFromTemplate(props)
     local targetLetterBlock = props.targetLetterBlock
     local templateName = props.templateName
 
