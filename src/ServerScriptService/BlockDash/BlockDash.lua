@@ -89,7 +89,6 @@ local function addBlockDash(sectorConfig)
 
     local function onWordLettersGone(miniGameState2)
         BlockDashUtils.clearBlockRack(miniGameState2)
-        -- LetterFallUtils.unHideWordLetters(miniGameState2)
         InitWord.initWords(miniGameState)
         InitLetterRack.initLetterRack(miniGameState2)
     end

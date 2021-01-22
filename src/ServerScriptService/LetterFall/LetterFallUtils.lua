@@ -112,7 +112,6 @@ local function initLetterBlock(props)
 
     module.applyLetterImage(letterBlock, char)
 
-    -- Use StringValue to store the character instead.
     local propChar = Instance.new("StringValue", letterBlock)
     propChar.Name = "Character"
     propChar.Value = char
@@ -137,23 +136,13 @@ local function initLetterBlock(props)
     end
 end
 
-local function hideBlockImages(letterBlock)
-    local labels = Utils.getDescendantsByName(letterBlock, "ImageLabel")
-    for i, label in ipairs(labels) do label.Visible = false end
-end
-
-local function hideBlockText(letterBlock)
-    local labels = Utils.getDescendantsByName(letterBlock, "BlockChar")
-    for i, label in ipairs(labels) do label.Visible = false end
-end
-
 local function applyLetterImage(letterBlock, char)
     local imageId = Constants.alphabet[char]['decalId']
     local imageUri = 'rbxassetid://' .. imageId
 
     local labels = Utils.getDescendantsByName(letterBlock, "ImageLabel")
     for _, label in ipairs(labels) do
-        label.BackgroundTransparency = 1
+        -- label.BackgroundTransparency = 1
         label.Image = imageUri
     end
 end
@@ -168,9 +157,34 @@ local function applyStyleFromTemplateBD(props)
     local template = Utils.getFirstDescendantByName(letterBlockTemplateFolder,
                                                     templateName)
     targetLetterBlock.Color = template.Color
+
+    -- TODO: this is hacky, fix
+    -- TODO: this is hacky, fix
+    -- TODO: this is hacky, fix
+    if templateName == "BD_available" then
+        targetLetterBlock.CFrame = targetLetterBlock.CFrame *
+                                       CFrame.new(0, targetLetterBlock.Size.Y, 0)
+        CS:AddTag(targetLetterBlock, "isLifted")
+    end
+
+    if templateName == "BD_not_available" then
+        if CS:HasTag(targetLetterBlock, "isLifted") then
+            targetLetterBlock.CFrame = targetLetterBlock.CFrame *
+                                           CFrame.new(0,
+                                                      -targetLetterBlock.Size.Y,
+                                                      0)
+            CS:RemoveTag(targetLetterBlock, "isLifted")
+        end
+    end
+
 end
 
 local function applyStyleFromTemplate(props)
+    print('applyStyleFromTemplate');
+    print('applyStyleFromTemplate');
+    print('applyStyleFromTemplate');
+    print('applyStyleFromTemplate');
+    print('applyStyleFromTemplate');
     local targetLetterBlock = props.targetLetterBlock
     local templateName = props.templateName
 
@@ -193,27 +207,27 @@ local function applyStyleFromTemplate(props)
     local isBlockDash = CS:HasTag(targetLetterBlock, "BlockDash")
 
     if isBlockDash then
-        targetLetterBlock.Color = template.Color
+        -- targetLetterBlock.Color = template.Color
 
-        -- TODO: this is hacky, fix
-        -- TODO: this is hacky, fix
-        -- TODO: this is hacky, fix
-        if templateName == "BD_available" then
-            targetLetterBlock.CFrame = targetLetterBlock.CFrame *
-                                           CFrame.new(0,
-                                                      targetLetterBlock.Size.Y,
-                                                      0)
-            CS:AddTag(targetLetterBlock, "isLifted")
-        end
+        -- -- TODO: this is hacky, fix
+        -- -- TODO: this is hacky, fix
+        -- -- TODO: this is hacky, fix
+        -- if templateName == "BD_available" then
+        --     targetLetterBlock.CFrame = targetLetterBlock.CFrame *
+        --                                    CFrame.new(0,
+        --                                               targetLetterBlock.Size.Y,
+        --                                               0)
+        --     CS:AddTag(targetLetterBlock, "isLifted")
+        -- end
 
-        if templateName == "BD_not_available" then
-            if CS:HasTag(targetLetterBlock, "isLifted") then
-                targetLetterBlock.CFrame =
-                    targetLetterBlock.CFrame *
-                        CFrame.new(0, -targetLetterBlock.Size.Y, 0)
-                CS:RemoveTag(targetLetterBlock, "isLifted")
-            end
-        end
+        -- if templateName == "BD_not_available" then
+        --     if CS:HasTag(targetLetterBlock, "isLifted") then
+        --         targetLetterBlock.CFrame =
+        --             targetLetterBlock.CFrame *
+        --                 CFrame.new(0, -targetLetterBlock.Size.Y, 0)
+        --         CS:RemoveTag(targetLetterBlock, "isLifted")
+        --     end
+        -- end
     else
         local label = Utils.getFirstDescendantByName(template, "BlockChar")
 
@@ -332,40 +346,6 @@ function setStyleToDeadLetter(letterBlock, miniGameState)
     })
 end
 
-function styleLetterBlocks(props)
-    local miniGameState = props.miniGameState
-    local availWords = props.availWords
-
-    local availLetters = module.getAvailLettersDict(
-                             {
-            words = availWords,
-            currentLetterIndex = miniGameState.currentLetterIndex
-        })
-
-    local allLetters = module.getAllLettersInRack(
-                           {
-            runTimeLetterFolder = miniGameState.runTimeLetterFolder
-        })
-    for i, letterBlock in ipairs(allLetters) do
-        if CS:HasTag(letterBlock, module.tagNames.Found) then
-            module.applyStyleFromTemplate(
-                {
-                    targetLetterBlock = letterBlock,
-                    templateName = module.letterBlockStyleDefs.rack.Found,
-                    miniGameState = miniGameState
-                })
-        else
-            local char = module.getCharFromLetterBlock(letterBlock)
-            if availLetters[char] then
-                setStyleToAvailable(letterBlock, miniGameState)
-            else
-                setStyleToNotAvailable(letterBlock, miniGameState)
-            end
-        end
-
-    end
-end
-
 local function styleLetterBlocksBD(props)
     local miniGameState = props.miniGameState
     local runTimeLetterFolder = miniGameState.runTimeLetterFolder
@@ -396,20 +376,20 @@ local function styleLetterBlocksBD(props)
 
     for _, letterBlock in ipairs(allLetters) do
         if CS:HasTag(letterBlock, module.tagNames.Found) then
-            module.applyStyleFromTemplate(
+            module.applyStyleFromTemplateBD(
                 {targetLetterBlock = letterBlock, templateName = "BD_found"})
         else
             local char = module.getCharFromLetterBlock2(letterBlock)
             if availLetters[char] then
 
                 -- letterBlock.CanCollide = false
-                module.applyStyleFromTemplate(
+                module.applyStyleFromTemplateBD(
                     {
                         targetLetterBlock = letterBlock,
                         templateName = "BD_available"
                     })
             else
-                module.applyStyleFromTemplate(
+                module.applyStyleFromTemplateBD(
                     {
                         targetLetterBlock = letterBlock,
                         templateName = "BD_not_available"
@@ -602,17 +582,14 @@ module.isDesiredLetter = isDesiredLetter
 module.isWordComplete = isWordComplete
 module.getAvailLettersDict = getAvailLettersDict
 module.colorLetterBorder = colorLetterBorder
-module.styleLetterBlocks = styleLetterBlocks
 module.applyStyleFromTemplate = applyStyleFromTemplate
 module.getCoordsFromLetterName = getCoordsFromLetterName
 module.filterItemsByTag = filterItemsByTag
 module.createStyledLetterBlock = createStyledLetterBlock
 module.getRunTimeLetterFolder = getRunTimeLetterFolder
 module.applyStyleFromTemplateBD = applyStyleFromTemplateBD
-module.hideBlockImages = hideBlockImages
 module.applyLetterImage = applyLetterImage
 module.getAvailLettersDict2 = getAvailLettersDict2
-module.hideBlockText = hideBlockText
 module.initLetterBlock = initLetterBlock
 module.styleLetterBlocksBD = styleLetterBlocksBD
 module.getAvailWords = getAvailWords

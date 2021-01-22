@@ -1,5 +1,5 @@
--- local isTest = true
-local isTest = false
+local isDev = true
+-- local isDev = false
 
 local devGameConfig = {
     singleIsland = true,
@@ -30,13 +30,13 @@ local prodGameConfig = {
         -- "SpawnLocation-Block-Race-Bottom"
     }
 }
-local gameConfig = isTest and devGameConfig or prodGameConfig
+local gameConfig = isDev and devGameConfig or prodGameConfig
+
+gameConfig.isDev = isDev
 
 local module = {
     gameConfig = gameConfig,
     walkSpeed = gameConfig.walkSpeed,
-
-    isDev = false,
 
     entered = {value = false},
     questWallHeight = 4,

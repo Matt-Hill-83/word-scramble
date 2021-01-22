@@ -84,45 +84,48 @@ end
 
 function setVisibility()
     local taggedPartsDestroy = CS:GetTagged("Destroy")
-    for i, item in ipairs(taggedPartsDestroy) do item:Destroy() end
+    for _, item in ipairs(taggedPartsDestroy) do item:Destroy() end
 
     local taggedPartsDestroy = CS:GetTagged("Disable")
-    for i, item in ipairs(taggedPartsDestroy) do item.Enabled = false end
+    for _, item in ipairs(taggedPartsDestroy) do item.Enabled = false end
 
     local taggedPartsTransparent = CS:GetTagged("ArrowParts")
-    for i, item in ipairs(taggedPartsTransparent) do item.Transparency = 0.6 end
+    for _, item in ipairs(taggedPartsTransparent) do item.Transparency = 0.6 end
 
     if Constants.gameConfig.transparency then
         local taggedPartsTransparent = CS:GetTagged("Transparent")
-        for i, item in ipairs(taggedPartsTransparent) do
+        for _, item in ipairs(taggedPartsTransparent) do
             item.Transparency = 1
         end
     end
 
     local canCollideOff = CS:GetTagged("CanCollideOff")
-    for i, item in ipairs(canCollideOff) do item.CanCollide = false end
+    for _, item in ipairs(canCollideOff) do item.CanCollide = false end
 
-    local tagBaseWallTransparent = CS:GetTagged("BaseWallTransparent")
-    for i, wall in ipairs(tagBaseWallTransparent) do
-        Utils.setItemHeight({item = wall, height = 40})
-        local newWallHeight = 1
-        wall.Transparency = 1
-        wall.CanCollide = true
-        wall.Anchored = true
+    if not Constants.gameConfig.isDev then
+        -- if true then
 
-        local newWall = wall:Clone()
+        local tagBaseWallTransparent = CS:GetTagged("BaseWallTransparent")
+        for _, wall in ipairs(tagBaseWallTransparent) do
+            Utils.setItemHeight({item = wall, height = 40})
+            local newWallHeight = 1
+            wall.Transparency = 1
+            wall.CanCollide = true
+            wall.Anchored = true
 
-        newWall.Parent = wall.Parent
-        newWall.Size = newWall.Size +
-                           Vector3.new(0, newWallHeight - newWall.Size.Y, 0)
-        newWall.Position = newWall.Position +
-                               Vector3.new(0,
-                                           -(wall.Size.Y - newWall.Size.Y) / 2,
-                                           0)
-        newWall.Transparency = 0
-        CS:RemoveTag(newWall, "BaseWallTransparent")
+            local newWall = wall:Clone()
+
+            newWall.Parent = wall.Parent
+            newWall.Size = newWall.Size +
+                               Vector3.new(0, newWallHeight - newWall.Size.Y, 0)
+            newWall.Position = newWall.Position +
+                                   Vector3.new(0,
+                                               -(wall.Size.Y - newWall.Size.Y) /
+                                                   2, 0)
+            newWall.Transparency = 0
+            CS:RemoveTag(newWall, "BaseWallTransparent")
+        end
     end
-
 end
 
 function module.configGame()
