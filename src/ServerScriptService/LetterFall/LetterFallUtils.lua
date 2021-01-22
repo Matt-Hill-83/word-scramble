@@ -180,11 +180,6 @@ local function applyStyleFromTemplateBD(props)
 end
 
 local function applyStyleFromTemplate(props)
-    print('applyStyleFromTemplate');
-    print('applyStyleFromTemplate');
-    print('applyStyleFromTemplate');
-    print('applyStyleFromTemplate');
-    print('applyStyleFromTemplate');
     local targetLetterBlock = props.targetLetterBlock
     local templateName = props.templateName
 
@@ -215,7 +210,7 @@ local function applyStyleFromTemplate(props)
     styleLetterBlock(targetLetterBlock, labelProps)
 end
 
-function applyLetterText(props)
+local function applyLetterText(props)
     local char = props.char
     local letterBlock = props.letterBlock
 
@@ -227,7 +222,7 @@ function applyLetterText(props)
 
 end
 
-function filterItemsByTag(props)
+local function filterItemsByTag(props)
     local items = props.items
     local tag = props.tag
     local include = props.include
@@ -248,7 +243,7 @@ function filterItemsByTag(props)
     return output
 end
 
-function getCoordsFromLetterName(name)
+local function getCoordsFromLetterName(name)
     local pattern = "ID%-%-R(%d+)C(%d+)"
     local row, col = string.match(name, pattern)
     return {row = tonumber(row), col = tonumber(col)}
@@ -265,7 +260,7 @@ local function getRunTimeLetterFolder(miniGameState)
     })
 end
 
-function styleLetterBlock(letterBlock, labelProps)
+local function styleLetterBlock(letterBlock, labelProps)
     local textLabels = Utils.getDescendantsByName(letterBlock, "BlockChar")
     for i, label in ipairs(textLabels) do
         Utils.mergeTables(label, labelProps)
@@ -351,7 +346,7 @@ local function getNumAvailLetterBlocks(miniGameState)
     return numAvailableBlocks
 end
 
-function colorLetterText(props)
+local function colorLetterText(props)
     local color = props.color
     local letterBlock = props.letterBlock
 
@@ -359,7 +354,7 @@ function colorLetterText(props)
     for i, label in ipairs(textLabels) do label.TextColor3 = color end
 end
 
-function colorLetterBorder(props)
+local function colorLetterBorder(props)
     local color = props.color
     local letterBlock = props.letterBlock
 
@@ -369,46 +364,23 @@ function colorLetterBorder(props)
     end
 end
 
-function getCharFromLetterBlock(letterBlock)
-    print('getCharFromLetterBlock-------------------------------------1');
-    print('getCharFromLetterBlock-------------------------------------1');
-    print('getCharFromLetterBlock-------------------------------------1');
-    print('getCharFromLetterBlock-------------------------------------1');
-    if not letterBlock then return end
-    local label = Utils.getFirstDescendantByName(letterBlock, "BlockChar")
-    if not label then return end
-    return label.Text
-end
-
 local function getCharFromLetterBlock2(letterBlock)
     if not letterBlock then return end
     local char = letterBlock.Character.Value
     return char
 end
 
-function isDesiredLetter(letter, clickedLetter)
+local function isDesiredLetter(letter, clickedLetter)
     local textLabel = Utils.getFirstDescendantByName(clickedLetter, "BlockChar")
                           .Text
     return letter.found ~= true and letter.char == textLabel
 end
 
-function isWordComplete(wordLetters)
+local function isWordComplete(wordLetters)
     for i, word in ipairs(wordLetters) do
         if not word.found then return false end
     end
     return true
-end
-
-local function getAvailLetters(props)
-    local words = props.words
-    local currentLetterIndex = props.currentLetterIndex
-
-    local availLettersDict = {}
-    for i, word in ipairs(words) do
-        local letter = string.sub(word, currentLetterIndex, currentLetterIndex)
-        availLettersDict[letter] = true
-    end
-    return Utils.getKeysFromDict(availLettersDict)
 end
 
 local function getAvailLettersDict2(miniGameState)
@@ -462,8 +434,6 @@ end
 module.applyLetterText = applyLetterText
 module.colorLetterText = colorLetterText
 module.getAllLettersInRack = getAllLettersInRack
-module.getAvailLetters = getAvailLetters
-module.getCharFromLetterBlock = getCharFromLetterBlock
 module.isDesiredLetter = isDesiredLetter
 module.isWordComplete = isWordComplete
 module.getAvailLettersDict = getAvailLettersDict
