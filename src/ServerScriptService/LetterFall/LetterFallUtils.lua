@@ -110,10 +110,6 @@ local function initLetterBlock(props)
 
     CS:AddTag(letterBlock, "BlockDash")
 
-    -- local dummyTextLabel = Instance.new("TextLabel", letterBlock)
-    -- dummyTextLabel.Name = "CurrentStyle"
-    -- dummyTextLabel.Text = "zzz"
-
     module.applyLetterImage(letterBlock, char)
 
     -- Use StringValue to store the character instead.
@@ -156,9 +152,8 @@ local function applyLetterImage(letterBlock, char)
     local imageUri = 'rbxassetid://' .. imageId
 
     local labels = Utils.getDescendantsByName(letterBlock, "ImageLabel")
-    for i, label in ipairs(labels) do
+    for _, label in ipairs(labels) do
         label.BackgroundTransparency = 1
-        -- label.Visible = true
         label.Image = imageUri
     end
 end
@@ -192,7 +187,6 @@ local function applyStyleFromTemplate(props)
 
     local letterBlockTemplateFolder = Utils.getFromTemplates(
                                           "LetterBlockTemplates")
-
     local template = Utils.getFirstDescendantByName(letterBlockTemplateFolder,
                                                     templateName)
 
@@ -232,20 +226,6 @@ local function applyStyleFromTemplate(props)
         styleLetterBlock(targetLetterBlock, labelProps)
     end
 end
--- 
--- 
--- 
--- 
-
-function colorLetterBD(props)
-    local color = props.color
-    local letterBlock = props.letterBlock
-
-    local textLabels = Utils.getDescendantsByName(letterBlock, "BlockChar")
-    for i, label in ipairs(textLabels) do
-        label.BackgroundColor3 = Color3.fromRGB(72, 90, 230)
-    end
-end
 
 function applyLetterText(props)
     local char = props.char
@@ -258,8 +238,6 @@ function applyLetterText(props)
     end
 
 end
--- 
--- 
 
 function filterItemsByTag(props)
     local items = props.items
@@ -286,20 +264,6 @@ function getCoordsFromLetterName(name)
     local pattern = "ID%-%-R(%d+)C(%d+)"
     local row, col = string.match(name, pattern)
     return {row = tonumber(row), col = tonumber(col)}
-end
-
-function anchorColumn(props)
-    local anchor = props.anchor
-    local col = props.col
-    local letters = props.letters
-
-    for i, letter in ipairs(letters) do
-        local coords = module.getCoordsFromLetterName(letter.Name)
-
-        if tonumber(coords.col) == tonumber(col) then
-            letter.Anchored = false
-        end
-    end
 end
 
 local function getRunTimeLetterFolder(miniGameState)
@@ -629,7 +593,6 @@ end
 
 module.anchorLetters = anchorLetters
 module.applyLetterText = applyLetterText
-module.colorLetterBD = colorLetterBD
 module.colorLetterText = colorLetterText
 module.configDeadLetters = configDeadLetters
 module.getAllLettersInRack = getAllLettersInRack
@@ -641,7 +604,6 @@ module.getAvailLettersDict = getAvailLettersDict
 module.colorLetterBorder = colorLetterBorder
 module.styleLetterBlocks = styleLetterBlocks
 module.applyStyleFromTemplate = applyStyleFromTemplate
-module.anchorColumn = anchorColumn
 module.getCoordsFromLetterName = getCoordsFromLetterName
 module.filterItemsByTag = filterItemsByTag
 module.createStyledLetterBlock = createStyledLetterBlock
