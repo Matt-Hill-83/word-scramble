@@ -6,7 +6,6 @@ local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 local InitLetterRack = require(Sss.Source.BlockDash.InitLetterRackBD)
 local InitWord = require(Sss.Source.BlockDash.InitWordBD)
 local Entrance = require(Sss.Source.BlockDash.Entrance)
-local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
 local HandleClick = require(Sss.Source.BlockDash.HandleClick)
 local LetterGrabber = require(Sss.Source.LetterGrabber.LetterGrabber)
 local DoorKey = require(Sss.Source.BlockDash.DoorKey)
@@ -15,21 +14,6 @@ local module = {}
 
 local function initPowerUps(miniGameState)
     local sectorFolder = miniGameState.sectorFolder
-
-    local function onTouchClearBlocks(otherPart)
-        local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
-        if humanoid then
-            if miniGameState.canResetBlocks then
-                miniGameState.canResetBlocks = false
-                BlockDashUtils.clearBlockRack(miniGameState)
-            end
-        end
-    end
-
-    local resets = Utils.getDescendantsByName(sectorFolder, "ClearBlocks")
-    for _, reset in ipairs(resets) do
-        reset.Touched:Connect(onTouchClearBlocks)
-    end
 
     local function onTouchAddBlocks(otherPart)
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
@@ -74,7 +58,7 @@ local function addBlockDash(sectorConfig)
         rackLetterBlockObjs = {},
         numRow = numRow,
         numCol = numCol,
-        activeStyle = "BD_normal",
+        activeStyle = "BD_available",
         inActiveStyle = "BD_normal",
         canResetBlocks = true
     }
@@ -87,13 +71,11 @@ local function addBlockDash(sectorConfig)
     miniGameState.letterFallFolder = letterFallFolder
 
     local function onWordLettersGone(miniGameState2)
-
-        InitWord.initWords(miniGameState)
-        InitLetterRack.initLetterRack(miniGameState2)
+        -- InitWord.initWords(miniGameState)
+        LetterFallUtils.revertRackLetterBlocksToInit(miniGameState2)
+        LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState2})
 
         local keyWall = Utils.getFirstDescendantByName(sectorFolder, "KeyWall")
-        print('keyWall' .. ' - start');
-        print(keyWall);
         keyWall.CFrame = keyWall.CFrame + Vector3.new(0, -15, 0)
     end
 

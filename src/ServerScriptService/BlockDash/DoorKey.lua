@@ -47,7 +47,7 @@ local function initKey(miniGameState)
         end
 
         local function wrapperForDelay()
-            delay(10, closure)
+            delay(3, closure)
             -- 
         end
         return wrapperForDelay

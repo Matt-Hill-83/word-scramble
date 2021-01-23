@@ -50,8 +50,9 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         return
     end
 
-    local isFound = CS:HasTag(clickedLetter, LetterFallUtils.tagNames.Found)
-    if isFound then
+    -- local isFound = CS:HasTag(clickedLetter, LetterFallUtils.tagNames.Found)
+    if clickedLetter.IsFound.Value == true then
+        -- if isFound then
         module.processing = false
         return
     end
@@ -92,6 +93,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
         Utils.hideItemAndChildren({item = clickedLetter, hide = true})
         clickedLetter.IsHidden.Value = true
+        clickedLetter.IsFound.Value = true
         Utils3.tween({
             part = clickedBlockClone,
             endPosition = targetLetterBlock.Position,
@@ -176,7 +178,8 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                     local explosionSound = '262562442'
                     -- Utils.playSound(explosionSound, 0.5)
                     for _, wordLetter in ipairs(wordLetters) do
-                        wordLetter:Destroy()
+                        Utils.hideItemAndChildren(
+                            {item = wordLetter, hide = true})
                     end
                 end
 

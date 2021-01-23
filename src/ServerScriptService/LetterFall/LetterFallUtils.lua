@@ -28,11 +28,9 @@ module.letterBlockStyleNames = {
 module.letterBlockPropNames = {
     Character = "Character",
     CurrentStyle = "CurrentStyle",
-    DeleteMe = "DeleteMe",
-    HideMe = "HideMe",
     IsHidden = "IsHidden",
     IsLifted = "IsLifted",
-    ElevateMe = "ElevateMe",
+    IsFound = "IsFound",
     Type = "Type",
     Uuid = "Uuid"
 
@@ -167,20 +165,6 @@ local function initLetterBlock(props)
 
     createPropOnLetterBlock({
         letterBlock = letterBlock,
-        propName = module.letterBlockPropNames.DeleteMe,
-        initialValue = false,
-        propType = "BoolValue"
-    })
-
-    createPropOnLetterBlock({
-        letterBlock = letterBlock,
-        propName = module.letterBlockPropNames.HideMe,
-        initialValue = false,
-        propType = "BoolValue"
-    })
-
-    createPropOnLetterBlock({
-        letterBlock = letterBlock,
         propName = module.letterBlockPropNames.IsHidden,
         initialValue = false,
         propType = "BoolValue"
@@ -201,10 +185,7 @@ local function applyLetterImage(letterBlock, char)
     local imageUri = 'rbxassetid://' .. imageId
 
     local labels = Utils.getDescendantsByName(letterBlock, "ImageLabel")
-    for _, label in ipairs(labels) do
-        -- label.BackgroundTransparency = 1
-        label.Image = imageUri
-    end
+    for _, label in ipairs(labels) do label.Image = imageUri end
 end
 
 local function applyStyleFromTemplateBD(props)
@@ -217,19 +198,40 @@ local function applyStyleFromTemplateBD(props)
     local template = Utils.getFirstDescendantByName(letterBlockTemplateFolder,
                                                     templateName)
     targetLetterBlock.Color = template.Color
-
 end
 
-local function revertRackLetterBlocksToInit(props)
-    local targetLetterBlock = props.targetLetterBlock
-    local templateName = props.templateName
+local function revertRackLetterBlocksToInit(miniGameState)
+    local allLetters = module.getAllLettersInRack2(miniGameState)
 
-    local letterBlockTemplateFolder = Utils.getFromTemplates(
-                                          "LetterBlockTemplates")
+    -- revert Letter Rack styles
+    for _, letterBlock in ipairs(allLetters) do
+        if letterBlock.IsLifted.Value == true then
+            letterBlock.CFrame = letterBlock.CFrame *
+                                     CFrame.new(0, -letterBlock.Size.Y, 0)
+            letterBlock.IsLifted.Value = false
+        end
 
-    local template = Utils.getFirstDescendantByName(letterBlockTemplateFolder,
-                                                    templateName)
-    targetLetterBlock.Color = template.Color
+        Utils.hideItemAndChildren({item = letterBlock, hide = false})
+        letterBlock.CurrentStyle.Value = "none"
+        letterBlock.IsHidden.Value = false
+        letterBlock.IsLifted.Value = false
+        letterBlock.IsFound.Value = false
+    end
+
+    -- revert word styles
+    for _, wordObj in ipairs(miniGameState.renderedWords) do
+        wordObj.completed = false
+        for _, letterObj in ipairs(wordObj.letters) do
+            local letterBlock = letterObj.instance
+            letterBlock.Fire:Destroy()
+            module.applyStyleFromTemplateBD(
+                {
+                    targetLetterBlock = letterBlock,
+                    templateName = "BD_word_normal"
+                })
+            Utils.hideItemAndChildren({item = letterBlock, hide = false})
+        end
+    end
 
 end
 
@@ -323,11 +325,9 @@ end
 
 local function styleLetterBlocksBD(props)
     local miniGameState = props.miniGameState
-    -- local runTimeLetterFolder = miniGameState.runTimeLetterFolder
     local currentLetterIndex = miniGameState.currentLetterIndex
 
     local activeWord = miniGameState.activeWord
-
     local availWords = {}
 
     if activeWord then
@@ -349,34 +349,29 @@ local function styleLetterBlocksBD(props)
     local allLetters = module.getAllLettersInRack2(miniGameState)
 
     for _, letterBlock in ipairs(allLetters) do
-        if CS:HasTag(letterBlock, module.tagNames.Found) then
-            module.applyStyleFromTemplateBD(
-                {targetLetterBlock = letterBlock, templateName = "BD_found"})
-        else
-            local char = module.getCharFromLetterBlock2(letterBlock)
-            if availLetters[char] then
-                letterBlock.CFrame = letterBlock.CFrame *
-                                         CFrame.new(0, letterBlock.Size.Y, 0)
-                letterBlock.IsLifted.Value = true
-                module.applyStyleFromTemplateBD(
-                    {
-                        targetLetterBlock = letterBlock,
-                        templateName = "BD_available"
-                    })
-            else
-                if letterBlock.IsLifted.Value == true then
-                    letterBlock.CFrame =
-                        letterBlock.CFrame *
-                            CFrame.new(0, -letterBlock.Size.Y, 0)
-                    letterBlock.IsLifted.Value = false
-                end
+        local char = module.getCharFromLetterBlock2(letterBlock)
 
-                module.applyStyleFromTemplateBD(
-                    {
-                        targetLetterBlock = letterBlock,
-                        templateName = "BD_not_available"
-                    })
+        if availLetters[char] then
+            letterBlock.CFrame = letterBlock.CFrame *
+                                     CFrame.new(0, letterBlock.Size.Y, 0)
+            letterBlock.IsLifted.Value = true
+            module.applyStyleFromTemplateBD(
+                {
+                    targetLetterBlock = letterBlock,
+                    templateName = miniGameState.activeStyle
+                })
+        else
+            if letterBlock.IsLifted.Value == true then
+                letterBlock.CFrame = letterBlock.CFrame *
+                                         CFrame.new(0, -letterBlock.Size.Y, 0)
+                letterBlock.IsLifted.Value = false
             end
+
+            module.applyStyleFromTemplateBD(
+                {
+                    targetLetterBlock = letterBlock,
+                    templateName = miniGameState.inActiveStyle
+                })
         end
     end
 

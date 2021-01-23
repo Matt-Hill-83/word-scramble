@@ -19,16 +19,11 @@ local function configBlocks(miniGameState)
 end
 
 local function initLetterRack(miniGameState)
-
-    -- local blockMatrix = createBlockMatrix(miniGameState)
-
     local rackLetterBlockObjs = miniGameState.rackLetterBlockObjs
     local sectorFolder = miniGameState.sectorFolder
     local numRow = miniGameState.numRow
     local numCol = miniGameState.numCol
     local words = miniGameState.words
-
-    -- BlockDashUtils.clearBlockRack(miniGameState)
 
     local runTimeLetterFolder = LetterFallUtils.getRunTimeLetterFolder(
                                     miniGameState)
@@ -36,7 +31,8 @@ local function initLetterRack(miniGameState)
 
     local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
     local letterBlockTemplate = Utils.getFirstDescendantByName(
-                                    letterBlockFolder, "BD_normal")
+                                    letterBlockFolder,
+                                    miniGameState.inActiveStyle)
     local letterPositioner = Utils.getFirstDescendantByName(sectorFolder,
                                                             "LetterPositioner")
 
@@ -98,11 +94,13 @@ local function initLetterRack(miniGameState)
                     propType = "BoolValue"
                 })
 
-            -- TODO: replace this:
-            -- TODO: replace this:
-            -- TODO: replace this:
-            -- TODO: replace this:
-            -- CS:AddTag(newLetterBlock, LetterFallUtils.tagNames.RackLetter)
+            LetterFallUtils.createPropOnLetterBlock(
+                {
+                    letterBlock = newLetterBlock,
+                    propName = LetterFallUtils.letterBlockPropNames.IsFound,
+                    initialValue = false,
+                    propType = "BoolValue"
+                })
 
             local letterPosX = -newLetterBlock.Size.X * (colIndex - 1) *
                                    spacingFactorX
@@ -157,7 +155,6 @@ local function initLetterRack(miniGameState)
                 char = char,
                 coords = {row = rowIndex, col = colIndex}
             })
-
         end
     end
 
