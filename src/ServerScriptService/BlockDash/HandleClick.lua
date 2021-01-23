@@ -87,15 +87,18 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
     if targetLetterBlock then
         local letterBlockCFrame = clickedLetter.CFrame
+        local clickedBlockClone = clickedLetter:Clone()
+        clickedBlockClone.Parent = clickedLetter.Parent
 
+        Utils.hideItemAndChildren({item = clickedLetter, hide = true})
         Utils3.tween({
-            part = clickedLetter,
+            part = clickedBlockClone,
             endPosition = targetLetterBlock.Position,
             time = 0.6,
             anchor = true
         })
 
-        clickedLetter.CFrame = targetLetterBlock.CFrame
+        clickedBlockClone.CFrame = targetLetterBlock.CFrame
         LetterFallUtils.applyStyleFromTemplateBD(
             {
                 targetLetterBlock = targetLetterBlock,
@@ -109,7 +112,12 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             table.insert(miniGameState.foundLetters,
                          LetterFallUtils.getCharFromLetterBlock2(clickedLetter))
         end
-        clickedLetter:Destroy()
+
+        -- clickedLetter.Transparency = 1
+        -- clickedLetter.CanCollide = false
+
+        -- clickedLetter.HideMe.Value = true
+        clickedBlockClone:Destroy()
 
         local currentWord = table.concat(miniGameState.foundLetters, "")
         local wordComplete = table.find(words, currentWord)

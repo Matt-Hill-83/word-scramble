@@ -20,7 +20,7 @@ end
 
 local function initLetterRack(miniGameState)
 
-    local blockMatrix = createBlockMatrix(miniGameState)
+    -- local blockMatrix = createBlockMatrix(miniGameState)
 
     local rackLetterBlockObjs = miniGameState.rackLetterBlockObjs
     local sectorFolder = miniGameState.sectorFolder
@@ -94,8 +94,11 @@ local function initLetterRack(miniGameState)
             propElevate.Name = LetterFallUtils.letterBlockPropNames.ElevateMe
             propElevate.Value = false
 
+            -- TODO: replace this:
+            -- TODO: replace this:
+            -- TODO: replace this:
+            -- TODO: replace this:
             CS:AddTag(newLetter, LetterFallUtils.tagNames.RackLetter)
-            -- CS:AddTag(newLetter, LetterFallUtils.tagNames.NotDeadLetter)
 
             local letterPosX = -newLetter.Size.X * (colIndex - 1) *
                                    spacingFactorX

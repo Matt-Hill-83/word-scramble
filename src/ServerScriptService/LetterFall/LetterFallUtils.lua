@@ -142,10 +142,6 @@ local function initLetterBlock(props)
         propType = "StringValue"
     })
 
-    -- 
-    -- 
-    --
-
     createPropOnLetterBlock({
         letterBlock = letterBlock,
         propName = module.letterBlockPropNames.CurrentStyle,
@@ -167,28 +163,20 @@ local function initLetterBlock(props)
         propType = "StringValue"
     })
 
-    -- local propStyle = Instance.new("StringValue", letterBlock)
-    -- propStyle.Name = module.letterBlockPropNames.CurrentStyle
-    -- propStyle.Value = "zzz"
+    createPropOnLetterBlock({
+        letterBlock = letterBlock,
+        propName = module.letterBlockPropNames.DeleteMe,
+        initialValue = false,
+        propType = "BoolValue"
+    })
 
-    -- local propUuid = Instance.new("StringValue", letterBlock)
-    -- propUuid.Name = module.letterBlockPropNames.Uuid
-    -- propUuid.Value = Utils.getUuid()
+    createPropOnLetterBlock({
+        letterBlock = letterBlock,
+        propName = module.letterBlockPropNames.HideMe,
+        initialValue = false,
+        propType = "BoolValue"
+    })
 
-    -- local propType = Instance.new("StringValue", letterBlock)
-    -- propType.Name = module.letterBlockPropNames.Type
-    -- propUuid.Value = letterBlockType
-
-    -- 
-    -- 
-    -- 
-    local propDelete = Instance.new("BoolValue", letterBlock)
-    propDelete.Name = module.letterBlockPropNames.DeleteMe
-    propDelete.Value = false
-
-    local propHide = Instance.new("BoolValue", letterBlock)
-    propHide.Name = module.letterBlockPropNames.HideMe
-    propHide.Value = false
     if templateName then
         module.applyStyleFromTemplateBD({
             targetLetterBlock = letterBlock,
@@ -219,10 +207,13 @@ local function applyStyleFromTemplateBD(props)
                                                     templateName)
     targetLetterBlock.Color = template.Color
 
-    -- TODO: this is hacky, fix
-    -- TODO: this is hacky, fix
-    -- TODO: this is hacky, fix
-    if templateName == "BD_available" then
+    if targetLetterBlock.HideMe.Value == true then
+        targetLetterBlock.Transparency = 1
+
+        -- TODO: this is hacky, fix
+        -- TODO: this is hacky, fix
+        -- TODO: this is hacky, fix
+    elseif templateName == "BD_available" then
         targetLetterBlock.CFrame = targetLetterBlock.CFrame *
                                        CFrame.new(0, targetLetterBlock.Size.Y, 0)
         CS:AddTag(targetLetterBlock, "isLifted")
@@ -353,8 +344,7 @@ local function styleLetterBlocksBD(props)
             currentLetterIndex = currentLetterIndex
         })
 
-    local allLetters = module.getAllLettersInRack(
-                           {runTimeLetterFolder = runTimeLetterFolder})
+    local allLetters = module.getAllLettersInRack2(miniGameState)
 
     for _, letterBlock in ipairs(allLetters) do
         if CS:HasTag(letterBlock, module.tagNames.Found) then
@@ -383,7 +373,7 @@ local function styleLetterBlocksBD(props)
 end
 
 local function getNumAvailLetterBlocks(miniGameState)
-    local runTimeLetterFolder = miniGameState.runTimeLetterFolder
+    -- local runTimeLetterFolder = miniGameState.runTimeLetterFolder
 
     local availWords = module.getAvailWords(miniGameState)
     local availLetters = module.getAvailLettersDict(
@@ -392,8 +382,7 @@ local function getNumAvailLetterBlocks(miniGameState)
             currentLetterIndex = miniGameState.currentLetterIndex
         })
 
-    local allLetters = module.getAllLettersInRack(
-                           {runTimeLetterFolder = runTimeLetterFolder})
+    local allLetters = module.getAllLettersInRack2(miniGameState)
 
     local numAvailableBlocks = 0
     for _, letterBlock in ipairs(allLetters) do
@@ -482,6 +471,21 @@ local function getAllLettersInRack(props)
     return letters
 end
 
+local function getAllLettersInRack2(miniGameState)
+    local letterBlocks = {}
+    for _, obj in ipairs(miniGameState.rackLetterBlockObjs) do
+        table.insert(letterBlocks, obj.part)
+    end
+    return letterBlocks
+    -- return  runTimeLetterFolder = props.runTimeLetterFolder
+    -- local letters = Utils.getByTagInParent(
+    --                     {
+    --         parent = runTimeLetterFolder,
+    --         tag = module.tagNames.RackLetter
+    --     })
+    -- return letters
+end
+
 local function getAllLettersInWords(props)
     local runTimeWordFolder = props.runTimeWordFolder
     local letters = Utils.getByTagInParent(
@@ -515,5 +519,6 @@ module.getLettersNotInWords = getLettersNotInWords
 module.getAllLettersInWords = getAllLettersInWords
 module.getNumAvailLetterBlocks = getNumAvailLetterBlocks
 module.playWordSound = playWordSound
+module.getAllLettersInRack2 = getAllLettersInRack2
 module.createPropOnLetterBlock = createPropOnLetterBlock
 return module
