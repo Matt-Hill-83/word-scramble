@@ -382,30 +382,6 @@ local function styleLetterBlocksBD(props)
 
 end
 
-local function getNumAvailLetterBlocks(miniGameState)
-    -- local runTimeLetterFolder = miniGameState.runTimeLetterFolder
-
-    local availWords = module.getAvailWords(miniGameState)
-    local availLetters = module.getAvailLettersDict(
-                             {
-            words = availWords,
-            currentLetterIndex = miniGameState.currentLetterIndex
-        })
-
-    local allLetters = module.getAllLettersInRack2(miniGameState)
-
-    local numAvailableBlocks = 0
-    for _, letterBlock in ipairs(allLetters) do
-        if not CS:HasTag(letterBlock, module.tagNames.Found) then
-            local char = module.getCharFromLetterBlock2(letterBlock)
-            if availLetters[char] then
-                numAvailableBlocks = numAvailableBlocks + 1
-            end
-        end
-    end
-    return numAvailableBlocks
-end
-
 local function colorLetterText(props)
     local color = props.color
     local letterBlock = props.letterBlock
@@ -510,7 +486,6 @@ module.getRandomLetter = getRandomLetter
 module.getCharFromLetterBlock2 = getCharFromLetterBlock2
 module.getLettersNotInWords = getLettersNotInWords
 module.getAllLettersInWords = getAllLettersInWords
-module.getNumAvailLetterBlocks = getNumAvailLetterBlocks
 module.playWordSound = playWordSound
 module.revertRackLetterBlocksToInit = revertRackLetterBlocksToInit
 module.getAllLettersInRack2 = getAllLettersInRack2
