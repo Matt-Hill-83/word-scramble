@@ -81,34 +81,38 @@ local function initLetterRack(miniGameState)
 
     for colIndex = 1, numCol do
         for rowIndex = 1, numRow do
-            local newLetter = letterBlockTemplate:Clone()
-            newLetter.Size = letterPositioner.Size
+            local newLetterBlock = letterBlockTemplate:Clone()
+            newLetterBlock.Size = letterPositioner.Size
 
             local letterId = "ID--R" .. rowIndex .. "C" .. colIndex
             local char = letterMatrix[rowIndex][colIndex]
 
             local name = "rackLetter-" .. char .. "-" .. letterId .. "sss"
-            newLetter.Name = name
+            newLetterBlock.Name = name
 
-            local propElevate = Instance.new("BoolValue", newLetter)
-            propElevate.Name = LetterFallUtils.letterBlockPropNames.ElevateMe
-            propElevate.Value = false
+            LetterFallUtils.createPropOnLetterBlock(
+                {
+                    letterBlock = newLetterBlock,
+                    propName = LetterFallUtils.letterBlockPropNames.IsLifted,
+                    initialValue = false,
+                    propType = "BoolValue"
+                })
 
             -- TODO: replace this:
             -- TODO: replace this:
             -- TODO: replace this:
             -- TODO: replace this:
-            CS:AddTag(newLetter, LetterFallUtils.tagNames.RackLetter)
+            -- CS:AddTag(newLetterBlock, LetterFallUtils.tagNames.RackLetter)
 
-            local letterPosX = -newLetter.Size.X * (colIndex - 1) *
+            local letterPosX = -newLetterBlock.Size.X * (colIndex - 1) *
                                    spacingFactorX
-            local letterPosZ = -newLetter.Size.Z * (rowIndex - 1) *
+            local letterPosZ = -newLetterBlock.Size.Z * (rowIndex - 1) *
                                    spacingFactorZ
 
-            newLetter.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                                   {
+            newLetterBlock.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                                        {
                     parent = letterPositioner,
-                    child = newLetter,
+                    child = newLetterBlock,
                     offsetConfig = {
                         useParentNearEdge = Vector3.new(-1, -1, -1),
                         useChildNearEdge = Vector3.new(-1, -1, -1),
@@ -116,18 +120,18 @@ local function initLetterRack(miniGameState)
                     }
                 })
 
-            newLetter.Parent = runTimeLetterFolder
-            newLetter.Anchored = true
+            newLetterBlock.Parent = runTimeLetterFolder
+            newLetterBlock.Anchored = true
 
             LetterFallUtils.initLetterBlock(
                 {
-                    letterBlock = newLetter,
+                    letterBlock = newLetterBlock,
                     char = char,
                     templateName = miniGameState.activeStyle,
                     letterBlockType = "RackLetter"
                 })
 
-            local function onTouchBlock(newLetter, miniGameState)
+            local function onTouchBlock(newLetterBlock, miniGameState)
                 local db = {value = false}
                 local function closure(otherPart)
                     local humanoid = otherPart.Parent:FindFirstChildWhichIsA(
@@ -137,7 +141,7 @@ local function initLetterRack(miniGameState)
                     if not db.value then
                         db.value = true
                         local player = Utils.getPlayerFromHumanoid(humanoid)
-                        miniGameState.onSelectRackBlock(newLetter,
+                        miniGameState.onSelectRackBlock(newLetterBlock,
                                                         miniGameState, player)
                         db.value = false
                     end
@@ -145,10 +149,11 @@ local function initLetterRack(miniGameState)
                 return closure
             end
 
-            newLetter.Touched:Connect(onTouchBlock(newLetter, miniGameState))
+            newLetterBlock.Touched:Connect(
+                onTouchBlock(newLetterBlock, miniGameState))
 
             table.insert(rackLetterBlockObjs, {
-                part = newLetter,
+                part = newLetterBlock,
                 char = char,
                 coords = {row = rowIndex, col = colIndex}
             })

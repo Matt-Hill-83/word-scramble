@@ -91,6 +91,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         clickedBlockClone.Parent = clickedLetter.Parent
 
         Utils.hideItemAndChildren({item = clickedLetter, hide = true})
+        clickedLetter.IsHidden.Value = true
         Utils3.tween({
             part = clickedBlockClone,
             endPosition = targetLetterBlock.Position,
@@ -113,10 +114,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                          LetterFallUtils.getCharFromLetterBlock2(clickedLetter))
         end
 
-        -- clickedLetter.Transparency = 1
-        -- clickedLetter.CanCollide = false
-
-        -- clickedLetter.HideMe.Value = true
         clickedBlockClone:Destroy()
 
         local currentWord = table.concat(miniGameState.foundLetters, "")
