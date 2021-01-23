@@ -71,7 +71,6 @@ local function addBlockDash(sectorConfig)
     miniGameState.letterFallFolder = letterFallFolder
 
     local function onWordLettersGone(miniGameState2)
-        -- InitWord.initWords(miniGameState)
         LetterFallUtils.revertRackLetterBlocksToInit(miniGameState2)
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState2})
 

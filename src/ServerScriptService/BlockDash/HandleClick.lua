@@ -1,4 +1,3 @@
-local CS = game:GetService("CollectionService")
 local Sss = game:GetService("ServerScriptService")
 
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
@@ -21,7 +20,6 @@ local function findFirstMatchingLetterBlock(foundChar, miniGameState)
     local availWords = LetterFallUtils.getAvailWords(miniGameState)
 
     for _, word in ipairs(availWords) do
-        -- for _, word in ipairs(miniGameState.renderedWords) do
         local letter = word.letters[miniGameState.currentLetterIndex]
         if foundChar == letter.char then
             miniGameState.activeWord = word
@@ -50,9 +48,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         return
     end
 
-    -- local isFound = CS:HasTag(clickedLetter, LetterFallUtils.tagNames.Found)
     if clickedLetter.IsFound.Value == true then
-        -- if isFound then
         module.processing = false
         return
     end
