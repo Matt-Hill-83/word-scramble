@@ -25,6 +25,17 @@ module.letterBlockStyleNames = {
     LBDeadLetter = "LBDeadLetter"
 }
 
+module.letterBlockPropNames = {
+    Character = "Character",
+    CurrentStyle = "CurrentStyle",
+    DeleteMe = "DeleteMe",
+    HideMe = "HideMe",
+    ElevateMe = "ElevateMe",
+    Type = "Type",
+    Uuid = "Uuid"
+
+}
+
 module.letterBlockStyleDefs = {
     rack = {
         Available = module.letterBlockStyleNames.LBPurpleLight2,
@@ -102,6 +113,18 @@ local function getAvailWords(miniGameState)
     return availWords
 end
 
+local function createPropOnLetterBlock(props)
+    local letterBlock = props.letterBlock
+    local propName = props.propName
+    local initialValue = props.initialValue
+    local propType = props.propType
+
+    local propChar = Instance.new(propType, letterBlock)
+    propChar.Name = propName
+    propChar.Value = initialValue
+
+end
+
 local function initLetterBlock(props)
     local letterBlock = props.letterBlock
     local char = props.char
@@ -112,22 +135,60 @@ local function initLetterBlock(props)
 
     module.applyLetterImage(letterBlock, char)
 
-    local propChar = Instance.new("StringValue", letterBlock)
-    propChar.Name = "Character"
-    propChar.Value = char
+    createPropOnLetterBlock({
+        letterBlock = letterBlock,
+        propName = module.letterBlockPropNames.Character,
+        initialValue = char,
+        propType = "StringValue"
+    })
 
-    local propStyle = Instance.new("StringValue", letterBlock)
-    propStyle.Name = "CurrentStyle"
-    propStyle.Value = "zzz"
+    -- 
+    -- 
+    --
 
-    local propUuid = Instance.new("StringValue", letterBlock)
-    propUuid.Name = "Uuid"
-    propUuid.Value = Utils.getUuid()
+    createPropOnLetterBlock({
+        letterBlock = letterBlock,
+        propName = module.letterBlockPropNames.CurrentStyle,
+        initialValue = "zzz",
+        propType = "StringValue"
+    })
 
-    local propType = Instance.new("StringValue", letterBlock)
-    propType.Name = "Type"
-    propUuid.Value = letterBlockType
+    createPropOnLetterBlock({
+        letterBlock = letterBlock,
+        propName = module.letterBlockPropNames.Uuid,
+        initialValue = Utils.getUuid(),
+        propType = "StringValue"
+    })
 
+    createPropOnLetterBlock({
+        letterBlock = letterBlock,
+        propName = module.letterBlockPropNames.Type,
+        initialValue = letterBlockType,
+        propType = "StringValue"
+    })
+
+    -- local propStyle = Instance.new("StringValue", letterBlock)
+    -- propStyle.Name = module.letterBlockPropNames.CurrentStyle
+    -- propStyle.Value = "zzz"
+
+    -- local propUuid = Instance.new("StringValue", letterBlock)
+    -- propUuid.Name = module.letterBlockPropNames.Uuid
+    -- propUuid.Value = Utils.getUuid()
+
+    -- local propType = Instance.new("StringValue", letterBlock)
+    -- propType.Name = module.letterBlockPropNames.Type
+    -- propUuid.Value = letterBlockType
+
+    -- 
+    -- 
+    -- 
+    local propDelete = Instance.new("BoolValue", letterBlock)
+    propDelete.Name = module.letterBlockPropNames.DeleteMe
+    propDelete.Value = false
+
+    local propHide = Instance.new("BoolValue", letterBlock)
+    propHide.Name = module.letterBlockPropNames.HideMe
+    propHide.Value = false
     if templateName then
         module.applyStyleFromTemplateBD({
             targetLetterBlock = letterBlock,
@@ -454,4 +515,5 @@ module.getLettersNotInWords = getLettersNotInWords
 module.getAllLettersInWords = getAllLettersInWords
 module.getNumAvailLetterBlocks = getNumAvailLetterBlocks
 module.playWordSound = playWordSound
+module.createPropOnLetterBlock = createPropOnLetterBlock
 return module

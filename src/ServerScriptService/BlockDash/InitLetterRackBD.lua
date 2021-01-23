@@ -3,20 +3,32 @@ local Sss = game:GetService("ServerScriptService")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
+-- local Constants = require(Sss.Source.Constants.Constants)
 
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
-local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
+-- local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
 
 local module = {}
 
+local function createBlockMatrix(miniGameState)
+    -- 
+end
+
+local function configBlocks(miniGameState)
+    -- 
+end
+
 local function initLetterRack(miniGameState)
+
+    local blockMatrix = createBlockMatrix(miniGameState)
+
     local rackLetterBlockObjs = miniGameState.rackLetterBlockObjs
     local sectorFolder = miniGameState.sectorFolder
     local numRow = miniGameState.numRow
     local numCol = miniGameState.numCol
     local words = miniGameState.words
 
-    BlockDashUtils.clearBlockRack(miniGameState)
+    -- BlockDashUtils.clearBlockRack(miniGameState)
 
     local runTimeLetterFolder = LetterFallUtils.getRunTimeLetterFolder(
                                     miniGameState)
@@ -77,6 +89,10 @@ local function initLetterRack(miniGameState)
 
             local name = "rackLetter-" .. char .. "-" .. letterId .. "sss"
             newLetter.Name = name
+
+            local propElevate = Instance.new("BoolValue", newLetter)
+            propElevate.Name = LetterFallUtils.letterBlockPropNames.ElevateMe
+            propElevate.Value = false
 
             CS:AddTag(newLetter, LetterFallUtils.tagNames.RackLetter)
             -- CS:AddTag(newLetter, LetterFallUtils.tagNames.NotDeadLetter)
