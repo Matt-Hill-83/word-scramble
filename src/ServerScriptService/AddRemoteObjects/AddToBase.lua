@@ -13,17 +13,26 @@ local Entrance = require(Sss.Source.BlockDash.Entrance)
 local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
+    local sector6Config = {
+        -- words = {
+        --     "CAT" --
+        -- }
+        words = {
+            "CAT", --
+            "HAT", --
+            "MAT", --
+            "PAT" --
+        }
+    }
+
     local sector1Config = {
         words = {
-            "CAT" --
+            "NAP", --
+            "SAP", --
+            "TAP", --
+            "RAP", --
+            "ZAP" --
         }
-        -- words = {
-        --     "NAP", --
-        --     "SAP", --
-        --     "TAP", --
-        --     "RAP", --
-        --     "ZAP" --
-        -- }
     }
 
     local sector2Config = {
@@ -61,17 +70,6 @@ local function addRemoteObjects()
             "AT" --
 
         }
-    }
-    local sector6Config = {
-        words = {
-            "CAT" --
-        }
-        -- words = {
-        --     "CAT", --
-        --     "HAT", --
-        --     "MAT", --
-        --     "PAT" --
-        -- }
     }
 
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
