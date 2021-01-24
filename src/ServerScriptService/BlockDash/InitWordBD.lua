@@ -34,7 +34,7 @@ local function initWord(props)
     local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
 
     local letterBlockTemplate = Utils.getFirstDescendantByName(
-                                    letterBlockFolder, "BD_normal")
+                                    letterBlockFolder, "BD_word_normal")
 
     local newWord = wordBox:Clone()
     local wordBench = Utils.getFirstDescendantByName(newWord, "WordBench")
@@ -49,11 +49,11 @@ local function initWord(props)
 
     local spacingFactorY = 1.1
     local spacingFactorX = 1.1
-    local offsetY = letterBlockTemplate.Size.Y * spacingFactorY
+    local offsetY = miniGameState.wordLetterSize * spacingFactorY
 
-    local totalLetterWidth = letterBlockTemplate.Size.X * spacingFactorX
+    local totalLetterWidth = miniGameState.wordLetterSize * spacingFactorX
     local maxWordLength = 3
-    local wordOffset = letterBlockTemplate.Size.X * 1.1
+    local wordOffset = miniGameState.wordLetterSize * 1.1
 
     local colOffsetX = (colIndex - 1) *
                            (totalLetterWidth * maxWordLength + wordOffset)
@@ -81,6 +81,9 @@ local function initWord(props)
 
         local newLetter = letterBlockTemplate:Clone()
         newLetter.Name = "wordLetter-" .. letterNameStub
+        newLetter.Size = Vector3.new(miniGameState.wordLetterSize,
+                                     miniGameState.wordLetterSize,
+                                     miniGameState.wordLetterSize)
 
         local offsetX =
             -(newLetter.Size.X * (letterIndex - 1) * spacingFactorX) - 0

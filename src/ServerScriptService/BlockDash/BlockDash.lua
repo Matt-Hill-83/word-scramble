@@ -46,6 +46,7 @@ local function addBlockDash(sectorConfig)
         sectorFolder = sectorFolder,
         activeWordIndex = 1,
         availLetters = {},
+        wordLetterSize = 16,
         availWords = {},
         currentLetterIndex = 1,
         foundLetters = {},

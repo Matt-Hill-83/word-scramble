@@ -154,8 +154,12 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                     parent = activeWord.word
                 })
             for _, wordLetter in ipairs(wordLetters) do
-                local fire = Instance.new("Fire", wordLetter)
-                fire.Size = 20
+                local firePositioners = Utils.getDescendantsByName(wordLetter,
+                                                                   "FirePositioner")
+                for _, firePositioner in ipairs(firePositioners) do
+                    local fire = Instance.new("Fire", firePositioner)
+                    fire.Size = 20
+                end
             end
         end
 

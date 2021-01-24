@@ -14,16 +14,16 @@ local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local sector1Config = {
-        -- words = {
-        --     "CAT" --
-        -- }
         words = {
-            "NAP", --
-            "SAP", --
-            "TAP", --
-            "RAP", --
-            "ZAP" --
+            "CAT" --
         }
+        -- words = {
+        --     "NAP", --
+        --     "SAP", --
+        --     "TAP", --
+        --     "RAP", --
+        --     "ZAP" --
+        -- }
     }
 
     local sector2Config = {
@@ -64,11 +64,14 @@ local function addRemoteObjects()
     }
     local sector6Config = {
         words = {
-            "CAT", --
-            "HAT", --
-            "MAT", --
-            "PAT" --
+            "CAT" --
         }
+        -- words = {
+        --     "CAT", --
+        --     "HAT", --
+        --     "MAT", --
+        --     "PAT" --
+        -- }
     }
 
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
