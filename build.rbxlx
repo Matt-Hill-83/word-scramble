@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1255.20081</X>
-					<Y>194.749863</Y>
-					<Z>-264.277283</Z>
-					<R00>-0.942688644</R00>
-					<R01>-0.0832603723</R01>
-					<R02>0.323119104</R02>
+					<X>-1264.81458</X>
+					<Y>346.775696</Y>
+					<Z>-398.22818</Z>
+					<R00>-0.532349288</R00>
+					<R01>0.515760303</R01>
+					<R02>-0.671264172</R02>
 					<R10>-0</R10>
-					<R11>0.968368113</R11>
-					<R12>0.249526203</R12>
-					<R20>-0.333673865</R20>
-					<R21>0.235225514</R21>
-					<R22>-0.912869513</R22>
+					<R11>0.792964578</R11>
+					<R12>0.609267771</R12>
+					<R20>0.846524835</R20>
+					<R21>0.324343264</R21>
+					<R22>-0.422134101</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1255.84705</X>
-					<Y>194.250809</Y>
-					<Z>-262.451538</Z>
+					<X>-1263.47205</X>
+					<Y>345.557159</Y>
+					<Z>-397.383911</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -51268,16 +51268,120 @@ end)]]></ProtectedString>
 										<token name="BottomSurfaceInput">0</token>
 										<CoordinateFrame name="CFrame">
 											<X>-1376.54688</X>
-											<Y>188.530945</Y>
-											<Z>-223.865372</Z>
+											<Y>180.030823</Y>
+											<Z>-223.864761</Z>
 											<R00>-1</R00>
-											<R01>7.84580934e-08</R01>
+											<R01>7.84547964e-08</R01>
 											<R02>4.32389243e-07</R02>
-											<R10>-7.84580934e-08</R10>
+											<R10>-7.84547964e-08</R10>
 											<R11>1</R11>
-											<R12>-5.61612978e-10</R12>
+											<R12>-5.76164894e-10</R12>
 											<R20>4.32389243e-07</R20>
-											<R21>5.61612978e-10</R21>
+											<R21>5.76164894e-10</R21>
+											<R22>-1</R22>
+										</CoordinateFrame>
+										<bool name="CanCollide">true</bool>
+										<bool name="CanTouch">true</bool>
+										<bool name="CastShadow">true</bool>
+										<int name="CollisionGroupId">0</int>
+										<Color3uint8 name="Color3uint8">4294901951</Color3uint8>
+										<PhysicalProperties name="CustomPhysicalProperties">
+											<CustomPhysics>false</CustomPhysics>
+										</PhysicalProperties>
+										<float name="FrontParamA">-0.5</float>
+										<float name="FrontParamB">0.5</float>
+										<token name="FrontSurface">0</token>
+										<token name="FrontSurfaceInput">0</token>
+										<float name="LeftParamA">-0.5</float>
+										<float name="LeftParamB">0.5</float>
+										<token name="LeftSurface">0</token>
+										<token name="LeftSurfaceInput">0</token>
+										<bool name="Locked">false</bool>
+										<bool name="Massless">false</bool>
+										<token name="Material">256</token>
+										<string name="Name">Limit</string>
+										<float name="Reflectance">0</float>
+										<float name="RightParamA">-0.5</float>
+										<float name="RightParamB">0.5</float>
+										<token name="RightSurface">0</token>
+										<token name="RightSurfaceInput">0</token>
+										<int name="RootPriority">0</int>
+										<Vector3 name="RotVelocity">
+											<X>0</X>
+											<Y>0</Y>
+											<Z>0</Z>
+										</Vector3>
+										<int64 name="SourceAssetId">-1</int64>
+										<BinaryString name="Tags">c3RvcA==</BinaryString>
+										<float name="TopParamA">-0.5</float>
+										<float name="TopParamB">0.5</float>
+										<token name="TopSurface">0</token>
+										<token name="TopSurfaceInput">0</token>
+										<float name="Transparency">0.800000012</float>
+										<Vector3 name="Velocity">
+											<X>0</X>
+											<Y>0</Y>
+											<Z>0</Z>
+										</Vector3>
+										<token name="formFactorRaw">1</token>
+										<token name="shape">1</token>
+										<Vector3 name="size">
+											<X>16</X>
+											<Y>22</Y>
+											<Z>161</Z>
+										</Vector3>
+									</Properties>
+									<Item class="WeldConstraint" referent="RBXdc3208a54c5a40f8bb25b2936ae770ce">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="CFrame0">
+												<X>-174.500122</X>
+												<Y>-21.4992676</Y>
+												<Z>0.000671386719</Z>
+												<R00>1</R00>
+												<R01>-7.84552086e-08</R01>
+												<R02>-4.32389243e-07</R02>
+												<R10>-7.84552086e-08</R10>
+												<R11>1</R11>
+												<R12>-5.74345904e-10</R12>
+												<R20>-4.32389243e-07</R20>
+												<R21>-5.74345904e-10</R21>
+												<R22>1</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">WeldConstraint</string>
+											<Ref name="Part0Internal">RBX43954b43e34642bfb458301fb3df5969</Ref>
+											<Ref name="Part1Internal">RBXba1d0e3ec4b54d7480142ed448f336b4</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<int name="State">3</int>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+								</Item>
+								<Item class="Part" referent="RBX40005c09a6ef46e488098f198043d755">
+									<Properties>
+										<bool name="Anchored">false</bool>
+										<BinaryString name="AttributesSerialize"></BinaryString>
+										<float name="BackParamA">-0.5</float>
+										<float name="BackParamB">0.5</float>
+										<token name="BackSurface">0</token>
+										<token name="BackSurfaceInput">0</token>
+										<float name="BottomParamA">-0.5</float>
+										<float name="BottomParamB">0.5</float>
+										<token name="BottomSurface">0</token>
+										<token name="BottomSurfaceInput">0</token>
+										<CoordinateFrame name="CFrame">
+											<X>-1164.54688</X>
+											<Y>180.030823</Y>
+											<Z>-223.864761</Z>
+											<R00>-1</R00>
+											<R01>7.8453148e-08</R01>
+											<R02>4.32389243e-07</R02>
+											<R10>-7.8453148e-08</R10>
+											<R11>1</R11>
+											<R12>-5.83440851e-10</R12>
+											<R20>4.32389243e-07</R20>
+											<R21>5.83440851e-10</R21>
 											<R22>-1</R22>
 										</CoordinateFrame>
 										<bool name="CanCollide">true</bool>
@@ -51327,30 +51431,30 @@ end)]]></ProtectedString>
 										<token name="shape">1</token>
 										<Vector3 name="size">
 											<X>16</X>
-											<Y>7</Y>
+											<Y>22</Y>
 											<Z>161</Z>
 										</Vector3>
 									</Properties>
-									<Item class="WeldConstraint" referent="RBXdc3208a54c5a40f8bb25b2936ae770ce">
+									<Item class="WeldConstraint" referent="RBX627d5d2b6e334d2abe74eeb6986e2f49">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="CFrame0">
-												<X>-174.500122</X>
-												<Y>-29.9993896</Y>
-												<Z>6.10351562e-05</Z>
+												<X>37.4998779</X>
+												<Y>-21.4992523</Y>
+												<Z>0.000762939453</Z>
 												<R00>1</R00>
-												<R01>-7.84585055e-08</R01>
+												<R01>-7.84535601e-08</R01>
 												<R02>-4.32389243e-07</R02>
-												<R10>-7.84585055e-08</R10>
+												<R10>-7.84535601e-08</R10>
 												<R11>1</R11>
-												<R12>-5.59793989e-10</R12>
+												<R12>-5.81621862e-10</R12>
 												<R20>-4.32389243e-07</R20>
-												<R21>-5.59793989e-10</R21>
+												<R21>-5.81621862e-10</R21>
 												<R22>1</R22>
 											</CoordinateFrame>
 											<bool name="Enabled">true</bool>
 											<string name="Name">WeldConstraint</string>
-											<Ref name="Part0Internal">RBX43954b43e34642bfb458301fb3df5969</Ref>
+											<Ref name="Part0Internal">RBX40005c09a6ef46e488098f198043d755</Ref>
 											<Ref name="Part1Internal">RBXba1d0e3ec4b54d7480142ed448f336b4</Ref>
 											<int64 name="SourceAssetId">-1</int64>
 											<int name="State">3</int>
@@ -72994,184 +73098,6 @@ return module
 						<BinaryString name="Tags"></BinaryString>
 					</Properties>
 				</Item>
-				<Item class="ModuleScript" referent="RBX4a3289b7273b4129b46d5c56eda2241f">
-					<Properties>
-						<BinaryString name="AttributesSerialize"></BinaryString>
-						<Content name="LinkedSource"><null></null></Content>
-						<string name="Name">InitLetterRackBD copy</string>
-						<string name="ScriptGuid">{0b7c1132-5e02-4d72-95fc-07a6b216182f}</string>
-						<ProtectedString name="Source"><![CDATA[local CS = game:GetService("CollectionService")
-local Sss = game:GetService("ServerScriptService")
-
-local Utils = require(Sss.Source.Utils.U001GeneralUtils)
-local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
--- local Constants = require(Sss.Source.Constants.Constants)
-
-local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
--- local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
-
-local module = {}
-
-local function createBlockMatrix(miniGameState)
-    -- 
-end
-
-local function configBlocks(miniGameState)
-    -- 
-end
-
-local function initLetterRack(miniGameState)
-    local rackLetterBlockObjs = miniGameState.rackLetterBlockObjs
-    local sectorFolder = miniGameState.sectorFolder
-    local numRow = miniGameState.numRow
-    local numCol = miniGameState.numCol
-    local words = miniGameState.words
-
-    local runTimeLetterFolder = LetterFallUtils.getRunTimeLetterFolder(
-                                    miniGameState)
-    miniGameState.runTimeLetterFolder = runTimeLetterFolder
-
-    local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
-    local letterBlockTemplate = Utils.getFirstDescendantByName(
-                                    letterBlockFolder,
-                                    miniGameState.inActiveStyle)
-    local letterPositioner = Utils.getFirstDescendantByName(sectorFolder,
-                                                            "LetterPositioner")
-
-    local spacingFactorX = 1.05
-    local spacingFactorZ = 1.05
-
-    local lettersNotInWords = LetterFallUtils.getLettersNotInWords(words)
-    local letterMatrix = {}
-
-    -- populate matrix with random letters
-    for _ = 1, numRow do
-        local row = {}
-        for _ = 1, numCol do
-            table.insert(row, LetterFallUtils.getRandomLetter(lettersNotInWords))
-        end
-        table.insert(letterMatrix, row)
-    end
-
-    local usedLocations = {}
-    for _, word in ipairs(words) do
-        for letterIndex = 1, #word do
-            local letter = string.sub(word, letterIndex, letterIndex)
-
-            local isDirtyLocation = true
-            local randomRowIndex = nil
-            local randomColIndex = nil
-            local locationCode = nil
-
-            -- make sure you do not put 2 letters in the same location
-            while isDirtyLocation == true do
-                randomRowIndex = Utils.genRandom(1, numRow)
-                randomColIndex = Utils.genRandom(1, numCol)
-                locationCode = randomRowIndex .. "-" .. randomColIndex
-                isDirtyLocation = usedLocations[locationCode]
-
-                if isDirtyLocation then print("dirty") end
-            end
-            usedLocations[locationCode] = true
-            letterMatrix[randomRowIndex][randomColIndex] = letter
-        end
-    end
-
-    for colIndex = 1, numCol do
-        for rowIndex = 1, numRow do
-            local newLetterBlock = letterBlockTemplate:Clone()
-            newLetterBlock.Size = letterPositioner.Size
-
-            local letterId = "ID--R" .. rowIndex .. "C" .. colIndex
-            local char = letterMatrix[rowIndex][colIndex]
-
-            local name = "rackLetter-" .. char .. "-" .. letterId .. "sss"
-            newLetterBlock.Name = name
-
-            LetterFallUtils.createPropOnLetterBlock(
-                {
-                    letterBlock = newLetterBlock,
-                    propName = LetterFallUtils.letterBlockPropNames.IsLifted,
-                    initialValue = false,
-                    propType = "BoolValue"
-                })
-
-            LetterFallUtils.createPropOnLetterBlock(
-                {
-                    letterBlock = newLetterBlock,
-                    propName = LetterFallUtils.letterBlockPropNames.IsFound,
-                    initialValue = false,
-                    propType = "BoolValue"
-                })
-
-            local letterPosX = -newLetterBlock.Size.X * (colIndex - 1) *
-                                   spacingFactorX
-            local letterPosZ = -newLetterBlock.Size.Z * (rowIndex - 1) *
-                                   spacingFactorZ
-
-            newLetterBlock.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                                        {
-                    parent = letterPositioner,
-                    child = newLetterBlock,
-                    offsetConfig = {
-                        useParentNearEdge = Vector3.new(-1, -1, -1),
-                        useChildNearEdge = Vector3.new(-1, -1, -1),
-                        offsetAdder = Vector3.new(letterPosX, 0, letterPosZ)
-                    }
-                })
-
-            newLetterBlock.Parent = runTimeLetterFolder
-            newLetterBlock.Anchored = true
-
-            LetterFallUtils.initLetterBlock(
-                {
-                    letterBlock = newLetterBlock,
-                    char = char,
-                    templateName = miniGameState.activeStyle,
-                    letterBlockType = "RackLetter"
-                })
-
-            local function onTouchBlock(newLetterBlock, miniGameState)
-                local db = {value = false}
-                local function closure(otherPart)
-                    local humanoid = otherPart.Parent:FindFirstChildWhichIsA(
-                                         "Humanoid")
-                    if not humanoid then return end
-
-                    if not db.value then
-                        db.value = true
-                        local player = Utils.getPlayerFromHumanoid(humanoid)
-                        miniGameState.onSelectRackBlock(newLetterBlock,
-                                                        miniGameState, player)
-                        db.value = false
-                    end
-                end
-                return closure
-            end
-
-            newLetterBlock.Touched:Connect(
-                onTouchBlock(newLetterBlock, miniGameState))
-
-            table.insert(rackLetterBlockObjs, {
-                part = newLetterBlock,
-                char = char,
-                coords = {row = rowIndex, col = colIndex}
-            })
-        end
-    end
-
-    LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
-
-end
-
-module.initLetterRack = initLetterRack
-
-return module
-]]></ProtectedString>
-						<int64 name="SourceAssetId">-1</int64>
-						<BinaryString name="Tags"></BinaryString>
-					</Properties>
-				</Item>
 			</Item>
 			<Item class="ModuleScript" referent="RBX3a31281414d34e00af256f78355b07c9">
 				<Properties>
@@ -76024,24 +75950,37 @@ local function applyStyleFromTemplateBD(props)
     targetLetterBlock.Color = template.Color
 end
 
+local function liftLetter(letterBlock, liftUp)
+    letterBlock.WeldConstraintRackBlock.Enabled = false
+    if liftUp == true then
+        if letterBlock.IsLifted.Value == false then
+            letterBlock.CFrame = letterBlock.CFrame *
+                                     CFrame.new(0, letterBlock.Size.Y, 0)
+            letterBlock.IsLifted.Value = true
+            letterBlock.CanCollide = false
+
+        end
+    else
+        if letterBlock.IsLifted.Value == true then
+            letterBlock.CFrame = letterBlock.CFrame *
+                                     CFrame.new(0, -letterBlock.Size.Y, 0)
+            letterBlock.IsLifted.Value = false
+            letterBlock.CanCollide = true
+        end
+    end
+    letterBlock.WeldConstraintRackBlock.Enabled = true
+end
+
 local function revertRackLetterBlocksToInit(miniGameState)
     local allLetters = module.getAllLettersInRack2(miniGameState)
 
     -- revert Letter Rack styles
     for _, letterBlock in ipairs(allLetters) do
-        if letterBlock.IsLifted.Value == true then
-            letterBlock.WeldConstraintRackBlock.Enabled = false
-            -- letterBlock.CFrame = letterBlock.CFrame *
-            --                          CFrame.new(0, -letterBlock.Size.Y, 0)
-            letterBlock.WeldConstraintRackBlock.Enabled = true
-            letterBlock.IsLifted.Value = false
-        end
-
-        Utils.hideItemAndChildren({item = letterBlock, hide = false})
+        liftLetter(letterBlock, false)
         letterBlock.CurrentStyle.Value = "none"
         letterBlock.IsHidden.Value = false
-        letterBlock.IsLifted.Value = false
         letterBlock.IsFound.Value = false
+        Utils.hideItemAndChildren({item = letterBlock, hide = false})
     end
 
     -- revert word styles
@@ -76181,39 +76120,20 @@ local function styleLetterBlocksBD(props)
 
     for _, letterBlock in ipairs(allLetters) do
         local char = module.getCharFromLetterBlock2(letterBlock)
+        local templateName = nil
 
         if availLetters[char] then
-            letterBlock.WeldConstraintRackBlock.Enabled = false
-            letterBlock.CFrame = letterBlock.CFrame *
-                                     CFrame.new(0, letterBlock.Size.Y, 0)
-            letterBlock.WeldConstraintRackBlock.Enabled = true
-            letterBlock.IsLifted.Value = true
-            module.applyStyleFromTemplateBD(
-                {
-                    targetLetterBlock = letterBlock,
-                    templateName = miniGameState.activeStyle
-                })
+            module.liftLetter(letterBlock, true)
+            templateName = miniGameState.activeStyle
         else
-            if letterBlock.IsLifted.Value == true then
-
-                -- I need to disable welds here
-                -- I need to disable welds here
-                -- I need to disable welds here
-                -- I need to disable welds here
-                letterBlock.WeldConstraintRackBlock.Enabled = false
-                letterBlock.CFrame = letterBlock.CFrame *
-                                         CFrame.new(0, -letterBlock.Size.Y, 0)
-                letterBlock.WeldConstraintRackBlock.Enabled = true
-                letterBlock.IsLifted.Value = false
-
-            end
-
-            module.applyStyleFromTemplateBD(
-                {
-                    targetLetterBlock = letterBlock,
-                    templateName = miniGameState.inActiveStyle
-                })
+            module.liftLetter(letterBlock, false)
+            templateName = miniGameState.inActiveStyle
         end
+
+        module.applyStyleFromTemplateBD({
+            targetLetterBlock = letterBlock,
+            templateName = templateName
+        })
     end
 
 end
@@ -76323,6 +76243,7 @@ module.getCharFromLetterBlock2 = getCharFromLetterBlock2
 module.getLettersNotInWords = getLettersNotInWords
 module.getAllLettersInWords = getAllLettersInWords
 module.playWordSound = playWordSound
+module.liftLetter = liftLetter
 module.revertRackLetterBlocksToInit = revertRackLetterBlocksToInit
 module.getAllLettersInRack2 = getAllLettersInRack2
 module.createPropOnLetterBlock = createPropOnLetterBlock
