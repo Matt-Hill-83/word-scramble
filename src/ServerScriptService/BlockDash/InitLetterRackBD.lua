@@ -63,9 +63,8 @@ local function initLetterRack(miniGameState)
                 randomColIndex = Utils.genRandom(1, numCol)
                 locationCode = randomRowIndex .. "-" .. randomColIndex
                 isDirtyLocation = usedLocations[locationCode]
-
-                if isDirtyLocation then print("dirty") end
             end
+
             usedLocations[locationCode] = true
             letterMatrix[randomRowIndex][randomColIndex] = letter
         end

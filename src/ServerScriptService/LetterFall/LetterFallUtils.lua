@@ -207,8 +207,8 @@ local function revertRackLetterBlocksToInit(miniGameState)
     for _, letterBlock in ipairs(allLetters) do
         if letterBlock.IsLifted.Value == true then
             letterBlock.WeldConstraintRackBlock.Enabled = false
-            letterBlock.CFrame = letterBlock.CFrame *
-                                     CFrame.new(0, -letterBlock.Size.Y, 0)
+            -- letterBlock.CFrame = letterBlock.CFrame *
+            --                          CFrame.new(0, -letterBlock.Size.Y, 0)
             letterBlock.WeldConstraintRackBlock.Enabled = true
             letterBlock.IsLifted.Value = false
         end

@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1264.53125</X>
-					<Y>384.639038</Y>
-					<Z>-354.684143</Z>
-					<R00>-0.999345124</R00>
-					<R01>-0.0294729173</R01>
-					<R02>0.0209960211</R02>
-					<R10>-1.86264515e-09</R10>
-					<R11>0.580211997</R11>
-					<R12>0.814465582</R12>
-					<R20>-0.0361868143</R20>
-					<R21>0.81393218</R21>
-					<R22>-0.579831958</R22>
+					<X>-1265.4353</X>
+					<Y>373.547699</Y>
+					<Z>-346.843536</Z>
+					<R00>-0.892801046</R00>
+					<R01>0.345266521</R01>
+					<R02>-0.289304942</R02>
+					<R10>-0</R10>
+					<R11>0.642255902</R11>
+					<R12>0.766490281</R12>
+					<R20>0.450451255</R20>
+					<R21>0.684323311</R21>
+					<R22>-0.573406696</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1264.57324</X>
-					<Y>383.010101</Y>
-					<Z>-353.524475</Z>
+					<X>-1264.85669</X>
+					<Y>372.014709</Y>
+					<Z>-345.696716</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -32098,7 +32098,7 @@ end)]]></ProtectedString>
 								<R21>-6.96994766e-06</R21>
 								<R22>1</R22>
 							</CoordinateFrame>
-							<bool name="CanCollide">true</bool>
+							<bool name="CanCollide">false</bool>
 							<bool name="CanTouch">true</bool>
 							<bool name="CastShadow">true</bool>
 							<int name="CollisionGroupId">0</int>
@@ -70591,7 +70591,7 @@ local function addRemoteObjects()
             "RAP", --
             "ZAP" --
         },
-        gridSize = {numRow = 6, numCol = 36}
+        gridSize = {numRow = 14, numCol = 24}
     }
 
     -- if Constants.gameConfig.isDev then
@@ -71479,6 +71479,9 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
         miniGameState.currentLetterIndex = miniGameState.currentLetterIndex + 1
         if (wordComplete) then
+            print('wordComplete');
+            print('wordComplete');
+            print('wordComplete');
             local currentWord2 = Constants.wordConfigs[currentWord]
             if currentWord2 then
                 local soundId = currentWord2['soundId'] or fireSound
@@ -71526,6 +71529,12 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
         local numAvailableWords = #LetterFallUtils.getAvailWords(miniGameState)
         if numAvailableWords == 0 then
+            print('words gone');
+            print('words gone');
+            print('words gone');
+            print('words gone');
+            print('words gone');
+            print('words gone');
             for _, wordObj in ipairs(miniGameState.renderedWords) do
                 local wordLetters = Utils.getInstancesByNameStub(
                                         {
@@ -71814,8 +71823,8 @@ local function initLetterRack(miniGameState)
             newLetterBlock.Anchored = false
 
             local weld = Instance.new("WeldConstraint")
-            weld.Name = "WeldConstraint - belt"
-            weld.Parent = beltTemplate
+            weld.Name = "WeldConstraintRackBlock"
+            weld.Parent = newLetterBlock
             weld.Part0 = beltTemplate
             weld.Part1 = newLetterBlock
 
@@ -75302,8 +75311,10 @@ local function revertRackLetterBlocksToInit(miniGameState)
     -- revert Letter Rack styles
     for _, letterBlock in ipairs(allLetters) do
         if letterBlock.IsLifted.Value == true then
+            letterBlock.WeldConstraintRackBlock.Enabled = false
             letterBlock.CFrame = letterBlock.CFrame *
                                      CFrame.new(0, -letterBlock.Size.Y, 0)
+            letterBlock.WeldConstraintRackBlock.Enabled = true
             letterBlock.IsLifted.Value = false
         end
 
@@ -75453,8 +75464,10 @@ local function styleLetterBlocksBD(props)
         local char = module.getCharFromLetterBlock2(letterBlock)
 
         if availLetters[char] then
+            letterBlock.WeldConstraintRackBlock.Enabled = false
             letterBlock.CFrame = letterBlock.CFrame *
                                      CFrame.new(0, letterBlock.Size.Y, 0)
+            letterBlock.WeldConstraintRackBlock.Enabled = true
             letterBlock.IsLifted.Value = true
             module.applyStyleFromTemplateBD(
                 {
@@ -75463,9 +75476,17 @@ local function styleLetterBlocksBD(props)
                 })
         else
             if letterBlock.IsLifted.Value == true then
+
+                -- I need to disable welds here
+                -- I need to disable welds here
+                -- I need to disable welds here
+                -- I need to disable welds here
+                letterBlock.WeldConstraintRackBlock.Enabled = false
                 letterBlock.CFrame = letterBlock.CFrame *
                                          CFrame.new(0, -letterBlock.Size.Y, 0)
+                letterBlock.WeldConstraintRackBlock.Enabled = true
                 letterBlock.IsLifted.Value = false
+
             end
 
             module.applyStyleFromTemplateBD(
