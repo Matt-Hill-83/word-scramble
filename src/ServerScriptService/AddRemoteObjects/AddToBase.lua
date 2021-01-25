@@ -32,16 +32,17 @@ local function addRemoteObjects()
             "TAP", --
             "RAP", --
             "ZAP" --
-        }
+        },
+        gridSize = {numRow = 14, numCol = 24}
     }
 
-    if Constants.gameConfig.isDev then
-        sector1Config = {
-            words = {
-                "CAT" --
-            }
-        }
-    end
+    -- if Constants.gameConfig.isDev then
+    --     sector1Config = {
+    --         words = {
+    --             "CAT" --
+    --         }
+    --     }
+    -- end
 
     local sector2Config = {
         words = {

@@ -1,12 +1,7 @@
 local Sss = game:GetService("ServerScriptService")
 local CS = game:GetService("CollectionService")
-local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
-local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
-
-local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
-
 local module = {}
 
 local function initConveyor(miniGameState)
@@ -55,14 +50,9 @@ local function initConveyor(miniGameState)
                 part.Touched:Connect(jumpBack)
             end
         end
-
-        print("Hello world!")
-
     end
 
     glassTop.Touched:Connect(start)
-    -- 
-    -- 
 end
 
 module.initConveyor = initConveyor
