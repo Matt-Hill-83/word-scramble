@@ -94,7 +94,7 @@ local function addBlockDash(sectorConfig)
     initPowerUps(miniGameState)
     DoorKey.init(miniGameState)
     LetterGrabber.initLetterGrabbers(miniGameState)
-    Conveyor.initConveyor(miniGameState)
+    Conveyor.initConveyors(miniGameState)
 
     function test()
         local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
