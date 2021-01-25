@@ -223,7 +223,6 @@ local function revertRackLetterBlocksToInit(miniGameState)
         wordObj.completed = false
         for _, letterObj in ipairs(wordObj.letters) do
             local letterBlock = letterObj.instance
-            -- letterBlock.Fire:Destroy()
             module.applyStyleFromTemplateBD(
                 {
                     targetLetterBlock = letterBlock,
@@ -231,12 +230,8 @@ local function revertRackLetterBlocksToInit(miniGameState)
                 })
             local firePositioners = Utils.getDescendantsByName(letterBlock,
                                                                "FirePositioner")
-            print('firePositioners' .. ' - start');
-            print(firePositioners);
             for _, firePositioner in ipairs(firePositioners) do
                 firePositioner:Destroy()
-                -- local fire = Instance.new("Fire", firePositioner)
-                -- fire.Size = 20
             end
 
             Utils.hideItemAndChildren({item = letterBlock, hide = false})

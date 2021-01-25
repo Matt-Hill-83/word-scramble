@@ -6,8 +6,17 @@ local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 -- local Constants = require(Sss.Source.Constants.Constants)
 
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
+-- local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
 
 local module = {}
+
+local function createBlockMatrix(miniGameState)
+    -- 
+end
+
+local function configBlocks(miniGameState)
+    -- 
+end
 
 local function initLetterRack(miniGameState)
     local rackLetterBlockObjs = miniGameState.rackLetterBlockObjs
@@ -26,11 +35,6 @@ local function initLetterRack(miniGameState)
                                     miniGameState.inActiveStyle)
     local letterPositioner = Utils.getFirstDescendantByName(sectorFolder,
                                                             "LetterPositioner")
-    local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
-    local beltTemplate =
-        Utils.getFirstDescendantByName(conveyor, "BeltTemplate")
-
-    print(beltTemplate);
 
     local spacingFactorX = 1.05
     local spacingFactorZ = 1.05
@@ -114,14 +118,8 @@ local function initLetterRack(miniGameState)
                     }
                 })
 
-            newLetterBlock.Parent = beltTemplate
-            newLetterBlock.Anchored = false
-
-            local weld = Instance.new("WeldConstraint")
-            weld.Name = "WeldConstraint - belt"
-            weld.Parent = beltTemplate
-            weld.Part0 = beltTemplate
-            weld.Part1 = newLetterBlock
+            newLetterBlock.Parent = runTimeLetterFolder
+            newLetterBlock.Anchored = true
 
             LetterFallUtils.initLetterBlock(
                 {
@@ -162,7 +160,6 @@ local function initLetterRack(miniGameState)
 
     LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
 
-    letterPositioner:Destroy()
 end
 
 module.initLetterRack = initLetterRack

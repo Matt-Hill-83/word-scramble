@@ -20,11 +20,6 @@ local function initConveyor(miniGameState)
     local beltWeld = Utils.getFirstDescendantByName(conveyor, "BeltWeld")
 
     print(beltTemplate);
-    -- if not letterPositioner then return end
-
-    -- 
-    -- 
-    -- 
     local part = beltTemplate
 
     local function start(otherPart)
@@ -33,8 +28,6 @@ local function initConveyor(miniGameState)
             if humanoid then
                 initComplete = true
                 beltWeld.Enabled = false
-                -- local player = Utils.getPlayerFromHumanoid(humanoid)
-                -- local gameState = PlayerStatManager.getGameState(player)
 
                 local initialCFrame = part.CFrame
 
@@ -43,8 +36,6 @@ local function initConveyor(miniGameState)
 
                 local bargeWeld = part.Parent.MyWeld
                 print('init complete');
-                print('init complete');
-                print('init complete');
 
                 local db = true
                 local function jumpBack(touched)
@@ -52,14 +43,8 @@ local function initConveyor(miniGameState)
                         db = false
 
                         if CS:hasTag(touched, "stop") then
+                            print("move")
                             bargeWeld.Enabled = false
-
-                            print("move")
-                            print("move")
-                            print("move")
-                            print("move")
-                            print("move")
-                            print("move")
                             part.CFrame = initialCFrame
                             bargeWeld.Enabled = true
                         end
