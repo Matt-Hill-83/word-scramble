@@ -6,14 +6,10 @@ local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 
 local module = {}
 
-local function initConveyor(beltTemplate)
-    print('initConveyor');
+local function initConveyor(beltTemplate, numBelts)
     beltTemplate.BeltWeld.Enabled = false
-
     local pc = beltTemplate.PrismaticConstraint
     pc.Enabled = true
-
-    print('init complete');
 
     local db = true
     local function jumpBack(touched)
@@ -21,7 +17,6 @@ local function initConveyor(beltTemplate)
             db = false
 
             if CS:hasTag(touched, "stop") then
-                print("move")
                 beltTemplate.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                           {
                         parent = touched,
@@ -30,7 +25,7 @@ local function initConveyor(beltTemplate)
                             useParentNearEdge = Vector3.new(1, 0, 0),
                             useChildNearEdge = Vector3.new(1, 0, 0),
                             offsetAdder = Vector3.new(
-                                -beltTemplate.Size.X * 2.1, 0, 0)
+                                -beltTemplate.Size.X * numBelts * 1.05, 0, 0)
                         }
                     })
             end
@@ -47,6 +42,7 @@ local function initConveyors(miniGameState)
 
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
     local beltTemplates = Utils.getDescendantsByName(conveyor, "BeltTemplate")
+    local numBelts = #beltTemplates
     local glassTop = Utils.getFirstDescendantByName(conveyor, "GlassTop")
 
     local function start(otherPart)
@@ -60,7 +56,7 @@ local function initConveyors(miniGameState)
                     propIndex.Name = "Index"
                 end
                 for _, beltTemplate in ipairs(beltTemplates) do
-                    module.initConveyor(beltTemplate, conveyor)
+                    module.initConveyor(beltTemplate, numBelts)
                 end
             end
         end

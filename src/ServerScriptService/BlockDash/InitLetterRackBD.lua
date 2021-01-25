@@ -31,13 +31,10 @@ local function initLetterRack(miniGameState)
     local beltPlates = Utils.getDescendantsByName(conveyor, "BeltPlate")
 
     for plateIndex, beltPlate in ipairs(beltPlates) do
-
         local beltTemplate = Utils.getFirstDescendantByName(beltPlate,
                                                             "BeltTemplate")
         local letterPositioner = Utils.getFirstDescendantByName(beltPlate,
                                                                 "LetterPositioner")
-
-        print(beltTemplate);
 
         local spacingFactorX = 1.05
         local spacingFactorZ = 1.05
