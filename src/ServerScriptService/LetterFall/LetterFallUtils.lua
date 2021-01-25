@@ -200,24 +200,38 @@ local function applyStyleFromTemplateBD(props)
     targetLetterBlock.Color = template.Color
 end
 
+local function liftLetter(letterBlock, liftUp)
+    letterBlock.WeldConstraintRackBlock.Enabled = false
+    if liftUp == true then
+        if letterBlock.IsLifted.Value == false then
+            letterBlock.CFrame = letterBlock.CFrame *
+                                     CFrame.new(0, letterBlock.Size.Y, 0)
+            -- Utils.hideItemAndChildren({item = letterBlock, hide = true})
+            letterBlock.IsLifted.Value = true
+        end
+    else
+        if letterBlock.IsLifted.Value == true then
+            letterBlock.CFrame = letterBlock.CFrame *
+                                     CFrame.new(0, -letterBlock.Size.Y, 0)
+            letterBlock.IsLifted.Value = false
+            -- Utils.hideItemAndChildren({item = letterBlock, hide = true})
+        end
+    end
+    letterBlock.WeldConstraintRackBlock.Enabled = true
+
+end
+
 local function revertRackLetterBlocksToInit(miniGameState)
     local allLetters = module.getAllLettersInRack2(miniGameState)
 
     -- revert Letter Rack styles
     for _, letterBlock in ipairs(allLetters) do
-        if letterBlock.IsLifted.Value == true then
-            letterBlock.WeldConstraintRackBlock.Enabled = false
-            -- letterBlock.CFrame = letterBlock.CFrame *
-            --                          CFrame.new(0, -letterBlock.Size.Y, 0)
-            letterBlock.WeldConstraintRackBlock.Enabled = true
-            letterBlock.IsLifted.Value = false
-        end
-
-        Utils.hideItemAndChildren({item = letterBlock, hide = false})
+        liftLetter(letterBlock, false)
         letterBlock.CurrentStyle.Value = "none"
         letterBlock.IsHidden.Value = false
-        letterBlock.IsLifted.Value = false
+        -- letterBlock.IsLifted.Value = false
         letterBlock.IsFound.Value = false
+        Utils.hideItemAndChildren({item = letterBlock, hide = false})
     end
 
     -- revert word styles
@@ -359,31 +373,14 @@ local function styleLetterBlocksBD(props)
         local char = module.getCharFromLetterBlock2(letterBlock)
 
         if availLetters[char] then
-            letterBlock.WeldConstraintRackBlock.Enabled = false
-            letterBlock.CFrame = letterBlock.CFrame *
-                                     CFrame.new(0, letterBlock.Size.Y, 0)
-            letterBlock.WeldConstraintRackBlock.Enabled = true
-            letterBlock.IsLifted.Value = true
+            module.liftLetter(letterBlock, true)
             module.applyStyleFromTemplateBD(
                 {
                     targetLetterBlock = letterBlock,
                     templateName = miniGameState.activeStyle
                 })
         else
-            if letterBlock.IsLifted.Value == true then
-
-                -- I need to disable welds here
-                -- I need to disable welds here
-                -- I need to disable welds here
-                -- I need to disable welds here
-                letterBlock.WeldConstraintRackBlock.Enabled = false
-                letterBlock.CFrame = letterBlock.CFrame *
-                                         CFrame.new(0, -letterBlock.Size.Y, 0)
-                letterBlock.WeldConstraintRackBlock.Enabled = true
-                letterBlock.IsLifted.Value = false
-
-            end
-
+            module.liftLetter(letterBlock, false)
             module.applyStyleFromTemplateBD(
                 {
                     targetLetterBlock = letterBlock,
@@ -499,6 +496,7 @@ module.getCharFromLetterBlock2 = getCharFromLetterBlock2
 module.getLettersNotInWords = getLettersNotInWords
 module.getAllLettersInWords = getAllLettersInWords
 module.playWordSound = playWordSound
+module.liftLetter = liftLetter
 module.revertRackLetterBlocksToInit = revertRackLetterBlocksToInit
 module.getAllLettersInRack2 = getAllLettersInRack2
 module.createPropOnLetterBlock = createPropOnLetterBlock
