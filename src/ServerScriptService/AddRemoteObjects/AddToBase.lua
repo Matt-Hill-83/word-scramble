@@ -149,9 +149,9 @@ local function addRemoteObjects()
         end
 
         BlockDash.addBlockDash(sectorConfig)
-        -- addSector(sectorConfig)
 
     end
+
     -- Do this last after everything has been created/deleted
     ConfigGame.configGame()
     PlayerStatManager.init()
