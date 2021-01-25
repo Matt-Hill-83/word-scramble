@@ -83,21 +83,22 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
     end
 
     if targetLetterBlock then
-        local letterBlockCFrame = clickedLetter.CFrame
-        local clickedBlockClone = clickedLetter:Clone()
-        clickedBlockClone.Parent = clickedLetter.Parent
+        -- local letterBlockCFrame = clickedLetter.CFrame
+        -- local clickedBlockClone = clickedLetter:Clone()
+        -- clickedBlockClone.Parent = clickedLetter.Parent
+        -- clickedBlockClone.CanCollide = false
 
         Utils.hideItemAndChildren({item = clickedLetter, hide = true})
         clickedLetter.IsHidden.Value = true
         clickedLetter.IsFound.Value = true
-        Utils3.tween({
-            part = clickedBlockClone,
-            endPosition = targetLetterBlock.Position,
-            time = 0.6,
-            anchor = true
-        })
+        -- Utils3.tween({
+        --     part = clickedBlockClone,
+        --     endPosition = targetLetterBlock.Position,
+        --     time = 0.6,
+        --     anchor = true
+        -- })
 
-        clickedBlockClone.CFrame = targetLetterBlock.CFrame
+        -- clickedBlockClone.CFrame = targetLetterBlock.CFrame
         LetterFallUtils.applyStyleFromTemplateBD(
             {
                 targetLetterBlock = targetLetterBlock,
@@ -112,7 +113,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                          LetterFallUtils.getCharFromLetterBlock2(clickedLetter))
         end
 
-        clickedBlockClone:Destroy()
+        -- clickedBlockClone:Destroy()
 
         local currentWord = table.concat(miniGameState.foundLetters, "")
         local wordComplete = table.find(words, currentWord)
@@ -131,14 +132,14 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                 -- Utils.playSound(fireSound)
             end
 
-            local gemTemplate = Utils.getFromTemplates("GemTemplate")
-            local newGem = gemTemplate:Clone()
-            newGem.Parent = sectorFolder
-            newGem.Handle.CFrame = letterBlockCFrame + Vector3.new(0, 30, 0)
-            newGem.Handle.Anchored = false
+            -- local gemTemplate = Utils.getFromTemplates("GemTemplate")
+            -- local newGem = gemTemplate:Clone()
+            -- newGem.Parent = sectorFolder
+            -- newGem.Handle.CFrame = letterBlockCFrame + Vector3.new(0, 30, 0)
+            -- newGem.Handle.Anchored = false
 
-            local rand = Utils.genRandom(1, #Constants.gemColors)
-            newGem.Handle.Color = Constants.gemColors[rand]
+            -- local rand = Utils.genRandom(1, #Constants.gemColors)
+            -- newGem.Handle.Color = Constants.gemColors[rand]
 
             miniGameState.activeWord = nil
             miniGameState.foundLetters = {}
