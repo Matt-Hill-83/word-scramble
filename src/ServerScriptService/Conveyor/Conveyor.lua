@@ -10,8 +10,8 @@ local function initConveyor(beltTemplate, conveyor)
     print('initConveyor');
     beltTemplate.BeltWeld.Enabled = false
 
-    local bv = beltTemplate.BodyVelocity
-    bv.Velocity = Vector3.new(28, 0, 0)
+    local pc = beltTemplate.PrismaticConstraint
+    pc.Enabled = true
 
     print('init complete');
 
