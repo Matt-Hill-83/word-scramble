@@ -207,16 +207,18 @@ local function liftLetter(letterBlock, liftUp)
             letterBlock.CFrame = letterBlock.CFrame *
                                      CFrame.new(0, letterBlock.Size.Y, 0)
             letterBlock.IsLifted.Value = true
+            letterBlock.CanCollide = false
+
         end
     else
         if letterBlock.IsLifted.Value == true then
             letterBlock.CFrame = letterBlock.CFrame *
                                      CFrame.new(0, -letterBlock.Size.Y, 0)
             letterBlock.IsLifted.Value = false
+            letterBlock.CanCollide = true
         end
     end
     letterBlock.WeldConstraintRackBlock.Enabled = true
-
 end
 
 local function revertRackLetterBlocksToInit(miniGameState)
