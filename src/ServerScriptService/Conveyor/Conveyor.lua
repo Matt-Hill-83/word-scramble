@@ -6,7 +6,7 @@ local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 
 local module = {}
 
-local function initConveyor(beltTemplate, conveyor)
+local function initConveyor(beltTemplate)
     print('initConveyor');
     beltTemplate.BeltWeld.Enabled = false
 
@@ -22,7 +22,6 @@ local function initConveyor(beltTemplate, conveyor)
 
             if CS:hasTag(touched, "stop") then
                 print("move")
-
                 beltTemplate.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                           {
                         parent = touched,

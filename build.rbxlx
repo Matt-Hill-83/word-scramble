@@ -51772,6 +51772,186 @@ end)]]></ProtectedString>
 									</Properties>
 								</Item>
 							</Item>
+							<Item class="Part" referent="RBX3540b35081b24da19bb6a9ba00fa79bc">
+								<Properties>
+									<bool name="Anchored">false</bool>
+									<BinaryString name="AttributesSerialize"></BinaryString>
+									<float name="BackParamA">-0.5</float>
+									<float name="BackParamB">0.5</float>
+									<token name="BackSurface">0</token>
+									<token name="BackSurfaceInput">0</token>
+									<float name="BottomParamA">-0.5</float>
+									<float name="BottomParamB">0.5</float>
+									<token name="BottomSurface">0</token>
+									<token name="BottomSurfaceInput">0</token>
+									<CoordinateFrame name="CFrame">
+										<X>-1164.29663</X>
+										<Y>163.031586</Y>
+										<Z>-223.865509</Z>
+										<R00>-1</R00>
+										<R01>4.35421343e-09</R01>
+										<R02>5.54791768e-09</R02>
+										<R10>-4.35421343e-09</R10>
+										<R11>1</R11>
+										<R12>-9.09480824e-13</R12>
+										<R20>5.54791768e-09</R20>
+										<R21>9.09482559e-13</R21>
+										<R22>-1</R22>
+									</CoordinateFrame>
+									<bool name="CanCollide">true</bool>
+									<bool name="CanTouch">true</bool>
+									<bool name="CastShadow">true</bool>
+									<int name="CollisionGroupId">0</int>
+									<Color3uint8 name="Color3uint8">4292178749</Color3uint8>
+									<PhysicalProperties name="CustomPhysicalProperties">
+										<CustomPhysics>true</CustomPhysics>
+										<Density>0.100000001</Density>
+										<Friction>0.300000012</Friction>
+										<Elasticity>0.5</Elasticity>
+										<FrictionWeight>1</FrictionWeight>
+										<ElasticityWeight>1</ElasticityWeight>
+									</PhysicalProperties>
+									<float name="FrontParamA">-0.5</float>
+									<float name="FrontParamB">0.5</float>
+									<token name="FrontSurface">0</token>
+									<token name="FrontSurfaceInput">0</token>
+									<float name="LeftParamA">-0.5</float>
+									<float name="LeftParamB">0.5</float>
+									<token name="LeftSurface">0</token>
+									<token name="LeftSurfaceInput">0</token>
+									<bool name="Locked">false</bool>
+									<bool name="Massless">false</bool>
+									<token name="Material">256</token>
+									<string name="Name">BeltTemplate</string>
+									<float name="Reflectance">0</float>
+									<float name="RightParamA">-0.5</float>
+									<float name="RightParamB">0.5</float>
+									<token name="RightSurface">0</token>
+									<token name="RightSurfaceInput">0</token>
+									<int name="RootPriority">0</int>
+									<Vector3 name="RotVelocity">
+										<X>0</X>
+										<Y>0</Y>
+										<Z>0</Z>
+									</Vector3>
+									<int64 name="SourceAssetId">-1</int64>
+									<BinaryString name="Tags"></BinaryString>
+									<float name="TopParamA">-0.5</float>
+									<float name="TopParamB">0.5</float>
+									<token name="TopSurface">0</token>
+									<token name="TopSurfaceInput">0</token>
+									<float name="Transparency">0</float>
+									<Vector3 name="Velocity">
+										<X>0</X>
+										<Y>0</Y>
+										<Z>0</Z>
+									</Vector3>
+									<token name="formFactorRaw">1</token>
+									<token name="shape">1</token>
+									<Vector3 name="size">
+										<X>211</X>
+										<Y>1</Y>
+										<Z>120</Z>
+									</Vector3>
+								</Properties>
+								<Item class="Attachment" referent="RBX6af08a800507406386d335e1f4e325a3">
+									<Properties>
+										<BinaryString name="AttributesSerialize"></BinaryString>
+										<CoordinateFrame name="CFrame">
+											<X>0</X>
+											<Y>0.5</Y>
+											<Z>0</Z>
+											<R00>-1</R00>
+											<R01>9.58700456e-20</R01>
+											<R02>-1.10958354e-08</R02>
+											<R10>9.58702976e-20</R10>
+											<R11>1</R11>
+											<R12>-2.25514052e-17</R12>
+											<R20>1.10958354e-08</R20>
+											<R21>-2.25514052e-17</R21>
+											<R22>-1</R22>
+										</CoordinateFrame>
+										<string name="Name">att-c-1</string>
+										<int64 name="SourceAssetId">-1</int64>
+										<BinaryString name="Tags"></BinaryString>
+										<bool name="Visible">false</bool>
+									</Properties>
+								</Item>
+								<Item class="WeldConstraint" referent="RBX6b6167a7b8004cb5bb26ed29455ccc59">
+									<Properties>
+										<BinaryString name="AttributesSerialize"></BinaryString>
+										<CoordinateFrame name="CFrame0">
+											<X>-37.7501221</X>
+											<Y>4.50001526</Y>
+											<Z>0</Z>
+											<R00>1</R00>
+											<R01>-4.35462733e-09</R01>
+											<R02>-5.54791768e-09</R02>
+											<R10>-4.35462733e-09</R10>
+											<R11>1</R11>
+											<R12>9.0950858e-13</R12>
+											<R20>-5.54791768e-09</R20>
+											<R21>9.09506845e-13</R21>
+											<R22>1</R22>
+										</CoordinateFrame>
+										<bool name="Enabled">true</bool>
+										<string name="Name">BeltWeld</string>
+										<Ref name="Part0Internal">RBXba1d0e3ec4b54d7480142ed448f336b4</Ref>
+										<Ref name="Part1Internal">RBX3540b35081b24da19bb6a9ba00fa79bc</Ref>
+										<int64 name="SourceAssetId">-1</int64>
+										<int name="State">3</int>
+										<BinaryString name="Tags"></BinaryString>
+									</Properties>
+								</Item>
+								<Item class="Attachment" referent="RBX50ef54e00aaa4e2b8d92494865c2880a">
+									<Properties>
+										<BinaryString name="AttributesSerialize"></BinaryString>
+										<CoordinateFrame name="CFrame">
+											<X>0</X>
+											<Y>0</Y>
+											<Z>0</Z>
+											<R00>1</R00>
+											<R01>0</R01>
+											<R02>0</R02>
+											<R10>0</R10>
+											<R11>1</R11>
+											<R12>0</R12>
+											<R20>0</R20>
+											<R21>0</R21>
+											<R22>1</R22>
+										</CoordinateFrame>
+										<string name="Name">Attachment</string>
+										<int64 name="SourceAssetId">-1</int64>
+										<BinaryString name="Tags"></BinaryString>
+										<bool name="Visible">false</bool>
+									</Properties>
+								</Item>
+								<Item class="PrismaticConstraint" referent="RBX4a7da0d3191a4deebec17b2cc00085f2">
+									<Properties>
+										<token name="ActuatorType">2</token>
+										<Ref name="Attachment0">RBX50ef54e00aaa4e2b8d92494865c2880a</Ref>
+										<Ref name="Attachment1">RBX0d99bda26dc44fbbaeb1b00b23c40948</Ref>
+										<BinaryString name="AttributesSerialize"></BinaryString>
+										<int name="Color">1009</int>
+										<bool name="Enabled">false</bool>
+										<bool name="LimitsEnabled">false</bool>
+										<float name="LowerLimit">0</float>
+										<float name="MotorMaxAcceleration">INF</float>
+										<float name="MotorMaxForce">0</float>
+										<string name="Name">PrismaticConstraint</string>
+										<float name="Restitution">0</float>
+										<float name="ServoMaxForce">1.00000003e+16</float>
+										<float name="Size">0.150000006</float>
+										<int64 name="SourceAssetId">-1</int64>
+										<float name="Speed">30</float>
+										<BinaryString name="Tags"></BinaryString>
+										<float name="TargetPosition">0</float>
+										<float name="UpperLimit">5</float>
+										<float name="Velocity">0</float>
+										<bool name="Visible">false</bool>
+									</Properties>
+								</Item>
+							</Item>
 						</Item>
 					</Item>
 					<Item class="Part" referent="RBX17dd66e91b7f43969078f4c9b745509b">
@@ -75798,7 +75978,7 @@ local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 
 local module = {}
 
-local function initConveyor(beltTemplate, conveyor)
+local function initConveyor(beltTemplate)
     print('initConveyor');
     beltTemplate.BeltWeld.Enabled = false
 
@@ -75814,7 +75994,6 @@ local function initConveyor(beltTemplate, conveyor)
 
             if CS:hasTag(touched, "stop") then
                 print("move")
-
                 beltTemplate.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                           {
                         parent = touched,
