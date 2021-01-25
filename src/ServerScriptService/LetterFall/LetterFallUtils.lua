@@ -206,8 +206,10 @@ local function revertRackLetterBlocksToInit(miniGameState)
     -- revert Letter Rack styles
     for _, letterBlock in ipairs(allLetters) do
         if letterBlock.IsLifted.Value == true then
-            -- letterBlock.CFrame = letterBlock.CFrame *
-            --                          CFrame.new(0, -letterBlock.Size.Y, 0)
+            letterBlock.WeldConstraintRackBlock.Enabled = false
+            letterBlock.CFrame = letterBlock.CFrame *
+                                     CFrame.new(0, -letterBlock.Size.Y, 0)
+            letterBlock.WeldConstraintRackBlock.Enabled = true
             letterBlock.IsLifted.Value = false
         end
 
@@ -357,8 +359,10 @@ local function styleLetterBlocksBD(props)
         local char = module.getCharFromLetterBlock2(letterBlock)
 
         if availLetters[char] then
-            -- letterBlock.CFrame = letterBlock.CFrame *
-            --                          CFrame.new(0, letterBlock.Size.Y, 0)
+            letterBlock.WeldConstraintRackBlock.Enabled = false
+            letterBlock.CFrame = letterBlock.CFrame *
+                                     CFrame.new(0, letterBlock.Size.Y, 0)
+            letterBlock.WeldConstraintRackBlock.Enabled = true
             letterBlock.IsLifted.Value = true
             module.applyStyleFromTemplateBD(
                 {
@@ -372,9 +376,12 @@ local function styleLetterBlocksBD(props)
                 -- I need to disable welds here
                 -- I need to disable welds here
                 -- I need to disable welds here
-                -- letterBlock.CFrame = letterBlock.CFrame *
-                --                          CFrame.new(0, -letterBlock.Size.Y, 0)
+                letterBlock.WeldConstraintRackBlock.Enabled = false
+                letterBlock.CFrame = letterBlock.CFrame *
+                                         CFrame.new(0, -letterBlock.Size.Y, 0)
+                letterBlock.WeldConstraintRackBlock.Enabled = true
                 letterBlock.IsLifted.Value = false
+
             end
 
             module.applyStyleFromTemplateBD(
