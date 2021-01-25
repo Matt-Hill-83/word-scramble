@@ -64,9 +64,9 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1286.0354</X>
-					<Y>420.634857</Y>
-					<Z>-363.264923</Z>
+					<X>-1363.03064</X>
+					<Y>428.981598</Y>
+					<Z>-341.487244</Z>
 					<R00>-0.979604959</R00>
 					<R01>0.115489081</R01>
 					<R02>-0.164427474</R02>
@@ -82,9 +82,9 @@
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1285.70654</X>
-					<Y>419.485321</Y>
-					<Z>-361.661652</Z>
+					<X>-1362.70178</X>
+					<Y>427.832062</Y>
+					<Z>-339.883972</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -51018,17 +51018,17 @@ end)]]></ProtectedString>
 										<token name="BottomSurface">0</token>
 										<token name="BottomSurfaceInput">0</token>
 										<CoordinateFrame name="CFrame">
-											<X>-1316.04675</X>
+											<X>-1245.04675</X>
 											<Y>176.53154</Y>
 											<Z>-120.865509</Z>
 											<R00>1.24418875e-08</R00>
-											<R01>9.77863746e-09</R01>
+											<R01>9.77698189e-09</R01>
 											<R02>1</R02>
-											<R10>1.6825652e-11</R10>
+											<R10>1.31876732e-11</R10>
 											<R11>1</R11>
-											<R12>9.77872006e-09</R12>
+											<R12>9.77706449e-09</R12>
 											<R20>-1</R20>
-											<R21>-1.72803993e-11</R21>
+											<R21>-1.36424205e-11</R21>
 											<R22>-1.24418875e-08</R22>
 										</CoordinateFrame>
 										<bool name="CanCollide">true</bool>
@@ -51084,7 +51084,7 @@ end)]]></ProtectedString>
 										<Vector3 name="size">
 											<X>33</X>
 											<Y>0.999993324</Y>
-											<Z>576</Z>
+											<Z>312</Z>
 										</Vector3>
 									</Properties>
 								</Item>
@@ -51326,17 +51326,17 @@ end)]]></ProtectedString>
 									<Properties>
 										<BinaryString name="AttributesSerialize"></BinaryString>
 										<CoordinateFrame name="CFrame0">
-											<X>0</X>
+											<X>-71</X>
 											<Y>17.9999695</Y>
 											<Z>-103</Z>
 											<R00>-1.24418875e-08</R00>
-											<R01>-9.77905135e-09</R01>
+											<R01>-9.77739578e-09</R01>
 											<R02>-1</R02>
-											<R10>1.77351467e-11</R10>
+											<R10>1.40971679e-11</R10>
 											<R11>1</R11>
-											<R12>9.77913395e-09</R12>
+											<R12>9.77747838e-09</R12>
 											<R20>1</R20>
-											<R21>1.8189894e-11</R21>
+											<R21>1.45519152e-11</R21>
 											<R22>1.24418875e-08</R22>
 										</CoordinateFrame>
 										<bool name="Enabled">true</bool>
