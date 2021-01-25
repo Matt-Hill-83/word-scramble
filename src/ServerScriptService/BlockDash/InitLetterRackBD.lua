@@ -9,6 +9,8 @@ local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 
 local module = {}
 
+local function createLetterPlate(miniGameState) end
+
 local function initLetterRack(miniGameState)
     local rackLetterBlockObjs = miniGameState.rackLetterBlockObjs
     local sectorFolder = miniGameState.sectorFolder
@@ -24,11 +26,16 @@ local function initLetterRack(miniGameState)
     local letterBlockTemplate = Utils.getFirstDescendantByName(
                                     letterBlockFolder,
                                     miniGameState.inActiveStyle)
-    local letterPositioner = Utils.getFirstDescendantByName(sectorFolder,
-                                                            "LetterPositioner")
+    -- local letterPositioner = Utils.getFirstDescendantByName(sectorFolder,
+    -- "LetterPositioner")
+
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
-    local beltTemplate =
-        Utils.getFirstDescendantByName(conveyor, "BeltTemplate")
+    local beltPlates = Utils.getDescendantsByName(conveyor, "BeltPlate")
+    local beltPlate = beltPlates[1]
+    local beltTemplate = Utils.getFirstDescendantByName(beltPlate,
+                                                        "BeltTemplate")
+    local letterPositioner = Utils.getFirstDescendantByName(beltPlate,
+                                                            "LetterPositioner")
 
     print(beltTemplate);
 
@@ -165,5 +172,6 @@ local function initLetterRack(miniGameState)
 end
 
 module.initLetterRack = initLetterRack
+module.createLetterPlate = createLetterPlate
 
 return module
