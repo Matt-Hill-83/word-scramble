@@ -26,14 +26,22 @@ local function addRemoteObjects()
     }
 
     local sector1Config = {
+
         words = {
             "NAP", --
-            "SAP", --
             "TAP", --
             "RAP", --
             "ZAP" --
         }
     }
+
+    if Constants.gameConfig.isDev then
+        sector1Config = {
+            words = {
+                "CAT" --
+            }
+        }
+    end
 
     local sector2Config = {
         words = {

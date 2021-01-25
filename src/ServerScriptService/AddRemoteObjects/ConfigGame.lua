@@ -86,11 +86,11 @@ function setVisibility()
     local taggedPartsDestroy = CS:GetTagged("Destroy")
     for _, item in ipairs(taggedPartsDestroy) do item:Destroy() end
 
-    local taggedPartsDestroy = CS:GetTagged("Disable")
-    for _, item in ipairs(taggedPartsDestroy) do item.Enabled = false end
+    local disabled = CS:GetTagged("Disable")
+    for _, item in ipairs(disabled) do item.Enabled = false end
 
-    local taggedPartsTransparent = CS:GetTagged("ArrowParts")
-    for _, item in ipairs(taggedPartsTransparent) do item.Transparency = 0.6 end
+    -- local taggedPartsTransparent = CS:GetTagged("ArrowParts")
+    -- for _, item in ipairs(taggedPartsTransparent) do item.Transparency = 0.6 end
 
     if Constants.gameConfig.transparency then
         local taggedPartsTransparent = CS:GetTagged("Transparent")
@@ -103,8 +103,6 @@ function setVisibility()
     for _, item in ipairs(canCollideOff) do item.CanCollide = false end
 
     if not Constants.gameConfig.isDev then
-        -- if true then
-
         local tagBaseWallTransparent = CS:GetTagged("BaseWallTransparent")
         for _, wall in ipairs(tagBaseWallTransparent) do
             Utils.setItemHeight({item = wall, height = 40})
