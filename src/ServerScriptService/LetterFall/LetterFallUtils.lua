@@ -206,7 +206,6 @@ local function liftLetter(letterBlock, liftUp)
         if letterBlock.IsLifted.Value == false then
             letterBlock.CFrame = letterBlock.CFrame *
                                      CFrame.new(0, letterBlock.Size.Y, 0)
-            -- Utils.hideItemAndChildren({item = letterBlock, hide = true})
             letterBlock.IsLifted.Value = true
         end
     else
@@ -214,7 +213,6 @@ local function liftLetter(letterBlock, liftUp)
             letterBlock.CFrame = letterBlock.CFrame *
                                      CFrame.new(0, -letterBlock.Size.Y, 0)
             letterBlock.IsLifted.Value = false
-            -- Utils.hideItemAndChildren({item = letterBlock, hide = true})
         end
     end
     letterBlock.WeldConstraintRackBlock.Enabled = true
@@ -229,7 +227,6 @@ local function revertRackLetterBlocksToInit(miniGameState)
         liftLetter(letterBlock, false)
         letterBlock.CurrentStyle.Value = "none"
         letterBlock.IsHidden.Value = false
-        -- letterBlock.IsLifted.Value = false
         letterBlock.IsFound.Value = false
         Utils.hideItemAndChildren({item = letterBlock, hide = false})
     end
@@ -371,22 +368,20 @@ local function styleLetterBlocksBD(props)
 
     for _, letterBlock in ipairs(allLetters) do
         local char = module.getCharFromLetterBlock2(letterBlock)
+        local templateName = nil
 
         if availLetters[char] then
             module.liftLetter(letterBlock, true)
-            module.applyStyleFromTemplateBD(
-                {
-                    targetLetterBlock = letterBlock,
-                    templateName = miniGameState.activeStyle
-                })
+            templateName = miniGameState.activeStyle
         else
             module.liftLetter(letterBlock, false)
-            module.applyStyleFromTemplateBD(
-                {
-                    targetLetterBlock = letterBlock,
-                    templateName = miniGameState.inActiveStyle
-                })
+            templateName = miniGameState.inActiveStyle
         end
+
+        module.applyStyleFromTemplateBD({
+            targetLetterBlock = letterBlock,
+            templateName = templateName
+        })
     end
 
 end
