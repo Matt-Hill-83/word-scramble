@@ -33,7 +33,7 @@ local function addRemoteObjects()
             "RAP", --
             "ZAP" --
         },
-        gridSize = {numRow = 14, numCol = 24}
+        gridSize = {numRow = 15, numCol = 25}
     }
 
     -- if Constants.gameConfig.isDev then

@@ -32,7 +32,6 @@ local function initLetterRack(miniGameState)
 
     for plateIndex, beltPlate in ipairs(beltPlates) do
 
-        -- local beltPlate = beltPlates[1]
         local beltTemplate = Utils.getFirstDescendantByName(beltPlate,
                                                             "BeltTemplate")
         local letterPositioner = Utils.getFirstDescendantByName(beltPlate,
