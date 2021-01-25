@@ -10,6 +10,7 @@ local Entrance = require(Sss.Source.BlockDash.Entrance)
 local HandleClick = require(Sss.Source.BlockDash.HandleClick)
 local LetterGrabber = require(Sss.Source.LetterGrabber.LetterGrabber)
 local DoorKey = require(Sss.Source.BlockDash.DoorKey)
+local Conveyor = require(Sss.Source.Conveyor.Conveyor)
 
 local module = {}
 
@@ -92,9 +93,9 @@ local function addBlockDash(sectorConfig)
     initPowerUps(miniGameState)
     DoorKey.init(miniGameState)
     LetterGrabber.initLetterGrabbers(miniGameState)
+    Conveyor.initConveyor(miniGameState)
 
     function test()
-
         local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
         local letterBlockTemplate = Utils.getFirstDescendantByName(
                                         letterBlockFolder, "BD_normal")
