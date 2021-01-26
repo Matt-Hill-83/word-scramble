@@ -123,8 +123,9 @@ local function addRemoteObjects()
             end
         end
 
-        local offsetX = 500
-        local offsetY = (islandIndex) * 100
+        local offsetX = 550
+        local offsetY = (islandIndex) * 0
+        -- local offsetY = (islandIndex) * 100
 
         newIsland.Parent = myStuff
         newIsland.Name = "Sector-" .. islandPositioner.Name
