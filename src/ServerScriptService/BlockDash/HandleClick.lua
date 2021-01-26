@@ -121,9 +121,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
         miniGameState.currentLetterIndex = miniGameState.currentLetterIndex + 1
         if (wordComplete) then
-            print('wordComplete');
-            print('wordComplete');
-            print('wordComplete');
             local currentWord2 = Constants.wordConfigs[currentWord]
             if currentWord2 then
                 local soundId = currentWord2['soundId'] or fireSound
@@ -171,12 +168,6 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
         local numAvailableWords = #LetterFallUtils.getAvailWords(miniGameState)
         if numAvailableWords == 0 then
-            print('words gone');
-            print('words gone');
-            print('words gone');
-            print('words gone');
-            print('words gone');
-            print('words gone');
             for _, wordObj in ipairs(miniGameState.renderedWords) do
                 local wordLetters = Utils.getInstancesByNameStub(
                                         {
