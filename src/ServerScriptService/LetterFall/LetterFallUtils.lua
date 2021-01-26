@@ -202,10 +202,12 @@ end
 
 local function liftLetter(letterBlock, liftUp)
     letterBlock.WeldConstraintRackBlock.Enabled = false
+
+    local liftDistance = 1.5
     if liftUp == true then
         if letterBlock.IsLifted.Value == false then
             letterBlock.CFrame = letterBlock.CFrame *
-                                     CFrame.new(0, letterBlock.Size.Y, 0)
+                                     CFrame.new(0, liftDistance, 0)
             letterBlock.IsLifted.Value = true
             letterBlock.CanCollide = false
 
@@ -213,7 +215,7 @@ local function liftLetter(letterBlock, liftUp)
     else
         if letterBlock.IsLifted.Value == true then
             letterBlock.CFrame = letterBlock.CFrame *
-                                     CFrame.new(0, -letterBlock.Size.Y, 0)
+                                     CFrame.new(0, -liftDistance, 0)
             letterBlock.IsLifted.Value = false
             letterBlock.CanCollide = true
         end

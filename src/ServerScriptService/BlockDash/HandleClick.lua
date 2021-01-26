@@ -200,8 +200,9 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                                                            "KeyWall")
             print('keyWall' .. ' - start');
             print(keyWall);
-            keyWall.CFrame = keyWall.CFrame + Vector3.new(0, 15, 0)
-
+            if keyWall then
+                keyWall.CFrame = keyWall.CFrame + Vector3.new(0, 15, 0)
+            end
         end
     end
     module.processing = false

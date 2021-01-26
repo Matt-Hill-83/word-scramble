@@ -80,7 +80,9 @@ local function addBlockDash(sectorConfig)
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState2})
 
         local keyWall = Utils.getFirstDescendantByName(sectorFolder, "KeyWall")
-        keyWall.CFrame = keyWall.CFrame + Vector3.new(0, -15, 0)
+        if keyWall then
+            keyWall.CFrame = keyWall.CFrame + Vector3.new(0, -15, 0)
+        end
     end
 
     miniGameState.onWordLettersGone = onWordLettersGone
