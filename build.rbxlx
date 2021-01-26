@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-921.986877</X>
-					<Y>163.606155</Y>
-					<Z>106.534569</Z>
-					<R00>-0.999732733</R00>
-					<R01>0.00596118625</R01>
-					<R02>-0.0223389864</R02>
-					<R10>4.65661287e-10</R10>
-					<R11>0.966190636</R11>
-					<R12>0.25782913</R12>
-					<R20>0.0231206845</R20>
-					<R21>0.257760227</R21>
-					<R22>-0.96593231</R22>
+					<X>-1300.56482</X>
+					<Y>273.212341</Y>
+					<Z>166.96785</Z>
+					<R00>0.999044716</R00>
+					<R01>-0.00859586243</R01>
+					<R02>0.0428465381</R02>
+					<R10>-0</R10>
+					<R11>0.980463743</R11>
+					<R12>0.196700394</R12>
+					<R20>-0.0437002815</R20>
+					<R21>-0.196512491</R21>
+					<R22>0.979527056</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-921.9422</X>
-					<Y>163.0905</Y>
-					<Z>108.466423</Z>
+					<X>-1300.65051</X>
+					<Y>272.818939</Y>
+					<Z>165.008789</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -38324,18 +38324,18 @@ end)]]></ProtectedString>
 										<token name="BottomSurface">0</token>
 										<token name="BottomSurfaceInput">0</token>
 										<CoordinateFrame name="CFrame">
-											<X>-1137.69031</X>
-											<Y>210.232178</Y>
-											<Z>-14.2479782</Z>
-											<R00>4.88697515e-05</R00>
-											<R01>1.18657113e-06</R01>
+											<X>-1137.69006</X>
+											<Y>238.232803</Y>
+											<Z>-14.2430077</Z>
+											<R00>4.0881765e-05</R00>
+											<R01>-3.70665816e-07</R01>
 											<R02>-0.999982119</R02>
-											<R10>8.45211105e-07</R10>
+											<R10>7.33222805e-07</R10>
 											<R11>1</R11>
-											<R12>8.72302849e-07</R12>
+											<R12>-3.7062452e-07</R12>
 											<R20>0.999982119</R20>
-											<R21>-1.55660166e-06</R21>
-											<R22>4.93244079e-05</R22>
+											<R21>-7.33259355e-07</R21>
+											<R22>4.0881634e-05</R22>
 										</CoordinateFrame>
 										<bool name="CanCollide">false</bool>
 										<bool name="CanTouch">true</bool>
@@ -42684,6 +42684,128 @@ end)]]></ProtectedString>
 										</Properties>
 									</Item>
 								</Item>
+								<Item class="Part" referent="RBX450cb91eb4154950943a8000bfb52336">
+									<Properties>
+										<bool name="Anchored">false</bool>
+										<BinaryString name="AttributesSerialize"></BinaryString>
+										<float name="BackParamA">-0.5</float>
+										<float name="BackParamB">0.5</float>
+										<token name="BackSurface">0</token>
+										<token name="BackSurfaceInput">0</token>
+										<float name="BottomParamA">-0.5</float>
+										<float name="BottomParamB">0.5</float>
+										<token name="BottomSurface">0</token>
+										<token name="BottomSurfaceInput">0</token>
+										<CoordinateFrame name="CFrame">
+											<X>-1275.22632</X>
+											<Y>179.521637</Y>
+											<Z>-12.6221838</Z>
+											<R00>0.999982119</R00>
+											<R01>1.11267707e-06</R01>
+											<R02>4.95335553e-05</R02>
+											<R10>-1.12150849e-06</R10>
+											<R11>1</R11>
+											<R12>1.20096956e-06</R12>
+											<R20>-4.954412e-05</R20>
+											<R21>-1.20106438e-06</R21>
+											<R22>0.999982119</R22>
+										</CoordinateFrame>
+										<bool name="CanCollide">true</bool>
+										<bool name="CanTouch">true</bool>
+										<bool name="CastShadow">true</bool>
+										<int name="CollisionGroupId">0</int>
+										<Color3uint8 name="Color3uint8">4291624908</Color3uint8>
+										<PhysicalProperties name="CustomPhysicalProperties">
+											<CustomPhysics>true</CustomPhysics>
+											<Density>0.00999999978</Density>
+											<Friction>0.300000012</Friction>
+											<Elasticity>0.5</Elasticity>
+											<FrictionWeight>1</FrictionWeight>
+											<ElasticityWeight>1</ElasticityWeight>
+										</PhysicalProperties>
+										<float name="FrontParamA">-0.5</float>
+										<float name="FrontParamB">0.5</float>
+										<token name="FrontSurface">0</token>
+										<token name="FrontSurfaceInput">0</token>
+										<float name="LeftParamA">-0.5</float>
+										<float name="LeftParamB">0.5</float>
+										<token name="LeftSurface">0</token>
+										<token name="LeftSurfaceInput">0</token>
+										<bool name="Locked">false</bool>
+										<bool name="Massless">false</bool>
+										<token name="Material">256</token>
+										<string name="Name">GlassGlate</string>
+										<float name="Reflectance">0</float>
+										<float name="RightParamA">-0.5</float>
+										<float name="RightParamB">0.5</float>
+										<token name="RightSurface">0</token>
+										<token name="RightSurfaceInput">0</token>
+										<int name="RootPriority">0</int>
+										<Vector3 name="RotVelocity">
+											<X>0</X>
+											<Y>0</Y>
+											<Z>0</Z>
+										</Vector3>
+										<int64 name="SourceAssetId">-1</int64>
+										<BinaryString name="Tags">VHJhbnNwYXJlbnQ=</BinaryString>
+										<float name="TopParamA">-0.5</float>
+										<float name="TopParamB">0.5</float>
+										<token name="TopSurface">0</token>
+										<token name="TopSurfaceInput">0</token>
+										<float name="Transparency">0</float>
+										<Vector3 name="Velocity">
+											<X>0</X>
+											<Y>0</Y>
+											<Z>0</Z>
+										</Vector3>
+										<token name="formFactorRaw">1</token>
+										<token name="shape">1</token>
+										<Vector3 name="size">
+											<X>178</X>
+											<Y>5.5</Y>
+											<Z>90</Z>
+										</Vector3>
+									</Properties>
+									<Item class="Weld" referent="RBX53e1d0c4bb154746a982da79577b5356">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-2.75</Y>
+												<Z>9.53674316e-07</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>-3.58324481e-14</R02>
+												<R10>3.58324481e-14</R10>
+												<R11>0</R11>
+												<R12>-1</R12>
+												<R20>0</R20>
+												<R21>1</R21>
+												<R22>0</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>0.029296875</X>
+												<Y>0.5</Y>
+												<Z>0.00213527679</Z>
+												<R00>1</R00>
+												<R01>4.41767668e-07</R01>
+												<R02>-8.76456809e-08</R02>
+												<R10>-8.76456809e-08</R10>
+												<R11>1.09367772e-10</R11>
+												<R12>-1</R12>
+												<R20>-4.41767668e-07</R20>
+												<R21>1</R21>
+												<R22>1.09406491e-10</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX450cb91eb4154950943a8000bfb52336</Ref>
+											<Ref name="Part1">RBX243559ca7c50472692bf8c5e5eb48c62</Ref>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+								</Item>
 							</Item>
 							<Item class="Part" referent="RBXba1d0e3ec4b54d7480142ed448f336b4">
 								<Properties>
@@ -42896,18 +43018,18 @@ end)]]></ProtectedString>
 									<Properties>
 										<BinaryString name="AttributesSerialize"></BinaryString>
 										<CoordinateFrame name="CFrame0">
-											<X>-6.1809082</X>
-											<Y>35.4606323</Y>
-											<Z>-1.61685181</Z>
-											<R00>-2.27395503e-07</R00>
-											<R01>1.57191522e-07</R01>
+											<X>-6.18066406</X>
+											<Y>63.4612579</Y>
+											<Z>-1.61184788</Z>
+											<R00>-8.21552567e-06</R00>
+											<R01>-1.40011377e-06</R01>
 											<R02>-1</R02>
-											<R10>-3.55647842e-07</R10>
+											<R10>-4.67644355e-07</R10>
 											<R11>1</R11>
-											<R12>-1.57192687e-07</R12>
+											<R12>-1.40010991e-06</R12>
 											<R20>1</R20>
-											<R21>-3.55647671e-07</R21>
-											<R22>2.27399141e-07</R22>
+											<R21>4.67632844e-07</R21>
+											<R22>-8.21552658e-06</R22>
 										</CoordinateFrame>
 										<bool name="Enabled">true</bool>
 										<string name="Name">WeldConstraint</string>
@@ -43260,18 +43382,18 @@ end)]]></ProtectedString>
 									<Properties>
 										<BinaryString name="AttributesSerialize"></BinaryString>
 										<CoordinateFrame name="CFrame0">
-											<X>-6.20532227</X>
-											<Y>35.4613495</Y>
-											<Z>-89.5721359</Z>
-											<R00>-1.89836137e-05</R00>
-											<R01>-2.01471585e-06</R01>
+											<X>-6.20544434</X>
+											<Y>63.4619904</Y>
+											<Z>-89.568718</Z>
+											<R00>-2.69719658e-05</R00>
+											<R01>-3.57197268e-06</R01>
 											<R02>-1</R02>
-											<R10>-2.93691232e-06</R10>
+											<R10>-3.04887317e-06</R10>
 											<R11>1</R11>
-											<R12>-2.01466014e-06</R12>
+											<R12>-3.5718906e-06</R12>
 											<R20>1</R20>
-											<R21>2.93687413e-06</R21>
-											<R22>-1.8983621e-05</R22>
+											<R21>3.04877676e-06</R21>
+											<R22>-2.69719767e-05</R22>
 										</CoordinateFrame>
 										<bool name="Enabled">true</bool>
 										<string name="Name">WeldConstraint</string>
@@ -43465,18 +43587,18 @@ end)]]></ProtectedString>
 									<token name="BottomSurface">4</token>
 									<token name="BottomSurfaceInput">0</token>
 									<CoordinateFrame name="CFrame">
-										<X>-1131.46484</X>
-										<Y>174.771194</Y>
-										<Z>-99.1640701</Z>
-										<R00>0.999982119</R00>
-										<R01>3.20111008e-06</R01>
-										<R02>6.84192564e-05</R02>
-										<R10>-2.88709498e-06</R10>
+										<X>-1131.46411</X>
+										<Y>174.77124</Y>
+										<Z>-99.1592407</Z>
+										<R00>0.999973178</R00>
+										<R01>2.8867039e-06</R01>
+										<R02>6.8873509e-05</R02>
+										<R10>-4.44439956e-06</R10>
 										<R11>1</R11>
-										<R12>3.782043e-06</R12>
-										<R20>-6.88739019e-05</R20>
-										<R21>-4.49353684e-06</R21>
-										<R22>0.999982119</R22>
+										<R12>4.49312029e-06</R12>
+										<R20>-7.68614264e-05</R20>
+										<R21>-4.605291e-06</R21>
+										<R22>0.999973178</R22>
 									</CoordinateFrame>
 									<bool name="CanCollide">true</bool>
 									<bool name="CanTouch">true</bool>
@@ -43663,18 +43785,18 @@ end)]]></ProtectedString>
 									<Properties>
 										<BinaryString name="AttributesSerialize"></BinaryString>
 										<CoordinateFrame name="CFrame0">
-											<X>-6.23144531</X>
-											<Y>35.4606476</Y>
-											<Z>84.9173431</Z>
-											<R00>-1.95498469e-05</R00>
-											<R01>-2.01477565e-06</R01>
-											<R02>-1</R02>
-											<R10>-2.93688822e-06</R10>
+											<X>-6.23217773</X>
+											<Y>63.4611511</Y>
+											<Z>84.918335</Z>
+											<R00>-3.59808073e-05</R00>
+											<R01>-4.81499455e-06</R01>
+											<R02>-0.999991059</R02>
+											<R10>-3.87196769e-06</R10>
 											<R11>1</R11>
-											<R12>-2.01471835e-06</R12>
-											<R20>1</R20>
-											<R21>2.93684889e-06</R21>
-											<R22>-1.95498524e-05</R22>
+											<R12>-3.25758629e-06</R12>
+											<R20>0.999991059</R20>
+											<R21>3.75989339e-06</R21>
+											<R22>-2.79926098e-05</R22>
 										</CoordinateFrame>
 										<bool name="Enabled">true</bool>
 										<string name="Name">WeldConstraint</string>
@@ -43829,17 +43951,17 @@ end)]]></ProtectedString>
 									<token name="BottomSurface">4</token>
 									<token name="BottomSurfaceInput">0</token>
 									<CoordinateFrame name="CFrame">
-										<X>-721.431519</X>
-										<Y>174.761185</Y>
-										<Z>-12.2130842</Z>
+										<X>-721.460266</X>
+										<Y>174.761307</Y>
+										<Z>-12.2129841</Z>
 										<R00>0.999982119</R00>
-										<R01>1.37602419e-05</R01>
-										<R02>0.000146446779</R02>
-										<R10>-1.34480042e-05</R10>
+										<R01>1.18890575e-05</R01>
+										<R02>0.000138913325</R02>
+										<R10>-1.34483989e-05</R10>
 										<R11>1</R11>
-										<R12>1.26115056e-05</R12>
-										<R20>-0.000146901264</R20>
-										<R21>-1.33246194e-05</R21>
+										<R12>1.32103214e-05</R12>
+										<R20>-0.000146901235</R20>
+										<R21>-1.33240055e-05</R21>
 										<R22>0.999982119</R22>
 									</CoordinateFrame>
 									<bool name="CanCollide">true</bool>
@@ -44027,18 +44149,18 @@ end)]]></ProtectedString>
 									<Properties>
 										<BinaryString name="AttributesSerialize"></BinaryString>
 										<CoordinateFrame name="CFrame0">
-											<X>-416.266418</X>
-											<Y>35.4654236</Y>
-											<Z>-2.09560871</Z>
-											<R00>-9.7578617e-05</R00>
-											<R01>-1.25756187e-05</R01>
+											<X>-416.237671</X>
+											<Y>63.4659271</Y>
+											<Z>-2.0903616</Z>
+											<R00>-0.000106021515</R00>
+											<R01>-1.38189462e-05</R01>
 											<R02>-1</R02>
-											<R10>-1.17676072e-05</R10>
+											<R10>-1.25904708e-05</R10>
 											<R11>1</R11>
-											<R12>-1.25744709e-05</R12>
+											<R12>-1.2260457e-05</R12>
 											<R20>1</R20>
-											<R21>1.17663803e-05</R21>
-											<R22>-9.75787625e-05</R22>
+											<R21>1.24770622e-05</R21>
+											<R22>-9.80333134e-05</R22>
 										</CoordinateFrame>
 										<bool name="Enabled">true</bool>
 										<string name="Name">WeldConstraint</string>
