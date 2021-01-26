@@ -94,10 +94,10 @@ function setVisibility()
     if not Constants.gameConfig.isDev then
         local tagBaseWallTransparent = CS:GetTagged("BaseWallTransparent")
         for _, wall in ipairs(tagBaseWallTransparent) do
-            Utils.setItemHeight({item = wall, height = 10})
+            Utils.setItemHeight({item = wall, height = 20})
             local newWallHeight = 1
-            wall.Transparency = 1
-            -- wall.Transparency = 0
+            -- wall.Transparency = 1
+            wall.Transparency = 0
             wall.CanCollide = true
             wall.Anchored = true
 
