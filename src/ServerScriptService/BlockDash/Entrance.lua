@@ -3,7 +3,6 @@ local RS = game:GetService("ReplicatedStorage")
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
-local Constants = require(Sss.Source.Constants.Constants)
 local freezeCameraRE = RS:WaitForChild("BlockDashFreezeCameraRE")
 
 local module = {}
@@ -11,7 +10,6 @@ local module = {}
 function module.initEntrance(parent)
 
     local function onTouchEntrance(otherPart)
-        print('onTouchEntrance' .. ' - start');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
             local player = Utils.getPlayerFromHumanoid(humanoid)
@@ -49,7 +47,6 @@ function module.initEntrance(parent)
     -- 
     -- 
     local function onTouchRun30(otherPart)
-        print('onTouchRun30');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
             if humanoid then
@@ -63,7 +60,6 @@ function module.initEntrance(parent)
     for _, item in ipairs(run30s) do item.Touched:Connect(onTouchRun30) end
 
     local function onTouchRun50(otherPart)
-        print('onTouchRun50----------------------------');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
             if humanoid.WalkSpeed == 50 then return end
@@ -75,7 +71,6 @@ function module.initEntrance(parent)
     for _, item in ipairs(run50s) do item.Touched:Connect(onTouchRun50) end
 
     local function onTouchRun70(otherPart)
-        print('onTouchRun70');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
             if humanoid.WalkSpeed == 70 then return end
@@ -87,7 +82,6 @@ function module.initEntrance(parent)
     for _, item in ipairs(run70s) do item.Touched:Connect(onTouchRun70) end
 
     local function onTouchRun90(otherPart)
-        print('onTouchRun90');
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
             if humanoid.WalkSpeed == 90 then return end
