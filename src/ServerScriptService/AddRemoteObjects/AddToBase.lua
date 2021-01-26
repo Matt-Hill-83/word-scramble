@@ -109,6 +109,8 @@ local function addRemoteObjects()
                               {islandPositioners[1]} or islandPositioners
 
     for islandIndex, islandPositioner in ipairs(myPositioners) do
+
+        if islandIndex == 3 then break end
         local newIsland = islandTemplate:Clone()
 
         local anchoredParts = {}
