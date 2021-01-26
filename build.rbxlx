@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-834.226135</X>
-					<Y>232.771561</Y>
-					<Z>-33.4398346</Z>
-					<R00>0.995484471</R00>
-					<R01>0.075531885</R01>
-					<R02>-0.0574951507</R02>
-					<R10>-3.7252903e-09</R10>
-					<R11>0.605690241</R11>
-					<R12>0.79570055</R12>
-					<R20>0.0949250162</R20>
-					<R21>-0.792107522</R21>
-					<R22>0.602955222</R22>
+					<X>-992.716064</X>
+					<Y>162.328934</Y>
+					<Z>138.922211</Z>
+					<R00>0.390630782</R00>
+					<R01>0.295108974</R01>
+					<R02>-0.871962368</R02>
+					<R10>-0</R10>
+					<R11>0.947221518</R11>
+					<R12>0.320579857</R12>
+					<R20>0.920547426</R20>
+					<R21>-0.12522836</R21>
+					<R22>0.370013893</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-834.111145</X>
-					<Y>231.180161</Y>
-					<Z>-34.6457443</Z>
+					<X>-957.837524</X>
+					<Y>149.505722</Y>
+					<Z>124.121635</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -49266,15 +49266,15 @@ end)]]></ProtectedString>
 										<X>-957.837524</X>
 										<Y>151.773361</Y>
 										<Z>124.121635</Z>
-										<R00>1.0000155</R00>
-										<R01>-4.54747351e-13</R01>
-										<R02>-1.40852444e-06</R02>
-										<R10>4.22460289e-09</R10>
+										<R00>1.00000775</R00>
+										<R01>-1.05615072e-08</R01>
+										<R02>-1.42848421e-06</R02>
+										<R10>1.26733539e-08</R10>
 										<R11>1</R11>
-										<R12>-6.50909882e-13</R12>
-										<R20>1.41652163e-06</R20>
-										<R21>4.33941061e-08</R21>
-										<R22>1.00000882</R22>
+										<R12>-1.08485324e-07</R12>
+										<R20>1.43248235e-06</R20>
+										<R21>1.30181633e-07</R21>
+										<R22>1.00000441</R22>
 									</CoordinateFrame>
 									<bool name="CanCollide">false</bool>
 									<bool name="CanTouch">true</bool>
@@ -49391,8 +49391,8 @@ end)]]></ProtectedString>
 							<token name="BottomSurfaceInput">0</token>
 							<CoordinateFrame name="CFrame">
 								<X>-957.837524</X>
-								<Y>146.310333</Y>
-								<Z>124.121643</Z>
+								<Y>146.810333</Y>
+								<Z>124.121635</Z>
 								<R00>-9.49094829e-06</R00>
 								<R01>-7.11911707e-06</R01>
 								<R02>-1.00000775</R02>
@@ -49407,7 +49407,7 @@ end)]]></ProtectedString>
 							<bool name="CanTouch">true</bool>
 							<bool name="CastShadow">true</bool>
 							<int name="CollisionGroupId">0</int>
-							<Color3uint8 name="Color3uint8">4278815183</Color3uint8>
+							<Color3uint8 name="Color3uint8">4294830733</Color3uint8>
 							<PhysicalProperties name="CustomPhysicalProperties">
 								<CustomPhysics>false</CustomPhysics>
 							</PhysicalProperties>
@@ -49435,7 +49435,7 @@ end)]]></ProtectedString>
 								<Z>0</Z>
 							</Vector3>
 							<int64 name="SourceAssetId">-1</int64>
-							<BinaryString name="Tags">VHJhbnNwYXJlbnQ=</BinaryString>
+							<BinaryString name="Tags"></BinaryString>
 							<float name="TopParamA">-0.5</float>
 							<float name="TopParamB">0.5</float>
 							<token name="TopSurface">0</token>
@@ -49449,9 +49449,9 @@ end)]]></ProtectedString>
 							<token name="formFactorRaw">3</token>
 							<token name="shape">1</token>
 							<Vector3 name="size">
-								<X>6</X>
-								<Y>1</Y>
-								<Z>6</Z>
+								<X>8</X>
+								<Y>2</Y>
+								<Z>10</Z>
 							</Vector3>
 						</Properties>
 						<Item class="WeldConstraint" referent="RBXef3e67e8ce4d4a939092d964b60b1ce5">
@@ -49459,17 +49459,17 @@ end)]]></ProtectedString>
 								<BinaryString name="AttributesSerialize"></BinaryString>
 								<CoordinateFrame name="CFrame0">
 									<X>0.000106811523</X>
-									<Y>5.46302795</Y>
+									<Y>4.96302795</Y>
 									<Z>-6.10351562e-05</Z>
-									<R00>-8.07843571e-06</R00>
-									<R01>2.13070907e-05</R01>
-									<R02>1.00000441</R02>
-									<R10>-7.11703478e-06</R10>
+									<R00>-8.06240132e-06</R00>
+									<R01>2.13938783e-05</R01>
+									<R02>1</R02>
+									<R10>-7.10853146e-06</R10>
 									<R11>1</R11>
-									<R12>-2.12855466e-05</R12>
-									<R20>-1.00000775</R20>
-									<R21>-7.11926396e-06</R21>
-									<R22>-8.08225104e-06</R22>
+									<R12>-2.13939365e-05</R12>
+									<R20>-1</R20>
+									<R21>-7.10870381e-06</R21>
+									<R22>-8.06224944e-06</R22>
 								</CoordinateFrame>
 								<bool name="Enabled">true</bool>
 								<string name="Name">WeldConstraint</string>
