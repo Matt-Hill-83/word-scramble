@@ -211,6 +211,7 @@ local function liftLetter(letterBlock, liftUp)
                                                     liftDistance, 0)
             letterBlock.IsLifted.Value = true
             letterBlock.CanCollide = false
+            letterBlock.Sparkles.Enabled = true
 
         end
     else
@@ -220,6 +221,7 @@ local function liftLetter(letterBlock, liftUp)
                                                     liftDistance, 0)
             letterBlock.IsLifted.Value = false
             letterBlock.CanCollide = true
+            letterBlock.Sparkles.Enabled = false
         end
     end
     letterBlock.WeldConstraintRackBlock.Enabled = true

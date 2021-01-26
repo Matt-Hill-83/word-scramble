@@ -64,6 +64,7 @@ local function addBlockDash(sectorConfig)
         numRow = numRow,
         numCol = numCol,
         activeStyle = "BD_available",
+        -- Rack starts with this one:
         inActiveStyle = "BD_normal",
         canResetBlocks = true
     }

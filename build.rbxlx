@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>802.126709</X>
-					<Y>179.511459</Y>
-					<Z>-477.182434</Z>
-					<R00>0.171458632</R00>
-					<R01>-0.327911973</R01>
-					<R02>0.929018676</R02>
-					<R10>-0</R10>
-					<R11>0.942983031</R11>
-					<R12>0.33284089</R12>
-					<R20>-0.985191345</R20>
-					<R21>-0.0570684448</R21>
-					<R22>0.161682576</R22>
+					<X>-921.986877</X>
+					<Y>163.606155</Y>
+					<Z>106.534569</Z>
+					<R00>-0.999732733</R00>
+					<R01>0.00596118625</R01>
+					<R02>-0.0223389864</R02>
+					<R10>4.65661287e-10</R10>
+					<R11>0.966190636</R11>
+					<R12>0.25782913</R12>
+					<R20>0.0231206845</R20>
+					<R21>0.257760227</R21>
+					<R22>-0.96593231</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>800.268677</X>
-					<Y>178.845779</Y>
-					<Z>-477.505798</Z>
+					<X>-921.9422</X>
+					<Y>163.0905</Y>
+					<Z>108.466423</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -25389,7 +25389,7 @@ end)]]></ProtectedString>
 								<CoordinateFrame name="CFrame">
 									<X>-939.018616</X>
 									<Y>147.397247</Y>
-									<Z>146.586029</Z>
+									<Z>135.965652</Z>
 									<R00>1</R00>
 									<R01>7.7289631e-05</R01>
 									<R02>-1.31432716e-05</R02>
@@ -25423,7 +25423,7 @@ end)]]></ProtectedString>
 								<token name="LeftSurfaceInput">0</token>
 								<bool name="Locked">false</bool>
 								<bool name="Massless">false</bool>
-								<token name="Material">880</token>
+								<token name="Material">528</token>
 								<string name="Name">BD_normal</string>
 								<float name="Reflectance">0</float>
 								<float name="RightParamA">-0.5</float>
@@ -26140,6 +26140,134 @@ end)]]></ProtectedString>
 									</Properties>
 								</Item>
 							</Item>
+							<Item class="Sparkles" referent="RBXcdf7819b62404194aac290d101d14b75">
+								<Properties>
+									<BinaryString name="AttributesSerialize"></BinaryString>
+									<bool name="Enabled">false</bool>
+									<string name="Name">Sparkles</string>
+									<int64 name="SourceAssetId">-1</int64>
+									<Color3 name="SparkleColor">
+										<R>0.564705908</R>
+										<G>0.0980392247</G>
+										<B>1</B>
+									</Color3>
+									<BinaryString name="Tags"></BinaryString>
+								</Properties>
+							</Item>
+							<Item class="SurfaceLight" referent="RBX981d1adc36e6473a8cdf3552e00fbab6">
+								<Properties>
+									<float name="Angle">90</float>
+									<BinaryString name="AttributesSerialize"></BinaryString>
+									<float name="Brightness">1</float>
+									<Color3 name="Color">
+										<R>1</R>
+										<G>1</G>
+										<B>1</B>
+									</Color3>
+									<bool name="Enabled">true</bool>
+									<token name="Face">5</token>
+									<string name="Name">SurfaceLight</string>
+									<float name="Range">16</float>
+									<bool name="Shadows">false</bool>
+									<int64 name="SourceAssetId">-1</int64>
+									<BinaryString name="Tags"></BinaryString>
+								</Properties>
+							</Item>
+							<Item class="SurfaceLight" referent="RBX579ae238c05f4d0eb2563ff132fbe629">
+								<Properties>
+									<float name="Angle">90</float>
+									<BinaryString name="AttributesSerialize"></BinaryString>
+									<float name="Brightness">1</float>
+									<Color3 name="Color">
+										<R>1</R>
+										<G>1</G>
+										<B>1</B>
+									</Color3>
+									<bool name="Enabled">true</bool>
+									<token name="Face">2</token>
+									<string name="Name">SurfaceLight</string>
+									<float name="Range">16</float>
+									<bool name="Shadows">false</bool>
+									<int64 name="SourceAssetId">-1</int64>
+									<BinaryString name="Tags"></BinaryString>
+								</Properties>
+							</Item>
+							<Item class="SurfaceLight" referent="RBXe29f8b8e79a14660892c84d527ac0215">
+								<Properties>
+									<float name="Angle">90</float>
+									<BinaryString name="AttributesSerialize"></BinaryString>
+									<float name="Brightness">1</float>
+									<Color3 name="Color">
+										<R>1</R>
+										<G>1</G>
+										<B>1</B>
+									</Color3>
+									<bool name="Enabled">true</bool>
+									<token name="Face">4</token>
+									<string name="Name">SurfaceLight</string>
+									<float name="Range">16</float>
+									<bool name="Shadows">false</bool>
+									<int64 name="SourceAssetId">-1</int64>
+									<BinaryString name="Tags"></BinaryString>
+								</Properties>
+							</Item>
+							<Item class="SurfaceLight" referent="RBXe9a098cb17dc4bb58404e5b2d5f071a5">
+								<Properties>
+									<float name="Angle">90</float>
+									<BinaryString name="AttributesSerialize"></BinaryString>
+									<float name="Brightness">1</float>
+									<Color3 name="Color">
+										<R>1</R>
+										<G>1</G>
+										<B>1</B>
+									</Color3>
+									<bool name="Enabled">true</bool>
+									<token name="Face">3</token>
+									<string name="Name">SurfaceLight</string>
+									<float name="Range">16</float>
+									<bool name="Shadows">false</bool>
+									<int64 name="SourceAssetId">-1</int64>
+									<BinaryString name="Tags"></BinaryString>
+								</Properties>
+							</Item>
+							<Item class="SurfaceLight" referent="RBXb27f49072dda447e9586479b3fa0c0f5">
+								<Properties>
+									<float name="Angle">90</float>
+									<BinaryString name="AttributesSerialize"></BinaryString>
+									<float name="Brightness">1</float>
+									<Color3 name="Color">
+										<R>1</R>
+										<G>1</G>
+										<B>1</B>
+									</Color3>
+									<bool name="Enabled">true</bool>
+									<token name="Face">0</token>
+									<string name="Name">SurfaceLight</string>
+									<float name="Range">16</float>
+									<bool name="Shadows">false</bool>
+									<int64 name="SourceAssetId">-1</int64>
+									<BinaryString name="Tags"></BinaryString>
+								</Properties>
+							</Item>
+							<Item class="SurfaceLight" referent="RBX8323286907b942fc9b3d741eb95f4021">
+								<Properties>
+									<float name="Angle">90</float>
+									<BinaryString name="AttributesSerialize"></BinaryString>
+									<float name="Brightness">1</float>
+									<Color3 name="Color">
+										<R>1</R>
+										<G>1</G>
+										<B>1</B>
+									</Color3>
+									<bool name="Enabled">true</bool>
+									<token name="Face">1</token>
+									<string name="Name">SurfaceLight</string>
+									<float name="Range">16</float>
+									<bool name="Shadows">false</bool>
+									<int64 name="SourceAssetId">-1</int64>
+									<BinaryString name="Tags"></BinaryString>
+								</Properties>
+							</Item>
 						</Item>
 						<Item class="Part" referent="RBX848791bed15246638842a67de1ae7738">
 							<Properties>
@@ -26171,7 +26299,7 @@ end)]]></ProtectedString>
 								<bool name="CanTouch">true</bool>
 								<bool name="CastShadow">true</bool>
 								<int name="CollisionGroupId">0</int>
-								<Color3uint8 name="Color3uint8">4290019583</Color3uint8>
+								<Color3uint8 name="Color3uint8">4289832959</Color3uint8>
 								<PhysicalProperties name="CustomPhysicalProperties">
 									<CustomPhysics>true</CustomPhysics>
 									<Density>0.699999988</Density>
@@ -26190,7 +26318,7 @@ end)]]></ProtectedString>
 								<token name="LeftSurfaceInput">0</token>
 								<bool name="Locked">false</bool>
 								<bool name="Massless">false</bool>
-								<token name="Material">880</token>
+								<token name="Material">1088</token>
 								<string name="Name">BD_available</string>
 								<float name="Reflectance">0</float>
 								<float name="RightParamA">-0.5</float>
@@ -28037,7 +28165,7 @@ end)]]></ProtectedString>
 								<bool name="CanTouch">true</bool>
 								<bool name="CastShadow">true</bool>
 								<int name="CollisionGroupId">0</int>
-								<Color3uint8 name="Color3uint8">4278497260</Color3uint8>
+								<Color3uint8 name="Color3uint8">4294967244</Color3uint8>
 								<PhysicalProperties name="CustomPhysicalProperties">
 									<CustomPhysics>true</CustomPhysics>
 									<Density>100</Density>
@@ -28056,7 +28184,7 @@ end)]]></ProtectedString>
 								<token name="LeftSurfaceInput">0</token>
 								<bool name="Locked">false</bool>
 								<bool name="Massless">false</bool>
-								<token name="Material">880</token>
+								<token name="Material">528</token>
 								<string name="Name">BD_word_normal</string>
 								<float name="Reflectance">0</float>
 								<float name="RightParamA">-0.5</float>
@@ -60835,6 +60963,7 @@ local function addBlockDash(sectorConfig)
         numRow = numRow,
         numCol = numCol,
         activeStyle = "BD_available",
+        -- Rack starts with this one:
         inActiveStyle = "BD_normal",
         canResetBlocks = true
     }
