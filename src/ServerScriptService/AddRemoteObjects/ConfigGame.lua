@@ -35,11 +35,8 @@ local function configPlayers()
 end
 
 function configGamePass()
-
     local gamePassID = 14078170
-
     local function onPlayerAdded(player)
-
         local hasPass = false
 
         -- Check if the player already owns the game pass
@@ -58,7 +55,6 @@ function configGamePass()
         if hasPass == true then
             print(player.Name .. " owns the game pass with ID " .. gamePassID)
             -- Assign this player the ability or bonus related to the game pass
-            --
         end
     end
 
@@ -85,9 +81,6 @@ function setVisibility()
     local disabled = CS:GetTagged("Disable")
     for _, item in ipairs(disabled) do item.Enabled = false end
 
-    -- local taggedPartsTransparent = CS:GetTagged("ArrowParts")
-    -- for _, item in ipairs(taggedPartsTransparent) do item.Transparency = 0.6 end
-
     if Constants.gameConfig.transparency then
         local taggedPartsTransparent = CS:GetTagged("Transparent")
         for _, item in ipairs(taggedPartsTransparent) do
@@ -103,8 +96,8 @@ function setVisibility()
         for _, wall in ipairs(tagBaseWallTransparent) do
             Utils.setItemHeight({item = wall, height = 10})
             local newWallHeight = 1
-            -- wall.Transparency = 1
-            wall.Transparency = 0
+            wall.Transparency = 1
+            -- wall.Transparency = 0
             wall.CanCollide = true
             wall.Anchored = true
 
