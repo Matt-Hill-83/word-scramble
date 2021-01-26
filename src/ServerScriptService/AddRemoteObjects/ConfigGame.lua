@@ -97,7 +97,7 @@ function setVisibility()
             Utils.setItemHeight({item = wall, height = 20})
             local newWallHeight = 1
             -- wall.Transparency = 1
-            wall.Transparency = 0
+            wall.Transparency = 0.8
             wall.CanCollide = true
             wall.Anchored = true
 
