@@ -26164,7 +26164,7 @@ end)]]></ProtectedString>
 										<G>1</G>
 										<B>1</B>
 									</Color3>
-									<bool name="Enabled">true</bool>
+									<bool name="Enabled">false</bool>
 									<token name="Face">5</token>
 									<string name="Name">SpotLight</string>
 									<float name="Range">12</float>
@@ -26183,7 +26183,7 @@ end)]]></ProtectedString>
 										<G>1</G>
 										<B>1</B>
 									</Color3>
-									<bool name="Enabled">true</bool>
+									<bool name="Enabled">false</bool>
 									<token name="Face">0</token>
 									<string name="Name">SpotLight</string>
 									<float name="Range">12</float>
@@ -26202,7 +26202,7 @@ end)]]></ProtectedString>
 										<G>1</G>
 										<B>1</B>
 									</Color3>
-									<bool name="Enabled">true</bool>
+									<bool name="Enabled">false</bool>
 									<token name="Face">4</token>
 									<string name="Name">SpotLight</string>
 									<float name="Range">12</float>
@@ -26221,7 +26221,7 @@ end)]]></ProtectedString>
 										<G>1</G>
 										<B>1</B>
 									</Color3>
-									<bool name="Enabled">true</bool>
+									<bool name="Enabled">false</bool>
 									<token name="Face">3</token>
 									<string name="Name">SpotLight</string>
 									<float name="Range">12</float>
@@ -26240,7 +26240,7 @@ end)]]></ProtectedString>
 										<G>1</G>
 										<B>1</B>
 									</Color3>
-									<bool name="Enabled">true</bool>
+									<bool name="Enabled">false</bool>
 									<token name="Face">1</token>
 									<string name="Name">SpotLight</string>
 									<float name="Range">12</float>
@@ -28142,7 +28142,7 @@ end)]]></ProtectedString>
 									<R21>-2.55156301e-05</R21>
 									<R22>1</R22>
 								</CoordinateFrame>
-								<bool name="CanCollide">true</bool>
+								<bool name="CanCollide">false</bool>
 								<bool name="CanTouch">true</bool>
 								<bool name="CastShadow">true</bool>
 								<int name="CollisionGroupId">0</int>
