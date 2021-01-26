@@ -80,9 +80,12 @@ local function addBlockDash(sectorConfig)
         LetterFallUtils.revertRackLetterBlocksToInit(miniGameState2)
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState2})
 
-        local keyWall = Utils.getFirstDescendantByName(sectorFolder, "KeyWall")
-        if keyWall then
-            keyWall.CFrame = keyWall.CFrame + Vector3.new(0, -15, 0)
+        local keyWalls = Utils.getDescendantsByName(sectorFolder, "KeyWall")
+        for _, keyWall in ipairs(keyWalls) do
+            if keyWall then
+                keyWall.CanCollide = true
+                keyWall.Transparency = 0
+            end
         end
     end
 

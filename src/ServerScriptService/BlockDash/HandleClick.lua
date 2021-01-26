@@ -196,12 +196,12 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                 delay(5, destroyParts)
             end
 
-            local keyWall = Utils.getFirstDescendantByName(sectorFolder,
-                                                           "KeyWall")
-            print('keyWall' .. ' - start');
-            print(keyWall);
-            if keyWall then
-                keyWall.CFrame = keyWall.CFrame + Vector3.new(0, 15, 0)
+            local keyWalls = Utils.getDescendantsByName(sectorFolder, "KeyWall")
+            for _, keyWall in ipairs(keyWalls) do
+                if keyWall then
+                    keyWall.CanCollide = false
+                    keyWall.Transparency = 1
+                end
             end
         end
     end
