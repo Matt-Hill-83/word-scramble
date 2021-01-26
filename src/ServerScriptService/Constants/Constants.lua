@@ -1,5 +1,5 @@
--- local isDev = true
-local isDev = false
+local isDev = true
+-- local isDev = false
 
 local devGameConfig = {
     singleIsland = true,
