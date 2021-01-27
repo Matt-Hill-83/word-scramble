@@ -154,16 +154,8 @@ local function initConveyors(miniGameState)
             local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
             if humanoid then
                 initComplete = true
-                -- for beltIndex, belt in ipairs(beltTemplates) do
-                --     local propIndex = Instance.new("StringValue", belt)
-                --     propIndex.Value = beltIndex
-                --     propIndex.Name = "Index"
-                -- end
                 local beltPlates = Utils.getDescendantsByName(conveyor,
                                                               "NewBeltPlate")
-
-                -- Populate each belt plate with a complete grid with all words
-
                 for _, beltPlate in ipairs(beltPlates) do
                     local belt = beltPlate.Belt
                     belt.BeltWeld.Enabled = false
@@ -171,7 +163,6 @@ local function initConveyors(miniGameState)
             end
         end
     end
-
     glassTop.Touched:Connect(start)
 end
 
