@@ -93,6 +93,7 @@ local function addBlockDash(sectorConfig)
     -- itself as an event to the blocks it creates.
 
     Entrance.initEntrance(sectorFolder)
+    Conveyor.initConveyors(miniGameState)
     InitLetterRack.initLetterRack(miniGameState)
     InitWord.initWords(miniGameState)
 
@@ -100,7 +101,6 @@ local function addBlockDash(sectorConfig)
     initPowerUps(miniGameState)
     DoorKey.init(miniGameState)
     LetterGrabber.initLetterGrabbers(miniGameState)
-    Conveyor.initConveyors(miniGameState)
 
     function test()
         local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
