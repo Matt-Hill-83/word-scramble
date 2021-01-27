@@ -16,6 +16,7 @@ local function initLetterRack(miniGameState)
     local numRow = miniGameState.numRow
     local numCol = miniGameState.numCol
     local words = miniGameState.words
+    local letterSpacingFactor = miniGameState.letterSpacingFactor
 
     local runTimeLetterFolder = LetterFallUtils.getRunTimeLetterFolder(
                                     miniGameState)
@@ -30,7 +31,7 @@ local function initLetterRack(miniGameState)
     local beltPlates = Utils.getDescendantsByName(conveyor, "NewBeltPlate")
 
     -- Populate each belt plate with a complete grid with all words
-    for plateIndex, beltPlate in ipairs(beltPlates) do
+    for _, beltPlate in ipairs(beltPlates) do
 
         -- TODO: fix this
         -- TODO: fix this
@@ -40,8 +41,8 @@ local function initLetterRack(miniGameState)
         local letterPositioner = Utils.getFirstDescendantByName(beltPlate,
                                                                 "LetterPositioner")
 
-        local spacingFactorX = 1.05
-        local spacingFactorZ = 1.05
+        local spacingFactorX = letterSpacingFactor
+        local spacingFactorZ = letterSpacingFactor
 
         local lettersNotInWords = LetterFallUtils.getLettersNotInWords(words)
         local letterMatrix = {}

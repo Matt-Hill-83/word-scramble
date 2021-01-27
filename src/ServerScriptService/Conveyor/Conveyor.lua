@@ -18,7 +18,7 @@ local function initbeltPlate(props)
     local newBeltPlate = beltPlateTemplate:Clone()
     newBeltPlate.Parent = conveyor
     newBeltPlate.Name = 'NewBeltPlate'
-    -- local belt = newBeltPlate.PrimaryPart
+
     local belt = newBeltPlate.Belt
     belt.BeltWeld.Enabled = false
 
