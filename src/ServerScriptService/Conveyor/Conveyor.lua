@@ -86,8 +86,8 @@ local function initbeltPlate(props)
                                 useParentNearEdge = Vector3.new(-1, -1, 0),
                                 useChildNearEdge = Vector3.new(1, -1, 0),
                                 offsetAdder = Vector3.new(
-                                    -belt2.Size.X * miniGameState.numBelts * 1.5,
-                                    0, 0)
+                                    -belt2.Size.X * miniGameState.numBelts *
+                                        1.05, 0, 0)
                             }
                         })
                     -- belt2.BeltWeld.Enabled = true
