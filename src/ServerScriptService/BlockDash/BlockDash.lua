@@ -83,7 +83,7 @@ local function addBlockDash(sectorConfig)
         for _, keyWall in ipairs(keyWalls) do
             if keyWall then
                 keyWall.CanCollide = true
-                keyWall.Transparency = 0
+                keyWall.Transparency = 0.7
             end
         end
     end
