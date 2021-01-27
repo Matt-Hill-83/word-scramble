@@ -55,6 +55,7 @@ local function addBlockDash(sectorConfig)
         letterSpacingFactor = 1.05,
         numBelts = 3,
         availWords = {},
+        beltPlateCFrames = {},
         currentLetterIndex = 1,
         foundLetters = {},
         initCompleted = false,

@@ -6,19 +6,20 @@ local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 
 local module = {}
 
-local function initbeltPlate(props)
-
+local function initBeltPlate(props)
     local beltPlateIndex = props.beltPlateIndex
     local miniGameState = props.miniGameState
+    -- local beltPlateCframe = props.beltPlateCframe
 
     local numRow = miniGameState.numRow
     local numCol = miniGameState.numCol
     local letterSpacingFactor = miniGameState.letterSpacingFactor
     local rackLetterSize = miniGameState.rackLetterSize
     local sectorFolder = miniGameState.sectorFolder
+    local beltPlateCFrames = miniGameState.beltPlateCFrames
 
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
-    local stopPlate = Utils.getFirstDescendantByName(conveyor, "Stop")
+    -- local stopPlate = Utils.getFirstDescendantByName(conveyor, "Stop")
     local beltPlateTemplate = Utils.getFirstDescendantByName(conveyor,
                                                              "BeltPlateTemplate")
 
@@ -31,19 +32,20 @@ local function initbeltPlate(props)
     local sizeX = numCol * rackLetterSize * letterSpacingFactor
     local sizeZ = numRow * rackLetterSize * letterSpacingFactor
     belt.Size = Vector3.new(sizeX, 1, sizeZ)
+    belt.CFrame = beltPlateCFrames[beltPlateIndex]
 
-    local position = Vector3.new(-belt.Size.X * beltPlateIndex * 1.05, 0, 0)
+    -- local position = Vector3.new(-belt.Size.X * beltPlateIndex * 1.05, 0, 0)
 
-    belt.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                      {
-            parent = stopPlate,
-            child = belt,
-            offsetConfig = {
-                useParentNearEdge = Vector3.new(-1, -1, 0),
-                useChildNearEdge = Vector3.new(1, -1, 0),
-                offsetAdder = position
-            }
-        })
+    -- belt.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+    --                   {
+    --         parent = stopPlate,
+    --         child = belt,
+    --         offsetConfig = {
+    --             useParentNearEdge = Vector3.new(-1, -1, 0),
+    --             useChildNearEdge = Vector3.new(1, -1, 0),
+    --             offsetAdder = position
+    --         }
+    --     })
 
     belt.BeltWeld.Enabled = true
 
@@ -104,19 +106,49 @@ end
 
 local function initConveyors(miniGameState)
     local sectorFolder = miniGameState.sectorFolder
+    local beltPlateCFrames = miniGameState.beltPlateCFrames
+    local rackLetterSize = miniGameState.rackLetterSize
+    local letterSpacingFactor = miniGameState.letterSpacingFactor
     local initComplete = false
 
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
     local numBelts = miniGameState.numBelts
     local glassTop = Utils.getFirstDescendantByName(conveyor, "GlassTop")
 
+    local stopPlate = Utils.getFirstDescendantByName(conveyor, "Stop")
+
     local function config()
+        for beltPlateIndex = 1, numBelts do
+
+            local numRow = miniGameState.numRow
+            local numCol = miniGameState.numCol
+            local sizeX = numCol * rackLetterSize * letterSpacingFactor
+            local sizeZ = numRow * rackLetterSize * letterSpacingFactor
+
+            local dummy = Instance.new("Part")
+            dummy.Size = Vector3.new(sizeX, 1, sizeZ)
+            local position = Vector3.new(-dummy.Size.X * beltPlateIndex * 1.05,
+                                         0, 0)
+
+            local beltPlateCframe = Utils3.setCFrameFromDesiredEdgeOffset(
+                                        {
+                    parent = stopPlate,
+                    child = dummy,
+                    offsetConfig = {
+                        useParentNearEdge = Vector3.new(-1, -1, 0),
+                        useChildNearEdge = Vector3.new(1, -1, 0),
+                        offsetAdder = position
+                    }
+                })
+            table.insert(beltPlateCFrames, beltPlateCframe)
+        end
+
         for beltPlateIndex = 1, numBelts do
             local beltPlateProps = {
                 beltPlateIndex = beltPlateIndex,
                 miniGameState = miniGameState
             }
-            initbeltPlate(beltPlateProps)
+            initBeltPlate(beltPlateProps)
         end
 
         local beltPlateTemplate = Utils.getFirstDescendantByName(conveyor,
