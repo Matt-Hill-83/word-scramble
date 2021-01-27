@@ -44,7 +44,6 @@ local function initbeltPlate(props)
             }
         })
 
-    -- belt.CFrame = stopPlate.CFrame + positions[beltPlateIndex]
     belt.BeltWeld.Enabled = true
 
     local letterPositioner = Utils.getFirstDescendantByName(newBeltPlate,
@@ -57,8 +56,7 @@ local function initbeltPlate(props)
             child = letterPositioner,
             offsetConfig = {
                 useParentNearEdge = Vector3.new(1, 1, 1),
-                useChildNearEdge = Vector3.new(1, -1, 1),
-                offsetAdder = position
+                useChildNearEdge = Vector3.new(1, -1, 1)
             }
         })
     letterPositioner.LPWeld.Enabled = true
