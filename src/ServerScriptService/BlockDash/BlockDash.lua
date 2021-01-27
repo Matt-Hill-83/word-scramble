@@ -50,6 +50,7 @@ local function addBlockDash(sectorConfig)
         sectorFolder = sectorFolder,
         activeWordIndex = 1,
         availLetters = {},
+        beltPlates = {},
         wordLetterSize = 16,
         rackLetterSize = 8,
         letterSpacingFactor = 1.05,

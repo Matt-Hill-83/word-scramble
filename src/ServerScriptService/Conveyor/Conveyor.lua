@@ -9,7 +9,6 @@ local module = {}
 local function initBeltPlate(props)
     local beltPlateIndex = props.beltPlateIndex
     local miniGameState = props.miniGameState
-    -- local beltPlateCframe = props.beltPlateCframe
 
     local numRow = miniGameState.numRow
     local numCol = miniGameState.numCol
@@ -17,6 +16,7 @@ local function initBeltPlate(props)
     local rackLetterSize = miniGameState.rackLetterSize
     local sectorFolder = miniGameState.sectorFolder
     local beltPlateCFrames = miniGameState.beltPlateCFrames
+    local beltPlates = miniGameState.beltPlates
 
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
     -- local stopPlate = Utils.getFirstDescendantByName(conveyor, "Stop")
@@ -26,26 +26,20 @@ local function initBeltPlate(props)
     local newBeltPlate = beltPlateTemplate:Clone()
     newBeltPlate.Parent = conveyor
     newBeltPlate.Name = 'NewBeltPlate'
+    table.insert(beltPlates, newBeltPlate)
     local belt = newBeltPlate.Belt
+
+    -- Create a property in which to store the home position of each beltplate
+    -- This will be incremented whenever a beltPlate hits the stop wall
+    local propIndex = Instance.new("IntValue", newBeltPlate)
+    propIndex.Name = "PositionIndex"
+    propIndex.Value = beltPlateIndex
 
     belt.BeltWeld.Enabled = false
     local sizeX = numCol * rackLetterSize * letterSpacingFactor
     local sizeZ = numRow * rackLetterSize * letterSpacingFactor
     belt.Size = Vector3.new(sizeX, 1, sizeZ)
     belt.CFrame = beltPlateCFrames[beltPlateIndex]
-
-    -- local position = Vector3.new(-belt.Size.X * beltPlateIndex * 1.05, 0, 0)
-
-    -- belt.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-    --                   {
-    --         parent = stopPlate,
-    --         child = belt,
-    --         offsetConfig = {
-    --             useParentNearEdge = Vector3.new(-1, -1, 0),
-    --             useChildNearEdge = Vector3.new(1, -1, 0),
-    --             offsetAdder = position
-    --         }
-    --     })
 
     belt.BeltWeld.Enabled = true
 
@@ -81,18 +75,33 @@ local function initBeltPlate(props)
                 -- In this function, I should reset the position of each belt2 plate, by assigning it a position index
                 -- and then use modulus?
                 if CS:hasTag(touched, "stop") then
-                    belt2.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                                       {
-                            parent = touched,
-                            child = belt2,
-                            offsetConfig = {
-                                useParentNearEdge = Vector3.new(-1, -1, 0),
-                                useChildNearEdge = Vector3.new(1, -1, 0),
-                                offsetAdder = Vector3.new(
-                                    -belt2.Size.X * miniGameState.numBelts *
-                                        1.05, 0, 0)
-                            }
-                        })
+
+                    local beltPlateCFrames2 = miniGameState.beltPlateCFrames
+                    local beltPlates2 = miniGameState.beltPlates
+
+                    for _, beltPlate in ipairs(beltPlates2) do
+                        local positionIndex = beltPlate.PositionIndex.Value
+                        local incrementedPosition = positionIndex - 1
+                        local index = positionIndex
+
+                        if incrementedPosition == #beltPlates2 + 1 then
+                            incrementedPosition = 1
+                        end
+
+                        if incrementedPosition == 0 then
+                            incrementedPosition = #beltPlates2
+                        end
+
+                        print('index' .. ' - start');
+                        print(index);
+                        beltPlate.PositionIndex.Value = incrementedPosition
+                        print('positionIndex' .. ' - start');
+                        print(positionIndex);
+
+                        local newCFrame = beltPlateCFrames2[incrementedPosition]
+
+                        beltPlate.Belt.CFrame = newCFrame
+                    end
                 end
                 db = true
             end
@@ -119,7 +128,6 @@ local function initConveyors(miniGameState)
 
     local function config()
         for beltPlateIndex = 1, numBelts do
-
             local numRow = miniGameState.numRow
             local numCol = miniGameState.numCol
             local sizeX = numCol * rackLetterSize * letterSpacingFactor
