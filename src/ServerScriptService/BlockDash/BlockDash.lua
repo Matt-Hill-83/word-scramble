@@ -36,9 +36,8 @@ end
 local function addBlockDash(sectorConfig)
     local words = sectorConfig.words
 
-    -- local defaultGridSize = {numRow = 5, numCol = 25}
-    local defaultGridSize = {numRow = 15, numCol = 25}
-    -- local defaultGridSize = {numRow = 26, numCol = 26}
+    local defaultGridSize = {numRow = 5, numCol = 3}
+    -- local defaultGridSize = {numRow = 15, numCol = 25}
     local gridSize = sectorConfig.gridSize or defaultGridSize
     local sectorFolder = sectorConfig.sectorFolder
 
