@@ -289,7 +289,7 @@ local function applyStyleFromTemplate(props)
         BackgroundColor3 = label.BackgroundColor3
     }
 
-    styleLetterBlock(targetLetterBlock, labelProps)
+    module.styleLetterBlock(targetLetterBlock, labelProps)
 end
 
 local function applyLetterText(props)
@@ -347,6 +347,11 @@ local function styleLetterBlock(letterBlock, labelProps)
     for i, label in ipairs(textLabels) do
         Utils.mergeTables(label, labelProps)
     end
+end
+
+local function styleImageLabelsInBlock(letterBlock, labelProps)
+    local labels = Utils.getDescendantsByName(letterBlock, "ImageLabel")
+    for i, label in ipairs(labels) do Utils.mergeTables(label, labelProps) end
 end
 
 local function styleLetterBlocksBD(props)
@@ -479,6 +484,7 @@ local function getAllLettersInWords(props)
 end
 
 module.applyLetterText = applyLetterText
+module.styleLetterBlock = styleLetterBlock
 module.colorLetterText = colorLetterText
 module.isDesiredLetter = isDesiredLetter
 module.isWordComplete = isWordComplete
@@ -497,6 +503,7 @@ module.getAvailWords = getAvailWords
 module.getRandomLetter = getRandomLetter
 module.getCharFromLetterBlock2 = getCharFromLetterBlock2
 module.getLettersNotInWords = getLettersNotInWords
+module.styleImageLabelsInBlock = styleImageLabelsInBlock
 module.getAllLettersInWords = getAllLettersInWords
 module.playWordSound = playWordSound
 module.liftLetter = liftLetter

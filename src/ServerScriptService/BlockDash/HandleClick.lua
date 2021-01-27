@@ -83,7 +83,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
     end
 
     if targetLetterBlock then
-        -- local letterBlockCFrame = clickedLetter.CFrame
+        local letterBlockCFrame = clickedLetter.CFrame
         local clickedBlockClone = clickedLetter:Clone()
         clickedBlockClone.Parent = clickedLetter.Parent
         clickedBlockClone.CanCollide = false
@@ -131,14 +131,14 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                 -- Utils.playSound(fireSound)
             end
 
-            -- local gemTemplate = Utils.getFromTemplates("GemTemplate")
-            -- local newGem = gemTemplate:Clone()
-            -- newGem.Parent = sectorFolder
-            -- newGem.Handle.CFrame = letterBlockCFrame + Vector3.new(0, 30, 0)
-            -- newGem.Handle.Anchored = false
+            local gemTemplate = Utils.getFromTemplates("GemTemplate")
+            local newGem = gemTemplate:Clone()
+            newGem.Parent = sectorFolder
+            newGem.Handle.CFrame = letterBlockCFrame + Vector3.new(0, 5, 0)
+            newGem.Handle.Anchored = false
 
-            -- local rand = Utils.genRandom(1, #Constants.gemColors)
-            -- newGem.Handle.Color = Constants.gemColors[rand]
+            local rand = Utils.genRandom(1, #Constants.gemColors)
+            newGem.Handle.Color = Constants.gemColors[rand]
 
             miniGameState.activeWord = nil
             miniGameState.foundLetters = {}
@@ -192,6 +192,8 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             local keyWalls = Utils.getDescendantsByName(sectorFolder, "KeyWall")
             for _, keyWall in ipairs(keyWalls) do
                 if keyWall then
+                    LetterFallUtils.styleImageLabelsInBlock(keyWall,
+                                                            {Visible = false})
                     keyWall.CanCollide = false
                     keyWall.Transparency = 1
                 end

@@ -79,9 +79,17 @@ local function addBlockDash(sectorConfig)
         LetterFallUtils.revertRackLetterBlocksToInit(miniGameState2)
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState2})
 
+        -- TODO: put this in DoorKey
+        -- TODO: put this in DoorKey
+        -- TODO: put this in DoorKey
+        -- TODO: put this in DoorKey
+
         local keyWalls = Utils.getDescendantsByName(sectorFolder, "KeyWall")
+
         for _, keyWall in ipairs(keyWalls) do
             if keyWall then
+                LetterFallUtils.styleImageLabelsInBlock(keyWall,
+                                                        {Visible = true})
                 keyWall.CanCollide = true
                 keyWall.Transparency = 0.7
             end
@@ -157,8 +165,6 @@ local function addBlockDash(sectorConfig)
                                 0, 0)
                         }
                     })
-
-                -- newLetterBlock.Anchored = true
                 newLetterBlock.Parent = newStick
             end
         end
