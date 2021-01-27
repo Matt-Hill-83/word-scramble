@@ -38,7 +38,7 @@ local function initbeltPlate(props)
             parent = stopPlate,
             child = belt,
             offsetConfig = {
-                useParentNearEdge = Vector3.new(-1, 1, 0),
+                useParentNearEdge = Vector3.new(-1, -1, 0),
                 useChildNearEdge = Vector3.new(1, -1, 0),
                 offsetAdder = position
             }
@@ -49,6 +49,8 @@ local function initbeltPlate(props)
     local letterPositioner = Utils.getFirstDescendantByName(newBeltPlate,
                                                             "LetterPositioner")
     letterPositioner.LPWeld.Enabled = false
+    letterPositioner.Size = Vector3.new(rackLetterSize, rackLetterSize,
+                                        rackLetterSize)
 
     letterPositioner.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                   {
@@ -64,32 +66,39 @@ local function initbeltPlate(props)
     local pc = belt.PrismaticConstraint
     pc.Enabled = true
 
-    local db = true
-    local function jumpBack(touched)
-        if db == true then
-            db = false
+    local function jumpBack(belt2)
+        local db = true
 
-            -- In this function, I should reset the position of each belt plate, by assigning it a position index
-            -- and then use modulus?
-            if CS:hasTag(touched, "stop") then
-                belt.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                                  {
-                        parent = touched,
-                        child = belt,
-                        offsetConfig = {
-                            useParentNearEdge = Vector3.new(1, 0, 0),
-                            useChildNearEdge = Vector3.new(1, 0, 0),
-                            offsetAdder = Vector3.new(
-                                -belt.Size.X * miniGameState.numBelts * 1.05, 0,
-                                0)
-                        }
-                    })
+        -- Enclose this so is acts on the correct belt
+        local function closure(touched)
+            if db == true then
+                db = false
+
+                -- In this function, I should reset the position of each belt2 plate, by assigning it a position index
+                -- and then use modulus?
+                if CS:hasTag(touched, "stop") then
+                    -- belt2.BeltWeld.Enabled = false
+                    belt2.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                                       {
+                            parent = touched,
+                            child = belt2,
+                            offsetConfig = {
+                                useParentNearEdge = Vector3.new(-1, -1, 0),
+                                useChildNearEdge = Vector3.new(1, -1, 0),
+                                offsetAdder = Vector3.new(
+                                    -belt2.Size.X * miniGameState.numBelts * 1.5,
+                                    0, 0)
+                            }
+                        })
+                    -- belt2.BeltWeld.Enabled = true
+                end
+                db = true
             end
-            db = true
-        end
 
+        end
+        return closure
     end
-    belt.Touched:Connect(jumpBack)
+    belt.Touched:Connect(jumpBack(belt))
 
 end
 

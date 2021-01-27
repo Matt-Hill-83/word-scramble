@@ -8,8 +8,6 @@ local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 
 local module = {}
 
-local function createLetterPlate(miniGameState) end
-
 local function initLetterRack(miniGameState)
     local rackLetterBlockObjs = miniGameState.rackLetterBlockObjs
     local sectorFolder = miniGameState.sectorFolder
@@ -33,11 +31,6 @@ local function initLetterRack(miniGameState)
 
     -- Populate each belt plate with a complete grid with all words
     for _, beltPlate in ipairs(beltPlates) do
-
-        -- TODO: fix this
-        -- TODO: fix this
-        -- TODO: fix this
-        -- TODO: fix this
         local beltTemplate = Utils.getFirstDescendantByName(beltPlate, "Belt")
         local letterPositioner = Utils.getFirstDescendantByName(beltPlate,
                                                                 "LetterPositioner")
@@ -174,7 +167,7 @@ local function initLetterRack(miniGameState)
 
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
 
-        -- letterPositioner:Destroy()
+        letterPositioner:Destroy()
     end
 end
 
