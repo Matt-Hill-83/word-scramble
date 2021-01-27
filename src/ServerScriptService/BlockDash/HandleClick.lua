@@ -2,6 +2,7 @@ local Sss = game:GetService("ServerScriptService")
 
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
+local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 
 local Constants = require(Sss.Source.Constants.Constants)
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
@@ -83,21 +84,23 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
     if targetLetterBlock then
         -- local letterBlockCFrame = clickedLetter.CFrame
-        -- local clickedBlockClone = clickedLetter:Clone()
-        -- clickedBlockClone.Parent = clickedLetter.Parent
-        -- clickedBlockClone.CanCollide = false
+        local clickedBlockClone = clickedLetter:Clone()
+        clickedBlockClone.Parent = clickedLetter.Parent
+        clickedBlockClone.CanCollide = false
+
+        Utils.enableChildWelds({part = clickedBlockClone, enabled = false})
 
         Utils.hideItemAndChildren({item = clickedLetter, hide = true})
         clickedLetter.IsHidden.Value = true
         clickedLetter.IsFound.Value = true
-        -- Utils3.tween({
-        --     part = clickedBlockClone,
-        --     endPosition = targetLetterBlock.Position,
-        --     time = 0.6,
-        --     anchor = true
-        -- })
+        Utils3.tween({
+            part = clickedBlockClone,
+            endPosition = targetLetterBlock.Position,
+            time = 0.6,
+            anchor = true
+        })
 
-        -- clickedBlockClone.CFrame = targetLetterBlock.CFrame
+        clickedBlockClone.CFrame = targetLetterBlock.CFrame
         LetterFallUtils.applyStyleFromTemplateBD(
             {
                 targetLetterBlock = targetLetterBlock,
@@ -112,7 +115,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                          LetterFallUtils.getCharFromLetterBlock2(clickedLetter))
         end
 
-        -- clickedBlockClone:Destroy()
+        clickedBlockClone:Destroy()
 
         local currentWord = table.concat(miniGameState.foundLetters, "")
         local wordComplete = table.find(words, currentWord)
