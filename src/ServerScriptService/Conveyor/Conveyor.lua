@@ -19,7 +19,6 @@ local function initBeltPlate(props)
     local beltPlates = miniGameState.beltPlates
 
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
-    -- local stopPlate = Utils.getFirstDescendantByName(conveyor, "Stop")
     local beltPlateTemplate = Utils.getFirstDescendantByName(conveyor,
                                                              "BeltPlateTemplate")
 
@@ -64,42 +63,27 @@ local function initBeltPlate(props)
     pc.Enabled = true
     pc.Speed = 30
 
-    local function jumpBack(belt2)
+    local function jumpBack()
         local db = true
 
         -- Enclose this so is acts on the correct belt
+        -- closure no longer needed
         local function closure(touched)
             if db == true then
                 db = false
-
-                -- In this function, I should reset the position of each belt2 plate, by assigning it a position index
-                -- and then use modulus?
                 if CS:hasTag(touched, "stop") then
-
-                    local beltPlateCFrames2 = miniGameState.beltPlateCFrames
-                    local beltPlates2 = miniGameState.beltPlates
-
-                    for _, beltPlate in ipairs(beltPlates2) do
+                    for _, beltPlate in ipairs(beltPlates) do
                         local positionIndex = beltPlate.PositionIndex.Value
                         local incrementedPosition = positionIndex - 1
-                        local index = positionIndex
-
-                        if incrementedPosition == #beltPlates2 + 1 then
+                        if incrementedPosition == #beltPlates + 1 then
                             incrementedPosition = 1
                         end
-
                         if incrementedPosition == 0 then
-                            incrementedPosition = #beltPlates2
+                            incrementedPosition = #beltPlates
                         end
 
-                        print('index' .. ' - start');
-                        print(index);
                         beltPlate.PositionIndex.Value = incrementedPosition
-                        print('positionIndex' .. ' - start');
-                        print(positionIndex);
-
-                        local newCFrame = beltPlateCFrames2[incrementedPosition]
-
+                        local newCFrame = beltPlateCFrames[incrementedPosition]
                         beltPlate.Belt.CFrame = newCFrame
                     end
                 end
@@ -109,7 +93,7 @@ local function initBeltPlate(props)
         end
         return closure
     end
-    belt.Touched:Connect(jumpBack(belt))
+    belt.Touched:Connect(jumpBack())
 
 end
 
