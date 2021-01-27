@@ -8,10 +8,6 @@ local module = {}
 
 local function initbeltPlate(props)
 
-    print('initbeltPlate');
-    print('initbeltPlate');
-    print('initbeltPlate');
-    print('initbeltPlate');
     local beltPlateIndex = props.beltPlateIndex
     local miniGameState = props.miniGameState
 
@@ -144,10 +140,6 @@ local function initConveyors(miniGameState)
 
                 -- Populate each belt plate with a complete grid with all words
 
-                print('break welds');
-                print('break welds');
-                print('break welds');
-                print('break welds');
                 for _, beltPlate in ipairs(beltPlates) do
                     local belt = beltPlate.Belt
                     belt.BeltWeld.Enabled = false
