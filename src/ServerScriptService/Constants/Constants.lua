@@ -2,8 +2,8 @@ local isDev = true
 -- local isDev = false
 
 local devGameConfig = {
-    singleIsland = false,
-    -- singleIsland = true,
+    -- singleIsland = false,
+    singleIsland = true,
     transparency = false,
     -- transparency = true,
     fastWalkSpeed = 50,

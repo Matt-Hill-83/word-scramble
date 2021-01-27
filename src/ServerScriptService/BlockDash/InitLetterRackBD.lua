@@ -17,6 +17,7 @@ local function initLetterRack(miniGameState)
     local numCol = miniGameState.numCol
     local words = miniGameState.words
     local letterSpacingFactor = miniGameState.letterSpacingFactor
+    local rackLetterSize = miniGameState.rackLetterSize
 
     local runTimeLetterFolder = LetterFallUtils.getRunTimeLetterFolder(
                                     miniGameState)
@@ -83,7 +84,8 @@ local function initLetterRack(miniGameState)
         for colIndex = 1, numCol do
             for rowIndex = 1, numRow do
                 local newLetterBlock = letterBlockTemplate:Clone()
-                newLetterBlock.Size = letterPositioner.Size
+                newLetterBlock.Size = Vector3.new(rackLetterSize,
+                                                  rackLetterSize, rackLetterSize)
 
                 local letterId = "ID--R" .. rowIndex .. "C" .. colIndex
                 local char = letterMatrix[rowIndex][colIndex]
@@ -117,8 +119,8 @@ local function initLetterRack(miniGameState)
                         parent = letterPositioner,
                         child = newLetterBlock,
                         offsetConfig = {
-                            useParentNearEdge = Vector3.new(-1, -1, -1),
-                            useChildNearEdge = Vector3.new(-1, -1, -1),
+                            useParentNearEdge = Vector3.new(1, -1, 1),
+                            useChildNearEdge = Vector3.new(1, -1, 1),
                             offsetAdder = Vector3.new(letterPosX, 0, letterPosZ)
                         }
                     })
@@ -172,7 +174,7 @@ local function initLetterRack(miniGameState)
 
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
 
-        letterPositioner:Destroy()
+        -- letterPositioner:Destroy()
     end
 end
 

@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-911.848389</X>
-					<Y>255.272217</Y>
-					<Z>-238.833755</Z>
-					<R00>-0.230928451</R00>
-					<R01>-0.2127399</R01>
-					<R02>0.949428201</R02>
-					<R10>-3.72528985e-09</R10>
-					<R11>0.975803435</R11>
-					<R12>0.218649849</R12>
-					<R20>-0.972970724</R20>
-					<R21>0.0504924655</R21>
-					<R22>-0.225340798</R22>
+					<X>-965.745789</X>
+					<Y>255.532471</Y>
+					<Z>-45.2299271</Z>
+					<R00>-0.205651358</R00>
+					<R01>-0.0211446881</R01>
+					<R02>0.978396952</R02>
+					<R10>-0</R10>
+					<R11>0.999766707</R11>
+					<R12>0.0216065198</R12>
+					<R20>-0.978625357</R20>
+					<R21>0.00444341032</R21>
+					<R22>-0.205603361</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-913.747253</X>
-					<Y>254.834915</Y>
-					<Z>-238.383072</Z>
+					<X>-967.702576</X>
+					<Y>255.489258</Y>
+					<Z>-44.8187218</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -42166,45 +42166,6 @@ end)]]></ProtectedString>
 										<BinaryString name="Tags"></BinaryString>
 									</Properties>
 								</Item>
-								<Item class="Weld" referent="RBXed3149fda49d498e81d8b7a9be432d79">
-									<Properties>
-										<BinaryString name="AttributesSerialize"></BinaryString>
-										<CoordinateFrame name="C0">
-											<X>0</X>
-											<Y>-0.999984741</Y>
-											<Z>0</Z>
-											<R00>1</R00>
-											<R01>0</R01>
-											<R02>7.80972509e-14</R02>
-											<R10>-3.50345175e-09</R10>
-											<R11>0</R11>
-											<R12>-1</R12>
-											<R20>-4.39831638e-09</R20>
-											<R21>1</R21>
-											<R22>9.20863386e-12</R22>
-										</CoordinateFrame>
-										<CoordinateFrame name="C1">
-											<X>-111.249756</X>
-											<Y>3.99874878</Y>
-											<Z>-72.5046539</Z>
-											<R00>1</R00>
-											<R01>5.18399611e-06</R01>
-											<R02>-6.61540753e-07</R02>
-											<R10>-6.61538081e-07</R10>
-											<R11>5.76944785e-07</R11>
-											<R12>-1</R12>
-											<R20>-5.18397246e-06</R20>
-											<R21>1</R21>
-											<R22>5.76983041e-07</R22>
-										</CoordinateFrame>
-										<bool name="Enabled">true</bool>
-										<string name="Name">Weld</string>
-										<Ref name="Part0">RBX43954b43e34642bfb458301fb3df5969</Ref>
-										<Ref name="Part1">RBX394687e5865f476d83e288245d6f79ab</Ref>
-										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags"></BinaryString>
-									</Properties>
-								</Item>
 								<Item class="Weld" referent="RBXfd9cf8635df942ec93d12a16583edce2">
 									<Properties>
 										<BinaryString name="AttributesSerialize"></BinaryString>
@@ -42346,6 +42307,45 @@ end)]]></ProtectedString>
 											<int name="ZIndex">1</int>
 										</Properties>
 									</Item>
+								</Item>
+								<Item class="Weld" referent="RBXed3149fda49d498e81d8b7a9be432d79">
+									<Properties>
+										<BinaryString name="AttributesSerialize"></BinaryString>
+										<CoordinateFrame name="C0">
+											<X>0</X>
+											<Y>-0.999984741</Y>
+											<Z>0</Z>
+											<R00>1</R00>
+											<R01>0</R01>
+											<R02>7.80972509e-14</R02>
+											<R10>-3.50345175e-09</R10>
+											<R11>0</R11>
+											<R12>-1</R12>
+											<R20>-4.39831638e-09</R20>
+											<R21>1</R21>
+											<R22>9.20863386e-12</R22>
+										</CoordinateFrame>
+										<CoordinateFrame name="C1">
+											<X>-111.249756</X>
+											<Y>3.99874878</Y>
+											<Z>-72.5046539</Z>
+											<R00>1</R00>
+											<R01>5.18399611e-06</R01>
+											<R02>-6.61540753e-07</R02>
+											<R10>-6.61538081e-07</R10>
+											<R11>5.76944785e-07</R11>
+											<R12>-1</R12>
+											<R20>-5.18397246e-06</R20>
+											<R21>1</R21>
+											<R22>5.76983041e-07</R22>
+										</CoordinateFrame>
+										<bool name="Enabled">true</bool>
+										<string name="Name">Weld</string>
+										<Ref name="Part0">RBX43954b43e34642bfb458301fb3df5969</Ref>
+										<Ref name="Part1">RBX394687e5865f476d83e288245d6f79ab</Ref>
+										<int64 name="SourceAssetId">-1</int64>
+										<BinaryString name="Tags"></BinaryString>
+									</Properties>
 								</Item>
 							</Item>
 							<Item class="Part" referent="RBXf542a5e6e3114e53b923b4600cea36cb">
@@ -43243,45 +43243,6 @@ end)]]></ProtectedString>
 										<BinaryString name="Tags"></BinaryString>
 									</Properties>
 								</Item>
-								<Item class="Weld" referent="RBXe8fd766cb9304530b78477ccc9c698f5">
-									<Properties>
-										<BinaryString name="AttributesSerialize"></BinaryString>
-										<CoordinateFrame name="C0">
-											<X>0</X>
-											<Y>-0.999984741</Y>
-											<Z>0</Z>
-											<R00>1</R00>
-											<R01>0</R01>
-											<R02>-6.80358547e-14</R02>
-											<R10>-7.56720681e-07</R10>
-											<R11>0</R11>
-											<R12>-1</R12>
-											<R20>-5.69920849e-06</R20>
-											<R21>1</R21>
-											<R22>6.29495162e-07</R22>
-										</CoordinateFrame>
-										<CoordinateFrame name="C1">
-											<X>-111.254639</X>
-											<Y>3.99847412</Y>
-											<Z>72.495163</Z>
-											<R00>1</R00>
-											<R01>5.18837624e-06</R01>
-											<R02>-6.65045093e-07</R02>
-											<R10>-1.41125088e-06</R10>
-											<R11>5.76948196e-07</R11>
-											<R12>-1</R12>
-											<R20>-1.0874397e-05</R20>
-											<R21>1</R21>
-											<R22>1.20646553e-06</R22>
-										</CoordinateFrame>
-										<bool name="Enabled">true</bool>
-										<string name="Name">Weld</string>
-										<Ref name="Part0">RBX8cec2aa1b1d94694914cd8becea8cb0a</Ref>
-										<Ref name="Part1">RBX394687e5865f476d83e288245d6f79ab</Ref>
-										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags"></BinaryString>
-									</Properties>
-								</Item>
 								<Item class="SurfaceGui" referent="RBX51396bd44c9247299117fe66bd2e3ff2">
 									<Properties>
 										<bool name="Active">true</bool>
@@ -43384,6 +43345,45 @@ end)]]></ProtectedString>
 											<int name="ZIndex">1</int>
 										</Properties>
 									</Item>
+								</Item>
+								<Item class="Weld" referent="RBXe8fd766cb9304530b78477ccc9c698f5">
+									<Properties>
+										<BinaryString name="AttributesSerialize"></BinaryString>
+										<CoordinateFrame name="C0">
+											<X>0</X>
+											<Y>-0.999984741</Y>
+											<Z>0</Z>
+											<R00>1</R00>
+											<R01>0</R01>
+											<R02>-6.80358547e-14</R02>
+											<R10>-7.56720681e-07</R10>
+											<R11>0</R11>
+											<R12>-1</R12>
+											<R20>-5.69920849e-06</R20>
+											<R21>1</R21>
+											<R22>6.29495162e-07</R22>
+										</CoordinateFrame>
+										<CoordinateFrame name="C1">
+											<X>-111.254639</X>
+											<Y>3.99847412</Y>
+											<Z>72.495163</Z>
+											<R00>1</R00>
+											<R01>5.18837624e-06</R01>
+											<R02>-6.65045093e-07</R02>
+											<R10>-1.41125088e-06</R10>
+											<R11>5.76948196e-07</R11>
+											<R12>-1</R12>
+											<R20>-1.0874397e-05</R20>
+											<R21>1</R21>
+											<R22>1.20646553e-06</R22>
+										</CoordinateFrame>
+										<bool name="Enabled">true</bool>
+										<string name="Name">Weld</string>
+										<Ref name="Part0">RBX8cec2aa1b1d94694914cd8becea8cb0a</Ref>
+										<Ref name="Part1">RBX394687e5865f476d83e288245d6f79ab</Ref>
+										<int64 name="SourceAssetId">-1</int64>
+										<BinaryString name="Tags"></BinaryString>
+									</Properties>
 								</Item>
 							</Item>
 							<Item class="Part" referent="RBXb9e9a603243940d783f2a028766ce1ab">
@@ -43767,18 +43767,18 @@ end)]]></ProtectedString>
 										<token name="BottomSurface">4</token>
 										<token name="BottomSurfaceInput">0</token>
 										<CoordinateFrame name="CFrame">
-											<X>-1094.50623</X>
-											<Y>180.77124</Y>
-											<Z>38.3039398</Z>
-											<R00>-4.0554045e-05</R00>
-											<R01>-1.48648687e-05</R01>
+											<X>-1094.50732</X>
+											<Y>180.770935</Y>
+											<Z>38.305809</Z>
+											<R00>-4.1000003e-05</R00>
+											<R01>-1.41881173e-10</R01>
 											<R02>0.999982119</R02>
-											<R10>-2.25199528e-05</R10>
+											<R10>-2.20003712e-05</R10>
 											<R11>1</R11>
-											<R12>1.48634799e-05</R12>
+											<R12>-1.05956133e-09</R12>
 											<R20>-0.999982119</R20>
-											<R21>-2.24491687e-05</R21>
-											<R22>-4.01332582e-05</R22>
+											<R21>-2.19999711e-05</R21>
+											<R22>-4.10001667e-05</R22>
 										</CoordinateFrame>
 										<bool name="CanCollide">true</bool>
 										<bool name="CanTouch">true</bool>
@@ -43812,7 +43812,7 @@ end)]]></ProtectedString>
 											<Z>0</Z>
 										</Vector3>
 										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags">VHJhbnNwYXJlbnQ=</BinaryString>
+										<BinaryString name="Tags"></BinaryString>
 										<float name="TopParamA">-0.5</float>
 										<float name="TopParamB">0.5</float>
 										<token name="TopSurface">3</token>
@@ -43934,42 +43934,29 @@ end)]]></ProtectedString>
 											</Properties>
 										</Item>
 									</Item>
-									<Item class="Weld" referent="RBX30589c6b40f545219bc7fad4d38d67a9">
+									<Item class="WeldConstraint" referent="RBX5600c7ea07ca43e6887b5bb08b7f2366">
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-4</Y>
-												<Z>0</Z>
+											<CoordinateFrame name="CFrame0">
+												<X>-100.742859</X>
+												<Y>-4.5015564</Y>
+												<Z>-58.4882812</Z>
 												<R00>1</R00>
-												<R01>0</R01>
-												<R02>-6.5236011e-13</R02>
-												<R10>-6.10737345e-08</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>-4.10197572e-07</R20>
-												<R21>1</R21>
-												<R22>4.01541911e-10</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>100.744263</X>
-												<Y>0.499328613</Y>
-												<Z>58.4902802</Z>
-												<R00>1</R00>
-												<R01>-8.56005045e-06</R01>
-												<R02>-2.10982053e-05</R02>
-												<R10>-2.11068436e-05</R10>
-												<R11>6.94074151e-06</R11>
-												<R12>-1</R12>
-												<R20>8.54910104e-06</R20>
-												<R21>1</R21>
-												<R22>6.94061373e-06</R22>
+												<R01>-2.05872584e-05</R01>
+												<R02>8.10313941e-06</R02>
+												<R10>2.05871947e-05</R10>
+												<R11>1</R11>
+												<R12>7.9243564e-06</R12>
+												<R20>-8.10330221e-06</R20>
+												<R21>-7.92418996e-06</R21>
+												<R22>1</R22>
 											</CoordinateFrame>
 											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBXf269230fce6349a68e37a00d2620b68e</Ref>
-											<Ref name="Part1">RBX243559ca7c50472692bf8c5e5eb48c62</Ref>
+											<string name="Name">LPWeld</string>
+											<Ref name="Part0Internal">RBXf269230fce6349a68e37a00d2620b68e</Ref>
+											<Ref name="Part1Internal">RBX243559ca7c50472692bf8c5e5eb48c62</Ref>
 											<int64 name="SourceAssetId">-1</int64>
+											<int name="State">3</int>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
@@ -44151,128 +44138,6 @@ end)]]></ProtectedString>
 											<float name="UpperLimit">5</float>
 											<float name="Velocity">0</float>
 											<bool name="Visible">false</bool>
-										</Properties>
-									</Item>
-								</Item>
-								<Item class="Part" referent="RBX450cb91eb4154950943a8000bfb52336">
-									<Properties>
-										<bool name="Anchored">false</bool>
-										<BinaryString name="AttributesSerialize"></BinaryString>
-										<float name="BackParamA">-0.5</float>
-										<float name="BackParamB">0.5</float>
-										<token name="BackSurface">0</token>
-										<token name="BackSurfaceInput">0</token>
-										<float name="BottomParamA">-0.5</float>
-										<float name="BottomParamB">0.5</float>
-										<token name="BottomSurface">0</token>
-										<token name="BottomSurfaceInput">0</token>
-										<CoordinateFrame name="CFrame">
-											<X>-1152.9884</X>
-											<Y>179.521591</Y>
-											<Z>139.020065</Z>
-											<R00>-4.95449203e-05</R00>
-											<R01>-7.92345963e-06</R01>
-											<R02>0.999982119</R02>
-											<R10>-1.50082633e-06</R10>
-											<R11>1</R11>
-											<R12>7.92322771e-06</R12>
-											<R20>-0.999982119</R20>
-											<R21>-1.50039784e-06</R21>
-											<R22>-4.9545095e-05</R22>
-										</CoordinateFrame>
-										<bool name="CanCollide">true</bool>
-										<bool name="CanTouch">true</bool>
-										<bool name="CastShadow">true</bool>
-										<int name="CollisionGroupId">0</int>
-										<Color3uint8 name="Color3uint8">4291624908</Color3uint8>
-										<PhysicalProperties name="CustomPhysicalProperties">
-											<CustomPhysics>true</CustomPhysics>
-											<Density>0.00999999978</Density>
-											<Friction>0.300000012</Friction>
-											<Elasticity>0.5</Elasticity>
-											<FrictionWeight>1</FrictionWeight>
-											<ElasticityWeight>1</ElasticityWeight>
-										</PhysicalProperties>
-										<float name="FrontParamA">-0.5</float>
-										<float name="FrontParamB">0.5</float>
-										<token name="FrontSurface">0</token>
-										<token name="FrontSurfaceInput">0</token>
-										<float name="LeftParamA">-0.5</float>
-										<float name="LeftParamB">0.5</float>
-										<token name="LeftSurface">0</token>
-										<token name="LeftSurfaceInput">0</token>
-										<bool name="Locked">false</bool>
-										<bool name="Massless">false</bool>
-										<token name="Material">256</token>
-										<string name="Name">GlassGlate</string>
-										<float name="Reflectance">0</float>
-										<float name="RightParamA">-0.5</float>
-										<float name="RightParamB">0.5</float>
-										<token name="RightSurface">0</token>
-										<token name="RightSurfaceInput">0</token>
-										<int name="RootPriority">0</int>
-										<Vector3 name="RotVelocity">
-											<X>0</X>
-											<Y>0</Y>
-											<Z>0</Z>
-										</Vector3>
-										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags">VHJhbnNwYXJlbnQ=</BinaryString>
-										<float name="TopParamA">-0.5</float>
-										<float name="TopParamB">0.5</float>
-										<token name="TopSurface">0</token>
-										<token name="TopSurfaceInput">0</token>
-										<float name="Transparency">0</float>
-										<Vector3 name="Velocity">
-											<X>0</X>
-											<Y>0</Y>
-											<Z>0</Z>
-										</Vector3>
-										<token name="formFactorRaw">1</token>
-										<token name="shape">1</token>
-										<Vector3 name="size">
-											<X>178</X>
-											<Y>5.5</Y>
-											<Z>90</Z>
-										</Vector3>
-									</Properties>
-									<Item class="Weld" referent="RBX53e1d0c4bb154746a982da79577b5356">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>0</X>
-												<Y>-2.75</Y>
-												<Z>9.53674316e-07</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>-3.58324481e-14</R02>
-												<R10>3.58324481e-14</R10>
-												<R11>0</R11>
-												<R12>-1</R12>
-												<R20>0</R20>
-												<R21>1</R21>
-												<R22>0</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>0.029296875</X>
-												<Y>0.5</Y>
-												<Z>0.00213527679</Z>
-												<R00>1</R00>
-												<R01>4.41767668e-07</R01>
-												<R02>-8.76456809e-08</R02>
-												<R10>-8.76456809e-08</R10>
-												<R11>1.09367772e-10</R11>
-												<R12>-1</R12>
-												<R20>-4.41767668e-07</R20>
-												<R21>1</R21>
-												<R22>1.09406491e-10</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX450cb91eb4154950943a8000bfb52336</Ref>
-											<Ref name="Part1">RBX243559ca7c50472692bf8c5e5eb48c62</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
 								</Item>
@@ -62377,7 +62242,7 @@ end
 local function addBlockDash(sectorConfig)
     local words = sectorConfig.words
 
-    local defaultGridSize = {numRow = 5, numCol = 3}
+    local defaultGridSize = {numRow = 5, numCol = 6}
     -- local defaultGridSize = {numRow = 15, numCol = 25}
     local gridSize = sectorConfig.gridSize or defaultGridSize
     local sectorFolder = sectorConfig.sectorFolder
@@ -62391,15 +62256,14 @@ local function addBlockDash(sectorConfig)
         activeWordIndex = 1,
         availLetters = {},
         wordLetterSize = 16,
+        rackLetterSize = 4,
+        letterSpacingFactor = 1.05,
+        numBelts = 2,
         availWords = {},
         currentLetterIndex = 1,
         foundLetters = {},
         initCompleted = false,
         renderedWords = {},
-        activeLetterPosition = {
-            row = math.floor(numRow / 2),
-            col = math.floor(numCol / 2)
-        },
         rackLetterBlockObjs = {},
         numRow = numRow,
         numCol = numCol,
@@ -62434,6 +62298,7 @@ local function addBlockDash(sectorConfig)
     -- itself as an event to the blocks it creates.
 
     Entrance.initEntrance(sectorFolder)
+    Conveyor.initConveyors(miniGameState)
     InitLetterRack.initLetterRack(miniGameState)
     InitWord.initWords(miniGameState)
 
@@ -62441,7 +62306,6 @@ local function addBlockDash(sectorConfig)
     initPowerUps(miniGameState)
     DoorKey.init(miniGameState)
     LetterGrabber.initLetterGrabbers(miniGameState)
-    Conveyor.initConveyors(miniGameState)
 
     function test()
         local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
@@ -62878,6 +62742,8 @@ local function initLetterRack(miniGameState)
     local numRow = miniGameState.numRow
     local numCol = miniGameState.numCol
     local words = miniGameState.words
+    local letterSpacingFactor = miniGameState.letterSpacingFactor
+    local rackLetterSize = miniGameState.rackLetterSize
 
     local runTimeLetterFolder = LetterFallUtils.getRunTimeLetterFolder(
                                     miniGameState)
@@ -62892,7 +62758,7 @@ local function initLetterRack(miniGameState)
     local beltPlates = Utils.getDescendantsByName(conveyor, "NewBeltPlate")
 
     -- Populate each belt plate with a complete grid with all words
-    for plateIndex, beltPlate in ipairs(beltPlates) do
+    for _, beltPlate in ipairs(beltPlates) do
 
         -- TODO: fix this
         -- TODO: fix this
@@ -62902,8 +62768,8 @@ local function initLetterRack(miniGameState)
         local letterPositioner = Utils.getFirstDescendantByName(beltPlate,
                                                                 "LetterPositioner")
 
-        local spacingFactorX = 1.05
-        local spacingFactorZ = 1.05
+        local spacingFactorX = letterSpacingFactor
+        local spacingFactorZ = letterSpacingFactor
 
         local lettersNotInWords = LetterFallUtils.getLettersNotInWords(words)
         local letterMatrix = {}
@@ -62944,7 +62810,9 @@ local function initLetterRack(miniGameState)
         for colIndex = 1, numCol do
             for rowIndex = 1, numRow do
                 local newLetterBlock = letterBlockTemplate:Clone()
-                newLetterBlock.Size = letterPositioner.Size
+                newLetterBlock.Size = Vector3.new(rackLetterSize,
+                                                  rackLetterSize, rackLetterSize)
+                -- newLetterBlock.Size = letterPositioner.Size
 
                 local letterId = "ID--R" .. rowIndex .. "C" .. colIndex
                 local char = letterMatrix[rowIndex][colIndex]
@@ -66990,32 +66858,61 @@ local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 local module = {}
 
 local function initbeltPlate(props)
-    print('initbeltPlate-----------------------------------------------------');
-    print('initbeltPlate-----------------------------------------------------');
-    print('initbeltPlate-----------------------------------------------------');
-    print('initbeltPlate-----------------------------------------------------');
-    local numBelts = props.numBelts
+    -- local numBelts = props.numBelts
     local beltPlateIndex = props.beltPlateIndex
     local sectorFolder = props.sectorFolder
+    local beltPlateTemplate = props.beltPlateTemplate
+    local miniGameState = props.miniGameState
 
-    local positions = {
-        Vector3.new(0, 0, 0), --
-        Vector3.new(10, 10, 10) --
-    }
+    local numRow = miniGameState.numRow
+    local numCol = miniGameState.numCol
+    local letterSpacingFactor = miniGameState.letterSpacingFactor
+    local rackLetterSize = miniGameState.rackLetterSize
 
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
-    local beltPlateTemplate = Utils.getFirstDescendantByName(conveyor,
-                                                             "BeltPlateTemplate")
     local stopPlate = Utils.getFirstDescendantByName(conveyor, "Stop")
 
     local newBeltPlate = beltPlateTemplate:Clone()
-    newBeltPlate.Parent = sectorFolder
-    newBeltPlate.PrimaryPart.CFrame = stopPlate.CFrame +
-                                          positions[beltPlateIndex]
+    newBeltPlate.Parent = conveyor
     newBeltPlate.Name = 'NewBeltPlate'
-
     local belt = newBeltPlate.Belt
     belt.BeltWeld.Enabled = false
+
+    local sizeX = numCol * rackLetterSize * letterSpacingFactor
+    local sizeZ = numRow * rackLetterSize * letterSpacingFactor
+    belt.Size = Vector3.new(sizeX, 3, sizeZ)
+
+    local position = Vector3.new(-belt.Size.X * beltPlateIndex * 1.05 * 4, 0, 0)
+
+    belt.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                      {
+            parent = stopPlate,
+            child = belt,
+            offsetConfig = {
+                useParentNearEdge = Vector3.new(1, -1, 0),
+                useChildNearEdge = Vector3.new(-1, 1, 0),
+                offsetAdder = position
+            }
+        })
+
+    -- belt.CFrame = stopPlate.CFrame + positions[beltPlateIndex]
+    belt.BeltWeld.Enabled = true
+
+    local letterPositioner = Utils.getFirstDescendantByName(newBeltPlate,
+                                                            "LetterPositioner")
+    letterPositioner.LPWeld.Enabled = false
+
+    letterPositioner.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                                  {
+            parent = belt,
+            child = letterPositioner,
+            offsetConfig = {
+                useParentNearEdge = Vector3.new(1, 1, 1),
+                useChildNearEdge = Vector3.new(-1, -1, -1),
+                offsetAdder = position
+            }
+        })
+    letterPositioner.LPWeld.Enabled = true
 
     local pc = belt.PrismaticConstraint
     pc.Enabled = true
@@ -67036,7 +66933,8 @@ local function initbeltPlate(props)
                             useParentNearEdge = Vector3.new(1, 0, 0),
                             useChildNearEdge = Vector3.new(1, 0, 0),
                             offsetAdder = Vector3.new(
-                                -belt.Size.X * numBelts * 1.05, 0, 0)
+                                -belt.Size.X * miniGameState.numBelts * 1.05 *
+                                    10, 0, 0)
                         }
                     })
             end
@@ -67045,7 +66943,7 @@ local function initbeltPlate(props)
 
     end
     belt.Touched:Connect(jumpBack)
-    -- beltPlateTemplate:Destroy()
+
 end
 
 local function initConveyors(miniGameState)
@@ -67054,10 +66952,26 @@ local function initConveyors(miniGameState)
 
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
 
-    -- local beltTemplates = Utils.getDescendantsByName(conveyor, "BeltTemplate")
-    local numBelts = 2
-    -- local numBelts = #beltTemplates
+    local numBelts = miniGameState.numBelts
     local glassTop = Utils.getFirstDescendantByName(conveyor, "GlassTop")
+
+    local beltPlateTemplate = Utils.getFirstDescendantByName(conveyor,
+                                                             "BeltPlateTemplate")
+
+    local function config()
+        for beltPlateIndex = 1, numBelts do
+            local beltPlateProps = {
+                numBelts = numBelts,
+                beltPlateIndex = beltPlateIndex,
+                sectorFolder = sectorFolder,
+                beltPlateTemplate = beltPlateTemplate,
+                miniGameState = miniGameState
+            }
+            module.initbeltPlate(beltPlateProps)
+        end
+        beltPlateTemplate:Destroy()
+    end
+    config()
 
     local function start(otherPart)
         if initComplete == false then
@@ -67069,21 +66983,23 @@ local function initConveyors(miniGameState)
                 --     propIndex.Value = beltIndex
                 --     propIndex.Name = "Index"
                 -- end
-                for beltPlateIndex = 1, numBelts do
-                    local beltPlateProps =
-                        {
-                            numBelts = numBelts,
-                            beltPlateIndex = beltPlateIndex,
-                            sectorFolder = sectorFolder
-                        }
-                    module.initbeltPlate(beltPlateProps)
+                local beltPlates = Utils.getDescendantsByName(conveyor,
+                                                              "NewBeltPlate")
+                print('beltPlates' .. ' - start');
+                print(beltPlates);
+                -- Populate each belt plate with a complete grid with all words
+                for plateIndex, beltPlate in ipairs(beltPlates) do
+
+                    local belt = beltPlate.Belt
+                    belt.BeltWeld.Enabled = false
+
                 end
+                beltPlateTemplate:Destroy()
             end
         end
     end
 
     glassTop.Touched:Connect(start)
-    -- start()
 end
 
 module.initConveyors = initConveyors
@@ -69102,7 +69018,7 @@ return t
 			<float name="ShadowSoftness">0.5</float>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<token name="Technology">2</token>
+			<token name="Technology">1</token>
 			<string name="TimeOfDay">14:00:00</string>
 		</Properties>
 	</Item>
