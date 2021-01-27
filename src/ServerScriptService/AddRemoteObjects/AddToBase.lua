@@ -32,8 +32,7 @@ local function addRemoteObjects()
             "TAP", --
             "RAP", --
             "ZAP" --
-        },
-        gridSize = {numRow = 15, numCol = 25}
+        }
     }
 
     -- if Constants.gameConfig.isDev then
@@ -41,7 +40,6 @@ local function addRemoteObjects()
     --         words = {
     --             "CAT" --
     --         },
-    --         gridSize = {numRow = 14, numCol = 24}
     --     }
     -- end
 
@@ -110,7 +108,7 @@ local function addRemoteObjects()
 
     for islandIndex, islandPositioner in ipairs(myPositioners) do
 
-        if islandIndex == 4 then break end
+        -- if islandIndex == 4 then break end
         local newIsland = islandTemplate:Clone()
 
         local anchoredParts = {}
