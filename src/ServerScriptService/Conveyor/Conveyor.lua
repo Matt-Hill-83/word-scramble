@@ -11,6 +11,7 @@ local function initbeltPlate(props)
     local beltPlateIndex = props.beltPlateIndex
     local sectorFolder = props.sectorFolder
     local beltPlateTemplate = props.beltPlateTemplate
+    local miniGameState = props.miniGameState
 
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
     local stopPlate = Utils.getFirstDescendantByName(conveyor, "Stop")
@@ -78,7 +79,7 @@ local function initConveyors(miniGameState)
 
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
 
-    local numBelts = 2
+    local numBelts = miniGameState.numBelts
     -- local numBelts = #beltTemplates
     local glassTop = Utils.getFirstDescendantByName(conveyor, "GlassTop")
 
@@ -91,7 +92,8 @@ local function initConveyors(miniGameState)
                 numBelts = numBelts,
                 beltPlateIndex = beltPlateIndex,
                 sectorFolder = sectorFolder,
-                beltPlateTemplate = beltPlateTemplate
+                beltPlateTemplate = beltPlateTemplate,
+                miniGameState = miniGameState
             }
             module.initbeltPlate(beltPlateProps)
         end
