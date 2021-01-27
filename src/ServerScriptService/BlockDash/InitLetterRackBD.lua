@@ -30,7 +30,8 @@ local function initLetterRack(miniGameState)
     local beltPlates = Utils.getDescendantsByName(conveyor, "NewBeltPlate")
 
     -- Populate each belt plate with a complete grid with all words
-    for _, beltPlate in ipairs(beltPlates) do
+    for i, beltPlate in ipairs(beltPlates) do
+        -- if i == 2 then return end
         local beltTemplate = Utils.getFirstDescendantByName(beltPlate, "Belt")
         local letterPositioner = Utils.getFirstDescendantByName(beltPlate,
                                                                 "LetterPositioner")

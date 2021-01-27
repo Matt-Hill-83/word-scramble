@@ -36,9 +36,10 @@ end
 local function addBlockDash(sectorConfig)
     local words = sectorConfig.words
 
-    local defaultGridSize = {numRow = 5, numCol = 6}
+    local defaultGridSize = {numRow = 13, numCol = 24}
     -- local defaultGridSize = {numRow = 15, numCol = 25}
-    local gridSize = sectorConfig.gridSize or defaultGridSize
+    local gridSize = defaultGridSize
+    -- local gridSize = sectorConfig.gridSize or defaultGridSize
     local sectorFolder = sectorConfig.sectorFolder
 
     local numRow = gridSize.numRow
@@ -50,9 +51,9 @@ local function addBlockDash(sectorConfig)
         activeWordIndex = 1,
         availLetters = {},
         wordLetterSize = 16,
-        rackLetterSize = 4,
+        rackLetterSize = 8,
         letterSpacingFactor = 1.05,
-        numBelts = 2,
+        numBelts = 3,
         availWords = {},
         currentLetterIndex = 1,
         foundLetters = {},

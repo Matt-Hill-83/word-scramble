@@ -7,6 +7,11 @@ local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 local module = {}
 
 local function initbeltPlate(props)
+
+    print('initbeltPlate');
+    print('initbeltPlate');
+    print('initbeltPlate');
+    print('initbeltPlate');
     local beltPlateIndex = props.beltPlateIndex
     local miniGameState = props.miniGameState
 
@@ -65,6 +70,7 @@ local function initbeltPlate(props)
 
     local pc = belt.PrismaticConstraint
     pc.Enabled = true
+    pc.Speed = 30
 
     local function jumpBack(belt2)
         local db = true
@@ -77,7 +83,6 @@ local function initbeltPlate(props)
                 -- In this function, I should reset the position of each belt2 plate, by assigning it a position index
                 -- and then use modulus?
                 if CS:hasTag(touched, "stop") then
-                    -- belt2.BeltWeld.Enabled = false
                     belt2.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                        {
                             parent = touched,
@@ -90,7 +95,6 @@ local function initbeltPlate(props)
                                         1.05, 0, 0)
                             }
                         })
-                    -- belt2.BeltWeld.Enabled = true
                 end
                 db = true
             end
@@ -139,10 +143,14 @@ local function initConveyors(miniGameState)
                                                               "NewBeltPlate")
 
                 -- Populate each belt plate with a complete grid with all words
+
+                print('break welds');
+                print('break welds');
+                print('break welds');
+                print('break welds');
                 for _, beltPlate in ipairs(beltPlates) do
                     local belt = beltPlate.Belt
                     belt.BeltWeld.Enabled = false
-
                 end
             end
         end
