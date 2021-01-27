@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1022.38049</X>
-					<Y>387.863007</Y>
-					<Z>-563.768066</Z>
-					<R00>-0.977918029</R00>
-					<R01>0.0898293033</R01>
-					<R02>-0.188698322</R02>
-					<R10>-0</R10>
-					<R11>0.902910769</R11>
-					<R12>0.429828107</R12>
-					<R20>0.208988905</R20>
-					<R21>0.420336664</R21>
-					<R22>-0.882972658</R22>
+					<X>-978.829224</X>
+					<Y>223.494888</Y>
+					<Z>425.696106</Z>
+					<R00>0.534677565</R00>
+					<R01>-0.226436138</R01>
+					<R02>0.814153969</R02>
+					<R10>-1.4901163e-08</R10>
+					<R11>0.963431835</R11>
+					<R12>0.267953932</R12>
+					<R20>-0.845056295</R20>
+					<R21>-0.143268973</R21>
+					<R22>0.515125275</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1022.00311</X>
-					<Y>387.003387</Y>
-					<Z>-562.002197</Z>
+					<X>-980.45752</X>
+					<Y>222.958984</Y>
+					<Z>424.665863</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -51965,7 +51965,7 @@ end)]]></ProtectedString>
 											<Z>0</Z>
 										</Vector3>
 										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags">c3RvcA==</BinaryString>
+										<BinaryString name="Tags">VHJhbnNwYXJlbnQ=</BinaryString>
 										<float name="TopParamA">-0.5</float>
 										<float name="TopParamB">0.5</float>
 										<token name="TopSurface">0</token>
@@ -54168,7 +54168,7 @@ end)]]></ProtectedString>
 										<Z>0</Z>
 									</Vector3>
 									<int64 name="SourceAssetId">-1</int64>
-									<BinaryString name="Tags"></BinaryString>
+									<BinaryString name="Tags">VHJhbnNwYXJlbnQ=</BinaryString>
 									<float name="TopParamA">-0.5</float>
 									<float name="TopParamB">0.5</float>
 									<token name="TopSurface">0</token>
@@ -89593,18 +89593,6 @@ local function initBeltPlate(props)
 
                         beltPlate.Belt.CFrame = newCFrame
                     end
-                    -- belt2.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                    --                    {
-                    --         parent = touched,
-                    --         child = belt2,
-                    --         offsetConfig = {
-                    --             useParentNearEdge = Vector3.new(-1, -1, 0),
-                    --             useChildNearEdge = Vector3.new(1, -1, 0),
-                    --             offsetAdder = Vector3.new(
-                    --                 -belt2.Size.X * miniGameState.numBelts *
-                    --                     1.05, 0, 0)
-                    --         }
-                    --     })
                 end
                 db = true
             end
