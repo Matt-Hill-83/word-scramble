@@ -1,7 +1,8 @@
-local isDev = true
--- local isDev = false
+-- local isDev = true
+local isDev = false
 
 local devGameConfig = {
+    -- singleIsland = false,
     singleIsland = true,
     transparency = false,
     -- transparency = true,
