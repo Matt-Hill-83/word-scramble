@@ -142,7 +142,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                     offsetConfig = {
                         useParentNearEdge = Vector3.new(1, -1, 0),
                         useChildNearEdge = Vector3.new(-1, 1, 0),
-                        offsetAdder = Vector3.new(-30, 30, 0)
+                        offsetAdder = Vector3.new(-80, 30, 0)
                     }
                 })
 
