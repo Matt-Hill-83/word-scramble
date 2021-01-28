@@ -170,6 +170,9 @@ local function initConveyors(miniGameState)
                     local belt = beltPlate.Belt
                     belt.BeltWeld.Enabled = false
                 end
+
+                local player = Utils.getPlayerFromHumanoid(humanoid)
+                Utils.destroyTools(player, "key%-%-")
             end
         end
     end

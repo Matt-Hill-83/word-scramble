@@ -25,6 +25,22 @@ end
 
 function getUuid() return HttpService:GenerateGUID(false) end
 
+local function destroyTools(player, toolNameStub)
+    local children2 = player.Character:GetChildren()
+    for _, child in ipairs(children2) do
+        local pattern = toolNameStub
+        local found = string.match(child.Name, pattern)
+        if found and child:IsA("Tool") then child:Destroy() end
+    end
+
+    local children = player.Backpack:GetChildren()
+    for _, child in ipairs(children) do
+        local pattern = toolNameStub
+        local found = string.match(child.Name, pattern)
+        if found and child:IsA("Tool") then child:Destroy() end
+    end
+end
+
 local function listIncludes(tab, val)
     for index, value in ipairs(tab) do
         if value == val then
@@ -592,6 +608,7 @@ module.playSound = playSound
 module.removeFirstMatchFromArray = removeFirstMatchFromArray
 module.removeListItemByUuid = removeListItemByUuid
 module.setItemHeight = setItemHeight
+module.destroyTools = destroyTools
 module.sortListByObjectKey = sortListByObjectKey
 module.tablelength = tablelength
 module.tableToString = tableToString

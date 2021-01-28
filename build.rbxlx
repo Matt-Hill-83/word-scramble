@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1084.37073</X>
-					<Y>195.491669</Y>
-					<Z>299.2854</Z>
-					<R00>-0.997314095</R00>
-					<R01>-0.0111753391</R01>
-					<R02>0.0723862574</R02>
-					<R10>-0</R10>
-					<R11>0.988291621</R11>
-					<R12>0.152577221</R12>
-					<R20>-0.0732438266</R20>
-					<R21>0.15216741</R21>
-					<R22>-0.985637128</R22>
+					<X>-1141.64441</X>
+					<Y>208.245071</Y>
+					<Z>211.949554</Z>
+					<R00>-0.696957052</R00>
+					<R01>0.236056045</R01>
+					<R02>-0.677147269</R02>
+					<R10>-1.49011612e-08</R10>
+					<R11>0.944268763</R11>
+					<R12>0.329175591</R12>
+					<R20>0.717112899</R20>
+					<R21>0.229421258</R21>
+					<R22>-0.658114731</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1084.5155</X>
-					<Y>195.186508</Y>
-					<Z>301.256714</Z>
+					<X>-1140.28992</X>
+					<Y>207.586624</Y>
+					<Z>213.265976</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -45280,8 +45280,8 @@ end)]]></ProtectedString>
 											<token name="BottomSurface">0</token>
 											<token name="BottomSurfaceInput">0</token>
 											<CoordinateFrame name="CFrame">
-												<X>-1053.97705</X>
-												<Y>112.710564</Y>
+												<X>-1069.97705</X>
+												<Y>176.710571</Y>
 												<Z>48.5371704</Z>
 												<R00>-1.14441509e-05</R00>
 												<R01>-3.99964811e-05</R01>
@@ -45358,8 +45358,8 @@ end)]]></ProtectedString>
 											<token name="BottomSurface">0</token>
 											<token name="BottomSurfaceInput">0</token>
 											<CoordinateFrame name="CFrame">
-												<X>-1053.97668</X>
-												<Y>112.710526</Y>
+												<X>-1069.97668</X>
+												<Y>176.710541</Y>
 												<Z>46.0370522</Z>
 												<R00>3.98771117e-05</R00>
 												<R01>-1.22098163e-05</R01>
@@ -46040,3362 +46040,6 @@ end)]]></ProtectedString>
 									</Item>
 								</Item>
 							</Item>
-							<Item class="Model" referent="RBXe9e05a9d189c4f6d9efd17059cdd47c9">
-								<Properties>
-									<BinaryString name="AttributesSerialize"></BinaryString>
-									<token name="LevelOfDetail">0</token>
-									<CoordinateFrame name="ModelInPrimary">
-										<X>0</X>
-										<Y>0</Y>
-										<Z>0</Z>
-										<R00>1</R00>
-										<R01>0</R01>
-										<R02>0</R02>
-										<R10>0</R10>
-										<R11>1</R11>
-										<R12>0</R12>
-										<R20>0</R20>
-										<R21>0</R21>
-										<R22>1</R22>
-									</CoordinateFrame>
-									<CoordinateFrame name="ModelMeshCFrame">
-										<X>0</X>
-										<Y>0</Y>
-										<Z>0</Z>
-										<R00>1</R00>
-										<R01>0</R01>
-										<R02>0</R02>
-										<R10>0</R10>
-										<R11>1</R11>
-										<R12>0</R12>
-										<R20>0</R20>
-										<R21>0</R21>
-										<R22>1</R22>
-									</CoordinateFrame>
-									<SharedString name="ModelMeshData">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
-									<Vector3 name="ModelMeshSize">
-										<X>0</X>
-										<Y>0</Y>
-										<Z>0</Z>
-									</Vector3>
-									<string name="Name">HAT</string>
-									<Ref name="PrimaryPart">RBX179bc8b74b794e11bfc939aa023efa79</Ref>
-									<int64 name="SourceAssetId">-1</int64>
-									<BinaryString name="Tags"></BinaryString>
-								</Properties>
-								<Item class="Folder" referent="RBX8b38bb6d63bc4052a61289a300611f88">
-									<Properties>
-										<BinaryString name="AttributesSerialize"></BinaryString>
-										<string name="Name">Reward</string>
-										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags"></BinaryString>
-									</Properties>
-									<Item class="Model" referent="RBX3408a2915c1544818f1ba9ca9d6237d6">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<token name="LevelOfDetail">0</token>
-											<CoordinateFrame name="ModelInPrimary">
-												<X>0</X>
-												<Y>0</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>1</R11>
-												<R12>0</R12>
-												<R20>0</R20>
-												<R21>0</R21>
-												<R22>1</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="ModelMeshCFrame">
-												<X>0</X>
-												<Y>0</Y>
-												<Z>0</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>0</R10>
-												<R11>1</R11>
-												<R12>0</R12>
-												<R20>0</R20>
-												<R21>0</R21>
-												<R22>1</R22>
-											</CoordinateFrame>
-											<SharedString name="ModelMeshData">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
-											<Vector3 name="ModelMeshSize">
-												<X>0</X>
-												<Y>0</Y>
-												<Z>0</Z>
-											</Vector3>
-											<string name="Name">HAT</string>
-											<Ref name="PrimaryPart">null</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-										<Item class="Model" referent="RBX390d8e0c2edb4acb8f14dbf143938cfc">
-											<Properties>
-												<BinaryString name="AttributesSerialize"></BinaryString>
-												<token name="LevelOfDetail">0</token>
-												<CoordinateFrame name="ModelInPrimary">
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-													<R00>1</R00>
-													<R01>0</R01>
-													<R02>0</R02>
-													<R10>0</R10>
-													<R11>1</R11>
-													<R12>0</R12>
-													<R20>0</R20>
-													<R21>0</R21>
-													<R22>1</R22>
-												</CoordinateFrame>
-												<CoordinateFrame name="ModelMeshCFrame">
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-													<R00>1</R00>
-													<R01>0</R01>
-													<R02>0</R02>
-													<R10>0</R10>
-													<R11>1</R11>
-													<R12>0</R12>
-													<R20>0</R20>
-													<R21>0</R21>
-													<R22>1</R22>
-												</CoordinateFrame>
-												<SharedString name="ModelMeshData">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
-												<Vector3 name="ModelMeshSize">
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-												</Vector3>
-												<string name="Name">Word</string>
-												<Ref name="PrimaryPart">null</Ref>
-												<int64 name="SourceAssetId">-1</int64>
-												<BinaryString name="Tags"></BinaryString>
-											</Properties>
-											<Item class="Part" referent="RBXb42526112c42413bb4ad1a2e66953b5f">
-												<Properties>
-													<bool name="Anchored">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<float name="BackParamA">-0.5</float>
-													<float name="BackParamB">0.5</float>
-													<token name="BackSurface">0</token>
-													<token name="BackSurfaceInput">0</token>
-													<float name="BottomParamA">-0.5</float>
-													<float name="BottomParamB">0.5</float>
-													<token name="BottomSurface">0</token>
-													<token name="BottomSurfaceInput">0</token>
-													<CoordinateFrame name="CFrame">
-														<X>-1067.1864</X>
-														<Y>180.164536</Y>
-														<Z>112.268974</Z>
-														<R00>-0.000255590188</R00>
-														<R01>-5.03369192e-05</R01>
-														<R02>1</R02>
-														<R10>0.000147905113</R10>
-														<R11>1.00000012</R11>
-														<R12>5.0374736e-05</R12>
-														<R20>-1.00000012</R20>
-														<R21>0.000147917846</R21>
-														<R22>-0.000255610765</R22>
-													</CoordinateFrame>
-													<bool name="CanCollide">false</bool>
-													<bool name="CanTouch">true</bool>
-													<bool name="CastShadow">true</bool>
-													<int name="CollisionGroupId">0</int>
-													<Color3uint8 name="Color3uint8">4293782250</Color3uint8>
-													<PhysicalProperties name="CustomPhysicalProperties">
-														<CustomPhysics>true</CustomPhysics>
-														<Density>2.56299996</Density>
-														<Friction>0.200000003</Friction>
-														<Elasticity>0.170000002</Elasticity>
-														<FrictionWeight>1</FrictionWeight>
-														<ElasticityWeight>1</ElasticityWeight>
-													</PhysicalProperties>
-													<float name="FrontParamA">-0.5</float>
-													<float name="FrontParamB">0.5</float>
-													<token name="FrontSurface">0</token>
-													<token name="FrontSurfaceInput">0</token>
-													<float name="LeftParamA">-0.5</float>
-													<float name="LeftParamB">0.5</float>
-													<token name="LeftSurface">0</token>
-													<token name="LeftSurfaceInput">0</token>
-													<bool name="Locked">false</bool>
-													<bool name="Massless">false</bool>
-													<token name="Material">784</token>
-													<string name="Name">WordBenchyyyy</string>
-													<float name="Reflectance">0</float>
-													<float name="RightParamA">-0.5</float>
-													<float name="RightParamB">0.5</float>
-													<token name="RightSurface">0</token>
-													<token name="RightSurfaceInput">0</token>
-													<int name="RootPriority">0</int>
-													<Vector3 name="RotVelocity">
-														<X>0</X>
-														<Y>0</Y>
-														<Z>0</Z>
-													</Vector3>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="TopParamA">-0.5</float>
-													<float name="TopParamB">0.5</float>
-													<token name="TopSurface">0</token>
-													<token name="TopSurfaceInput">0</token>
-													<float name="Transparency">0</float>
-													<Vector3 name="Velocity">
-														<X>0</X>
-														<Y>0</Y>
-														<Z>0</Z>
-													</Vector3>
-													<token name="formFactorRaw">1</token>
-													<token name="shape">1</token>
-													<Vector3 name="size">
-														<X>6.23076534</X>
-														<Y>0.200000003</Y>
-														<Z>2</Z>
-													</Vector3>
-												</Properties>
-												<Item class="WeldConstraint" referent="RBX151f9755b8b846a0961dbb0547013d5a">
-													<Properties>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<CoordinateFrame name="CFrame0">
-															<X>0.00146484375</X>
-															<Y>0.999938965</Y>
-															<Z>-0.00384521484</Z>
-															<R00>-4.68487779e-05</R00>
-															<R01>-0.000543731789</R01>
-															<R02>0.999999881</R02>
-															<R10>5.43502711e-06</R10>
-															<R11>0.999999881</R11>
-															<R12>0.000543732021</R12>
-															<R20>-1</R20>
-															<R21>5.46049978e-06</R21>
-															<R22>-4.68458202e-05</R22>
-														</CoordinateFrame>
-														<bool name="Enabled">true</bool>
-														<string name="Name">WeldConstraint</string>
-														<Ref name="Part0Internal">RBXb42526112c42413bb4ad1a2e66953b5f</Ref>
-														<Ref name="Part1Internal">null</Ref>
-														<int64 name="SourceAssetId">-1</int64>
-														<int name="State">1</int>
-														<BinaryString name="Tags"></BinaryString>
-													</Properties>
-												</Item>
-												<Item class="WeldConstraint" referent="RBX9b9605747d75423a9a15680cca3d83fb">
-													<Properties>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<CoordinateFrame name="CFrame0">
-															<X>-1.99949646</X>
-															<Y>1.00115967</Y>
-															<Z>9.15527344e-05</Z>
-															<R00>3.73966286e-05</R00>
-															<R01>0.000543742441</R01>
-															<R02>-0.999999881</R02>
-															<R10>5.42059524e-06</R10>
-															<R11>0.999999881</R11>
-															<R12>0.000543742615</R12>
-															<R20>1</R20>
-															<R21>-5.44092836e-06</R21>
-															<R22>3.73936782e-05</R22>
-														</CoordinateFrame>
-														<bool name="Enabled">true</bool>
-														<string name="Name">WeldConstraint</string>
-														<Ref name="Part0Internal">RBXb42526112c42413bb4ad1a2e66953b5f</Ref>
-														<Ref name="Part1Internal">null</Ref>
-														<int64 name="SourceAssetId">-1</int64>
-														<int name="State">1</int>
-														<BinaryString name="Tags"></BinaryString>
-													</Properties>
-												</Item>
-												<Item class="WeldConstraint" referent="RBX40e1dfa0286549148a82063adcf9b28f">
-													<Properties>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<CoordinateFrame name="CFrame0">
-															<X>0.000564575195</X>
-															<Y>1.00018311</Y>
-															<Z>-7.62939453e-06</Z>
-															<R00>3.61360071e-05</R00>
-															<R01>0.000543738832</R01>
-															<R02>-0.999999881</R02>
-															<R10>5.42071712e-06</R10>
-															<R11>0.999999881</R11>
-															<R12>0.000543739006</R12>
-															<R20>1</R20>
-															<R21>-5.44036493e-06</R21>
-															<R22>3.61330567e-05</R22>
-														</CoordinateFrame>
-														<bool name="Enabled">true</bool>
-														<string name="Name">WeldConstraint</string>
-														<Ref name="Part0Internal">RBXb42526112c42413bb4ad1a2e66953b5f</Ref>
-														<Ref name="Part1Internal">null</Ref>
-														<int64 name="SourceAssetId">-1</int64>
-														<int name="State">1</int>
-														<BinaryString name="Tags"></BinaryString>
-													</Properties>
-												</Item>
-												<Item class="WeldConstraint" referent="RBX305d7c3a92ce47c59ba81cce16f6db58">
-													<Properties>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<CoordinateFrame name="CFrame0">
-															<X>0.0931396484</X>
-															<Y>5.02305603</Y>
-															<Z>-6.10351562e-05</Z>
-															<R00>1</R00>
-															<R01>-0.000543752511</R01>
-															<R02>4.74154949e-05</R02>
-															<R10>0.00054375286</R10>
-															<R11>1</R11>
-															<R12>-5.43554052e-06</R12>
-															<R20>-4.73856926e-05</R20>
-															<R21>5.46133379e-06</R21>
-															<R22>1</R22>
-														</CoordinateFrame>
-														<bool name="Enabled">true</bool>
-														<string name="Name">WeldConstraint</string>
-														<Ref name="Part0Internal">RBXb42526112c42413bb4ad1a2e66953b5f</Ref>
-														<Ref name="Part1Internal">RBX4f407302bc4949249f418ac3b4f5a27c</Ref>
-														<int64 name="SourceAssetId">-1</int64>
-														<int name="State">3</int>
-														<BinaryString name="Tags"></BinaryString>
-													</Properties>
-												</Item>
-												<Item class="WeldConstraint" referent="RBX7c349a1f2b2b42a2bc14d17b9b9e9c17">
-													<Properties>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<CoordinateFrame name="CFrame0">
-															<X>0.00134277344</X>
-															<Y>-1.60021973</Y>
-															<Z>-0.000122070312</Z>
-															<R00>-0.000183374243</R00>
-															<R01>1.00000024</R01>
-															<R02>9.29534435e-05</R02>
-															<R10>1.00000012</R10>
-															<R11>0.000183376571</R11>
-															<R12>-2.43428731e-05</R12>
-															<R20>-2.4359877e-05</R20>
-															<R21>9.30130482e-05</R21>
-															<R22>-1</R22>
-														</CoordinateFrame>
-														<bool name="Enabled">true</bool>
-														<string name="Name">WeldConstraint</string>
-														<Ref name="Part0Internal">RBXb42526112c42413bb4ad1a2e66953b5f</Ref>
-														<Ref name="Part1Internal">RBX0c544100b4bf434fb3d92e93ad0e2375</Ref>
-														<int64 name="SourceAssetId">-1</int64>
-														<int name="State">3</int>
-														<BinaryString name="Tags"></BinaryString>
-													</Properties>
-												</Item>
-												<Item class="WeldConstraint" referent="RBXf420748c48cf40359f2f754dc76f4500">
-													<Properties>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<CoordinateFrame name="CFrame0">
-															<X>2.00091553</X>
-															<Y>0.999084473</Y>
-															<Z>-0.000106811523</Z>
-															<R00>3.69746413e-05</R00>
-															<R01>0.000543734583</R01>
-															<R02>-1</R02>
-															<R10>5.40072506e-06</R10>
-															<R11>1.00000024</R11>
-															<R12>0.000543734583</R12>
-															<R20>1</R20>
-															<R21>-5.42080306e-06</R21>
-															<R22>3.69716581e-05</R22>
-														</CoordinateFrame>
-														<bool name="Enabled">true</bool>
-														<string name="Name">WeldConstraint</string>
-														<Ref name="Part0Internal">RBXb42526112c42413bb4ad1a2e66953b5f</Ref>
-														<Ref name="Part1Internal">null</Ref>
-														<int64 name="SourceAssetId">-1</int64>
-														<int name="State">3</int>
-														<BinaryString name="Tags"></BinaryString>
-													</Properties>
-												</Item>
-												<Item class="WeldConstraint" referent="RBX49dffce94f704a6f91b94d5ce70ae4c5">
-													<Properties>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<CoordinateFrame name="CFrame0">
-															<X>1.96246338</X>
-															<Y>1.03752136</Y>
-															<Z>0.038269043</Z>
-															<R00>3.70740891e-05</R00>
-															<R01>0.000543701579</R01>
-															<R02>-1</R02>
-															<R10>5.4050688e-06</R10>
-															<R11>1.00000012</R11>
-															<R12>0.000543701637</R12>
-															<R20>1</R20>
-															<R21>-5.42514317e-06</R21>
-															<R22>3.69846821e-05</R22>
-														</CoordinateFrame>
-														<bool name="Enabled">true</bool>
-														<string name="Name">WeldConstraint-W5-L1</string>
-														<Ref name="Part0Internal">RBXb42526112c42413bb4ad1a2e66953b5f</Ref>
-														<Ref name="Part1Internal">RBX8103ddf84caa4aec86bab6f2d94d31de</Ref>
-														<int64 name="SourceAssetId">-1</int64>
-														<int name="State">3</int>
-														<BinaryString name="Tags"></BinaryString>
-													</Properties>
-												</Item>
-												<Item class="WeldConstraint" referent="RBX0de09457e3e54ca487d07fc182cf638d">
-													<Properties>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<CoordinateFrame name="CFrame0">
-															<X>-0.114440918</X>
-															<Y>1.03865051</Y>
-															<Z>0.0383300781</Z>
-															<R00>3.70740891e-05</R00>
-															<R01>0.000543701579</R01>
-															<R02>-1</R02>
-															<R10>5.4050688e-06</R10>
-															<R11>1.00000012</R11>
-															<R12>0.000543701637</R12>
-															<R20>1</R20>
-															<R21>-5.42514317e-06</R21>
-															<R22>3.69846821e-05</R22>
-														</CoordinateFrame>
-														<bool name="Enabled">true</bool>
-														<string name="Name">WeldConstraint-W5-L2</string>
-														<Ref name="Part0Internal">RBXb42526112c42413bb4ad1a2e66953b5f</Ref>
-														<Ref name="Part1Internal">RBXd67ba91313c14a358061eeb8cf3eb294</Ref>
-														<int64 name="SourceAssetId">-1</int64>
-														<int name="State">3</int>
-														<BinaryString name="Tags"></BinaryString>
-													</Properties>
-												</Item>
-												<Item class="WeldConstraint" referent="RBX09fcba0541074561b070c1b981dcdcaa">
-													<Properties>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<CoordinateFrame name="CFrame0">
-															<X>-2.19134521</X>
-															<Y>1.03977966</Y>
-															<Z>0.0383911133</Z>
-															<R00>3.70740891e-05</R00>
-															<R01>0.000543701579</R01>
-															<R02>-1</R02>
-															<R10>5.4050688e-06</R10>
-															<R11>1.00000012</R11>
-															<R12>0.000543701637</R12>
-															<R20>1</R20>
-															<R21>-5.42514317e-06</R21>
-															<R22>3.69846821e-05</R22>
-														</CoordinateFrame>
-														<bool name="Enabled">true</bool>
-														<string name="Name">WeldConstraint-W5-L3</string>
-														<Ref name="Part0Internal">RBXb42526112c42413bb4ad1a2e66953b5f</Ref>
-														<Ref name="Part1Internal">RBXd06d4df53ece47e3b7ff5779d373846e</Ref>
-														<int64 name="SourceAssetId">-1</int64>
-														<int name="State">3</int>
-														<BinaryString name="Tags"></BinaryString>
-													</Properties>
-												</Item>
-											</Item>
-										</Item>
-										<Item class="Part" referent="RBX4f407302bc4949249f418ac3b4f5a27c">
-											<Properties>
-												<bool name="Anchored">false</bool>
-												<BinaryString name="AttributesSerialize"></BinaryString>
-												<float name="BackParamA">-0.5</float>
-												<float name="BackParamB">0.5</float>
-												<token name="BackSurface">0</token>
-												<token name="BackSurfaceInput">0</token>
-												<float name="BottomParamA">-0.5</float>
-												<float name="BottomParamB">0.5</float>
-												<token name="BottomSurface">4</token>
-												<token name="BottomSurfaceInput">0</token>
-												<CoordinateFrame name="CFrame">
-													<X>-1067.18677</X>
-													<Y>185.187607</Y>
-													<Z>112.176575</Z>
-													<R00>-0.000303030014</R00>
-													<R01>-4.47366037e-05</R01>
-													<R02>1</R02>
-													<R10>0.000691655383</R10>
-													<R11>0.999999762</R11>
-													<R12>4.49461768e-05</R12>
-													<R20>-0.999999762</R20>
-													<R21>0.000691668945</R21>
-													<R22>-0.000303000212</R22>
-												</CoordinateFrame>
-												<bool name="CanCollide">false</bool>
-												<bool name="CanTouch">true</bool>
-												<bool name="CastShadow">true</bool>
-												<int name="CollisionGroupId">0</int>
-												<Color3uint8 name="Color3uint8">4290040548</Color3uint8>
-												<PhysicalProperties name="CustomPhysicalProperties">
-													<CustomPhysics>true</CustomPhysics>
-													<Density>0.699999988</Density>
-													<Friction>0.300000012</Friction>
-													<Elasticity>0.5</Elasticity>
-													<FrictionWeight>1</FrictionWeight>
-													<ElasticityWeight>1</ElasticityWeight>
-												</PhysicalProperties>
-												<float name="FrontParamA">-0.5</float>
-												<float name="FrontParamB">0.5</float>
-												<token name="FrontSurface">0</token>
-												<token name="FrontSurfaceInput">0</token>
-												<float name="LeftParamA">-0.5</float>
-												<float name="LeftParamB">0.5</float>
-												<token name="LeftSurface">0</token>
-												<token name="LeftSurfaceInput">0</token>
-												<bool name="Locked">false</bool>
-												<bool name="Massless">false</bool>
-												<token name="Material">256</token>
-												<string name="Name">Image</string>
-												<float name="Reflectance">0</float>
-												<float name="RightParamA">-0.5</float>
-												<float name="RightParamB">0.5</float>
-												<token name="RightSurface">0</token>
-												<token name="RightSurfaceInput">0</token>
-												<int name="RootPriority">0</int>
-												<Vector3 name="RotVelocity">
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-												</Vector3>
-												<int64 name="SourceAssetId">-1</int64>
-												<BinaryString name="Tags">VHJhbnNwYXJlbnQ=</BinaryString>
-												<float name="TopParamA">-0.5</float>
-												<float name="TopParamB">0.5</float>
-												<token name="TopSurface">3</token>
-												<token name="TopSurfaceInput">0</token>
-												<float name="Transparency">1</float>
-												<Vector3 name="Velocity">
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-												</Vector3>
-												<token name="formFactorRaw">1</token>
-												<token name="shape">1</token>
-												<Vector3 name="size">
-													<X>6</X>
-													<Y>6</Y>
-													<Z>0.0500000007</Z>
-												</Vector3>
-											</Properties>
-											<Item class="SurfaceLight" referent="RBX94f958998aa04eceb76b2671af633e8b">
-												<Properties>
-													<float name="Angle">90</float>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<float name="Brightness">1</float>
-													<Color3 name="Color">
-														<R>1</R>
-														<G>1</G>
-														<B>1</B>
-													</Color3>
-													<bool name="Enabled">true</bool>
-													<token name="Face">5</token>
-													<string name="Name">SurfaceLight</string>
-													<float name="Range">16</float>
-													<bool name="Shadows">false</bool>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-												</Properties>
-											</Item>
-											<Item class="SurfaceGui" referent="RBX94fcd622a63c4736bd276c505967d1b6">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">5</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="ImageLabel" referent="RBX96cc5f0dfce845618547a87b1541e27b">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>1</R>
-															<G>1</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">1</float>
-														<Color3 name="BorderColor3">
-															<R>0.105882362</R>
-															<G>0.164705887</G>
-															<B>0.207843155</B>
-														</Color3>
-														<token name="BorderMode">0</token>
-														<int name="BorderSizePixel">1</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<Content name="Image"><url>rbxassetid://1437453153</url></Content>
-														<Color3 name="ImageColor3">
-															<R>1</R>
-															<G>1</G>
-															<B>1</B>
-														</Color3>
-														<Vector2 name="ImageRectOffset">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<Vector2 name="ImageRectSize">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<float name="ImageTransparency">0</float>
-														<int name="LayoutOrder">0</int>
-														<string name="Name">ImageLabel</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<token name="ScaleType">0</token>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<Rect2D name="SliceCenter">
-															<min>
-																<X>0</X>
-																<Y>0</Y>
-															</min>
-															<max>
-																<X>0</X>
-																<Y>0</Y>
-															</max>
-														</Rect2D>
-														<float name="SliceScale">1</float>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<UDim2 name="TileSize">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBX1b35454ed81141f2954e8f9c25a090f8">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">2</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="ImageLabel" referent="RBXa90fa02c415540d2a04e207f3716c394">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>1</R>
-															<G>1</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">1</float>
-														<Color3 name="BorderColor3">
-															<R>0.105882362</R>
-															<G>0.164705887</G>
-															<B>0.207843155</B>
-														</Color3>
-														<token name="BorderMode">0</token>
-														<int name="BorderSizePixel">1</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<Content name="Image"><url>rbxassetid://1437453153</url></Content>
-														<Color3 name="ImageColor3">
-															<R>1</R>
-															<G>1</G>
-															<B>1</B>
-														</Color3>
-														<Vector2 name="ImageRectOffset">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<Vector2 name="ImageRectSize">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<float name="ImageTransparency">0</float>
-														<int name="LayoutOrder">0</int>
-														<string name="Name">ImageLabel</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<token name="ScaleType">0</token>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<Rect2D name="SliceCenter">
-															<min>
-																<X>0</X>
-																<Y>0</Y>
-															</min>
-															<max>
-																<X>0</X>
-																<Y>0</Y>
-															</max>
-														</Rect2D>
-														<float name="SliceScale">1</float>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<UDim2 name="TileSize">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceLight" referent="RBX02e7b4be3513471eb00ca4e2effdf749">
-												<Properties>
-													<float name="Angle">90</float>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<float name="Brightness">1</float>
-													<Color3 name="Color">
-														<R>1</R>
-														<G>1</G>
-														<B>1</B>
-													</Color3>
-													<bool name="Enabled">true</bool>
-													<token name="Face">2</token>
-													<string name="Name">SurfaceLight</string>
-													<float name="Range">16</float>
-													<bool name="Shadows">false</bool>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-												</Properties>
-											</Item>
-											<Item class="Attachment" referent="RBX1a70dffe5504465b8c219081160bf2a2">
-												<Properties>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<CoordinateFrame name="CFrame">
-														<X>0</X>
-														<Y>3</Y>
-														<Z>0</Z>
-														<R00>0</R00>
-														<R01>-1</R01>
-														<R02>0</R02>
-														<R10>1</R10>
-														<R11>0</R11>
-														<R12>-0</R12>
-														<R20>0</R20>
-														<R21>0</R21>
-														<R22>1</R22>
-													</CoordinateFrame>
-													<string name="Name">Attachment</string>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<bool name="Visible">false</bool>
-												</Properties>
-											</Item>
-											<Item class="VectorForce" referent="RBX52e9099bc84b40a5b8622c60831b4767">
-												<Properties>
-													<bool name="ApplyAtCenterOfMass">false</bool>
-													<Ref name="Attachment0">RBX1a70dffe5504465b8c219081160bf2a2</Ref>
-													<Ref name="Attachment1">null</Ref>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<int name="Color">23</int>
-													<bool name="Enabled">true</bool>
-													<Vector3 name="Force">
-														<X>0</X>
-														<Y>1000</Y>
-														<Z>0</Z>
-													</Vector3>
-													<string name="Name">VectorForce</string>
-													<token name="RelativeTo">2</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<bool name="Visible">false</bool>
-												</Properties>
-											</Item>
-										</Item>
-										<Item class="Part" referent="RBX0c544100b4bf434fb3d92e93ad0e2375">
-											<Properties>
-												<bool name="Anchored">false</bool>
-												<BinaryString name="AttributesSerialize"></BinaryString>
-												<float name="BackParamA">-0.5</float>
-												<float name="BackParamB">0.5</float>
-												<token name="BackSurface">0</token>
-												<token name="BackSurfaceInput">0</token>
-												<float name="BottomParamA">-0.5</float>
-												<float name="BottomParamB">0.5</float>
-												<token name="BottomSurface">0</token>
-												<token name="BottomSurfaceInput">0</token>
-												<CoordinateFrame name="CFrame">
-													<X>-1067.1864</X>
-													<Y>178.564316</Y>
-													<Z>112.267395</Z>
-													<R00>-7.46499354e-05</R00>
-													<R01>-0.000162586424</R01>
-													<R02>-1</R02>
-													<R10>1.00000024</R10>
-													<R11>0.000331286428</R11>
-													<R12>-7.47038648e-05</R12>
-													<R20>0.000331298361</R20>
-													<R21>-1.00000036</R21>
-													<R22>0.000162653712</R22>
-												</CoordinateFrame>
-												<bool name="CanCollide">false</bool>
-												<bool name="CanTouch">true</bool>
-												<bool name="CastShadow">true</bool>
-												<int name="CollisionGroupId">0</int>
-												<Color3uint8 name="Color3uint8">4293782250</Color3uint8>
-												<PhysicalProperties name="CustomPhysicalProperties">
-													<CustomPhysics>true</CustomPhysics>
-													<Density>0.699999988</Density>
-													<Friction>0.300000012</Friction>
-													<Elasticity>0.5</Elasticity>
-													<FrictionWeight>1</FrictionWeight>
-													<ElasticityWeight>1</ElasticityWeight>
-												</PhysicalProperties>
-												<float name="FrontParamA">-0.5</float>
-												<float name="FrontParamB">0.5</float>
-												<token name="FrontSurface">0</token>
-												<token name="FrontSurfaceInput">0</token>
-												<float name="LeftParamA">-0.5</float>
-												<float name="LeftParamB">0.5</float>
-												<token name="LeftSurface">0</token>
-												<token name="LeftSurfaceInput">0</token>
-												<bool name="Locked">false</bool>
-												<bool name="Massless">false</bool>
-												<token name="Material">256</token>
-												<string name="Name">Stick</string>
-												<float name="Reflectance">0</float>
-												<float name="RightParamA">-0.5</float>
-												<float name="RightParamB">0.5</float>
-												<token name="RightSurface">0</token>
-												<token name="RightSurfaceInput">0</token>
-												<int name="RootPriority">0</int>
-												<Vector3 name="RotVelocity">
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-												</Vector3>
-												<int64 name="SourceAssetId">-1</int64>
-												<BinaryString name="Tags"></BinaryString>
-												<float name="TopParamA">-0.5</float>
-												<float name="TopParamB">0.5</float>
-												<token name="TopSurface">0</token>
-												<token name="TopSurfaceInput">0</token>
-												<float name="Transparency">0</float>
-												<Vector3 name="Velocity">
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-												</Vector3>
-												<token name="formFactorRaw">1</token>
-												<token name="shape">2</token>
-												<Vector3 name="size">
-													<X>4</X>
-													<Y>0.25</Y>
-													<Z>0.25</Z>
-												</Vector3>
-											</Properties>
-											<Item class="WeldConstraint" referent="RBX8fa8f97c88f24ad9b0f9785a746c0725">
-												<Properties>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<CoordinateFrame name="CFrame0">
-														<X>-2.29512024</X>
-														<Y>0.000610351562</Y>
-														<Z>0</Z>
-														<R00>2.50582234e-05</R00>
-														<R01>1.00000083</R01>
-														<R02>2.46647069e-05</R02>
-														<R10>-1.00000036</R10>
-														<R11>2.50586672e-05</R11>
-														<R12>5.85629459e-06</R12>
-														<R20>5.85571979e-06</R20>
-														<R21>-2.46649142e-05</R21>
-														<R22>1</R22>
-													</CoordinateFrame>
-													<bool name="Enabled">true</bool>
-													<string name="Name">WeldConstraint</string>
-													<Ref name="Part0Internal">RBX0c544100b4bf434fb3d92e93ad0e2375</Ref>
-													<Ref name="Part1Internal">null</Ref>
-													<int64 name="SourceAssetId">-1</int64>
-													<int name="State">3</int>
-													<BinaryString name="Tags"></BinaryString>
-												</Properties>
-											</Item>
-										</Item>
-										<Item class="Part" referent="RBX345f8f2e008849828a90494e402a1e17">
-											<Properties>
-												<bool name="Anchored">false</bool>
-												<BinaryString name="AttributesSerialize"></BinaryString>
-												<float name="BackParamA">-0.5</float>
-												<float name="BackParamB">0.5</float>
-												<token name="BackSurface">0</token>
-												<token name="BackSurfaceInput">0</token>
-												<float name="BottomParamA">-0.5</float>
-												<float name="BottomParamB">0.5</float>
-												<token name="BottomSurface">0</token>
-												<token name="BottomSurfaceInput">0</token>
-												<CoordinateFrame name="CFrame">
-													<X>-1067.18652</X>
-													<Y>178.352982</Y>
-													<Z>112.267456</Z>
-													<R00>-7.46029909e-05</R00>
-													<R01>-0.000139906828</R01>
-													<R02>-1</R02>
-													<R10>1.00000024</R10>
-													<R11>0.000331283372</R11>
-													<R12>-7.46493897e-05</R12>
-													<R20>0.000331293617</R20>
-													<R21>-1.00000024</R21>
-													<R22>0.000140003947</R22>
-												</CoordinateFrame>
-												<bool name="CanCollide">false</bool>
-												<bool name="CanTouch">true</bool>
-												<bool name="CastShadow">true</bool>
-												<int name="CollisionGroupId">0</int>
-												<Color3uint8 name="Color3uint8">4288201435</Color3uint8>
-												<PhysicalProperties name="CustomPhysicalProperties">
-													<CustomPhysics>true</CustomPhysics>
-													<Density>0.699999988</Density>
-													<Friction>0.300000012</Friction>
-													<Elasticity>0.5</Elasticity>
-													<FrictionWeight>1</FrictionWeight>
-													<ElasticityWeight>1</ElasticityWeight>
-												</PhysicalProperties>
-												<float name="FrontParamA">-0.5</float>
-												<float name="FrontParamB">0.5</float>
-												<token name="FrontSurface">0</token>
-												<token name="FrontSurfaceInput">0</token>
-												<float name="LeftParamA">-0.5</float>
-												<float name="LeftParamB">0.5</float>
-												<token name="LeftSurface">0</token>
-												<token name="LeftSurfaceInput">0</token>
-												<bool name="Locked">false</bool>
-												<bool name="Massless">false</bool>
-												<token name="Material">256</token>
-												<string name="Name">Handle</string>
-												<float name="Reflectance">0</float>
-												<float name="RightParamA">-0.5</float>
-												<float name="RightParamB">0.5</float>
-												<token name="RightSurface">0</token>
-												<token name="RightSurfaceInput">0</token>
-												<int name="RootPriority">0</int>
-												<Vector3 name="RotVelocity">
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-												</Vector3>
-												<int64 name="SourceAssetId">-1</int64>
-												<BinaryString name="Tags"></BinaryString>
-												<float name="TopParamA">-0.5</float>
-												<float name="TopParamB">0.5</float>
-												<token name="TopSurface">0</token>
-												<token name="TopSurfaceInput">0</token>
-												<float name="Transparency">0.800000012</float>
-												<Vector3 name="Velocity">
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-												</Vector3>
-												<token name="formFactorRaw">1</token>
-												<token name="shape">2</token>
-												<Vector3 name="size">
-													<X>4</X>
-													<Y>0.25</Y>
-													<Z>0.25</Z>
-												</Vector3>
-											</Properties>
-											<Item class="WeldConstraint" referent="RBXe66ddc5aae7046ea89e81cbafe60fe80">
-												<Properties>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<CoordinateFrame name="CFrame0">
-														<X>-2.08381653</X>
-														<Y>0.000671386719</Y>
-														<Z>0</Z>
-														<R00>2.50537742e-05</R00>
-														<R01>1.00000167</R01>
-														<R02>2.46177988e-05</R02>
-														<R10>-1.00000072</R10>
-														<R11>2.5055373e-05</R11>
-														<R12>-1.6838123e-05</R12>
-														<R20>-1.68386614e-05</R20>
-														<R21>-2.46174895e-05</R21>
-														<R22>1</R22>
-													</CoordinateFrame>
-													<bool name="Enabled">true</bool>
-													<string name="Name">WeldConstraint</string>
-													<Ref name="Part0Internal">RBX345f8f2e008849828a90494e402a1e17</Ref>
-													<Ref name="Part1Internal">null</Ref>
-													<int64 name="SourceAssetId">-1</int64>
-													<int name="State">3</int>
-													<BinaryString name="Tags"></BinaryString>
-												</Properties>
-											</Item>
-											<Item class="WeldConstraint" referent="RBX80f8c27450064fd7bacaee9fa11de592">
-												<Properties>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<CoordinateFrame name="CFrame0">
-														<X>1.81155396</X>
-														<Y>-0.000915527344</Y>
-														<Z>-0.000244140625</Z>
-														<R00>-0.000183369484</R00>
-														<R01>1.00000012</R01>
-														<R02>-2.43129325e-05</R02>
-														<R10>1.00000012</R10>
-														<R11>0.00018337238</R11>
-														<R12>0.000115692616</R12>
-														<R20>0.000115603209</R20>
-														<R21>-2.42917449e-05</R21>
-														<R22>-1</R22>
-													</CoordinateFrame>
-													<bool name="Enabled">true</bool>
-													<string name="Name">WeldConstraint</string>
-													<Ref name="Part0Internal">RBX345f8f2e008849828a90494e402a1e17</Ref>
-													<Ref name="Part1Internal">RBXb42526112c42413bb4ad1a2e66953b5f</Ref>
-													<int64 name="SourceAssetId">-1</int64>
-													<int name="State">3</int>
-													<BinaryString name="Tags"></BinaryString>
-												</Properties>
-											</Item>
-											<Item class="WeldConstraint" referent="RBXe253a9056b6b469bbdfa01c1a90c534a">
-												<Properties>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<CoordinateFrame name="CFrame0">
-														<X>0.211334229</X>
-														<Y>6.10351562e-05</Y>
-														<Z>-0.000122070312</Z>
-														<R00>1.00000012</R00>
-														<R01>4.73664841e-09</R01>
-														<R02>-4.69735824e-08</R02>
-														<R10>-4.75847628e-09</R10>
-														<R11>1</R11>
-														<R12>-2.26795673e-05</R12>
-														<R20>4.69590304e-08</R20>
-														<R21>2.26795673e-05</R21>
-														<R22>1</R22>
-													</CoordinateFrame>
-													<bool name="Enabled">true</bool>
-													<string name="Name">WeldConstraint</string>
-													<Ref name="Part0Internal">RBX345f8f2e008849828a90494e402a1e17</Ref>
-													<Ref name="Part1Internal">RBX0c544100b4bf434fb3d92e93ad0e2375</Ref>
-													<int64 name="SourceAssetId">-1</int64>
-													<int name="State">3</int>
-													<BinaryString name="Tags"></BinaryString>
-												</Properties>
-											</Item>
-										</Item>
-										<Item class="Part" referent="RBX8103ddf84caa4aec86bab6f2d94d31de">
-											<Properties>
-												<bool name="Anchored">false</bool>
-												<BinaryString name="AttributesSerialize"></BinaryString>
-												<float name="BackParamA">-0.5</float>
-												<float name="BackParamB">0.5</float>
-												<token name="BackSurface">0</token>
-												<token name="BackSurfaceInput">0</token>
-												<float name="BottomParamA">-0.5</float>
-												<float name="BottomParamB">0.5</float>
-												<token name="BottomSurface">0</token>
-												<token name="BottomSurfaceInput">0</token>
-												<CoordinateFrame name="CFrame">
-													<X>-1067.14868</X>
-													<Y>181.202347</Y>
-													<Z>110.306656</Z>
-													<R00>1</R00>
-													<R01>-5.59010332e-05</R01>
-													<R02>0.000292547513</R02>
-													<R10>5.57852873e-05</R10>
-													<R11>1.00000036</R11>
-													<R12>0.000395798445</R12>
-													<R20>-0.000292684068</R20>
-													<R21>-0.000395782379</R21>
-													<R22>1.00000024</R22>
-												</CoordinateFrame>
-												<bool name="CanCollide">false</bool>
-												<bool name="CanTouch">true</bool>
-												<bool name="CastShadow">true</bool>
-												<int name="CollisionGroupId">0</int>
-												<Color3uint8 name="Color3uint8">4284622289</Color3uint8>
-												<PhysicalProperties name="CustomPhysicalProperties">
-													<CustomPhysics>true</CustomPhysics>
-													<Density>100</Density>
-													<Friction>2</Friction>
-													<Elasticity>0</Elasticity>
-													<FrictionWeight>100</FrictionWeight>
-													<ElasticityWeight>100</ElasticityWeight>
-												</PhysicalProperties>
-												<float name="FrontParamA">-0.5</float>
-												<float name="FrontParamB">0.5</float>
-												<token name="FrontSurface">0</token>
-												<token name="FrontSurfaceInput">0</token>
-												<float name="LeftParamA">-0.5</float>
-												<float name="LeftParamB">0.5</float>
-												<token name="LeftSurface">0</token>
-												<token name="LeftSurfaceInput">0</token>
-												<bool name="Locked">false</bool>
-												<bool name="Massless">false</bool>
-												<token name="Material">256</token>
-												<string name="Name">wordLetter--W5-L1xxxx</string>
-												<float name="Reflectance">0</float>
-												<float name="RightParamA">-0.5</float>
-												<float name="RightParamB">0.5</float>
-												<token name="RightSurface">0</token>
-												<token name="RightSurfaceInput">0</token>
-												<int name="RootPriority">0</int>
-												<Vector3 name="RotVelocity">
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-												</Vector3>
-												<int64 name="SourceAssetId">-1</int64>
-												<BinaryString name="Tags">V29yZExldHRlcg==</BinaryString>
-												<float name="TopParamA">-0.5</float>
-												<float name="TopParamB">0.5</float>
-												<token name="TopSurface">0</token>
-												<token name="TopSurfaceInput">0</token>
-												<float name="Transparency">1</float>
-												<Vector3 name="Velocity">
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-												</Vector3>
-												<token name="formFactorRaw">1</token>
-												<token name="shape">1</token>
-												<Vector3 name="size">
-													<X>2.0769217</X>
-													<Y>2.0769217</Y>
-													<Z>2.0769217</Z>
-												</Vector3>
-											</Properties>
-											<Item class="SurfaceGui" referent="RBX115c4c87a7cf45bbb7294583ac62e2b3">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">2</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBX6ab21d77c8d346a2b329eba6214f1154">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">H</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBX12e9e574b7b24e36b867647d2c761f4d">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">3</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBXfbcae58492c044e2a7ac5c8f6874b8cd">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">H</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBX44bb3d30701a4abaafecf56a4171466f">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">0</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBX89eb872da6bf4dcb9c701c04f45b4aa7">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">H</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBXfc934b3d126a44678fda64c2ca783fba">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">1</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBXe9d700ba134341a293dacacf1b860f2f">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">H</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBX61cd9b9600244a5b901b25631129ae31">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">4</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBX5983ad7bc637463d9226abc1e43269dc">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">H</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBX526fff51fbc74c7bb6afcba94f506a49">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">5</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui-F</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBXf8b30f4ff30b49d4ae6ebd7e67988bd7">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">H</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="ClickDetector" referent="RBXefb51d8d2f9b493fb8bf3da655b30e51">
-												<Properties>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<Content name="CursorIcon"><null></null></Content>
-													<float name="MaxActivationDistance">32</float>
-													<string name="Name">ClickDetector</string>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-												</Properties>
-											</Item>
-										</Item>
-										<Item class="Part" referent="RBXd67ba91313c14a358061eeb8cf3eb294">
-											<Properties>
-												<bool name="Anchored">false</bool>
-												<BinaryString name="AttributesSerialize"></BinaryString>
-												<float name="BackParamA">-0.5</float>
-												<float name="BackParamB">0.5</float>
-												<token name="BackSurface">0</token>
-												<token name="BackSurfaceInput">0</token>
-												<float name="BottomParamA">-0.5</float>
-												<float name="BottomParamB">0.5</float>
-												<token name="BottomSurface">0</token>
-												<token name="BottomSurfaceInput">0</token>
-												<CoordinateFrame name="CFrame">
-													<X>-1067.14807</X>
-													<Y>181.203171</Y>
-													<Z>112.38356</Z>
-													<R00>1</R00>
-													<R01>-5.59010332e-05</R01>
-													<R02>0.000292547513</R02>
-													<R10>5.57852873e-05</R10>
-													<R11>1.00000036</R11>
-													<R12>0.000395798445</R12>
-													<R20>-0.000292684068</R20>
-													<R21>-0.000395782379</R21>
-													<R22>1.00000024</R22>
-												</CoordinateFrame>
-												<bool name="CanCollide">false</bool>
-												<bool name="CanTouch">true</bool>
-												<bool name="CastShadow">true</bool>
-												<int name="CollisionGroupId">0</int>
-												<Color3uint8 name="Color3uint8">4284622289</Color3uint8>
-												<PhysicalProperties name="CustomPhysicalProperties">
-													<CustomPhysics>true</CustomPhysics>
-													<Density>100</Density>
-													<Friction>2</Friction>
-													<Elasticity>0</Elasticity>
-													<FrictionWeight>100</FrictionWeight>
-													<ElasticityWeight>100</ElasticityWeight>
-												</PhysicalProperties>
-												<float name="FrontParamA">-0.5</float>
-												<float name="FrontParamB">0.5</float>
-												<token name="FrontSurface">0</token>
-												<token name="FrontSurfaceInput">0</token>
-												<float name="LeftParamA">-0.5</float>
-												<float name="LeftParamB">0.5</float>
-												<token name="LeftSurface">0</token>
-												<token name="LeftSurfaceInput">0</token>
-												<bool name="Locked">false</bool>
-												<bool name="Massless">false</bool>
-												<token name="Material">256</token>
-												<string name="Name">wordLetter--W5-L2xxxx</string>
-												<float name="Reflectance">0</float>
-												<float name="RightParamA">-0.5</float>
-												<float name="RightParamB">0.5</float>
-												<token name="RightSurface">0</token>
-												<token name="RightSurfaceInput">0</token>
-												<int name="RootPriority">0</int>
-												<Vector3 name="RotVelocity">
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-												</Vector3>
-												<int64 name="SourceAssetId">-1</int64>
-												<BinaryString name="Tags">V29yZExldHRlcg==</BinaryString>
-												<float name="TopParamA">-0.5</float>
-												<float name="TopParamB">0.5</float>
-												<token name="TopSurface">0</token>
-												<token name="TopSurfaceInput">0</token>
-												<float name="Transparency">1</float>
-												<Vector3 name="Velocity">
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-												</Vector3>
-												<token name="formFactorRaw">1</token>
-												<token name="shape">1</token>
-												<Vector3 name="size">
-													<X>2.0769217</X>
-													<Y>2.0769217</Y>
-													<Z>2.0769217</Z>
-												</Vector3>
-											</Properties>
-											<Item class="SurfaceGui" referent="RBX2b04f2cdf27f41e187c942c64cbc2af7">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">2</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBX605a738a2cef4f3a9f3b6e85f2cb2af0">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">A</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBX16ab299b7b354a38aae7f4770f1c8d73">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">3</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBX48a0862cb08e4863864986f09ab715cd">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">A</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBXea1a3e74cb294abcbe2e1db71404f929">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">0</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBXf593ed61627e4c3ba6e714b93a0b5de8">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">A</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBXe4f5e0ce32c54789be2f4e33d21ab72a">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">1</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBX52d7c654a3ee48da80ce5f1bd8981eb6">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">A</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBX355cab487f464443b8ef8d854cff6995">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">4</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBXae8bf6a58db2451892bb696e2b0fecdc">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">A</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBX197f5bda896f47f5bb8e8233f945ebe2">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">5</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui-F</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBX9f4fef53284a4317a251a4051940acd7">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">A</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="ClickDetector" referent="RBX105cdcd8d6214655907599addb2e5fb3">
-												<Properties>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<Content name="CursorIcon"><null></null></Content>
-													<float name="MaxActivationDistance">32</float>
-													<string name="Name">ClickDetector</string>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-												</Properties>
-											</Item>
-										</Item>
-										<Item class="Part" referent="RBXd06d4df53ece47e3b7ff5779d373846e">
-											<Properties>
-												<bool name="Anchored">false</bool>
-												<BinaryString name="AttributesSerialize"></BinaryString>
-												<float name="BackParamA">-0.5</float>
-												<float name="BackParamB">0.5</float>
-												<token name="BackSurface">0</token>
-												<token name="BackSurfaceInput">0</token>
-												<float name="BottomParamA">-0.5</float>
-												<float name="BottomParamB">0.5</float>
-												<token name="BottomSurface">0</token>
-												<token name="BottomSurfaceInput">0</token>
-												<CoordinateFrame name="CFrame">
-													<X>-1067.14746</X>
-													<Y>181.203995</Y>
-													<Z>114.460464</Z>
-													<R00>1</R00>
-													<R01>-5.59010332e-05</R01>
-													<R02>0.000292547513</R02>
-													<R10>5.57852873e-05</R10>
-													<R11>1.00000036</R11>
-													<R12>0.000395798445</R12>
-													<R20>-0.000292684068</R20>
-													<R21>-0.000395782379</R21>
-													<R22>1.00000024</R22>
-												</CoordinateFrame>
-												<bool name="CanCollide">false</bool>
-												<bool name="CanTouch">true</bool>
-												<bool name="CastShadow">true</bool>
-												<int name="CollisionGroupId">0</int>
-												<Color3uint8 name="Color3uint8">4284622289</Color3uint8>
-												<PhysicalProperties name="CustomPhysicalProperties">
-													<CustomPhysics>true</CustomPhysics>
-													<Density>100</Density>
-													<Friction>2</Friction>
-													<Elasticity>0</Elasticity>
-													<FrictionWeight>100</FrictionWeight>
-													<ElasticityWeight>100</ElasticityWeight>
-												</PhysicalProperties>
-												<float name="FrontParamA">-0.5</float>
-												<float name="FrontParamB">0.5</float>
-												<token name="FrontSurface">0</token>
-												<token name="FrontSurfaceInput">0</token>
-												<float name="LeftParamA">-0.5</float>
-												<float name="LeftParamB">0.5</float>
-												<token name="LeftSurface">0</token>
-												<token name="LeftSurfaceInput">0</token>
-												<bool name="Locked">false</bool>
-												<bool name="Massless">false</bool>
-												<token name="Material">256</token>
-												<string name="Name">wordLetter--W5-L3xxxx</string>
-												<float name="Reflectance">0</float>
-												<float name="RightParamA">-0.5</float>
-												<float name="RightParamB">0.5</float>
-												<token name="RightSurface">0</token>
-												<token name="RightSurfaceInput">0</token>
-												<int name="RootPriority">0</int>
-												<Vector3 name="RotVelocity">
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-												</Vector3>
-												<int64 name="SourceAssetId">-1</int64>
-												<BinaryString name="Tags">V29yZExldHRlcg==</BinaryString>
-												<float name="TopParamA">-0.5</float>
-												<float name="TopParamB">0.5</float>
-												<token name="TopSurface">0</token>
-												<token name="TopSurfaceInput">0</token>
-												<float name="Transparency">1</float>
-												<Vector3 name="Velocity">
-													<X>0</X>
-													<Y>0</Y>
-													<Z>0</Z>
-												</Vector3>
-												<token name="formFactorRaw">1</token>
-												<token name="shape">1</token>
-												<Vector3 name="size">
-													<X>2.0769217</X>
-													<Y>2.0769217</Y>
-													<Z>2.0769217</Z>
-												</Vector3>
-											</Properties>
-											<Item class="SurfaceGui" referent="RBX442f102e4c8948a5a90f45047c07cad4">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">2</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBXbb561bba4b6c4a0ca587585f4b731e3a">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">T</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBX700ffa79431d4380991ab6e712a9c280">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">3</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBX43d2d8fa5d5344ceb5c44cb5a58a16dc">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">T</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBX555f528e05ab43d2806f22d042b9f0a1">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">0</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBX96dd16cf0c824a2ba524a17d1be3a499">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">T</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBX324beadf8c314f5687dbbe8e859f8df2">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">1</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBX8d8cbab7f373495a903941f24a2a30d4">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">T</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBX9530fa9199364deea3f2b9e1e2bd6b8a">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">4</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBXde6c4e42e21e4ce7a1b4f5e0a884b39c">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">T</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="SurfaceGui" referent="RBX6581b38e146b4ad488f9c267b84a70d3">
-												<Properties>
-													<bool name="Active">true</bool>
-													<Ref name="Adornee">null</Ref>
-													<bool name="AlwaysOnTop">false</bool>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<bool name="AutoLocalize">true</bool>
-													<Vector2 name="CanvasSize">
-														<X>800</X>
-														<Y>600</Y>
-													</Vector2>
-													<bool name="ClipsDescendants">true</bool>
-													<bool name="Enabled">true</bool>
-													<token name="Face">5</token>
-													<float name="LightInfluence">1</float>
-													<string name="Name">SurfaceGui-F</string>
-													<float name="PixelsPerStud">50</float>
-													<bool name="ResetOnSpawn">true</bool>
-													<Ref name="RootLocalizationTable">null</Ref>
-													<token name="SizingMode">1</token>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-													<float name="ToolPunchThroughDistance">0</float>
-													<token name="ZIndexBehavior">1</token>
-													<float name="ZOffset">0</float>
-												</Properties>
-												<Item class="TextLabel" referent="RBX1b6270d1eadd4119b922c27d97581596">
-													<Properties>
-														<bool name="Active">false</bool>
-														<Vector2 name="AnchorPoint">
-															<X>0</X>
-															<Y>0</Y>
-														</Vector2>
-														<BinaryString name="AttributesSerialize"></BinaryString>
-														<bool name="AutoLocalize">true</bool>
-														<token name="AutomaticSize">0</token>
-														<Color3 name="BackgroundColor3">
-															<R>0.925490201</R>
-															<G>0.905882359</G>
-															<B>1</B>
-														</Color3>
-														<float name="BackgroundTransparency">0</float>
-														<Color3 name="BorderColor3">
-															<R>0.662745118</R>
-															<G>0.427451015</G>
-															<B>0.972549081</B>
-														</Color3>
-														<token name="BorderMode">2</token>
-														<int name="BorderSizePixel">6</int>
-														<bool name="ClipsDescendants">false</bool>
-														<bool name="Draggable">false</bool>
-														<token name="Font">3</token>
-														<int name="LayoutOrder">0</int>
-														<float name="LineHeight">1</float>
-														<string name="Name">BlockChar</string>
-														<Ref name="NextSelectionDown">null</Ref>
-														<Ref name="NextSelectionLeft">null</Ref>
-														<Ref name="NextSelectionRight">null</Ref>
-														<Ref name="NextSelectionUp">null</Ref>
-														<UDim2 name="Position">
-															<XS>0</XS>
-															<XO>0</XO>
-															<YS>0</YS>
-															<YO>0</YO>
-														</UDim2>
-														<bool name="RichText">false</bool>
-														<Ref name="RootLocalizationTable">null</Ref>
-														<float name="Rotation">0</float>
-														<bool name="Selectable">false</bool>
-														<Ref name="SelectionImageObject">null</Ref>
-														<UDim2 name="Size">
-															<XS>1</XS>
-															<XO>0</XO>
-															<YS>1</YS>
-															<YO>0</YO>
-														</UDim2>
-														<token name="SizeConstraint">0</token>
-														<int64 name="SourceAssetId">-1</int64>
-														<BinaryString name="Tags"></BinaryString>
-														<string name="Text">T</string>
-														<Color3 name="TextColor3">
-															<R>0.796078503</R>
-															<G>0.282352954</G>
-															<B>1</B>
-														</Color3>
-														<bool name="TextScaled">true</bool>
-														<float name="TextSize">100</float>
-														<Color3 name="TextStrokeColor3">
-															<R>0.988235354</R>
-															<G>0.250980407</G>
-															<B>0.223529428</B>
-														</Color3>
-														<float name="TextStrokeTransparency">1</float>
-														<float name="TextTransparency">0</float>
-														<token name="TextTruncate">0</token>
-														<bool name="TextWrapped">true</bool>
-														<token name="TextXAlignment">2</token>
-														<token name="TextYAlignment">1</token>
-														<bool name="Visible">true</bool>
-														<int name="ZIndex">1</int>
-													</Properties>
-												</Item>
-											</Item>
-											<Item class="ClickDetector" referent="RBX5d4d29e2e1f043df81908c9ff12aabf3">
-												<Properties>
-													<BinaryString name="AttributesSerialize"></BinaryString>
-													<Content name="CursorIcon"><null></null></Content>
-													<float name="MaxActivationDistance">32</float>
-													<string name="Name">ClickDetector</string>
-													<int64 name="SourceAssetId">-1</int64>
-													<BinaryString name="Tags"></BinaryString>
-												</Properties>
-											</Item>
-										</Item>
-									</Item>
-								</Item>
-								<Item class="Part" referent="RBX179bc8b74b794e11bfc939aa023efa79">
-									<Properties>
-										<bool name="Anchored">false</bool>
-										<BinaryString name="AttributesSerialize"></BinaryString>
-										<float name="BackParamA">-0.5</float>
-										<float name="BackParamB">0.5</float>
-										<token name="BackSurface">0</token>
-										<token name="BackSurfaceInput">0</token>
-										<float name="BottomParamA">-0.5</float>
-										<float name="BottomParamB">0.5</float>
-										<token name="BottomSurface">0</token>
-										<token name="BottomSurfaceInput">0</token>
-										<CoordinateFrame name="CFrame">
-											<X>-1067.18628</X>
-											<Y>175.768997</Y>
-											<Z>112.266357</Z>
-											<R00>4.65512276e-05</R00>
-											<R01>-2.5898591e-05</R01>
-											<R02>-1.00000012</R02>
-											<R10>3.56076926e-05</R10>
-											<R11>1</R11>
-											<R12>-2.58969376e-05</R12>
-											<R20>1</R20>
-											<R21>-3.56064847e-05</R21>
-											<R22>4.65512276e-05</R22>
-										</CoordinateFrame>
-										<bool name="CanCollide">false</bool>
-										<bool name="CanTouch">true</bool>
-										<bool name="CastShadow">true</bool>
-										<int name="CollisionGroupId">0</int>
-										<Color3uint8 name="Color3uint8">4278815183</Color3uint8>
-										<PhysicalProperties name="CustomPhysicalProperties">
-											<CustomPhysics>false</CustomPhysics>
-										</PhysicalProperties>
-										<float name="FrontParamA">-0.5</float>
-										<float name="FrontParamB">0.5</float>
-										<token name="FrontSurface">0</token>
-										<token name="FrontSurfaceInput">0</token>
-										<float name="LeftParamA">-0.5</float>
-										<float name="LeftParamB">0.5</float>
-										<token name="LeftSurface">0</token>
-										<token name="LeftSurfaceInput">0</token>
-										<bool name="Locked">false</bool>
-										<bool name="Massless">false</bool>
-										<token name="Material">880</token>
-										<string name="Name">HitBox</string>
-										<float name="Reflectance">0</float>
-										<float name="RightParamA">-0.5</float>
-										<float name="RightParamB">0.5</float>
-										<token name="RightSurface">0</token>
-										<token name="RightSurfaceInput">0</token>
-										<int name="RootPriority">0</int>
-										<Vector3 name="RotVelocity">
-											<X>0</X>
-											<Y>0</Y>
-											<Z>0</Z>
-										</Vector3>
-										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags"></BinaryString>
-										<float name="TopParamA">-0.5</float>
-										<float name="TopParamB">0.5</float>
-										<token name="TopSurface">0</token>
-										<token name="TopSurfaceInput">0</token>
-										<float name="Transparency">0</float>
-										<Vector3 name="Velocity">
-											<X>0</X>
-											<Y>0</Y>
-											<Z>0</Z>
-										</Vector3>
-										<token name="formFactorRaw">3</token>
-										<token name="shape">1</token>
-										<Vector3 name="size">
-											<X>4</X>
-											<Y>1</Y>
-											<Z>4</Z>
-										</Vector3>
-									</Properties>
-									<Item class="WeldConstraint" referent="RBX3de2d457337c4fac874da414a89676b0">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="CFrame0">
-												<X>-0.000244140625</X>
-												<Y>0.500091553</Y>
-												<Z>-6.10351562e-05</Z>
-												<R00>1.00000691</R00>
-												<R01>0.000341828447</R01>
-												<R02>0.000110249355</R02>
-												<R10>-0.000341805979</R10>
-												<R11>1.00000548</R11>
-												<R12>-2.41465495e-05</R12>
-												<R20>-0.000110261892</R20>
-												<R21>2.41069283e-05</R21>
-												<R22>1.00000775</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">WeldConstraint</string>
-											<Ref name="Part0Internal">RBX179bc8b74b794e11bfc939aa023efa79</Ref>
-											<Ref name="Part1Internal">null</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<int name="State">3</int>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
-								</Item>
-							</Item>
 							<Item class="Model" referent="RBXd1f4d973ccb149b5b16a7b0d28ceae26">
 								<Properties>
 									<BinaryString name="AttributesSerialize"></BinaryString>
@@ -49546,7 +46190,7 @@ end)]]></ProtectedString>
 													<token name="BottomSurfaceInput">0</token>
 													<CoordinateFrame name="CFrame">
 														<X>-1236.52344</X>
-														<Y>180.181061</Y>
+														<Y>179.181061</Y>
 														<Z>272.650818</Z>
 														<R00>-0.000255607447</R00>
 														<R01>-5.03369265e-05</R01>
@@ -49864,7 +46508,7 @@ end)]]></ProtectedString>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
 													<X>-1236.52368</X>
-													<Y>185.204117</Y>
+													<Y>184.204117</Y>
 													<Z>272.558411</Z>
 													<R00>-0.000303030014</R00>
 													<R01>-4.47366037e-05</R01>
@@ -50256,7 +46900,7 @@ end)]]></ProtectedString>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
 													<X>-1236.52332</X>
-													<Y>178.580963</Y>
+													<Y>177.580963</Y>
 													<Z>272.649353</Z>
 													<R00>-7.46501173e-05</R00>
 													<R01>-0.000162648954</R01>
@@ -50365,7 +47009,7 @@ end)]]></ProtectedString>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
 													<X>-1236.52332</X>
-													<Y>178.369644</Y>
+													<Y>177.369644</Y>
 													<Z>272.649353</Z>
 													<R00>-7.4603231e-05</R00>
 													<R01>-0.000139954587</R01>
@@ -50526,7 +47170,7 @@ end)]]></ProtectedString>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
 													<X>-1236.4856</X>
-													<Y>181.218933</Y>
+													<Y>180.218933</Y>
 													<Z>270.688568</Z>
 													<R00>1</R00>
 													<R01>-5.58967295e-05</R01>
@@ -51237,7 +47881,7 @@ end)]]></ProtectedString>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
 													<X>-1236.48499</X>
-													<Y>181.219757</Y>
+													<Y>180.219757</Y>
 													<Z>272.765472</Z>
 													<R00>1</R00>
 													<R01>-5.58967295e-05</R01>
@@ -51948,7 +48592,7 @@ end)]]></ProtectedString>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
 													<X>-1236.48438</X>
-													<Y>181.220581</Y>
+													<Y>180.220581</Y>
 													<Z>274.842377</Z>
 													<R00>1</R00>
 													<R01>-5.58967295e-05</R01>
@@ -52660,18 +49304,18 @@ end)]]></ProtectedString>
 										<token name="BottomSurface">0</token>
 										<token name="BottomSurfaceInput">0</token>
 										<CoordinateFrame name="CFrame">
-											<X>-1236.52319</X>
-											<Y>175.785477</Y>
-											<Z>272.648193</Z>
-											<R00>4.65512276e-05</R00>
+											<X>-1236.51599</X>
+											<Y>174.786377</Y>
+											<Z>272.63678</Z>
+											<R00>6.25301909e-05</R00>
 											<R01>-2.5898591e-05</R01>
-											<R02>-1.00000012</R02>
-											<R10>3.56076926e-05</R10>
+											<R02>-0.999982715</R02>
+											<R10>3.87232321e-05</R10>
 											<R11>1</R11>
-											<R12>-2.58969376e-05</R12>
-											<R20>1</R20>
-											<R21>-3.56064847e-05</R21>
-											<R22>4.65512276e-05</R22>
+											<R12>-2.56725652e-05</R12>
+											<R20>0.999982119</R20>
+											<R21>-3.56064811e-05</R21>
+											<R22>4.65503981e-05</R22>
 										</CoordinateFrame>
 										<bool name="CanCollide">false</bool>
 										<bool name="CanTouch">true</bool>
@@ -52747,6 +49391,45 @@ end)]]></ProtectedString>
 											<Ref name="Part1Internal">null</Ref>
 											<int64 name="SourceAssetId">-1</int64>
 											<int name="State">3</int>
+											<BinaryString name="Tags"></BinaryString>
+										</Properties>
+									</Item>
+									<Item class="Weld" referent="RBXa50ee75724324a2d85afcf4e261331c6">
+										<Properties>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<CoordinateFrame name="C0">
+												<X>0</X>
+												<Y>-0.5</Y>
+												<Z>0</Z>
+												<R00>1</R00>
+												<R01>0</R01>
+												<R02>0</R02>
+												<R10>3.63797881e-12</R10>
+												<R11>-4.58966198e-13</R11>
+												<R12>-1</R12>
+												<R20>-9.27684596e-10</R20>
+												<R21>1.00000012</R21>
+												<R22>4.26436664e-13</R22>
+											</CoordinateFrame>
+											<CoordinateFrame name="C1">
+												<X>-285.579529</X>
+												<Y>0.506164551</Y>
+												<Z>-78.0936279</Z>
+												<R00>-1</R00>
+												<R01>0.000122479163</R01>
+												<R02>-1.70279891e-05</R02>
+												<R10>1.702605e-05</R10>
+												<R11>-1.58412313e-05</R11>
+												<R12>-1</R12>
+												<R20>-0.00012247944</R20>
+												<R21>-1</R21>
+												<R22>1.58391449e-05</R22>
+											</CoordinateFrame>
+											<bool name="Enabled">true</bool>
+											<string name="Name">Weld</string>
+											<Ref name="Part0">RBX8b19c9ca70cb4c37a2ff9cc20f10164b</Ref>
+											<Ref name="Part1">RBX31a8e696b12642a6b9485dd6de55f75f</Ref>
+											<int64 name="SourceAssetId">-1</int64>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
@@ -55399,16 +52082,16 @@ end)]]></ProtectedString>
 										<CoordinateFrame name="CFrame">
 											<X>-1126.48108</X>
 											<Y>186.295654</Y>
-											<Z>231.617828</Z>
-											<R00>-0.000201540781</R00>
-											<R01>-1.65561087e-05</R01>
+											<Z>231.617737</Z>
+											<R00>-0.000201540752</R00>
+											<R01>-1.65561032e-05</R01>
 											<R02>1</R02>
 											<R10>0.000106116961</R10>
 											<R11>1</R11>
-											<R12>1.65776073e-05</R12>
+											<R12>1.65776146e-05</R12>
 											<R20>-1</R20>
-											<R21>0.000106120322</R21>
-											<R22>-0.000201539864</R22>
+											<R21>0.000106120337</R21>
+											<R22>-0.000201539908</R22>
 										</CoordinateFrame>
 										<bool name="CanCollide">true</bool>
 										<bool name="CanTouch">true</bool>
@@ -55553,18 +52236,18 @@ end)]]></ProtectedString>
 										<token name="BottomSurface">0</token>
 										<token name="BottomSurfaceInput">0</token>
 										<CoordinateFrame name="CFrame">
-											<X>-1126.47498</X>
-											<Y>187.29213</Y>
-											<Z>231.61824</Z>
-											<R00>-0.000272721518</R00>
-											<R01>-2.04301123e-05</R01>
+											<X>-1126.47473</X>
+											<Y>187.292099</Y>
+											<Z>231.618103</Z>
+											<R00>-0.000265603827</R00>
+											<R01>-2.00433951e-05</R01>
 											<R02>1</R02>
-											<R10>0.000147386454</R10>
+											<R10>0.000143259502</R10>
 											<R11>1</R11>
-											<R12>2.04704211e-05</R12>
+											<R12>2.00815684e-05</R12>
 											<R20>-1</R20>
-											<R21>0.000147392071</R21>
-											<R22>-0.000272719364</R22>
+											<R21>0.000143264857</R21>
+											<R22>-0.000265601877</R22>
 										</CoordinateFrame>
 										<bool name="CanCollide">true</bool>
 										<bool name="CanTouch">true</bool>
@@ -55659,16 +52342,16 @@ end)]]></ProtectedString>
 										<CoordinateFrame name="CFrame">
 											<X>-1126.47253</X>
 											<Y>189.790802</Y>
-											<Z>231.617889</Z>
+											<Z>231.617798</Z>
 											<R00>-0.000262044196</R00>
-											<R01>-1.98500347e-05</R01>
+											<R01>-1.98500293e-05</R01>
 											<R02>1</R02>
 											<R10>0.000141196055</R10>
 											<R11>1</R11>
-											<R12>1.94970326e-05</R12>
+											<R12>1.94970398e-05</R12>
 											<R20>-1</R20>
-											<R21>0.00013707421</R21>
-											<R22>-0.000254924613</R22>
+											<R21>0.000137074239</R21>
+											<R22>-0.000254924671</R22>
 										</CoordinateFrame>
 										<bool name="CanCollide">false</bool>
 										<bool name="CanTouch">true</bool>
@@ -56495,13 +53178,13 @@ end)]]></ProtectedString>
 											<Y>193.796524</Y>
 											<Z>223.119965</Z>
 											<R00>1</R00>
-											<R01>-5.49422475e-05</R01>
-											<R02>0.000201540752</R02>
-											<R10>5.49581819e-05</R10>
+											<R01>-5.49422402e-05</R01>
+											<R02>0.000201540708</R02>
+											<R10>5.49581891e-05</R10>
 											<R11>1</R11>
 											<R12>-7.85204466e-05</R12>
-											<R20>-0.000201537274</R20>
-											<R21>7.85315424e-05</R21>
+											<R20>-0.000201537317</R20>
+											<R21>7.85315497e-05</R21>
 											<R22>1</R22>
 										</CoordinateFrame>
 										<bool name="CanCollide">true</bool>
@@ -56825,17 +53508,17 @@ end)]]></ProtectedString>
 										<token name="BottomSurfaceInput">0</token>
 										<CoordinateFrame name="CFrame">
 											<X>-1126.47998</X>
-											<Y>193.795746</Y>
-											<Z>240.116669</Z>
+											<Y>190.795731</Y>
+											<Z>240.116394</Z>
 											<R00>-1</R00>
-											<R01>-7.02830039e-06</R01>
-											<R02>-0.000201540737</R02>
-											<R10>-7.04507693e-06</R10>
+											<R01>-7.02817124e-06</R01>
+											<R02>-0.000201539791</R02>
+											<R10>-7.04520426e-06</R10>
 											<R11>1</R11>
-											<R12>8.2688799e-05</R12>
-											<R20>0.000201540999</R20>
-											<R21>8.26902397e-05</R21>
-											<R22>-1</R22>
+											<R12>8.26887845e-05</R12>
+											<R20>0.000201541974</R20>
+											<R21>8.26902688e-05</R21>
+											<R22>-1.00000012</R22>
 										</CoordinateFrame>
 										<bool name="CanCollide">true</bool>
 										<bool name="CanTouch">true</bool>
@@ -56884,7 +53567,7 @@ end)]]></ProtectedString>
 										<token name="shape">1</token>
 										<Vector3 name="size">
 											<X>18</X>
-											<Y>16</Y>
+											<Y>10</Y>
 											<Z>0.999885559</Z>
 										</Vector3>
 									</Properties>
@@ -56918,18 +53601,18 @@ end)]]></ProtectedString>
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="CFrame0">
-												<X>-0.00671386719</X>
-												<Y>-6.50431824</Y>
-												<Z>8.49788284</Z>
-												<R00>7.11803441e-05</R00>
-												<R01>1.34148531e-05</R01>
+												<X>-0.00695800781</X>
+												<Y>-3.50434875</Y>
+												<Z>8.49803162</Z>
+												<R00>6.40618091e-05</R00>
+												<R01>1.30271919e-05</R01>
 												<R02>-1</R02>
-												<R10>6.46981644e-05</R10>
+												<R10>6.05711248e-05</R10>
 												<R11>1</R11>
-												<R12>1.34194579e-05</R12>
-												<R20>1</R20>
-												<R21>-6.46991175e-05</R21>
-												<R22>7.11794783e-05</R22>
+												<R12>1.30313056e-05</R12>
+												<R20>1.00000012</R20>
+												<R21>-6.05720197e-05</R21>
+												<R22>6.40627986e-05</R22>
 											</CoordinateFrame>
 											<bool name="Enabled">true</bool>
 											<string name="Name">WeldConstraint</string>
@@ -56945,17 +53628,17 @@ end)]]></ProtectedString>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="CFrame0">
 												<X>26.503418</X>
-												<Y>-7.46852112</Y>
+												<Y>-4.46850586</Y>
 												<Z>-80.1352997</Z>
-												<R00>-0.000162627446</R00>
-												<R01>-1.02891943e-06</R01>
+												<R00>-0.000162628421</R00>
+												<R01>-1.02904676e-06</R01>
 												<R02>-1</R02>
-												<R10>-8.24685994e-05</R10>
+												<R10>-8.24686285e-05</R10>
 												<R11>1</R11>
-												<R12>-1.01540218e-06</R12>
-												<R20>1</R20>
-												<R21>8.24684103e-05</R21>
-												<R22>-0.000162626733</R22>
+												<R12>-1.01527303e-06</R12>
+												<R20>1.00000012</R20>
+												<R21>8.24683957e-05</R21>
+												<R22>-0.000162625787</R22>
 											</CoordinateFrame>
 											<bool name="Enabled">true</bool>
 											<string name="Name">WeldConstraint</string>
@@ -57104,45 +53787,6 @@ end)]]></ProtectedString>
 											</Properties>
 										</Item>
 									</Item>
-									<Item class="Weld" referent="RBXc93d73f9c8434ea4a10bd67ccd2b49f2">
-										<Properties>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<CoordinateFrame name="C0">
-												<X>3.81469727e-06</X>
-												<Y>0</Y>
-												<Z>0.5</Z>
-												<R00>1</R00>
-												<R01>0</R01>
-												<R02>0</R02>
-												<R10>-4.90490311e-06</R10>
-												<R11>1</R11>
-												<R12>-7.86534019e-06</R12>
-												<R20>7.11756729e-06</R20>
-												<R21>1.42552636e-13</R21>
-												<R22>1</R22>
-											</CoordinateFrame>
-											<CoordinateFrame name="C1">
-												<X>-7.9979248</X>
-												<Y>7.50097656</Y>
-												<Z>-0.000513076782</Z>
-												<R00>-1.23691279e-10</R00>
-												<R01>3.12934972e-05</R01>
-												<R02>1</R02>
-												<R10>9.53253038e-06</R10>
-												<R11>1</R11>
-												<R12>-3.91587309e-05</R12>
-												<R20>-1</R20>
-												<R21>1.44374417e-05</R21>
-												<R22>-7.11802568e-06</R22>
-											</CoordinateFrame>
-											<bool name="Enabled">true</bool>
-											<string name="Name">Weld</string>
-											<Ref name="Part0">RBX3f66b4f7bd044fa0a1ae582c6d0dba0f</Ref>
-											<Ref name="Part1">RBX16be6569625b44edb16cbabe632944c7</Ref>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-										</Properties>
-									</Item>
 								</Item>
 								<Item class="Part" referent="RBX8383f335bc024c5fa1cd69969a6c8bcd">
 									<Properties>
@@ -57159,16 +53803,16 @@ end)]]></ProtectedString>
 										<CoordinateFrame name="CFrame">
 											<X>-1126.47681</X>
 											<Y>187.293228</Y>
-											<Z>231.617874</Z>
+											<Z>231.617783</Z>
 											<R00>-0.00030831038</R00>
-											<R01>-2.23634579e-05</R01>
+											<R01>-2.23634524e-05</R01>
 											<R02>1</R02>
 											<R10>0.000168021172</R10>
 											<R11>1</R11>
-											<R12>2.24153719e-05</R12>
+											<R12>2.24153791e-05</R12>
 											<R20>-1</R20>
-											<R21>0.000168028098</R21>
-											<R22>-0.00030830747</R22>
+											<R21>0.000168028128</R21>
+											<R22>-0.000308307528</R22>
 										</CoordinateFrame>
 										<bool name="CanCollide">true</bool>
 										<bool name="CanTouch">true</bool>
@@ -72680,7 +69324,7 @@ local function addRemoteObjects()
 
     for islandIndex, islandPositioner in ipairs(myPositioners) do
 
-        -- if islandIndex == 4 then break end
+        if islandIndex == 3 then break end
         local newIsland = islandTemplate:Clone()
 
         local anchoredParts = {}
@@ -75213,44 +71857,38 @@ local function getImageId(characterName)
 end
 
 module.wordConfigs = {
+    AN = {soundId = "6311422754", imageId = "xxx"},
+    AT = {soundId = "6311419247", imageId = "xxx"},
     BAT = {soundId = "6145991240", imageId = getImageId('bat')},
-    BOG = {soundId = "6149925692", imageId = getImageId('bog')},
     BEE = {soundId = "6149925692", imageId = getImageId('bee')},
+    BOG = {soundId = "6149925692", imageId = getImageId('bog')},
+    CAN = {soundId = "6311423202", imageId = "xxx"},
+    CAP = {soundId = "6311426496", imageId = "xxx"},
     CAT = {soundId = "6145990934", imageId = getImageId('mitzyMeow01')},
+    DAD = {soundId = "6253993637", imageId = "6253993637"},
+    DAN = {soundId = "6311421475", imageId = "xxx"},
     DOG = {soundId = "6145990934", imageId = getImageId('angus01')},
+    FAN = {soundId = "6311420882", imageId = "xxx"},
+    GAP = {soundId = "6311425951", imageId = "xxx"},
     HAT = {soundId = "6145991587", imageId = getImageId('hat')},
-
+    JAN = {soundId = "6311419798", imageId = "xxx"},
+    LAP = {soundId = "6311425376", imageId = "xxx"},
+    MAP = {soundId = "6311424769", imageId = "xxx"},
     MAT = {soundId = "6145991865", imageId = getImageId('mat')},
+    MOM = {soundId = "6253993250", imageId = "6253993250"},
+    NAP = {soundId = "6311428568", imageId = "xxx"},
+    PAN = {soundId = "6311422070", imageId = "xxx"},
     PAT = {soundId = "6145992548", imageId = "6253959302"},
-
+    RAN = {soundId = "6311423721", imageId = "xxx"},
+    RAP = {soundId = "6311427488", imageId = "xxx"},
     RAT = {soundId = "6145992816", imageId = getImageId('rat')},
     SAT = {soundId = "6145993194", imageId = "6253976498"},
-
-    MOM = {soundId = "6253993250", imageId = "6253993250"},
-    DAD = {soundId = "6253993637", imageId = "6253993637"},
+    TAN = {soundId = "6311420313", imageId = "xxx"},
+    TAP = {soundId = "6311427973", imageId = "xxx"},
+    VAN = {soundId = "6311424336", imageId = "xxx"},
+    VAT = {soundId = "6311418726", imageId = "6253982590"},
     YES = {soundId = "6199538408", imageId = "xxx"},
-    -- 
-    -- 
-    -- 
-    AN = {soundId = "yyy", imageId = "xxx"},
-    AT = {soundId = "yyy", imageId = "xxx"},
-    CAN = {soundId = "yyy", imageId = "xxx"},
-    CAP = {soundId = "yyy", imageId = "xxx"},
-    DAN = {soundId = "yyy", imageId = "xxx"},
-    FAN = {soundId = "yyy", imageId = "xxx"},
-    GAP = {soundId = "yyy", imageId = "xxx"},
-    JAN = {soundId = "yyy", imageId = "xxx"},
-    LAP = {soundId = "yyy", imageId = "xxx"},
-    MAP = {soundId = "yyy", imageId = "xxx"},
-    NAP = {soundId = "yyy", imageId = "xxx"},
-    PAN = {soundId = "yyy", imageId = "xxx"},
-    RAN = {soundId = "yyy", imageId = "xxx"},
-    RAP = {soundId = "yyy", imageId = "xxx"},
-    TAN = {soundId = "yyy", imageId = "xxx"},
-    TAP = {soundId = "yyy", imageId = "xxx"},
-    VAN = {soundId = "yyy", imageId = "xxx"},
-    VAT = {soundId = "xxx", imageId = "6253982590"},
-    ZAP = {soundId = "yyy", imageId = "xxx"}
+    ZAP = {soundId = "6311449097", imageId = "xxx"}
 }
 
 return module
@@ -78051,6 +74689,41 @@ local function initConveyors(miniGameState)
                     local belt = beltPlate.Belt
                     belt.BeltWeld.Enabled = false
                 end
+
+                local player = Utils.getPlayerFromHumanoid(humanoid)
+                local itemName = "Cup" -- Change this
+
+                print('player.Backpack' .. ' - start');
+                print(player.Backpack);
+
+                local children = player.Backpack:GetChildren()
+
+                for _, child in ipairs(children) do
+
+                    local pattern = "ID%-%-"
+                    local found = string.match(child.Name, pattern)
+
+                    if found then
+                        print('child.Name' .. ' - start');
+                        print(child.Name);
+                        child:Destroy()
+
+                    end
+
+                end
+
+                print('children' .. ' - start');
+                print(children);
+                if player.Backpack:FindFirstChild(itemName) and
+                    player.Backpack[itemName]:IsA("Tool") then
+                    player.Backpack.Cup:Destroy()
+                end -- Destroy Non-Equipped tool in inventory / Backpack
+                if player.Character and
+                    player.Character:FindFirstChild(itemName) and
+                    player.Character[itemName]:IsA("Tool") then
+                    player.Character[itemName]:Destroy()
+                end -- Destroy Equipped Tool
+
             end
         end
     end
