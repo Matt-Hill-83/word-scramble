@@ -723,8 +723,29 @@ module.wordConfigs = {
 
     MOM = {soundId = "6253993250", imageId = "6253993250"},
     DAD = {soundId = "6253993637", imageId = "6253993637"},
-    VAT = {soundId = "6145992548", imageId = "6253982590"},
-    YES = {soundId = "6199538408", imageId = "xxx"}
+    YES = {soundId = "6199538408", imageId = "xxx"},
+    -- 
+    -- 
+    -- 
+    AN = {soundId = "yyy", imageId = "xxx"},
+    AT = {soundId = "yyy", imageId = "xxx"},
+    CAN = {soundId = "yyy", imageId = "xxx"},
+    CAP = {soundId = "yyy", imageId = "xxx"},
+    DAN = {soundId = "yyy", imageId = "xxx"},
+    FAN = {soundId = "yyy", imageId = "xxx"},
+    GAP = {soundId = "yyy", imageId = "xxx"},
+    JAN = {soundId = "yyy", imageId = "xxx"},
+    LAP = {soundId = "yyy", imageId = "xxx"},
+    MAP = {soundId = "yyy", imageId = "xxx"},
+    NAP = {soundId = "yyy", imageId = "xxx"},
+    PAN = {soundId = "yyy", imageId = "xxx"},
+    RAN = {soundId = "yyy", imageId = "xxx"},
+    RAP = {soundId = "yyy", imageId = "xxx"},
+    TAN = {soundId = "yyy", imageId = "xxx"},
+    TAP = {soundId = "yyy", imageId = "xxx"},
+    VAN = {soundId = "yyy", imageId = "xxx"},
+    VAT = {soundId = "xxx", imageId = "6253982590"},
+    ZAP = {soundId = "yyy", imageId = "xxx"}
 }
 
 return module
