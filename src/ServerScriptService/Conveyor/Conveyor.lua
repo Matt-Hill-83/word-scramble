@@ -29,6 +29,7 @@ local function initBeltPlate(props)
     newBeltPlate.Name = 'NewBeltPlate'
     table.insert(beltPlates, newBeltPlate)
     local belt = newBeltPlate.Belt
+    local glassPlate = newBeltPlate.GlassPlate
 
     -- Create a property in which to store the home position of each beltplate
     -- This will be incremented whenever a beltPlate hits the stop wall
@@ -39,9 +40,20 @@ local function initBeltPlate(props)
     belt.BeltWeld.Enabled = false
     local sizeX = numCol * rackLetterSize * letterSpacingFactor
     local sizeZ = numRow * rackLetterSize * letterSpacingFactor
-    -- make belt think as a platform to stand on
 
-    belt.Size = Vector3.new(sizeX, 4, sizeZ)
+    -- make belt think as a platform to stand on
+    belt.Size = Vector3.new(sizeX, 1, sizeZ)
+    glassPlate.Size = Vector3.new(sizeX, rackLetterSize - 1, sizeZ)
+    glassPlate.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                            {
+            parent = belt,
+            child = glassPlate,
+            offsetConfig = {
+                useParentNearEdge = Vector3.new(0, -1, 0),
+                useChildNearEdge = Vector3.new(0, -1, 0)
+            }
+        })
+
     belt.CFrame = beltPlateCFrames[beltPlateIndex]
 
     belt.BeltWeld.Enabled = true
