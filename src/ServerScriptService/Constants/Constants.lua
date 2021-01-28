@@ -708,44 +708,38 @@ local function getImageId(characterName)
 end
 
 module.wordConfigs = {
+    AN = {soundId = "6311422754", imageId = "xxx"},
+    AT = {soundId = "6311419247", imageId = "xxx"},
     BAT = {soundId = "6145991240", imageId = getImageId('bat')},
-    BOG = {soundId = "6149925692", imageId = getImageId('bog')},
     BEE = {soundId = "6149925692", imageId = getImageId('bee')},
+    BOG = {soundId = "6149925692", imageId = getImageId('bog')},
+    CAN = {soundId = "6311423202", imageId = "xxx"},
+    CAP = {soundId = "6311426496", imageId = "xxx"},
     CAT = {soundId = "6145990934", imageId = getImageId('mitzyMeow01')},
+    DAD = {soundId = "6253993637", imageId = "6253993637"},
+    DAN = {soundId = "6311421475", imageId = "xxx"},
     DOG = {soundId = "6145990934", imageId = getImageId('angus01')},
+    FAN = {soundId = "6311420882", imageId = "xxx"},
+    GAP = {soundId = "6311425951", imageId = "xxx"},
     HAT = {soundId = "6145991587", imageId = getImageId('hat')},
-
+    JAN = {soundId = "6311419798", imageId = "xxx"},
+    LAP = {soundId = "6311425376", imageId = "xxx"},
+    MAP = {soundId = "6311424769", imageId = "xxx"},
     MAT = {soundId = "6145991865", imageId = getImageId('mat')},
+    MOM = {soundId = "6253993250", imageId = "6253993250"},
+    NAP = {soundId = "6311428568", imageId = "xxx"},
+    PAN = {soundId = "6311422070", imageId = "xxx"},
     PAT = {soundId = "6145992548", imageId = "6253959302"},
-
+    RAN = {soundId = "6311423721", imageId = "xxx"},
+    RAP = {soundId = "6311427488", imageId = "xxx"},
     RAT = {soundId = "6145992816", imageId = getImageId('rat')},
     SAT = {soundId = "6145993194", imageId = "6253976498"},
-
-    MOM = {soundId = "6253993250", imageId = "6253993250"},
-    DAD = {soundId = "6253993637", imageId = "6253993637"},
-    YES = {soundId = "6199538408", imageId = "xxx"},
-    -- 
-    -- 
-    -- 
-    GAP = {soundId = "6311425951", imageId = "xxx"},
-    ZAP = {soundId = "6311449097", imageId = "xxx"},
-    VAT = {soundId = "6311418726", imageId = "6253982590"},
-    JAN = {soundId = "6311419798", imageId = "xxx"},
-    AT = {soundId = "6311419247", imageId = "xxx"},
-    PAN = {soundId = "6311422070", imageId = "xxx"},
     TAN = {soundId = "6311420313", imageId = "xxx"},
-    FAN = {soundId = "6311420882", imageId = "xxx"},
-    CAN = {soundId = "6311423202", imageId = "xxx"},
-    DAN = {soundId = "6311421475", imageId = "xxx"},
-    RAN = {soundId = "6311423721", imageId = "xxx"},
-    AN = {soundId = "6311422754", imageId = "xxx"},
-    VAN = {soundId = "6311424336", imageId = "xxx"},
-    MAP = {soundId = "6311424769", imageId = "xxx"},
-    LAP = {soundId = "6311425376", imageId = "xxx"},
-    CAP = {soundId = "6311426496", imageId = "xxx"},
-    RAP = {soundId = "6311427488", imageId = "xxx"},
     TAP = {soundId = "6311427973", imageId = "xxx"},
-    NAP = {soundId = "6311428568", imageId = "xxx"}
+    VAN = {soundId = "6311424336", imageId = "xxx"},
+    VAT = {soundId = "6311418726", imageId = "6253982590"},
+    YES = {soundId = "6199538408", imageId = "xxx"},
+    ZAP = {soundId = "6311449097", imageId = "xxx"}
 }
 
 return module
