@@ -18,6 +18,8 @@ local function initBeltPlate(props)
     local beltPlateCFrames = miniGameState.beltPlateCFrames
     local beltPlates = miniGameState.beltPlates
 
+    local speed = 30
+
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
     local beltPlateTemplate = Utils.getFirstDescendantByName(conveyor,
                                                              "BeltPlateTemplate")
@@ -61,7 +63,7 @@ local function initBeltPlate(props)
 
     local pc = belt.PrismaticConstraint
     pc.Enabled = true
-    pc.Speed = 30
+    pc.Speed = speed
 
     local function jumpBack()
         local db = true
@@ -72,6 +74,9 @@ local function initBeltPlate(props)
             if db == true then
                 db = false
                 if CS:hasTag(touched, "stop") then
+                    for _, beltPlate in ipairs(beltPlates) do
+                        beltPlate.Belt.Anchored = true
+                    end
                     for _, beltPlate in ipairs(beltPlates) do
                         local positionIndex = beltPlate.PositionIndex.Value
                         local incrementedPosition = positionIndex - 1
@@ -85,6 +90,9 @@ local function initBeltPlate(props)
                         beltPlate.PositionIndex.Value = incrementedPosition
                         local newCFrame = beltPlateCFrames[incrementedPosition]
                         beltPlate.Belt.CFrame = newCFrame
+                    end
+                    for _, beltPlate in ipairs(beltPlates) do
+                        beltPlate.Belt.Anchored = false
                     end
                 end
                 db = true
@@ -102,6 +110,7 @@ local function initConveyors(miniGameState)
     local beltPlateCFrames = miniGameState.beltPlateCFrames
     local rackLetterSize = miniGameState.rackLetterSize
     local letterSpacingFactor = miniGameState.letterSpacingFactor
+    local beltPlateSpacing = miniGameState.beltPlateSpacing
     local initComplete = false
 
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
@@ -119,8 +128,9 @@ local function initConveyors(miniGameState)
 
             local dummy = Instance.new("Part")
             dummy.Size = Vector3.new(sizeX, 1, sizeZ)
-            local position = Vector3.new(-dummy.Size.X * beltPlateIndex * 1.05,
-                                         0, 0)
+            local position = Vector3.new(
+                                 -dummy.Size.X * beltPlateIndex - 1 *
+                                     beltPlateSpacing, 0, 0)
 
             local beltPlateCframe = Utils3.setCFrameFromDesiredEdgeOffset(
                                         {
