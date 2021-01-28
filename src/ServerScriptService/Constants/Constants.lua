@@ -727,25 +727,25 @@ module.wordConfigs = {
     -- 
     -- 
     -- 
-    AN = {soundId = "yyy", imageId = "xxx"},
-    AT = {soundId = "yyy", imageId = "xxx"},
-    CAN = {soundId = "yyy", imageId = "xxx"},
-    CAP = {soundId = "yyy", imageId = "xxx"},
-    DAN = {soundId = "yyy", imageId = "xxx"},
-    FAN = {soundId = "yyy", imageId = "xxx"},
-    GAP = {soundId = "yyy", imageId = "xxx"},
-    JAN = {soundId = "yyy", imageId = "xxx"},
-    LAP = {soundId = "yyy", imageId = "xxx"},
-    MAP = {soundId = "yyy", imageId = "xxx"},
-    NAP = {soundId = "yyy", imageId = "xxx"},
-    PAN = {soundId = "yyy", imageId = "xxx"},
-    RAN = {soundId = "yyy", imageId = "xxx"},
-    RAP = {soundId = "yyy", imageId = "xxx"},
-    TAN = {soundId = "yyy", imageId = "xxx"},
-    TAP = {soundId = "yyy", imageId = "xxx"},
-    VAN = {soundId = "yyy", imageId = "xxx"},
-    VAT = {soundId = "xxx", imageId = "6253982590"},
-    ZAP = {soundId = "yyy", imageId = "xxx"}
+    GAP = {soundId = "6311425951", imageId = "xxx"},
+    ZAP = {soundId = "6311449097", imageId = "xxx"},
+    VAT = {soundId = "6311418726", imageId = "6253982590"},
+    JAN = {soundId = "6311419798", imageId = "xxx"},
+    AT = {soundId = "6311419247", imageId = "xxx"},
+    PAN = {soundId = "6311422070", imageId = "xxx"},
+    TAN = {soundId = "6311420313", imageId = "xxx"},
+    FAN = {soundId = "6311420882", imageId = "xxx"},
+    CAN = {soundId = "6311423202", imageId = "xxx"},
+    DAN = {soundId = "6311421475", imageId = "xxx"},
+    RAN = {soundId = "6311423721", imageId = "xxx"},
+    AN = {soundId = "6311422754", imageId = "xxx"},
+    VAN = {soundId = "6311424336", imageId = "xxx"},
+    MAP = {soundId = "6311424769", imageId = "xxx"},
+    LAP = {soundId = "6311425376", imageId = "xxx"},
+    CAP = {soundId = "6311426496", imageId = "xxx"},
+    RAP = {soundId = "6311427488", imageId = "xxx"},
+    TAP = {soundId = "6311427973", imageId = "xxx"},
+    NAP = {soundId = "6311428568", imageId = "xxx"}
 }
 
 return module
