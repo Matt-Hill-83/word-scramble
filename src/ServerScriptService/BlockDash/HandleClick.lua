@@ -134,7 +134,18 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             local gemTemplate = Utils.getFromTemplates("GemTemplate")
             local newGem = gemTemplate:Clone()
             newGem.Parent = sectorFolder
-            newGem.Handle.CFrame = letterBlockCFrame + Vector3.new(0, 5, 0)
+
+            newGem.Handle.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                                       {
+                    parent = clickedLetter,
+                    child = newGem.Handle,
+                    offsetConfig = {
+                        useParentNearEdge = Vector3.new(1, -1, 0),
+                        useChildNearEdge = Vector3.new(-1, 1, 0),
+                        offsetAdder = Vector3.new(-30, 30, 0)
+                    }
+                })
+
             newGem.Handle.Anchored = false
 
             local rand = Utils.genRandom(1, #Constants.gemColors)

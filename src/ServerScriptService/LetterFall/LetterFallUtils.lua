@@ -203,7 +203,7 @@ end
 local function liftLetter(letterBlock, liftUp)
     letterBlock.WeldConstraintRackBlock.Enabled = false
 
-    local liftDistance = 1.5
+    local liftDistance = 1.25
     if liftUp == true then
         if letterBlock.IsLifted.Value == false then
             letterBlock.CFrame = letterBlock.CFrame *

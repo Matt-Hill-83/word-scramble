@@ -18,7 +18,7 @@ local function initBeltPlate(props)
     local beltPlateCFrames = miniGameState.beltPlateCFrames
     local beltPlates = miniGameState.beltPlates
 
-    local speed = 30
+    local speed = 10
 
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
     local beltPlateTemplate = Utils.getFirstDescendantByName(conveyor,
