@@ -81,13 +81,13 @@ local function initBeltPlate(props)
                     end
 
                     --  destroy existing PlateWelds
-                    -- for _, beltPlate in ipairs(beltPlates) do
-                    --     local plateWelds =
-                    --         Utils.getDescendantsByName(beltPlate, "PlateWeld")
-                    --     for _, weld in ipairs(plateWelds) do
-                    --         weld:Destroy()
-                    --     end
-                    -- end
+                    for _, beltPlate in ipairs(beltPlates) do
+                        local plateWelds =
+                            Utils.getDescendantsByName(beltPlate, "PlateWeld")
+                        for _, weld in ipairs(plateWelds) do
+                            weld:Destroy()
+                        end
+                    end
 
                     for _, beltPlate in ipairs(beltPlates) do
                         local positionIndex = beltPlate.PositionIndex.Value
@@ -105,13 +105,13 @@ local function initBeltPlate(props)
                     end
 
                     -- Weld each plate to the one after it
-                    -- for i = 1, #beltPlates - 1 do
-                    --     local weld = Instance.new("WeldConstraint")
-                    --     weld.Name = "PlateWeld"
-                    --     weld.Parent = beltPlates[i]
-                    --     weld.Part0 = beltPlates[i]
-                    --     weld.Part1 = beltPlates[i + 1]
-                    -- end
+                    for i = 1, #beltPlates - 1 do
+                        local weld = Instance.new("WeldConstraint")
+                        weld.Name = "PlateWeld"
+                        weld.Parent = beltPlates[i].Belt
+                        weld.Part0 = beltPlates[i].Belt
+                        weld.Part1 = beltPlates[i + 1].Belt
+                    end
 
                     for _, beltPlate in ipairs(beltPlates) do
                         beltPlate.Belt.Anchored = false
