@@ -39,7 +39,9 @@ local function initBeltPlate(props)
     belt.BeltWeld.Enabled = false
     local sizeX = numCol * rackLetterSize * letterSpacingFactor
     local sizeZ = numRow * rackLetterSize * letterSpacingFactor
-    belt.Size = Vector3.new(sizeX, 1, sizeZ)
+    -- make belt think as a platform to stand on
+
+    belt.Size = Vector3.new(sizeX, 4, sizeZ)
     belt.CFrame = beltPlateCFrames[beltPlateIndex]
 
     belt.BeltWeld.Enabled = true
@@ -55,7 +57,7 @@ local function initBeltPlate(props)
             parent = belt,
             child = letterPositioner,
             offsetConfig = {
-                useParentNearEdge = Vector3.new(1, 1, 1),
+                useParentNearEdge = Vector3.new(1, -1, 1),
                 useChildNearEdge = Vector3.new(1, -1, 1)
             }
         })
@@ -77,6 +79,16 @@ local function initBeltPlate(props)
                     for _, beltPlate in ipairs(beltPlates) do
                         beltPlate.Belt.Anchored = true
                     end
+
+                    --  destroy existing PlateWelds
+                    -- for _, beltPlate in ipairs(beltPlates) do
+                    --     local plateWelds =
+                    --         Utils.getDescendantsByName(beltPlate, "PlateWeld")
+                    --     for _, weld in ipairs(plateWelds) do
+                    --         weld:Destroy()
+                    --     end
+                    -- end
+
                     for _, beltPlate in ipairs(beltPlates) do
                         local positionIndex = beltPlate.PositionIndex.Value
                         local incrementedPosition = positionIndex - 1
@@ -91,6 +103,16 @@ local function initBeltPlate(props)
                         local newCFrame = beltPlateCFrames[incrementedPosition]
                         beltPlate.Belt.CFrame = newCFrame
                     end
+
+                    -- Weld each plate to the one after it
+                    -- for i = 1, #beltPlates - 1 do
+                    --     local weld = Instance.new("WeldConstraint")
+                    --     weld.Name = "PlateWeld"
+                    --     weld.Parent = beltPlates[i]
+                    --     weld.Part0 = beltPlates[i]
+                    --     weld.Part1 = beltPlates[i + 1]
+                    -- end
+
                     for _, beltPlate in ipairs(beltPlates) do
                         beltPlate.Belt.Anchored = false
                     end

@@ -18,19 +18,19 @@ local function addRemoteObjects()
         --     "CAT" --
         -- }
         words = {
-            "CAT", --
-            "HAT", --
-            "MAT", --
-            "PAT" --
+            "CAT" --
+            -- "HAT", --
+            -- "MAT", --
+            -- "PAT" --
         }
     }
 
     local sector1Config = {
 
         words = {
-            "NAP", --
-            "TAP", --
-            "RAP", --
+            -- "NAP", --
+            -- "TAP", --
+            -- "RAP", --
             "ZAP" --
         }
     }
@@ -121,9 +121,9 @@ local function addRemoteObjects()
             end
         end
 
-        local offsetX = 500
+        local offsetX = 400
         -- local offsetY = 100
-        local offsetY = (islandIndex - 1) * 100
+        local offsetY = (islandIndex - 1) * 0
 
         newIsland.Parent = myStuff
         newIsland.Name = "Sector-" .. islandPositioner.Name
