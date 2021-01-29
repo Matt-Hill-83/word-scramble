@@ -230,8 +230,7 @@ local function initConveyors(miniGameState)
         local beltPlateTemplate = Utils.getFirstDescendantByName(conveyor,
                                                                  "BeltPlateTemplate")
         beltPlateTemplate:Destroy()
-
-        local frameBuffer = 0.5
+        dummy:Destroy()
 
     end
     config()
