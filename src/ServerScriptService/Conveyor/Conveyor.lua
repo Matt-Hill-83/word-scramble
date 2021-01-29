@@ -130,7 +130,6 @@ local function initBeltPlate(props)
         return closure
     end
     belt.Touched:Connect(jumpBack(beltPlates))
-
 end
 
 local function initConveyors(miniGameState)
@@ -296,6 +295,12 @@ local function initConveyors(miniGameState)
     end
     config()
 
+    -- local beltPlates = Utils.getDescendantsByName(conveyor, "NewBeltPlate")
+    -- for _, beltPlate in ipairs(beltPlates) do
+    --     local belt = beltPlate.Belt
+    --     belt.BeltWeld.Enabled = false
+    -- end
+
     local function start(otherPart)
         if initComplete == false then
             local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
@@ -313,7 +318,8 @@ local function initConveyors(miniGameState)
             end
         end
     end
-    glassTop.Touched:Connect(start)
+    floor.Touched:Connect(start)
+    -- glassTop.Touched:Connect(start)
 end
 
 module.initConveyors = initConveyors
