@@ -64,7 +64,9 @@ local function initKey(miniGameState)
         if humanoid then
             local player = Utils.getPlayerFromHumanoid(humanoid)
             local gameState = PlayerStatManager.getGameState(player)
-
+            print('gameState' .. ' - start');
+            print(gameState);
+            if not gameState then return end
             if not gameState.touchingDoor then
                 gameState.touchingDoor = true
                 local key2 = Utils.getFirstDescendantByName(player.Character,

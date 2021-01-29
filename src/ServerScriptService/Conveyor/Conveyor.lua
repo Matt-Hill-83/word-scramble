@@ -79,7 +79,7 @@ local function initBeltPlate(props)
     pc.Enabled = true
     pc.Speed = speed
 
-    local function jumpBack()
+    local function jumpBack(beltPlates2)
         local db = true
 
         -- Enclose this so is acts on the correct belt
@@ -88,12 +88,9 @@ local function initBeltPlate(props)
             if db == true then
                 db = false
                 if CS:hasTag(touched, "stop") then
-                    for _, beltPlate in ipairs(beltPlates) do
-                        beltPlate.Belt.Anchored = true
-                    end
 
                     --  destroy existing PlateWelds
-                    for _, beltPlate in ipairs(beltPlates) do
+                    for _, beltPlate in ipairs(beltPlates2) do
                         local plateWelds =
                             Utils.getDescendantsByName(beltPlate, "PlateWeld")
                         for _, weld in ipairs(plateWelds) do
@@ -101,33 +98,34 @@ local function initBeltPlate(props)
                         end
                     end
 
-                    for _, beltPlate in ipairs(beltPlates) do
+                    for _, beltPlate in ipairs(beltPlates2) do
                         local positionIndex = beltPlate.PositionIndex.Value
                         local incrementedPosition = positionIndex - 1
-                        if incrementedPosition == #beltPlates + 1 then
+                        if incrementedPosition == #beltPlates2 + 1 then
                             incrementedPosition = 1
                         end
                         if incrementedPosition == 0 then
-                            incrementedPosition = #beltPlates
+                            incrementedPosition = #beltPlates2
                         end
 
                         beltPlate.PositionIndex.Value = incrementedPosition
                         local newCFrame = beltPlateCFrames[incrementedPosition]
-                        beltPlate.Belt.CFrame = newCFrame
+
+                        -- add adjuster, because you averrun a bit because of the 1/30 sec timestep.
+                        local adjuster = 0
+                        beltPlate.Belt.CFrame =
+                            newCFrame + Vector3.new(0, 0, adjuster)
                     end
 
                     -- Weld each plate to the one after it
-                    for i = 1, #beltPlates - 1 do
+                    for i = 1, #beltPlates2 - 1 do
                         local weld = Instance.new("WeldConstraint")
                         weld.Name = "PlateWeld"
-                        weld.Parent = beltPlates[i].Belt
-                        weld.Part0 = beltPlates[i].Belt
-                        weld.Part1 = beltPlates[i + 1].Belt
+                        weld.Parent = beltPlates2[i].Belt
+                        weld.Part0 = beltPlates2[i].Belt
+                        weld.Part1 = beltPlates2[i + 1].Belt
                     end
 
-                    for _, beltPlate in ipairs(beltPlates) do
-                        beltPlate.Belt.Anchored = false
-                    end
                 end
                 db = true
             end
@@ -135,7 +133,7 @@ local function initBeltPlate(props)
         end
         return closure
     end
-    belt.Touched:Connect(jumpBack())
+    belt.Touched:Connect(jumpBack(beltPlates))
 
 end
 

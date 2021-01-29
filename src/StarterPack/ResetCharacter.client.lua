@@ -12,6 +12,8 @@ print("Reset Camera----------------------------------->")
 local camera = workspace.CurrentCamera
 camera.CameraType = Enum.CameraType.Custom
 camera.CameraSubject = humanoid
+
+-- TODO: this line throws an error, Head is not a valid member of model "Workspace.KletusVanDamme"
 camera.CFrame = character.Head.CFrame
 
 humanoid.JumpPower = 50
