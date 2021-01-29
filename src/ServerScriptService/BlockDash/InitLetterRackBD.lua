@@ -39,6 +39,8 @@ local function initLetterRack(miniGameState)
         for _ = 1, totalCol do
             local lettersNotInWords =
                 LetterFallUtils.getLettersNotInWords(words)
+            print('lettersNotInWords' .. ' - start');
+            print(lettersNotInWords);
             table.insert(row, LetterFallUtils.getRandomLetter(lettersNotInWords))
         end
         table.insert(totalLetterMatrix, row)
