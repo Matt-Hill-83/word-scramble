@@ -53,9 +53,7 @@ local function initBeltPlate(props)
                 useChildNearEdge = Vector3.new(0, -1, 0)
             }
         })
-
     belt.CFrame = beltPlateCFrames[beltPlateIndex]
-
     belt.BeltWeld.Enabled = true
 
     local letterPositioner = Utils.getFirstDescendantByName(newBeltPlate,
@@ -153,10 +151,9 @@ local function initConveyors(miniGameState)
     local numBelts = miniGameState.numBelts
     local glassTop = Utils.getFirstDescendantByName(conveyor, "GlassTop")
     local stopPlate = Utils.getFirstDescendantByName(conveyor, "Stop")
+    local topFront = Utils.getFirstDescendantByName(conveyor, "TopFront")
 
-    local dummySize = nil
-
-    local function createDummy(miniGameState)
+    local function createDummy()
         local sizeX = numCol * rackLetterSize * letterSpacingFactor
         local sizeZ = numRow * rackLetterSize * letterSpacingFactor
 
@@ -166,7 +163,7 @@ local function initConveyors(miniGameState)
         return dummy
     end
 
-    local function setFloor(miniGameState, dummy)
+    local function setFloor(dummy)
         local adders = dummy.Size.X * 5
         local totalLength = (dummy.Size.X + beltPlateSpacing) * numBelts +
                                 adders
@@ -174,7 +171,7 @@ local function initConveyors(miniGameState)
         return floor
     end
 
-    local function setStop(miniGameState, stopPlate2, dummy, floor2)
+    local function setStop(stopPlate2, dummy, floor2)
         stopPlate2.Size = Vector3.new(stopPlate2.Size.X, stopPlate2.Size.Y,
                                       dummy.Size.Z)
 
@@ -195,10 +192,31 @@ local function initConveyors(miniGameState)
         return stopPlate2
     end
 
+    local function setTopFront(topFront2, dummy, floor2)
+        topFront2.Size = Vector3.new(floor2.Size.X, 1, floor2.Size.Z)
+
+        local childWelds = Utils.disableEnabledWelds(topFront2)
+        local parentWelds = Utils.disableEnabledWelds(floor2)
+        topFront2.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                               {
+                parent = floor2,
+                child = topFront2,
+                offsetConfig = {
+                    useParentNearEdge = Vector3.new(1, 1, 0),
+                    useChildNearEdge = Vector3.new(1, -1, 0),
+                    offsetAdder = Vector3.new(0, 10, 0)
+                }
+            })
+        for _, weld in ipairs(childWelds) do weld.Enabled = true end
+        for _, weld in ipairs(parentWelds) do weld.Enabled = true end
+        return topFront2
+    end
+
     local function config()
-        local dummy = createDummy(miniGameState)
-        local floor2 = setFloor(miniGameState, dummy)
-        local stopPlate2 = setStop(miniGameState, stopPlate, dummy, floor2)
+        local dummy = createDummy()
+        local floor2 = setFloor(dummy)
+        local stopPlate2 = setStop(stopPlate, dummy, floor2)
+        local topFront2 = setTopFront(topFront, dummy, floor2)
 
         for beltPlateIndex = 1, numBelts do
             local offset = Vector3.new(-(dummy.Size.X + beltPlateSpacing) *
