@@ -16,6 +16,7 @@ local function initLetterRack(miniGameState)
     local words = miniGameState.words
     local letterSpacingFactor = miniGameState.letterSpacingFactor
     local rackLetterSize = miniGameState.rackLetterSize
+    local numBelts = miniGameState.numBelts
 
     local runTimeLetterFolder = LetterFallUtils.getRunTimeLetterFolder(
                                     miniGameState)
@@ -29,8 +30,45 @@ local function initLetterRack(miniGameState)
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
     local beltPlates = Utils.getDescendantsByName(conveyor, "NewBeltPlate")
 
+    -- populate matrix with letters
+    local totalLetterMatrix = {}
+    -- combine all plates into a single matrix and populate matrix with random letters
+    for _ = 1, numRow do
+        local totalCol = numBelts * numCol
+        local row = {}
+        for _ = 1, totalCol do
+            local lettersNotInWords =
+                LetterFallUtils.getLettersNotInWords(words)
+            table.insert(row, LetterFallUtils.getRandomLetter(lettersNotInWords))
+        end
+        table.insert(totalLetterMatrix, row)
+    end
+
+    local usedLocations = {}
+    for _, word in ipairs(words) do
+        for letterIndex = 1, #word do
+            local letter = string.sub(word, letterIndex, letterIndex)
+
+            local isDirtyLocation = true
+            local randomRowIndex = nil
+            local randomColIndex = nil
+            local locationCode = nil
+
+            -- make sure you do not put 2 letters in the same location
+            while isDirtyLocation == true do
+                randomRowIndex = Utils.genRandom(1, numRow)
+                randomColIndex = Utils.genRandom(1, numCol)
+                locationCode = randomRowIndex .. "-" .. randomColIndex
+                isDirtyLocation = usedLocations[locationCode]
+            end
+
+            usedLocations[locationCode] = true
+            totalLetterMatrix[randomRowIndex][randomColIndex] = letter
+        end
+    end
+
     -- Populate each belt plate with a complete grid with all words
-    for i, beltPlate in ipairs(beltPlates) do
+    for beltPlateIndex, beltPlate in ipairs(beltPlates) do
         -- if i == 2 then return end
         local beltTemplate = Utils.getFirstDescendantByName(beltPlate, "Belt")
         local letterPositioner = Utils.getFirstDescendantByName(beltPlate,
@@ -40,7 +78,12 @@ local function initLetterRack(miniGameState)
         local spacingFactorZ = letterSpacingFactor
 
         local lettersNotInWords = LetterFallUtils.getLettersNotInWords(words)
-        local letterMatrix = {}
+        -- local letterMatrix = {}
+        local startIndex = ((beltPlateIndex - 1) * numCol) + 1
+        local endIndex = startIndex + numCol - 1
+        local letterMatrix = {
+            table.unpack(totalLetterMatrix, startIndex, endIndex)
+        }
 
         -- populate matrix with random letters
         for _ = 1, numRow do
@@ -74,6 +117,13 @@ local function initLetterRack(miniGameState)
                 letterMatrix[randomRowIndex][randomColIndex] = letter
             end
         end
+
+        print('letterMatrix' .. ' - start');
+        print('letterMatrix' .. ' - start');
+        print('letterMatrix' .. ' - start');
+        print('letterMatrix' .. ' - start');
+        print('letterMatrix' .. ' - start');
+        print(letterMatrix);
 
         for colIndex = 1, numCol do
             for rowIndex = 1, numRow do
