@@ -1,5 +1,5 @@
-local isDev = true
--- local isDev = false
+-- local isDev = true
+local isDev = false
 
 local devGameConfig = {
     singleIsland = false,
@@ -19,8 +19,8 @@ local devGameConfig = {
 }
 
 local prodGameConfig = {
-    -- singleIsland = false,
-    singleIsland = true,
+    singleIsland = false,
+    -- singleIsland = true,
     transparency = true,
     walkSpeed = 30,
     fastWalkSpeed = 50,

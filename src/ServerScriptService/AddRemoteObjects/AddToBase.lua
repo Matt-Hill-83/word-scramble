@@ -18,19 +18,19 @@ local function addRemoteObjects()
         --     "CAT" --
         -- }
         words = {
-            "CAT" --
-            -- "HAT", --
-            -- "MAT", --
-            -- "PAT" --
+            "CAT", --
+            "HAT", --
+            "MAT", --
+            "PAT" --
         }
     }
 
     local sector1Config = {
 
         words = {
-            -- "NAP", --
-            -- "TAP", --
-            -- "RAP", --
+            "NAP", --
+            "TAP", --
+            "RAP", --
             "ZAP" --
         }
     }
@@ -108,7 +108,7 @@ local function addRemoteObjects()
 
     for islandIndex, islandPositioner in ipairs(myPositioners) do
 
-        if islandIndex == 3 then break end
+        -- if islandIndex == 3 then break end
         local newIsland = islandTemplate:Clone()
 
         local anchoredParts = {}

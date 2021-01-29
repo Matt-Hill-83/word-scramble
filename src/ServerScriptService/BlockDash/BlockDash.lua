@@ -34,8 +34,8 @@ local function initPowerUps(miniGameState)
 end
 
 local function addBlockDash(sectorConfig)
-    local words = {sectorConfig.words[1]}
-    -- local words = sectorConfig.words
+    -- local words = {sectorConfig.words[1]}
+    local words = sectorConfig.words
 
     local numBelts = 8
     local defaultGridSize = {numRow = 6, numCol = 4}
