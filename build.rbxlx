@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1248.97742</X>
-					<Y>89.610054</Y>
-					<Z>526.685425</Z>
-					<R00>-0.518369615</R00>
-					<R01>-0.327006012</R01>
-					<R02>0.79016459</R02>
-					<R10>1.49011594e-08</R10>
-					<R11>0.923999727</R11>
-					<R12>0.382393122</R12>
-					<R20>-0.85515666</R20>
-					<R21>0.198220983</R21>
-					<R22>-0.478973389</R22>
+					<X>81.5832901</X>
+					<Y>206.786423</Y>
+					<Z>-122.88472</Z>
+					<R00>0.390045583</R00>
+					<R01>0.0558425672</R01>
+					<R02>-0.919100702</R02>
+					<R10>-1.86264537e-09</R10>
+					<R11>0.998159409</R11>
+					<R12>0.0606459938</R12>
+					<R20>0.920795619</R20>
+					<R21>-0.0236546993</R21>
+					<R22>0.389327586</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1262.01526</X>
-					<Y>83.3005066</Y>
-					<Z>534.588562</Z>
+					<X>83.4214935</X>
+					<Y>206.665131</Y>
+					<Z>-123.663376</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -14151,15 +14151,15 @@ remoteCode.addRemoteObjects()
 										<X>295.184814</X>
 										<Y>105.710953</Y>
 										<Z>-340.251221</Z>
-										<R00>1</R00>
+										<R00>0</R00>
 										<R01>0</R01>
-										<R02>0</R02>
+										<R02>1</R02>
 										<R10>0</R10>
 										<R11>1</R11>
 										<R12>0</R12>
-										<R20>0</R20>
+										<R20>-1</R20>
 										<R21>0</R21>
-										<R22>1</R22>
+										<R22>0</R22>
 									</CoordinateFrame>
 									<bool name="CanCollide">true</bool>
 									<bool name="CanTouch">true</bool>
@@ -69616,12 +69616,8 @@ local function initLetterRack(miniGameState)
     -- populate matrix with letters
     local totalLetterMatrix = {}
     -- combine all plates into a single matrix and populate matrix with random letters
-    print('words' .. ' - start');
-    print(words);
 
     local lettersNotInWords = LetterFallUtils.getLettersNotInWords(words)
-    print('lettersNotInWords' .. ' - start');
-    print(lettersNotInWords);
 
     for _ = 1, numRow * numBelts do
         -- local totalCol = numBelts * numCol
@@ -69632,9 +69628,6 @@ local function initLetterRack(miniGameState)
         end
         table.insert(totalLetterMatrix, row)
     end
-
-    print('totalLetterMatrix' .. ' - start');
-    print(totalLetterMatrix);
 
     local usedLocations = {}
     for _, word in ipairs(words) do
@@ -69709,13 +69702,6 @@ local function initLetterRack(miniGameState)
         --         letterMatrix[randomRowIndex][randomColIndex] = letter
         --     end
         -- end
-
-        print('letterMatrix' .. ' - start');
-        print('letterMatrix' .. ' - start');
-        print('letterMatrix' .. ' - start');
-        print('letterMatrix' .. ' - start');
-        print('letterMatrix' .. ' - start');
-        print(letterMatrix);
 
         for colIndex = 1, numCol do
             for rowIndex = 1, numRow do

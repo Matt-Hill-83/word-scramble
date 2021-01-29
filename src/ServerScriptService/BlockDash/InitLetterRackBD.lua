@@ -33,12 +33,8 @@ local function initLetterRack(miniGameState)
     -- populate matrix with letters
     local totalLetterMatrix = {}
     -- combine all plates into a single matrix and populate matrix with random letters
-    print('words' .. ' - start');
-    print(words);
 
     local lettersNotInWords = LetterFallUtils.getLettersNotInWords(words)
-    print('lettersNotInWords' .. ' - start');
-    print(lettersNotInWords);
 
     for _ = 1, numRow * numBelts do
         -- local totalCol = numBelts * numCol
@@ -49,9 +45,6 @@ local function initLetterRack(miniGameState)
         end
         table.insert(totalLetterMatrix, row)
     end
-
-    print('totalLetterMatrix' .. ' - start');
-    print(totalLetterMatrix);
 
     local usedLocations = {}
     for _, word in ipairs(words) do
@@ -126,13 +119,6 @@ local function initLetterRack(miniGameState)
         --         letterMatrix[randomRowIndex][randomColIndex] = letter
         --     end
         -- end
-
-        print('letterMatrix' .. ' - start');
-        print('letterMatrix' .. ' - start');
-        print('letterMatrix' .. ' - start');
-        print('letterMatrix' .. ' - start');
-        print('letterMatrix' .. ' - start');
-        print(letterMatrix);
 
         for colIndex = 1, numCol do
             for rowIndex = 1, numRow do
