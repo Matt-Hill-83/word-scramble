@@ -145,35 +145,70 @@ local function initConveyors(miniGameState)
     local rackLetterSize = miniGameState.rackLetterSize
     local letterSpacingFactor = miniGameState.letterSpacingFactor
     local beltPlateSpacing = miniGameState.beltPlateSpacing
+    local numRow = miniGameState.numRow
+    local numCol = miniGameState.numCol
+
     local initComplete = false
 
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
+    local floor = Utils.getFirstDescendantByName(conveyor, "Floor")
     local numBelts = miniGameState.numBelts
     local glassTop = Utils.getFirstDescendantByName(conveyor, "GlassTop")
-
     local stopPlate = Utils.getFirstDescendantByName(conveyor, "Stop")
 
-    local function config()
-        for beltPlateIndex = 1, numBelts do
-            local numRow = miniGameState.numRow
-            local numCol = miniGameState.numCol
-            local sizeX = numCol * rackLetterSize * letterSpacingFactor
-            local sizeZ = numRow * rackLetterSize * letterSpacingFactor
+    local dummySize = nil
 
-            local dummy = Instance.new("Part")
-            dummy.Size = Vector3.new(sizeX, 1, sizeZ)
-            local position = Vector3.new(
-                                 -dummy.Size.X * beltPlateIndex - 1 *
-                                     beltPlateSpacing, 0, 0)
+    local function createDummy(miniGameState)
+        local sizeX = numCol * rackLetterSize * letterSpacingFactor
+        local sizeZ = numRow * rackLetterSize * letterSpacingFactor
+
+        local dummy = Instance.new("Part")
+        dummy.Size = Vector3.new(sizeX, 1, sizeZ)
+        return dummy
+    end
+
+    local function setFloor(miniGameState, dummy)
+        local totalLength = (dummy.Size.X + beltPlateSpacing) * numBelts
+        floor.Size = Vector3.new(totalLength, 1, dummy.Size.Z)
+        return floor
+    end
+
+    local function setStop(miniGameState, stopPlate2, dummy, floor2)
+        stopPlate2.Size = Vector3.new(stopPlate2.Size.X, stopPlate2.Size.Y,
+                                      dummy.Size.Z)
+
+        local stopPlateWelds = Utils.disableEnabledWelds(stopPlate2)
+        stopPlate2.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                                {
+                parent = floor2,
+                child = stopPlate2,
+                offsetConfig = {
+                    useParentNearEdge = Vector3.new(1, 1, 0),
+                    useChildNearEdge = Vector3.new(1, -1, 0)
+                    -- offsetAdder = Vector3.new(0, 4, 0)
+                }
+            })
+        for _, weld in ipairs(stopPlateWelds) do weld.Enabled = true end
+        return stopPlate2
+    end
+
+    local function config()
+        local dummy = createDummy(miniGameState)
+        local floor2 = setFloor(miniGameState, dummy)
+        local stopPlate2 = setStop(miniGameState, stopPlate, dummy, floor2)
+
+        for beltPlateIndex = 1, numBelts do
+            local offset = Vector3.new(-(dummy.Size.X + beltPlateSpacing) *
+                                           (beltPlateIndex - 0), 0, 0)
 
             local beltPlateCframe = Utils3.setCFrameFromDesiredEdgeOffset(
                                         {
-                    parent = stopPlate,
+                    parent = stopPlate2,
                     child = dummy,
                     offsetConfig = {
-                        useParentNearEdge = Vector3.new(-1, -1, 0),
-                        useChildNearEdge = Vector3.new(1, -1, 0),
-                        offsetAdder = position
+                        useParentNearEdge = Vector3.new(-1, 0, 0),
+                        useChildNearEdge = Vector3.new(1, 0, 0),
+                        offsetAdder = offset
                     }
                 })
             table.insert(beltPlateCFrames, beltPlateCframe)
@@ -190,6 +225,9 @@ local function initConveyors(miniGameState)
         local beltPlateTemplate = Utils.getFirstDescendantByName(conveyor,
                                                                  "BeltPlateTemplate")
         beltPlateTemplate:Destroy()
+
+        local frameBuffer = 0.5
+
     end
     config()
 

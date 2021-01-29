@@ -34,7 +34,8 @@ local function initPowerUps(miniGameState)
 end
 
 local function addBlockDash(sectorConfig)
-    local words = sectorConfig.words
+    local words = {sectorConfig.words[1]}
+    -- local words = sectorConfig.words
 
     local defaultGridSize = {numRow = 6, numCol = 2}
     -- local defaultGridSize = {numRow = 15, numCol = 25}
@@ -44,6 +45,7 @@ local function addBlockDash(sectorConfig)
 
     local numRow = gridSize.numRow
     local numCol = gridSize.numCol
+    local rackLetterSize = 8
 
     local miniGameState = {
         activeWord = nil,
@@ -52,10 +54,10 @@ local function addBlockDash(sectorConfig)
         availLetters = {},
         beltPlates = {},
         wordLetterSize = 16,
-        rackLetterSize = 8,
+        rackLetterSize = rackLetterSize,
         letterSpacingFactor = 1.05,
-        beltPlateSpacing = 1.1,
-        numBelts = 16,
+        beltPlateSpacing = rackLetterSize / 8,
+        numBelts = 2,
         availWords = {},
         beltPlateCFrames = {},
         currentLetterIndex = 1,

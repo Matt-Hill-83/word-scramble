@@ -183,7 +183,26 @@ function enableChildWelds(props)
         weld.Enabled = enabled
         -- 
     end
+end
 
+local function disableEnabledWelds(part)
+    local welds = {}
+
+    local allWelds = module.getDescendantsByType(part, "Weld")
+    for _, weld in ipairs(allWelds) do
+        if weld.Enabled then
+            weld.Enabled = false
+            table.insert(welds, weld)
+        end
+    end
+    local allWelds2 = module.getDescendantsByType(part, "WeldConstraint")
+    for _, weld in ipairs(allWelds2) do
+        if weld.Enabled then
+            weld.Enabled = false
+            table.insert(welds, weld)
+        end
+    end
+    return welds
 end
 
 function genRandom(min, max)
@@ -601,6 +620,7 @@ module.getKeysFromDict = getKeysFromDict
 module.getPlayerFromHumanoid = getPlayerFromHumanoid
 module.getUuid = getUuid
 module.hideItem = hideItem
+module.disableEnabledWelds = disableEnabledWelds
 module.hideItemAndChildren = hideItemAndChildren
 module.listIncludes = listIncludes
 module.mergeTables = mergeTables
