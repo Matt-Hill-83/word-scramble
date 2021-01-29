@@ -318,8 +318,8 @@ local function initConveyors(miniGameState)
             end
         end
     end
-    floor.Touched:Connect(start)
-    -- glassTop.Touched:Connect(start)
+    -- floor.Touched:Connect(start)
+    glassTop.Touched:Connect(start)
 end
 
 module.initConveyors = initConveyors
