@@ -193,7 +193,7 @@ local function initConveyors(miniGameState)
     end
 
     local function setTopFront(topFront2, dummy, floor2)
-        topFront2.Size = Vector3.new(floor2.Size.X, 1, floor2.Size.Z)
+        topFront2.Size = Vector3.new(dummy.Size.X + 6, 1, floor2.Size.Z)
 
         local childWelds = Utils.disableEnabledWelds(topFront2)
         local parentWelds = Utils.disableEnabledWelds(floor2)
@@ -204,7 +204,7 @@ local function initConveyors(miniGameState)
                 offsetConfig = {
                     useParentNearEdge = Vector3.new(1, 1, 0),
                     useChildNearEdge = Vector3.new(1, -1, 0),
-                    offsetAdder = Vector3.new(0, 10, 0)
+                    offsetAdder = Vector3.new(0, rackLetterSize + 2, 0)
                 }
             })
         for _, weld in ipairs(childWelds) do weld.Enabled = true end
