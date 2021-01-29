@@ -33,18 +33,25 @@ local function initLetterRack(miniGameState)
     -- populate matrix with letters
     local totalLetterMatrix = {}
     -- combine all plates into a single matrix and populate matrix with random letters
-    for _ = 1, numRow do
-        local totalCol = numBelts * numCol
+    print('words' .. ' - start');
+    print(words);
+
+    local lettersNotInWords = LetterFallUtils.getLettersNotInWords(words)
+    print('lettersNotInWords' .. ' - start');
+    print(lettersNotInWords);
+
+    for _ = 1, numRow * numBelts do
+        -- local totalCol = numBelts * numCol
         local row = {}
-        for _ = 1, totalCol do
-            local lettersNotInWords =
-                LetterFallUtils.getLettersNotInWords(words)
-            print('lettersNotInWords' .. ' - start');
-            print(lettersNotInWords);
+        for _ = 1, numCol do
+            -- for _ = 1, totalCol do
             table.insert(row, LetterFallUtils.getRandomLetter(lettersNotInWords))
         end
         table.insert(totalLetterMatrix, row)
     end
+
+    print('totalLetterMatrix' .. ' - start');
+    print(totalLetterMatrix);
 
     local usedLocations = {}
     for _, word in ipairs(words) do
@@ -79,46 +86,46 @@ local function initLetterRack(miniGameState)
         local spacingFactorX = letterSpacingFactor
         local spacingFactorZ = letterSpacingFactor
 
-        local lettersNotInWords = LetterFallUtils.getLettersNotInWords(words)
+        -- local lettersNotInWords = LetterFallUtils.getLettersNotInWords(words)
         -- local letterMatrix = {}
-        local startIndex = ((beltPlateIndex - 1) * numCol) + 1
-        local endIndex = startIndex + numCol - 1
+        local startIndex = ((beltPlateIndex - 1) * numRow) + 1
+        local endIndex = startIndex + numRow - 1
         local letterMatrix = {
             table.unpack(totalLetterMatrix, startIndex, endIndex)
         }
 
         -- populate matrix with random letters
-        for _ = 1, numRow do
-            local row = {}
-            for _ = 1, numCol do
-                table.insert(row,
-                             LetterFallUtils.getRandomLetter(lettersNotInWords))
-            end
-            table.insert(letterMatrix, row)
-        end
+        -- for _ = 1, numRow do
+        --     local row = {}
+        --     for _ = 1, numCol do
+        --         table.insert(row,
+        --                      LetterFallUtils.getRandomLetter(lettersNotInWords))
+        --     end
+        --     table.insert(letterMatrix, row)
+        -- end
 
-        local usedLocations = {}
-        for _, word in ipairs(words) do
-            for letterIndex = 1, #word do
-                local letter = string.sub(word, letterIndex, letterIndex)
+        -- local usedLocations = {}
+        -- for _, word in ipairs(words) do
+        --     for letterIndex = 1, #word do
+        --         local letter = string.sub(word, letterIndex, letterIndex)
 
-                local isDirtyLocation = true
-                local randomRowIndex = nil
-                local randomColIndex = nil
-                local locationCode = nil
+        --         local isDirtyLocation = true
+        --         local randomRowIndex = nil
+        --         local randomColIndex = nil
+        --         local locationCode = nil
 
-                -- make sure you do not put 2 letters in the same location
-                while isDirtyLocation == true do
-                    randomRowIndex = Utils.genRandom(1, numRow)
-                    randomColIndex = Utils.genRandom(1, numCol)
-                    locationCode = randomRowIndex .. "-" .. randomColIndex
-                    isDirtyLocation = usedLocations[locationCode]
-                end
+        --         -- make sure you do not put 2 letters in the same location
+        --         while isDirtyLocation == true do
+        --             randomRowIndex = Utils.genRandom(1, numRow)
+        --             randomColIndex = Utils.genRandom(1, numCol)
+        --             locationCode = randomRowIndex .. "-" .. randomColIndex
+        --             isDirtyLocation = usedLocations[locationCode]
+        --         end
 
-                usedLocations[locationCode] = true
-                letterMatrix[randomRowIndex][randomColIndex] = letter
-            end
-        end
+        --         usedLocations[locationCode] = true
+        --         letterMatrix[randomRowIndex][randomColIndex] = letter
+        --     end
+        -- end
 
         print('letterMatrix' .. ' - start');
         print('letterMatrix' .. ' - start');
