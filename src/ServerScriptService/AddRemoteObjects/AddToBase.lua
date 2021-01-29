@@ -121,7 +121,7 @@ local function addRemoteObjects()
             end
         end
 
-        local offsetX = 400
+        local offsetX = 300
         -- local offsetY = 100
         local offsetY = (islandIndex - 1) * 0
 

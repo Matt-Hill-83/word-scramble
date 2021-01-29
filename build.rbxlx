@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-453.389313</X>
-					<Y>110.896675</Y>
-					<Z>-15.4685297</Z>
-					<R00>0.00590418512</R00>
-					<R01>0.00552348979</R01>
-					<R02>0.999967337</R02>
+					<X>-212.846405</X>
+					<Y>139.073883</Y>
+					<Z>-757.385681</Z>
+					<R00>-0.375516951</R00>
+					<R01>-0.407450348</R01>
+					<R02>0.832449019</R02>
 					<R10>-0</R10>
-					<R11>0.999984801</R11>
-					<R12>-0.00552358571</R12>
-					<R20>-0.999982595</R20>
-					<R21>3.26122718e-05</R21>
-					<R22>0.00590409478</R22>
+					<R11>0.898181975</R11>
+					<R12>0.439624012</R12>
+					<R20>-0.92681551</R20>
+					<R21>0.165086269</R21>
+					<R22>-0.337282598</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-455.389282</X>
-					<Y>110.907722</Y>
-					<Z>-15.4803381</Z>
+					<X>-214.511292</X>
+					<Y>138.194641</Y>
+					<Z>-756.711121</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -7429,18 +7429,18 @@ remoteCode.addRemoteObjects()
 									<token name="BottomSurface">10</token>
 									<token name="BottomSurfaceInput">0</token>
 									<CoordinateFrame name="CFrame">
-										<X>-11.9991236</X>
-										<Y>29.9988174</Y>
-										<Z>20.7843037</Z>
-										<R00>-0.500000656</R00>
+										<X>-284</X>
+										<Y>113.189766</Y>
+										<Z>-737.338989</Z>
+										<R00>1</R00>
 										<R01>0</R01>
-										<R02>-0.86602509</R02>
+										<R02>0</R02>
 										<R10>0</R10>
 										<R11>1</R11>
 										<R12>0</R12>
-										<R20>0.86602509</R20>
+										<R20>0</R20>
 										<R21>0</R21>
-										<R22>-0.500000656</R22>
+										<R22>1</R22>
 									</CoordinateFrame>
 									<bool name="CanCollide">true</bool>
 									<bool name="CanTouch">true</bool>
@@ -51203,19 +51203,19 @@ local function addRemoteObjects()
         --     "CAT" --
         -- }
         words = {
-            "CAT" --
-            -- "HAT", --
-            -- "MAT", --
-            -- "PAT" --
+            "CAT", --
+            "HAT", --
+            "MAT", --
+            "PAT" --
         }
     }
 
     local sector1Config = {
 
         words = {
-            -- "NAP", --
-            -- "TAP", --
-            -- "RAP", --
+            "NAP", --
+            "TAP", --
+            "RAP", --
             "ZAP" --
         }
     }
@@ -51293,7 +51293,7 @@ local function addRemoteObjects()
 
     for islandIndex, islandPositioner in ipairs(myPositioners) do
 
-        if islandIndex == 3 then break end
+        -- if islandIndex == 3 then break end
         local newIsland = islandTemplate:Clone()
 
         local anchoredParts = {}
@@ -51306,7 +51306,7 @@ local function addRemoteObjects()
             end
         end
 
-        local offsetX = 400
+        local offsetX = 300
         -- local offsetY = 100
         local offsetY = (islandIndex - 1) * 0
 
@@ -51835,11 +51835,11 @@ local function initPowerUps(miniGameState)
 end
 
 local function addBlockDash(sectorConfig)
-    local words = {sectorConfig.words[1]}
-    -- local words = sectorConfig.words
+    -- local words = {sectorConfig.words[1]}
+    local words = sectorConfig.words
 
     local numBelts = 8
-    local defaultGridSize = {numRow = 12, numCol = 4}
+    local defaultGridSize = {numRow = 6, numCol = 4}
     -- local defaultGridSize = {numRow = 15, numCol = 25}
     local gridSize = defaultGridSize
     -- local gridSize = sectorConfig.gridSize or defaultGridSize
@@ -53121,8 +53121,8 @@ return module
 						<Content name="LinkedSource"><null></null></Content>
 						<string name="Name">Constants</string>
 						<string name="ScriptGuid">{96953b13-b3bc-4e4e-8b6d-ba829b95ce48}</string>
-						<ProtectedString name="Source"><![CDATA[local isDev = true
--- local isDev = false
+						<ProtectedString name="Source"><![CDATA[-- local isDev = true
+local isDev = false
 
 local devGameConfig = {
     singleIsland = false,
@@ -53142,8 +53142,8 @@ local devGameConfig = {
 }
 
 local prodGameConfig = {
-    -- singleIsland = false,
-    singleIsland = true,
+    singleIsland = false,
+    -- singleIsland = true,
     transparency = true,
     walkSpeed = 30,
     fastWalkSpeed = 50,
