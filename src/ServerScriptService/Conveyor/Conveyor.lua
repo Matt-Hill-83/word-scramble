@@ -162,13 +162,16 @@ local function initConveyors(miniGameState)
         local sizeX = numCol * rackLetterSize * letterSpacingFactor
         local sizeZ = numRow * rackLetterSize * letterSpacingFactor
 
-        local dummy = Instance.new("Part")
+        local dummy = Instance.new("Part", sectorFolder)
         dummy.Size = Vector3.new(sizeX, 1, sizeZ)
+        dummy.Anchored = false
         return dummy
     end
 
     local function setFloor(miniGameState, dummy)
-        local totalLength = (dummy.Size.X + beltPlateSpacing) * numBelts
+        local adders = dummy.Size.X * 5
+        local totalLength = (dummy.Size.X + beltPlateSpacing) * numBelts +
+                                adders
         floor.Size = Vector3.new(totalLength, 1, dummy.Size.Z)
         return floor
     end
@@ -178,17 +181,19 @@ local function initConveyors(miniGameState)
                                       dummy.Size.Z)
 
         local stopPlateWelds = Utils.disableEnabledWelds(stopPlate2)
+        local floorWelds = Utils.disableEnabledWelds(floor2)
         stopPlate2.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                 {
                 parent = floor2,
                 child = stopPlate2,
                 offsetConfig = {
                     useParentNearEdge = Vector3.new(1, 1, 0),
-                    useChildNearEdge = Vector3.new(1, -1, 0)
-                    -- offsetAdder = Vector3.new(0, 4, 0)
+                    useChildNearEdge = Vector3.new(1, -1, 0),
+                    offsetAdder = Vector3.new(0, 0, 0)
                 }
             })
         for _, weld in ipairs(stopPlateWelds) do weld.Enabled = true end
+        for _, weld in ipairs(floorWelds) do weld.Enabled = true end
         return stopPlate2
     end
 
