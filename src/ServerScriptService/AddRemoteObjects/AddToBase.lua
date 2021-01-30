@@ -13,20 +13,7 @@ local Entrance = require(Sss.Source.BlockDash.Entrance)
 local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
-    local sector6Config = {
-        -- words = {
-        --     "CAT" --
-        -- }
-        words = {
-            "CAT", --
-            "HAT", --
-            "MAT", --
-            "PAT" --
-        }
-    }
-
     local sector1Config = {
-
         words = {
             "NAP", --
             "TAP", --
@@ -34,14 +21,6 @@ local function addRemoteObjects()
             "ZAP" --
         }
     }
-
-    -- if Constants.gameConfig.isDev then
-    --     sector1Config = {
-    --         words = {
-    --             "CAT" --
-    --         },
-    --     }
-    -- end
 
     local sector2Config = {
         words = {
@@ -80,10 +59,21 @@ local function addRemoteObjects()
         }
     }
 
+    local sector6Config = {
+        -- words = {
+        --     "CAT" --
+        -- }
+        words = {
+            "CAT", --
+            "HAT", --
+            "MAT", --
+            "PAT" --
+        }
+    }
+
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
     local mainSpawn = Utils.getFirstDescendantByName(myStuff, "MainSpawn")
     Entrance.initEntrance(workspace)
-    -- Entrance.initEntrance(mainSpawn)
 
     local islandPositionerFolder = Utils.getFirstDescendantByName(blockDash,
                                                                   "IslandPositioners")
@@ -98,6 +88,53 @@ local function addRemoteObjects()
         sector4Config, --
         sector5Config, --
         sector6Config --
+    }
+
+    local sectorConfigs = {
+        {
+            words = {
+                "MOM", --
+                "MOM", --
+                "MOM", --
+                "MOM" --
+            }
+        }, {
+            words = {
+                "MOM", --
+                "MOM", --
+                "MOM", --
+                "MOM" --
+            }
+        }, {
+            words = {
+                "MOM", --
+                "MOM", --
+                "MOM", --
+                "MOM" --
+            }
+        }, {
+            words = {
+                "MOM", --
+                "MOM", --
+                "MOM", --
+                "MOM" --
+            }
+        }, {
+            words = {
+                "MOM", --
+                "MOM", --
+                "MOM", --
+                "MOM" --
+            }
+        }, {
+            words = {
+                "MOM", --
+                "MOM", --
+                "MOM", --
+                "MOM" --
+            }
+        }
+
     }
 
     Utils.sortListByObjectKey(islandPositioners, "Name")

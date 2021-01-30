@@ -148,7 +148,7 @@ local function initConveyors(miniGameState)
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
     local floor = Utils.getFirstDescendantByName(conveyor, "Floor")
     local numBelts = miniGameState.numBelts
-    local glassTop = Utils.getFirstDescendantByName(conveyor, "GlassTop")
+    local glassTops = Utils.getDescendantsByName(conveyor, "GlassTop")
     local stopPlate = Utils.getFirstDescendantByName(conveyor, "Stop")
     local topFront = Utils.getFirstDescendantByName(conveyor, "TopFront")
     local topBack = Utils.getFirstDescendantByName(conveyor, "TopBack")
@@ -358,7 +358,9 @@ local function initConveyors(miniGameState)
         end
     end
     -- floor.Touched:Connect(start)
-    glassTop.Touched:Connect(start)
+    print('glassTops' .. ' - start');
+    print(glassTops);
+    for _, glassTop in ipairs(glassTops) do glassTop.Touched:Connect(start) end
 end
 
 module.initConveyors = initConveyors
