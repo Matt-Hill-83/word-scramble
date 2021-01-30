@@ -23,10 +23,10 @@ local prodGameConfig = {
 
 local gameConfig = isDev and devGameConfig or prodGameConfig
 
+gameConfig.activeSpawn = activeSpawn
 gameConfig.isDev = isDev
 
 local module = {
-    activeSpawn = activeSpawn,
     gameConfig = gameConfig,
     walkSpeed = gameConfig.walkSpeed,
 

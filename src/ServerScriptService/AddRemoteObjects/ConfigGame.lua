@@ -122,10 +122,23 @@ function module.configGame()
     configGamePass()
     configBadges()
 
-    local allSpawnLocations = module.getDescendantsByType(workspace,
-                                                          "SpawnLocation")
+    local allSpawnLocations = Utils.getDescendantsByType(workspace,
+                                                         "SpawnLocation")
+    print('allSpawnLocations' .. ' - start');
+    print(allSpawnLocations);
     for _, item in ipairs(allSpawnLocations) do
+
+        print('item.Name' .. ' - start');
+        print(item.Name);
+
+        print('Constants.gameConfig.activeSpawn' .. ' - start');
+        print(Constants.gameConfig.activeSpawn);
         if item.Name == Constants.gameConfig.activeSpawn then
+            print('found');
+            print('found');
+            print('found');
+            print('found');
+            print('found');
             item.Enabled = true
         else
             item.Enabled = false
