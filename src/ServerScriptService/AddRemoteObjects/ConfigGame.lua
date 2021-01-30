@@ -114,6 +114,34 @@ function setVisibility()
             CS:RemoveTag(newWall, "BaseWallTransparent")
         end
     end
+
+    local function configNodeWalls(walls)
+        for _, wall in ipairs(walls) do
+            Utils.setItemHeight({item = wall, height = 20})
+            local newWallHeight = 2
+            wall.Transparency = 1
+            -- wall.Transparency = 0.8
+            wall.CanCollide = true
+            wall.Anchored = true
+
+            local newWall = wall:Clone()
+
+            newWall.Parent = wall.Parent
+            newWall.Size = newWall.Size +
+                               Vector3.new(0, newWallHeight - newWall.Size.Y, 0)
+            newWall.Position = newWall.Position +
+                                   Vector3.new(0,
+                                               -(wall.Size.Y - newWall.Size.Y) /
+                                                   2, 0)
+            newWall.Transparency = 0
+            CS:RemoveTag(newWall, "BaseWallTransparent")
+        end
+    end
+    configNodeWalls(CS:GetTagged("NodeWall-Hex"))
+    configNodeWalls(CS:GetTagged("NodeWall-Bridge-Upper"))
+    configNodeWalls(CS:GetTagged("NodeWall-Bridge-Lower"))
+    configNodeWalls(CS:GetTagged("PodWall"))
+
 end
 
 function module.configGame()

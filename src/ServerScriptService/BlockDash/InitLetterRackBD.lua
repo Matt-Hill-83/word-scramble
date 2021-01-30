@@ -184,6 +184,9 @@ local function initLetterRack(miniGameState)
                 local function onTouchBlock(newLetterBlock, miniGameState)
                     local db = {value = false}
                     local function closure(otherPart)
+                        if not otherPart.Parent then
+                            return
+                        end
                         local humanoid =
                             otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
                         if not humanoid then return end

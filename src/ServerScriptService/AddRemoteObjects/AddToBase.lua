@@ -135,8 +135,8 @@ local function addRemoteObjects()
                 parent = islandPositioner,
                 child = newIslandPart,
                 offsetConfig = {
-                    useParentNearEdge = Vector3.new(1, -1, 0),
-                    useChildNearEdge = Vector3.new(-1, 1, 0),
+                    useParentNearEdge = Vector3.new(0, 1, 0),
+                    useChildNearEdge = Vector3.new(0, -1, 0),
                     offsetAdder = Vector3.new(offsetX, offsetY, 0)
                 }
             })
@@ -149,9 +149,7 @@ local function addRemoteObjects()
             child.Anchored = true
             -- 
         end
-
         BlockDash.addBlockDash(sectorConfig)
-
     end
 
     -- Do this last after everything has been created/deleted

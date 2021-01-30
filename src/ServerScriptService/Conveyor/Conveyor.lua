@@ -236,8 +236,12 @@ local function initConveyors(miniGameState)
 
     local function setSidePanels(child, dummy, floor2)
         child.Size = Vector3.new(dummy.Size.X + 6, boxHeight, floor2.Size.Z)
+        local duplicateSidePanel = child:Clone()
+        duplicateSidePanel.Parent = child.Parent
+        duplicateSidePanel.Name = "qqq"
 
         local childWelds = Utils.disableEnabledWelds(child)
+        local childWelds2 = Utils.disableEnabledWelds(duplicateSidePanel)
         local parentWelds = Utils.disableEnabledWelds(floor2)
         child.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                            {
@@ -249,6 +253,23 @@ local function initConveyors(miniGameState)
                     offsetAdder = Vector3.new(0, 0, 0)
                 }
             })
+        print('duplicateSidePanel.Name' .. ' - start');
+        print('duplicateSidePanel.Name' .. ' - start');
+        print('duplicateSidePanel.Name' .. ' - start');
+        print(duplicateSidePanel.Name);
+
+        duplicateSidePanel.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                                        {
+                parent = floor2,
+                child = duplicateSidePanel,
+                offsetConfig = {
+                    useParentNearEdge = Vector3.new(1, 1, 1),
+                    useChildNearEdge = Vector3.new(1, -1, 1),
+                    offsetAdder = Vector3.new(0, 0, 0)
+                }
+            })
+
+        for _, weld in ipairs(childWelds2) do weld.Enabled = true end
         for _, weld in ipairs(childWelds) do weld.Enabled = true end
         for _, weld in ipairs(parentWelds) do weld.Enabled = true end
         return child
@@ -303,6 +324,7 @@ local function initConveyors(miniGameState)
 
     local function start(otherPart)
         if initComplete == false then
+            if not otherPart.Parent then return end
             local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
             if humanoid then
                 initComplete = true
