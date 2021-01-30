@@ -37,8 +37,8 @@ local function addBlockDash(sectorConfig)
     -- local words = {sectorConfig.words[1]}
     local words = sectorConfig.words
 
-    local numBelts = 8
-    local defaultGridSize = {numRow = 4, numCol = 4}
+    local numBelts = 6
+    local defaultGridSize = {numRow = 6, numCol = 4}
     -- local defaultGridSize = {numRow = 15, numCol = 25}
     local gridSize = defaultGridSize
     -- local gridSize = sectorConfig.gridSize or defaultGridSize
