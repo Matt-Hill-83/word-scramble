@@ -151,6 +151,7 @@ local function initConveyors(miniGameState)
     local topFront = Utils.getFirstDescendantByName(conveyor, "TopFront")
     local topBack = Utils.getFirstDescendantByName(conveyor, "TopBack")
     local sidePanel = Utils.getFirstDescendantByName(conveyor, "SidePanel")
+    local invisiWall = Utils.getFirstDescendantByName(conveyor, "InvisiWall")
     local mountInterface = Utils.getFirstDescendantByName(sectorFolder,
                                                           "BaseIsland")
 
@@ -165,6 +166,79 @@ local function initConveyors(miniGameState)
         dummy.Size = Vector3.new(sizeX, 1, sizeZ)
         dummy.Anchored = false
         return dummy
+    end
+
+    local function createInvisiWalls(floor3)
+        local wallHeight = 24
+        local frontWall = invisiWall:Clone()
+        local backWall = invisiWall:Clone()
+        local leftWall = invisiWall:Clone()
+        local rightWall = invisiWall:Clone()
+        frontWall.Parent = invisiWall.Parent
+        backWall.Parent = invisiWall.Parent
+        leftWall.Parent = invisiWall.Parent
+        rightWall.Parent = invisiWall.Parent
+
+        frontWall.Size = Vector3.new(1, wallHeight, floor.Size.Z)
+        backWall.Size = Vector3.new(1, wallHeight, floor.Size.Z)
+        leftWall.Size = Vector3.new(floor.Size.X, wallHeight, 0)
+        rightWall.Size = Vector3.new(floor.Size.X, wallHeight, 0)
+
+        local childWeldsFront = Utils.disableEnabledWelds(frontWall)
+        local childWeldsBack = Utils.disableEnabledWelds(backWall)
+        local childWeldsLeft = Utils.disableEnabledWelds(leftWall)
+        local childWeldsRight = Utils.disableEnabledWelds(rightWall)
+        local parentWelds = Utils.disableEnabledWelds(floor3)
+
+        frontWall.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                               {
+                parent = floor3,
+                child = frontWall,
+                offsetConfig = {
+                    useParentNearEdge = Vector3.new(1, -1, 0),
+                    useChildNearEdge = Vector3.new(1, -1, 0),
+                    offsetAdder = Vector3.new(0, 0, 0)
+                }
+            })
+        backWall.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                              {
+                parent = floor3,
+                child = backWall,
+                offsetConfig = {
+                    useParentNearEdge = Vector3.new(-1, -1, 0),
+                    useChildNearEdge = Vector3.new(-1, -1, 0),
+                    offsetAdder = Vector3.new(0, 0, 0)
+                }
+            })
+
+        leftWall.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                              {
+                parent = floor3,
+                child = leftWall,
+                offsetConfig = {
+                    useParentNearEdge = Vector3.new(0, -1, -1),
+                    useChildNearEdge = Vector3.new(0, -1, -1),
+                    offsetAdder = Vector3.new(0, 0, 0)
+                }
+            })
+
+        rightWall.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                               {
+                parent = floor3,
+                child = rightWall,
+                offsetConfig = {
+                    useParentNearEdge = Vector3.new(0, -1, 1),
+                    useChildNearEdge = Vector3.new(0, -1, 1),
+                    offsetAdder = Vector3.new(0, 0, 0)
+                }
+            })
+
+        for _, weld in ipairs(childWeldsFront) do weld.Enabled = true end
+        for _, weld in ipairs(childWeldsBack) do weld.Enabled = true end
+        for _, weld in ipairs(childWeldsLeft) do weld.Enabled = true end
+        for _, weld in ipairs(childWeldsRight) do weld.Enabled = true end
+        for _, weld in ipairs(parentWelds) do weld.Enabled = true end
+        invisiWall:Destroy()
     end
 
     local function setFloor(dummy)
@@ -184,8 +258,6 @@ local function initConveyors(miniGameState)
                 parent = islandPositioner,
                 child = mountInterface,
                 offsetConfig = {
-                    -- useParentNearEdge = Vector3.new(0, -1, 0),
-                    -- useChildNearEdge = Vector3.new(0, -1, 0),
                     useParentNearEdge = Vector3.new(1, -1, 0),
                     useChildNearEdge = Vector3.new(-1, -1, 0),
                     offsetAdder = Vector3.new(offsetX, offsetY, 0)
@@ -296,6 +368,7 @@ local function initConveyors(miniGameState)
     local function config()
         local dummy = createDummy()
         local floor2 = setFloor(dummy)
+        createInvisiWalls(floor2)
         local stopPlate2 = setStop(stopPlate, dummy, floor2)
         setTopFront(topFront, dummy, floor2)
         setTopBack(topBack, dummy, floor2)
