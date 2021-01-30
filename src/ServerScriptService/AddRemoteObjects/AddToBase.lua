@@ -82,7 +82,8 @@ local function addRemoteObjects()
 
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
     local mainSpawn = Utils.getFirstDescendantByName(myStuff, "MainSpawn")
-    Entrance.initEntrance(mainSpawn)
+    Entrance.initEntrance(workspace)
+    -- Entrance.initEntrance(mainSpawn)
 
     local islandPositionerFolder = Utils.getFirstDescendantByName(blockDash,
                                                                   "IslandPositioners")
