@@ -17,7 +17,6 @@ local function initBeltPlate(props)
     local sectorFolder = miniGameState.sectorFolder
     local beltPlateCFrames = miniGameState.beltPlateCFrames
     local beltPlates = miniGameState.beltPlates
-    -- local islandPositioner = miniGameState.islandPositioner
 
     local speed = 10
 
@@ -42,7 +41,6 @@ local function initBeltPlate(props)
     local sizeX = numCol * rackLetterSize * letterSpacingFactor
     local sizeZ = numRow * rackLetterSize * letterSpacingFactor
 
-    -- make belt think as a platform to stand on
     belt.Size = Vector3.new(sizeX, 1, sizeZ)
     glassPlate.Size = Vector3.new(sizeX, rackLetterSize - 1, sizeZ)
     glassPlate.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
@@ -178,14 +176,17 @@ local function initConveyors(miniGameState)
         mountInterface.Size = floor.Size
         mountInterface.CFrame = floor.CFrame
 
-        local offsetX = 0
+        -- First size the mount, the position the mount with the positioner
+        local offsetX = -20
         local offsetY = 0
         mountInterface.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                     {
                 parent = islandPositioner,
                 child = mountInterface,
                 offsetConfig = {
-                    useParentNearEdge = Vector3.new(1, 1, 0),
+                    -- useParentNearEdge = Vector3.new(0, -1, 0),
+                    -- useChildNearEdge = Vector3.new(0, -1, 0),
+                    useParentNearEdge = Vector3.new(1, -1, 0),
                     useChildNearEdge = Vector3.new(-1, -1, 0),
                     offsetAdder = Vector3.new(offsetX, offsetY, 0)
                 }
@@ -357,9 +358,6 @@ local function initConveyors(miniGameState)
             end
         end
     end
-    -- floor.Touched:Connect(start)
-    print('glassTops' .. ' - start');
-    print(glassTops);
     for _, glassTop in ipairs(glassTops) do glassTop.Touched:Connect(start) end
 end
 

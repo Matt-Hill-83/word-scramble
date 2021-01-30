@@ -77,11 +77,6 @@ local function addRemoteObjects()
     Entrance.initEntrance(workspace)
 
     local islandPositioners = CS:GetTagged("IslandPositioner")
-    -- local islandPositionerFolder = Utils.getFirstDescendantByName(blockDash,
-    --                                                               "IslandPositioners")
-
-    -- local islandPositioners = islandPositionerFolder:GetChildren()
-
     local islandTemplate = Utils.getFromTemplates("IslandTemplate")
     local sectorConfigs = {
         sector1Config, --

@@ -144,7 +144,7 @@ end
 
 local function initWords(miniGameState)
     BlockDashUtils.clearWordRack(miniGameState)
-    local wordsPerCol = 4
+    local wordsPerCol = 2
     local numCol = math.ceil(#miniGameState.words / wordsPerCol)
 
     for colIndex = 1, numCol do
