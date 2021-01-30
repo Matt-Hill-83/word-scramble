@@ -155,11 +155,6 @@ local function initConveyors(miniGameState)
     local sidePanel = Utils.getFirstDescendantByName(conveyor, "SidePanel")
     local mountInterface = Utils.getFirstDescendantByName(sectorFolder,
                                                           "BaseIsland")
-    print('mountInterface' .. ' - start');
-    print(mountInterface);
-
-    print('sectorFolder' .. ' - start');
-    print(sectorFolder);
 
     local boxHeight = rackLetterSize + 1
     local boxPaddingx2 = 2
@@ -279,10 +274,6 @@ local function initConveyors(miniGameState)
                     offsetAdder = Vector3.new(0, 0, 0)
                 }
             })
-        print('duplicateSidePanel.Name' .. ' - start');
-        print('duplicateSidePanel.Name' .. ' - start');
-        print('duplicateSidePanel.Name' .. ' - start');
-        print(duplicateSidePanel.Name);
 
         duplicateSidePanel.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                         {

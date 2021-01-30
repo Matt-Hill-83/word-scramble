@@ -135,19 +135,6 @@ local function addRemoteObjects()
             -- 
         end
         BlockDash.addBlockDash(sectorConfig)
-
-        local offsetX = 0
-        local offsetY = 0
-        -- newIslandPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-        --                            {
-        --         parent = islandPositioner,
-        --         child = newIslandPart,
-        --         offsetConfig = {
-        --             useParentNearEdge = Vector3.new(-1, 1, 1),
-        --             useChildNearEdge = Vector3.new(1, -1, -1),
-        --             offsetAdder = Vector3.new(offsetX, offsetY, 0)
-        --         }
-        --     })
     end
 
     -- Do this last after everything has been created/deleted
