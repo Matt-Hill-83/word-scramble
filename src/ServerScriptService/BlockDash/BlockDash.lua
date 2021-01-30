@@ -43,6 +43,9 @@ local function addBlockDash(sectorConfig)
     local gridSize = defaultGridSize
     -- local gridSize = sectorConfig.gridSize or defaultGridSize
     local sectorFolder = sectorConfig.sectorFolder
+    local islandPositioner = sectorConfig.islandPositioner
+    print('islandPositioner' .. ' - start');
+    print(islandPositioner);
 
     local numRow = gridSize.numRow
     local numCol = gridSize.numCol
@@ -51,6 +54,7 @@ local function addBlockDash(sectorConfig)
     local miniGameState = {
         activeWord = nil,
         sectorFolder = sectorFolder,
+        islandPositioner = islandPositioner,
         activeWordIndex = 1,
         availLetters = {},
         beltPlates = {},
@@ -115,69 +119,6 @@ local function addBlockDash(sectorConfig)
     initPowerUps(miniGameState)
     DoorKey.init(miniGameState)
     LetterGrabber.initLetterGrabbers(miniGameState)
-
-    function test()
-        local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
-        local letterBlockTemplate = Utils.getFirstDescendantByName(
-                                        letterBlockFolder, "BD_normal")
-
-        -- 
-        -- 
-        -- 
-
-        local numFaces = 5
-        local rowWidth = 20
-        local diameter = 300
-
-        local degIncrement = 360 / numFaces
-
-        local stickTemplate = Utils.getFirstDescendantByName(sectorFolder,
-                                                             "Spinner-zzz")
-        local tube = Utils.getFirstDescendantByName(sectorFolder, "Tube")
-
-        stickTemplate.Size = Vector3.new(stickTemplate.Size.X,
-                                         stickTemplate.Size.Y, diameter)
-        tube.Anchored = true
-        for index = 1, numFaces do
-            local newStick = stickTemplate:Clone()
-            newStick.Parent = tube
-
-            newStick.CFrame = newStick.CFrame *
-                                  CFrame.Angles(
-                                      math.rad(degIncrement * (index - 1)), 0, 0)
-
-            local weld = Instance.new("WeldConstraint")
-            weld.Name = "WeldConstraint"
-            weld.Parent = tube
-            weld.Part0 = tube
-            weld.Part1 = newStick
-
-            newStick.Anchored = true
-
-            -- create row of blocks at circumference position
-            for letterIndex = 1, rowWidth do
-                local newLetterBlock = letterBlockTemplate:Clone()
-                newLetterBlock.Size = Vector3.new(8, 8, 8)
-
-                newLetterBlock.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                                            {
-                        parent = newStick,
-                        child = newLetterBlock,
-                        offsetConfig = {
-                            useParentNearEdge = Vector3.new(-1, 0, -1),
-                            useChildNearEdge = Vector3.new(-1, 0, -1),
-                            offsetAdder = Vector3.new(
-                                (letterIndex - 1) * 1.1 * newLetterBlock.Size.X,
-                                0, 0)
-                        }
-                    })
-                newLetterBlock.Parent = newStick
-            end
-        end
-
-        tube.Anchored = false
-    end
-    -- test()
 end
 
 module.addBlockDash = addBlockDash

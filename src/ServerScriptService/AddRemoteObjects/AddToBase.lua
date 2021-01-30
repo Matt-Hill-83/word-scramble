@@ -121,25 +121,10 @@ local function addRemoteObjects()
             end
         end
 
-        local offsetX = 0
-        -- local offsetY = 100
-        local offsetY = 0
-        -- local offsetY = (islandIndex - 1) * 0
-
         newIsland.Parent = myStuff
         newIsland.Name = "Sector-" .. islandPositioner.Name
         local newIslandPart = newIsland.PrimaryPart
-        newIslandPart.Name = "newIsland"
-        newIslandPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                                   {
-                parent = islandPositioner,
-                child = newIslandPart,
-                offsetConfig = {
-                    useParentNearEdge = Vector3.new(0, 1, 0),
-                    useChildNearEdge = Vector3.new(0, -1, 0),
-                    offsetAdder = Vector3.new(offsetX, offsetY, 0)
-                }
-            })
+        -- newIslandPart.Name = "newIsland"
 
         local sectorConfig = sectorConfigs[islandIndex]
         sectorConfig.sectorFolder = newIsland
@@ -150,6 +135,19 @@ local function addRemoteObjects()
             -- 
         end
         BlockDash.addBlockDash(sectorConfig)
+
+        local offsetX = 0
+        local offsetY = 0
+        -- newIslandPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+        --                            {
+        --         parent = islandPositioner,
+        --         child = newIslandPart,
+        --         offsetConfig = {
+        --             useParentNearEdge = Vector3.new(-1, 1, 1),
+        --             useChildNearEdge = Vector3.new(1, -1, -1),
+        --             offsetAdder = Vector3.new(offsetX, offsetY, 0)
+        --         }
+        --     })
     end
 
     -- Do this last after everything has been created/deleted

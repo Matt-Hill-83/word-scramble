@@ -17,6 +17,7 @@ local function initBeltPlate(props)
     local sectorFolder = miniGameState.sectorFolder
     local beltPlateCFrames = miniGameState.beltPlateCFrames
     local beltPlates = miniGameState.beltPlates
+    -- local islandPositioner = miniGameState.islandPositioner
 
     local speed = 10
 
@@ -140,6 +141,7 @@ local function initConveyors(miniGameState)
     local beltPlateSpacing = miniGameState.beltPlateSpacing
     local numRow = miniGameState.numRow
     local numCol = miniGameState.numCol
+    local islandPositioner = miniGameState.islandPositioner
 
     local initComplete = false
 
@@ -151,6 +153,13 @@ local function initConveyors(miniGameState)
     local topFront = Utils.getFirstDescendantByName(conveyor, "TopFront")
     local topBack = Utils.getFirstDescendantByName(conveyor, "TopBack")
     local sidePanel = Utils.getFirstDescendantByName(conveyor, "SidePanel")
+    local mountInterface = Utils.getFirstDescendantByName(sectorFolder,
+                                                          "BaseIsland")
+    print('mountInterface' .. ' - start');
+    print(mountInterface);
+
+    print('sectorFolder' .. ' - start');
+    print(sectorFolder);
 
     local boxHeight = rackLetterSize + 1
     local boxPaddingx2 = 2
@@ -169,7 +178,24 @@ local function initConveyors(miniGameState)
         local paddedDummyLength = (dummy.Size.X + beltPlateSpacing)
         local adders = paddedDummyLength * 1 + boxPaddingx2
         local totalLength = paddedDummyLength * numBelts + adders
+
         floor.Size = Vector3.new(totalLength, 1, dummy.Size.Z + boxPaddingx2)
+        mountInterface.Size = floor.Size
+        mountInterface.CFrame = floor.CFrame
+
+        local offsetX = 0
+        local offsetY = 0
+        mountInterface.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                                    {
+                parent = islandPositioner,
+                child = mountInterface,
+                offsetConfig = {
+                    useParentNearEdge = Vector3.new(1, 1, 0),
+                    useChildNearEdge = Vector3.new(-1, -1, 0),
+                    offsetAdder = Vector3.new(offsetX, offsetY, 0)
+                }
+            })
+
         return floor
     end
 

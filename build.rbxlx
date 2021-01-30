@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1208.48975</X>
-					<Y>67.918602</Y>
-					<Z>556.134216</Z>
-					<R00>-0.284069598</R00>
-					<R01>-0.0604110174</R01>
-					<R02>0.956898689</R02>
-					<R10>1.86264493e-09</R10>
-					<R11>0.998013198</R11>
-					<R12>0.0630066618</R12>
-					<R20>-0.958803654</R20>
-					<R21>0.0178982783</R21>
-					<R22>-0.283505201</R22>
+					<X>-1243.87061</X>
+					<Y>93.755455</Y>
+					<Z>560.098999</Z>
+					<R00>0.722736537</R00>
+					<R01>-0.210115597</R01>
+					<R02>0.658409774</R02>
+					<R10>-0</R10>
+					<R11>0.952665567</R11>
+					<R12>0.304020226</R12>
+					<R20>-0.691123724</R20>
+					<R21>-0.219726533</R21>
+					<R22>0.688526154</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1210.40356</X>
-					<Y>67.7925873</Y>
-					<Z>556.701233</Z>
+					<X>-1245.18762</X>
+					<Y>93.1473236</Y>
+					<Z>558.721741</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -14587,16 +14587,16 @@ remoteCode.addRemoteObjects()
 									<CoordinateFrame name="CFrame">
 										<X>166.994949</X>
 										<Y>194.438934</Y>
-										<Z>272.807648</Z>
-										<R00>0.49969691</R00>
-										<R01>-0.000242159658</R01>
-										<R02>-0.866199911</R02>
+										<Z>272.807678</Z>
+										<R00>0.866202772</R00>
+										<R01>-1.78159935e-05</R01>
+										<R02>0.499695778</R02>
 										<R10>0.000136438699</R10>
 										<R11>1</R11>
 										<R12>-0.000200855735</R12>
-										<R20>0.866202772</R20>
-										<R21>-1.78159935e-05</R21>
-										<R22>0.499695778</R22>
+										<R20>-0.49969691</R20>
+										<R21>0.000242159658</R21>
+										<R22>0.866199911</R22>
 									</CoordinateFrame>
 									<bool name="CanCollide">true</bool>
 									<bool name="CanTouch">true</bool>
@@ -73803,109 +73803,6 @@ end)]]></ProtectedString>
 											<BinaryString name="Tags"></BinaryString>
 										</Properties>
 									</Item>
-									<Item class="SurfaceGui" referent="RBX71f497b0ddaf448eace8238261e80b37">
-										<Properties>
-											<bool name="Active">true</bool>
-											<Ref name="Adornee">null</Ref>
-											<bool name="AlwaysOnTop">false</bool>
-											<BinaryString name="AttributesSerialize"></BinaryString>
-											<bool name="AutoLocalize">true</bool>
-											<Vector2 name="CanvasSize">
-												<X>800</X>
-												<Y>600</Y>
-											</Vector2>
-											<bool name="ClipsDescendants">true</bool>
-											<bool name="Enabled">true</bool>
-											<token name="Face">3</token>
-											<float name="LightInfluence">1</float>
-											<string name="Name">SurfaceGui</string>
-											<float name="PixelsPerStud">50</float>
-											<bool name="ResetOnSpawn">true</bool>
-											<Ref name="RootLocalizationTable">null</Ref>
-											<token name="SizingMode">1</token>
-											<int64 name="SourceAssetId">-1</int64>
-											<BinaryString name="Tags"></BinaryString>
-											<float name="ToolPunchThroughDistance">0</float>
-											<token name="ZIndexBehavior">1</token>
-											<float name="ZOffset">0</float>
-										</Properties>
-										<Item class="TextLabel" referent="RBX83960843d46e4581940c7401e6767ae4">
-											<Properties>
-												<bool name="Active">false</bool>
-												<Vector2 name="AnchorPoint">
-													<X>0</X>
-													<Y>0</Y>
-												</Vector2>
-												<BinaryString name="AttributesSerialize"></BinaryString>
-												<bool name="AutoLocalize">true</bool>
-												<token name="AutomaticSize">0</token>
-												<Color3 name="BackgroundColor3">
-													<R>0.227450997</R>
-													<G>0</G>
-													<B>0.48627454</B>
-												</Color3>
-												<float name="BackgroundTransparency">0</float>
-												<Color3 name="BorderColor3">
-													<R>0.105882362</R>
-													<G>0.164705887</G>
-													<B>0.207843155</B>
-												</Color3>
-												<token name="BorderMode">0</token>
-												<int name="BorderSizePixel">1</int>
-												<bool name="ClipsDescendants">false</bool>
-												<bool name="Draggable">false</bool>
-												<token name="Font">3</token>
-												<int name="LayoutOrder">0</int>
-												<float name="LineHeight">1</float>
-												<string name="Name">TextLabel</string>
-												<Ref name="NextSelectionDown">null</Ref>
-												<Ref name="NextSelectionLeft">null</Ref>
-												<Ref name="NextSelectionRight">null</Ref>
-												<Ref name="NextSelectionUp">null</Ref>
-												<UDim2 name="Position">
-													<XS>0</XS>
-													<XO>0</XO>
-													<YS>0</YS>
-													<YO>0</YO>
-												</UDim2>
-												<bool name="RichText">false</bool>
-												<Ref name="RootLocalizationTable">null</Ref>
-												<float name="Rotation">0</float>
-												<bool name="Selectable">false</bool>
-												<Ref name="SelectionImageObject">null</Ref>
-												<UDim2 name="Size">
-													<XS>1</XS>
-													<XO>0</XO>
-													<YS>1</YS>
-													<YO>0</YO>
-												</UDim2>
-												<token name="SizeConstraint">0</token>
-												<int64 name="SourceAssetId">-1</int64>
-												<BinaryString name="Tags"></BinaryString>
-												<string name="Text">Label</string>
-												<Color3 name="TextColor3">
-													<R>0</R>
-													<G>0</G>
-													<B>0</B>
-												</Color3>
-												<bool name="TextScaled">false</bool>
-												<float name="TextSize">14</float>
-												<Color3 name="TextStrokeColor3">
-													<R>0</R>
-													<G>0</G>
-													<B>0</B>
-												</Color3>
-												<float name="TextStrokeTransparency">1</float>
-												<float name="TextTransparency">0</float>
-												<token name="TextTruncate">0</token>
-												<bool name="TextWrapped">false</bool>
-												<token name="TextXAlignment">2</token>
-												<token name="TextYAlignment">1</token>
-												<bool name="Visible">true</bool>
-												<int name="ZIndex">1</int>
-											</Properties>
-										</Item>
-									</Item>
 								</Item>
 								<Item class="Model" referent="RBX471d4902a1d340b1ab6a2d97b33f546f">
 									<Properties>
@@ -77605,18 +77502,18 @@ end)]]></ProtectedString>
 								<token name="BottomSurface">10</token>
 								<token name="BottomSurfaceInput">0</token>
 								<CoordinateFrame name="CFrame">
-									<X>-1160.27258</X>
-									<Y>56.780262</Y>
-									<Z>564.678711</Z>
-									<R00>3.69687768e-05</R00>
-									<R01>6.72176247e-06</R01>
-									<R02>-1.00000072</R02>
-									<R10>1.86308826e-05</R10>
+									<X>-1160.27014</X>
+									<Y>56.7802582</Y>
+									<Z>564.678894</Z>
+									<R00>3.69686604e-05</R00>
+									<R01>6.72182068e-06</R01>
+									<R02>-1.00000119</R02>
+									<R10>1.86374018e-05</R10>
 									<R11>1</R11>
 									<R12>6.72237366e-06</R12>
-									<R20>1.00000072</R20>
-									<R21>-1.8611514e-05</R21>
-									<R22>3.69690097e-05</R22>
+									<R20>1.00000119</R20>
+									<R21>-1.86050038e-05</R21>
+									<R22>3.69691261e-05</R22>
 								</CoordinateFrame>
 								<bool name="CanCollide">false</bool>
 								<bool name="CanTouch">true</bool>
@@ -77949,32 +77846,6 @@ end)]]></ProtectedString>
 									<BinaryString name="Tags"></BinaryString>
 								</Properties>
 							</Item>
-							<Item class="WeldConstraint" referent="RBXd91d9e34e7a441348732111c3dfd5609">
-								<Properties>
-									<BinaryString name="AttributesSerialize"></BinaryString>
-									<CoordinateFrame name="CFrame0">
-										<X>12.8469238</X>
-										<Y>18.7713127</Y>
-										<Z>130.239746</Z>
-										<R00>-3.69687768e-05</R00>
-										<R01>1.86308826e-05</R01>
-										<R02>-1.00000072</R02>
-										<R10>-6.72176247e-06</R10>
-										<R11>1</R11>
-										<R12>1.8611514e-05</R12>
-										<R20>1.00000072</R20>
-										<R21>6.72237366e-06</R21>
-										<R22>-3.69690097e-05</R22>
-									</CoordinateFrame>
-									<bool name="Enabled">true</bool>
-									<string name="Name">WeldConstraint</string>
-									<Ref name="Part0Internal">RBX962e03c612e247848d8be262d7721e16</Ref>
-									<Ref name="Part1Internal">RBX17dd66e91b7f43969078f4c9b745509b</Ref>
-									<int64 name="SourceAssetId">-1</int64>
-									<int name="State">3</int>
-									<BinaryString name="Tags"></BinaryString>
-								</Properties>
-							</Item>
 						</Item>
 						<Item class="Part" referent="RBX2d06350e68084aca8ac5c72292ba078a">
 							<Properties>
@@ -77989,17 +77860,17 @@ end)]]></ProtectedString>
 								<token name="BottomSurface">10</token>
 								<token name="BottomSurfaceInput">0</token>
 								<CoordinateFrame name="CFrame">
-									<X>-1159.4613</X>
-									<Y>48.4360008</Y>
-									<Z>594.678711</Z>
-									<R00>0.000242916256</R00>
-									<R01>-0.000174719302</R01>
-									<R02>1.00000072</R02>
-									<R10>-3.68582369e-05</R10>
+									<X>-1159.45886</X>
+									<Y>48.435997</Y>
+									<Z>594.678955</Z>
+									<R00>0.000242916489</R00>
+									<R01>-0.000174719331</R01>
+									<R02>1.00000119</R02>
+									<R10>-3.68647561e-05</R10>
 									<R11>1</R11>
 									<R12>0.000174728208</R12>
-									<R20>-1.00000072</R20>
-									<R21>-3.68794463e-05</R21>
+									<R20>-1.00000119</R20>
+									<R21>-3.68729452e-05</R21>
 									<R22>0.000242909431</R22>
 								</CoordinateFrame>
 								<bool name="CanCollide">false</bool>
@@ -78354,32 +78225,6 @@ end)]]></ProtectedString>
 									<string name="Name">WeldConstraint</string>
 									<Ref name="Part0Internal">RBX2d06350e68084aca8ac5c72292ba078a</Ref>
 									<Ref name="Part1Internal">null</Ref>
-									<int64 name="SourceAssetId">-1</int64>
-									<int name="State">3</int>
-									<BinaryString name="Tags"></BinaryString>
-								</Properties>
-							</Item>
-							<Item class="WeldConstraint" referent="RBXa6880660b01447189577b44f074db208">
-								<Properties>
-									<BinaryString name="AttributesSerialize"></BinaryString>
-									<CoordinateFrame name="CFrame0">
-										<X>17.1157227</X>
-										<Y>27.1402206</Y>
-										<Z>-131.049683</Z>
-										<R00>-0.000242916198</R00>
-										<R01>-3.6856607e-05</R01>
-										<R02>1.0000006</R02>
-										<R10>0.000174719287</R10>
-										<R11>1</R11>
-										<R12>3.68810724e-05</R12>
-										<R20>-1.0000006</R20>
-										<R21>0.000174728208</R21>
-										<R22>-0.000242909431</R22>
-									</CoordinateFrame>
-									<bool name="Enabled">true</bool>
-									<string name="Name">WeldConstraint</string>
-									<Ref name="Part0Internal">RBX2d06350e68084aca8ac5c72292ba078a</Ref>
-									<Ref name="Part1Internal">RBX17dd66e91b7f43969078f4c9b745509b</Ref>
 									<int64 name="SourceAssetId">-1</int64>
 									<int name="State">3</int>
 									<BinaryString name="Tags"></BinaryString>
@@ -82209,24 +82054,24 @@ end)]]></ProtectedString>
 							<token name="BottomSurface">0</token>
 							<token name="BottomSurfaceInput">0</token>
 							<CoordinateFrame name="CFrame">
-								<X>-1290.51184</X>
-								<Y>75.5526886</Y>
+								<X>-1290.51196</X>
+								<Y>75.5524292</Y>
 								<Z>577.53009</Z>
-								<R00>-1</R00>
+								<R00>0</R00>
 								<R01>0</R01>
-								<R02>0</R02>
+								<R02>-1</R02>
 								<R10>0</R10>
 								<R11>1</R11>
 								<R12>0</R12>
-								<R20>0</R20>
+								<R20>1</R20>
 								<R21>0</R21>
-								<R22>-1</R22>
+								<R22>0</R22>
 							</CoordinateFrame>
 							<bool name="CanCollide">true</bool>
 							<bool name="CanTouch">true</bool>
 							<bool name="CastShadow">true</bool>
 							<int name="CollisionGroupId">0</int>
-							<Color3uint8 name="Color3uint8">4289832959</Color3uint8>
+							<Color3uint8 name="Color3uint8">4294928076</Color3uint8>
 							<PhysicalProperties name="CustomPhysicalProperties">
 								<CustomPhysics>false</CustomPhysics>
 							</PhysicalProperties>
@@ -82273,38 +82118,22 @@ end)]]></ProtectedString>
 								<Z>8</Z>
 							</Vector3>
 						</Properties>
-						<Item class="Decal" referent="RBX8334a4f629664470b75799d2427ad6a3">
-							<Properties>
-								<BinaryString name="AttributesSerialize"></BinaryString>
-								<Color3 name="Color3">
-									<R>1</R>
-									<G>1</G>
-									<B>1</B>
-								</Color3>
-								<token name="Face">3</token>
-								<string name="Name">Decal</string>
-								<int64 name="SourceAssetId">-1</int64>
-								<BinaryString name="Tags"></BinaryString>
-								<Content name="Texture"><url>rbxassetid://6301008048</url></Content>
-								<float name="Transparency">0</float>
-							</Properties>
-						</Item>
 						<Item class="WeldConstraint" referent="RBXe5c1b7d7eacf46cb8dd78654f94f7c00">
 							<Properties>
 								<BinaryString name="AttributesSerialize"></BinaryString>
 								<CoordinateFrame name="CFrame0">
-									<X>0.000122070312</X>
-									<Y>0.999320984</Y>
-									<Z>-0.000366210938</Z>
-									<R00>9.410036e-05</R00>
-									<R01>2.72605284e-05</R01>
-									<R02>-0.999991059</R02>
+									<X>0.000366210938</X>
+									<Y>0.999580383</Y>
+									<Z>0</Z>
+									<R00>-0.999991059</R00>
+									<R01>3.26404393e-06</R01>
+									<R02>-9.41002654e-05</R02>
 									<R10>3.26136751e-06</R10>
 									<R11>1</R11>
 									<R12>2.72606048e-05</R12>
-									<R20>0.999991059</R20>
-									<R21>-3.26404393e-06</R21>
-									<R22>9.41002654e-05</R22>
+									<R20>9.410036e-05</R20>
+									<R21>2.72605284e-05</R21>
+									<R22>-0.999991059</R22>
 								</CoordinateFrame>
 								<bool name="Enabled">true</bool>
 								<string name="Name">WeldConstraint</string>
@@ -82339,6 +82168,22 @@ end)]]></ProtectedString>
 								<int64 name="SourceAssetId">-1</int64>
 								<int name="State">1</int>
 								<BinaryString name="Tags"></BinaryString>
+							</Properties>
+						</Item>
+						<Item class="Decal" referent="RBXdaeefa1fe6d14277aa728c4c17d45790">
+							<Properties>
+								<BinaryString name="AttributesSerialize"></BinaryString>
+								<Color3 name="Color3">
+									<R>1</R>
+									<G>1</G>
+									<B>1</B>
+								</Color3>
+								<token name="Face">5</token>
+								<string name="Name">Decal</string>
+								<int64 name="SourceAssetId">-1</int64>
+								<BinaryString name="Tags"></BinaryString>
+								<Content name="Texture"><url>rbxassetid://6253993637</url></Content>
+								<float name="Transparency">0</float>
 							</Properties>
 						</Item>
 					</Item>
@@ -85008,35 +84853,34 @@ local function addRemoteObjects()
 
         local offsetX = 0
         -- local offsetY = 100
-        local offsetY = 10
+        local offsetY = 0
         -- local offsetY = (islandIndex - 1) * 0
 
         newIsland.Parent = myStuff
         newIsland.Name = "Sector-" .. islandPositioner.Name
         local newIslandPart = newIsland.PrimaryPart
-        newIslandPart.Name = "newIsland"
-        newIslandPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                                   {
-                parent = islandPositioner,
-                child = newIslandPart,
-                offsetConfig = {
-                    useParentNearEdge = Vector3.new(0, -1, 0),
-                    useChildNearEdge = Vector3.new(0, 1, 0),
-                    offsetAdder = Vector3.new(offsetX, offsetY, 0)
-                }
-            })
+        -- newIslandPart.Name = "newIsland"
 
         local sectorConfig = sectorConfigs[islandIndex]
         sectorConfig.sectorFolder = newIsland
-        sectorConfig.islandPositioner = islandPositioner
+        -- sectorConfig.islandPositioner = islandPositioner
 
         for _, child in pairs(anchoredParts) do
             child.Anchored = true
             -- 
         end
-
         BlockDash.addBlockDash(sectorConfig)
 
+        newIslandPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                                   {
+                parent = islandPositioner,
+                child = newIslandPart,
+                offsetConfig = {
+                    useParentNearEdge = Vector3.new(-1, 1, -1),
+                    useChildNearEdge = Vector3.new(1, -1, 1),
+                    offsetAdder = Vector3.new(offsetX, offsetY, 0)
+                }
+            })
     end
 
     -- Do this last after everything has been created/deleted
@@ -85179,10 +85023,10 @@ function setVisibility()
 
     local function configNodeWalls(walls)
         for _, wall in ipairs(walls) do
-            Utils.setItemHeight({item = wall, height = 20})
-            local newWallHeight = 2
-            wall.Transparency = 1
-            -- wall.Transparency = 0.8
+            Utils.setItemHeight({item = wall, height = 10})
+            local newWallHeight = 1
+            -- wall.Transparency = 1
+            wall.Transparency = 0.8
             wall.CanCollide = true
             wall.Anchored = true
 
@@ -85663,69 +85507,6 @@ local function addBlockDash(sectorConfig)
     initPowerUps(miniGameState)
     DoorKey.init(miniGameState)
     LetterGrabber.initLetterGrabbers(miniGameState)
-
-    function test()
-        local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
-        local letterBlockTemplate = Utils.getFirstDescendantByName(
-                                        letterBlockFolder, "BD_normal")
-
-        -- 
-        -- 
-        -- 
-
-        local numFaces = 5
-        local rowWidth = 20
-        local diameter = 300
-
-        local degIncrement = 360 / numFaces
-
-        local stickTemplate = Utils.getFirstDescendantByName(sectorFolder,
-                                                             "Spinner-zzz")
-        local tube = Utils.getFirstDescendantByName(sectorFolder, "Tube")
-
-        stickTemplate.Size = Vector3.new(stickTemplate.Size.X,
-                                         stickTemplate.Size.Y, diameter)
-        tube.Anchored = true
-        for index = 1, numFaces do
-            local newStick = stickTemplate:Clone()
-            newStick.Parent = tube
-
-            newStick.CFrame = newStick.CFrame *
-                                  CFrame.Angles(
-                                      math.rad(degIncrement * (index - 1)), 0, 0)
-
-            local weld = Instance.new("WeldConstraint")
-            weld.Name = "WeldConstraint"
-            weld.Parent = tube
-            weld.Part0 = tube
-            weld.Part1 = newStick
-
-            newStick.Anchored = true
-
-            -- create row of blocks at circumference position
-            for letterIndex = 1, rowWidth do
-                local newLetterBlock = letterBlockTemplate:Clone()
-                newLetterBlock.Size = Vector3.new(8, 8, 8)
-
-                newLetterBlock.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                                            {
-                        parent = newStick,
-                        child = newLetterBlock,
-                        offsetConfig = {
-                            useParentNearEdge = Vector3.new(-1, 0, -1),
-                            useChildNearEdge = Vector3.new(-1, 0, -1),
-                            offsetAdder = Vector3.new(
-                                (letterIndex - 1) * 1.1 * newLetterBlock.Size.X,
-                                0, 0)
-                        }
-                    })
-                newLetterBlock.Parent = newStick
-            end
-        end
-
-        tube.Anchored = false
-    end
-    -- test()
 end
 
 module.addBlockDash = addBlockDash
@@ -86281,6 +86062,9 @@ local function initLetterRack(miniGameState)
                 local function onTouchBlock(newLetterBlock, miniGameState)
                     local db = {value = false}
                     local function closure(otherPart)
+                        if not otherPart.Parent then
+                            return
+                        end
                         local humanoid =
                             otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
                         if not humanoid then return end
@@ -90464,6 +90248,13 @@ local function initConveyors(miniGameState)
     local topFront = Utils.getFirstDescendantByName(conveyor, "TopFront")
     local topBack = Utils.getFirstDescendantByName(conveyor, "TopBack")
     local sidePanel = Utils.getFirstDescendantByName(conveyor, "SidePanel")
+    local mountInterface = Utils.getFirstDescendantByName(sectorFolder,
+                                                          "BaseIsland")
+    print('mountInterface' .. ' - start');
+    print(mountInterface);
+
+    print('sectorFolder' .. ' - start');
+    print(sectorFolder);
 
     local boxHeight = rackLetterSize + 1
     local boxPaddingx2 = 2
@@ -90482,7 +90273,10 @@ local function initConveyors(miniGameState)
         local paddedDummyLength = (dummy.Size.X + beltPlateSpacing)
         local adders = paddedDummyLength * 1 + boxPaddingx2
         local totalLength = paddedDummyLength * numBelts + adders
+
         floor.Size = Vector3.new(totalLength, 1, dummy.Size.Z + boxPaddingx2)
+        mountInterface.Size = floor.Size
+        mountInterface.CFrame = floor.CFrame
         return floor
     end
 
@@ -90549,8 +90343,12 @@ local function initConveyors(miniGameState)
 
     local function setSidePanels(child, dummy, floor2)
         child.Size = Vector3.new(dummy.Size.X + 6, boxHeight, floor2.Size.Z)
+        local duplicateSidePanel = child:Clone()
+        duplicateSidePanel.Parent = child.Parent
+        duplicateSidePanel.Name = "qqq"
 
         local childWelds = Utils.disableEnabledWelds(child)
+        local childWelds2 = Utils.disableEnabledWelds(duplicateSidePanel)
         local parentWelds = Utils.disableEnabledWelds(floor2)
         child.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                            {
@@ -90562,6 +90360,23 @@ local function initConveyors(miniGameState)
                     offsetAdder = Vector3.new(0, 0, 0)
                 }
             })
+        print('duplicateSidePanel.Name' .. ' - start');
+        print('duplicateSidePanel.Name' .. ' - start');
+        print('duplicateSidePanel.Name' .. ' - start');
+        print(duplicateSidePanel.Name);
+
+        duplicateSidePanel.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                                        {
+                parent = floor2,
+                child = duplicateSidePanel,
+                offsetConfig = {
+                    useParentNearEdge = Vector3.new(1, 1, 1),
+                    useChildNearEdge = Vector3.new(1, -1, 1),
+                    offsetAdder = Vector3.new(0, 0, 0)
+                }
+            })
+
+        for _, weld in ipairs(childWelds2) do weld.Enabled = true end
         for _, weld in ipairs(childWelds) do weld.Enabled = true end
         for _, weld in ipairs(parentWelds) do weld.Enabled = true end
         return child
@@ -90616,6 +90431,7 @@ local function initConveyors(miniGameState)
 
     local function start(otherPart)
         if initComplete == false then
+            if not otherPart.Parent then return end
             local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
             if humanoid then
                 initComplete = true
