@@ -1,6 +1,8 @@
 -- local isDev = true
 local isDev = false
 
+local activeSpawn = "SpawnHubAndSpokes"
+
 local devGameConfig = {
     singleIsland = false,
     -- singleIsland = true,
@@ -8,14 +10,7 @@ local devGameConfig = {
     -- transparency = true,
     fastWalkSpeed = 50,
     -- walkSpeed = 30,
-    walkSpeed = 80,
-
-    disabledSpawns = {
-        -- 'Spawn-S2-Bottom', --
-        -- "SpawnLocation-Block-Race-Top" --
-        "SpawnLocation-Block-Race-Bottom"
-    }
-
+    walkSpeed = 80
 }
 
 local prodGameConfig = {
@@ -23,19 +18,15 @@ local prodGameConfig = {
     -- singleIsland = true,
     transparency = true,
     walkSpeed = 30,
-    fastWalkSpeed = 50,
-
-    disabledSpawns = {
-        -- 'Spawn-S2-Bottom', --
-        "SpawnLocation-Block-Race-Top" --
-        -- "SpawnLocation-Block-Race-Bottom"
-    }
+    fastWalkSpeed = 50
 }
+
 local gameConfig = isDev and devGameConfig or prodGameConfig
 
 gameConfig.isDev = isDev
 
 local module = {
+    activeSpawn = activeSpawn,
     gameConfig = gameConfig,
     walkSpeed = gameConfig.walkSpeed,
 

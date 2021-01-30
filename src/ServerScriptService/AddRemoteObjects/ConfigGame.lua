@@ -122,11 +122,16 @@ function module.configGame()
     configGamePass()
     configBadges()
 
-    local spawns = Constants.gameConfig.disabledSpawns
-    for _, spawn in ipairs(spawns) do
-        local spawnPart = Utils.getFirstDescendantByName(workspace, spawn)
-        if spawnPart then spawnPart.Enabled = false end
+    local allSpawnLocations = module.getDescendantsByType(workspace,
+                                                          "SpawnLocation")
+    for _, item in ipairs(allSpawnLocations) do
+        if item.Name == Constants.gameConfig.activeSpawn then
+            item.Enabled = true
+        else
+            item.Enabled = false
+        end
     end
+
 end
 
 return module
