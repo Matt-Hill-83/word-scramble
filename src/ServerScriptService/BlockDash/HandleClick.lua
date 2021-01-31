@@ -87,6 +87,8 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         local clickedBlockClone = clickedLetter:Clone()
         clickedBlockClone.Parent = clickedLetter.Parent
         clickedBlockClone.CanCollide = false
+        local fire = Instance.new("Fire", clickedBlockClone)
+        fire.Size = 20
 
         Utils.enableChildWelds({part = clickedBlockClone, enabled = false})
 
