@@ -39,7 +39,6 @@ local function addBlockDash(sectorConfig)
 
     local numBelts = 6
     local defaultGridSize = {numRow = 12, numCol = 4}
-    -- local defaultGridSize = {numRow = 15, numCol = 25}
     local gridSize = defaultGridSize
     -- local gridSize = sectorConfig.gridSize or defaultGridSize
     local sectorFolder = sectorConfig.sectorFolder
@@ -54,6 +53,7 @@ local function addBlockDash(sectorConfig)
     local miniGameState = {
         activeWord = nil,
         sectorFolder = sectorFolder,
+        wordsPerCol = 3,
         islandPositioner = islandPositioner,
         activeWordIndex = 1,
         availLetters = {},
