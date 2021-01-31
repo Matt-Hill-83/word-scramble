@@ -56,10 +56,11 @@ local function addBlockDash(sectorConfig)
     local totalCol = math.floor(islandPositioner.Size.X / rackLetterSize)
     print('totalCol' .. ' - start');
     print(totalCol);
-    -- local colPerBelt = 2
-    local numBelts = 2
-    -- local numBelts = numRow / colPerBelt
-    local numCol = totalCol / numBelts
+
+    local numCol = 2
+    local numBelts = totalCol / numCol
+    -- local numBelts = 2
+    -- local numCol = totalCol / numBelts
 
     local miniGameState = {
         activeStyle = "BD_available",

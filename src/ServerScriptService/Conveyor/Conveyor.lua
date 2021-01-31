@@ -252,15 +252,15 @@ local function initConveyors(miniGameState)
         mountInterface.CFrame = floor.CFrame
 
         -- First size the mount, the position the mount with the positioner
-        local offsetX = -20
+        local offsetX = 0
         local offsetY = 0
         mountInterface.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                     {
                 parent = islandPositioner,
                 child = mountInterface,
                 offsetConfig = {
-                    useParentNearEdge = Vector3.new(1, -1, 0),
-                    useChildNearEdge = Vector3.new(1, -1, 0),
+                    useParentNearEdge = Vector3.new(1, -1, 1),
+                    useChildNearEdge = Vector3.new(1, -1, 1),
                     offsetAdder = Vector3.new(offsetX, offsetY, 0)
                 }
             })
