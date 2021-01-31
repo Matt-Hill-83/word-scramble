@@ -56,7 +56,7 @@ local function initKey(miniGameState)
     -- Reset keybox when door is touched
     Replicator.init(newReplicator, callBack(miniGameState))
 
-    local door = Utils.getFirstDescendantByName(sectorFolder, "LockedDoor")
+    local door = Utils.getFirstDescendantByName(sectorFolder, "LockedDoor2")
                      .PrimaryPart
 
     local function onTouchDoor(otherPart)
