@@ -144,11 +144,11 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                     offsetConfig = {
                         useParentNearEdge = Vector3.new(1, -1, 0),
                         useChildNearEdge = Vector3.new(-1, 1, 0),
-                        offsetAdder = Vector3.new(-80, 30, 0)
+                        offsetAdder = Vector3.new(-10, 15, 0)
                     }
                 })
 
-            newGem.Handle.Anchored = false
+            -- newGem.Handle.Anchored = false
 
             local rand = Utils.genRandom(1, #Constants.gemColors)
             newGem.Handle.Color = Constants.gemColors[rand]

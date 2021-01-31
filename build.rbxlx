@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-311.747467</X>
-					<Y>253.023865</Y>
-					<Z>297.30899</Z>
-					<R00>-0.0210128203</R00>
-					<R01>0.406652659</R01>
-					<R02>-0.913341284</R02>
-					<R10>9.31322575e-10</R10>
-					<R11>0.913543046</R11>
-					<R12>0.406742424</R12>
-					<R20>0.999779284</R20>
-					<R21>0.00854680408</R21>
-					<R22>-0.0191961136</R22>
+					<X>-309.751434</X>
+					<Y>410.281799</Y>
+					<Z>31.4543991</Z>
+					<R00>-0.836795151</R00>
+					<R01>0.256180197</R01>
+					<R02>-0.483885944</R02>
+					<R10>1.49011612e-08</R10>
+					<R11>0.883783937</R11>
+					<R12>0.467895269</R12>
+					<R20>0.547516108</R20>
+					<R21>0.391532481</R21>
+					<R22>-0.73954612</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-309.920837</X>
-					<Y>252.210403</Y>
-					<Z>297.347382</Z>
+					<X>-308.78363</X>
+					<Y>409.345978</Y>
+					<Z>32.9335403</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -54068,18 +54068,18 @@ end)]]></ProtectedString>
 							<token name="BottomSurface">0</token>
 							<token name="BottomSurfaceInput">0</token>
 							<CoordinateFrame name="CFrame">
-								<X>-192.745789</X>
-								<Y>288.747925</Y>
-								<Z>-160.730576</Z>
-								<R00>-1.00000024</R00>
-								<R01>8.65437583e-12</R01>
-								<R02>2.38418579e-07</R02>
-								<R10>-8.63306735e-12</R10>
-								<R11>0.999996424</R11>
-								<R12>-1.74622414e-10</R12>
-								<R20>-2.38418579e-07</R20>
-								<R21>1.74622955e-10</R21>
-								<R22>-1.00000024</R22>
+								<X>-118.462463</X>
+								<Y>249.751022</Y>
+								<Z>224.829559</Z>
+								<R00>-0.866025507</R00>
+								<R01>1.59652888e-10</R01>
+								<R02>-0.499999881</R02>
+								<R10>-1.72874475e-11</R10>
+								<R11>1</R11>
+								<R12>3.4924863e-10</R12>
+								<R20>0.499999911</R20>
+								<R21>3.11101922e-10</R21>
+								<R22>-0.866025448</R22>
 							</CoordinateFrame>
 							<bool name="CanCollide">true</bool>
 							<bool name="CanTouch">true</bool>
@@ -81344,6 +81344,8 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         local clickedBlockClone = clickedLetter:Clone()
         clickedBlockClone.Parent = clickedLetter.Parent
         clickedBlockClone.CanCollide = false
+        local fire = Instance.new("Fire", clickedBlockClone)
+        fire.Size = 20
 
         Utils.enableChildWelds({part = clickedBlockClone, enabled = false})
 
@@ -81399,11 +81401,11 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                     offsetConfig = {
                         useParentNearEdge = Vector3.new(1, -1, 0),
                         useChildNearEdge = Vector3.new(-1, 1, 0),
-                        offsetAdder = Vector3.new(-80, 30, 0)
+                        offsetAdder = Vector3.new(-10, 10, 0)
                     }
                 })
 
-            newGem.Handle.Anchored = false
+            -- newGem.Handle.Anchored = false
 
             local rand = Utils.genRandom(1, #Constants.gemColors)
             newGem.Handle.Color = Constants.gemColors[rand]
