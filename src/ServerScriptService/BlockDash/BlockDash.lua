@@ -51,31 +51,30 @@ local function addBlockDash(sectorConfig)
     local rackLetterSize = 8
 
     local miniGameState = {
+        activeStyle = "BD_available",
         activeWord = nil,
-        sectorFolder = sectorFolder,
-        wordsPerCol = 3,
-        islandPositioner = islandPositioner,
         activeWordIndex = 1,
         availLetters = {},
-        beltPlates = {},
-        wordLetterSize = 16,
-        rackLetterSize = rackLetterSize,
-        letterSpacingFactor = 1.05,
-        beltPlateSpacing = rackLetterSize / 8,
-        numBelts = numBelts,
         availWords = {},
         beltPlateCFrames = {},
+        beltPlates = {},
+        beltPlateSpacing = rackLetterSize / 8,
+        canResetBlocks = true,
         currentLetterIndex = 1,
         foundLetters = {},
+        inActiveStyle = "BD_normal", -- Rack starts with this one:
         initCompleted = false,
-        renderedWords = {},
-        rackLetterBlockObjs = {},
-        numRow = numRow,
+        islandPositioner = islandPositioner,
+        letterSpacingFactor = 1.05,
+        numBelts = numBelts,
         numCol = numCol,
-        activeStyle = "BD_available",
-        -- Rack starts with this one:
-        inActiveStyle = "BD_normal",
-        canResetBlocks = true
+        numRow = numRow,
+        rackLetterBlockObjs = {},
+        rackLetterSize = rackLetterSize,
+        renderedWords = {},
+        sectorFolder = sectorFolder,
+        wordLetterSize = 16,
+        wordsPerCol = 3
     }
     miniGameState.words = words
 

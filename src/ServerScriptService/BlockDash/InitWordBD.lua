@@ -26,6 +26,8 @@ local function initWord(props)
     local colIndex = props.colIndex
 
     local sectorFolder = miniGameState.sectorFolder
+    local wordsPerCol = miniGameState.wordsPerCol
+    local words = miniGameState.words
 
     local runTimeWordFolder = getRunTimeWordFolder(miniGameState)
     miniGameState.runTimeWordFolder = runTimeWordFolder
@@ -48,23 +50,28 @@ local function initWord(props)
     newWord.Parent = runTimeWordFolder
 
     local spacingFactorY = 1.1
-    local spacingFactorX = 0.8
+    local spacingFactorX = 1.1
     local offsetY = miniGameState.wordLetterSize * spacingFactorY
 
     local totalLetterWidth = miniGameState.wordLetterSize * spacingFactorX
     local maxWordLength = 3
-    local wordOffset = miniGameState.wordLetterSize * 1.1
+    local wordOffset = miniGameState.wordLetterSize * 0.8
+
+    -- Use this to center all words
+    local totalWidth = totalLetterWidth * maxWordLength *
+                           math.ceil(#words / wordsPerCol)
 
     local colOffsetX = (colIndex - 1) *
-                           (totalLetterWidth * maxWordLength + wordOffset)
+                           (totalLetterWidth * maxWordLength + wordOffset) -
+                           totalWidth / 2
 
     wordBench.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                            {
             parent = wordPositioner,
             child = wordBench,
             offsetConfig = {
-                useParentNearEdge = Vector3.new(1, 1, 1),
-                useChildNearEdge = Vector3.new(1, 1, 1),
+                useParentNearEdge = Vector3.new(0, 1, 0),
+                useChildNearEdge = Vector3.new(0, 1, 0),
                 offsetAdder = Vector3.new(0, offsetY * (wordIndex - 1),
                                           colOffsetX)
             }
@@ -145,8 +152,9 @@ end
 local function initWords(miniGameState)
     BlockDashUtils.clearWordRack(miniGameState)
     local wordsPerCol = miniGameState.wordsPerCol
-    local numCol = math.ceil(#miniGameState.words / wordsPerCol)
+    local words = miniGameState.words
 
+    local numCol = math.ceil(#words / wordsPerCol)
     for colIndex = 1, numCol do
         local startIndex = ((colIndex - 1) * wordsPerCol) + 1
         local endIndex = startIndex + wordsPerCol - 1
