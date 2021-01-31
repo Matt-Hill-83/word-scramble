@@ -32,15 +32,15 @@ local function initLetterRack(miniGameState)
 
     -- populate matrix with letters
     local totalLetterMatrix = {}
-    -- combine all plates into a single matrix and populate matrix with random letters
 
+    -- combine all plates into a single matrix and populate matrix with random letters
     local lettersNotInWords = LetterFallUtils.getLettersNotInWords(words)
 
-    for _ = 1, numRow * numBelts do
-        -- local totalCol = numBelts * numCol
+    local totalRows = numRow * numBelts
+
+    for _ = 1, totalRows do
         local row = {}
         for _ = 1, numCol do
-            -- for _ = 1, totalCol do
             table.insert(row, LetterFallUtils.getRandomLetter(lettersNotInWords))
         end
         table.insert(totalLetterMatrix, row)
@@ -58,7 +58,7 @@ local function initLetterRack(miniGameState)
 
             -- make sure you do not put 2 letters in the same location
             while isDirtyLocation == true do
-                randomRowIndex = Utils.genRandom(1, numRow)
+                randomRowIndex = Utils.genRandom(1, totalRows)
                 randomColIndex = Utils.genRandom(1, numCol)
                 locationCode = randomRowIndex .. "-" .. randomColIndex
                 isDirtyLocation = usedLocations[locationCode]
@@ -69,7 +69,6 @@ local function initLetterRack(miniGameState)
         end
     end
 
-    -- Populate each belt plate with a complete grid with all words
     for beltPlateIndex, beltPlate in ipairs(beltPlates) do
         -- if i == 2 then return end
         local beltTemplate = Utils.getFirstDescendantByName(beltPlate, "Belt")
@@ -79,46 +78,11 @@ local function initLetterRack(miniGameState)
         local spacingFactorX = letterSpacingFactor
         local spacingFactorZ = letterSpacingFactor
 
-        -- local lettersNotInWords = LetterFallUtils.getLettersNotInWords(words)
-        -- local letterMatrix = {}
         local startIndex = ((beltPlateIndex - 1) * numRow) + 1
         local endIndex = startIndex + numRow - 1
         local letterMatrix = {
             table.unpack(totalLetterMatrix, startIndex, endIndex)
         }
-
-        -- populate matrix with random letters
-        -- for _ = 1, numRow do
-        --     local row = {}
-        --     for _ = 1, numCol do
-        --         table.insert(row,
-        --                      LetterFallUtils.getRandomLetter(lettersNotInWords))
-        --     end
-        --     table.insert(letterMatrix, row)
-        -- end
-
-        -- local usedLocations = {}
-        -- for _, word in ipairs(words) do
-        --     for letterIndex = 1, #word do
-        --         local letter = string.sub(word, letterIndex, letterIndex)
-
-        --         local isDirtyLocation = true
-        --         local randomRowIndex = nil
-        --         local randomColIndex = nil
-        --         local locationCode = nil
-
-        --         -- make sure you do not put 2 letters in the same location
-        --         while isDirtyLocation == true do
-        --             randomRowIndex = Utils.genRandom(1, numRow)
-        --             randomColIndex = Utils.genRandom(1, numCol)
-        --             locationCode = randomRowIndex .. "-" .. randomColIndex
-        --             isDirtyLocation = usedLocations[locationCode]
-        --         end
-
-        --         usedLocations[locationCode] = true
-        --         letterMatrix[randomRowIndex][randomColIndex] = letter
-        --     end
-        -- end
 
         for colIndex = 1, numCol do
             for rowIndex = 1, numRow do
