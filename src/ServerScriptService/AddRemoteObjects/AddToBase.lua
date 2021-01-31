@@ -90,14 +90,15 @@ local function addRemoteObjects()
     local sectorConfigs = {
         {
             words = {
-                "MOM", --
-                "MOM", --
-                "MOM", --
-                "MOM", --
-                "MOM", --
-                "MOM", --
-                "MOM", --
                 "MOM" --
+                -- "MOM", --
+                -- "MOM", --
+                -- "MOM", --
+                -- "MOM", --
+                -- "MOM", --
+                -- "MOM", --
+                -- "MOM", --
+                -- "MOM" --
             }
         }, {
             words = {
