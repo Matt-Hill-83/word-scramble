@@ -93,6 +93,10 @@ local function addRemoteObjects()
                 "MOM", --
                 "MOM", --
                 "MOM", --
+                "MOM", --
+                "MOM", --
+                "MOM", --
+                "MOM", --
                 "MOM" --
             }
         }, {

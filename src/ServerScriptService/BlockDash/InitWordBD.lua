@@ -48,7 +48,7 @@ local function initWord(props)
     newWord.Parent = runTimeWordFolder
 
     local spacingFactorY = 1.1
-    local spacingFactorX = 1.1
+    local spacingFactorX = 1.05
     local offsetY = miniGameState.wordLetterSize * spacingFactorY
 
     local totalLetterWidth = miniGameState.wordLetterSize * spacingFactorX
@@ -144,7 +144,7 @@ end
 
 local function initWords(miniGameState)
     BlockDashUtils.clearWordRack(miniGameState)
-    local wordsPerCol = 2
+    local wordsPerCol = 4
     local numCol = math.ceil(#miniGameState.words / wordsPerCol)
 
     for colIndex = 1, numCol do
