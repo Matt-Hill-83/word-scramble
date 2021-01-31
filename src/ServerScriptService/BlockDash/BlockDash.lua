@@ -37,30 +37,16 @@ local function addBlockDash(sectorConfig)
     -- local words = {sectorConfig.words[1]}
     local words = sectorConfig.words
 
-    local defaultGridSize = {numRow = 12, numCol = 4}
     local gridSize = defaultGridSize
-    -- local gridSize = sectorConfig.gridSize or defaultGridSize
     local sectorFolder = sectorConfig.sectorFolder
     local rackLetterSize = 8
     local islandPositioner = sectorConfig.islandPositioner
-    print('islandPositioner' .. ' - start');
-    print(islandPositioner);
 
-    -- local numRow = 3
-    -- local numCol = 4
-
-    -- local numBelts = 2
     local numRow = math.floor(islandPositioner.Size.Z / rackLetterSize)
-    print('numRow' .. ' - start');
-    print(numRow);
     local totalCol = math.floor(islandPositioner.Size.X / rackLetterSize)
-    print('totalCol' .. ' - start');
-    print(totalCol);
 
     local numCol = 2
     local numBelts = totalCol / numCol
-    -- local numBelts = 2
-    -- local numCol = totalCol / numBelts
 
     local miniGameState = {
         activeStyle = "BD_available",
@@ -70,8 +56,8 @@ local function addBlockDash(sectorConfig)
         availWords = {},
         beltPlateCFrames = {},
         beltPlates = {},
-        beltPlateSpacing = 2,
-        -- beltPlateSpacing = rackLetterSize / 8,
+        -- beltPlateSpacing = 2,
+        beltPlateSpacing = rackLetterSize / 8,
         canResetBlocks = true,
         currentLetterIndex = 1,
         foundLetters = {},
