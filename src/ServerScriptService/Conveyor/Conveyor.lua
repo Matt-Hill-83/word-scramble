@@ -264,7 +264,6 @@ local function initConveyors(miniGameState)
                     offsetAdder = Vector3.new(offsetX, offsetY, 0)
                 }
             })
-
         return floor
     end
 
