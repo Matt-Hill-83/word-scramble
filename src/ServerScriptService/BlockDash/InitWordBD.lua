@@ -28,6 +28,7 @@ local function initWord(props)
     local sectorFolder = miniGameState.sectorFolder
     local wordsPerCol = miniGameState.wordsPerCol
     local words = miniGameState.words
+    local wordLetterSize = miniGameState.wordLetterSize
 
     local runTimeWordFolder = getRunTimeWordFolder(miniGameState)
     miniGameState.runTimeWordFolder = runTimeWordFolder
@@ -51,15 +52,15 @@ local function initWord(props)
 
     local spacingFactorY = 1.1
     local spacingFactorX = 1.1
-    local offsetY = miniGameState.wordLetterSize * spacingFactorY
+    local offsetY = wordLetterSize * spacingFactorY
 
-    local totalLetterWidth = miniGameState.wordLetterSize * spacingFactorX
+    local totalLetterWidth = wordLetterSize * spacingFactorX
     local maxWordLength = 3
-    local wordOffset = miniGameState.wordLetterSize * 0.8
+    local wordOffset = wordLetterSize * 0.8
 
     -- Use this to center all words
     local totalWidth = totalLetterWidth * maxWordLength *
-                           math.ceil(#words / wordsPerCol)
+                           math.ceil(#words / wordsPerCol) - wordLetterSize / 2
 
     local colOffsetX = (colIndex - 1) *
                            (totalLetterWidth * maxWordLength + wordOffset) -
@@ -88,9 +89,8 @@ local function initWord(props)
 
         local newLetter = letterBlockTemplate:Clone()
         newLetter.Name = "wordLetter-" .. letterNameStub
-        newLetter.Size = Vector3.new(miniGameState.wordLetterSize,
-                                     miniGameState.wordLetterSize,
-                                     miniGameState.wordLetterSize)
+        newLetter.Size = Vector3.new(wordLetterSize, wordLetterSize,
+                                     wordLetterSize)
 
         local offsetX =
             -(newLetter.Size.X * (letterIndex - 1) * spacingFactorX) - 0
