@@ -168,7 +168,7 @@ local function initConveyors(miniGameState)
     local mountInterface = Utils.getFirstDescendantByName(sectorFolder,
                                                           "BaseIsland")
 
-    local boxHeight = rackLetterSize + 4
+    local boxHeight = rackLetterSize + 2
 
     local function createDummy()
         local sizeX = numCol * rackLetterSize * letterSpacingFactor
