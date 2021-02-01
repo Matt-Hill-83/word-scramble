@@ -304,11 +304,6 @@ local function initConveyors(miniGameState)
     local function setTopFront(topFront2, dummy, floor2)
         topFront2.Size = Vector3.new(dummy.Size.X + 6, 1, floor2.Size.Z)
         local door = lockedDoor.PrimaryPart
-        print('door' .. ' - start');
-        print('door' .. ' - start');
-        print('door' .. ' - start');
-        print('door' .. ' - start');
-        print(door);
 
         local childWelds = Utils.disableEnabledWelds(topFront2)
         local childWelds2 = Utils.disableEnabledWelds(door)
@@ -405,7 +400,7 @@ local function initConveyors(miniGameState)
         local stopPlate2 = setStop(stopPlate, dummy, floor2)
         setTopFront(topFront, dummy, floor2)
         setTopBack(topBack, dummy, floor2)
-        -- setSidePanels(sidePanel, dummy, floor2)
+        setSidePanels(sidePanel, dummy, floor2)
 
         for beltPlateIndex = 1, numBelts do
             local offset = Vector3.new(-(dummy.Size.X + beltPlateSpacing) *
@@ -440,31 +435,41 @@ local function initConveyors(miniGameState)
     end
     config()
 
-    -- local beltPlates = Utils.getDescendantsByName(conveyor, "NewBeltPlate")
-    -- for _, beltPlate in ipairs(beltPlates) do
-    --     local belt = beltPlate.Belt
-    --     belt.BeltWeld.Enabled = false
-    -- end
+    -- local startAll = false
+    local startAll = true
 
-    local function start(otherPart)
-        if initComplete == false then
-            if not otherPart.Parent then return end
-            local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
-            if humanoid then
-                initComplete = true
-                local beltPlates = Utils.getDescendantsByName(conveyor,
-                                                              "NewBeltPlate")
-                for _, beltPlate in ipairs(beltPlates) do
-                    local belt = beltPlate.Belt
-                    belt.BeltWeld.Enabled = false
-                end
-
-                local player = Utils.getPlayerFromHumanoid(humanoid)
-                Utils.destroyTools(player, "key%-%-")
-            end
+    if startAll then
+        local beltPlates = Utils.getDescendantsByName(conveyor, "NewBeltPlate")
+        for _, beltPlate in ipairs(beltPlates) do
+            local belt = beltPlate.Belt
+            belt.BeltWeld.Enabled = false
         end
     end
-    for _, glassTop in ipairs(glassTops) do glassTop.Touched:Connect(start) end
+
+    if not startAll then
+        local function start(otherPart)
+            if initComplete == false then
+                if not otherPart.Parent then return end
+                local humanoid = otherPart.Parent:FindFirstChildWhichIsA(
+                                     "Humanoid")
+                if humanoid then
+                    initComplete = true
+                    local beltPlates = Utils.getDescendantsByName(conveyor,
+                                                                  "NewBeltPlate")
+                    for _, beltPlate in ipairs(beltPlates) do
+                        local belt = beltPlate.Belt
+                        belt.BeltWeld.Enabled = false
+                    end
+
+                    local player = Utils.getPlayerFromHumanoid(humanoid)
+                    Utils.destroyTools(player, "key%-%-")
+                end
+            end
+        end
+        for _, glassTop in ipairs(glassTops) do
+            glassTop.Touched:Connect(start)
+        end
+    end
 end
 
 module.initConveyors = initConveyors
