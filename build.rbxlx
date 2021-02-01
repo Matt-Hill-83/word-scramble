@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-99.3077393</X>
-					<Y>242.35675</Y>
-					<Z>-391.642181</Z>
-					<R00>-0.99627924</R00>
-					<R01>-0.0355400592</R01>
-					<R02>0.0785155147</R02>
+					<X>-1098.7345</X>
+					<Y>144.500534</Y>
+					<Z>633.988281</Z>
+					<R00>-0.080434449</R00>
+					<R01>-0.121470913</R01>
+					<R02>0.989330649</R02>
 					<R10>-0</R10>
-					<R11>0.911015868</R11>
-					<R12>0.412371457</R12>
-					<R20>-0.0861845762</R20>
-					<R21>0.410837114</R21>
-					<R22>-0.907626092</R22>
+					<R11>0.992546618</R11>
+					<R12>0.121865772</R12>
+					<R20>-0.996759892</R20>
+					<R21>0.00980220642</R21>
+					<R22>-0.079834938</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-99.4647751</X>
-					<Y>241.531982</Y>
-					<Z>-389.826874</Z>
+					<X>-1100.71313</X>
+					<Y>144.256805</Y>
+					<Z>634.147949</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -35438,7 +35438,7 @@ end)]]></ProtectedString>
 									<Z>0</Z>
 								</Vector3>
 								<int64 name="SourceAssetId">-1</int64>
-								<BinaryString name="Tags">VHJhbnNwYXJlbnQ=</BinaryString>
+								<BinaryString name="Tags">VHJhbnNwYXJlbnQASXNsYW5kUG9zaXRpb25lcg==</BinaryString>
 								<float name="TopParamA">-0.5</float>
 								<float name="TopParamB">0.5</float>
 								<token name="TopSurface">10</token>
@@ -36231,162 +36231,6 @@ end)]]></ProtectedString>
 									</Properties>
 								</Item>
 							</Item>
-						</Item>
-						<Item class="Part" referent="RBXe78bd3275a84441d8982a92a278eca85">
-							<Properties>
-								<bool name="Anchored">true</bool>
-								<BinaryString name="AttributesSerialize"></BinaryString>
-								<float name="BackParamA">-0.5</float>
-								<float name="BackParamB">0.5</float>
-								<token name="BackSurface">10</token>
-								<token name="BackSurfaceInput">0</token>
-								<float name="BottomParamA">-0.5</float>
-								<float name="BottomParamB">0.5</float>
-								<token name="BottomSurface">10</token>
-								<token name="BottomSurfaceInput">0</token>
-								<CoordinateFrame name="CFrame">
-									<X>-74.8191757</X>
-									<Y>408.923492</Y>
-									<Z>80.2085266</Z>
-									<R00>1.0000006</R00>
-									<R01>8.00195266e-06</R01>
-									<R02>-0.000353099895</R02>
-									<R10>-8.08504501e-06</R10>
-									<R11>1</R11>
-									<R12>-0.000235819287</R12>
-									<R20>0.000352503848</R20>
-									<R21>0.000235821819</R21>
-									<R22>1.00000083</R22>
-								</CoordinateFrame>
-								<bool name="CanCollide">false</bool>
-								<bool name="CanTouch">true</bool>
-								<bool name="CastShadow">true</bool>
-								<int name="CollisionGroupId">0</int>
-								<Color3uint8 name="Color3uint8">4288672745</Color3uint8>
-								<PhysicalProperties name="CustomPhysicalProperties">
-									<CustomPhysics>false</CustomPhysics>
-								</PhysicalProperties>
-								<float name="FrontParamA">-0.5</float>
-								<float name="FrontParamB">0.5</float>
-								<token name="FrontSurface">10</token>
-								<token name="FrontSurfaceInput">0</token>
-								<float name="LeftParamA">-0.5</float>
-								<float name="LeftParamB">0.5</float>
-								<token name="LeftSurface">10</token>
-								<token name="LeftSurfaceInput">0</token>
-								<bool name="Locked">false</bool>
-								<bool name="Massless">false</bool>
-								<token name="Material">880</token>
-								<string name="Name">Hill</string>
-								<float name="Reflectance">0</float>
-								<float name="RightParamA">-0.5</float>
-								<float name="RightParamB">0.5</float>
-								<token name="RightSurface">10</token>
-								<token name="RightSurfaceInput">0</token>
-								<int name="RootPriority">0</int>
-								<Vector3 name="RotVelocity">
-									<X>0</X>
-									<Y>0</Y>
-									<Z>0</Z>
-								</Vector3>
-								<int64 name="SourceAssetId">-1</int64>
-								<BinaryString name="Tags">VHJhbnNwYXJlbnQ=</BinaryString>
-								<float name="TopParamA">-0.5</float>
-								<float name="TopParamB">0.5</float>
-								<token name="TopSurface">10</token>
-								<token name="TopSurfaceInput">0</token>
-								<float name="Transparency">0</float>
-								<Vector3 name="Velocity">
-									<X>0</X>
-									<Y>0</Y>
-									<Z>0</Z>
-								</Vector3>
-								<token name="formFactorRaw">3</token>
-								<token name="shape">1</token>
-								<Vector3 name="size">
-									<X>240</X>
-									<Y>8</Y>
-									<Z>47.9999847</Z>
-								</Vector3>
-							</Properties>
-						</Item>
-						<Item class="Part" referent="RBXb2a8ac1e9953414cb61eb8b760e8cae6">
-							<Properties>
-								<bool name="Anchored">true</bool>
-								<BinaryString name="AttributesSerialize"></BinaryString>
-								<float name="BackParamA">-0.5</float>
-								<float name="BackParamB">0.5</float>
-								<token name="BackSurface">10</token>
-								<token name="BackSurfaceInput">0</token>
-								<float name="BottomParamA">-0.5</float>
-								<float name="BottomParamB">0.5</float>
-								<token name="BottomSurface">10</token>
-								<token name="BottomSurfaceInput">0</token>
-								<CoordinateFrame name="CFrame">
-									<X>-74.6944885</X>
-									<Y>409.006744</Y>
-									<Z>-272.791779</Z>
-									<R00>1.0000006</R00>
-									<R01>8.00195266e-06</R01>
-									<R02>-0.000353099895</R02>
-									<R10>-8.08504501e-06</R10>
-									<R11>1</R11>
-									<R12>-0.000235819287</R12>
-									<R20>0.000352503848</R20>
-									<R21>0.000235821819</R21>
-									<R22>1.00000083</R22>
-								</CoordinateFrame>
-								<bool name="CanCollide">false</bool>
-								<bool name="CanTouch">true</bool>
-								<bool name="CastShadow">true</bool>
-								<int name="CollisionGroupId">0</int>
-								<Color3uint8 name="Color3uint8">4288672745</Color3uint8>
-								<PhysicalProperties name="CustomPhysicalProperties">
-									<CustomPhysics>false</CustomPhysics>
-								</PhysicalProperties>
-								<float name="FrontParamA">-0.5</float>
-								<float name="FrontParamB">0.5</float>
-								<token name="FrontSurface">10</token>
-								<token name="FrontSurfaceInput">0</token>
-								<float name="LeftParamA">-0.5</float>
-								<float name="LeftParamB">0.5</float>
-								<token name="LeftSurface">10</token>
-								<token name="LeftSurfaceInput">0</token>
-								<bool name="Locked">false</bool>
-								<bool name="Massless">false</bool>
-								<token name="Material">880</token>
-								<string name="Name">Hill</string>
-								<float name="Reflectance">0</float>
-								<float name="RightParamA">-0.5</float>
-								<float name="RightParamB">0.5</float>
-								<token name="RightSurface">10</token>
-								<token name="RightSurfaceInput">0</token>
-								<int name="RootPriority">0</int>
-								<Vector3 name="RotVelocity">
-									<X>0</X>
-									<Y>0</Y>
-									<Z>0</Z>
-								</Vector3>
-								<int64 name="SourceAssetId">-1</int64>
-								<BinaryString name="Tags">VHJhbnNwYXJlbnQ=</BinaryString>
-								<float name="TopParamA">-0.5</float>
-								<float name="TopParamB">0.5</float>
-								<token name="TopSurface">10</token>
-								<token name="TopSurfaceInput">0</token>
-								<float name="Transparency">0</float>
-								<Vector3 name="Velocity">
-									<X>0</X>
-									<Y>0</Y>
-									<Z>0</Z>
-								</Vector3>
-								<token name="formFactorRaw">3</token>
-								<token name="shape">1</token>
-								<Vector3 name="size">
-									<X>240</X>
-									<Y>8</Y>
-									<Z>47.9999847</Z>
-								</Vector3>
-							</Properties>
 						</Item>
 					</Item>
 				</Item>
@@ -65006,17 +64850,17 @@ end)]]></ProtectedString>
 											<token name="BottomSurface">0</token>
 											<token name="BottomSurfaceInput">0</token>
 											<CoordinateFrame name="CFrame">
-												<X>-1294.51074</X>
-												<Y>89.099823</Y>
-												<Z>598.532288</Z>
+												<X>-1294.50439</X>
+												<Y>93.0996475</Y>
+												<Z>693.529358</Z>
 												<R00>-6.84622355e-05</R00>
-												<R01>-2.51284946e-05</R01>
+												<R01>-2.51285201e-05</R01>
 												<R02>0.999991059</R02>
-												<R10>1.77823472e-06</R10>
+												<R10>1.77812615e-06</R10>
 												<R11>1</R11>
-												<R12>2.51283655e-05</R12>
+												<R12>2.51283909e-05</R12>
 												<R20>-0.999991059</R20>
-												<R21>1.78007951e-06</R21>
+												<R21>1.77997094e-06</R21>
 												<R22>-6.84621918e-05</R22>
 											</CoordinateFrame>
 											<bool name="CanCollide">true</bool>
@@ -65127,17 +64971,17 @@ end)]]></ProtectedString>
 												<token name="BottomSurface">0</token>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
-													<X>-1294.52869</X>
-													<Y>88.1010895</Y>
-													<Z>553.533875</Z>
+													<X>-1294.52234</X>
+													<Y>92.100914</Y>
+													<Z>648.530945</Z>
 													<R00>-0.00025989351</R00>
-													<R01>-3.67223874e-05</R01>
+													<R01>-3.67224129e-05</R01>
 													<R02>0.999991059</R02>
-													<R10>0.00011852054</R10>
+													<R10>0.000118520431</R10>
 													<R11>1</R11>
-													<R12>3.67530447e-05</R12>
+													<R12>3.67530702e-05</R12>
 													<R20>-0.999991059</R20>
-													<R21>0.000118529162</R21>
+													<R21>0.000118529053</R21>
 													<R22>-0.000259889173</R22>
 												</CoordinateFrame>
 												<bool name="CanCollide">true</bool>
@@ -65361,17 +65205,17 @@ end)]]></ProtectedString>
 												<token name="BottomSurface">0</token>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
-													<X>-1294.52222</X>
-													<Y>89.0975571</Y>
-													<Z>553.534119</Z>
+													<X>-1294.51587</X>
+													<Y>93.0973816</Y>
+													<Z>648.531189</Z>
 													<R00>-0.000323956541</R00>
-													<R01>-4.02061014e-05</R01>
+													<R01>-4.02061269e-05</R01>
 													<R02>0.999991059</R02>
-													<R10>0.000155668677</R10>
+													<R10>0.00015566856</R10>
 													<R11>1</R11>
-													<R12>4.02564183e-05</R12>
+													<R12>4.02564438e-05</R12>
 													<R20>-0.999991059</R20>
-													<R21>0.000155680449</R21>
+													<R21>0.000155680333</R21>
 													<R22>-0.000323950284</R22>
 												</CoordinateFrame>
 												<bool name="CanCollide">true</bool>
@@ -65465,17 +65309,17 @@ end)]]></ProtectedString>
 												<token name="BottomSurface">10</token>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
-													<X>-1294.52002</X>
-													<Y>91.0962067</Y>
-													<Z>553.533325</Z>
+													<X>-1294.51367</X>
+													<Y>95.0960312</Y>
+													<Z>648.530396</Z>
 													<R00>-0.000320395106</R00>
-													<R01>-4.00106619e-05</R01>
+													<R01>-4.00106874e-05</R01>
 													<R02>0.999991059</R02>
-													<R10>0.000153616842</R10>
+													<R10>0.000153616726</R10>
 													<R11>1</R11>
-													<R12>4.00597673e-05</R12>
+													<R12>4.00597928e-05</R12>
 													<R20>-0.999991059</R20>
-													<R21>0.00015362844</R21>
+													<R21>0.000153628323</R21>
 													<R22>-0.000320388965</R22>
 												</CoordinateFrame>
 												<bool name="CanCollide">false</bool>
@@ -65672,17 +65516,17 @@ end)]]></ProtectedString>
 												<token name="BottomSurface">0</token>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
-													<X>-1303.02917</X>
-													<Y>95.6037979</Y>
-													<Z>553.533325</Z>
+													<X>-1303.02283</X>
+													<Y>99.6036224</Y>
+													<Z>648.530396</Z>
 													<R00>-0.000217185952</R00>
-													<R01>-4.57538627e-05</R01>
+													<R01>-4.57538845e-05</R01>
 													<R02>0.999991059</R02>
-													<R10>0.000126005296</R10>
+													<R10>0.000126005194</R10>
 													<R11>1</R11>
-													<R12>4.5781162e-05</R12>
+													<R12>4.57811911e-05</R12>
 													<R20>-0.999991059</R20>
-													<R21>0.00012601426</R21>
+													<R21>0.000126014143</R21>
 													<R22>-0.000217180204</R22>
 												</CoordinateFrame>
 												<bool name="CanCollide">true</bool>
@@ -65914,17 +65758,17 @@ end)]]></ProtectedString>
 												<token name="BottomSurface">0</token>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
-													<X>-1286.02295</X>
-													<Y>95.5998917</Y>
-													<Z>553.532654</Z>
+													<X>-1286.0166</X>
+													<Y>99.5997162</Y>
+													<Z>648.529724</Z>
 													<R00>0.000266992807</R00>
-													<R01>-4.57202368e-05</R01>
+													<R01>-4.57202586e-05</R01>
 													<R02>-0.999991059</R02>
-													<R10>-7.77017121e-05</R10>
+													<R10>-7.77016103e-05</R10>
 													<R11>1</R11>
-													<R12>-4.57409151e-05</R12>
+													<R12>-4.57409442e-05</R12>
 													<R20>0.999991059</R20>
-													<R21>7.77133682e-05</R21>
+													<R21>7.77132518e-05</R21>
 													<R22>0.000266989286</R22>
 												</CoordinateFrame>
 												<bool name="CanCollide">true</bool>
@@ -66156,17 +66000,17 @@ end)]]></ProtectedString>
 												<token name="BottomSurface">0</token>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
-													<X>-1294.53015</X>
-													<Y>95.6020584</Y>
-													<Z>545.036194</Z>
+													<X>-1294.5238</X>
+													<Y>99.6018829</Y>
+													<Z>640.033264</Z>
 													<R00>0.999991059</R00>
-													<R01>-7.51097905e-05</R01>
+													<R01>-7.51098123e-05</R01>
 													<R02>0.000259892899</R02>
-													<R10>7.51336192e-05</R10>
+													<R10>7.51336484e-05</R10>
 													<R11>1</R11>
-													<R12>-9.09240189e-05</R12>
+													<R12>-9.0923917e-05</R12>
 													<R20>-0.000259886088</R20>
-													<R21>9.09428709e-05</R21>
+													<R21>9.09427545e-05</R21>
 													<R22>0.999991059</R22>
 												</CoordinateFrame>
 												<bool name="CanCollide">true</bool>
@@ -66411,17 +66255,17 @@ end)]]></ProtectedString>
 												<token name="BottomSurface">0</token>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
-													<X>-1294.52441</X>
-													<Y>90.098671</Y>
-													<Z>553.533691</Z>
+													<X>-1294.51807</X>
+													<Y>94.0984955</Y>
+													<Z>648.530762</Z>
 													<R00>-0.000366662804</R00>
-													<R01>-4.25243343e-05</R01>
+													<R01>-4.25243597e-05</R01>
 													<R02>0.999991059</R02>
-													<R10>0.000180433301</R10>
+													<R10>0.000180433184</R10>
 													<R11>1</R11>
-													<R12>4.25904e-05</R12>
+													<R12>4.25904254e-05</R12>
 													<R20>-0.999991059</R20>
-													<R21>0.00018044743</R21>
+													<R21>0.000180447314</R21>
 													<R22>-0.000366655149</R22>
 												</CoordinateFrame>
 												<bool name="CanCollide">true</bool>
@@ -66489,9 +66333,9 @@ end)]]></ProtectedString>
 												<token name="BottomSurface">10</token>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
-													<X>-1267.52344</X>
-													<Y>159.414856</Y>
-													<Z>553.531128</Z>
+													<X>-1267.51709</X>
+													<Y>163.414688</Y>
+													<Z>648.530273</Z>
 													<R00>1</R00>
 													<R01>-1.93739106e-05</R01>
 													<R02>-2.32396742e-05</R02>
@@ -66847,9 +66691,9 @@ end)]]></ProtectedString>
 												<token name="BottomSurface">10</token>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
-													<X>-1267.52344</X>
-													<Y>152.414932</Y>
-													<Z>553.531128</Z>
+													<X>-1267.51709</X>
+													<Y>156.414764</Y>
+													<Z>648.530273</Z>
 													<R00>1</R00>
 													<R01>-1.90951869e-05</R01>
 													<R02>-3.01514992e-05</R02>
@@ -67245,9 +67089,9 @@ end)]]></ProtectedString>
 											<token name="BottomSurface">4</token>
 											<token name="BottomSurfaceInput">0</token>
 											<CoordinateFrame name="CFrame">
-												<X>-1294.51013</X>
-												<Y>93.3475723</Y>
-												<Z>620.532898</Z>
+												<X>-1294.50378</X>
+												<Y>97.3474045</Y>
+												<Z>715.532043</Z>
 												<R00>-3.60159902e-10</R00>
 												<R01>-1.90007013e-05</R01>
 												<R02>-1</R02>
@@ -67539,17 +67383,17 @@ end)]]></ProtectedString>
 												<token name="BottomSurface">2</token>
 												<token name="BottomSurfaceInput">0</token>
 												<CoordinateFrame name="CFrame">
-													<X>-1296.50708</X>
-													<Y>133.255707</Y>
-													<Z>614.477905</Z>
+													<X>-1296.50073</X>
+													<Y>137.255524</Y>
+													<Z>709.474976</Z>
 													<R00>3.69996669e-05</R00>
-													<R01>-1.90005449e-05</R01>
+													<R01>-1.90005703e-05</R01>
 													<R02>-0.999991059</R02>
-													<R10>5.61582392e-10</R10>
+													<R10>6.70152489e-10</R10>
 													<R11>1</R11>
-													<R12>-1.90002393e-05</R12>
+													<R12>-1.90002647e-05</R12>
 													<R20>0.999991059</R20>
-													<R21>2.81789148e-10</R21>
+													<R21>1.73218218e-10</R21>
 													<R22>3.69996669e-05</R22>
 												</CoordinateFrame>
 												<bool name="CanCollide">true</bool>
@@ -67644,9 +67488,9 @@ end)]]></ProtectedString>
 											<token name="BottomSurface">0</token>
 											<token name="BottomSurfaceInput">0</token>
 											<CoordinateFrame name="CFrame">
-												<X>-1276.42407</X>
-												<Y>102.839417</Y>
-												<Z>613.212708</Z>
+												<X>-1276.41772</X>
+												<Y>106.839249</Y>
+												<Z>708.211853</Z>
 												<R00>-0.0646280646</R00>
 												<R01>-1.90003502e-05</R01>
 												<R02>-0.997909427</R02>
@@ -67764,9 +67608,9 @@ end)]]></ProtectedString>
 											<token name="BottomSurface">0</token>
 											<token name="BottomSurfaceInput">0</token>
 											<CoordinateFrame name="CFrame">
-												<X>-1270.59644</X>
-												<Y>102.839523</Y>
-												<Z>615.873596</Z>
+												<X>-1270.59009</X>
+												<Y>106.839355</Y>
+												<Z>710.872742</Z>
 												<R00>0.0646280646</R00>
 												<R01>-1.90003502e-05</R01>
 												<R02>0.997909427</R02>
@@ -67843,6 +67687,352 @@ end)]]></ProtectedString>
 												<Content name="Texture"><url>http://www.roblox.com/asset/?id=38630463</url></Content>
 												<float name="Transparency">0</float>
 											</Properties>
+										</Item>
+									</Item>
+									<Item class="Part" referent="RBX585bf611004e442db4b27e524e7716a7">
+										<Properties>
+											<bool name="Anchored">false</bool>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<float name="BackParamA">-0.5</float>
+											<float name="BackParamB">0.5</float>
+											<token name="BackSurface">0</token>
+											<token name="BackSurfaceInput">0</token>
+											<float name="BottomParamA">-0.5</float>
+											<float name="BottomParamB">0.5</float>
+											<token name="BottomSurface">0</token>
+											<token name="BottomSurfaceInput">0</token>
+											<CoordinateFrame name="CFrame">
+												<X>-1294.50989</X>
+												<Y>106.599785</Y>
+												<Z>616.033569</Z>
+												<R00>-6.84622355e-05</R00>
+												<R01>-2.5128571e-05</R01>
+												<R02>0.999991059</R02>
+												<R10>1.77790901e-06</R10>
+												<R11>1</R11>
+												<R12>2.51284418e-05</R12>
+												<R20>-0.999991059</R20>
+												<R21>1.7797538e-06</R21>
+												<R22>-6.84621918e-05</R22>
+											</CoordinateFrame>
+											<bool name="CanCollide">true</bool>
+											<bool name="CanTouch">true</bool>
+											<bool name="CastShadow">true</bool>
+											<int name="CollisionGroupId">0</int>
+											<Color3uint8 name="Color3uint8">4289832959</Color3uint8>
+											<PhysicalProperties name="CustomPhysicalProperties">
+												<CustomPhysics>false</CustomPhysics>
+											</PhysicalProperties>
+											<float name="FrontParamA">-0.5</float>
+											<float name="FrontParamB">0.5</float>
+											<token name="FrontSurface">0</token>
+											<token name="FrontSurfaceInput">0</token>
+											<float name="LeftParamA">-0.5</float>
+											<float name="LeftParamB">0.5</float>
+											<token name="LeftSurface">0</token>
+											<token name="LeftSurfaceInput">0</token>
+											<bool name="Locked">false</bool>
+											<bool name="Massless">false</bool>
+											<token name="Material">880</token>
+											<string name="Name">GlassBarrier</string>
+											<float name="Reflectance">0</float>
+											<float name="RightParamA">-0.5</float>
+											<float name="RightParamB">0.5</float>
+											<token name="RightSurface">0</token>
+											<token name="RightSurfaceInput">0</token>
+											<int name="RootPriority">0</int>
+											<Vector3 name="RotVelocity">
+												<X>0</X>
+												<Y>0</Y>
+												<Z>0</Z>
+											</Vector3>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+											<float name="TopParamA">-0.5</float>
+											<float name="TopParamB">0.5</float>
+											<token name="TopSurface">0</token>
+											<token name="TopSurfaceInput">0</token>
+											<float name="Transparency">0.699999988</float>
+											<Vector3 name="Velocity">
+												<X>0</X>
+												<Y>0</Y>
+												<Z>0</Z>
+											</Vector3>
+											<token name="formFactorRaw">1</token>
+											<token name="shape">1</token>
+											<Vector3 name="size">
+												<X>0.280184031</X>
+												<Y>28</Y>
+												<Z>69</Z>
+											</Vector3>
+										</Properties>
+										<Item class="WeldConstraint" referent="RBXb9865e791f1d45709b815dea6fc13aeb">
+											<Properties>
+												<BinaryString name="AttributesSerialize"></BinaryString>
+												<CoordinateFrame name="CFrame0">
+													<X>-77.4978638</X>
+													<Y>-13.5</Y>
+													<Z>-0.000122070312</Z>
+													<R00>1</R00>
+													<R01>0</R01>
+													<R02>0</R02>
+													<R10>0</R10>
+													<R11>1</R11>
+													<R12>-1.15742817e-14</R12>
+													<R20>0</R20>
+													<R21>1.1574075e-14</R21>
+													<R22>1</R22>
+												</CoordinateFrame>
+												<bool name="Enabled">true</bool>
+												<string name="Name">WeldConstraint</string>
+												<Ref name="Part0Internal">RBX585bf611004e442db4b27e524e7716a7</Ref>
+												<Ref name="Part1Internal">RBXb61c7df3017e4bd39e143f5ca5491b2a</Ref>
+												<int64 name="SourceAssetId">-1</int64>
+												<int name="State">3</int>
+												<BinaryString name="Tags"></BinaryString>
+											</Properties>
+										</Item>
+									</Item>
+									<Item class="Part" referent="RBX9208a0f0f012450ab9d238265585fe33">
+										<Properties>
+											<bool name="Anchored">false</bool>
+											<BinaryString name="AttributesSerialize"></BinaryString>
+											<float name="BackParamA">-0.5</float>
+											<float name="BackParamB">0.5</float>
+											<token name="BackSurface">0</token>
+											<token name="BackSurfaceInput">0</token>
+											<float name="BottomParamA">-0.5</float>
+											<float name="BottomParamB">0.5</float>
+											<token name="BottomSurface">2</token>
+											<token name="BottomSurfaceInput">0</token>
+											<CoordinateFrame name="CFrame">
+												<X>-1295.00146</X>
+												<Y>104.255547</Y>
+												<Z>681.478638</Z>
+												<R00>3.69996451e-05</R00>
+												<R01>-1.90013907e-05</R01>
+												<R02>-0.999991059</R02>
+												<R10>1.3113457e-09</R10>
+												<R11>1</R11>
+												<R12>-1.90010851e-05</R12>
+												<R20>0.999991059</R20>
+												<R21>-4.6791937e-10</R21>
+												<R22>3.69996451e-05</R22>
+											</CoordinateFrame>
+											<bool name="CanCollide">true</bool>
+											<bool name="CanTouch">true</bool>
+											<bool name="CastShadow">true</bool>
+											<int name="CollisionGroupId">0</int>
+											<Color3uint8 name="Color3uint8">4294940892</Color3uint8>
+											<PhysicalProperties name="CustomPhysicalProperties">
+												<CustomPhysics>false</CustomPhysics>
+											</PhysicalProperties>
+											<float name="FrontParamA">-0.5</float>
+											<float name="FrontParamB">0.5</float>
+											<token name="FrontSurface">0</token>
+											<token name="FrontSurfaceInput">0</token>
+											<float name="LeftParamA">-0.5</float>
+											<float name="LeftParamB">0.5</float>
+											<token name="LeftSurface">0</token>
+											<token name="LeftSurfaceInput">0</token>
+											<bool name="Locked">false</bool>
+											<bool name="Massless">false</bool>
+											<token name="Material">512</token>
+											<string name="Name">Door</string>
+											<float name="Reflectance">0</float>
+											<float name="RightParamA">-0.5</float>
+											<float name="RightParamB">0.5</float>
+											<token name="RightSurface">0</token>
+											<token name="RightSurfaceInput">0</token>
+											<int name="RootPriority">0</int>
+											<Vector3 name="RotVelocity">
+												<X>0</X>
+												<Y>0</Y>
+												<Z>0</Z>
+											</Vector3>
+											<int64 name="SourceAssetId">-1</int64>
+											<BinaryString name="Tags"></BinaryString>
+											<float name="TopParamA">-0.5</float>
+											<float name="TopParamB">0.5</float>
+											<token name="TopSurface">2</token>
+											<token name="TopSurfaceInput">0</token>
+											<float name="Transparency">0.5</float>
+											<Vector3 name="Velocity">
+												<X>0</X>
+												<Y>0</Y>
+												<Z>0</Z>
+											</Vector3>
+											<token name="formFactorRaw">1</token>
+											<token name="shape">1</token>
+											<Vector3 name="size">
+												<X>1</X>
+												<Y>22</Y>
+												<Z>69</Z>
+											</Vector3>
+										</Properties>
+										<Item class="WeldConstraint" referent="RBXd436d928bfb244acbbd1d039dae7e34a">
+											<Properties>
+												<BinaryString name="AttributesSerialize"></BinaryString>
+												<CoordinateFrame name="CFrame0">
+													<X>12.0510864</X>
+													<Y>-11.1559067</Y>
+													<Z>-0.496459961</Z>
+													<R00>-1</R00>
+													<R01>1.77997924e-06</R01>
+													<R02>-3.14628232e-05</R02>
+													<R10>1.77978643e-06</R10>
+													<R11>1</R11>
+													<R12>6.12746771e-06</R12>
+													<R20>3.14628342e-05</R20>
+													<R21>6.12741178e-06</R21>
+													<R22>-1</R22>
+												</CoordinateFrame>
+												<bool name="Enabled">true</bool>
+												<string name="Name">WeldConstraint</string>
+												<Ref name="Part0Internal">RBX9208a0f0f012450ab9d238265585fe33</Ref>
+												<Ref name="Part1Internal">RBXb61c7df3017e4bd39e143f5ca5491b2a</Ref>
+												<int64 name="SourceAssetId">-1</int64>
+												<int name="State">3</int>
+												<BinaryString name="Tags"></BinaryString>
+											</Properties>
+										</Item>
+										<Item class="SurfaceGui" referent="RBX84fee3ed42574f5dbf48b13784f26880">
+											<Properties>
+												<bool name="Active">true</bool>
+												<Ref name="Adornee">null</Ref>
+												<bool name="AlwaysOnTop">false</bool>
+												<BinaryString name="AttributesSerialize"></BinaryString>
+												<bool name="AutoLocalize">true</bool>
+												<Vector2 name="CanvasSize">
+													<X>800</X>
+													<Y>600</Y>
+												</Vector2>
+												<bool name="ClipsDescendants">true</bool>
+												<bool name="Enabled">true</bool>
+												<token name="Face">3</token>
+												<float name="LightInfluence">1</float>
+												<string name="Name">SurfaceGui</string>
+												<float name="PixelsPerStud">50</float>
+												<bool name="ResetOnSpawn">true</bool>
+												<Ref name="RootLocalizationTable">null</Ref>
+												<token name="SizingMode">1</token>
+												<int64 name="SourceAssetId">-1</int64>
+												<BinaryString name="Tags"></BinaryString>
+												<float name="ToolPunchThroughDistance">0</float>
+												<token name="ZIndexBehavior">1</token>
+												<float name="ZOffset">0</float>
+											</Properties>
+											<Item class="ImageLabel" referent="RBX8aa7794462a841b69f8fac6f42252f39">
+												<Properties>
+													<bool name="Active">false</bool>
+													<Vector2 name="AnchorPoint">
+														<X>0</X>
+														<Y>0</Y>
+													</Vector2>
+													<BinaryString name="AttributesSerialize"></BinaryString>
+													<bool name="AutoLocalize">true</bool>
+													<token name="AutomaticSize">0</token>
+													<Color3 name="BackgroundColor3">
+														<R>1</R>
+														<G>1</G>
+														<B>1</B>
+													</Color3>
+													<float name="BackgroundTransparency">1</float>
+													<Color3 name="BorderColor3">
+														<R>0.105882362</R>
+														<G>0.164705887</G>
+														<B>0.207843155</B>
+													</Color3>
+													<token name="BorderMode">0</token>
+													<int name="BorderSizePixel">1</int>
+													<bool name="ClipsDescendants">false</bool>
+													<bool name="Draggable">false</bool>
+													<Content name="Image"><url>rbxassetid://2887718</url></Content>
+													<Color3 name="ImageColor3">
+														<R>1</R>
+														<G>1</G>
+														<B>1</B>
+													</Color3>
+													<Vector2 name="ImageRectOffset">
+														<X>0</X>
+														<Y>0</Y>
+													</Vector2>
+													<Vector2 name="ImageRectSize">
+														<X>0</X>
+														<Y>0</Y>
+													</Vector2>
+													<float name="ImageTransparency">0</float>
+													<int name="LayoutOrder">0</int>
+													<string name="Name">ImageLabel</string>
+													<Ref name="NextSelectionDown">null</Ref>
+													<Ref name="NextSelectionLeft">null</Ref>
+													<Ref name="NextSelectionRight">null</Ref>
+													<Ref name="NextSelectionUp">null</Ref>
+													<UDim2 name="Position">
+														<XS>0</XS>
+														<XO>0</XO>
+														<YS>0</YS>
+														<YO>0</YO>
+													</UDim2>
+													<Ref name="RootLocalizationTable">null</Ref>
+													<float name="Rotation">0</float>
+													<token name="ScaleType">0</token>
+													<bool name="Selectable">false</bool>
+													<Ref name="SelectionImageObject">null</Ref>
+													<UDim2 name="Size">
+														<XS>1</XS>
+														<XO>0</XO>
+														<YS>1</YS>
+														<YO>0</YO>
+													</UDim2>
+													<token name="SizeConstraint">0</token>
+													<Rect2D name="SliceCenter">
+														<min>
+															<X>0</X>
+															<Y>0</Y>
+														</min>
+														<max>
+															<X>0</X>
+															<Y>0</Y>
+														</max>
+													</Rect2D>
+													<float name="SliceScale">1</float>
+													<int64 name="SourceAssetId">-1</int64>
+													<BinaryString name="Tags"></BinaryString>
+													<UDim2 name="TileSize">
+														<XS>1</XS>
+														<XO>0</XO>
+														<YS>1</YS>
+														<YO>0</YO>
+													</UDim2>
+													<bool name="Visible">true</bool>
+													<int name="ZIndex">1</int>
+												</Properties>
+											</Item>
+											<Item class="UIPadding" referent="RBXc84bca83b9e14e769290275305bac639">
+												<Properties>
+													<BinaryString name="AttributesSerialize"></BinaryString>
+													<string name="Name">UIPadding</string>
+													<UDim name="PaddingBottom">
+														<S>0</S>
+														<O>0</O>
+													</UDim>
+													<UDim name="PaddingLeft">
+														<S>0.300000012</S>
+														<O>0</O>
+													</UDim>
+													<UDim name="PaddingRight">
+														<S>0.300000012</S>
+														<O>0</O>
+													</UDim>
+													<UDim name="PaddingTop">
+														<S>0</S>
+														<O>0</O>
+													</UDim>
+													<int64 name="SourceAssetId">-1</int64>
+													<BinaryString name="Tags"></BinaryString>
+												</Properties>
+											</Item>
 										</Item>
 									</Item>
 								</Item>
@@ -70083,7 +70273,7 @@ end)]]></ProtectedString>
 											<R21>3.26404393e-06</R21>
 											<R22>-9.41002654e-05</R22>
 										</CoordinateFrame>
-										<bool name="CanCollide">true</bool>
+										<bool name="CanCollide">false</bool>
 										<bool name="CanTouch">true</bool>
 										<bool name="CastShadow">true</bool>
 										<int name="CollisionGroupId">0</int>
@@ -70320,17 +70510,17 @@ end)]]></ProtectedString>
 										<Properties>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="CFrame0">
-												<X>-21.0015869</X>
-												<Y>12.5479889</Y>
-												<Z>-4.00048828</Z>
+												<X>-115.999512</X>
+												<Y>16.5481262</Y>
+												<Z>-4.00292969</Z>
 												<R00>1</R00>
-												<R01>1.48377706e-06</R01>
-												<R02>-2.56383137e-05</R02>
-												<R10>-1.48383174e-06</R10>
+												<R01>1.48388563e-06</R01>
+												<R02>-2.563831e-05</R02>
+												<R10>-1.48394031e-06</R10>
 												<R11>1</R11>
-												<R12>-2.13215571e-06</R12>
-												<R20>2.563831e-05</R20>
-												<R21>2.13219369e-06</R21>
+												<R12>-2.13213025e-06</R12>
+												<R20>2.56383064e-05</R20>
+												<R21>2.13216822e-06</R21>
 												<R22>1</R22>
 											</CoordinateFrame>
 											<bool name="Enabled">true</bool>
@@ -70356,17 +70546,17 @@ end)]]></ProtectedString>
 										<token name="BottomSurface">0</token>
 										<token name="BottomSurfaceInput">0</token>
 										<CoordinateFrame name="CFrame">
-											<X>-1290.51208</X>
-											<Y>85.913269</Y>
-											<Z>577.530457</Z>
+											<X>-1290.51697</X>
+											<Y>94.9137878</Y>
+											<Z>510.537201</Z>
 											<R00>0.999991059</R00>
 											<R01>-2.65679482e-05</R01>
 											<R02>6.99079028e-05</R02>
 											<R10>2.65682538e-05</R10>
 											<R11>1</R11>
-											<R12>-7.77153309e-06</R12>
+											<R12>-7.77153855e-06</R12>
 											<R20>-6.99076918e-05</R20>
-											<R21>7.77346122e-06</R21>
+											<R21>7.77346668e-06</R21>
 											<R22>0.999991059</R22>
 										</CoordinateFrame>
 										<bool name="CanCollide">false</bool>
@@ -70422,7 +70612,7 @@ end)]]></ProtectedString>
 										<Vector3 name="size">
 											<X>111.074272</X>
 											<Y>1</Y>
-											<Z>350.204285</Z>
+											<Z>82.2042847</Z>
 										</Vector3>
 									</Properties>
 									<Item class="WeldConstraint" referent="RBXe25627ae3dbc495788100aaf83dff94b">
@@ -70430,16 +70620,16 @@ end)]]></ProtectedString>
 											<BinaryString name="AttributesSerialize"></BinaryString>
 											<CoordinateFrame name="CFrame0">
 												<X>-0.000122070312</X>
-												<Y>-9.36125946</Y>
-												<Z>6.10351562e-05</Z>
+												<Y>-18.3612595</Y>
+												<Z>66.9952087</Z>
 												<R00>-2.41927955e-05</R00>
-												<R01>-6.92271783e-07</R01>
+												<R01>-6.9225905e-07</R01>
 												<R02>1</R02>
-												<R10>-4.50952348e-06</R10>
+												<R10>-4.50960897e-06</R10>
 												<R11>1</R11>
-												<R12>6.921627e-07</R12>
+												<R12>6.92149968e-07</R12>
 												<R20>-1</R20>
-												<R21>-4.50950665e-06</R21>
+												<R21>-4.50959215e-06</R21>
 												<R22>-2.41927992e-05</R22>
 											</CoordinateFrame>
 											<bool name="Enabled">true</bool>
@@ -86789,12 +86979,6 @@ local function addRemoteObjects()
     local sectorConfigs = {
         {
             words = {
-                -- "MOM", --
-                -- "MOM", --
-                -- "MOM", --
-                -- "MOM", --
-                -- "MOM", --
-                -- "MOM", --
                 "MOM", --
                 "MOM", --
                 "MOM" --
@@ -86821,15 +87005,19 @@ local function addRemoteObjects()
             words = {
                 "BOB", --
                 "BOB", --
-                "BOB", --
                 "BOB" --
             }
         }, {
             words = {
                 "MOM", --
                 "MOM", --
-                "MOM", --
                 "MOM" --
+            }
+        }, {
+            words = {
+                "PUP", --
+                "PUP", --
+                "PUP" --
             }
         }
 
@@ -88101,6 +88289,7 @@ local function initWord(props)
     local sectorFolder = miniGameState.sectorFolder
     local wordsPerCol = miniGameState.wordsPerCol
     local words = miniGameState.words
+    local wordLetterSize = miniGameState.wordLetterSize
 
     local runTimeWordFolder = getRunTimeWordFolder(miniGameState)
     miniGameState.runTimeWordFolder = runTimeWordFolder
@@ -88124,15 +88313,15 @@ local function initWord(props)
 
     local spacingFactorY = 1.1
     local spacingFactorX = 1.1
-    local offsetY = miniGameState.wordLetterSize * spacingFactorY
+    local offsetY = wordLetterSize * spacingFactorY
 
-    local totalLetterWidth = miniGameState.wordLetterSize * spacingFactorX
+    local totalLetterWidth = wordLetterSize * spacingFactorX
     local maxWordLength = 3
-    local wordOffset = miniGameState.wordLetterSize * 0.8
+    local wordOffset = wordLetterSize * 0.8
 
     -- Use this to center all words
     local totalWidth = totalLetterWidth * maxWordLength *
-                           math.ceil(#words / wordsPerCol)
+                           math.ceil(#words / wordsPerCol) - wordLetterSize / 2
 
     local colOffsetX = (colIndex - 1) *
                            (totalLetterWidth * maxWordLength + wordOffset) -
@@ -88161,9 +88350,8 @@ local function initWord(props)
 
         local newLetter = letterBlockTemplate:Clone()
         newLetter.Name = "wordLetter-" .. letterNameStub
-        newLetter.Size = Vector3.new(miniGameState.wordLetterSize,
-                                     miniGameState.wordLetterSize,
-                                     miniGameState.wordLetterSize)
+        newLetter.Size = Vector3.new(wordLetterSize, wordLetterSize,
+                                     wordLetterSize)
 
         local offsetX =
             -(newLetter.Size.X * (letterIndex - 1) * spacingFactorX) - 0
@@ -92113,7 +92301,8 @@ local function initBeltPlate(props)
             child = glassPlate,
             offsetConfig = {
                 useParentNearEdge = Vector3.new(0, -1, 0),
-                useChildNearEdge = Vector3.new(0, -1, 0)
+                useChildNearEdge = Vector3.new(0, -1, 0),
+                offsetAdder = Vector3.new(0, 1, 0)
             }
         })
     belt.CFrame = beltPlateCFrames[beltPlateIndex]
@@ -92452,11 +92641,11 @@ local function initConveyors(miniGameState)
     local function config()
         local dummy = createDummy()
         local floor2 = setFloor(dummy)
-        createInvisiWalls(floor2)
+        -- createInvisiWalls(floor2)
         local stopPlate2 = setStop(stopPlate, dummy, floor2)
         setTopFront(topFront, dummy, floor2)
         setTopBack(topBack, dummy, floor2)
-        setSidePanels(sidePanel, dummy, floor2)
+        -- setSidePanels(sidePanel, dummy, floor2)
 
         for beltPlateIndex = 1, numBelts do
             local offset = Vector3.new(-(dummy.Size.X + beltPlateSpacing) *

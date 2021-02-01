@@ -42,14 +42,15 @@ local function initBeltPlate(props)
     local sizeZ = numRow * rackLetterSize * letterSpacingFactor
 
     belt.Size = Vector3.new(sizeX, 1, sizeZ)
-    glassPlate.Size = Vector3.new(sizeX, rackLetterSize - 1, sizeZ)
+    glassPlate.Size = Vector3.new(sizeX, rackLetterSize + 0, sizeZ)
     glassPlate.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                             {
             parent = belt,
             child = glassPlate,
             offsetConfig = {
                 useParentNearEdge = Vector3.new(0, -1, 0),
-                useChildNearEdge = Vector3.new(0, -1, 0)
+                useChildNearEdge = Vector3.new(0, -1, 0),
+                offsetAdder = Vector3.new(0, 1, 0)
             }
         })
     belt.CFrame = beltPlateCFrames[beltPlateIndex]
@@ -244,7 +245,7 @@ local function initConveyors(miniGameState)
 
     local function setFloor(dummy)
         local paddedDummyLength = (dummy.Size.X + beltPlateSpacing)
-        local adders = paddedDummyLength * 1 + boxPaddingx2
+        local adders = paddedDummyLength * 1 + boxPaddingx2 + 2
         local totalLength = paddedDummyLength * numBelts + adders
 
         floor.Size = Vector3.new(totalLength, 1, dummy.Size.Z + boxPaddingx2)
@@ -388,11 +389,11 @@ local function initConveyors(miniGameState)
     local function config()
         local dummy = createDummy()
         local floor2 = setFloor(dummy)
-        createInvisiWalls(floor2)
+        -- createInvisiWalls(floor2)
         local stopPlate2 = setStop(stopPlate, dummy, floor2)
         setTopFront(topFront, dummy, floor2)
         setTopBack(topBack, dummy, floor2)
-        setSidePanels(sidePanel, dummy, floor2)
+        -- setSidePanels(sidePanel, dummy, floor2)
 
         for beltPlateIndex = 1, numBelts do
             local offset = Vector3.new(-(dummy.Size.X + beltPlateSpacing) *
