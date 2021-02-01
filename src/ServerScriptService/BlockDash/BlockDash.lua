@@ -45,8 +45,8 @@ local function addBlockDash(sectorConfig)
     local numRow = math.floor(islandPositioner.Size.Z / rackLetterSize)
     local totalCol = math.floor(islandPositioner.Size.X / rackLetterSize)
 
-    local numCol = 2
-    local numBelts = totalCol / numCol
+    local numBlocksPerBeltPlate = 4
+    local numBelts = totalCol / numBlocksPerBeltPlate
 
     local miniGameState = {
         activeStyle = "BD_available",
@@ -57,8 +57,8 @@ local function addBlockDash(sectorConfig)
         availWords = {},
         beltPlateCFrames = {},
         beltPlates = {},
-        -- beltPlateSpacing = 2,
-        beltPlateSpacing = rackLetterSize / 8,
+        beltPlateSpacing = 2,
+        -- beltPlateSpacing = rackLetterSize / 8,
         canResetBlocks = true,
         currentLetterIndex = 1,
         foundLetters = {},
