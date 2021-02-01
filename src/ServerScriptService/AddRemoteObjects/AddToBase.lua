@@ -124,6 +124,12 @@ local function addRemoteObjects()
                 "MOM", --
                 "MOM" --
             }
+        }, {
+            words = {
+                "PUP", --
+                "PUP", --
+                "PUP" --
+            }
         }
 
     }
