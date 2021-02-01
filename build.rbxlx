@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>271.888733</X>
-					<Y>284.525513</Y>
-					<Z>-547.831299</Z>
-					<R00>-0.889346182</R00>
-					<R01>-0.152628511</R01>
-					<R02>0.43100819</R02>
-					<R10>-0</R10>
-					<R11>0.942641258</R11>
-					<R12>0.333807796</R12>
-					<R20>-0.45723471</R20>
-					<R21>0.296870679</R21>
-					<R22>-0.838334262</R22>
+					<X>-887.914551</X>
+					<Y>292.940399</Y>
+					<Z>-8.01874256</Z>
+					<R00>-0.481521577</R00>
+					<R01>-0.537271917</R01>
+					<R02>0.69244206</R02>
+					<R10>-1.49011594e-08</R10>
+					<R11>0.790067315</R11>
+					<R12>0.613020241</R12>
+					<R20>-0.876434207</R20>
+					<R21>0.295182467</R21>
+					<R22>-0.380434483</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>271.026733</X>
-					<Y>283.85791</Y>
-					<Z>-546.154663</Z>
+					<X>-889.299438</X>
+					<Y>291.714355</Y>
+					<Z>-7.25787163</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -22227,7 +22227,7 @@ end)]]></ProtectedString>
 										<Z>0</Z>
 									</Vector3>
 									<int64 name="SourceAssetId">-1</int64>
-									<BinaryString name="Tags">VHJhbnNwYXJlbnQASXNsYW5kUG9zaXRpb25lcg==</BinaryString>
+									<BinaryString name="Tags"></BinaryString>
 									<float name="TopParamA">-0.5</float>
 									<float name="TopParamB">0.5</float>
 									<token name="TopSurface">10</token>
@@ -22305,7 +22305,7 @@ end)]]></ProtectedString>
 										<Z>0</Z>
 									</Vector3>
 									<int64 name="SourceAssetId">-1</int64>
-									<BinaryString name="Tags">VHJhbnNwYXJlbnQASXNsYW5kUG9zaXRpb25lcg==</BinaryString>
+									<BinaryString name="Tags"></BinaryString>
 									<float name="TopParamA">-0.5</float>
 									<float name="TopParamB">0.5</float>
 									<token name="TopSurface">10</token>
@@ -22383,7 +22383,7 @@ end)]]></ProtectedString>
 										<Z>0</Z>
 									</Vector3>
 									<int64 name="SourceAssetId">-1</int64>
-									<BinaryString name="Tags">VHJhbnNwYXJlbnQASXNsYW5kUG9zaXRpb25lcg==</BinaryString>
+									<BinaryString name="Tags"></BinaryString>
 									<float name="TopParamA">-0.5</float>
 									<float name="TopParamB">0.5</float>
 									<token name="TopSurface">10</token>
@@ -22461,7 +22461,7 @@ end)]]></ProtectedString>
 										<Z>0</Z>
 									</Vector3>
 									<int64 name="SourceAssetId">-1</int64>
-									<BinaryString name="Tags">VHJhbnNwYXJlbnQASXNsYW5kUG9zaXRpb25lcg==</BinaryString>
+									<BinaryString name="Tags"></BinaryString>
 									<float name="TopParamA">-0.5</float>
 									<float name="TopParamB">0.5</float>
 									<token name="TopSurface">10</token>
@@ -22539,7 +22539,7 @@ end)]]></ProtectedString>
 										<Z>0</Z>
 									</Vector3>
 									<int64 name="SourceAssetId">-1</int64>
-									<BinaryString name="Tags">VHJhbnNwYXJlbnQASXNsYW5kUG9zaXRpb25lcg==</BinaryString>
+									<BinaryString name="Tags"></BinaryString>
 									<float name="TopParamA">-0.5</float>
 									<float name="TopParamB">0.5</float>
 									<token name="TopSurface">10</token>
@@ -22656,7 +22656,7 @@ end)]]></ProtectedString>
 										<Z>0</Z>
 									</Vector3>
 									<int64 name="SourceAssetId">-1</int64>
-									<BinaryString name="Tags">VHJhbnNwYXJlbnQASXNsYW5kUG9zaXRpb25lcg==</BinaryString>
+									<BinaryString name="Tags"></BinaryString>
 									<float name="TopParamA">-0.5</float>
 									<float name="TopParamB">0.5</float>
 									<token name="TopSurface">10</token>
@@ -22777,7 +22777,7 @@ end)]]></ProtectedString>
 											<Z>0</Z>
 										</Vector3>
 										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags">VHJhbnNwYXJlbnQASXNsYW5kUG9zaXRpb25lcg==</BinaryString>
+										<BinaryString name="Tags"></BinaryString>
 										<float name="TopParamA">-0.5</float>
 										<float name="TopParamB">0.5</float>
 										<token name="TopSurface">10</token>
@@ -22855,7 +22855,7 @@ end)]]></ProtectedString>
 											<Z>0</Z>
 										</Vector3>
 										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags">VHJhbnNwYXJlbnQASXNsYW5kUG9zaXRpb25lcg==</BinaryString>
+										<BinaryString name="Tags"></BinaryString>
 										<float name="TopParamA">-0.5</float>
 										<float name="TopParamB">0.5</float>
 										<token name="TopSurface">10</token>
@@ -22933,7 +22933,7 @@ end)]]></ProtectedString>
 											<Z>0</Z>
 										</Vector3>
 										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags">VHJhbnNwYXJlbnQASXNsYW5kUG9zaXRpb25lcg==</BinaryString>
+										<BinaryString name="Tags"></BinaryString>
 										<float name="TopParamA">-0.5</float>
 										<float name="TopParamB">0.5</float>
 										<token name="TopSurface">10</token>
@@ -23011,7 +23011,7 @@ end)]]></ProtectedString>
 											<Z>0</Z>
 										</Vector3>
 										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags">VHJhbnNwYXJlbnQASXNsYW5kUG9zaXRpb25lcg==</BinaryString>
+										<BinaryString name="Tags"></BinaryString>
 										<float name="TopParamA">-0.5</float>
 										<float name="TopParamB">0.5</float>
 										<token name="TopSurface">10</token>
@@ -23089,7 +23089,7 @@ end)]]></ProtectedString>
 											<Z>0</Z>
 										</Vector3>
 										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags">VHJhbnNwYXJlbnQASXNsYW5kUG9zaXRpb25lcg==</BinaryString>
+										<BinaryString name="Tags"></BinaryString>
 										<float name="TopParamA">-0.5</float>
 										<float name="TopParamB">0.5</float>
 										<token name="TopSurface">10</token>
@@ -23167,7 +23167,7 @@ end)]]></ProtectedString>
 											<Z>0</Z>
 										</Vector3>
 										<int64 name="SourceAssetId">-1</int64>
-										<BinaryString name="Tags">VHJhbnNwYXJlbnQASXNsYW5kUG9zaXRpb25lcg==</BinaryString>
+										<BinaryString name="Tags"></BinaryString>
 										<float name="TopParamA">-0.5</float>
 										<float name="TopParamB">0.5</float>
 										<token name="TopSurface">10</token>
