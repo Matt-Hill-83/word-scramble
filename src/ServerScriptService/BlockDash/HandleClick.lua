@@ -150,7 +150,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                     }
                 })
 
-            -- newGem.Handle.Anchored = false
+            newGem.Handle.Anchored = false
 
             local rand = Utils.genRandom(1, #Constants.gemColors)
             newGem.Handle.Color = Constants.gemColors[rand]
