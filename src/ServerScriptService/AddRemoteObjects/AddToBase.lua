@@ -102,31 +102,28 @@ local function addRemoteObjects()
             }
         }, {
             words = {
-                "MOM", --
-                "MOM", --
-                "MOM", --
-                "MOM" --
+                "DAD", --
+                "DAD", --
+                "DAD" --
             }
         }, {
             words = {
-                "MOM", --
-                "MOM", --
-                "MOM", --
-                "MOM" --
+                "POP", --
+                "POP", --
+                "POP" --
             }
         }, {
             words = {
-                "MOM", --
-                "MOM", --
-                "MOM", --
-                "MOM" --
+                "TOT", --
+                "TOT", --
+                "TOT" --
             }
         }, {
             words = {
-                "MOM", --
-                "MOM", --
-                "MOM", --
-                "MOM" --
+                "BOB", --
+                "BOB", --
+                "BOB", --
+                "BOB" --
             }
         }, {
             words = {

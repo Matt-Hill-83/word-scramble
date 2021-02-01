@@ -117,7 +117,7 @@ function setVisibility()
 
     local function configNodeWalls(walls)
         for _, wall in ipairs(walls) do
-            Utils.setItemHeight({item = wall, height = 4})
+            Utils.setItemHeight({item = wall, height = 12})
             local newWallHeight = 1
             -- wall.Transparency = 1
             wall.Transparency = 0.8
