@@ -42,7 +42,7 @@ local function initBeltPlate(props)
     local sizeZ = numRow * rackLetterSize * letterSpacingFactor
 
     belt.Size = Vector3.new(sizeX, 1, sizeZ)
-    glassPlate.Size = Vector3.new(sizeX, rackLetterSize + 0, sizeZ)
+    glassPlate.Size = Vector3.new(sizeX, rackLetterSize - 1, sizeZ + 0.001)
     glassPlate.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                             {
             parent = belt,
@@ -50,7 +50,7 @@ local function initBeltPlate(props)
             offsetConfig = {
                 useParentNearEdge = Vector3.new(0, -1, 0),
                 useChildNearEdge = Vector3.new(0, -1, 0),
-                offsetAdder = Vector3.new(0, 1, 0)
+                offsetAdder = Vector3.new(0, 4.5, 0)
             }
         })
     belt.CFrame = beltPlateCFrames[beltPlateIndex]
@@ -141,6 +141,7 @@ local function initConveyors(miniGameState)
     local numRow = miniGameState.numRow
     local numCol = miniGameState.numCol
     local islandPositioner = miniGameState.islandPositioner
+    local conveyorPadding = miniGameState.conveyorPadding
 
     local initComplete = false
 
@@ -158,7 +159,6 @@ local function initConveyors(miniGameState)
                                                           "BaseIsland")
 
     local boxHeight = rackLetterSize + 1
-    local boxPaddingx2 = 2
 
     local function createDummy()
         local sizeX = numCol * rackLetterSize * letterSpacingFactor
@@ -244,11 +244,14 @@ local function initConveyors(miniGameState)
     end
 
     local function setFloor(dummy)
+        -- local boxPadding = 2
         local paddedDummyLength = (dummy.Size.X + beltPlateSpacing)
-        local adders = paddedDummyLength * 1 + boxPaddingx2 + 2
+
+        local adders = paddedDummyLength * 1 + conveyorPadding * 2
         local totalLength = paddedDummyLength * numBelts + adders
 
-        floor.Size = Vector3.new(totalLength, 1, dummy.Size.Z + boxPaddingx2)
+        floor.Size = Vector3.new(totalLength, 1,
+                                 dummy.Size.Z + conveyorPadding * 2)
         mountInterface.Size = floor.Size
         mountInterface.CFrame = floor.CFrame
 
@@ -389,11 +392,11 @@ local function initConveyors(miniGameState)
     local function config()
         local dummy = createDummy()
         local floor2 = setFloor(dummy)
-        -- createInvisiWalls(floor2)
+        createInvisiWalls(floor2)
         local stopPlate2 = setStop(stopPlate, dummy, floor2)
         setTopFront(topFront, dummy, floor2)
         setTopBack(topBack, dummy, floor2)
-        -- setSidePanels(sidePanel, dummy, floor2)
+        setSidePanels(sidePanel, dummy, floor2)
 
         for beltPlateIndex = 1, numBelts do
             local offset = Vector3.new(-(dummy.Size.X + beltPlateSpacing) *

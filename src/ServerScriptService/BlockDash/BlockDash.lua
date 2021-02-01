@@ -53,6 +53,7 @@ local function addBlockDash(sectorConfig)
         activeWord = nil,
         activeWordIndex = 1,
         availLetters = {},
+        conveyorPadding = 1,
         availWords = {},
         beltPlateCFrames = {},
         beltPlates = {},
