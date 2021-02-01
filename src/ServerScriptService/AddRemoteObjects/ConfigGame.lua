@@ -117,11 +117,15 @@ function setVisibility()
 
     if not Constants.gameConfig.isDev then
         local tagBaseWallTransparent = CS:GetTagged("ConveyorWallTransparent")
+
+        local realWallHeight = 24
+        local invisiWallHeight = 12
+
         for _, wall in ipairs(tagBaseWallTransparent) do
-            Utils.setItemHeight({item = wall, height = 30})
-            local newWallHeight = 1
-            -- wall.Transparency = 1
-            wall.Transparency = 0.8
+            Utils.setItemHeight({item = wall, height = realWallHeight})
+            local newWallHeight = invisiWallHeight
+            wall.Transparency = 1
+            -- wall.Transparency = 0.8
             wall.CanCollide = true
             wall.Anchored = true
 
@@ -134,8 +138,8 @@ function setVisibility()
                                    Vector3.new(0,
                                                -(wall.Size.Y - newWall.Size.Y) /
                                                    2, 0)
-            newWall.Transparency = 0
-            CS:RemoveTag(newWall, "BaseWallTransparent")
+            -- newWall.Transparency = 0
+            CS:RemoveTag(newWall, "ConveyorWallTransparent")
         end
     end
 
@@ -158,7 +162,7 @@ function setVisibility()
                                                -(wall.Size.Y - newWall.Size.Y) /
                                                    2, 0)
             newWall.Transparency = 0
-            CS:RemoveTag(newWall, "BaseWallTransparent")
+            -- CS:RemoveTag(newWall, "BaseWallTransparent")
         end
     end
     configNodeWalls(CS:GetTagged("NodeWall-Hex"))

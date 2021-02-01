@@ -183,8 +183,8 @@ local function initConveyors(miniGameState)
 
         frontWall.Size = Vector3.new(1, wallHeight, floor.Size.Z)
         -- backWall.Size = Vector3.new(1, wallHeight, floor.Size.Z)
-        leftWall.Size = Vector3.new(floor.Size.X, wallHeight, 0)
-        rightWall.Size = Vector3.new(floor.Size.X, wallHeight, 0)
+        leftWall.Size = Vector3.new(floor.Size.X, wallHeight, 1)
+        rightWall.Size = Vector3.new(floor.Size.X, wallHeight, 1)
 
         local childWeldsFront = Utils.disableEnabledWelds(frontWall)
         -- local childWeldsBack = Utils.disableEnabledWelds(backWall)
