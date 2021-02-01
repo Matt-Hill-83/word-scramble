@@ -45,6 +45,8 @@ local function addBlockDash(sectorConfig)
     local numRow = math.floor(islandPositioner.Size.Z / rackLetterSize)
     local totalCol = math.floor(islandPositioner.Size.X / rackLetterSize)
 
+    -- TODO: throw this as an error
+    -- conveyor length must be a multiple of num_blocks_per_belt_plate and blockSize
     local numBlocksPerBeltPlate = 4
     local numBelts = totalCol / numBlocksPerBeltPlate
 
