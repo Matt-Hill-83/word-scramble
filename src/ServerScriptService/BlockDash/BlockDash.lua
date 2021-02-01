@@ -67,7 +67,7 @@ local function addBlockDash(sectorConfig)
         islandPositioner = islandPositioner,
         letterSpacingFactor = 1.05,
         numBelts = numBelts,
-        numCol = numCol,
+        numCol = numBlocksPerBeltPlate,
         numRow = numRow,
         rackLetterBlockObjs = {},
         rackLetterSize = rackLetterSize,

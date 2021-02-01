@@ -173,21 +173,21 @@ local function initConveyors(miniGameState)
     local function createInvisiWalls(floor3)
         local wallHeight = 24
         local frontWall = invisiWall:Clone()
-        local backWall = invisiWall:Clone()
+        -- local backWall = invisiWall:Clone()
         local leftWall = invisiWall:Clone()
         local rightWall = invisiWall:Clone()
         frontWall.Parent = invisiWall.Parent
-        backWall.Parent = invisiWall.Parent
+        -- backWall.Parent = invisiWall.Parent
         leftWall.Parent = invisiWall.Parent
         rightWall.Parent = invisiWall.Parent
 
         frontWall.Size = Vector3.new(1, wallHeight, floor.Size.Z)
-        backWall.Size = Vector3.new(1, wallHeight, floor.Size.Z)
+        -- backWall.Size = Vector3.new(1, wallHeight, floor.Size.Z)
         leftWall.Size = Vector3.new(floor.Size.X, wallHeight, 0)
         rightWall.Size = Vector3.new(floor.Size.X, wallHeight, 0)
 
         local childWeldsFront = Utils.disableEnabledWelds(frontWall)
-        local childWeldsBack = Utils.disableEnabledWelds(backWall)
+        -- local childWeldsBack = Utils.disableEnabledWelds(backWall)
         local childWeldsLeft = Utils.disableEnabledWelds(leftWall)
         local childWeldsRight = Utils.disableEnabledWelds(rightWall)
         local parentWelds = Utils.disableEnabledWelds(floor3)
@@ -202,16 +202,16 @@ local function initConveyors(miniGameState)
                     offsetAdder = Vector3.new(0, 0, 0)
                 }
             })
-        backWall.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                              {
-                parent = floor3,
-                child = backWall,
-                offsetConfig = {
-                    useParentNearEdge = Vector3.new(-1, -1, 0),
-                    useChildNearEdge = Vector3.new(-1, -1, 0),
-                    offsetAdder = Vector3.new(0, 0, 0)
-                }
-            })
+        -- backWall.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+        --                       {
+        --         parent = floor3,
+        --         child = backWall,
+        --         offsetConfig = {
+        --             useParentNearEdge = Vector3.new(-1, -1, 0),
+        --             useChildNearEdge = Vector3.new(-1, -1, 0),
+        --             offsetAdder = Vector3.new(0, 0, 0)
+        --         }
+        --     })
 
         leftWall.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                               {
@@ -236,7 +236,7 @@ local function initConveyors(miniGameState)
             })
 
         for _, weld in ipairs(childWeldsFront) do weld.Enabled = true end
-        for _, weld in ipairs(childWeldsBack) do weld.Enabled = true end
+        -- for _, weld in ipairs(childWeldsBack) do weld.Enabled = true end
         for _, weld in ipairs(childWeldsLeft) do weld.Enabled = true end
         for _, weld in ipairs(childWeldsRight) do weld.Enabled = true end
         for _, weld in ipairs(parentWelds) do weld.Enabled = true end
