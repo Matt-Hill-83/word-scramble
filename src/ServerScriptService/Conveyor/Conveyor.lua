@@ -126,13 +126,13 @@ local function initBeltPlate(props)
                     end
 
                     -- Weld each plate to the one after it
-                    for i = 1, #beltPlates2 - 1 do
-                        local weld = Instance.new("WeldConstraint")
-                        weld.Name = "PlateWeld"
-                        weld.Parent = beltPlates2[i].Belt
-                        weld.Part0 = beltPlates2[i].Belt
-                        weld.Part1 = beltPlates2[i + 1].Belt
-                    end
+                    -- for i = 1, #beltPlates2 - 1 do
+                    --     local weld = Instance.new("WeldConstraint")
+                    --     weld.Name = "PlateWeld"
+                    --     weld.Parent = beltPlates2[i].Belt
+                    --     weld.Part0 = beltPlates2[i].Belt
+                    --     weld.Part1 = beltPlates2[i + 1].Belt
+                    -- end
                 end
                 db = true
             end
