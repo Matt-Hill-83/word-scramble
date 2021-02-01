@@ -13,6 +13,8 @@ local AUTOSAVE_INTERVAL = 60
 -- Function that other scripts can call to change a player's stats
 function PlayerStatManager:ChangeStat(player, statName, value)
     local playerUserId = nameStub .. player.UserId
+    if not sessionData[playerUserId] then return end
+
     assert(typeof(sessionData[playerUserId][statName]) == typeof(value),
            "ChangeStat error: types do not match")
     if typeof(sessionData[playerUserId][statName]) == "number" then
