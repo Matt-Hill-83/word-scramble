@@ -127,7 +127,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         if (wordComplete) then
             local currentWord2 = Constants.wordConfigs[currentWord]
             if currentWord2 then
-                local soundId = currentWord2['soundId'] or fireSound
+                local soundId = currentWord2[soundId] or fireSound
                 Utils.playSound(soundId)
             else
                 -- Utils.playSound(fireSound)

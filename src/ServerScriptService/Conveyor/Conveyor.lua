@@ -60,7 +60,7 @@ local function initBeltPlate(props)
                 useChildNearEdge = Vector3.new(1, -1, 1)
             }
         })
-    letterPositioner.LPWeld.Enabled = true
+    -- letterPositioner.LPWeld.Enabled = true
 
     -- 
     -- 
@@ -400,7 +400,7 @@ local function initConveyors(miniGameState)
         local stopPlate2 = setStop(stopPlate, dummy, floor2)
         setTopFront(topFront, dummy, floor2)
         setTopBack(topBack, dummy, floor2)
-        setSidePanels(sidePanel, dummy, floor2)
+        -- setSidePanels(sidePanel, dummy, floor2)
 
         for beltPlateIndex = 1, numBelts do
             local offset = Vector3.new(-(dummy.Size.X + beltPlateSpacing) *
