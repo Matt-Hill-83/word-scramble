@@ -718,7 +718,7 @@ module.wordConfigs = {
     LAP = {soundId = "6311425376", imageId = "xxx"},
     MAP = {soundId = "6311424769", imageId = "xxx"},
     MAT = {soundId = "6145991865", imageId = getImageId('mat')},
-    MOM = {soundId = "6253993250", imageId = "6253993250"},
+    MOM = {soundId = "6199537750", imageId = "6253993250"},
     NAP = {soundId = "6311428568", imageId = "xxx"},
     PAN = {soundId = "6311422070", imageId = "xxx"},
     PAT = {soundId = "6145992548", imageId = "6253959302"},

@@ -87,7 +87,7 @@ local function addRemoteObjects()
         sector6Config --
     }
 
-    local sectorConfigs = {
+    local xxxsectorConfigs = {
         {
             words = {
                 "MOM", --

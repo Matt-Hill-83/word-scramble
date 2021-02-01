@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-265.989166</X>
-					<Y>395.524506</Y>
-					<Z>121.191956</Z>
-					<R00>0.612730145</R00>
-					<R01>0.450930625</R01>
-					<R02>-0.649017334</R02>
-					<R10>1.49011612e-08</R10>
-					<R11>0.821237206</R11>
-					<R12>0.570587158</R12>
-					<R20>0.790292263</R20>
-					<R21>-0.349615961</R21>
-					<R22>0.503196716</R22>
+					<X>-222.695908</X>
+					<Y>399.503845</Y>
+					<Z>172.296158</Z>
+					<R00>0.811214805</R00>
+					<R01>-0.217992827</R01>
+					<R02>0.542595267</R02>
+					<R10>-0</R10>
+					<R11>0.927912593</R11>
+					<R12>0.372797757</R12>
+					<R20>-0.584748209</R20>
+					<R21>-0.302419066</R21>
+					<R22>0.752736509</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-264.691132</X>
-					<Y>394.383331</Y>
-					<Z>120.185562</Z>
+					<X>-223.781113</X>
+					<Y>398.75824</Y>
+					<Z>170.790665</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -89328,7 +89328,7 @@ local function addRemoteObjects()
         sector6Config --
     }
 
-    local sectorConfigs = {
+    local xxxsectorConfigs = {
         {
             words = {
                 "MOM", --
@@ -90027,7 +90027,7 @@ local function addBlockDash(sectorConfig)
         renderedWords = {},
         sectorFolder = sectorFolder,
         wordLetterSize = 16,
-        wordsPerCol = 3
+        wordsPerCol = 2
     }
     miniGameState.words = words
 
@@ -91957,7 +91957,7 @@ module.wordConfigs = {
     LAP = {soundId = "6311425376", imageId = "xxx"},
     MAP = {soundId = "6311424769", imageId = "xxx"},
     MAT = {soundId = "6145991865", imageId = getImageId('mat')},
-    MOM = {soundId = "6253993250", imageId = "6253993250"},
+    MOM = {soundId = "6199537750", imageId = "6253993250"},
     NAP = {soundId = "6311428568", imageId = "xxx"},
     PAN = {soundId = "6311422070", imageId = "xxx"},
     PAT = {soundId = "6145992548", imageId = "6253959302"},

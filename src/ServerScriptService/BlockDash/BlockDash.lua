@@ -76,7 +76,7 @@ local function addBlockDash(sectorConfig)
         renderedWords = {},
         sectorFolder = sectorFolder,
         wordLetterSize = 16,
-        wordsPerCol = 3
+        wordsPerCol = 2
     }
     miniGameState.words = words
 
