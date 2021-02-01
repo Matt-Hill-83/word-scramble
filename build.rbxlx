@@ -86717,7 +86717,7 @@ end)]]></ProtectedString>
 				<string name="Name">Ambient</string>
 				<bool name="PlayOnRemove">false</bool>
 				<float name="PlaybackSpeed">1</float>
-				<bool name="Playing">false</bool>
+				<bool name="Playing">true</bool>
 				<token name="RollOffMode">0</token>
 				<Ref name="SoundGroup">null</Ref>
 				<Content name="SoundId"><url>rbxassetid://856635705</url></Content>
@@ -95034,7 +95034,7 @@ local function initConveyors(miniGameState)
     local function config()
         local dummy = createDummy()
         local floor2 = setFloor(dummy)
-        -- createInvisiWalls(floor2)
+        createInvisiWalls(floor2)
         local stopPlate2 = setStop(stopPlate, dummy, floor2)
         setTopFront(topFront, dummy, floor2)
         setTopBack(topBack, dummy, floor2)
