@@ -29,7 +29,6 @@ local function initBeltPlate(props)
     newBeltPlate.Name = 'NewBeltPlate'
     table.insert(beltPlates, newBeltPlate)
     local belt = newBeltPlate.Belt
-    local glassPlate = newBeltPlate.GlassPlate
 
     -- Create a property in which to store the home position of each beltplate
     -- This will be incremented whenever a beltPlate hits the stop wall
@@ -42,17 +41,7 @@ local function initBeltPlate(props)
     local sizeZ = numRow * rackLetterSize * letterSpacingFactor
 
     belt.Size = Vector3.new(sizeX, 1, sizeZ)
-    glassPlate.Size = Vector3.new(sizeX, rackLetterSize - 1, sizeZ + 0.001)
-    glassPlate.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                            {
-            parent = belt,
-            child = glassPlate,
-            offsetConfig = {
-                useParentNearEdge = Vector3.new(0, -1, 0),
-                useChildNearEdge = Vector3.new(0, -1, 0),
-                offsetAdder = Vector3.new(0, 4.5, 0)
-            }
-        })
+
     belt.CFrame = beltPlateCFrames[beltPlateIndex]
     belt.BeltWeld.Enabled = true
 
@@ -73,6 +62,27 @@ local function initBeltPlate(props)
         })
     letterPositioner.LPWeld.Enabled = true
 
+    -- 
+    -- 
+    -- 
+    local glassPlate = newBeltPlate.GlassPlate
+    local childWeldsFront = Utils.disableEnabledWelds(glassPlate)
+    glassPlate.Size = Vector3.new(sizeX + 0.001, rackLetterSize - 1 - 0.001,
+                                  sizeZ + 0.001)
+    glassPlate.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                            {
+            parent = belt,
+            child = glassPlate,
+            offsetConfig = {
+                useParentNearEdge = Vector3.new(0, 1, 0),
+                useChildNearEdge = Vector3.new(0, -1, 0),
+                offsetAdder = Vector3.new(0, 0, 0)
+            }
+        })
+    for _, weld in ipairs(childWeldsFront) do weld.Enabled = true end
+    -- 
+    -- 
+    -- 
     local pc = belt.PrismaticConstraint
     pc.Enabled = true
     pc.Speed = speed
@@ -158,7 +168,7 @@ local function initConveyors(miniGameState)
     local mountInterface = Utils.getFirstDescendantByName(sectorFolder,
                                                           "BaseIsland")
 
-    local boxHeight = rackLetterSize + 1
+    local boxHeight = rackLetterSize + 4
 
     local function createDummy()
         local sizeX = numCol * rackLetterSize * letterSpacingFactor
@@ -244,7 +254,6 @@ local function initConveyors(miniGameState)
     end
 
     local function setFloor(dummy)
-        -- local boxPadding = 2
         local paddedDummyLength = (dummy.Size.X + beltPlateSpacing)
 
         local adders = paddedDummyLength * 1 + conveyorPadding * 2
@@ -315,16 +324,16 @@ local function initConveyors(miniGameState)
                 }
             })
 
-        door.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                          {
-                parent = floor2,
-                child = door,
-                offsetConfig = {
-                    useParentNearEdge = Vector3.new(1, 1, -1),
-                    useChildNearEdge = Vector3.new(1, -1, -1)
-                    -- offsetAdder = Vector3.new(0, boxHeight, 0)
-                }
-            })
+        -- door.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+        --                   {
+        --         parent = floor2,
+        --         child = door,
+        --         offsetConfig = {
+        --             useParentNearEdge = Vector3.new(1, 1, -1),
+        --             useChildNearEdge = Vector3.new(1, -1, -1)
+        --             -- offsetAdder = Vector3.new(0, boxHeight, 0)
+        --         }
+        --     })
 
         for _, weld in ipairs(childWelds) do weld.Enabled = true end
         for _, weld in ipairs(childWelds2) do weld.Enabled = true end
@@ -396,7 +405,7 @@ local function initConveyors(miniGameState)
         local stopPlate2 = setStop(stopPlate, dummy, floor2)
         setTopFront(topFront, dummy, floor2)
         setTopBack(topBack, dummy, floor2)
-        setSidePanels(sidePanel, dummy, floor2)
+        -- setSidePanels(sidePanel, dummy, floor2)
 
         for beltPlateIndex = 1, numBelts do
             local offset = Vector3.new(-(dummy.Size.X + beltPlateSpacing) *
