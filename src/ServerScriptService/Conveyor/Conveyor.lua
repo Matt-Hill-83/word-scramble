@@ -17,6 +17,7 @@ local function initBeltPlate(props)
     local sectorFolder = miniGameState.sectorFolder
     local beltPlateCFrames = miniGameState.beltPlateCFrames
     local beltPlates = miniGameState.beltPlates
+    local sectorConfig = miniGameState.sectorConfig
 
     local speed = 10
 
@@ -83,63 +84,74 @@ local function initBeltPlate(props)
     -- 
     -- 
     -- 
+
     local pc = belt.PrismaticConstraint
-    pc.Enabled = true
-    pc.Speed = speed
+    if sectorConfig.freezeConveyor == true then
+        print('freeze conveyor');
 
-    local function jumpBack(beltPlates2)
-        local db = true
+        print('sectorFolder' .. ' - start');
+        print(sectorFolder);
+        pc.Enabled = false
+    else
+        pc.Enabled = true
+        pc.Speed = speed
 
-        -- Enclose this so is acts on the correct belt
-        -- closure no longer needed
-        local function closure(touched)
-            if db == true then
-                db = false
-                if CS:hasTag(touched, "stop") then
+        local function jumpBack(beltPlates2)
+            local db = true
 
-                    --  destroy existing PlateWelds
-                    for _, beltPlate in ipairs(beltPlates2) do
-                        local plateWelds =
-                            Utils.getDescendantsByName(beltPlate, "PlateWeld")
-                        for _, weld in ipairs(plateWelds) do
-                            weld:Destroy()
+            -- Enclose this so is acts on the correct belt
+            -- closure no longer needed
+            local function closure(touched)
+                if db == true then
+                    db = false
+                    if CS:hasTag(touched, "stop") then
+
+                        --  destroy existing PlateWelds
+                        for _, beltPlate in ipairs(beltPlates2) do
+                            local plateWelds =
+                                Utils.getDescendantsByName(beltPlate,
+                                                           "PlateWeld")
+                            for _, weld in ipairs(plateWelds) do
+                                weld:Destroy()
+                            end
                         end
+
+                        for _, beltPlate in ipairs(beltPlates2) do
+                            local positionIndex = beltPlate.PositionIndex.Value
+                            local incrementedPosition = positionIndex - 1
+                            if incrementedPosition == #beltPlates2 + 1 then
+                                incrementedPosition = 1
+                            end
+                            if incrementedPosition == 0 then
+                                incrementedPosition = #beltPlates2
+                            end
+
+                            beltPlate.PositionIndex.Value = incrementedPosition
+                            local newCFrame =
+                                beltPlateCFrames[incrementedPosition]
+
+                            -- add adjuster, because you averrun a bit because of the 1/30 sec timestep.
+                            local adjuster = 0
+                            beltPlate.Belt.CFrame =
+                                newCFrame + Vector3.new(0, 0, adjuster)
+                        end
+
+                        -- Weld each plate to the one after it
+                        -- for i = 1, #beltPlates2 - 1 do
+                        --     local weld = Instance.new("WeldConstraint")
+                        --     weld.Name = "PlateWeld"
+                        --     weld.Parent = beltPlates2[i].Belt
+                        --     weld.Part0 = beltPlates2[i].Belt
+                        --     weld.Part1 = beltPlates2[i + 1].Belt
+                        -- end
                     end
-
-                    for _, beltPlate in ipairs(beltPlates2) do
-                        local positionIndex = beltPlate.PositionIndex.Value
-                        local incrementedPosition = positionIndex - 1
-                        if incrementedPosition == #beltPlates2 + 1 then
-                            incrementedPosition = 1
-                        end
-                        if incrementedPosition == 0 then
-                            incrementedPosition = #beltPlates2
-                        end
-
-                        beltPlate.PositionIndex.Value = incrementedPosition
-                        local newCFrame = beltPlateCFrames[incrementedPosition]
-
-                        -- add adjuster, because you averrun a bit because of the 1/30 sec timestep.
-                        local adjuster = 0
-                        beltPlate.Belt.CFrame =
-                            newCFrame + Vector3.new(0, 0, adjuster)
-                    end
-
-                    -- Weld each plate to the one after it
-                    -- for i = 1, #beltPlates2 - 1 do
-                    --     local weld = Instance.new("WeldConstraint")
-                    --     weld.Name = "PlateWeld"
-                    --     weld.Parent = beltPlates2[i].Belt
-                    --     weld.Part0 = beltPlates2[i].Belt
-                    --     weld.Part1 = beltPlates2[i + 1].Belt
-                    -- end
+                    db = true
                 end
-                db = true
             end
+            return closure
         end
-        return closure
+        belt.Touched:Connect(jumpBack(beltPlates))
     end
-    belt.Touched:Connect(jumpBack(beltPlates))
 end
 
 local function initConveyors(miniGameState)
@@ -346,7 +358,7 @@ local function initConveyors(miniGameState)
         child.Size = Vector3.new(dummy.Size.X + 6, boxHeight, floor2.Size.Z)
         local duplicateSidePanel = child:Clone()
         duplicateSidePanel.Parent = child.Parent
-        duplicateSidePanel.Name = "qqq"
+        -- duplicateSidePanel.Name = "qqq"
 
         local childWelds = Utils.disableEnabledWelds(child)
         local childWelds2 = Utils.disableEnabledWelds(duplicateSidePanel)

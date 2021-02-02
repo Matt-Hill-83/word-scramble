@@ -7,6 +7,7 @@ local sectorConfigs = {
             "MOM" --
         }
     }, {
+        freezeConveyor = true,
         words = {
             "DAD", --
             "DAD", --

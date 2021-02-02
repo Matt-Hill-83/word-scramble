@@ -1,6 +1,7 @@
 local module = {}
 
 local sector1Config = {
+    freezeConveyor = true,
     words = {
         -- "NAP", --
         -- "TAP", --

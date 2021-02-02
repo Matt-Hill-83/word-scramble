@@ -19,9 +19,6 @@ local function addRemoteObjects()
     local levelsFolder = Utils.getFirstDescendantByName(myStuff, "Levels")
     local levels = levelsFolder:GetChildren()
 
-    print('levels[1]' .. ' - start');
-    print(levels[1]);
-
     Utils.sortListByObjectKey(levels, "Name")
 
     local islandTemplate = Utils.getFromTemplates("IslandTemplate")
@@ -30,7 +27,7 @@ local function addRemoteObjects()
         local islandPositioners = Utils.getByTagInParent(
                                       {parent = level, tag = "IslandPositioner"})
 
-        local sectorConfigs = LevelConfigs.levelConfigs[1]
+        local sectorConfigs = LevelConfigs.levelConfigs[levelIndex]
         Utils.sortListByObjectKey(islandPositioners, "Name")
 
         local myPositioners = Constants.gameConfig.singleIsland and
