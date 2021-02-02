@@ -5,7 +5,7 @@ local CS = game:GetService("CollectionService")
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 local Constants = require(Sss.Source.Constants.Constants)
-local SectorConfigs = require(Sss.Source.SectorConfigs.SectorConfigs)
+local LevelConfigs = require(Sss.Source.LevelConfigs.LevelConfigs)
 
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
@@ -21,8 +21,7 @@ local function addRemoteObjects()
 
     local islandPositioners = CS:GetTagged("IslandPositioner")
     local islandTemplate = Utils.getFromTemplates("IslandTemplate")
-    local sectorConfigs = SectorConfigs.sectorConfigs[2]
-    -- local sectorConfigs = SectorConfigs.sectorConfigs[1]
+    local sectorConfigs = LevelConfigs.levelConfigs[2]
 
     Utils.sortListByObjectKey(islandPositioners, "Name")
     print('Constants.gameConfig.singleIsland' .. ' - start');
