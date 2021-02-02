@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-947.539612</X>
-					<Y>257.021393</Y>
-					<Z>107.226677</Z>
-					<R00>0.200548157</R00>
-					<R01>0.0448010974</R01>
-					<R02>0.978658974</R02>
-					<R10>9.31322464e-10</R10>
-					<R11>0.998953819</R11>
-					<R12>-0.0457301587</R12>
-					<R20>-0.979683816</R20>
-					<R21>0.00917110033</R21>
-					<R22>0.200338379</R22>
+					<X>291.115021</X>
+					<Y>74.9577789</Y>
+					<Z>-740.267883</Z>
+					<R00>-0.488193482</R00>
+					<R01>-0.26668942</R01>
+					<R02>0.830989778</R02>
+					<R10>7.45058149e-09</R10>
+					<R11>0.952166975</R11>
+					<R12>0.305578709</R12>
+					<R20>-0.87273556</R20>
+					<R21>0.14918153</R21>
+					<R22>-0.464841574</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-949.496948</X>
-					<Y>257.112854</Y>
-					<Z>106.825996</Z>
+					<X>289.453033</X>
+					<Y>74.3466187</Y>
+					<Z>-739.338196</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -9653,7 +9653,7 @@ remoteCode.addRemoteObjects()
 					<Item class="Folder" referent="RBX43be4960f91f4ddf875cd381c8625078">
 						<Properties>
 							<BinaryString name="AttributesSerialize"></BinaryString>
-							<string name="Name">Level1</string>
+							<string name="Name">Level2</string>
 							<int64 name="SourceAssetId">-1</int64>
 							<BinaryString name="Tags"></BinaryString>
 						</Properties>
@@ -14395,7 +14395,7 @@ remoteCode.addRemoteObjects()
 					<Item class="Folder" referent="RBXd55ad77b6b8d4223b4b0ef7830d42c7a">
 						<Properties>
 							<BinaryString name="AttributesSerialize"></BinaryString>
-							<string name="Name">Level2</string>
+							<string name="Name">Level1</string>
 							<int64 name="SourceAssetId">-1</int64>
 							<BinaryString name="Tags"></BinaryString>
 						</Properties>
@@ -83889,16 +83889,29 @@ local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
-    local mainSpawn = Utils.getFirstDescendantByName(myStuff, "MainSpawn")
+    local levelsFolder = Utils.getFirstDescendantByName(myStuff, "Levels")
+    local levels = levelsFolder:GetChildren()
+    print('levels' .. ' - start');
+    print('levels' .. ' - start');
+    print('levels' .. ' - start');
+    print(levels);
     Entrance.initEntrance(workspace)
 
-    local islandPositioners = CS:GetTagged("IslandPositioner")
+    print('levels[1]' .. ' - start');
+    print(levels[1]);
+
+    Utils.sortListByObjectKey(levels, "Name")
+    local islandPositioners = Utils.getByTagInParent(
+                                  {parent = levels[1], tag = "IslandPositioner"})
+
+    print('islandPositioners' .. ' - start');
+    print(islandPositioners);
+
+    -- local islandPositioners = CS:GetTagged("IslandPositioner")
     local islandTemplate = Utils.getFromTemplates("IslandTemplate")
-    local sectorConfigs = LevelConfigs.levelConfigs[2]
+    local sectorConfigs = LevelConfigs.levelConfigs[1]
 
     Utils.sortListByObjectKey(islandPositioners, "Name")
-    print('Constants.gameConfig.singleIsland' .. ' - start');
-    print(Constants.gameConfig.singleIsland);
 
     local myPositioners = Constants.gameConfig.singleIsland and
                               {islandPositioners[1]} or islandPositioners
@@ -83921,7 +83934,6 @@ local function addRemoteObjects()
         newIsland.Parent = myStuff
         newIsland.Name = "Sector-" .. islandPositioner.Name
         local newIslandPart = newIsland.PrimaryPart
-        -- newIslandPart.Name = "newIsland"
 
         local sectorConfig = sectorConfigs[(islandIndex % #sectorConfigs) + 1]
         sectorConfig.sectorFolder = newIsland
@@ -85788,8 +85800,8 @@ return module
 local isDev = false
 
 -- local activeSpawn = "SpawnHubAndSpokes"
-local activeSpawn = "Spawn_SkyBox"
--- local activeSpawn = "Spawn_Level2"
+-- local activeSpawn = "Spawn_SkyBox"
+local activeSpawn = "Spawn_Level2"
 
 local devGameConfig = {
     singleIsland = false,

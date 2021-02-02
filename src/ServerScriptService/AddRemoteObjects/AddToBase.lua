@@ -16,16 +16,29 @@ local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
-    local mainSpawn = Utils.getFirstDescendantByName(myStuff, "MainSpawn")
+    local levelsFolder = Utils.getFirstDescendantByName(myStuff, "Levels")
+    local levels = levelsFolder:GetChildren()
+    print('levels' .. ' - start');
+    print('levels' .. ' - start');
+    print('levels' .. ' - start');
+    print(levels);
     Entrance.initEntrance(workspace)
 
-    local islandPositioners = CS:GetTagged("IslandPositioner")
+    print('levels[1]' .. ' - start');
+    print(levels[1]);
+
+    Utils.sortListByObjectKey(levels, "Name")
+    local islandPositioners = Utils.getByTagInParent(
+                                  {parent = levels[1], tag = "IslandPositioner"})
+
+    print('islandPositioners' .. ' - start');
+    print(islandPositioners);
+
+    -- local islandPositioners = CS:GetTagged("IslandPositioner")
     local islandTemplate = Utils.getFromTemplates("IslandTemplate")
-    local sectorConfigs = LevelConfigs.levelConfigs[2]
+    local sectorConfigs = LevelConfigs.levelConfigs[1]
 
     Utils.sortListByObjectKey(islandPositioners, "Name")
-    print('Constants.gameConfig.singleIsland' .. ' - start');
-    print(Constants.gameConfig.singleIsland);
 
     local myPositioners = Constants.gameConfig.singleIsland and
                               {islandPositioners[1]} or islandPositioners
@@ -48,7 +61,6 @@ local function addRemoteObjects()
         newIsland.Parent = myStuff
         newIsland.Name = "Sector-" .. islandPositioner.Name
         local newIslandPart = newIsland.PrimaryPart
-        -- newIslandPart.Name = "newIsland"
 
         local sectorConfig = sectorConfigs[(islandIndex % #sectorConfigs) + 1]
         sectorConfig.sectorFolder = newIsland
