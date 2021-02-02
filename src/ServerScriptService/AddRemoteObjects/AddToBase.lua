@@ -15,126 +15,14 @@ local Entrance = require(Sss.Source.BlockDash.Entrance)
 local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
-    -- local sector1Config = {
-    --     words = {
-    --         -- "NAP", --
-    --         -- "TAP", --
-    --         -- "RAP", --
-    --         "ZAP" --
-    --     }
-    -- }
-
-    -- local sector2Config = {
-    --     words = {
-    --         "CAP", --
-    --         "GAP", --
-    --         "LAP", --
-    --         "MAP" --
-    --     }
-    -- }
-
-    -- local sector3Config = {
-    --     words = {
-    --         "VAN", --
-    --         "RAN", --
-    --         "CAN", --
-    --         "AN" --
-    --     }
-    -- }
-
-    -- local sector4Config = {
-    --     words = {
-    --         "PAN", --
-    --         "DAN", --
-    --         "FAN", --
-    --         "TAN", --
-    --         "JAN" --
-    --     }
-    -- }
-    -- local sector5Config = {
-    --     words = {
-    --         "SAT", --
-    --         "RAT", --
-    --         "VAT", --
-    --         "AT" --
-
-    --     }
-    -- }
-
-    -- local sector6Config = {
-    --     -- words = {
-    --     --     "CAT" --
-    --     -- }
-    --     words = {
-    --         "CAT", --
-    --         "HAT", --
-    --         "MAT", --
-    --         "PAT" --
-    --     }
-    -- }
-
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
     local mainSpawn = Utils.getFirstDescendantByName(myStuff, "MainSpawn")
     Entrance.initEntrance(workspace)
 
     local islandPositioners = CS:GetTagged("IslandPositioner")
     local islandTemplate = Utils.getFromTemplates("IslandTemplate")
-    local sectorConfigs = SectorConfigs.sectorConfigs[1]
-    -- local sectorConfigs = {
-    --     sector1Config, --
-    --     sector2Config, --
-    --     sector3Config, --
-    --     sector4Config, --
-    --     sector5Config, --
-    --     sector6Config --
-    -- }
-
-    local xxxsectorConfigs = {
-        {
-            words = {
-                "MOM", --
-                "MOM", --
-                "MOM" --
-            }
-        }, {
-            words = {
-                "DAD", --
-                "DAD", --
-                "DAD" --
-            }
-        }, {
-            words = {
-                "POP", --
-                "POP", --
-                "POP" --
-            }
-        }, {
-            words = {
-                "TOT", --
-                "TOT", --
-                "TOT" --
-            }
-        }, {
-            words = {
-                "BOB", --
-                "BOB", --
-                "BOB" --
-            }
-        }, {
-            words = {
-                "MOM", --
-                "MOM", --
-                "MOM" --
-            }
-        }, {
-            words = {
-                "PUP", --
-                "PUP", --
-                "PUP" --
-            }
-        }
-
-    }
+    local sectorConfigs = SectorConfigs.sectorConfigs[2]
+    -- local sectorConfigs = SectorConfigs.sectorConfigs[1]
 
     Utils.sortListByObjectKey(islandPositioners, "Name")
     print('Constants.gameConfig.singleIsland' .. ' - start');

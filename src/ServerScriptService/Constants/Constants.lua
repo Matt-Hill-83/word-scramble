@@ -2,8 +2,8 @@
 local isDev = false
 
 -- local activeSpawn = "SpawnHubAndSpokes"
--- local activeSpawn = "Spawn_SkyBox"
-local activeSpawn = "Spawn_Level2"
+local activeSpawn = "Spawn_SkyBox"
+-- local activeSpawn = "Spawn_Level2"
 
 local devGameConfig = {
     singleIsland = false,
