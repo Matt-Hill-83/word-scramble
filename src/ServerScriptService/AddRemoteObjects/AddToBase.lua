@@ -161,7 +161,7 @@ local function addRemoteObjects()
         local newIslandPart = newIsland.PrimaryPart
         -- newIslandPart.Name = "newIsland"
 
-        local sectorConfig = sectorConfigs[islandIndex]
+        local sectorConfig = sectorConfigs[(islandIndex % #sectorConfigs) + 1]
         sectorConfig.sectorFolder = newIsland
         sectorConfig.islandPositioner = islandPositioner
 
