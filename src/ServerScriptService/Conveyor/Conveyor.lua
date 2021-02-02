@@ -303,10 +303,8 @@ local function initConveyors(miniGameState)
 
     local function setTopFront(topFront2, dummy, floor2)
         topFront2.Size = Vector3.new(dummy.Size.X + 6, 1, floor2.Size.Z)
-        -- local door = lockedDoor.PrimaryPart
 
         local childWelds = Utils.disableEnabledWelds(topFront2)
-        -- local childWelds2 = Utils.disableEnabledWelds(door)
         local parentWelds = Utils.disableEnabledWelds(floor2)
         topFront2.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                {
@@ -319,19 +317,7 @@ local function initConveyors(miniGameState)
                 }
             })
 
-        -- door.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-        --                   {
-        --         parent = floor2,
-        --         child = door,
-        --         offsetConfig = {
-        --             useParentNearEdge = Vector3.new(1, 1, -1),
-        --             useChildNearEdge = Vector3.new(1, -1, -1)
-        --             -- offsetAdder = Vector3.new(0, boxHeight, 0)
-        --         }
-        --     })
-
         for _, weld in ipairs(childWelds) do weld.Enabled = true end
-        -- for _, weld in ipairs(childWelds2) do weld.Enabled = true end
         for _, weld in ipairs(parentWelds) do weld.Enabled = true end
         return topFront2
     end
