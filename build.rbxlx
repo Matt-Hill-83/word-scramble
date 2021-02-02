@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-1030.49292</X>
-					<Y>263.316467</Y>
-					<Z>61.4338493</Z>
-					<R00>-0.991060972</R00>
-					<R01>0.00784955826</R01>
-					<R02>-0.133178756</R02>
-					<R10>4.65661287e-10</R10>
-					<R11>0.998267591</R11>
-					<R12>0.058837913</R12>
-					<R20>0.133409873</R20>
-					<R21>0.0583119579</R21>
-					<R22>-0.989344001</R22>
+					<X>-947.539612</X>
+					<Y>257.021393</Y>
+					<Z>107.226677</Z>
+					<R00>0.200548157</R00>
+					<R01>0.0448010974</R01>
+					<R02>0.978658974</R02>
+					<R10>9.31322464e-10</R10>
+					<R11>0.998953819</R11>
+					<R12>-0.0457301587</R12>
+					<R20>-0.979683816</R20>
+					<R21>0.00917110033</R21>
+					<R22>0.200338379</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-1030.22656</X>
-					<Y>263.198792</Y>
-					<Z>63.4125366</Z>
+					<X>-949.496948</X>
+					<Y>257.112854</Y>
+					<Z>106.825996</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -62205,18 +62205,18 @@ remoteCode.addRemoteObjects()
 											<Properties>
 												<BinaryString name="AttributesSerialize"></BinaryString>
 												<CoordinateFrame name="CFrame0">
-													<X>-12.1830444</X>
-													<Y>15.2215118</Y>
-													<Z>49.7651367</Z>
-													<R00>-9.88192478e-05</R00>
-													<R01>4.5945344e-05</R01>
+													<X>12.1376953</X>
+													<Y>2.73377991</Y>
+													<Z>44.652832</Z>
+													<R00>-9.88192187e-05</R00>
+													<R01>4.59415787e-05</R01>
 													<R02>-0.999991059</R02>
-													<R10>-6.14227292e-06</R10>
+													<R10>-6.14281862e-06</R10>
 													<R11>1</R11>
-													<R12>4.18193667e-05</R12>
+													<R12>4.59427101e-05</R12>
 													<R20>0.999991059</R20>
-													<R21>5.75767672e-06</R21>
-													<R22>-9.17006546e-05</R22>
+													<R21>6.14727696e-06</R21>
+													<R22>-9.88189422e-05</R22>
 												</CoordinateFrame>
 												<bool name="Enabled">true</bool>
 												<string name="Name">WeldConstraint</string>
@@ -68478,17 +68478,17 @@ remoteCode.addRemoteObjects()
 										<token name="BottomSurface">10</token>
 										<token name="BottomSurfaceInput">0</token>
 										<CoordinateFrame name="CFrame">
-											<X>-1044.73926</X>
-											<Y>235.232452</Y>
-											<Z>155.708908</Z>
+											<X>-1049.85291</X>
+											<Y>222.744629</Y>
+											<Z>131.388718</Z>
 											<R00>0.999982119</R00>
-											<R01>-1.93740398e-05</R01>
-											<R02>-2.32392558e-05</R02>
-											<R10>1.89857165e-05</R10>
+											<R01>-1.89844432e-05</R01>
+											<R02>-3.03575944e-05</R02>
+											<R10>1.89851708e-05</R10>
 											<R11>1</R11>
-											<R12>4.00389545e-05</R12>
-											<R20>3.03567722e-05</R20>
-											<R21>-4.41653538e-05</R21>
+											<R12>4.4162116e-05</R12>
+											<R20>3.03567431e-05</R20>
+											<R21>-4.41616176e-05</R21>
 											<R22>0.999982119</R22>
 										</CoordinateFrame>
 										<bool name="CanCollide">false</bool>
@@ -83878,7 +83878,7 @@ local CS = game:GetService("CollectionService")
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 local Constants = require(Sss.Source.Constants.Constants)
-local SectorConfigs = require(Sss.Source.SectorConfigs.SectorConfigs)
+local LevelConfigs = require(Sss.Source.LevelConfigs.LevelConfigs)
 
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
@@ -83894,8 +83894,7 @@ local function addRemoteObjects()
 
     local islandPositioners = CS:GetTagged("IslandPositioner")
     local islandTemplate = Utils.getFromTemplates("IslandTemplate")
-    local sectorConfigs = SectorConfigs.sectorConfigs[2]
-    -- local sectorConfigs = SectorConfigs.sectorConfigs[1]
+    local sectorConfigs = LevelConfigs.levelConfigs[2]
 
     Utils.sortListByObjectKey(islandPositioners, "Name")
     print('Constants.gameConfig.singleIsland' .. ' - start');
@@ -89654,46 +89653,23 @@ return module
 					</Properties>
 				</Item>
 			</Item>
-			<Item class="ModuleScript" referent="RBXc5bd876bd8c942fc9c5495f72d44971f">
+			<Item class="ModuleScript" referent="RBX193ff23a99524bdb9fdea2e06964029a">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<Content name="LinkedSource"><null></null></Content>
-					<string name="Name">SectorConfigs</string>
-					<string name="ScriptGuid">{4aa91bdc-d79b-4c75-af17-a423a6a47d15}</string>
+					<string name="Name">LevelConfigs</string>
+					<string name="ScriptGuid">{213bb0ba-abf7-4ba3-b873-1dfa1605c4fd}</string>
 					<ProtectedString name="Source"><![CDATA[
 ]]></ProtectedString>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
 				</Properties>
-				<Item class="ModuleScript" referent="RBXafe1513b2fdf402e94e0358cb95e0b53">
+				<Item class="ModuleScript" referent="RBXe393f44fd1af49759bfe65f93436f604">
 					<Properties>
 						<BinaryString name="AttributesSerialize"></BinaryString>
 						<Content name="LinkedSource"><null></null></Content>
-						<string name="Name">SectorConfigs</string>
-						<string name="ScriptGuid">{927afda5-722b-45e0-bc9f-70122c298aef}</string>
-						<ProtectedString name="Source"><![CDATA[local Sss = game:GetService("ServerScriptService")
-local Sector1 = require(Sss.Source.SectorConfigs.Sector1)
-local Sector2 = require(Sss.Source.SectorConfigs.Sector2)
-
-local module = {}
-
-module.sectorConfigs = {
-    Sector1.config, -- 
-    Sector2.config --
-}
-
-return module
-]]></ProtectedString>
-						<int64 name="SourceAssetId">-1</int64>
-						<BinaryString name="Tags"></BinaryString>
-					</Properties>
-				</Item>
-				<Item class="ModuleScript" referent="RBX3c3d7721c4534c6db631c4386554d1fe">
-					<Properties>
-						<BinaryString name="AttributesSerialize"></BinaryString>
-						<Content name="LinkedSource"><null></null></Content>
-						<string name="Name">Sector1</string>
-						<string name="ScriptGuid">{8ce1735f-9ce5-4626-bffd-0fe302062570}</string>
+						<string name="Name">Level1</string>
+						<string name="ScriptGuid">{2a1950a1-6245-4b81-aa10-a5108efccb22}</string>
 						<ProtectedString name="Source"><![CDATA[local module = {}
 
 local sector1Config = {
@@ -89768,12 +89744,12 @@ return module
 						<BinaryString name="Tags"></BinaryString>
 					</Properties>
 				</Item>
-				<Item class="ModuleScript" referent="RBXd54581f47ce74a968f1a216d48d319c4">
+				<Item class="ModuleScript" referent="RBX74c8c6819b624f33aeccceed2267e3f0">
 					<Properties>
 						<BinaryString name="AttributesSerialize"></BinaryString>
 						<Content name="LinkedSource"><null></null></Content>
-						<string name="Name">Sector2</string>
-						<string name="ScriptGuid">{e6ba603b-816d-4f00-b5de-8bd4fe146381}</string>
+						<string name="Name">Level2</string>
+						<string name="ScriptGuid">{4c62d0ab-9f64-41db-9ff2-c66de81c8648}</string>
 						<ProtectedString name="Source"><![CDATA[local module = {}
 local sectorConfigs = {
     {
@@ -89823,6 +89799,29 @@ local sectorConfigs = {
 }
 
 module.config = sectorConfigs
+
+return module
+]]></ProtectedString>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="ModuleScript" referent="RBX681e323f6407442e9a21c4f78f886292">
+					<Properties>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<Content name="LinkedSource"><null></null></Content>
+						<string name="Name">LevelConfigs</string>
+						<string name="ScriptGuid">{ce855b18-ea13-4692-93df-6d39bd4b8961}</string>
+						<ProtectedString name="Source"><![CDATA[local Sss = game:GetService("ServerScriptService")
+local Level1 = require(Sss.Source.LevelConfigs.Level1)
+local Level2 = require(Sss.Source.LevelConfigs.Level2)
+
+local module = {}
+
+module.levelConfigs = {
+    Level1.config, -- 
+    Level2.config --
+}
 
 return module
 ]]></ProtectedString>
