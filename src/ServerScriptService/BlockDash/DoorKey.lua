@@ -43,7 +43,7 @@ local function initKey(miniGameState)
 
     local function callBack(miniGameState2)
         local function closure()
-            miniGameState.onWordLettersGone(miniGameState2)
+            miniGameState2.onWordLettersGone(miniGameState2)
         end
 
         local function wrapperForDelay()

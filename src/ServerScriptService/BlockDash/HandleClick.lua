@@ -184,6 +184,19 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
 
         local numAvailableWords = #LetterFallUtils.getAvailWords(miniGameState)
+
+        local function callBack(miniGameState2)
+            local function closure()
+                miniGameState2.onWordLettersGone(miniGameState2)
+            end
+
+            local function wrapperForDelay()
+                delay(10, closure)
+                -- 
+            end
+            return wrapperForDelay()
+        end
+
         if numAvailableWords == 0 then
             for _, wordObj in ipairs(miniGameState.renderedWords) do
                 local wordLetters = Utils.getInstancesByNameStub(
@@ -201,7 +214,8 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
                     end
                 end
 
-                delay(5, destroyParts)
+                delay(1, destroyParts)
+                callBack(miniGameState)
             end
 
             local keyWalls = Utils.getDescendantsByName(sectorFolder, "KeyWall")

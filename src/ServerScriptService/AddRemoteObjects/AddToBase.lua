@@ -16,9 +16,9 @@ local function addRemoteObjects()
 
     local sector1Config = {
         words = {
-            "NAP", --
-            "TAP", --
-            "RAP", --
+            -- "NAP", --
+            -- "TAP", --
+            -- "RAP", --
             "ZAP" --
         }
     }

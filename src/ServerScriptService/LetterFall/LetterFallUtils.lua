@@ -252,7 +252,7 @@ local function revertRackLetterBlocksToInit(miniGameState)
             local firePositioners = Utils.getDescendantsByName(letterBlock,
                                                                "FirePositioner")
             for _, firePositioner in ipairs(firePositioners) do
-                firePositioner:Destroy()
+                firePositioner.Fire:Destroy()
             end
 
             Utils.hideItemAndChildren({item = letterBlock, hide = false})
