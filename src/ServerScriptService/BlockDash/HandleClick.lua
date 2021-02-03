@@ -8,7 +8,7 @@ local Constants = require(Sss.Source.Constants.Constants)
 local Constants2 = require(Sss.Source.Constants.Const_02_Colors)
 local Const4 = require(Sss.Source.Constants.Const_04_Characters)
 
-local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
+local LetterFallUtils = require(Sss.Source.Utils.U004LetterUtils)
 local Leaderboard = require(Sss.Source.AddRemoteObjects.Leaderboard)
 
 local module = {processing = false, initComplete = false}

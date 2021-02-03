@@ -2,7 +2,7 @@ local Sss = game:GetService("ServerScriptService")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Constants = require(Sss.Source.Constants.Constants)
-local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
+local LetterFallUtils = require(Sss.Source.Utils.U004LetterUtils)
 
 local module = {}
 
