@@ -2,15 +2,15 @@ local CS = game:GetService("CollectionService")
 local Sss = game:GetService("ServerScriptService")
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
-local Constants = require(Sss.Source.Constants.Constants)
-local Const3 = require(Sss.Source.Constants.Const_03_Letters)
+-- local Constants = require(Sss.Source.Constants.Constants)
+-- local Const3 = require(Sss.Source.Constants.Const_03_Letters)
 local Const4 = require(Sss.Source.Constants.Const_04_Characters)
 
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 
 local module = {}
 
-function playWordSound(word)
+local function playWordSound(word)
     local closure = function()
         if Const4.wordConfigs[word] then
             local soundId = Const4.wordConfigs[word]['soundId']
@@ -27,7 +27,7 @@ function playWordSound(word)
     return closure
 end
 
-function configWord(props)
+local function configWord(props)
     local letterBlockTemplate = props.letterBlockTemplate
     local word = props.word
     local wordIndex = props.wordIndex
@@ -71,7 +71,7 @@ function configWord(props)
     return newWord
 end
 
-function initWord(props)
+local function initWord(props)
     local wordIndex = props.wordIndex
     local word = props.word
     local wordLetters = props.wordLetters
@@ -163,7 +163,6 @@ function initWord(props)
     return newWordObj
 end
 
-module.initWords = initWords
 module.initWord = initWord
 
 return module
