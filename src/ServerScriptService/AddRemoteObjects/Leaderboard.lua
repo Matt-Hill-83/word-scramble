@@ -57,7 +57,10 @@ end
 
 function updateLB()
     for _, player in pairs(game.Players:GetPlayers()) do
-        WinsLeaderboard:SetAsync(player.UserId, player.leaderstats.Wins.Value)
+        if player:FindFirstChild("leaderstats") then
+            WinsLeaderboard:SetAsync(player.UserId,
+                                     player.leaderstats.Wins.Value)
+        end
     end
     updateLeaderboard()
 end

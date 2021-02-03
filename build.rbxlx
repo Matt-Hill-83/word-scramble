@@ -64,27 +64,27 @@
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<CoordinateFrame name="CFrame">
-					<X>-546.16449</X>
-					<Y>361.615082</Y>
-					<Z>-132.405914</Z>
-					<R00>-0.553346694</R00>
-					<R01>0.165811643</R01>
-					<R02>-0.816280603</R02>
-					<R10>-7.4505806e-09</R10>
-					<R11>0.97998631</R11>
-					<R12>0.199065283</R12>
-					<R20>0.832951069</R20>
-					<R21>0.110152125</R21>
-					<R22>-0.542272091</R22>
+					<X>-178.877457</X>
+					<Y>309.362732</Y>
+					<Z>71.6304626</Z>
+					<R00>-0.599146605</R00>
+					<R01>-0.589386106</R01>
+					<R02>0.541892409</R02>
+					<R10>1.4901163e-08</R10>
+					<R11>0.676824629</R11>
+					<R12>0.736144245</R12>
+					<R20>-0.800639391</R20>
+					<R21>0.441058338</R21>
+					<R22>-0.405517131</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<float name="FieldOfView">70</float>
 				<token name="FieldOfViewMode">0</token>
 				<CoordinateFrame name="Focus">
-					<X>-544.531921</X>
-					<Y>361.216949</Y>
-					<Z>-131.321365</Z>
+					<X>-179.961243</X>
+					<Y>307.890442</Y>
+					<Z>72.4414978</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -7433,7 +7433,7 @@ remoteCode.addRemoteObjects()
 										<bool name="Enabled">true</bool>
 										<string name="Name">WeldConstraint</string>
 										<Ref name="Part0Internal">RBXe8ac5c4e7d884f11b664b71b15d7ed53</Ref>
-										<Ref name="Part1Internal">RBXc02e79938649440a94fece9054e985a5</Ref>
+										<Ref name="Part1Internal">null</Ref>
 										<int64 name="SourceAssetId">-1</int64>
 										<int name="State">1</int>
 										<BinaryString name="Tags"></BinaryString>
@@ -8875,7 +8875,7 @@ remoteCode.addRemoteObjects()
 										<bool name="Enabled">true</bool>
 										<string name="Name">WeldConstraint</string>
 										<Ref name="Part0Internal">RBX18a6b8e0630c4593959dc9f2714bf0e8</Ref>
-										<Ref name="Part1Internal">RBXc02e79938649440a94fece9054e985a5</Ref>
+										<Ref name="Part1Internal">null</Ref>
 										<int64 name="SourceAssetId">-1</int64>
 										<int name="State">1</int>
 										<BinaryString name="Tags"></BinaryString>
@@ -9259,7 +9259,7 @@ remoteCode.addRemoteObjects()
 										<bool name="Enabled">true</bool>
 										<string name="Name">WeldConstraint</string>
 										<Ref name="Part0Internal">RBX528beae9955d4e4e9188a959f7e66942</Ref>
-										<Ref name="Part1Internal">RBXc02e79938649440a94fece9054e985a5</Ref>
+										<Ref name="Part1Internal">null</Ref>
 										<int64 name="SourceAssetId">-1</int64>
 										<int name="State">1</int>
 										<BinaryString name="Tags"></BinaryString>
@@ -12092,9 +12092,9 @@ remoteCode.addRemoteObjects()
 											<token name="BottomSurface">10</token>
 											<token name="BottomSurfaceInput">0</token>
 											<CoordinateFrame name="CFrame">
-												<X>163.974976</X>
-												<Y>7.6875</Y>
-												<Z>-1165.25</Z>
+												<X>30.0144958</X>
+												<Y>12.89571</Y>
+												<Z>-990.726746</Z>
 												<R00>0</R00>
 												<R01>0</R01>
 												<R02>-1.00000012</R02>
@@ -12450,9 +12450,9 @@ remoteCode.addRemoteObjects()
 											<token name="BottomSurface">10</token>
 											<token name="BottomSurfaceInput">0</token>
 											<CoordinateFrame name="CFrame">
-												<X>164.785141</X>
-												<Y>-0.657320023</Y>
-												<Z>-1135.25</Z>
+												<X>30.8246613</X>
+												<Y>4.55088997</Y>
+												<Z>-960.726807</Z>
 												<R00>0.000279886212</R00>
 												<R01>-0.000181440555</R01>
 												<R02>1.0000025</R02>
@@ -14155,18 +14155,18 @@ remoteCode.addRemoteObjects()
 										<token name="BottomSurface">0</token>
 										<token name="BottomSurfaceInput">0</token>
 										<CoordinateFrame name="CFrame">
-											<X>-273.503906</X>
-											<Y>268.500854</Y>
-											<Z>207.896133</Z>
-											<R00>-0.999999881</R00>
+											<X>-79.1250153</X>
+											<Y>13.015625</Y>
+											<Z>352.12323</Z>
+											<R00>-0.999999762</R00>
 											<R01>0</R01>
 											<R02>0</R02>
 											<R10>0</R10>
-											<R11>0.999996245</R11>
+											<R11>0.99999249</R11>
 											<R12>0</R12>
 											<R20>0</R20>
 											<R21>0</R21>
-											<R22>-0.99999994</R22>
+											<R22>-0.999999881</R22>
 										</CoordinateFrame>
 										<bool name="CanCollide">true</bool>
 										<bool name="CanTouch">true</bool>
@@ -43328,6 +43328,107 @@ remoteCode.addRemoteObjects()
 											</Properties>
 										</Item>
 									</Item>
+								</Item>
+							</Item>
+							<Item class="Part" referent="RBX6ccca99e6dbe4bd6a6a353ecfb893187">
+								<Properties>
+									<bool name="Anchored">true</bool>
+									<BinaryString name="AttributesSerialize"></BinaryString>
+									<float name="BackParamA">-0.5</float>
+									<float name="BackParamB">0.5</float>
+									<token name="BackSurface">0</token>
+									<token name="BackSurfaceInput">0</token>
+									<float name="BottomParamA">-0.5</float>
+									<float name="BottomParamB">0.5</float>
+									<token name="BottomSurface">0</token>
+									<token name="BottomSurfaceInput">0</token>
+									<CoordinateFrame name="CFrame">
+										<X>-191.503891</X>
+										<Y>296.848389</Y>
+										<Z>67.7319565</Z>
+										<R00>1</R00>
+										<R01>0</R01>
+										<R02>0</R02>
+										<R10>0</R10>
+										<R11>1</R11>
+										<R12>0</R12>
+										<R20>0</R20>
+										<R21>0</R21>
+										<R22>1</R22>
+									</CoordinateFrame>
+									<bool name="CanCollide">true</bool>
+									<bool name="CanTouch">true</bool>
+									<bool name="CastShadow">true</bool>
+									<int name="CollisionGroupId">0</int>
+									<Color3uint8 name="Color3uint8">4289832959</Color3uint8>
+									<PhysicalProperties name="CustomPhysicalProperties">
+										<CustomPhysics>false</CustomPhysics>
+									</PhysicalProperties>
+									<float name="FrontParamA">-0.5</float>
+									<float name="FrontParamB">0.5</float>
+									<token name="FrontSurface">0</token>
+									<token name="FrontSurfaceInput">0</token>
+									<float name="LeftParamA">-0.5</float>
+									<float name="LeftParamB">0.5</float>
+									<token name="LeftSurface">0</token>
+									<token name="LeftSurfaceInput">0</token>
+									<bool name="Locked">false</bool>
+									<bool name="Massless">false</bool>
+									<token name="Material">256</token>
+									<string name="Name">Transporter</string>
+									<float name="Reflectance">0</float>
+									<float name="RightParamA">-0.5</float>
+									<float name="RightParamB">0.5</float>
+									<token name="RightSurface">0</token>
+									<token name="RightSurfaceInput">0</token>
+									<int name="RootPriority">0</int>
+									<Vector3 name="RotVelocity">
+										<X>0</X>
+										<Y>0</Y>
+										<Z>0</Z>
+									</Vector3>
+									<int64 name="SourceAssetId">-1</int64>
+									<BinaryString name="Tags"></BinaryString>
+									<float name="TopParamA">-0.5</float>
+									<float name="TopParamB">0.5</float>
+									<token name="TopSurface">0</token>
+									<token name="TopSurfaceInput">0</token>
+									<float name="Transparency">0</float>
+									<Vector3 name="Velocity">
+										<X>0</X>
+										<Y>0</Y>
+										<Z>0</Z>
+									</Vector3>
+									<token name="formFactorRaw">1</token>
+									<token name="shape">1</token>
+									<Vector3 name="size">
+										<X>4</X>
+										<Y>4</Y>
+										<Z>4</Z>
+									</Vector3>
+								</Properties>
+								<Item class="Script" referent="RBX298984f03b844fc1a166f8e8f2d2de6f">
+									<Properties>
+										<BinaryString name="AttributesSerialize"></BinaryString>
+										<bool name="Disabled">false</bool>
+										<Content name="LinkedSource"><null></null></Content>
+										<string name="Name">Script</string>
+										<string name="ScriptGuid">{1a635ffc-4c1f-44b6-8119-87e23a659789}</string>
+										<ProtectedString name="Source"><![CDATA[local TeleportService = game:GetService("TeleportService")
+
+local placeID_1 = 6339483986
+--local placeID_2 = 408502380
+
+local function onPartTouch(otherPart)
+	local player = game.Players:GetPlayerFromCharacter(otherPart.Parent)
+	if player then
+		TeleportService:Teleport(placeID_1, player)
+	end
+end
+script.Parent.Touched:Connect(onPartTouch)]]></ProtectedString>
+										<int64 name="SourceAssetId">-1</int64>
+										<BinaryString name="Tags"></BinaryString>
+									</Properties>
 								</Item>
 							</Item>
 						</Item>
@@ -89802,8 +89903,8 @@ remoteCode.addRemoteObjects()
 			<bool name="EnableScriptCollabOnLoad">false</bool>
 			<string name="Name">StudioData</string>
 			<int64 name="SourceAssetId">-1</int64>
-			<int64 name="SrcPlaceId">6241554880</int64>
-			<int64 name="SrcUniverseId">2293136719</int64>
+			<int64 name="SrcPlaceId">6247613349</int64>
+			<int64 name="SrcUniverseId">2296181067</int64>
 			<BinaryString name="Tags"></BinaryString>
 		</Properties>
 	</Item>
@@ -90818,106 +90919,56 @@ UserInputService.InputBegan:Connect(onInputBegan)
 					<Content name="LinkedSource"><null></null></Content>
 					<string name="Name">FreezeCamera</string>
 					<string name="ScriptGuid">{b280f23b-a4b9-4516-97f6-67a7ceec6386}</string>
-					<ProtectedString name="Source"><![CDATA[print("Freeze Camera - local script")
-
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local remoteEvent = ReplicatedStorage:WaitForChild("FreezeCameraRE")
-
--- TODO - get this from Utils3
-function setCFrameFromDesiredEdgeOffset(props)
-    local parent = props.parent
-    local child = props.child
-    local offsetConfig = props.offsetConfig
-
-    local defaultOffsetAdder = Vector3.new(0, 0, 0)
-
-    local defaultOffsetConfig = {
-        useParentNearEdge = Vector3.new(0, 1, -1),
-        useChildNearEdge = Vector3.new(0, -1, 1),
-        offsetAdder = defaultOffsetAdder
-    }
-
-    offsetConfig = offsetConfig or defaultOffsetConfig
-
-    local offset = (offsetConfig.useParentNearEdge * parent.Size -
-                       offsetConfig.useChildNearEdge * child.Size) / 2 +
-                       (offsetConfig.offsetAdder or defaultOffsetAdder)
-
-    local newCFrame = CFrame.new(offset)
-    return parent.CFrame:ToWorldSpace(newCFrame)
-end
-
-local function freezeCamera(cameraPath1, cameraPath2, freeze)
-    local player = game:GetService("Players").LocalPlayer
-
-    local camera = workspace.CurrentCamera
-    if freeze then
-        local cameraOffset = Vector3.new(0, 0, 0)
-        if camera.CameraType ~= Enum.CameraType.Scriptable then
-            camera.CameraType = Enum.CameraType.Scriptable
-        end
-
-        local cameraPositioner = Instance.new("Part", cameraPath1)
-        cameraPositioner.Size = Vector3.new(1, 1, 1)
-
-        local translateCFrameProps = {
-            parent = cameraPath1,
-            child = cameraPositioner,
-            offsetConfig = {
-                useParentNearEdge = Vector3.new(0, 0, 1),
-                useChildNearEdge = Vector3.new(0, 0, -1),
-                offsetAdder = cameraOffset
-            }
-        }
-
-        local newCFrame = setCFrameFromDesiredEdgeOffset(translateCFrameProps)
-
-        cameraPositioner.CFrame = newCFrame
-        cameraPositioner.Anchored = true
-
-        camera.CFrame = newCFrame
-        camera.CFrame = CFrame.new(camera.CFrame.Position, cameraPath2.Position)
-    else
-        camera.CameraType = Enum.CameraType.Custom
-
-    end
-end
-
-remoteEvent.OnClientEvent:Connect(freezeCamera)
-]]></ProtectedString>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-				</Properties>
-			</Item>
-			<Item class="LocalScript" referent="RBXcd71681fb89b48ad8d86d4e4f713e623">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<bool name="Disabled">false</bool>
-					<Content name="LinkedSource"><null></null></Content>
-					<string name="Name">LetterFallFreezeCamera</string>
-					<string name="ScriptGuid">{bac0634b-ed47-4c6b-bfd0-636cb19d114a}</string>
-					<ProtectedString name="Source"><![CDATA[print("LetterFallFreezeCamera - local script")
-
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local remoteEvent = ReplicatedStorage:WaitForChild("LetterFallFreezeCameraRE")
-
-local function onClientEvent(cameraPath1, cameraPath2, freeze)
-    local player = game:GetService("Players").LocalPlayer
-
-    local camera = workspace.CurrentCamera
-    if freeze then
-        local cameraOffset = Vector3.new(0, 0, 0)
-        camera.CameraType = Enum.CameraType.Scriptable
-        camera.CFrame = CFrame.new(cameraPath1.Position + cameraOffset,
-                                   cameraPath2.Position)
-        camera.FieldOfView = 40
-    else
-        camera.CameraType = Enum.CameraType.Custom
-        camera.FieldOfView = 70
-    end
-end
-
-remoteEvent.OnClientEvent:Connect(onClientEvent)
+					<ProtectedString name="Source"><![CDATA[-- print("Freeze Camera - local script")
+-- local ReplicatedStorage = game:GetService("ReplicatedStorage")
+-- local remoteEvent = ReplicatedStorage:WaitForChild("FreezeCameraRE")
+-- -- TODO - get this from Utils3
+-- function setCFrameFromDesiredEdgeOffset(props)
+--     local parent = props.parent
+--     local child = props.child
+--     local offsetConfig = props.offsetConfig
+--     local defaultOffsetAdder = Vector3.new(0, 0, 0)
+--     local defaultOffsetConfig = {
+--         useParentNearEdge = Vector3.new(0, 1, -1),
+--         useChildNearEdge = Vector3.new(0, -1, 1),
+--         offsetAdder = defaultOffsetAdder
+--     }
+--     offsetConfig = offsetConfig or defaultOffsetConfig
+--     local offset = (offsetConfig.useParentNearEdge * parent.Size -
+--                        offsetConfig.useChildNearEdge * child.Size) / 2 +
+--                        (offsetConfig.offsetAdder or defaultOffsetAdder)
+--     local newCFrame = CFrame.new(offset)
+--     return parent.CFrame:ToWorldSpace(newCFrame)
+-- end
+-- local function freezeCamera(cameraPath1, cameraPath2, freeze)
+--     local player = game:GetService("Players").LocalPlayer
+--     local camera = workspace.CurrentCamera
+--     if freeze then
+--         local cameraOffset = Vector3.new(0, 0, 0)
+--         if camera.CameraType ~= Enum.CameraType.Scriptable then
+--             camera.CameraType = Enum.CameraType.Scriptable
+--         end
+--         local cameraPositioner = Instance.new("Part", cameraPath1)
+--         cameraPositioner.Size = Vector3.new(1, 1, 1)
+--         local translateCFrameProps = {
+--             parent = cameraPath1,
+--             child = cameraPositioner,
+--             offsetConfig = {
+--                 useParentNearEdge = Vector3.new(0, 0, 1),
+--                 useChildNearEdge = Vector3.new(0, 0, -1),
+--                 offsetAdder = cameraOffset
+--             }
+--         }
+--         local newCFrame = setCFrameFromDesiredEdgeOffset(translateCFrameProps)
+--         cameraPositioner.CFrame = newCFrame
+--         cameraPositioner.Anchored = true
+--         camera.CFrame = newCFrame
+--         camera.CFrame = CFrame.new(camera.CFrame.Position, cameraPath2.Position)
+--     else
+--         camera.CameraType = Enum.CameraType.Custom
+--     end
+-- end
+-- remoteEvent.OnClientEvent:Connect(freezeCamera)
 ]]></ProtectedString>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
@@ -90930,41 +90981,36 @@ remoteEvent.OnClientEvent:Connect(onClientEvent)
 					<Content name="LinkedSource"><null></null></Content>
 					<string name="Name">BlockDashFreezeCamera</string>
 					<string name="ScriptGuid">{03079780-0adf-4315-a833-b1316b7b42b1}</string>
-					<ProtectedString name="Source"><![CDATA[local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local remoteEvent = ReplicatedStorage:WaitForChild("BlockDashFreezeCameraRE")
-
-local function freezeCamera(freeze)
-    local player = game:GetService("Players").LocalPlayer
-    local camera = workspace.CurrentCamera
-
-    if freeze and camera.CameraType ~= Enum.CameraType.Orbital then
-        camera.CameraType = Enum.CameraType.Orbital
-        player.CameraMinZoomDistance = 50
-        player.CameraMaxZoomDistance = 50
-    else
-        if camera.CameraType ~= Enum.CameraType.Custom then
-            camera.CameraType = Enum.CameraType.Custom
-
-            -- You need to set the min first, since the max can't be set to 
-            -- lower than the existing min
-            player.CameraMinZoomDistance = 0.5
-            -- Then set the desired zoom to force this to be the current zoom
-            player.CameraMaxZoomDistance = 10
-            -- Then set the max zoom
-            player.CameraMaxZoomDistance = 400
-        end
-    end
-end
-
-remoteEvent.OnClientEvent:Connect(freezeCamera)
-
--- local RunService = game:GetService("RunService")
--- local camera = workspace.CurrentCamera
--- RunService:BindToRenderStep("UpdateLoop", Enum.RenderPriority.Camera.Value, function()
--- 	local rX, rY, rZ = camera.CFrame:ToOrientation()
--- 	local limX = math.clamp(math.deg(rX), -45, 45)
--- 	camera.CFrame = CFrame.new(camera.CFrame.p) * CFrame.fromOrientation(math.rad(limX), rY, rZ)
--- end)
+					<ProtectedString name="Source"><![CDATA[-- local ReplicatedStorage = game:GetService("ReplicatedStorage")
+-- local remoteEvent = ReplicatedStorage:WaitForChild("BlockDashFreezeCameraRE")
+-- local function freezeCamera(freeze)
+--     local player = game:GetService("Players").LocalPlayer
+--     local camera = workspace.CurrentCamera
+--     if freeze and camera.CameraType ~= Enum.CameraType.Orbital then
+--         camera.CameraType = Enum.CameraType.Orbital
+--         player.CameraMinZoomDistance = 50
+--         player.CameraMaxZoomDistance = 50
+--     else
+--         if camera.CameraType ~= Enum.CameraType.Custom then
+--             camera.CameraType = Enum.CameraType.Custom
+--             -- You need to set the min first, since the max can't be set to 
+--             -- lower than the existing min
+--             player.CameraMinZoomDistance = 0.5
+--             -- Then set the desired zoom to force this to be the current zoom
+--             player.CameraMaxZoomDistance = 10
+--             -- Then set the max zoom
+--             player.CameraMaxZoomDistance = 400
+--         end
+--     end
+-- end
+-- remoteEvent.OnClientEvent:Connect(freezeCamera)
+-- -- local RunService = game:GetService("RunService")
+-- -- local camera = workspace.CurrentCamera
+-- -- RunService:BindToRenderStep("UpdateLoop", Enum.RenderPriority.Camera.Value, function()
+-- -- 	local rX, rY, rZ = camera.CFrame:ToOrientation()
+-- -- 	local limX = math.clamp(math.deg(rX), -45, 45)
+-- -- 	camera.CFrame = CFrame.new(camera.CFrame.p) * CFrame.fromOrientation(math.rad(limX), rY, rZ)
+-- -- end)
 ]]></ProtectedString>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
@@ -92188,11 +92234,17 @@ local BlockDash = require(Sss.Source.BlockDash.BlockDash)
 local Entrance = require(Sss.Source.BlockDash.Entrance)
 
 local function addRemoteObjects()
+    print('addRemoteObjects' .. ' - start');
+    print('addRemoteObjects' .. ' - start');
+    print('addRemoteObjects' .. ' - start');
+    print('addRemoteObjects' .. ' - start');
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
     local levelsFolder = Utils.getFirstDescendantByName(myStuff, "Levels")
     local levels = levelsFolder:GetChildren()
+    print('levels' .. ' - start');
+    print(levels);
 
     Utils.sortListByObjectKey(levels, "Name")
 
@@ -92201,6 +92253,8 @@ local function addRemoteObjects()
     for levelIndex, level in ipairs(levels) do
         local islandPositioners = Utils.getByTagInParent(
                                       {parent = level, tag = "IslandPositioner"})
+        print('islandPositioners' .. ' - start');
+        print(islandPositioners);
 
         local sectorConfigs = LevelConfigs.levelConfigs[levelIndex]
         Utils.sortListByObjectKey(islandPositioners, "Name")
@@ -92611,7 +92665,10 @@ end
 
 function updateLB()
     for _, player in pairs(game.Players:GetPlayers()) do
-        WinsLeaderboard:SetAsync(player.UserId, player.leaderstats.Wins.Value)
+        if player:FindFirstChild("leaderstats") then
+            WinsLeaderboard:SetAsync(player.UserId,
+                                     player.leaderstats.Wins.Value)
+        end
     end
     updateLeaderboard()
 end
@@ -93086,8 +93143,10 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             miniGameState.foundLetters = {}
             miniGameState.currentLetterIndex = 1
 
-            local wins = player.leaderstats.Wins
-            wins.Value = wins.Value + 1
+            if player:FindFirstChild("leaderstats") then
+                local wins = player.leaderstats.Wins
+                wins.Value = wins.Value + 1
+            end
 
             PlayerStatManager:ChangeStat(player, "Gems", 1)
             Leaderboard.updateLB()
@@ -93683,45 +93742,45 @@ local RS = game:GetService("ReplicatedStorage")
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
-local freezeCameraRE = RS:WaitForChild("BlockDashFreezeCameraRE")
+-- local freezeCameraRE = RS:WaitForChild("BlockDashFreezeCameraRE")
 
 local module = {}
 
 function module.initEntrance(parent)
 
-    local function onTouchEntrance(otherPart)
-        local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
-        if humanoid then
-            local player = Utils.getPlayerFromHumanoid(humanoid)
-            local gameState = PlayerStatManager.getGameState(player)
+    -- local function onTouchEntrance(otherPart)
+    --     local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
+    --     if humanoid then
+    --         local player = Utils.getPlayerFromHumanoid(humanoid)
+    --         local gameState = PlayerStatManager.getGameState(player)
 
-            if not gameState.orbitalView then
-                gameState.orbitalView = true
-                freezeCameraRE:FireClient(player, true)
-                humanoid.JumpPower = 70
-            end
-        end
-    end
+    --         if not gameState.orbitalView then
+    --             gameState.orbitalView = true
+    --             freezeCameraRE:FireClient(player, true)
+    --             humanoid.JumpPower = 70
+    --         end
+    --     end
+    -- end
 
-    local entrances = Utils.getDescendantsByName(parent, "Entrance")
-    for _, item in ipairs(entrances) do item.Touched:Connect(onTouchEntrance) end
+    -- local entrances = Utils.getDescendantsByName(parent, "Entrance")
+    -- for _, item in ipairs(entrances) do item.Touched:Connect(onTouchEntrance) end
 
-    local function onTouchExit(otherPart)
-        local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
-        if humanoid then
-            local player = Utils.getPlayerFromHumanoid(humanoid)
-            local gameState = PlayerStatManager.getGameState(player)
+    -- local function onTouchExit(otherPart)
+    --     local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
+    --     if humanoid then
+    --         local player = Utils.getPlayerFromHumanoid(humanoid)
+    --         local gameState = PlayerStatManager.getGameState(player)
 
-            if gameState.orbitalView then
-                gameState.orbitalView = false
-                freezeCameraRE:FireClient(player, false)
-                humanoid.JumpPower = 50
-            end
-        end
-    end
+    --         if gameState.orbitalView then
+    --             gameState.orbitalView = false
+    --             freezeCameraRE:FireClient(player, false)
+    --             humanoid.JumpPower = 50
+    --         end
+    --     end
+    -- end
 
-    local exits = Utils.getDescendantsByName(parent, "Exit")
-    for _, item in ipairs(exits) do item.Touched:Connect(onTouchExit) end
+    -- local exits = Utils.getDescendantsByName(parent, "Exit")
+    -- for _, item in ipairs(exits) do item.Touched:Connect(onTouchExit) end
 
     -- 
     -- 

@@ -157,8 +157,10 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             miniGameState.foundLetters = {}
             miniGameState.currentLetterIndex = 1
 
-            local wins = player.leaderstats.Wins
-            wins.Value = wins.Value + 1
+            if player:FindFirstChild("leaderstats") then
+                local wins = player.leaderstats.Wins
+                wins.Value = wins.Value + 1
+            end
 
             PlayerStatManager:ChangeStat(player, "Gems", 1)
             Leaderboard.updateLB()
