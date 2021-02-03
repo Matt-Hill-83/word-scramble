@@ -3,7 +3,6 @@ local module = {}
 local config = {
     {
         words = {
-
             "SAT", --
             "RAT", --
             "CAT", --

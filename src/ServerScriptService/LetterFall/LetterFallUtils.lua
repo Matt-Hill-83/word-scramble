@@ -3,6 +3,7 @@ local Sss = game:GetService("ServerScriptService")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Constants = require(Sss.Source.Constants.Constants)
+local Constants3 = require(Sss.Source.Constants.Const_03_Letters)
 
 local module = {
     tagNames = {
@@ -67,7 +68,7 @@ local function playWordSound(word)
 end
 
 local function getLettersNotInWords(words)
-    local allLetters = Constants.allLetters
+    local allLetters = Constants3.allLetters
 
     local uniqueLettersFromWords = {}
 
@@ -90,7 +91,7 @@ local function getLettersNotInWords(words)
 end
 
 local function getRandomLetter(letters)
-    local defaultLetters = Constants.allLetters
+    local defaultLetters = Constants3.allLetters
 
     if not letters then letters = defaultLetters end
     local rand = Utils.genRandom(1, #letters)
@@ -181,7 +182,7 @@ local function initLetterBlock(props)
 end
 
 local function applyLetterImage(letterBlock, char)
-    local imageId = Constants.alphabet[char]['decalId']
+    local imageId = Constants3.alphabet[char]['decalId']
     local imageUri = 'rbxassetid://' .. imageId
 
     local labels = Utils.getDescendantsByName(letterBlock, "ImageLabel")
