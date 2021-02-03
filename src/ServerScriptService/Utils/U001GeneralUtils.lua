@@ -4,6 +4,7 @@ local Players = game:GetService("Players")
 local HttpService = game:GetService("HttpService")
 
 local Constants = require(Sss.Source.Constants.Constants)
+local Const4 = require(Sss.Source.Constants.Const_04_Characters)
 local module = {}
 
 local getInstancesByNameStub = function(props)
@@ -101,8 +102,8 @@ function applyDecalsToCharacterFromWord(props)
     local part = props.part
     local word = props.word
 
-    if Constants.wordConfigs[word] then
-        local imageId = Constants.wordConfigs[word]['imageId']
+    if Const4.wordConfigs[word] then
+        local imageId = Const4.wordConfigs[word]['imageId']
         if imageId then
             local decalUri = 'rbxassetid://' .. imageId
             local decalFront = getFirstDescendantByName(part,
@@ -455,8 +456,8 @@ end
 
 function module.getDecalIdFromName(props)
     local name = props.name
-    if (Constants.characters[name] and Constants.characters[name]["decalId"]) then
-        return Constants.characters[name]["decalId"]
+    if (Const4.characters[name] and Const4.characters[name]["decalId"]) then
+        return Const4.characters[name]["decalId"]
     else
 
         if (name ~= "blank" and name ~= "empty" and name ~= "") then
@@ -468,12 +469,12 @@ end
 
 function module.getDisplayNameFromName(props)
     local name = props.name
-    if (Constants.characters[name] and Constants.characters[name]["displayName"]) then
-        return Constants.characters[name]["displayName"]
+    if (Const4.characters[name] and Const4.characters[name]["displayName"]) then
+        return Const4.characters[name]["displayName"]
     else
         -- print("---------------------- name not found: ------------" .. name)
-        -- print('Constants.characters[name]' .. ' - start');
-        -- print(Constants.characters[name]);
+        -- print('Const4.characters[name]' .. ' - start');
+        -- print(Const4.characters[name]);
         return name
     end
 end

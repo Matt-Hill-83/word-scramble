@@ -5,6 +5,7 @@ local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 local Constants = require(Sss.Source.Constants.Constants)
+local Const4 = require(Sss.Source.Constants.Const_04_Characters)
 
 local Replicator = require(Sss.Source.BlockDash.Replicator)
 
@@ -91,8 +92,8 @@ local function applyDecalsToCharacterFromWord(props)
     local part = props.part
     local word = props.word
 
-    if Constants.wordConfigs[word] then
-        local imageId = Constants.wordConfigs[word]['imageId']
+    if Const4.wordConfigs[word] then
+        local imageId = Const4.wordConfigs[word]['imageId']
         if imageId then
             local decalUri = 'rbxassetid://' .. imageId
             local decals = Utils.getDescendantsByName(part, "ImageLabel")

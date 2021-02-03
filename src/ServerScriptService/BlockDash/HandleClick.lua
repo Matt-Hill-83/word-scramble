@@ -6,6 +6,8 @@ local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 
 local Constants = require(Sss.Source.Constants.Constants)
 local Constants2 = require(Sss.Source.Constants.Const_02_Colors)
+local Const4 = require(Sss.Source.Constants.Const_04_Characters)
+
 local LetterFallUtils = require(Sss.Source.LetterFall.LetterFallUtils)
 local Leaderboard = require(Sss.Source.AddRemoteObjects.Leaderboard)
 
@@ -126,7 +128,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
 
         miniGameState.currentLetterIndex = miniGameState.currentLetterIndex + 1
         if (wordComplete) then
-            local currentWord2 = Constants.wordConfigs[currentWord]
+            local currentWord2 = Const4.wordConfigs[currentWord]
             if currentWord2 then
                 local soundId = currentWord2.soundId or fireSound
                 Utils.playSound(soundId)
