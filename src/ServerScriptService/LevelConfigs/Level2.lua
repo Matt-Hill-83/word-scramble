@@ -56,11 +56,11 @@ local sector2Config = {
             -- "ZAP", --
             -- "CAP", --
             -- "GAP", --
-            "LAP", --
-            "MAP", --
-            "VAN", --
-            "RAN", --
-            "CAN", --
+            -- "LAP", --
+            -- "MAP", --
+            -- "VAN", --
+            -- "RAN", --
+            -- "CAN", --
             "SAT", --
             "RAT", --
             "CAT", --

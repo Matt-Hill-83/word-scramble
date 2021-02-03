@@ -13,17 +13,11 @@ local BlockDash = require(Sss.Source.BlockDash.BlockDash)
 local Entrance = require(Sss.Source.BlockDash.Entrance)
 
 local function addRemoteObjects()
-    print('addRemoteObjects' .. ' - start');
-    print('addRemoteObjects' .. ' - start');
-    print('addRemoteObjects' .. ' - start');
-    print('addRemoteObjects' .. ' - start');
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
     local levelsFolder = Utils.getFirstDescendantByName(myStuff, "Levels")
     local levels = levelsFolder:GetChildren()
-    print('levels' .. ' - start');
-    print(levels);
 
     Utils.sortListByObjectKey(levels, "Name")
 
@@ -32,8 +26,6 @@ local function addRemoteObjects()
     for levelIndex, level in ipairs(levels) do
         local islandPositioners = Utils.getByTagInParent(
                                       {parent = level, tag = "IslandPositioner"})
-        print('islandPositioners' .. ' - start');
-        print(islandPositioners);
 
         local sectorConfigs = LevelConfigs.levelConfigs[levelIndex]
         Utils.sortListByObjectKey(islandPositioners, "Name")
@@ -60,17 +52,18 @@ local function addRemoteObjects()
             newIsland.Parent = myStuff
             newIsland.Name = "Sector-" .. islandPositioner.Name
             local newIslandPart = newIsland.PrimaryPart
+            if sectorConfigs then
+                local sectorConfig =
+                    sectorConfigs[(islandIndex % #sectorConfigs) + 1]
+                sectorConfig.sectorFolder = newIsland
+                sectorConfig.islandPositioner = islandPositioner
 
-            local sectorConfig = sectorConfigs[(islandIndex % #sectorConfigs) +
-                                     1]
-            sectorConfig.sectorFolder = newIsland
-            sectorConfig.islandPositioner = islandPositioner
-
-            for _, child in pairs(anchoredParts) do
-                child.Anchored = true
-                -- 
+                for _, child in pairs(anchoredParts) do
+                    child.Anchored = true
+                    -- 
+                end
+                BlockDash.addBlockDash(sectorConfig)
             end
-            BlockDash.addBlockDash(sectorConfig)
         end
     end
     -- Do this last after everything has been created/deleted

@@ -1,6 +1,6 @@
 -- local isDev = true
 local isDev = false
-
+-- 
 -- local activeSpawn = "Spawn_Level2"
 local activeSpawn = "Spawn_Level1"
 
@@ -18,7 +18,8 @@ local prodGameConfig = {
     singleIsland = false,
     -- singleIsland = true,
     transparency = true,
-    walkSpeed = 30,
+    -- walkSpeed = 30,
+    walkSpeed = 80,
     fastWalkSpeed = 50
 }
 
