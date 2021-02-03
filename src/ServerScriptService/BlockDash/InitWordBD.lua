@@ -150,7 +150,7 @@ local function renderColumn(miniGameState, colIndex, words)
 end
 
 local function initWords(miniGameState)
-    BlockDashUtils.clearWordRack(miniGameState)
+    -- BlockDashUtils.clearWordRack(miniGameState)
     local wordsPerCol = miniGameState.wordsPerCol
     local words = miniGameState.words
 

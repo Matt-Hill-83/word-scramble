@@ -37,7 +37,6 @@ local function addBlockDash(sectorConfig)
     -- local words = {sectorConfig.words[1]}
     local words = sectorConfig.words
 
-    local gridSize = defaultGridSize
     local sectorFolder = sectorConfig.sectorFolder
     local rackLetterSize = 8
     local islandPositioner = sectorConfig.islandPositioner
