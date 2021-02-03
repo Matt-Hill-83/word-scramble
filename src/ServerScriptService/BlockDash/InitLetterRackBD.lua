@@ -4,7 +4,7 @@ local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 -- local Constants = require(Sss.Source.Constants.Constants)
 
-local LetterFallUtils = require(Sss.Source.Utils.U004LetterUtils)
+local LetterUtils = require(Sss.Source.Utils.U004LetterUtils)
 
 local module = {}
 
@@ -18,8 +18,8 @@ local function initLetterRack(miniGameState)
     local rackLetterSize = miniGameState.rackLetterSize
     local numBelts = miniGameState.numBelts
 
-    local runTimeLetterFolder = LetterFallUtils.getRunTimeLetterFolder(
-                                    miniGameState)
+    local runTimeLetterFolder =
+        LetterUtils.getRunTimeLetterFolder(miniGameState)
     miniGameState.runTimeLetterFolder = runTimeLetterFolder
 
     local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
@@ -34,14 +34,14 @@ local function initLetterRack(miniGameState)
     local totalLetterMatrix = {}
 
     -- combine all plates into a single matrix and populate matrix with random letters
-    local lettersNotInWords = LetterFallUtils.getLettersNotInWords(words)
+    local lettersNotInWords = LetterUtils.getLettersNotInWords(words)
 
     local totalRows = numRow * numBelts
 
     for _ = 1, totalRows do
         local row = {}
         for _ = 1, numCol do
-            table.insert(row, LetterFallUtils.getRandomLetter(lettersNotInWords))
+            table.insert(row, LetterUtils.getRandomLetter(lettersNotInWords))
         end
         table.insert(totalLetterMatrix, row)
     end
@@ -96,18 +96,18 @@ local function initLetterRack(miniGameState)
                 local name = "rackLetter-" .. char .. "-" .. letterId .. "sss"
                 newLetterBlock.Name = name
 
-                LetterFallUtils.createPropOnLetterBlock(
+                LetterUtils.createPropOnLetterBlock(
                     {
                         letterBlock = newLetterBlock,
-                        propName = LetterFallUtils.letterBlockPropNames.IsLifted,
+                        propName = LetterUtils.letterBlockPropNames.IsLifted,
                         initialValue = false,
                         propType = "BoolValue"
                     })
 
-                LetterFallUtils.createPropOnLetterBlock(
+                LetterUtils.createPropOnLetterBlock(
                     {
                         letterBlock = newLetterBlock,
-                        propName = LetterFallUtils.letterBlockPropNames.IsFound,
+                        propName = LetterUtils.letterBlockPropNames.IsFound,
                         initialValue = false,
                         propType = "BoolValue"
                     })
@@ -137,7 +137,7 @@ local function initLetterRack(miniGameState)
                 weld.Part0 = beltTemplate
                 weld.Part1 = newLetterBlock
 
-                LetterFallUtils.initLetterBlock(
+                LetterUtils.initLetterBlock(
                     {
                         letterBlock = newLetterBlock,
                         char = char,
@@ -178,7 +178,7 @@ local function initLetterRack(miniGameState)
             end
         end
 
-        LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
+        LetterUtils.styleLetterBlocksBD({miniGameState = miniGameState})
 
         letterPositioner:Destroy()
     end

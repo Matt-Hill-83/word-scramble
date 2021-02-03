@@ -1,6 +1,6 @@
 local Sss = game:GetService("ServerScriptService")
 local CS = game:GetService("CollectionService")
-local LetterFallUtils = require(Sss.Source.Utils.U004LetterUtils)
+local LetterUtils = require(Sss.Source.Utils.U004LetterUtils)
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
@@ -36,7 +36,7 @@ local function configWordLetters(props)
         local newLetter = letterBlockTemplate:Clone()
 
         local cd = Instance.new("ClickDetector", newLetter)
-        cd.MouseClick:Connect(LetterFallUtils.playWordSound(word))
+        cd.MouseClick:Connect(LetterUtils.playWordSound(word))
 
         newLetter.Name = "wordLetter-" .. letterNameStub .. "xxxx"
         newLetter.Anchored = false
@@ -45,8 +45,8 @@ local function configWordLetters(props)
         local letterPositionX = newLetter.Size.X * (letterIndex - 1) *
                                     spacingFactorX
 
-        CS:AddTag(newLetter, LetterFallUtils.tagNames.WordLetter)
-        LetterFallUtils.applyLetterText({letterBlock = newLetter, char = letter})
+        CS:AddTag(newLetter, LetterUtils.tagNames.WordLetter)
+        LetterUtils.applyLetterText({letterBlock = newLetter, char = letter})
 
         newLetter.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                {

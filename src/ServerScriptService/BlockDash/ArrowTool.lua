@@ -2,7 +2,7 @@ local Sss = game:GetService("ServerScriptService")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Constants = require(Sss.Source.Constants.Constants)
-local LetterFallUtils = require(Sss.Source.Utils.U004LetterUtils)
+local LetterUtils = require(Sss.Source.Utils.U004LetterUtils)
 
 local module = {}
 
@@ -33,7 +33,7 @@ function module.initArrowTool(miniGameState)
         local incrementY = 0.95 * letterPart.Size.Y * direction
 
         letterPart.CFrame = letterPart.CFrame + Vector3.new(0, incrementY, 0)
-        LetterFallUtils.applyStyleFromTemplateBD(
+        LetterUtils.applyStyleFromTemplateBD(
             {
                 targetLetterBlock = letterPart,
                 templateName = active and miniGameState.activeStyle or

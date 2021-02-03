@@ -3,7 +3,7 @@ local Sss = game:GetService("ServerScriptService")
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 
-local LetterFallUtils = require(Sss.Source.Utils.U004LetterUtils)
+local LetterUtils = require(Sss.Source.Utils.U004LetterUtils)
 local InitLetterRack = require(Sss.Source.BlockDash.InitLetterRackBD)
 local InitWord = require(Sss.Source.BlockDash.InitWordBD)
 local Entrance = require(Sss.Source.BlockDash.Entrance)
@@ -86,8 +86,8 @@ local function addBlockDash(sectorConfig)
     miniGameState.letterFallFolder = letterFallFolder
 
     local function onWordLettersGone(miniGameState2)
-        LetterFallUtils.revertRackLetterBlocksToInit(miniGameState2)
-        LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState2})
+        LetterUtils.revertRackLetterBlocksToInit(miniGameState2)
+        LetterUtils.styleLetterBlocksBD({miniGameState = miniGameState2})
 
         -- TODO: put this in DoorKey
         -- TODO: put this in DoorKey
@@ -98,8 +98,7 @@ local function addBlockDash(sectorConfig)
 
         for _, keyWall in ipairs(keyWalls) do
             if keyWall then
-                LetterFallUtils.styleImageLabelsInBlock(keyWall,
-                                                        {Visible = true})
+                LetterUtils.styleImageLabelsInBlock(keyWall, {Visible = true})
                 keyWall.CanCollide = true
                 keyWall.Transparency = 0.7
             end
@@ -115,7 +114,7 @@ local function addBlockDash(sectorConfig)
     InitLetterRack.initLetterRack(miniGameState)
     InitWord.initWords(miniGameState)
 
-    LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
+    LetterUtils.styleLetterBlocksBD({miniGameState = miniGameState})
     initPowerUps(miniGameState)
     DoorKey.init(miniGameState)
     LetterGrabber.initLetterGrabbers(miniGameState)

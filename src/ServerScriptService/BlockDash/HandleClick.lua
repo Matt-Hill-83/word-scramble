@@ -8,19 +8,19 @@ local Constants = require(Sss.Source.Constants.Constants)
 local Constants2 = require(Sss.Source.Constants.Const_02_Colors)
 local Const4 = require(Sss.Source.Constants.Const_04_Characters)
 
-local LetterFallUtils = require(Sss.Source.Utils.U004LetterUtils)
+local LetterUtils = require(Sss.Source.Utils.U004LetterUtils)
 local Leaderboard = require(Sss.Source.AddRemoteObjects.Leaderboard)
 
 local module = {processing = false, initComplete = false}
 
 local function isDesiredLetter(availLetters, clickedLetter)
-    local char = LetterFallUtils.getCharFromLetterBlock2(clickedLetter)
+    local char = LetterUtils.getCharFromLetterBlock2(clickedLetter)
     return availLetters[char]
 end
 
 local function findFirstMatchingLetterBlock(foundChar, miniGameState)
     local matchingLetter = nil
-    local availWords = LetterFallUtils.getAvailWords(miniGameState)
+    local availWords = LetterUtils.getAvailWords(miniGameState)
 
     for _, word in ipairs(availWords) do
         local letter = word.letters[miniGameState.currentLetterIndex]
@@ -60,7 +60,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
     local currentLetterIndex = miniGameState.currentLetterIndex
     local words = miniGameState.words
 
-    local foundChar = LetterFallUtils.getCharFromLetterBlock2(clickedLetter)
+    local foundChar = LetterUtils.getCharFromLetterBlock2(clickedLetter)
 
     local targetLetterBlock = nil
 
@@ -78,7 +78,7 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             targetLetterBlock = activeWord.letters[currentLetterIndex].instance
         end
     else
-        local availLetters = LetterFallUtils.getAvailLettersDict2(miniGameState)
+        local availLetters = LetterUtils.getAvailLettersDict2(miniGameState)
         if isDesiredLetter(availLetters, clickedLetter) then
             targetLetterBlock = findFirstMatchingLetterBlock(foundChar,
                                                              miniGameState)
@@ -106,18 +106,17 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
         })
 
         clickedBlockClone.CFrame = targetLetterBlock.CFrame
-        LetterFallUtils.applyStyleFromTemplateBD(
+        LetterUtils.applyStyleFromTemplateBD(
             {
                 targetLetterBlock = targetLetterBlock,
                 templateName = "LBPurpleLight"
             })
 
-        local clickedChar = LetterFallUtils.getCharFromLetterBlock2(
-                                clickedLetter)
+        local clickedChar = LetterUtils.getCharFromLetterBlock2(clickedLetter)
 
         if clickedChar then
             table.insert(miniGameState.foundLetters,
-                         LetterFallUtils.getCharFromLetterBlock2(clickedLetter))
+                         LetterUtils.getCharFromLetterBlock2(clickedLetter))
         end
 
         clickedBlockClone:Destroy()
@@ -184,9 +183,9 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             end
         end
 
-        LetterFallUtils.styleLetterBlocksBD({miniGameState = miniGameState})
+        LetterUtils.styleLetterBlocksBD({miniGameState = miniGameState})
 
-        local numAvailableWords = #LetterFallUtils.getAvailWords(miniGameState)
+        local numAvailableWords = #LetterUtils.getAvailWords(miniGameState)
 
         local function callBack(miniGameState2)
             local function closure()
@@ -224,8 +223,8 @@ local function onSelectRackBlock(clickedLetter, miniGameState, player)
             local keyWalls = Utils.getDescendantsByName(sectorFolder, "KeyWall")
             for _, keyWall in ipairs(keyWalls) do
                 if keyWall then
-                    LetterFallUtils.styleImageLabelsInBlock(keyWall,
-                                                            {Visible = false})
+                    LetterUtils.styleImageLabelsInBlock(keyWall,
+                                                        {Visible = false})
                     keyWall.CanCollide = false
                     keyWall.Transparency = 1
                 end

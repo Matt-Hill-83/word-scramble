@@ -4,7 +4,7 @@ local Sss = game:GetService("ServerScriptService")
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 
-local LetterFallUtils = require(Sss.Source.Utils.U004LetterUtils)
+local LetterUtils = require(Sss.Source.Utils.U004LetterUtils)
 local BlockDashUtils = require(Sss.Source.BlockDash.BlockDashUtils)
 
 local module = {}
@@ -95,9 +95,9 @@ local function initWord(props)
         local offsetX =
             -(newLetter.Size.X * (letterIndex - 1) * spacingFactorX) - 0
 
-        CS:AddTag(newLetter, LetterFallUtils.tagNames.WordLetter)
+        CS:AddTag(newLetter, LetterUtils.tagNames.WordLetter)
 
-        LetterFallUtils.initLetterBlock({
+        LetterUtils.initLetterBlock({
             letterBlock = newLetter,
             char = char,
             templateName = "BD_word_normal",
