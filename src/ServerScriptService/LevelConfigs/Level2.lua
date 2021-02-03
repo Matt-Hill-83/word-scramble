@@ -47,6 +47,32 @@ local sectorConfigs = {
 
 }
 
-module.config = sectorConfigs
+local sector2Config = {
+    {
+        words = {
+            -- "NAP", --
+            -- "TAP", --
+            -- "RAP", --
+            -- "ZAP", --
+            -- "CAP", --
+            -- "GAP", --
+            "LAP", --
+            "MAP", --
+            "VAN", --
+            "RAN", --
+            "CAN", --
+            "SAT", --
+            "RAT", --
+            "CAT", --
+            "HAT", --
+            "MAT", --
+            "PAT", --
+            "VAT" --
+        }
+    }
+}
+
+module.config = sector2Config
+-- module.config = sectorConfigs
 
 return module
