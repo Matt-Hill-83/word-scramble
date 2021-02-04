@@ -20,7 +20,7 @@ local function addRemoteObjects()
     -- if Constants.gameConfig.showWWI then
     local statueProps = {
         statusDefs = {
-            {sentence = {"YES", "MOM", "OK", "MOM"}, character = "raven"}, {
+            {sentence = {"OK", "MOM"}, character = "raven"}, {
                 sentence = {"NOT", "A", "CAT"},
                 character = "katScared",
                 songId = "6342102168"

@@ -13,12 +13,8 @@ local function initStatues(props)
     local wordWheelIsland = Utils.getFirstDescendantByName(myStuff,
                                                            "WordWheelIsland")
     local statuePositioners = CS:GetTagged("StatuePositioner")
-
     local statueTemplate = Utils.getFirstDescendantByName(wordWheelIsland,
                                                           "StatueTemplate")
-
-    print('statuePositioners' .. ' - start');
-    print(statuePositioners);
 
     for statueIndex, statuePositioner in ipairs(statuePositioners) do
         local statusDef = statusDefs[statueIndex]
@@ -83,7 +79,7 @@ local function initStatues(props)
             }
             InitWord.initWord(wordProps)
         end
-        sentencePositioner:Destroy()
+        -- sentencePositioner:Destroy()
     end
     statueTemplate:Destroy()
 end

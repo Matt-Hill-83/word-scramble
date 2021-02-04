@@ -31,6 +31,7 @@ local function configWord(props)
     local newStatueScene = props.newStatueScene
     local word = props.word
     local sentencePositioner = props.sentencePositioner
+    -- local offsetX = 0
     local offsetX = props.offsetX
     local totalLetterWidth = props.totalLetterWidth
     local wordSpacer = props.wordSpacer
@@ -45,20 +46,18 @@ local function configWord(props)
     newWord.Parent = wordTemplate.Parent
     local totalWordWidth = totalLetterWidth * #word + wordSpacer
 
-    local translateWordProps = {
-        parent = sentencePositioner,
-        child = newWord.PrimaryPart,
-        offsetConfig = {
-            useParentNearEdge = Vector3.new(1, -1, 1),
-            useChildNearEdge = Vector3.new(1, -1, 1),
-            offsetAdder = Vector3.new((offsetX - currentWordPosition.value), 0,
-                                      0)
-        }
-    }
-    currentWordPosition.value = currentWordPosition.value + totalWordWidth
-
     newWord.PrimaryPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                                     translateWordProps)
+                                     {
+            parent = sentencePositioner,
+            child = newWord.PrimaryPart,
+            offsetConfig = {
+                useParentNearEdge = Vector3.new(1, -1, 1),
+                useChildNearEdge = Vector3.new(1, -1, 1),
+                offsetAdder = Vector3.new((offsetX + currentWordPosition.value),
+                                          0, 0)
+            }
+        })
+    currentWordPosition.value = currentWordPosition.value - totalWordWidth
     newWord.PrimaryPart.Anchored = true
 
     return newWord
@@ -93,18 +92,16 @@ local function initWord(props)
         CS:AddTag(newLetter, "WordPopLetter")
         LetterFallUtils.applyLetterText({letterBlock = newLetter, char = letter})
 
-        local translateCFrameProps = {
-            parent = letterPositioner,
-            child = newLetter,
-            offsetConfig = {
-                useParentNearEdge = Vector3.new(-1, -1, -1),
-                useChildNearEdge = Vector3.new(-1, -1, -1),
-                offsetAdder = Vector3.new(letterPositionX, 0, 0)
-            }
-        }
-
         newLetter.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                               translateCFrameProps)
+                               {
+                parent = letterPositioner,
+                child = newLetter,
+                offsetConfig = {
+                    useParentNearEdge = Vector3.new(-1, -1, -1),
+                    useChildNearEdge = Vector3.new(-1, -1, -1),
+                    offsetAdder = Vector3.new(letterPositionX, 0, 0)
+                }
+            })
         newLetter.Anchored = true
 
         -- Do this last to avoid tweening
@@ -119,13 +116,22 @@ local function initWord(props)
     local wordBench = Utils.getFirstDescendantByName(newWord, "WordBench")
     wordBench.Anchored = true
 
-    local wordBenchSizeX = #word * totalLetterWidth
+    local wordBenchSizeX = (#word - 1) * totalLetterWidth +
+                               letterBlockTemplate.Size.X
 
-    -- local wordBenchPosX = wordBench.Position.X
-    wordBench.Size = Vector3.new(wordBenchSizeX, wordBench.Size.Y,
-                                 wordBench.Size.Z)
-    -- wordBench.Position = Vector3.new(wordBenchPosX, wordBench.Position.Y,
-    --                                  wordBench.Position.Z)
+    -- wordBench.Size = Vector3.new(wordBenchSizeX, wordBench.Size.Y,
+    --                              wordBench.Size.Z)
+
+    -- wordBench.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+    --                        {
+    --         parent = letterPositioner,
+    --         child = wordBench,
+    --         offsetConfig = {
+    --             useParentNearEdge = Vector3.new(1, -1, 1),
+    --             useChildNearEdge = Vector3.new(1, 1, 1),
+    --             offsetAdder = Vector3.new(0, 0, 0)
+    --         }
+    --     })
 
     local newWordObj = {
         word = newWord,
