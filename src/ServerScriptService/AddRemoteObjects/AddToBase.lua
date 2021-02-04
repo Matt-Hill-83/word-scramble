@@ -18,9 +18,27 @@ local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     -- if Constants.gameConfig.showWWI then
-    local props2 = {}
+    local props2 = {
+        statusDefs = {
+            {sentence = {"YES", "MOM", "OK", "MOM"}, character = "raven"}, {
+                sentence = {"NOT", "A", "CAT"},
+                character = "katScared",
+                songId = "6342102168"
+            }, --
+            {
+                sentence = {"TROLL", "NEED", "GOLD"},
+                character = "troll02",
+                songId = "6338745550"
+            }, --
+            {sentence = {"I", "SEE", "A", "BEE"}, character = "lizHappy"}
+        }
+
+    }
+
     initStatues.initStatues(props2)
-    LetterGrabber.initLetterGrabbers({sectorFolder = myStuff})
+
+    local grabbersConfig = {sectorFolder = myStuff}
+    LetterGrabber.initLetterGrabbers(grabbersConfig)
     ConfigGame.configGame()
 
     -- end

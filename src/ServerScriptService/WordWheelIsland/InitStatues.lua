@@ -14,7 +14,8 @@ local function configStatue(props)
 
 end
 
-local function initStatues()
+local function initStatues(props)
+    local statusDefs = props.statusDefs
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local wordWheelIsland = Utils.getFirstDescendantByName(myStuff,
@@ -30,20 +31,6 @@ local function initStatues()
     local statuePositioners = statuePositionerFolder:getChildren()
     print('statuePositioners' .. ' - start');
     print(statuePositioners);
-
-    local statusDefs = {
-        {sentence = {"YES", "MOM", "OK", "MOM"}, character = "raven"}, {
-            sentence = {"NOT", "A", "CAT"},
-            character = "katScared",
-            songId = "6342102168"
-        }, --
-        {
-            sentence = {"TROLL", "NEED", "GOLD"},
-            character = "troll02",
-            songId = "6338745550"
-        }, --
-        {sentence = {"I", "SEE", "A", "BEE"}, character = "lizHappy"}
-    }
 
     for statueIndex, statuePositioner in ipairs(statuePositioners) do
         local statusDef = statusDefs[statueIndex]
