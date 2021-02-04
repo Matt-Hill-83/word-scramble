@@ -79,6 +79,7 @@ local function initStatues(props)
         end
 
         local offsetX = sentenceLength / 2
+        local currentWordPosition = {value = 0}
 
         for wordIndex, word in ipairs(sentence) do
             local wordProps = {
@@ -90,7 +91,8 @@ local function initStatues(props)
                 wordIndex = wordIndex,
                 newStatueScene = newStatueScene,
                 wordLetters = wordLetters,
-                wordSpacer = wordSpacer
+                wordSpacer = wordSpacer,
+                currentWordPosition = currentWordPosition
             }
 
             InitWord.initWord(wordProps)

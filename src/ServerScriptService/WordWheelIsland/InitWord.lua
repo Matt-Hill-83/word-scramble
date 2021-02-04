@@ -28,14 +28,13 @@ local function playWordSound(word)
 end
 
 local function configWord(props)
-    -- local props = newProps.props
-
     local newStatueScene = props.newStatueScene
     local word = props.word
     local sentencePositioner = props.sentencePositioner
     local offsetX = props.offsetX
     local totalLetterWidth = props.totalLetterWidth
     local wordSpacer = props.wordSpacer
+    local currentWordPosition = props.currentWordPosition
 
     --    TODO: store this template in getFromTemplates
     --    TODO: store this template in getFromTemplates
@@ -47,6 +46,7 @@ local function configWord(props)
     Utils.applyDecalsToCharacterFromWord({part = newWord, word = word})
 
     newWord.Parent = wordTemplate.Parent
+    local totalWordWidth = totalLetterWidth * #word + wordSpacer
 
     local translateWordProps = {
         parent = sentencePositioner,
@@ -54,14 +54,18 @@ local function configWord(props)
         offsetConfig = {
             useParentNearEdge = Vector3.new(1, -1, 1),
             useChildNearEdge = Vector3.new(1, -1, 1),
-            offsetAdder = Vector3.new(offsetX + totalLetterWidth * #word +
-                                          wordSpacer, 0, 0)
+            offsetAdder = Vector3.new((offsetX - currentWordPosition.value), 0,
+                                      0)
         }
     }
+    currentWordPosition.value = currentWordPosition.value + totalWordWidth
+
+    print('currentWordPosition.value' .. ' - start');
+    print(currentWordPosition.value);
 
     newWord.PrimaryPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                      translateWordProps)
-    -- newWord.PrimaryPart.Anchored = true
+    newWord.PrimaryPart.Anchored = true
 
     return newWord
 end
@@ -75,9 +79,7 @@ local function initWord(props)
 
     local wordNameStub = "-W" .. wordIndex
     local newWord = configWord(props)
-
     newWord.Name = newWord.Name .. "zzz" .. wordNameStub
-
     local letterPositioner = Utils.getFirstDescendantByName(newWord,
                                                             "LetterPositioner")
 
@@ -125,11 +127,11 @@ local function initWord(props)
 
     local wordBenchSizeX = #word * totalLetterWidth
 
-    local wordBenchPosX = wordBench.Position.X
+    -- local wordBenchPosX = wordBench.Position.X
     wordBench.Size = Vector3.new(wordBenchSizeX, wordBench.Size.Y,
                                  wordBench.Size.Z)
-    wordBench.Position = Vector3.new(wordBenchPosX, wordBench.Position.Y,
-                                     wordBench.Position.Z)
+    -- wordBench.Position = Vector3.new(wordBenchPosX, wordBench.Position.Y,
+    --                                  wordBench.Position.Z)
 
     local newWordObj = {
         word = newWord,
