@@ -1,4 +1,5 @@
 local Sss = game:GetService("ServerScriptService")
+local CS = game:GetService("CollectionService")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local InitWord = require(Sss.Source.WordWheelIsland.InitWord)
@@ -20,6 +21,7 @@ local function initStatues(props)
 
     local wordWheelIsland = Utils.getFirstDescendantByName(myStuff,
                                                            "WordWheelIsland")
+    local statuePositioners = CS:GetTagged("StatuePositioner")
 
     -- local statuePositioners = Utils.getDescendantsByName(myStuff,
     --                                                      "StatuePositioner")
@@ -28,7 +30,7 @@ local function initStatues(props)
     local statuePositionerFolder = Utils.getFirstDescendantByName(
                                        wordWheelIsland, "StatuePositioners")
 
-    local statuePositioners = statuePositionerFolder:getChildren()
+    -- local statuePositioners = statuePositionerFolder:getChildren()
     print('statuePositioners' .. ' - start');
     print(statuePositioners);
 
