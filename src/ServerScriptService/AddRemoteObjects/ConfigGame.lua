@@ -54,7 +54,50 @@ function configGamePass()
 
         if hasPass == true then
             print(player.Name .. " owns the game pass with ID " .. gamePassID)
+            print(player.Name .. " owns the game pass with ID " .. gamePassID)
+            print(player.Name .. " owns the game pass with ID " .. gamePassID)
+            print(player.Name .. " owns the game pass with ID " .. gamePassID)
+            print(player.Name .. " owns the game pass with ID " .. gamePassID)
+            print(player.Name .. " owns the game pass with ID " .. gamePassID)
+            print(player.Name .. " owns the game pass with ID " .. gamePassID)
+            print(player.Name .. " owns the game pass with ID " .. gamePassID)
+
             -- Assign this player the ability or bonus related to the game pass
+
+            local function callBack(character)
+                local function closure()
+                    print('teleporting');
+                    print('teleporting');
+                    print('teleporting');
+                    character.HumanoidRootPart.CFrame =
+                        CFrame.new(Vector3.new(-245, 211, 1340))
+                end
+
+                local function wrapperForDelay()
+                    delay(10, closure)
+
+                    -- 
+                end
+                return wrapperForDelay
+            end
+
+            local function onCharacterAdded(character)
+                print('onCharacterAdded--------------------');
+                character:WaitForChild("Humanoid").WalkSpeed =
+                    Constants.gameConfig.walkSpeed
+
+                print('Constants.gameConfig.walkSpeed' .. ' - start');
+                print(Constants.gameConfig.walkSpeed);
+                print(character.Humanoid);
+                callBack(character)()
+
+                -- character.HumanoidRootPart.CFrame =
+                --     CFrame.new(Vector3.new(0, 50, 0))
+            end
+            player.CharacterAdded:Connect(onCharacterAdded)
+
+            -- player.HumanoidRootPart.CFrame =
+            --     CFrame.new(Vector3.new(-245, 211, 1340))
         end
     end
 
