@@ -26,6 +26,8 @@ local function initStrays(props)
     -- combine all plates into a single matrix and populate matrix with random letters
     local lettersNotInWords = LetterUtils.getLettersNotInWords(words)
 
+    -- This is a 2d array bc I recycled some other code, but it it just a 1d array
+
     local totalRows = numBlocks
     local numCol = 1
     local numRow = totalRows
@@ -93,8 +95,12 @@ local function initStrays(props)
                     propType = "BoolValue"
                 })
 
-            local letterPosX = 5
-            local letterPosZ = 8
+            local offsetX = Utils.genRandom(0, region.Size.X) - region.Size.X /
+                                2
+            local offsetZ = Utils.genRandom(0, region.Size.Z) - region.Size.Z /
+                                2
+            local letterPosX = offsetX
+            local letterPosZ = offsetZ
 
             newLetterBlock.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                         {
