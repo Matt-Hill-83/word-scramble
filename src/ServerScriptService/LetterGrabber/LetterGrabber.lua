@@ -35,17 +35,41 @@ local function configWordLetters(props)
         local letter = string.sub(word, letterIndex, letterIndex)
         local newLetter = letterBlockTemplate:Clone()
 
-        local cd = Instance.new("ClickDetector", newLetter)
-        cd.MouseClick:Connect(LetterUtils.playWordSound(word))
+        -- local cd = Instance.new("ClickDetector", newLetter)
+        -- cd.MouseClick:Connect(LetterUtils.playWordSound(word))
 
         newLetter.Name = "wordLetter-" .. letterNameStub .. "xxxx"
         newLetter.Anchored = false
         newLetter.CanCollide = false
 
+        LetterUtils.createPropOnLetterBlock(
+            {
+                letterBlock = newLetter,
+                propName = "Found",
+                initialValue = false,
+                propType = "BoolValue"
+            })
+
+        LetterUtils.createPropOnLetterBlock(
+            {
+                letterBlock = newLetter,
+                propName = LetterUtils.letterBlockPropNames.CurrentStyle,
+                initialValue = "zzz",
+                propType = "StringValue"
+            })
+
+        LetterUtils.createPropOnLetterBlock(
+            {
+                letterBlock = newLetter,
+                propName = "LetterIndex",
+                initialValue = letterIndex,
+                propType = "IntValue"
+            })
+
         local letterPositionX = newLetter.Size.X * (letterIndex - 1) *
                                     spacingFactorX
 
-        CS:AddTag(newLetter, LetterUtils.tagNames.WordLetter)
+        CS:AddTag(newLetter, "WordPopLetter")
         LetterUtils.applyLetterText({letterBlock = newLetter, char = letter})
 
         newLetter.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(

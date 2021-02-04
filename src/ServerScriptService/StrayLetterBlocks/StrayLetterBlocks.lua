@@ -143,6 +143,36 @@ local function initStrays(props)
                         if tool then
                             print('tool' .. ' - start');
                             print(tool);
+                            print(tool.Word);
+
+                            local letterBlocks =
+                                Utils.getByTagInParent(
+                                    {parent = tool, tag = "WordPopLetter"})
+
+                            print('letterBlocks' .. ' - start');
+                            print(letterBlocks);
+                            Utils.sortListByObjectKey(letterBlocks, "Name")
+                            print('letterBlocks' .. ' - start');
+                            print(letterBlocks);
+
+                            local activeBlock = nil
+                            for _, block in ipairs(letterBlocks) do
+                                if block.Found.Value == false then
+                                    activeBlock = block
+                                    break
+                                end
+                            end
+
+                            print('activeBlock' .. ' - start');
+                            print(activeBlock);
+
+                            LetterUtils.applyStyleFromTemplate(
+                                {
+                                    targetLetterBlock = activeBlock,
+                                    templateName = LetterUtils.letterBlockStyleDefs
+                                        .rack.Available
+                                })
+                            -- 
                         end
                         props.onTouchBlock(newLetterBlock2, player)
                         db.value = false

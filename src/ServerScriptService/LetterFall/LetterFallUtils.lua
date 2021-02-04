@@ -135,27 +135,27 @@ function applyLetterImage(letterBlock, char)
     end
 end
 
-function applyStyleFromTemplateBD(props)
-    local targetLetterBlock = props.targetLetterBlock
-    local templateName = props.templateName
+-- function applyStyleFromTemplateBD(props)
+--     local targetLetterBlock = props.targetLetterBlock
+--     local templateName = props.templateName
 
-    local letterBlockTemplateFolder = Utils.getFromTemplates(
-                                          "LetterBlockTemplates")
+--     local letterBlockTemplateFolder = Utils.getFromTemplates(
+--                                           "LetterBlockTemplates")
 
-    local template = Utils.getFirstDescendantByName(letterBlockTemplateFolder,
-                                                    templateName)
+--     local template = Utils.getFirstDescendantByName(letterBlockTemplateFolder,
+--                                                     templateName)
 
-    targetLetterBlock.Color = template.Color
+--     targetLetterBlock.Color = template.Color
 
-    local label = Utils.getFirstDescendantByName(template, "BlockChar")
+--     local label = Utils.getFirstDescendantByName(template, "BlockChar")
 
-    local labelProps = {
-        TextColor3 = label.TextColor3,
-        BorderColor3 = label.BorderColor3,
-        BackgroundColor3 = label.BackgroundColor3
-    }
-    styleLetterBlock(targetLetterBlock, labelProps)
-end
+--     local labelProps = {
+--         TextColor3 = label.TextColor3,
+--         BorderColor3 = label.BorderColor3,
+--         BackgroundColor3 = label.BackgroundColor3
+--     }
+--     styleLetterBlock(targetLetterBlock, labelProps)
+-- end
 
 function applyStyleFromTemplate(props)
     local targetLetterBlock = props.targetLetterBlock
@@ -333,27 +333,24 @@ function createStyledLetterBlock(props)
     return newLetter
 end
 
-function setStyleToAvailable(letterBlock, miniGameState)
+function setStyleToAvailable(letterBlock)
     module.applyStyleFromTemplate({
         targetLetterBlock = letterBlock,
-        templateName = module.letterBlockStyleDefs.rack.Available,
-        miniGameState = miniGameState
+        templateName = module.letterBlockStyleDefs.rack.Available
     })
 end
 
-function setStyleToNotAvailable(letterBlock, miniGameState)
+function setStyleToNotAvailable(letterBlock)
     module.applyStyleFromTemplate({
         targetLetterBlock = letterBlock,
-        templateName = module.letterBlockStyleDefs.rack.NotAvailable,
-        miniGameState = miniGameState
+        templateName = module.letterBlockStyleDefs.rack.NotAvailable
     })
 end
 
-function setStyleToDeadLetter(letterBlock, miniGameState)
+function setStyleToDeadLetter(letterBlock)
     module.applyStyleFromTemplate({
         targetLetterBlock = letterBlock,
-        templateName = module.letterBlockStyleDefs.rack.DeadLetter,
-        miniGameState = miniGameState
+        templateName = module.letterBlockStyleDefs.rack.DeadLetter
     })
 end
 
@@ -634,7 +631,7 @@ module.getCoordsFromLetterName = getCoordsFromLetterName
 module.filterItemsByTag = filterItemsByTag
 module.createStyledLetterBlock = createStyledLetterBlock
 module.getRunTimeLetterFolder = getRunTimeLetterFolder
-module.applyStyleFromTemplateBD = applyStyleFromTemplateBD
+-- module.applyStyleFromTemplateBD = applyStyleFromTemplateBD
 module.hideBlockImages = hideBlockImages
 module.applyLetterImage = applyLetterImage
 module.hideBlockText = hideBlockText
