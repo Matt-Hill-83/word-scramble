@@ -34,7 +34,7 @@ local function configPlayers()
 
 end
 
-function configGamePass()
+local function configGamePass()
     local gamePassID = 14078170
     local function onPlayerAdded(player)
         local hasPass = false
@@ -54,45 +54,21 @@ function configGamePass()
 
         if hasPass == true then
             print(player.Name .. " owns the game pass with ID " .. gamePassID)
-            print(player.Name .. " owns the game pass with ID " .. gamePassID)
-            print(player.Name .. " owns the game pass with ID " .. gamePassID)
-            print(player.Name .. " owns the game pass with ID " .. gamePassID)
-            print(player.Name .. " owns the game pass with ID " .. gamePassID)
-            print(player.Name .. " owns the game pass with ID " .. gamePassID)
-            print(player.Name .. " owns the game pass with ID " .. gamePassID)
-            print(player.Name .. " owns the game pass with ID " .. gamePassID)
 
             -- Assign this player the ability or bonus related to the game pass
-
-            local function callBack(character)
-                local function closure()
-                    character.HumanoidRootPart.CFrame =
-                        CFrame.new(Vector3.new(-245, 211, 1340))
-                end
-
-                local function wrapperForDelay()
-                    delay(5, closure)
-
-                    -- 
-                end
-                return wrapperForDelay
-            end
-
             local function onCharacterAdded(character)
-                print('onCharacterAdded--------------------');
                 character:WaitForChild("Humanoid").WalkSpeed = 80
+                local function transport()
+                    character.HumanoidRootPart.CFrame =
+                        CFrame.new(Vector3.new(-235, 211, 1340))
+                end
 
-                print('Constants.gameConfig.walkSpeed' .. ' - start');
-                print(Constants.gameConfig.walkSpeed);
-                print(character.Humanoid);
-                callBack(character)()
+                delay(1, transport)
 
             end
             player.CharacterAdded:Connect(onCharacterAdded)
-
         end
     end
-
     Players.PlayerAdded:Connect(onPlayerAdded)
 end
 
