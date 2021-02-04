@@ -60,7 +60,7 @@ local function configGamePass()
                 character:WaitForChild("Humanoid").WalkSpeed = 80
                 local function transport()
                     character.HumanoidRootPart.CFrame =
-                        CFrame.new(Vector3.new(-235, 211, 1340))
+                        CFrame.new(Vector3.new(-245, 211, 1340))
                 end
 
                 delay(1, transport)
