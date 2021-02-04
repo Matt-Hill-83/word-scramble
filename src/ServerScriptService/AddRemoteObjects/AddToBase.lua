@@ -12,7 +12,6 @@ local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
 local BlockDash = require(Sss.Source.BlockDash.BlockDash)
 local Entrance = require(Sss.Source.BlockDash.Entrance)
-local LetterGrabber = require(Sss.Source.LetterGrabber.LetterGrabber)
 local SkiSlope = require(Sss.Source.SkiSlope.SkiSlope)
 
 local function addRemoteObjects()
@@ -41,12 +40,6 @@ local function addRemoteObjects()
     }
 
     initStatues.initStatues(statueProps)
-
-    local grabbersConfig = {
-        words = {"CAT", "RAT", "BAT", "HAT", "MAT", "PAT", "VAT"},
-        parentFolder = myStuff
-    }
-    -- LetterGrabber.initLetterGrabbers(grabbersConfig)
 
     local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
     local levelsFolder = Utils.getFirstDescendantByName(blockDash, "Levels")

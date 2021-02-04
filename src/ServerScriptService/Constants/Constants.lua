@@ -31,7 +31,8 @@ gameConfig.isDev = isDev
 
 local module = {
     gameConfig = gameConfig, --
-    walkSpeed = gameConfig.walkSpeed --
+    walkSpeed = gameConfig.walkSpeed, --
+    gameData = {letterGrabbers = {}}
 
 }
 

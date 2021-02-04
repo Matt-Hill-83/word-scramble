@@ -133,8 +133,11 @@ local function initStrays(props)
 
                         local tool =
                             Utils.getActiveTool(player, "LetterGrabber")
-                        print('tool' .. ' - start');
-                        print(tool);
+
+                        if tool then
+                            print('tool' .. ' - start');
+                            print(tool);
+                        end
                         props.onTouchBlock(newLetterBlock2, player)
                         db.value = false
                     end
