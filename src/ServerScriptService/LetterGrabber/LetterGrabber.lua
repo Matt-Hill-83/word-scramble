@@ -103,10 +103,10 @@ local function applyDecalsToCharacterFromWord(props)
     end
 end
 
-local function initWord(grabbersConfig, wordIndex, config)
-    local sectorFolder = grabbersConfig.sectorFolder
+local function initWord(props, wordIndex, config)
+    local parentFolder = props.parentFolder
 
-    local positioner = Utils.getFirstDescendantByName(sectorFolder,
+    local positioner = Utils.getFirstDescendantByName(parentFolder,
                                                       "LetterGrabberPositioner")
     local template = Utils.getFromTemplates("GrabberReplicatorTemplate")
 
@@ -114,7 +114,7 @@ local function initWord(grabbersConfig, wordIndex, config)
     local lettterGrabber = Utils.getFirstDescendantByName(newReplicator,
                                                           "LetterGrabber")
 
-    newReplicator.Parent = sectorFolder
+    newReplicator.Parent = parentFolder
     local newReplicatorPart = newReplicator.PrimaryPart
     local wordNameStub = "-W" .. wordIndex
 
@@ -140,9 +140,9 @@ local function initWord(grabbersConfig, wordIndex, config)
 
     newReplicatorPart.Anchored = true
 
-    local function destroyBreaker(breaker)
-        return function() breaker:Destroy() end
-    end
+    -- local function destroyBreaker(breaker)
+    --     return function() breaker:Destroy() end
+    -- end
 
     -- only break if it is one I can take
     -- breaker.Touched:Connect(destroyBreaker(breaker))
@@ -150,14 +150,52 @@ local function initWord(grabbersConfig, wordIndex, config)
     Replicator.init(newReplicator)
 end
 
-function module.initLetterGrabbers(grabbersConfig)
-    local configs = {
-        "CAT", "DOG", "RAT", "BAT", "HAT", "MAT", "PAT", "VAT", "MOM", "DAD"
-    }
+local function initSingle(props)
+    local parentFolder = props.parentFolder
+    local positioner = props.positioner
+    local word = props.word
 
-    for wordIndex, config in ipairs(configs) do
-        initWord(grabbersConfig, wordIndex, config)
+    local template = Utils.getFromTemplates("GrabberReplicatorTemplate")
+
+    local newReplicator = template:Clone()
+    local lettterGrabber = Utils.getFirstDescendantByName(newReplicator,
+                                                          "LetterGrabber")
+
+    newReplicator.Parent = parentFolder
+    local newReplicatorPart = newReplicator.PrimaryPart
+
+    applyDecalsToCharacterFromWord({part = lettterGrabber, word = word})
+    configWordLetters({part = lettterGrabber, word = word, wordNameStub = ""})
+
+    -- local breaker = Utils.getFirstDescendantByName(lettterGrabber, "Breaker")
+    newReplicatorPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                                   {
+            parent = positioner,
+            child = newReplicatorPart,
+            offsetConfig = {
+                useParentNearEdge = Vector3.new(-1, -1, -1),
+                useChildNearEdge = Vector3.new(-1, -1, -1),
+                offsetAdder = Vector3.new(0, 0, 0)
+            }
+        })
+
+    newReplicatorPart.Anchored = true
+
+    Replicator.init(newReplicator)
+    return newReplicator
+end
+
+function module.initLetterGrabbers(props)
+    local words = props.words
+
+    for wordIndex, config in ipairs(words) do
+        initWord(props, wordIndex, config)
     end
+end
+
+function module.initLetterGrabber(props)
+    -- 
+    initSingle(props)
 end
 
 return module
