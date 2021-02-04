@@ -35,7 +35,6 @@ local function initStatues(props)
         local character = statusDef.character
         local songId = statusDef.songId
 
-        -- local statuePositioner = statuePositioners[statueIndex]
         local newStatueScene = statueTemplate:Clone()
         newStatueScene.Parent = statuePositioner.Parent
         newStatueScene.PrimaryPart.CFrame = statuePositioner.CFrame
@@ -62,16 +61,38 @@ local function initStatues(props)
             soundEmitter.Sound.Looped = true
         end
 
+        local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
+        local letterBlockTemplate = Utils.getFirstDescendantByName(
+                                        letterBlockFolder, "LBPurpleLight")
+
         configStatue()
         print('sentence' .. ' - start');
         print(sentence);
+
+        local letterWidth = letterBlockTemplate.Size.X
+        local wordSpacer = letterWidth
+        local totalLetterWidth = letterWidth * 1.1
+        local sentenceLength = wordSpacer * #sentence - 1
+
+        for _, word in ipairs(sentence) do
+            sentenceLength = sentenceLength + #word * totalLetterWidth
+        end
+
+        local offsetX = sentenceLength / 2
+
         for wordIndex, word in ipairs(sentence) do
             local wordProps = {
-                wordIndex = wordIndex,
-                wordLetters = wordLetters,
+                letterBlockTemplate = letterBlockTemplate,
+                offsetX = offsetX,
                 sentencePositioner = sentencePositioner,
-                word = word
+                totalLetterWidth = totalLetterWidth,
+                word = word,
+                wordIndex = wordIndex,
+                newStatueScene = newStatueScene,
+                wordLetters = wordLetters,
+                wordSpacer = wordSpacer
             }
+
             InitWord.initWord(wordProps)
         end
 

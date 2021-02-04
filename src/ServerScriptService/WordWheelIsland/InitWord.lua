@@ -28,20 +28,25 @@ local function playWordSound(word)
 end
 
 local function configWord(props)
-    local letterBlockTemplate = props.letterBlockTemplate
+    -- local props = newProps.props
+
+    local newStatueScene = props.newStatueScene
     local word = props.word
-    local wordIndex = props.wordIndex
-    local wordTemplate = props.wordTemplate
-    local wordNameStub = props.wordNameStub
     local sentencePositioner = props.sentencePositioner
+    local offsetX = props.offsetX
+    local totalLetterWidth = props.totalLetterWidth
+    local wordSpacer = props.wordSpacer
+
+    --    TODO: store this template in getFromTemplates
+    --    TODO: store this template in getFromTemplates
+    --    TODO: store this template in getFromTemplates
+    local wordTemplate = Utils.getFirstDescendantByName(newStatueScene,
+                                                        "WordTemplate")
 
     local newWord = wordTemplate:Clone()
     Utils.applyDecalsToCharacterFromWord({part = newWord, word = word})
 
     newWord.Parent = wordTemplate.Parent
-
-    -- local spacingFactorY = 1.25
-    local wordSpacingX = -letterBlockTemplate.Size.X * 4
 
     local translateWordProps = {
         parent = sentencePositioner,
@@ -49,15 +54,14 @@ local function configWord(props)
         offsetConfig = {
             useParentNearEdge = Vector3.new(1, -1, 1),
             useChildNearEdge = Vector3.new(1, -1, 1),
-            offsetAdder = Vector3.new(wordSpacingX * wordIndex, 0, 0)
+            offsetAdder = Vector3.new(offsetX + totalLetterWidth * #word +
+                                          wordSpacer, 0, 0)
         }
     }
 
     newWord.PrimaryPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                      translateWordProps)
     -- newWord.PrimaryPart.Anchored = true
-
-    newWord.Name = newWord.Name .. "zzz" .. wordNameStub
 
     return newWord
 end
@@ -66,31 +70,14 @@ local function initWord(props)
     local wordIndex = props.wordIndex
     local word = props.word
     local wordLetters = props.wordLetters
-    local sentencePositioner = props.sentencePositioner
+    local letterBlockTemplate = props.letterBlockTemplate
+    local totalLetterWidth = props.totalLetterWidth
 
-    local spacingFactorX = 1.0
-    local myStuff = workspace:FindFirstChild("MyStuff")
-    local wordWheelIsland = Utils.getFirstDescendantByName(myStuff,
-                                                           "WordWheelIsland")
-    local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
-    local letterBlockTemplate = Utils.getFirstDescendantByName(
-                                    letterBlockFolder, "LBPurpleLight")
-    local wordTemplate = Utils.getFirstDescendantByName(wordWheelIsland,
-                                                        "WordTemplate")
     local wordNameStub = "-W" .. wordIndex
+    local newWord = configWord(props)
 
-    local newWordProps = {
-        wordTemplate = wordTemplate,
-        word = word,
-        letterBlockTemplate = letterBlockTemplate,
-        wordIndex = wordIndex,
-        sentencePositioner = sentencePositioner,
-        wordNameStub = wordNameStub
-    }
+    newWord.Name = newWord.Name .. "zzz" .. wordNameStub
 
-    local newWord = configWord(newWordProps)
-
-    -- 
     local letterPositioner = Utils.getFirstDescendantByName(newWord,
                                                             "LetterPositioner")
 
@@ -98,7 +85,6 @@ local function initWord(props)
     for letterIndex = 1, #word do
         local letterNameStub = wordNameStub .. "-L" .. letterIndex
         local letter = string.sub(word, letterIndex, letterIndex)
-
         local newLetter = letterBlockTemplate:Clone()
 
         local cd = Instance.new("ClickDetector", newLetter)
@@ -106,10 +92,9 @@ local function initWord(props)
 
         newLetter.Name = "wordLetter-" .. letterNameStub .. "xxxx"
 
-        local letterPositionX = -newLetter.Size.X * (letterIndex - 1) *
-                                    spacingFactorX
+        local letterPositionX = -totalLetterWidth * (letterIndex - 1)
 
-        CS:AddTag(newLetter, LetterFallUtils.tagNames.WordLetter)
+        CS:AddTag(newLetter, "WordPopLetter")
         LetterFallUtils.applyLetterText({letterBlock = newLetter, char = letter})
 
         local translateCFrameProps = {
@@ -138,7 +123,7 @@ local function initWord(props)
     local wordBench = Utils.getFirstDescendantByName(newWord, "WordBench")
     wordBench.Anchored = true
 
-    local wordBenchSizeX = #word * letterBlockTemplate.Size.X * spacingFactorX
+    local wordBenchSizeX = #word * totalLetterWidth
 
     local wordBenchPosX = wordBench.Position.X
     wordBench.Size = Vector3.new(wordBenchSizeX, wordBench.Size.Y,
