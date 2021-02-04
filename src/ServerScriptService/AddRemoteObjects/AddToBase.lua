@@ -6,7 +6,7 @@ local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 -- local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 local Constants = require(Sss.Source.Constants.Constants)
 local LevelConfigs = require(Sss.Source.LevelConfigs.LevelConfigs)
-local InitWWI = require(Sss.Source.WordWheelIsland.InitWWI)
+local initStatues = require(Sss.Source.WordWheelIsland.InitStatues)
 
 local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
@@ -19,7 +19,7 @@ local function addRemoteObjects()
 
     -- if Constants.gameConfig.showWWI then
     local props2 = {}
-    InitWWI.initWWI(props2)
+    initStatues.initStatues(props2)
     LetterGrabber.initLetterGrabbers({sectorFolder = myStuff})
     ConfigGame.configGame()
 

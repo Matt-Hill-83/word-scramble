@@ -5,7 +5,7 @@ local InitWord = require(Sss.Source.WordWheelIsland.InitWord)
 
 local module = {}
 
-local function initWWIStatue()
+local function initStatuesStatue()
     -- 
 end
 
@@ -14,7 +14,7 @@ local function configStatue(props)
 
 end
 
-local function initWWI()
+local function initStatues()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
     local wordWheelIsland = Utils.getFirstDescendantByName(myStuff,
@@ -93,7 +93,7 @@ local function initWWI()
     statueTemplate:Destroy()
 end
 
-module.initWWI = initWWI
+module.initStatues = initStatues
 
 return module
 
