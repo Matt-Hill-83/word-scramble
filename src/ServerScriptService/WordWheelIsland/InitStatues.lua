@@ -23,14 +23,9 @@ local function initStatues(props)
                                                            "WordWheelIsland")
     local statuePositioners = CS:GetTagged("StatuePositioner")
 
-    -- local statuePositioners = Utils.getDescendantsByName(myStuff,
-    --                                                      "StatuePositioner")
     local statueTemplate = Utils.getFirstDescendantByName(wordWheelIsland,
                                                           "StatueTemplate")
-    local statuePositionerFolder = Utils.getFirstDescendantByName(
-                                       wordWheelIsland, "StatuePositioners")
 
-    -- local statuePositioners = statuePositionerFolder:getChildren()
     print('statuePositioners' .. ' - start');
     print(statuePositioners);
 
@@ -68,10 +63,13 @@ local function initStatues(props)
         end
 
         configStatue()
+        print('sentence' .. ' - start');
+        print(sentence);
         for wordIndex, word in ipairs(sentence) do
             local wordProps = {
                 wordIndex = wordIndex,
                 wordLetters = wordLetters,
+                sentencePositioner = sentencePositioner,
                 word = word
             }
             InitWord.initWord(wordProps)

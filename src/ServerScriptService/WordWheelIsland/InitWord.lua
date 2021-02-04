@@ -33,23 +33,14 @@ local function configWord(props)
     local wordIndex = props.wordIndex
     local wordTemplate = props.wordTemplate
     local wordNameStub = props.wordNameStub
+    local sentencePositioner = props.sentencePositioner
 
     local newWord = wordTemplate:Clone()
-
-    local charImageBlock = Utils.getFirstDescendantByName(newWord,
-                                                          "CharacterImage")
-
-    local myStuff = workspace:FindFirstChild("MyStuff")
-    local wordWheelIsland = Utils.getFirstDescendantByName(myStuff,
-                                                           "WordWheelIsland")
-    local sentencePositioner = Utils.getFirstDescendantByName(wordWheelIsland,
-                                                              "SentencePositioner")
-
     Utils.applyDecalsToCharacterFromWord({part = newWord, word = word})
 
     newWord.Parent = wordTemplate.Parent
 
-    local spacingFactorY = 1.25
+    -- local spacingFactorY = 1.25
     local wordSpacingX = -letterBlockTemplate.Size.X * 4
 
     local translateWordProps = {
@@ -64,7 +55,7 @@ local function configWord(props)
 
     newWord.PrimaryPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                      translateWordProps)
-    newWord.PrimaryPart.Anchored = true
+    -- newWord.PrimaryPart.Anchored = true
 
     newWord.Name = newWord.Name .. "zzz" .. wordNameStub
 
@@ -75,6 +66,7 @@ local function initWord(props)
     local wordIndex = props.wordIndex
     local word = props.word
     local wordLetters = props.wordLetters
+    local sentencePositioner = props.sentencePositioner
 
     local spacingFactorX = 1.0
     local myStuff = workspace:FindFirstChild("MyStuff")
@@ -92,6 +84,7 @@ local function initWord(props)
         word = word,
         letterBlockTemplate = letterBlockTemplate,
         wordIndex = wordIndex,
+        sentencePositioner = sentencePositioner,
         wordNameStub = wordNameStub
     }
 
