@@ -1,9 +1,9 @@
 local module = {}
 local Sss = game:GetService("ServerScriptService")
-local CS = game:GetService("CollectionService")
+-- local CS = game:GetService("CollectionService")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
-local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
+-- local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 local Constants = require(Sss.Source.Constants.Constants)
 local LevelConfigs = require(Sss.Source.LevelConfigs.LevelConfigs)
 local InitWWI = require(Sss.Source.WordWheelIsland.InitWWI)
@@ -12,6 +12,7 @@ local PlayerStatManager = require(Sss.Source.AddRemoteObjects.PlayerStatManager)
 local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
 local BlockDash = require(Sss.Source.BlockDash.BlockDash)
 local Entrance = require(Sss.Source.BlockDash.Entrance)
+local LetterGrabber = require(Sss.Source.LetterGrabber.LetterGrabber)
 
 local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
@@ -19,7 +20,9 @@ local function addRemoteObjects()
     -- if Constants.gameConfig.showWWI then
     local props2 = {}
     InitWWI.initWWI(props2)
+    LetterGrabber.initLetterGrabbers({sectorFolder = myStuff})
     ConfigGame.configGame()
+
     -- end
 
     if false then

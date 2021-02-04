@@ -48,7 +48,7 @@ local function init(replicator, callBack)
             player.Character.Humanoid:EquipTool(toGive)
             print('callBack' .. ' - start');
             print(callBack);
-            callBack()
+            if callBack then callBack() end
         end
 
     end
