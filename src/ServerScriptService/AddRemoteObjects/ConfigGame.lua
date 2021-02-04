@@ -66,15 +66,12 @@ function configGamePass()
 
             local function callBack(character)
                 local function closure()
-                    print('teleporting');
-                    print('teleporting');
-                    print('teleporting');
                     character.HumanoidRootPart.CFrame =
                         CFrame.new(Vector3.new(-245, 211, 1340))
                 end
 
                 local function wrapperForDelay()
-                    delay(10, closure)
+                    delay(5, closure)
 
                     -- 
                 end
@@ -83,21 +80,16 @@ function configGamePass()
 
             local function onCharacterAdded(character)
                 print('onCharacterAdded--------------------');
-                character:WaitForChild("Humanoid").WalkSpeed =
-                    Constants.gameConfig.walkSpeed
+                character:WaitForChild("Humanoid").WalkSpeed = 80
 
                 print('Constants.gameConfig.walkSpeed' .. ' - start');
                 print(Constants.gameConfig.walkSpeed);
                 print(character.Humanoid);
                 callBack(character)()
 
-                -- character.HumanoidRootPart.CFrame =
-                --     CFrame.new(Vector3.new(0, 50, 0))
             end
             player.CharacterAdded:Connect(onCharacterAdded)
 
-            -- player.HumanoidRootPart.CFrame =
-            --     CFrame.new(Vector3.new(-245, 211, 1340))
         end
     end
 

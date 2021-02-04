@@ -32,8 +32,8 @@ local function addRemoteObjects()
             }, --
             {
                 sentence = {"I", "SEE", "A", "BEE"},
-                character = "lizHappy"
-                -- songId = "6338745550"
+                character = "lizHappy",
+                songId = "6338745550"
             }
         }
 
