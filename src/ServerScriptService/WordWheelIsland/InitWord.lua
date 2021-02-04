@@ -52,20 +52,22 @@ local function configWord(props)
     newWord.Parent = wordTemplate.Parent
     local totalWordWidth = totalLetterWidth * #word + wordSpacer
 
-    newWord.PrimaryPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-                                     {
+    local wordPositioner = newWord.WordPositioner
+
+    wordPositioner.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                                {
             parent = sentencePositioner,
-            child = newWord.PrimaryPart,
+            child = wordPositioner,
             offsetConfig = {
-                useParentNearEdge = Vector3.new(1, -1, 1),
-                useChildNearEdge = Vector3.new(1, -1, 1),
+                useParentNearEdge = Vector3.new(1, -1, -1),
+                useChildNearEdge = Vector3.new(1, -1, -1),
                 offsetAdder = Vector3.new((offsetX + currentWordPosition.value),
                                           0, 0)
             }
         })
     currentWordPosition.value = currentWordPosition.value - totalWordWidth
-    newWord.PrimaryPart.Anchored = true
-
+    wordPositioner:Destroy()
+    -- wordPositioner.Anchored = true
     return newWord
 end
 
