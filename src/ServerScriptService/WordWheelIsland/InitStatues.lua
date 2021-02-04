@@ -6,15 +6,6 @@ local InitWord = require(Sss.Source.WordWheelIsland.InitWord)
 
 local module = {}
 
-local function initStatuesStatue()
-    -- 
-end
-
-local function configStatue(props)
-    -- 
-
-end
-
 local function initStatues(props)
     local statusDefs = props.statusDefs
     local myStuff = workspace:FindFirstChild("MyStuff")
@@ -65,10 +56,6 @@ local function initStatues(props)
         local letterBlockTemplate = Utils.getFirstDescendantByName(
                                         letterBlockFolder, "LBPurpleLight")
 
-        configStatue()
-        print('sentence' .. ' - start');
-        print(sentence);
-
         local letterWidth = letterBlockTemplate.Size.X
         local wordSpacer = letterWidth
         local totalLetterWidth = letterWidth * 1.1
@@ -96,7 +83,6 @@ local function initStatues(props)
             }
             InitWord.initWord(wordProps)
         end
-
         sentencePositioner:Destroy()
     end
     statueTemplate:Destroy()
