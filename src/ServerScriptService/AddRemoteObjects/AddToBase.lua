@@ -43,73 +43,61 @@ local function addRemoteObjects()
 
     local grabbersConfig = {sectorFolder = myStuff}
     LetterGrabber.initLetterGrabbers(grabbersConfig)
-    -- ConfigGame.configGame()
 
-    -- end
+    local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
+    local levelsFolder = Utils.getFirstDescendantByName(blockDash, "Levels")
+    local levels = levelsFolder:GetChildren()
 
-    if true then
+    Utils.sortListByObjectKey(levels, "Name")
 
-        local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
-        local levelsFolder = Utils.getFirstDescendantByName(myStuff, "Levels")
-        local levels = levelsFolder:GetChildren()
+    local islandTemplate = Utils.getFromTemplates("IslandTemplate")
 
-        Utils.sortListByObjectKey(levels, "Name")
+    for levelIndex, level in ipairs(levels) do
+        local islandPositioners = Utils.getByTagInParent(
+                                      {parent = level, tag = "IslandPositioner"})
 
-        local islandTemplate = Utils.getFromTemplates("IslandTemplate")
+        local sectorConfigs = LevelConfigs.levelConfigs[levelIndex]
+        Utils.sortListByObjectKey(islandPositioners, "Name")
 
-        for levelIndex, level in ipairs(levels) do
-            local islandPositioners = Utils.getByTagInParent(
-                                          {
-                    parent = level,
-                    tag = "IslandPositioner"
-                })
+        local myPositioners = Constants.gameConfig.singleIsland and
+                                  {islandPositioners[1]} or islandPositioners
 
-            local sectorConfigs = LevelConfigs.levelConfigs[levelIndex]
-            Utils.sortListByObjectKey(islandPositioners, "Name")
+        Entrance.initEntrance(level)
 
-            local myPositioners = Constants.gameConfig.singleIsland and
-                                      {islandPositioners[1]} or
-                                      islandPositioners
+        for islandIndex, islandPositioner in ipairs(myPositioners) do
+            -- if islandIndex == 3 then break end
+            local newIsland = islandTemplate:Clone()
 
-            Entrance.initEntrance(level)
-
-            for islandIndex, islandPositioner in ipairs(myPositioners) do
-                -- if islandIndex == 3 then break end
-                local newIsland = islandTemplate:Clone()
-
-                local anchoredParts = {}
-                for _, child in pairs(newIsland:GetDescendants()) do
-                    if child:IsA("BasePart") then
-                        if child.Anchored then
-                            child.Anchored = false
-                            table.insert(anchoredParts, child)
-                        end
+            local anchoredParts = {}
+            for _, child in pairs(newIsland:GetDescendants()) do
+                if child:IsA("BasePart") then
+                    if child.Anchored then
+                        child.Anchored = false
+                        table.insert(anchoredParts, child)
                     end
-                end
-
-                newIsland.Parent = myStuff
-                newIsland.Name = "Sector-" .. islandPositioner.Name
-                local newIslandPart = newIsland.PrimaryPart
-                if sectorConfigs then
-                    local sectorConfig =
-                        sectorConfigs[(islandIndex % #sectorConfigs) + 1]
-                    sectorConfig.sectorFolder = newIsland
-                    sectorConfig.islandPositioner = islandPositioner
-
-                    for _, child in pairs(anchoredParts) do
-                        child.Anchored = true
-                        -- 
-                    end
-                    BlockDash.addBlockDash(sectorConfig)
                 end
             end
-        end
-        -- Do this last after everything has been created/deleted
-        ConfigGame.configGame()
-        PlayerStatManager.init()
 
-        islandTemplate:Destroy()
+            newIsland.Parent = myStuff
+            newIsland.Name = "Sector-" .. islandPositioner.Name
+            if sectorConfigs then
+                local sectorConfig =
+                    sectorConfigs[(islandIndex % #sectorConfigs) + 1]
+                sectorConfig.sectorFolder = newIsland
+                sectorConfig.islandPositioner = islandPositioner
+
+                for _, child in pairs(anchoredParts) do
+                    child.Anchored = true
+                end
+                BlockDash.addBlockDash(sectorConfig)
+            end
+        end
     end
+    -- Do this last after everything has been created/deleted
+    ConfigGame.configGame()
+    PlayerStatManager.init()
+
+    islandTemplate:Destroy()
 end
 
 module.addRemoteObjects = addRemoteObjects
