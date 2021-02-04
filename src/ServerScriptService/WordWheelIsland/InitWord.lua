@@ -119,19 +119,19 @@ local function initWord(props)
     local wordBenchSizeX = (#word - 1) * totalLetterWidth +
                                letterBlockTemplate.Size.X
 
-    -- wordBench.Size = Vector3.new(wordBenchSizeX, wordBench.Size.Y,
-    --                              wordBench.Size.Z)
+    wordBench.Size = Vector3.new(wordBenchSizeX, wordBench.Size.Y,
+                                 wordBench.Size.Z)
 
-    -- wordBench.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
-    --                        {
-    --         parent = letterPositioner,
-    --         child = wordBench,
-    --         offsetConfig = {
-    --             useParentNearEdge = Vector3.new(1, -1, 1),
-    --             useChildNearEdge = Vector3.new(1, 1, 1),
-    --             offsetAdder = Vector3.new(0, 0, 0)
-    --         }
-    --     })
+    wordBench.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                           {
+            parent = letterPositioner,
+            child = wordBench,
+            offsetConfig = {
+                useParentNearEdge = Vector3.new(1, -1, 1),
+                useChildNearEdge = Vector3.new(1, 1, 1),
+                offsetAdder = Vector3.new(0, 0, 0)
+            }
+        })
 
     local newWordObj = {
         word = newWord,
