@@ -102,6 +102,8 @@ function applyDecalsToCharacterFromWord(props)
     local part = props.part
     local word = props.word
 
+    local found = false
+
     if Const4.wordConfigs[word] then
         local imageId = Const4.wordConfigs[word]['imageId']
         if imageId then
@@ -112,8 +114,10 @@ function applyDecalsToCharacterFromWord(props)
                                                        "CharacterDecalBack")
             decalFront.Image = decalUri
             decalBack.Image = decalUri
+            found = true
         end
     end
+    return found
 end
 
 function applyLabelsToCharacter(props)

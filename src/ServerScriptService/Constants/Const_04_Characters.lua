@@ -509,12 +509,12 @@ module.characters = {
         backgroundColorIdx = 1
     },
     troll01 = {
-        displayName = "Troll01",
+        displayName = "Troll 01",
         decalId = '5999464489',
         backgroundColorIdx = 1
     },
     troll02 = {
-        displayName = "Troll02",
+        displayName = "Troll 02",
         decalId = '5999464489',
         backgroundColorIdx = 3
     },

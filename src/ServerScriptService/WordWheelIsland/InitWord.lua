@@ -41,7 +41,13 @@ local function configWord(props)
                                                         "WordTemplate")
 
     local newWord = wordTemplate:Clone()
-    Utils.applyDecalsToCharacterFromWord({part = newWord, word = word})
+    local imageFound = Utils.applyDecalsToCharacterFromWord(
+                           {part = newWord, word = word})
+
+    if not imageFound then
+        newWord.CharacterImage:Destroy()
+        -- 
+    end
 
     newWord.Parent = wordTemplate.Parent
     local totalWordWidth = totalLetterWidth * #word + wordSpacer
