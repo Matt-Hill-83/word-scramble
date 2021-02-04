@@ -67,7 +67,6 @@ local function configWord(props)
         })
     currentWordPosition.value = currentWordPosition.value - totalWordWidth
     wordPositioner:Destroy()
-    -- wordPositioner.Anchored = true
     return newWord
 end
 

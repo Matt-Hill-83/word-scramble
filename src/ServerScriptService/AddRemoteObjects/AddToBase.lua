@@ -27,7 +27,7 @@ local function addRemoteObjects()
             }, --
             {
                 sentence = {"TROLL", "NEED", "GOLD"},
-                character = "troll02",
+                character = "babyTroll04",
                 songId = "6338745550"
             }, --
             {
@@ -43,11 +43,11 @@ local function addRemoteObjects()
 
     local grabbersConfig = {sectorFolder = myStuff}
     LetterGrabber.initLetterGrabbers(grabbersConfig)
-    ConfigGame.configGame()
+    -- ConfigGame.configGame()
 
     -- end
 
-    if false then
+    if true then
 
         local blockDash = Utils.getFirstDescendantByName(myStuff, "BlockDash")
         local levelsFolder = Utils.getFirstDescendantByName(myStuff, "Levels")

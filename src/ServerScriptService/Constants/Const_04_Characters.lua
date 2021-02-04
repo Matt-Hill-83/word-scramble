@@ -342,6 +342,11 @@ module.characters = {
         decalId = '6073033076',
         backgroundColorIdx = 1
     },
+    babyTroll04 = {
+        displayName = "Baby Troll",
+        decalId = '5895510081',
+        backgroundColorIdx = 1
+    },
     will01 = {
         displayName = "Baby Troll",
         decalId = '6073033076',

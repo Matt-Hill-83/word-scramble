@@ -117,7 +117,7 @@ local function addBlockDash(sectorConfig)
     LetterUtils.styleLetterBlocksBD({miniGameState = miniGameState})
     initPowerUps(miniGameState)
     DoorKey.init(miniGameState)
-    LetterGrabber.initLetterGrabbers(miniGameState)
+    -- LetterGrabber.initLetterGrabbers(miniGameState)
 end
 
 module.addBlockDash = addBlockDash
