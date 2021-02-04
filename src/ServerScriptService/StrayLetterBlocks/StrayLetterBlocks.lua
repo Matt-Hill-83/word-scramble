@@ -110,7 +110,6 @@ local function initStrays(props)
             newLetterBlock.Parent = parentFolder
             newLetterBlock.Anchored = false
             newLetterBlock.CanCollide = true
-            -- newLetterBlock.Anchored = true
 
             LetterUtils.initLetterBlock({
                 letterBlock = newLetterBlock,
@@ -131,8 +130,11 @@ local function initStrays(props)
                         db.value = true
                         local player = Utils.getPlayerFromHumanoid(humanoid)
                         local strayLetter = newLetterBlock2.Character.Value
-                        print('strayLetter' .. ' - start');
-                        print(strayLetter);
+
+                        local tool =
+                            Utils.getActiveTool(player, "LetterGrabber")
+                        print('tool' .. ' - start');
+                        print(tool);
                         props.onTouchBlock(newLetterBlock2, player)
                         db.value = false
                     end

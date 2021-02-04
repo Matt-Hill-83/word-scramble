@@ -42,6 +42,16 @@ local function destroyTools(player, toolNameStub)
     end
 end
 
+local function getActiveTool(player, toolNameStub)
+    local children2 = player.Character:GetChildren()
+    for _, child in ipairs(children2) do
+        local pattern = toolNameStub
+        local found = string.match(child.Name, pattern)
+        if found and child:IsA("Tool") then return child end
+    end
+    return false
+end
+
 local function listIncludes(tab, val)
     for index, value in ipairs(tab) do
         if value == val then
@@ -637,6 +647,7 @@ module.destroyTools = destroyTools
 module.sortListByObjectKey = sortListByObjectKey
 module.tablelength = tablelength
 module.tableToString = tableToString
+module.getActiveTool = getActiveTool
 module.applyDecalsToCharacterFromWord = applyDecalsToCharacterFromWord
 module.applyDecalsToCharacterFromConfigName =
     applyDecalsToCharacterFromConfigName
