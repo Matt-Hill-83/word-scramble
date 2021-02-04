@@ -36,9 +36,6 @@ local function configWord(props)
     local wordSpacer = props.wordSpacer
     local currentWordPosition = props.currentWordPosition
 
-    --    TODO: store this template in getFromTemplates
-    --    TODO: store this template in getFromTemplates
-    --    TODO: store this template in getFromTemplates
     local wordTemplate = Utils.getFirstDescendantByName(newStatueScene,
                                                         "WordTemplate")
 
@@ -59,9 +56,6 @@ local function configWord(props)
         }
     }
     currentWordPosition.value = currentWordPosition.value + totalWordWidth
-
-    print('currentWordPosition.value' .. ' - start');
-    print(currentWordPosition.value);
 
     newWord.PrimaryPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                      translateWordProps)

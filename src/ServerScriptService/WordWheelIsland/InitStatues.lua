@@ -94,7 +94,6 @@ local function initStatues(props)
                 wordSpacer = wordSpacer,
                 currentWordPosition = currentWordPosition
             }
-
             InitWord.initWord(wordProps)
         end
 
