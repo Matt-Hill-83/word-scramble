@@ -138,6 +138,14 @@ local function initStrays(props)
                 return activeBlock
             end
 
+            local function getSortedBlocks(tool)
+                local letterBlocks = Utils.getByTagInParent(
+                                         {parent = tool, tag = "WordPopLetter"})
+
+                Utils.sortListByObjectKey(letterBlocks, "Name")
+                return letterBlocks
+            end
+
             local function onTouchBlock(newLetterBlock2)
                 local db = {value = false}
                 local function closure(otherPart)
@@ -154,12 +162,7 @@ local function initStrays(props)
                             Utils.getActiveTool(player, "LetterGrabber")
 
                         if tool then
-                            local letterBlocks =
-                                Utils.getByTagInParent(
-                                    {parent = tool, tag = "WordPopLetter"})
-
-                            Utils.sortListByObjectKey(letterBlocks, "Name")
-
+                            local letterBlocks = getSortedBlocks(tool)
                             local activeBlock = getActiveBlock(letterBlocks)
 
                             local strayLetterChar =
