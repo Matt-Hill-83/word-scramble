@@ -149,14 +149,12 @@ local function initWord(props, wordIndex, config)
     local newReplicatorPart = newReplicator.PrimaryPart
     local wordNameStub = "-W" .. wordIndex
 
-    -- applyDecalsToCharacterFromWord({part = lettterGrabber, word = config})
     configWordLetters({
         part = lettterGrabber,
         word = config,
         wordNameStub = wordNameStub
     })
 
-    -- local breaker = Utils.getFirstDescendantByName(lettterGrabber, "Breaker")
     local offsetX = wordIndex * 10
     newReplicatorPart.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                    {
@@ -170,14 +168,6 @@ local function initWord(props, wordIndex, config)
         })
 
     newReplicatorPart.Anchored = true
-
-    -- local function destroyBreaker(breaker)
-    --     return function() breaker:Destroy() end
-    -- end
-
-    -- only break if it is one I can take
-    -- breaker.Touched:Connect(destroyBreaker(breaker))
-
     Replicator.init(newReplicator)
 end
 

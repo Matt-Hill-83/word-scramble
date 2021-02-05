@@ -2,7 +2,6 @@ local Sss = game:GetService("ServerScriptService")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
--- local Constants = require(Sss.Source.Constants.Constants)
 
 local LetterUtils = require(Sss.Source.Utils.U004LetterUtils)
 
@@ -18,7 +17,7 @@ local function initStrays(props)
 
     local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
     local letterBlockTemplate = Utils.getFirstDescendantByName(
-                                    letterBlockFolder, "LB_2_blank")
+                                    letterBlockFolder, "LB_4_blank")
 
     -- populate matrix with letters
     local totalLetterMatrix = {}
@@ -27,7 +26,6 @@ local function initStrays(props)
     local lettersNotInWords = LetterUtils.getLettersNotInWords(words)
 
     -- This is a 2d array bc I recycled some other code, but it it just a 1d array
-
     local totalRows = numBlocks
     local numCol = 1
     local numRow = totalRows
@@ -64,8 +62,6 @@ local function initStrays(props)
     end
 
     local letterMatrix = totalLetterMatrix
-    print('letterMatrix' .. ' - start');
-    print(letterMatrix);
 
     for colIndex = 1, numCol do
         for rowIndex = 1, numRow do
@@ -126,11 +122,21 @@ local function initStrays(props)
                 letterBlockType = "StrayLetter"
             })
 
-            -- LetterUtils.applyStyleFromTemplate(
-            --     {
-            --         targetLetterBlock = newLetterBlock,
-            --         templateName = "Stray_normal"
-            --     })
+            local function styleActiveBlock(letterBlock)
+
+                -- 
+            end
+
+            local function getActiveBlock(letterBlocks)
+                local activeBlock = nil
+                for _, block in ipairs(letterBlocks) do
+                    if block.IsFound.Value == false then
+                        activeBlock = block
+                        break
+                    end
+                end
+                return activeBlock
+            end
 
             local function onTouchBlock(newLetterBlock2)
                 local db = {value = false}
@@ -154,13 +160,7 @@ local function initStrays(props)
 
                             Utils.sortListByObjectKey(letterBlocks, "Name")
 
-                            local activeBlock = nil
-                            for _, block in ipairs(letterBlocks) do
-                                if block.IsFound.Value == false then
-                                    activeBlock = block
-                                    break
-                                end
-                            end
+                            local activeBlock = getActiveBlock(letterBlocks)
 
                             local strayLetterChar =
                                 newLetterBlock2.Character.Value
