@@ -221,6 +221,10 @@ function module.configGame()
     local allSpawnLocations = Utils.getDescendantsByType(workspace,
                                                          "SpawnLocation")
     for _, item in ipairs(allSpawnLocations) do
+        print('item.Name' .. ' - start');
+        print(item.Name);
+        print('Constants.gameConfig.activeSpawn' .. ' - start');
+        print(Constants.gameConfig.activeSpawn);
         if item.Name == Constants.gameConfig.activeSpawn then
             item.Enabled = true
         else

@@ -65,7 +65,7 @@ local sectorConfig1 = {
     sector6Config --
 }
 
-module.sectorConfig = sectorConfig1
+module.sectorConfigs = sectorConfig1
 module.targetWords = {
     "RAT", --
     "CAT", --
