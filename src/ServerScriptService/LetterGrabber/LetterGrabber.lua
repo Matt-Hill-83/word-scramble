@@ -4,7 +4,6 @@ local LetterUtils = require(Sss.Source.Utils.U004LetterUtils)
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
--- local Constants = require(Sss.Source.Constants.Constants)
 local Const4 = require(Sss.Source.Constants.Const_04_Characters)
 
 local Replicator = require(Sss.Source.BlockDash.Replicator)
@@ -22,7 +21,7 @@ local function configWordLetters(props)
 
     local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
     local letterBlockTemplate = Utils.getFirstDescendantByName(
-                                    letterBlockFolder, "Stray_normal")
+                                    letterBlockFolder, "LB_2_blank")
 
     local wordBench = Utils.getFirstDescendantByName(newWord, "WordBench")
     wordBench.Name = wordBench.Name .. "yyyy"
@@ -34,10 +33,9 @@ local function configWordLetters(props)
         local letterNameStub = wordNameStub .. "-L" .. letterIndex
         local letter = string.sub(word, letterIndex, letterIndex)
         local newLetter = letterBlockTemplate:Clone()
-        newLetter.Size = Vector3.new(2, 2, 2)
 
-        -- local cd = Instance.new("ClickDetector", newLetter)
-        -- cd.MouseClick:Connect(LetterUtils.playWordSound(word))
+        LetterUtils.applyStyleFromTemplate(
+            {targetLetterBlock = newLetter, templateName = "Grabber_normal"})
 
         newLetter.Name = "wordLetter-" .. letterNameStub .. "xxxx"
         newLetter.Anchored = false
@@ -143,7 +141,7 @@ local function initWord(props, wordIndex, config)
     local newReplicatorPart = newReplicator.PrimaryPart
     local wordNameStub = "-W" .. wordIndex
 
-    applyDecalsToCharacterFromWord({part = lettterGrabber, word = config})
+    -- applyDecalsToCharacterFromWord({part = lettterGrabber, word = config})
     configWordLetters({
         part = lettterGrabber,
         word = config,

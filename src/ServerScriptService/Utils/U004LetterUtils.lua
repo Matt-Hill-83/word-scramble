@@ -267,6 +267,19 @@ end
 local function applyStyleFromTemplate(props)
     local targetLetterBlock = props.targetLetterBlock
     local templateName = props.templateName
+    local blockProps = props.blockProps or {}
+    local labelProps = props.labelProps or {}
+
+    local currentStyleProp = Utils.getFirstDescendantByName(targetLetterBlock,
+                                                            "CurrentStyle")
+    if not currentStyleProp then
+        createPropOnLetterBlock({
+            letterBlock = targetLetterBlock,
+            propName = module.letterBlockPropNames.CurrentStyle,
+            initialValue = "none",
+            propType = "StringValue"
+        })
+    end
 
     local currentStyle = targetLetterBlock.CurrentStyle.Value
 
@@ -284,15 +297,21 @@ local function applyStyleFromTemplate(props)
     local template = Utils.getFirstDescendantByName(letterBlockTemplateFolder,
                                                     templateName)
 
+    Utils.mergeTables(targetLetterBlock, blockProps)
+
     local label = Utils.getFirstDescendantByName(template, "BlockChar")
 
-    local labelProps = {
+    local baseLabelProps = {
         TextColor3 = label.TextColor3,
+        TextStrokeColor3 = label.TextStrokeColor3,
         BorderColor3 = label.BorderColor3,
-        BackgroundColor3 = label.BackgroundColor3
+        BackgroundColor3 = label.BackgroundColor3,
+        TextStrokeTransparency = label.TextStrokeTransparency
     }
 
-    module.styleLetterBlock(targetLetterBlock, labelProps)
+    Utils.mergeTables(baseLabelProps, labelProps)
+    -- local mergedLabelProps = Utils.mergeTables(baseLabelProps, labelProps)
+    module.styleLetterBlock(targetLetterBlock, baseLabelProps)
 end
 
 local function applyLetterText(props)
