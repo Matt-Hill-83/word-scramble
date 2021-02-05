@@ -66,8 +66,6 @@ local function addRemoteObjects()
 
         Entrance.initEntrance(level)
         WordGui.initWordGui({levelConfig = levelConfig})
-        print('myPositioners' .. ' - start');
-        print(myPositioners);
         for islandIndex, islandPositioner in ipairs(myPositioners) do
             -- if islandIndex == 3 then break end
             local newIsland = islandTemplate:Clone()
@@ -84,8 +82,6 @@ local function addRemoteObjects()
 
             newIsland.Parent = myStuff
             newIsland.Name = "Sector-" .. islandPositioner.Name
-            print('sectorConfigs' .. ' - start');
-            print(sectorConfigs);
             if sectorConfigs then
                 local sectorConfig =
                     sectorConfigs[(islandIndex % #sectorConfigs) + 1]

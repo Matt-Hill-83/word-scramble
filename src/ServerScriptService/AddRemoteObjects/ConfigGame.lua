@@ -87,7 +87,7 @@ function configBadges()
         end)
 end
 
-function setVisibility()
+local function setVisibility()
     local taggedPartsDestroy = CS:GetTagged("Destroy")
     for _, item in ipairs(taggedPartsDestroy) do item:Destroy() end
 
@@ -219,23 +219,13 @@ function module.configGame()
     print('configGame');
     setVisibility()
     configPlayers()
-    -- configGamePass()
+    configGamePass()
     configBadges()
 
     local allSpawnLocations = Utils.getDescendantsByType(workspace,
                                                          "SpawnLocation")
-    print('allSpawnLocations' .. ' - start');
-    print('allSpawnLocations' .. ' - start');
-    print('allSpawnLocations' .. ' - start');
-    print('allSpawnLocations' .. ' - start');
-    print('allSpawnLocations' .. ' - start');
-    print(allSpawnLocations);
 
     for _, item in ipairs(allSpawnLocations) do
-        print('item.Name' .. ' - start');
-        print(item.Name);
-        print('Constants.gameConfig.activeSpawn' .. ' - start');
-        print(Constants.gameConfig.activeSpawn);
         if item.Name == Constants.gameConfig.activeSpawn then
             item.Enabled = true
         else

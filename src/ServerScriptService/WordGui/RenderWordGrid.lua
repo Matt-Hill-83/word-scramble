@@ -17,6 +17,12 @@ local renderGrid = function(props)
     local charName = "test"
 
     print('targetWords' .. ' - start');
+    print('targetWords' .. ' - start');
+    print('targetWords' .. ' - start');
+    print('targetWords' .. ' - start');
+    print('targetWords' .. ' - start');
+    print('targetWords' .. ' - start');
+    print('targetWords' .. ' - start');
     print(targetWords);
 
     local viewPortSize = sgui.AbsoluteSize
@@ -80,7 +86,7 @@ local renderGrid = function(props)
 
             local outerLabel = Instance.new("TextLabel", scrollingFrame)
             local outerLabelProps = {
-                Name = "Dialog-" .. i,
+                Name = "Dialog-" .. i .. "dddd",
                 Position = UDim2.new(0, 0, 0, dialogY),
                 Size = UDim2.new(1, 0, 0, height + 2 * paddingInPx),
 
@@ -98,19 +104,6 @@ local renderGrid = function(props)
                 ZIndex = 1
             }
             Utils.mergeTables(outerLabel, outerLabelProps)
-
-            local innerLabel = outerLabel:Clone()
-            local innerLabelProps = {
-                Parent = outerLabel,
-                Name = "Dialog-" .. i,
-                Text = text,
-                ZIndex = 2,
-                Size = UDim2.new(1, 0, 0, height),
-                Position = UDim2.new(0, paddingInPx, 0, paddingInPx),
-                BackgroundTransparency = 1,
-                RichText = true
-            }
-            Utils.mergeTables(innerLabel, innerLabelProps)
 
             local absoluteHeight = outerLabel.AbsoluteSize.Y
             dialogY = dialogY + (absoluteHeight + rowGap)
