@@ -5,6 +5,7 @@ local LetterUtils = require(Sss.Source.Utils.U004LetterUtils)
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 local Const4 = require(Sss.Source.Constants.Const_04_Characters)
+local Utils5 = require(Sss.Source.Utils.U005LetterGrabberUtils)
 
 local Replicator = require(Sss.Source.BlockDash.Replicator)
 
@@ -40,6 +41,14 @@ local function configWordLetters(props)
         newLetter.Name = "wordLetter-" .. letterNameStub .. "xxxx"
         newLetter.Anchored = false
         newLetter.CanCollide = false
+
+        LetterUtils.createPropOnLetterBlock(
+            {
+                letterBlock = newLetter,
+                propName = "IsActive",
+                initialValue = false,
+                propType = "BoolValue"
+            })
 
         LetterUtils.createPropOnLetterBlock(
             {
@@ -169,6 +178,7 @@ local function initWord(props, wordIndex, config)
 
     newReplicatorPart.Anchored = true
     Replicator.init(newReplicator)
+    Utils5.styleLetterGrabberBlocks(lettterGrabber)
 end
 
 local function initSingle(props)

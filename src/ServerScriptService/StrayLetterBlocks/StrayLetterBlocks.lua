@@ -141,19 +141,30 @@ local function initStrays(props)
                         if tool then
                             local activeBlock =
                                 Utils5.getActiveLetterGrabberBlock(tool)
+                            if not activeBlock then
+                                return
+                            end
 
                             local strayLetterChar =
                                 newLetterBlock2.Character.Value
                             local activeLetterChar = activeBlock.Character.Value
 
                             if strayLetterChar == activeLetterChar then
-                                LetterUtils.applyStyleFromTemplate(
-                                    {
-                                        targetLetterBlock = activeBlock,
-                                        templateName = "Grabber_found"
-                                    })
+                                activeBlock.IsFound.Value = true
+                                activeBlock.IsActive.Value = false
                             end
 
+                            Utils5.styleLetterGrabberBlocks(tool)
+
+                            local newActiveBlock =
+                                Utils5.getActiveLetterGrabberBlock(tool)
+                            if not newActiveBlock then
+                                print('you spelled a word!');
+                                print('you spelled a word!');
+                                print('you spelled a word!');
+                                print('you spelled a word!');
+                                print('you spelled a word!');
+                            end
                         end
 
                         props.onTouchBlock(newLetterBlock2, player)
