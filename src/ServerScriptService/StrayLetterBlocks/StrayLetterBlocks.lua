@@ -97,8 +97,9 @@ local function initStrays(props)
                                 2
             local offsetZ = Utils.genRandom(0, region.Size.Z) - region.Size.Z /
                                 2
-            local letterPosX = offsetX
-            local letterPosZ = offsetZ
+
+            -- local offsetX = Utils.genRandom(0, 20)
+            -- local offsetZ = Utils.genRandom(0, 20)
 
             newLetterBlock.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                         {
@@ -107,7 +108,7 @@ local function initStrays(props)
                     offsetConfig = {
                         useParentNearEdge = Vector3.new(0, 0, 0),
                         useChildNearEdge = Vector3.new(0, 0, 0),
-                        offsetAdder = Vector3.new(letterPosX, 0, letterPosZ)
+                        offsetAdder = Vector3.new(offsetX, 0, offsetZ)
                     }
                 })
 

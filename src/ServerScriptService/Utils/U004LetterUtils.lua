@@ -180,10 +180,13 @@ local function initLetterBlock(props)
     -- This seems redundant.
     -- I assume we do this after everything is created.
     if templateName then
-        module.applyStyleFromTemplateBD({
-            targetLetterBlock = letterBlock,
-            templateName = templateName
-        })
+        if isTextLetter then
+            module.applyStyleFromTemplate(
+                {targetLetterBlock = letterBlock, templateName = templateName})
+        else
+            module.applyStyleFromTemplateBD(
+                {targetLetterBlock = letterBlock, templateName = templateName})
+        end
     end
 end
 

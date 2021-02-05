@@ -8,11 +8,11 @@ local Level5 = require(Sss.Source.LevelConfigs.Level5)
 local module = {}
 
 module.levelConfigs = {
-    Level1.config, -- 
-    Level2.config, --
-    Level3.config, --
-    Level4.config, --
-    Level5.config --
+    Level1, -- 
+    Level2, --
+    Level3, --
+    Level4, --
+    Level5 --
 }
 
 return module

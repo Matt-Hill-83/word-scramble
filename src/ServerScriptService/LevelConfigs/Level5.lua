@@ -16,6 +16,6 @@ local config = {
 }
 
 module.config = config
--- module.config = sectorConfigs
+-- module.sectorConfig = sectorConfigs
 
 return module

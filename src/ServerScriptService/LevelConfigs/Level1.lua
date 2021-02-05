@@ -3,9 +3,9 @@ local module = {}
 local sector1Config = {
     freezeConveyor = true,
     words = {
-        -- "NAP", --
-        -- "TAP", --
-        -- "RAP", --
+        "NAP", --
+        "TAP", --
+        "RAP", --
         "ZAP" --
     }
 }
@@ -65,6 +65,12 @@ local sectorConfig1 = {
     sector6Config --
 }
 
-module.config = sectorConfig1
+module.sectorConfig = sectorConfig1
+module.targetWords = {
+    "RAT", --
+    "CAT", --
+    "BAT", --
+    "HAT" --
+}
 
 return module

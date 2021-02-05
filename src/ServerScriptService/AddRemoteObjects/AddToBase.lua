@@ -13,6 +13,7 @@ local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
 local BlockDash = require(Sss.Source.BlockDash.BlockDash)
 local Entrance = require(Sss.Source.BlockDash.Entrance)
 local SkiSlope = require(Sss.Source.SkiSlope.SkiSlope)
+local WordGui = require(Sss.Source.WordGui.WordGui)
 
 local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
@@ -36,7 +37,6 @@ local function addRemoteObjects()
                 -- songId = "6338745550"
             }
         }
-
     }
 
     initStatues.initStatues(statueProps)
@@ -54,13 +54,15 @@ local function addRemoteObjects()
         local islandPositioners = Utils.getByTagInParent(
                                       {parent = level, tag = "IslandPositioner"})
 
-        local sectorConfigs = LevelConfigs.levelConfigs[levelIndex]
+        local levelConfig = LevelConfigs.levelConfigs[levelIndex]
+        local sectorConfigs = levelConfig.sectorConfigs
         Utils.sortListByObjectKey(islandPositioners, "Name")
 
         local myPositioners = Constants.gameConfig.singleIsland and
                                   {islandPositioners[1]} or islandPositioners
 
         Entrance.initEntrance(level)
+        WordGui.initWordGui({levelConfig = levelConfig})
 
         for islandIndex, islandPositioner in ipairs(myPositioners) do
             -- if islandIndex == 3 then break end

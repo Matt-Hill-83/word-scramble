@@ -73,6 +73,6 @@ local sector2Config = {
 }
 
 module.config = sector2Config
--- module.config = sectorConfigs
+-- module.sectorConfig = sectorConfigs
 
 return module

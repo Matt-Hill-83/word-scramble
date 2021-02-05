@@ -26,8 +26,11 @@ function module.initSlopes(props)
 
         local strayProps = {
             parentFolder = slope,
-            numBlocks = 20,
-            words = {"CAT", "DOG"},
+            numBlocks = 100,
+            words = {
+                "CAT", "CAT", "CAT", "CAT", "CAT", "CAT", "CAT", "CAT", "CAT",
+                "CAT"
+            },
             blocks = {},
             region = slope.StrayRegion,
             onTouchBlock = function()
