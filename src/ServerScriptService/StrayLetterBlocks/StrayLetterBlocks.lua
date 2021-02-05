@@ -2,6 +2,7 @@ local Sss = game:GetService("ServerScriptService")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
+local Utils5 = require(Sss.Source.Utils.U005LetterGrabberUtils)
 
 local LetterUtils = require(Sss.Source.Utils.U004LetterUtils)
 
@@ -122,30 +123,6 @@ local function initStrays(props)
                 letterBlockType = "StrayLetter"
             })
 
-            local function styleActiveBlock(letterBlock)
-
-                -- 
-            end
-
-            local function getActiveBlock(letterBlocks)
-                local activeBlock = nil
-                for _, block in ipairs(letterBlocks) do
-                    if block.IsFound.Value == false then
-                        activeBlock = block
-                        break
-                    end
-                end
-                return activeBlock
-            end
-
-            local function getSortedBlocks(tool)
-                local letterBlocks = Utils.getByTagInParent(
-                                         {parent = tool, tag = "WordPopLetter"})
-
-                Utils.sortListByObjectKey(letterBlocks, "Name")
-                return letterBlocks
-            end
-
             local function onTouchBlock(newLetterBlock2)
                 local db = {value = false}
                 local function closure(otherPart)
@@ -162,8 +139,8 @@ local function initStrays(props)
                             Utils.getActiveTool(player, "LetterGrabber")
 
                         if tool then
-                            local letterBlocks = getSortedBlocks(tool)
-                            local activeBlock = getActiveBlock(letterBlocks)
+                            local activeBlock =
+                                Utils5.getActiveLetterGrabberBlock(tool)
 
                             local strayLetterChar =
                                 newLetterBlock2.Character.Value
