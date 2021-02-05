@@ -16,3 +16,4 @@ module.gemColors = {
 }
 
 return module
+

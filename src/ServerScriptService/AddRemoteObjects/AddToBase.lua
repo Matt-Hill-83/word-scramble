@@ -51,6 +51,9 @@ local function addRemoteObjects()
     local islandTemplate = Utils.getFromTemplates("IslandTemplate")
 
     for levelIndex, level in ipairs(levels) do
+
+        if levelIndex == 2 then return end
+
         local islandPositioners = Utils.getByTagInParent(
                                       {parent = level, tag = "IslandPositioner"})
 
