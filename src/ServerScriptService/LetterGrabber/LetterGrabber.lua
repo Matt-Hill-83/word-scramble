@@ -76,7 +76,7 @@ local function configWordLetters(props)
         local letterPositionX = newLetter.Size.X * (letterIndex - 1) *
                                     spacingFactorX
 
-        CS:AddTag(newLetter, "WordPopLetter")
+        CS:AddTag(newLetter, "WordGrabberLetter")
         LetterUtils.applyLetterText({letterBlock = newLetter, char = char})
         newLetter.Character.Value = char
         newLetter.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(

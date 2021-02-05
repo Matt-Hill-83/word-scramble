@@ -8,7 +8,7 @@ local module = {}
 local function getActiveLetterGrabberBlock(tool)
     local function getSortedBlocks(tool2)
         local letterBlocks = Utils.getByTagInParent(
-                                 {parent = tool2, tag = "WordPopLetter"})
+                                 {parent = tool2, tag = "WordGrabberLetter"})
         Utils.sortListByObjectKey(letterBlocks, "Name")
         return letterBlocks
     end

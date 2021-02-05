@@ -96,7 +96,7 @@ local function initWord(props)
 
         local letterPositionX = -totalLetterWidth * (letterIndex - 1)
 
-        CS:AddTag(newLetter, "WordPopLetter")
+        CS:AddTag(newLetter, "WordGrabberLetter")
         LetterFallUtils.applyLetterText({letterBlock = newLetter, char = letter})
 
         newLetter.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
