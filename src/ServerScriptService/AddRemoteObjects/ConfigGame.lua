@@ -59,8 +59,10 @@ local function configGamePass()
             local function onCharacterAdded(character)
                 character:WaitForChild("Humanoid").WalkSpeed = 80
                 local function transport()
-                    character.HumanoidRootPart.CFrame =
-                        CFrame.new(Vector3.new(-245, 211, 1340))
+
+                    -- player.RespawnLocation = game.Workspace.Start
+                    -- character.HumanoidRootPart.CFrame =
+                    --     CFrame.new(Vector3.new(-245, 211, 1340))
                 end
 
                 delay(1, transport)
