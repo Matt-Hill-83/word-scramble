@@ -22,7 +22,7 @@ local function configWordLetters(props)
 
     local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
     local letterBlockTemplate = Utils.getFirstDescendantByName(
-                                    letterBlockFolder, "LBPurpleLight")
+                                    letterBlockFolder, "Stray_normal")
 
     local wordBench = Utils.getFirstDescendantByName(newWord, "WordBench")
     wordBench.Name = wordBench.Name .. "yyyy"
@@ -34,6 +34,7 @@ local function configWordLetters(props)
         local letterNameStub = wordNameStub .. "-L" .. letterIndex
         local letter = string.sub(word, letterIndex, letterIndex)
         local newLetter = letterBlockTemplate:Clone()
+        newLetter.Size = Vector3.new(2, 2, 2)
 
         -- local cd = Instance.new("ClickDetector", newLetter)
         -- cd.MouseClick:Connect(LetterUtils.playWordSound(word))

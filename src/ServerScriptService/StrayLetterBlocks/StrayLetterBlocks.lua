@@ -18,7 +18,9 @@ local function initStrays(props)
 
     local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
     local letterBlockTemplate = Utils.getFirstDescendantByName(
-                                    letterBlockFolder, "BD_normal")
+                                    letterBlockFolder, "Stray_normal")
+    -- local letterBlockTemplate = Utils.getFirstDescendantByName(
+    --                                 letterBlockFolder, "BD_normal")
 
     -- populate matrix with letters
     local totalLetterMatrix = {}
