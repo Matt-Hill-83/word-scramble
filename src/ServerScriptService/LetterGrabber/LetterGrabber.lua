@@ -26,12 +26,12 @@ local function configWordLetters(props)
     local wordBench = Utils.getFirstDescendantByName(newWord, "WordBench")
     wordBench.Name = wordBench.Name .. "yyyy"
 
-    local spacingFactorX = 1.0
+    local spacingFactorX = 1.05
 
     local lettersInWord = {}
     for letterIndex = 1, #word do
         local letterNameStub = wordNameStub .. "-L" .. letterIndex
-        local letter = string.sub(word, letterIndex, letterIndex)
+        local char = string.sub(word, letterIndex, letterIndex)
         local newLetter = letterBlockTemplate:Clone()
 
         LetterUtils.applyStyleFromTemplate(
@@ -44,7 +44,7 @@ local function configWordLetters(props)
         LetterUtils.createPropOnLetterBlock(
             {
                 letterBlock = newLetter,
-                propName = "Found",
+                propName = "IsFound",
                 initialValue = false,
                 propType = "BoolValue"
             })
@@ -53,6 +53,14 @@ local function configWordLetters(props)
             {
                 letterBlock = newLetter,
                 propName = LetterUtils.letterBlockPropNames.CurrentStyle,
+                initialValue = "zzz",
+                propType = "StringValue"
+            })
+
+        LetterUtils.createPropOnLetterBlock(
+            {
+                letterBlock = newLetter,
+                propName = LetterUtils.letterBlockPropNames.Character,
                 initialValue = "zzz",
                 propType = "StringValue"
             })
@@ -69,8 +77,8 @@ local function configWordLetters(props)
                                     spacingFactorX
 
         CS:AddTag(newLetter, "WordPopLetter")
-        LetterUtils.applyLetterText({letterBlock = newLetter, char = letter})
-
+        LetterUtils.applyLetterText({letterBlock = newLetter, char = char})
+        newLetter.Character.Value = char
         newLetter.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                {
                 parent = letterPositioner,
@@ -92,7 +100,7 @@ local function configWordLetters(props)
         newLetter.Parent = newWord
 
         table.insert(lettersInWord,
-                     {char = letter, found = false, instance = newLetter})
+                     {char = char, found = false, instance = newLetter})
     end
 
     local wordBenchSizeX = #word * letterBlockTemplate.Size.X * spacingFactorX

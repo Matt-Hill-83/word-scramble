@@ -18,9 +18,7 @@ local function initStrays(props)
 
     local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
     local letterBlockTemplate = Utils.getFirstDescendantByName(
-                                    letterBlockFolder, "Stray_normal")
-    -- local letterBlockTemplate = Utils.getFirstDescendantByName(
-    --                                 letterBlockFolder, "BD_normal")
+                                    letterBlockFolder, "LB_2_blank")
 
     -- populate matrix with letters
     local totalLetterMatrix = {}
@@ -72,6 +70,7 @@ local function initStrays(props)
     for colIndex = 1, numCol do
         for rowIndex = 1, numRow do
             local newLetterBlock = letterBlockTemplate:Clone()
+
             newLetterBlock.Size = Vector3.new(rackLetterSize, rackLetterSize,
                                               rackLetterSize)
 
@@ -122,9 +121,16 @@ local function initStrays(props)
             LetterUtils.initLetterBlock({
                 letterBlock = newLetterBlock,
                 char = char,
-                templateName = props.activeStyle,
-                letterBlockType = "RackLetter"
+                templateName = "Stray_normal",
+                isTextLetter = true,
+                letterBlockType = "StrayLetter"
             })
+
+            -- LetterUtils.applyStyleFromTemplate(
+            --     {
+            --         targetLetterBlock = newLetterBlock,
+            --         templateName = "Stray_normal"
+            --     })
 
             local function onTouchBlock(newLetterBlock2)
                 local db = {value = false}
@@ -137,45 +143,39 @@ local function initStrays(props)
                     if not db.value then
                         db.value = true
                         local player = Utils.getPlayerFromHumanoid(humanoid)
-                        local strayLetter = newLetterBlock2.Character.Value
 
                         local tool =
                             Utils.getActiveTool(player, "LetterGrabber")
 
                         if tool then
-                            print('tool' .. ' - start');
-                            print(tool);
-                            print(tool.Word);
-
                             local letterBlocks =
                                 Utils.getByTagInParent(
                                     {parent = tool, tag = "WordPopLetter"})
 
-                            print('letterBlocks' .. ' - start');
-                            print(letterBlocks);
                             Utils.sortListByObjectKey(letterBlocks, "Name")
-                            print('letterBlocks' .. ' - start');
-                            print(letterBlocks);
 
                             local activeBlock = nil
                             for _, block in ipairs(letterBlocks) do
-                                if block.Found.Value == false then
+                                if block.IsFound.Value == false then
                                     activeBlock = block
                                     break
                                 end
                             end
 
-                            print('activeBlock' .. ' - start');
-                            print(activeBlock);
+                            local strayLetterChar =
+                                newLetterBlock2.Character.Value
+                            local activeLetterChar = activeBlock.Character.Value
 
-                            LetterUtils.applyStyleFromTemplate(
-                                {
-                                    targetLetterBlock = activeBlock,
-                                    templateName = LetterUtils.letterBlockStyleDefs
-                                        .rack.Available
-                                })
-                            -- 
+                            if strayLetterChar == activeLetterChar then
+                                LetterUtils.applyStyleFromTemplate(
+                                    {
+                                        targetLetterBlock = activeBlock,
+                                        templateName = "Grabber_found"
+                                    })
+                            end
+
                         end
+
                         props.onTouchBlock(newLetterBlock2, player)
                         db.value = false
                     end

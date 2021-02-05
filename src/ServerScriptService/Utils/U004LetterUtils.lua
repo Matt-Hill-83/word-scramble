@@ -132,10 +132,15 @@ local function initLetterBlock(props)
     local char = props.char
     local templateName = props.templateName
     local letterBlockType = props.letterBlockType
+    local isTextLetter = props.isTextLetter
 
     CS:AddTag(letterBlock, "BlockDash")
 
-    module.applyLetterImage(letterBlock, char)
+    if isTextLetter then
+        module.applyLetterText({letterBlock = letterBlock, char = char})
+    else
+        module.applyLetterImage(letterBlock, char)
+    end
 
     createPropOnLetterBlock({
         letterBlock = letterBlock,
