@@ -68,8 +68,10 @@ local function initBeltPlate(props)
     -- 
     local glassPlate = newBeltPlate.GlassPlate
     local childWeldsFront = Utils.disableEnabledWelds(glassPlate)
-    glassPlate.Size = Vector3.new(sizeX + 0.001, rackLetterSize - 1 - 0.001,
+    glassPlate.Size = Vector3.new(sizeX + 0.001, rackLetterSize - 3 - 0.001,
                                   sizeZ + 0.001)
+    -- glassPlate.Size = Vector3.new(sizeX + 0.001, rackLetterSize - 1 - 0.001,
+    --                               sizeZ + 0.001)
     glassPlate.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                             {
             parent = belt,
@@ -80,6 +82,13 @@ local function initBeltPlate(props)
                 offsetAdder = Vector3.new(0, 0, 0)
             }
         })
+
+    -- delete
+    -- delete
+    -- delete
+    -- delete
+    glassPlate.CanCollide = false
+    -- delete
     for _, weld in ipairs(childWeldsFront) do weld.Enabled = true end
     -- 
     -- 
@@ -177,6 +186,7 @@ local function initConveyors(miniGameState)
     local sidePanel = Utils.getFirstDescendantByName(conveyor, "SidePanel")
     local lockedDoor = Utils.getFirstDescendantByName(conveyor, "LockedDoor2")
     local invisiWall = Utils.getFirstDescendantByName(conveyor, "InvisiWall")
+    local glassPlate2 = Utils.getFirstDescendantByName(conveyor, "GlassPlate2")
     local mountInterface = Utils.getFirstDescendantByName(sectorFolder,
                                                           "BaseIsland")
 
@@ -277,8 +287,6 @@ local function initConveyors(miniGameState)
         mountInterface.CFrame = floor.CFrame
 
         -- First size the mount, the position the mount with the positioner
-        local offsetX = 0
-        local offsetY = 0
         mountInterface.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
                                     {
                 parent = islandPositioner,
@@ -286,9 +294,24 @@ local function initConveyors(miniGameState)
                 offsetConfig = {
                     useParentNearEdge = Vector3.new(1, -1, 1),
                     useChildNearEdge = Vector3.new(1, -1, 1),
-                    offsetAdder = Vector3.new(offsetX, offsetY, 0)
+                    offsetAdder = Vector3.new(0, 0, 0)
                 }
             })
+
+        local glassPlateWelds = Utils.disableEnabledWelds(glassPlate2)
+
+        glassPlate2.Size = Vector3.new(floor.Size.X - 12, 0.2, floor.Size.Z - 4)
+        glassPlate2.CFrame = Utils3.setCFrameFromDesiredEdgeOffset(
+                                 {
+                parent = floor,
+                child = glassPlate2,
+                offsetConfig = {
+                    useParentNearEdge = Vector3.new(0, -1, 0),
+                    useChildNearEdge = Vector3.new(0, 1, 0),
+                    offsetAdder = Vector3.new(0, rackLetterSize + 2, 0)
+                }
+            })
+        for _, weld in ipairs(glassPlateWelds) do weld.Enabled = true end
         return floor
     end
 
