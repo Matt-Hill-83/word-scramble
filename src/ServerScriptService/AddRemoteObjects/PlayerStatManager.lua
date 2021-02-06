@@ -98,9 +98,6 @@ end
 local function getGameState(player) return gameState[nameStub .. player.UserId] end
 
 local function init(player)
-    print('init------------------------------->>>>>>');
-    print('init');
-    print('init');
     -- Start running "autoSave()" function in the background
     spawn(autoSave)
 

@@ -15,7 +15,15 @@ local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
 local BlockDash = require(Sss.Source.BlockDash.BlockDash)
 local Entrance = require(Sss.Source.BlockDash.Entrance)
 local SkiSlope = require(Sss.Source.SkiSlope.SkiSlope)
--- local WordGui = require(Sss.Source.WordGui.WordGui)
+
+local RenderWordGrid = require(RS.Source.WordGui.RenderWordGrid)
+
+-- local WordGui = require(RS.Source.WordGui.WordGui)
+
+-- Create a RemoteEvent for when a player is added
+local updateWordGuiRE = Instance.new("RemoteEvent")
+updateWordGuiRE.Parent = RS
+updateWordGuiRE.Name = Const_Client.RemoteEvents.UpdateWordGuiRE
 
 local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
@@ -67,7 +75,7 @@ local function addRemoteObjects()
                                   {islandPositioners[1]} or islandPositioners
 
         Entrance.initEntrance(level)
-        -- WordGui.initWordGui({levelConfig = levelConfig})
+
         for islandIndex, islandPositioner in ipairs(myPositioners) do
             -- if islandIndex == 3 then break end
             local newIsland = islandTemplate:Clone()
@@ -102,9 +110,15 @@ local function addRemoteObjects()
     PlayerStatManager.init()
 
     islandTemplate:Destroy()
+    -- RenderWordGrid.renderGrid({sgui = mainGui, levelConfig = levelConfig})
     local updateWordGuiRE = RS:WaitForChild(
                                 Const_Client.RemoteEvents.UpdateWordGuiRE)
-    updateWordGuiRE:FireAllClients()
+
+    -- print('FireAllClients');
+    -- print('FireAllClients');
+    -- print('FireAllClients');
+    -- print('FireAllClients');
+    -- updateWordGuiRE:FireAllClients(555)
 end
 
 module.addRemoteObjects = addRemoteObjects

@@ -1,6 +1,6 @@
 local RS = game:GetService("ReplicatedStorage")
 local TextService = game:GetService("TextService")
--- local Sss = game:GetService("ServerScriptService")
+local StarterGui = game:GetService("StarterGui")
 
 local Utils = require(RS.Source.Utils.RSU001GeneralUtils)
 -- local Utils = require(Sss.Source.Utils.U001GeneralUtils)
@@ -14,9 +14,10 @@ local Utils = require(RS.Source.Utils.RSU001GeneralUtils)
 -- local dialogColors = Const2.dialogColors
 
 local module = {}
+local sgui = Utils.getFirstDescendantByName(StarterGui, "MainGui")
 
 local renderGrid = function(props)
-    local sgui = props.sgui
+    -- local sgui = props.sgui
 
     local levelConfig = props.levelConfig
     local targetWords = levelConfig.targetWords

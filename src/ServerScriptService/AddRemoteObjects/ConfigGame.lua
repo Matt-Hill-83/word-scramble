@@ -8,6 +8,7 @@ local Players = game:GetService("Players")
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 local Constants = require(Sss.Source.Constants.Constants)
+local LevelConfigs = require(Sss.Source.LevelConfigs.LevelConfigs)
 
 local module = {}
 
@@ -23,6 +24,10 @@ local function configPlayers()
     local updateWordGuiRE = Instance.new("RemoteEvent")
     updateWordGuiRE.Parent = RS
     updateWordGuiRE.Name = Const_Client.RemoteEvents.UpdateWordGuiRE
+    print('set RE');
+    print('set RE');
+    print('set RE');
+    print('set RE');
 
     local function onCharacterAdded(character)
         print('onCharacterAdded--------------------');
@@ -34,6 +39,17 @@ local function configPlayers()
         print(character.Humanoid);
         local player = Players:GetPlayerFromCharacter(character)
         print(player);
+
+        local updateWordGuiRE = RS:WaitForChild(
+                                    Const_Client.RemoteEvents.UpdateWordGuiRE)
+
+        print('FireAllClients');
+        print('FireAllClients');
+        print('FireAllClients');
+        print('FireAllClients');
+        local levelConfig = LevelConfigs.levelConfigs[1]
+
+        updateWordGuiRE:FireAllClients({levelConfig = levelConfig})
     end
 
     local function onPlayerAdded(player)
@@ -41,7 +57,7 @@ local function configPlayers()
         print(player.UserId);
         player.CharacterAdded:Connect(onCharacterAdded)
 
-        newPlayerEvent:FireAllClients()
+        -- newPlayerEvent:FireAllClients()
     end
 
     Players.PlayerAdded:Connect(onPlayerAdded)
