@@ -374,7 +374,7 @@ end
 
 local function styleLetterBlock(letterBlock, labelProps)
     local textLabels = Utils.getDescendantsByName(letterBlock, "BlockChar")
-    for i, label in ipairs(textLabels) do
+    for _, label in ipairs(textLabels) do
         Utils.mergeTables(label, labelProps)
     end
 end

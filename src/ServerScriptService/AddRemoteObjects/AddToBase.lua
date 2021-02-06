@@ -13,7 +13,7 @@ local ConfigGame = require(Sss.Source.AddRemoteObjects.ConfigGame)
 local BlockDash = require(Sss.Source.BlockDash.BlockDash)
 local Entrance = require(Sss.Source.BlockDash.Entrance)
 local SkiSlope = require(Sss.Source.SkiSlope.SkiSlope)
-local WordGui = require(Sss.Source.WordGui.WordGui)
+-- local WordGui = require(Sss.Source.WordGui.WordGui)
 
 local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
@@ -65,7 +65,7 @@ local function addRemoteObjects()
                                   {islandPositioners[1]} or islandPositioners
 
         Entrance.initEntrance(level)
-        WordGui.initWordGui({levelConfig = levelConfig})
+        -- WordGui.initWordGui({levelConfig = levelConfig})
         for islandIndex, islandPositioner in ipairs(myPositioners) do
             -- if islandIndex == 3 then break end
             local newIsland = islandTemplate:Clone()
