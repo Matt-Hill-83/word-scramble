@@ -1,6 +1,5 @@
 local RS = game:GetService("ReplicatedStorage")
 local TextService = game:GetService("TextService")
-local StarterGui = game:GetService("StarterGui")
 
 local Utils = require(RS.Source.Utils.RSU001GeneralUtils)
 -- local Utils = require(Sss.Source.Utils.U001GeneralUtils)
@@ -14,24 +13,30 @@ local Utils = require(RS.Source.Utils.RSU001GeneralUtils)
 -- local dialogColors = Const2.dialogColors
 
 local module = {}
-local sgui = Utils.getFirstDescendantByName(StarterGui, "MainGui")
+-- local sgui = Utils.getFirstDescendantByName(PlayerGui, "MainGui")
+-- local sgui = Utils.getFirstDescendantByName(PlayerGui, "MainGui")
 
 local renderGrid = function(props)
-    -- local sgui = props.sgui
-
     local levelConfig = props.levelConfig
+    local sgui = props.sgui
+    print('sgui' .. ' - start');
+    print('sgui' .. ' - start');
+    print('sgui' .. ' - start');
+    print('sgui' .. ' - start');
+    print(sgui);
     local targetWords = levelConfig.targetWords
 
-    local mainFrame = Utils.getFirstDescendantByName(sgui, "MainFrame")
+    -- character:WaitForChild("Humanoid").WalkSpeed = 80
+    local mainGui = sgui:WaitForChild("MainGui")
+    -- local mainGui = Utils.getFirstDescendantByName(sgui, "MainGui")
+    print('mainGui' .. ' - start');
+    print(mainGui);
+    local mainFrame = Utils.getFirstDescendantByName(mainGui, "MainFrame")
+    print('mainFrame' .. ' - start');
+    print(mainFrame);
 
-    mainFrame:GetPropertyChangedSignal("AbsoluteSize"):Connect(
-        function(newSize)
-            print('newSize' .. ' - start');
-            print(newSize);
-        end)
     -- Size up the mainFrame temporarily to get the viewport size
-    mainFrame.Size = UDim2.new(1, 0, 1, 0)
-    local viewPortSize = sgui.AbsoluteSize
+    local viewPortSize = mainGui.AbsoluteSize
     print('viewPortSize' .. ' - start');
     print(viewPortSize);
     local parentWidth = viewPortSize.X
@@ -40,13 +45,7 @@ local renderGrid = function(props)
 
     print('workspace.CurrentCamera.ViewportSize' .. ' - start');
     print(workspace.CurrentCamera.ViewportSize);
-    -- mainFrame.Size = UDim2.new(0.5, 0, 1, 0)
-
-    -- local player = game.Players.LocalPlayer
-
-    -- local mouse = player:GetMouse()
-    -- local x = mouse.ViewSizeX
-    -- local y = mouse.ViewSizeY
+    mainFrame.Size = UDim2.new(0.5, 0, 1, 0)
 
     local rowGap = 10
     local paddingInPx = 5
@@ -76,6 +75,8 @@ local renderGrid = function(props)
     local rowTemplate = Utils.getFirstDescendantByName(sgui, "RowTemplate")
 
     for wordIndex, word in ipairs(targetWords) do
+        print('wordIndex' .. ' - start');
+        print(wordIndex);
         local newRow = rowTemplate:Clone()
         newRow.Parent = rowTemplate.Parent
         newRow.Name = rowTemplate.Name .. "--row--ooo--" .. wordIndex
