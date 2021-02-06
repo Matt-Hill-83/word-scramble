@@ -1,7 +1,8 @@
 local module = {}
 
 module.RemoteEvents = {
-    NewPlayerEvent = "NewPlayerEvent" --
+    NewPlayerEvent = "NewPlayerEvent", --
+    UpdateWordGuiRE = "UpdateWordGuiRE" --
 }
 
 return module

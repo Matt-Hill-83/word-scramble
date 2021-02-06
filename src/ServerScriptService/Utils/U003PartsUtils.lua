@@ -1,7 +1,5 @@
 local TweenService = game:GetService("TweenService")
-local Sss = game:GetService("ServerScriptService")
 
-local Constants = require(Sss.Source.Constants.Constants)
 local module = {}
 
 function tween(props)
@@ -27,11 +25,6 @@ function tween(props)
     return tween
 end
 
--- function getPartFarEdge(props)
---     local part = props.part
---     return part.Position + (part.Size / 2) * props.alignToParentFarEdge
--- end
-
 function setCFrameFromDesiredEdgeOffset(props)
     local parent = props.parent
     local child = props.child
@@ -55,7 +48,6 @@ function setCFrameFromDesiredEdgeOffset(props)
     return parent.CFrame:ToWorldSpace(newCFrame)
 end
 
--- module.getPartFarEdge = getPartFarEdge
 module.setCFrameFromDesiredEdgeOffset = setCFrameFromDesiredEdgeOffset
 module.tween = tween
 return module

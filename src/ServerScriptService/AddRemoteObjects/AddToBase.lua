@@ -2,7 +2,7 @@ local module = {}
 local Sss = game:GetService("ServerScriptService")
 -- local CS = game:GetService("CollectionService")
 local RS = game:GetService("ReplicatedStorage")
-local Constants_Client = require(RS.Source.Constants.Constants_Client)
+local Const_Client = require(RS.Source.Constants.Constants_Client)
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 -- local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
@@ -17,8 +17,6 @@ local Entrance = require(Sss.Source.BlockDash.Entrance)
 local SkiSlope = require(Sss.Source.SkiSlope.SkiSlope)
 -- local WordGui = require(Sss.Source.WordGui.WordGui)
 
-print('Constants_Client' .. ' - start');
-print(Constants_Client);
 local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
@@ -104,8 +102,9 @@ local function addRemoteObjects()
     PlayerStatManager.init()
 
     islandTemplate:Destroy()
-    -- local updateWordGuiRE = RS:WaitForChild("UpdateWordGuiRE")
-    -- updateWordGuiRE
+    local updateWordGuiRE = RS:WaitForChild(
+                                Const_Client.RemoteEvents.UpdateWordGuiRE)
+    updateWordGuiRE:FireAllClients()
 end
 
 module.addRemoteObjects = addRemoteObjects

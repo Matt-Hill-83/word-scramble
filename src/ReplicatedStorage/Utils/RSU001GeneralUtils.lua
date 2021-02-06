@@ -1,9 +1,9 @@
-local Sss = game:GetService("ServerScriptService")
+-- local Sss = game:GetService("ServerScriptService")
 local CS = game:GetService("CollectionService")
 local Players = game:GetService("Players")
 local HttpService = game:GetService("HttpService")
 
-local Const4 = require(Sss.Source.Constants.Const_04_Characters)
+-- local Const4 = require(Sss.Source.Constants.Const_04_Characters)
 local module = {}
 
 local getInstancesByNameStub = function(props)
@@ -107,27 +107,27 @@ local function sortListByObjectKey(list, keyName)
     end)
 end
 
-function applyDecalsToCharacterFromWord(props)
-    local part = props.part
-    local word = props.word
+-- function applyDecalsToCharacterFromWord(props)
+--     local part = props.part
+--     local word = props.word
 
-    local found = false
+--     local found = false
 
-    if Const4.wordConfigs[word] then
-        local imageId = Const4.wordConfigs[word]['imageId']
-        if imageId then
-            local decalUri = 'rbxassetid://' .. imageId
-            local decalFront = getFirstDescendantByName(part,
-                                                        "CharacterDecalFront")
-            local decalBack = getFirstDescendantByName(part,
-                                                       "CharacterDecalBack")
-            decalFront.Image = decalUri
-            decalBack.Image = decalUri
-            found = true
-        end
-    end
-    return found
-end
+--     if Const4.wordConfigs[word] then
+--         local imageId = Const4.wordConfigs[word]['imageId']
+--         if imageId then
+--             local decalUri = 'rbxassetid://' .. imageId
+--             local decalFront = getFirstDescendantByName(part,
+--                                                         "CharacterDecalFront")
+--             local decalBack = getFirstDescendantByName(part,
+--                                                        "CharacterDecalBack")
+--             decalFront.Image = decalUri
+--             decalBack.Image = decalUri
+--             found = true
+--         end
+--     end
+--     return found
+-- end
 
 function applyLabelsToCharacter(props)
     local part = props.part
@@ -647,7 +647,7 @@ module.sortListByObjectKey = sortListByObjectKey
 module.tablelength = tablelength
 module.tableToString = tableToString
 module.getActiveTool = getActiveTool
-module.applyDecalsToCharacterFromWord = applyDecalsToCharacterFromWord
+-- module.applyDecalsToCharacterFromWord = applyDecalsToCharacterFromWord
 module.applyDecalsToCharacterFromConfigName =
     applyDecalsToCharacterFromConfigName
 

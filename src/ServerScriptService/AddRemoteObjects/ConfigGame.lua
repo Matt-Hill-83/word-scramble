@@ -14,11 +14,15 @@ local module = {}
 local function configPlayers()
     Players.RespawnTime = 0
 
+    -- Create a RemoteEvent for when a player is added
     local newPlayerEvent = Instance.new("RemoteEvent")
     newPlayerEvent.Parent = RS
-    -- newPlayerEvent.Parent = game.ReplicatedStorage
-    -- newPlayerEvent.Name = "NewPlayerEvent"
     newPlayerEvent.Name = Const_Client.RemoteEvents.NewPlayerEvent
+
+    -- Create a RemoteEvent for when a player is added
+    local updateWordGuiRE = Instance.new("RemoteEvent")
+    updateWordGuiRE.Parent = RS
+    updateWordGuiRE.Name = Const_Client.RemoteEvents.UpdateWordGuiRE
 
     local function onCharacterAdded(character)
         print('onCharacterAdded--------------------');
