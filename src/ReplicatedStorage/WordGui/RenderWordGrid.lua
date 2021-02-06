@@ -8,6 +8,17 @@ local Utils = require(RS.Source.Utils.RSU001GeneralUtils)
 -- keep this
 -- local LetterUtils = require(Sss.Source.Utils.U004LetterUtils)
 
+local function applyLetterText(newImageLabel)
+
+    -- if not char then return end
+    local textLabels = Utils.getDescendantsByName(newImageLabel, "BlockChar")
+    print('textLabels' .. ' - start');
+    print(textLabels);
+    if textLabels then
+        for i, label in ipairs(textLabels) do label.Text = char end
+    end
+end
+
 local module = {}
 
 local renderGrid = function(props)
@@ -75,7 +86,6 @@ local renderGrid = function(props)
                                                                   "BlockChar")
         local dummyBlock = Instance.new("Part")
 
-        local width = 100
         for letterIndex = 1, #word do
             local letterNameStub = word .. "-L" .. letterIndex
             local char = string.sub(word, letterIndex, letterIndex)
@@ -84,19 +94,10 @@ local renderGrid = function(props)
             newImageLabel.Parent = dummyBlock
 
             newImageLabel.Name = "wordLetter-" .. letterNameStub
-            newImageLabel.Size = UDim2.new(0.5, 0, 0.5, 0)
-            -- newImageLabel.Size = UDim2.new(1, 0, 0, height + 2 * paddingInPx)
-            -- local absoluteHeight = newImageLabel.AbsoluteSize.Y
-            newImageLabel.Position = UDim2.new(0, (letterIndex - 1) * width, 0,
-                                               0)
-
-            -- local letterPositionZ = newLetter.Size.Z * (letterIndex - 2) *
-            --                             spacingFactorZ
-
-            -- keepp this
-            -- keepp this
-            -- keepp this
-            -- LetterUtils.applyLetterText({letterBlock = dummyBlock, char = char})
+            newImageLabel.Size = UDim2.new(0, rowHeight, 0, rowHeight)
+            newImageLabel.Position = UDim2.new(0, (letterIndex - 1) * rowHeight,
+                                               0, 0)
+            newImageLabel.Text = char
 
             -- Do this last to avoid tweening
             newImageLabel.Parent = newRow
@@ -105,43 +106,6 @@ local renderGrid = function(props)
         imageLabelTemplate:Destroy()
         dummyBlock:Destroy()
 
-        -- if (dialogText ~= "blank") then
-
-        -- local font = Enum.Font.Arial
-        -- local innerLabelWidth = parentWidth - (2 * paddingInPx) -
-        --                             scrollBarThickness
-
-        -- local calcSize = TextService:GetTextSize(text, fontHeight, font,
-        --                                          Vector2.new(
-        --                                              innerLabelWidth,
-        --                                              parentHeight))
-
-        -- local height = calcSize.Y
-
-        -- local outerLabel = Instance.new("TextLabel", scrollingFrame)
-        -- local outerLabelProps = {
-        --     Name = "Dialog-" .. i,
-        --     Position = UDim2.new(0, 0, 0, dialogY),
-        --     Size = UDim2.new(1, 0, 0, height + 2 * paddingInPx),
-
-        --     Text = "",
-        --     Font = font,
-        --     TextSize = fontHeight,
-        --     TextWrapped = true,
-        --     -- TextScaled = true,
-        --     TextXAlignment = Enum.TextXAlignment.Left,
-        --     TextYAlignment = Enum.TextYAlignment.Top,
-        --     BorderColor3 = Color3.fromRGB(99, 46, 99),
-        --     BorderSizePixel = 2,
-        --     BackgroundColor3 = backgroundColor,
-        --     TextColor3 = Color3.new(0, 0, 0),
-        --     ZIndex = 1
-        -- }
-        -- Utils.mergeTables(outerLabel, outerLabelProps)
-
-        -- local absoluteHeight = newImageLabel.AbsoluteSize.Y
-        -- dialogY = dialogY + (absoluteHeight + rowGap)
-        -- end
     end
     rowTemplate:Destroy()
 end
