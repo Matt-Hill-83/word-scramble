@@ -1,5 +1,7 @@
 local Sss = game:GetService("ServerScriptService")
 local CS = game:GetService("CollectionService")
+local RS = game:GetService("ReplicatedStorage")
+
 local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
 
@@ -12,9 +14,10 @@ local function configPlayers()
     Players.RespawnTime = 0
 
     local newPlayerEvent = Instance.new("RemoteEvent")
-    newPlayerEvent.Parent = game.ReplicatedStorage
-    -- newPlayerEvent.Name = "NewPlayer"
+    newPlayerEvent.Parent = RS
+    -- newPlayerEvent.Parent = game.ReplicatedStorage
     newPlayerEvent.Name = "NewPlayerEvent"
+    newPlayerEvent.Name = Constants.RemoteEvents.NewPlayerEvent
 
     local function onCharacterAdded(character)
         print('onCharacterAdded--------------------');
@@ -38,11 +41,6 @@ local function configPlayers()
 
     Players.PlayerAdded:Connect(onPlayerAdded)
     Players.PlayerRemoving:Connect(function(player) end);
-
-    -- local function onPlayerAdded(player) newPlayerEvent:FireAllClients() end
-
-    -- Players.PlayerAdded:Connect(onPlayerAdded)
-
 end
 
 local function configGamePass()

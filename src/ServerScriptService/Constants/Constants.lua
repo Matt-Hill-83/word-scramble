@@ -33,7 +33,10 @@ local module = {
     gameConfig = gameConfig, --
     walkSpeed = gameConfig.walkSpeed, --
     gameData = {letterGrabbers = {}}
+}
 
+module.RemoteEvents = {
+    NewPlayerEvent = "NewPlayerEvent" --
 }
 
 return module

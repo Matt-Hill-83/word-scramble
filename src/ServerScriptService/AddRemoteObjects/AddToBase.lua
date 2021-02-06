@@ -2,6 +2,7 @@ local module = {}
 local Sss = game:GetService("ServerScriptService")
 -- local CS = game:GetService("CollectionService")
 local RS = game:GetService("ReplicatedStorage")
+local Constants_Client = require(RS.Source.Constants.Constants_Client)
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
 -- local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
@@ -16,6 +17,8 @@ local Entrance = require(Sss.Source.BlockDash.Entrance)
 local SkiSlope = require(Sss.Source.SkiSlope.SkiSlope)
 -- local WordGui = require(Sss.Source.WordGui.WordGui)
 
+print('Constants_Client' .. ' - start');
+print(Constants_Client);
 local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
