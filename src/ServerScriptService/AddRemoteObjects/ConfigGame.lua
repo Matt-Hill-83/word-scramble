@@ -11,6 +11,11 @@ local module = {}
 local function configPlayers()
     Players.RespawnTime = 0
 
+    local newPlayerEvent = Instance.new("RemoteEvent")
+    newPlayerEvent.Parent = game.ReplicatedStorage
+    -- newPlayerEvent.Name = "NewPlayer"
+    newPlayerEvent.Name = "NewPlayerEvent"
+
     local function onCharacterAdded(character)
         print('onCharacterAdded--------------------');
         character:WaitForChild("Humanoid").WalkSpeed =
@@ -27,10 +32,16 @@ local function configPlayers()
         print('onPlayerAdded');
         print(player.UserId);
         player.CharacterAdded:Connect(onCharacterAdded)
+
+        newPlayerEvent:FireAllClients()
     end
 
     Players.PlayerAdded:Connect(onPlayerAdded)
     Players.PlayerRemoving:Connect(function(player) end);
+
+    -- local function onPlayerAdded(player) newPlayerEvent:FireAllClients() end
+
+    -- Players.PlayerAdded:Connect(onPlayerAdded)
 
 end
 
