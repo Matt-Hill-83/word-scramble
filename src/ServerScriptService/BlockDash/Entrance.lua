@@ -49,10 +49,8 @@ function module.initEntrance(parent)
     local function onTouchRun30(otherPart)
         local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
         if humanoid then
-            if humanoid then
-                if humanoid.WalkSpeed == 30 then return end
-                humanoid.WalkSpeed = 30
-            end
+            if humanoid.WalkSpeed == 30 then return end
+            humanoid.WalkSpeed = 30
         end
     end
 

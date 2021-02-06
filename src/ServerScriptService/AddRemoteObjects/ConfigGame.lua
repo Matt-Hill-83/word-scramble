@@ -214,9 +214,6 @@ end
 
 function module.configGame()
     print('configGame');
-    print('configGame');
-    print('configGame');
-    print('configGame');
     setVisibility()
     configPlayers()
     configGamePass()

@@ -8,8 +8,8 @@ local InitLetterRack = require(Sss.Source.BlockDash.InitLetterRackBD)
 local InitWord = require(Sss.Source.BlockDash.InitWordBD)
 local Entrance = require(Sss.Source.BlockDash.Entrance)
 local HandleClick = require(Sss.Source.BlockDash.HandleClick)
-local LetterGrabber = require(Sss.Source.LetterGrabber.LetterGrabber)
-local DoorKey = require(Sss.Source.BlockDash.DoorKey)
+-- local LetterGrabber = require(Sss.Source.LetterGrabber.LetterGrabber)
+-- local DoorKey = require(Sss.Source.BlockDash.DoorKey)
 local Conveyor = require(Sss.Source.Conveyor.Conveyor)
 
 local module = {}
