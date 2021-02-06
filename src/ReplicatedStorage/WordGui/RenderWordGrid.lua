@@ -1,12 +1,17 @@
+local RS = game:GetService("ReplicatedStorage")
 local TextService = game:GetService("TextService")
-local Sss = game:GetService("ServerScriptService")
+-- local Sss = game:GetService("ServerScriptService")
 
-local Utils = require(Sss.Source.Utils.U001GeneralUtils)
-local Const2 = require(Sss.Source.Constants.Const_02_Colors)
-local Const4 = require(Sss.Source.Constants.Const_04_Characters)
+local Utils = require(RS.Source.Utils.RSU001GeneralUtils)
+-- local Utils = require(Sss.Source.Utils.U001GeneralUtils)
+-- local Const2 = require(Sss.Source.Constants.Const_02_Colors)
+-- local Const4 = require(Sss.Source.Constants.Const_04_Characters)
 
-local LetterUtils = require(Sss.Source.Utils.U004LetterUtils)
-local dialogColors = Const2.dialogColors
+-- keep this
+-- keep this
+-- keep this
+-- local LetterUtils = require(Sss.Source.Utils.U004LetterUtils)
+-- local dialogColors = Const2.dialogColors
 
 local module = {}
 
@@ -101,7 +106,10 @@ local renderGrid = function(props)
             -- local letterPositionZ = newLetter.Size.Z * (letterIndex - 2) *
             --                             spacingFactorZ
 
-            LetterUtils.applyLetterText({letterBlock = dummyBlock, char = char})
+            -- keepp this
+            -- keepp this
+            -- keepp this
+            -- LetterUtils.applyLetterText({letterBlock = dummyBlock, char = char})
 
             -- Do this last to avoid tweening
             newImageLabel.Parent = newRow

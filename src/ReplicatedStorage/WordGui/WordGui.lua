@@ -1,8 +1,7 @@
-local Sss = game:GetService("ServerScriptService")
 local RS = game:GetService("ReplicatedStorage")
 local starterGui = game:GetService("StarterGui")
 
-local RenderWordGrid = script.Parent.RenderWordGrid
+local RenderWordGrid = require(RS.Source.WordGui.RenderWordGrid)
 local Utils = require(RS.Source.Utils.RSU001GeneralUtils)
 
 -- local RenderWordGrid = require(Sss.Source.WordGui.RenderWordGrid)
