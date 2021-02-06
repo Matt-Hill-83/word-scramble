@@ -6,10 +6,14 @@ print('client script');
 print('client script');
 print('client script');
 local Players = game:GetService("Players")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RS = game:GetService("ReplicatedStorage")
+local Constants_Client = require(RS.Source.Constants.Constants_Client)
 
+print('Constants_Client' .. ' - start');
+print(Constants_Client);
 local player = Players.LocalPlayer
-local newPlayerEvent = ReplicatedStorage:WaitForChild("NewPlayerEvent")
+local newPlayerEvent = RS:WaitForChild(Constants_Client.RemoteEvents
+                                           .NewPlayerEvent)
 local playerGui = player:WaitForChild("PlayerGui")
 
 local welcomeScreen = Instance.new("ScreenGui")

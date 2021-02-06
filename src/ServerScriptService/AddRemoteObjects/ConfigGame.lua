@@ -1,6 +1,7 @@
 local Sss = game:GetService("ServerScriptService")
 local CS = game:GetService("CollectionService")
 local RS = game:GetService("ReplicatedStorage")
+local Const_Client = require(RS.Source.Constants.Constants_Client)
 
 local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
@@ -16,8 +17,8 @@ local function configPlayers()
     local newPlayerEvent = Instance.new("RemoteEvent")
     newPlayerEvent.Parent = RS
     -- newPlayerEvent.Parent = game.ReplicatedStorage
-    newPlayerEvent.Name = "NewPlayerEvent"
-    newPlayerEvent.Name = Constants.RemoteEvents.NewPlayerEvent
+    -- newPlayerEvent.Name = "NewPlayerEvent"
+    newPlayerEvent.Name = Const_Client.RemoteEvents.NewPlayerEvent
 
     local function onCharacterAdded(character)
         print('onCharacterAdded--------------------');

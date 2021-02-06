@@ -35,8 +35,4 @@ local module = {
     gameData = {letterGrabbers = {}}
 }
 
-module.RemoteEvents = {
-    NewPlayerEvent = "NewPlayerEvent" --
-}
-
 return module
