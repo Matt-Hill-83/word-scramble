@@ -608,16 +608,24 @@ end
 
 function mergeTables(t1, t2) for k, v in pairs(t2) do t1[k] = v end end
 
-addPadding = function(props)
+local function addPadding(props)
     local parent = props.parent
-    local paddingPct = props.paddingPct
+    local padding = props.padding
+    local inPx = props.inPx
 
-    local UIPadding = Instance.new("UIPadding", parent)
+    local uIPadding = Instance.new("UIPadding", parent)
 
-    UIPadding.PaddingBottom = UDim.new(paddingPct, 0)
-    UIPadding.PaddingTop = UDim.new(paddingPct, 0)
-    UIPadding.PaddingLeft = UDim.new(paddingPct, 0)
-    UIPadding.PaddingRight = UDim.new(paddingPct, 0)
+    if inPx then
+        uIPadding.PaddingBottom = UDim.new(0, padding)
+        uIPadding.PaddingTop = UDim.new(0, padding)
+        uIPadding.PaddingLeft = UDim.new(0, padding)
+        uIPadding.PaddingRight = UDim.new(0, padding)
+    else
+        uIPadding.PaddingBottom = UDim.new(padding, 0)
+        uIPadding.PaddingTop = UDim.new(padding, 0)
+        uIPadding.PaddingLeft = UDim.new(padding, 0)
+        uIPadding.PaddingRight = UDim.new(padding, 0)
+    end
 end
 
 module.addcfv3 = addcfv3

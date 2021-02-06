@@ -3,22 +3,6 @@ local TextService = game:GetService("TextService")
 
 local Utils = require(RS.Source.Utils.RSU001GeneralUtils)
 
--- keep this
--- keep this
--- keep this
--- local LetterUtils = require(Sss.Source.Utils.U004LetterUtils)
-
-local function applyLetterText(newImageLabel)
-
-    -- if not char then return end
-    local textLabels = Utils.getDescendantsByName(newImageLabel, "BlockChar")
-    print('textLabels' .. ' - start');
-    print(textLabels);
-    if textLabels then
-        for i, label in ipairs(textLabels) do label.Text = char end
-    end
-end
-
 local module = {}
 
 local renderGrid = function(props)
@@ -38,30 +22,28 @@ local renderGrid = function(props)
 
     local parentWidth = viewPortSize.X
     local parentHeight = viewPortSize.Y
-    local rowHeight = parentHeight / 10
+    local rowHeight = parentHeight / 20
 
     mainFrame.Size = UDim2.new(0.5, 0, 1, 0)
 
     local rowGap = 10
-    local paddingInPx = 5
+    local paddingInPx = 10
     local fontHeight = 55
     fontHeight = math.floor(fontHeight)
 
     local scrollingFrame = Utils.getFirstDescendantByName(sgui, "WordScroller")
-    local dialogScrollerPadding = Utils.getFirstDescendantByName(scrollingFrame,
-                                                                 "DialogScrollerPadding")
 
     local scrollBarThickness = 30
     scrollingFrame.ScrollBarThickness = scrollBarThickness
     -- scrollingFrame.CanvasSize = UDim2.new(0, 0, 20, 0)
-    scrollingFrame.Size = UDim2.new(1, 0, 3, 0)
+    scrollingFrame.Size = UDim2.new(1, 0, 0.8, 0)
+    scrollingFrame.Position = UDim2.new(0, 0, 0, 0)
 
-    local padding = 24
-    dialogScrollerPadding.PaddingBottom = UDim.new(0, padding)
-    dialogScrollerPadding.PaddingTop = UDim.new(0, padding)
-    dialogScrollerPadding.PaddingLeft = UDim.new(0, padding)
-    dialogScrollerPadding.PaddingRight =
-        UDim.new(0, scrollBarThickness + fontHeight)
+    Utils.addPadding({
+        parent = scrollingFrame,
+        padding = paddingInPx,
+        inPx = true
+    })
 
     -- local children = scrollingFrame:GetChildren()
     -- for i, item in pairs(children) do
@@ -71,8 +53,6 @@ local renderGrid = function(props)
     local rowTemplate = Utils.getFirstDescendantByName(sgui, "RowTemplate")
 
     for wordIndex, word in ipairs(targetWords) do
-        print('wordIndex' .. ' - start');
-        print(wordIndex);
         local newRow = rowTemplate:Clone()
         newRow.Parent = rowTemplate.Parent
         newRow.Name = rowTemplate.Name .. "--row--ooo--" .. wordIndex
@@ -84,27 +64,30 @@ local renderGrid = function(props)
 
         local imageLabelTemplate = Utils.getFirstDescendantByName(newRow,
                                                                   "BlockChar")
-        local dummyBlock = Instance.new("Part")
 
         for letterIndex = 1, #word do
             local letterNameStub = word .. "-L" .. letterIndex
             local char = string.sub(word, letterIndex, letterIndex)
+            local letterWidth = rowHeight
+            local letterHeight = rowHeight
+            local letterOffsetX = letterWidth / 20
+            local borderSizePixel = letterWidth / 10
 
             local newImageLabel = imageLabelTemplate:Clone()
-            newImageLabel.Parent = dummyBlock
 
             newImageLabel.Name = "wordLetter-" .. letterNameStub
             newImageLabel.Size = UDim2.new(0, rowHeight, 0, rowHeight)
-            newImageLabel.Position = UDim2.new(0, (letterIndex - 1) * rowHeight,
+            newImageLabel.Position = UDim2.new(0, (letterIndex - 1) *
+                                                   (letterWidth + letterOffsetX),
                                                0, 0)
             newImageLabel.Text = char
+            newImageLabel.BorderSizePixel = borderSizePixel
 
             -- Do this last to avoid tweening
             newImageLabel.Parent = newRow
 
         end
         imageLabelTemplate:Destroy()
-        dummyBlock:Destroy()
 
     end
     rowTemplate:Destroy()
