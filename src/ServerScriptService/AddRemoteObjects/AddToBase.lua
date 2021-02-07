@@ -62,7 +62,7 @@ local function addRemoteObjects()
 
     for levelIndex, level in ipairs(levels) do
 
-        if levelIndex == 2 then break end
+        -- if levelIndex == 2 then break end
 
         local islandPositioners = Utils.getByTagInParent(
                                       {parent = level, tag = "IslandPositioner"})
