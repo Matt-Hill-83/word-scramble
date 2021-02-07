@@ -72,7 +72,7 @@ local sector2Config = {
     }
 }
 
-module.config = sector2Config
+module.sectorConfigs = sector2Config
 -- module.sectorConfig = sectorConfigs
 
 return module
