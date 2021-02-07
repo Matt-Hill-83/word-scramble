@@ -18,7 +18,7 @@ local module = {
 }
 
 module.letterBlockStyleNames = {
-    LBPinkPurple = "LBPinkPurple",
+    -- LBPinkPurple = "LBPinkPurple",
     LBPurpleOrange = "LBPurpleOrange",
     LBPurpleLight = "LBPurpleLight",
     LBPurpleLight2 = "LBPurpleLight2",
@@ -33,8 +33,7 @@ module.letterBlockStyleDefs = {
         Found = module.letterBlockStyleNames.LBPurpleOrange,
         DeadLetter = module.letterBlockStyleNames.LBDeadLetter,
         -- 
-        FoundBD = module.letterBlockStyleNames.LBPurpleOrange,
-        AvailableBD = "BD_available"
+        FoundBD = module.letterBlockStyleNames.LBPurpleOrange
     },
     word = {
         Placeholder = module.letterBlockStyleNames.LBPurpleLight,
@@ -355,6 +354,11 @@ function setStyleToDeadLetter(letterBlock)
 end
 
 function styleLetterBlocks(props)
+    print('styleLetterBlocks');
+    print('styleLetterBlocks');
+    print('styleLetterBlocks');
+    print('styleLetterBlocks');
+    print('styleLetterBlocks');
     local miniGameState = props.miniGameState
     local availWords = props.availWords
     local letterFallFolder = miniGameState.letterFallFolder

@@ -50,7 +50,8 @@ local function addBlockDash(sectorConfig)
     local numBelts = totalCol / numBlocksPerBeltPlate
 
     local miniGameState = {
-        activeStyle = "BD_available",
+        activeStyle = "BD_PinkPurple",
+        -- activeStyle = "BD_available",
         activeWord = nil,
         activeWordIndex = 1,
         availLetters = {},
@@ -62,7 +63,8 @@ local function addBlockDash(sectorConfig)
         conveyorPadding = 1,
         currentLetterIndex = 1,
         foundLetters = {},
-        inActiveStyle = "BD_normal", -- Rack starts with this one:
+        inActiveStyle = "BD_available", -- Rack starts with this one:
+        -- inActiveStyle = "BD_normal", -- Rack starts with this one:
         initCompleted = false,
         islandPositioner = islandPositioner,
         sectorConfig = sectorConfig,

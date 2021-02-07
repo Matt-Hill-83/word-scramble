@@ -24,8 +24,7 @@ local function initLetterRack(miniGameState)
 
     local letterBlockFolder = Utils.getFromTemplates("LetterBlockTemplates")
     local letterBlockTemplate = Utils.getFirstDescendantByName(
-                                    letterBlockFolder,
-                                    miniGameState.inActiveStyle)
+                                    letterBlockFolder, "BD_8_blank")
 
     local conveyor = Utils.getFirstDescendantByName(sectorFolder, "Conveyor")
     local beltPlates = Utils.getDescendantsByName(conveyor, "NewBeltPlate")
@@ -142,7 +141,8 @@ local function initLetterRack(miniGameState)
                         letterBlock = newLetterBlock,
                         char = char,
                         templateName = miniGameState.activeStyle,
-                        letterBlockType = "RackLetter"
+                        letterBlockType = "RackLetter",
+                        isTextLetter = true
                     })
 
                 local function onTouchBlock(newLetterBlock, miniGameState)

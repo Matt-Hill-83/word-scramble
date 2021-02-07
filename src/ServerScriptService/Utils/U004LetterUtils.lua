@@ -19,7 +19,7 @@ local module = {
 }
 
 module.letterBlockStyleNames = {
-    LBPinkPurple = "LBPinkPurple",
+    -- LBPinkPurple = "LBPinkPurple",
     LBPurpleOrange = "LBPurpleOrange",
     LBPurpleLight = "LBPurpleLight",
     LBPurpleLight2 = "LBPurpleLight2",
@@ -191,6 +191,10 @@ local function initLetterBlock(props)
 end
 
 local function applyLetterImage(letterBlock, char)
+    print('applyLetterImage');
+    print('applyLetterImage');
+    print('applyLetterImage');
+    print('applyLetterImage');
     local imageId = Const3.alphabet[char]['decalId']
     local imageUri = 'rbxassetid://' .. imageId
 
@@ -221,7 +225,7 @@ local function liftLetter(letterBlock, liftUp)
                                                     liftDistance, 0)
             letterBlock.IsLifted.Value = true
             letterBlock.CanCollide = false
-            letterBlock.Sparkles.Enabled = true
+            -- letterBlock.Sparkles.Enabled = true
 
         end
     else
@@ -231,7 +235,7 @@ local function liftLetter(letterBlock, liftUp)
                                                     liftDistance, 0)
             letterBlock.IsLifted.Value = false
             letterBlock.CanCollide = true
-            letterBlock.Sparkles.Enabled = false
+            -- letterBlock.Sparkles.Enabled = false
         end
     end
     letterBlock.WeldConstraintRackBlock.Enabled = true
@@ -421,10 +425,15 @@ local function styleLetterBlocksBD(props)
             templateName = miniGameState.inActiveStyle
         end
 
-        module.applyStyleFromTemplateBD({
+        module.applyStyleFromTemplate({
             targetLetterBlock = letterBlock,
             templateName = templateName
         })
+
+        -- module.applyStyleFromTemplateBD({
+        --     targetLetterBlock = letterBlock,
+        --     templateName = templateName
+        -- })
     end
 
 end
