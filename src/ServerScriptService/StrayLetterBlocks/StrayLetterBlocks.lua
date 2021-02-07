@@ -161,10 +161,6 @@ local function initStrays(props)
                                 Utils5.getActiveLetterGrabberBlock(tool)
                             if not newActiveBlock then
                                 print('you spelled a word!');
-                                print('you spelled a word!');
-                                print('you spelled a word!');
-                                print('you spelled a word!');
-                                print('you spelled a word!');
                             end
                         end
 

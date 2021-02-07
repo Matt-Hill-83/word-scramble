@@ -354,11 +354,6 @@ function setStyleToDeadLetter(letterBlock)
 end
 
 function styleLetterBlocks(props)
-    print('styleLetterBlocks');
-    print('styleLetterBlocks');
-    print('styleLetterBlocks');
-    print('styleLetterBlocks');
-    print('styleLetterBlocks');
     local miniGameState = props.miniGameState
     local availWords = props.availWords
     local letterFallFolder = miniGameState.letterFallFolder
@@ -431,14 +426,12 @@ function styleLetterBlocksBD(props)
                     {
                         targetLetterBlock = letterBlock,
                         templateName = miniGameState.activeStyle
-                        -- templateName = "BD_available"
                     })
             else
                 module.applyStyleFromTemplate(
                     {
                         targetLetterBlock = letterBlock,
                         templateName = miniGameState.inActiveStyle
-                        -- templateName = "BD_not_available"
                     })
             end
         end
