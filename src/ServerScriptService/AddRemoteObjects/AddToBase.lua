@@ -1,11 +1,9 @@
 local module = {}
 local Sss = game:GetService("ServerScriptService")
--- local CS = game:GetService("CollectionService")
 local RS = game:GetService("ReplicatedStorage")
 local Const_Client = require(RS.Source.Constants.Constants_Client)
 
 local Utils = require(Sss.Source.Utils.U001GeneralUtils)
--- local Utils3 = require(Sss.Source.Utils.U003PartsUtils)
 local Constants = require(Sss.Source.Constants.Constants)
 local LevelConfigs = require(Sss.Source.LevelConfigs.LevelConfigs)
 local initStatues = require(Sss.Source.WordWheelIsland.InitStatues)
@@ -18,8 +16,6 @@ local SkiSlope = require(Sss.Source.SkiSlope.SkiSlope)
 
 local RenderWordGrid = require(RS.Source.WordGui.RenderWordGrid)
 
--- local WordGui = require(RS.Source.WordGui.WordGui)
-
 -- Create a RemoteEvent for when a player is added
 local updateWordGuiRE = Instance.new("RemoteEvent")
 updateWordGuiRE.Parent = RS
@@ -28,7 +24,6 @@ updateWordGuiRE.Name = Const_Client.RemoteEvents.UpdateWordGuiRE
 local function addRemoteObjects()
     local myStuff = workspace:FindFirstChild("MyStuff")
 
-    -- if Constants.gameConfig.showWWI then
     local statueProps = {
         statusDefs = {
             {sentence = {"OK", "MOM"}, character = "raven"}, {
