@@ -24,19 +24,28 @@ local renderGrid = function(props)
     local parentHeight = viewPortSize.Y
     local rowHeight = parentHeight / 20
 
-    mainFrame.Size = UDim2.new(0.5, 0, 1, 0)
-
-    local rowGap = 10
     local paddingInPx = 10
-    local fontHeight = 55
-    fontHeight = math.floor(fontHeight)
+    local rowGap = rowHeight * 0.02
+
+    local letterWidth = rowHeight
+    local letterHeight = rowHeight
+    local letterOffsetX = letterWidth / 20
+    local leteterBorderSizePixel = letterWidth / 10
+
+    local lettersInWord = 3
+    local scrollBarThickness = 30
+
+    local rowWidth = (lettersInWord + 2) * letterWidth + scrollBarThickness
+    local guiWidth = (lettersInWord + 2) * letterWidth
+    local guiWidth = (lettersInWord + 2) * letterWidth
+
+    mainFrame.Size = UDim2.new(0.5, 0, 0, guiWidth)
 
     local scrollingFrame = Utils.getFirstDescendantByName(sgui, "WordScroller")
 
-    local scrollBarThickness = 30
     scrollingFrame.ScrollBarThickness = scrollBarThickness
     -- scrollingFrame.CanvasSize = UDim2.new(0, 0, 20, 0)
-    scrollingFrame.Size = UDim2.new(1, 0, 0.8, 0)
+    scrollingFrame.Size = UDim2.new(0, rowWidth, 1, 0)
     scrollingFrame.Position = UDim2.new(0, 0, 0, 0)
 
     Utils.addPadding({
@@ -56,10 +65,9 @@ local renderGrid = function(props)
         local newRow = rowTemplate:Clone()
         newRow.Parent = rowTemplate.Parent
         newRow.Name = rowTemplate.Name .. "--row--ooo--" .. wordIndex
-
         newRow.Size = UDim2.new(1, 0, 0, rowHeight)
 
-        local rowOffsetY = (wordIndex - 1) * (rowHeight + 2 * paddingInPx)
+        local rowOffsetY = (wordIndex - 1) * (rowHeight + paddingInPx)
         newRow.Position = UDim2.new(0, 0, 0, rowOffsetY)
 
         local imageLabelTemplate = Utils.getFirstDescendantByName(newRow,
@@ -68,10 +76,6 @@ local renderGrid = function(props)
         for letterIndex = 1, #word do
             local letterNameStub = word .. "-L" .. letterIndex
             local char = string.sub(word, letterIndex, letterIndex)
-            local letterWidth = rowHeight
-            local letterHeight = rowHeight
-            local letterOffsetX = letterWidth / 20
-            local borderSizePixel = letterWidth / 10
 
             local newImageLabel = imageLabelTemplate:Clone()
 
@@ -81,7 +85,7 @@ local renderGrid = function(props)
                                                    (letterWidth + letterOffsetX),
                                                0, 0)
             newImageLabel.Text = char
-            newImageLabel.BorderSizePixel = borderSizePixel
+            newImageLabel.BorderSizePixel = leteterBorderSizePixel
 
             -- Do this last to avoid tweening
             newImageLabel.Parent = newRow

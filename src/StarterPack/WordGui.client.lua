@@ -17,4 +17,4 @@ local function onUpdateWordGuiRE(props)
     RenderWordGrid.renderGrid(props)
 end
 
-updateWordGuiRE.OnClientEvent:Connect(onUpdateWordGuiRE)
+-- updateWordGuiRE.OnClientEvent:Connect(onUpdateWordGuiRE)
