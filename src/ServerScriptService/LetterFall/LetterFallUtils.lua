@@ -430,13 +430,15 @@ function styleLetterBlocksBD(props)
                 module.applyStyleFromTemplate(
                     {
                         targetLetterBlock = letterBlock,
-                        templateName = "BD_available"
+                        templateName = miniGameState.activeStyle
+                        -- templateName = "BD_available"
                     })
             else
                 module.applyStyleFromTemplate(
                     {
                         targetLetterBlock = letterBlock,
-                        templateName = "BD_not_available"
+                        templateName = miniGameState.inActiveStyle
+                        -- templateName = "BD_not_available"
                     })
             end
         end
